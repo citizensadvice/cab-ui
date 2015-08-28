@@ -375,6 +375,58 @@
 .callout--warning .callout__link:hover:after {
   background-color: #e97275;
 }
+.callout--yellow {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #fef8d4;
+  color: #191926;
+  border-color: #fcec89;
+}
+.callout--yellow h1,
+.callout--yellow h2,
+.callout--yellow h3 {
+  color: #191926;
+}
+.callout--yellow *:first-child {
+  padding-top: 0.75em;
+}
+.callout--yellow *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--yellow--border {
+  border-left: 5px #fcec89 solid;
+  padding-left: calc(0.75em);
+}
+.callout--yellow .callout__link {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #fffef9;
+  color: #191926;
+  border-bottom: 1px solid #fbe457;
+}
+.callout--yellow .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #191926;
+  padding: 0 1.25em;
+  background-color: #fdf0a2;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 290%;
+}
+.callout--yellow .callout__link:hover {
+  background-color: #ffffff;
+  color: #191926;
+}
+.callout--yellow .callout__link:hover:after {
+  background-color: #fcec89;
+}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;

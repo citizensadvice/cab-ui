@@ -8,91 +8,105 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
     <title>Sticky Nav</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0"
-    name="viewport">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
     <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
     <meta content="EWS" name="cab-extent">
     <meta content="/static/images/apple-touch-icon.png">
     <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
     <link href="css/main.css" media="screen" rel="stylesheet">
     <link href="css/site.css" media="screen" rel="stylesheet">
-    <link href="https://www.citizensadvice.org.uk/static/css/print.css" media=
-    "print" rel="stylesheet">
-    <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico"
-    rel="shortcut icon">
-    <link href=
-    "https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel=
-    "apple-touch-icon">
+    <link href="css/option2.css" media="screen" rel="stylesheet">
+    <link href="https://www.citizensadvice.org.uk/static/css/print.css" media="print" rel="stylesheet">
+    <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
+    <link href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel="apple-touch-icon">
     <meta content="" name="keywords">
-    <meta content="" name="description">
-    <!-- Jquery for accordion script -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <!-- Accordion script -->
-    <script src="js/beta-dap-accordion.js"></script>
-    <!-- Sticky JS call -->
+    <meta content="" name="description"><!-- Jquery for accordion script -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><!-- Accordion script -->
+
+    <script src="js/beta-dap-accordion.js"></script><!-- Sticky JS call -->
+
     <script>
-        $(window).load(function(){
+$(window).load(function(){
             var height = $('#footer').height();
             $(".sticker").sticky({ topSpacing: 20, bottomSpacing: height + 80 });
             $(".js-make-sticky").sticky({ topSpacing: 20, bottomSpacing: height + 20 });
         });
+
+    $(document).ready(function () {
+        $(document).on("scroll", onScroll);
+        
+        //smoothscroll
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            $(document).off("scroll");
+            
+            $('a').each(function () {
+                $(this).removeClass('active');
+            })
+            $(this).addClass('active');
+          
+            var target = this.hash,
+                menu = target;
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top-14
+            }, 500, 'swing', function () {
+                window.location.hash = target;
+                $(document).on("scroll", onScroll);
+            });
+        });
+    });
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('.o2__link a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.o2__link').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
     </script>
 </head>
 
 <body class="beta">
-
     <div class="skip-nav">
-        <a class="screenreader screenreader--focusable" href="">Skip to
-        content</a> <a class="screenreader screenreader--focusable" href=
-        "">Skip to footer</a>
+        <a class="screenreader screenreader--focusable" href="">Skip to content</a> <a class="screenreader screenreader--focusable" href="">Skip to footer</a>
     </div>
 
     <div class="cookie-monster hide-no-cookies hide-no-js no-print">
         <div class="cookie-monster__content">
             <div>
-                <p>This site uses cookies.&nbsp; Find out more about <a href=
-                "">our use of cookies</a>.</p>
-            </div><button class="button--blue cookie-monster__close"
-            data-action="close" type="button"><i class="icon-cross"></i>
-            Close</button>
+                <p>This site uses cookies.&nbsp; Find out more about <a href="">our use of cookies</a>.</p>
+            </div><button class="button--blue cookie-monster__close" data-action="close" type="button"><i class="icon-cross"></i> Close</button>
         </div>
     </div>
 
     <header class="main-header">
         <div class="main-header__content">
-            <a class="main-header__logo" href="" title=
-            "Citizens Advice home"><img alt="Citizens Advice" onerror=
-            "this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;"
-            src="images/ca-logo_100px.svg"></a>
+            <a class="main-header__logo" href="" title="Citizens Advice home"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;" src="images/ca-logo_100px.svg"></a>
 
             <div class="main-header__links" data-track-zone="top-bar">
-                <a class="main-header__menu-link js-toggle-menu" href=
-                ""><i class="icon-menu"></i>Menu</a>
+                <a class="main-header__menu-link js-toggle-menu" href=""><i class="icon-menu"></i>Menu</a>
 
                 <nav class="main-header__top-nav">
-                    <a href="">Cymraeg</a> <a class=
-                    "hide-offline main-header__login" href=""><i class=
-                    "icon-key"></i>Sign-in</a>
+                    <a href="">Cymraeg</a> <a class="hide-offline main-header__login" href=""><i class="icon-key"></i>Sign-in</a>
                 </nav>
 
                 <form action="" class="main-header__search hide-offline">
-                    <label class="screenreader" for=
-                    "main-header__search__input">Search</label> <input class=
-                    "main-header__search__input" id=
-                    "main-header__search__input" name="q" placeholder="" type=
-                    "search"> <button class="main-header__search__submit"
-                    title="Search" type="submit"><i class=
-                    "icon-search icon--no-text"></i> <span class=
-                    "screenreader">Search</span></button>
+                    <label class="screenreader" for="main-header__search__input">Search</label> <input class="main-header__search__input" id="main-header__search__input" name="q" placeholder="" type="search"> <button class="main-header__search__submit" title="Search" type="submit"><i class="icon-search icon--no-text"></i> <span class="screenreader">Search</span></button>
                 </form>
             </div>
         </div>
-    </header>
+    </header><!-- MEGA MENU -->
 
-    <!-- MEGA MENU -->
-
-    <nav class="main-nav" data-track-zone="main-nav" style=
-    "overflow: visible;">
+    <nav class="main-nav" data-track-zone="main-nav" style="overflow: visible;">
         <ul class="nav-list-primary">
             <li class="top-item js-mega-menu" style="display: list-item;">
                 <a href="">Benefits</a>
@@ -142,9 +156,9 @@
                 <a href="">More from us</a>
             </li>
 
-            <li class="nav-list-primary-more js-more-menu" style=
-            "display: none;">
+            <li class="nav-list-primary-more js-more-menu" style="display: none;">
                 <a href="">More<i class="icon-down"></i></a>
+
                 <ul class="main-nav__more-links"></ul>
             </li>
         </ul>
@@ -155,9 +169,7 @@
             <div class="main-breadcrumb__content breadcrumb">
                 <a href="">England <i class="icon-down"></i></a>
 
-                <div class=
-                "breadcrumb__extent-popup js-extent-popup hide hide-offline"
-                data-track-zone="breadcrumb-extent-switcher">
+                <div class="breadcrumb__extent-popup js-extent-popup hide hide-offline" data-track-zone="breadcrumb-extent-switcher">
                     <p><strong>This advice applies to England:</strong></p>
 
                     <ul class="arrow-list">
@@ -183,9 +195,7 @@
                             <a href="">Wales home</a>
                         </li>
                     </ul>
-                </div>
-                <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a href="">Consumer</a></span>
-                <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a>Before you get work done on your home</a></span>
+                </div><span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a href="">Consumer</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a href="">Builders and home improvements</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a>Before you get work done on your home</a></span>
             </div>
         </nav>
 
@@ -193,86 +203,422 @@
             <h2 class="screenreader">Notice</h2>
 
             <div class="section-notice__content">
-                <p><span class="badge">NEW</span>&nbsp;This page is part of
-                <a href="">our new approach to digital advice</a>.</p>
+                <p><span class="badge">NEW</span>&nbsp;This page is part of <a href="">our new approach to digital advice</a>.</p>
             </div>
         </aside>
 
         <div class="main-content">
             <main class="main-content__right" id="main" role="main">
-
                 <!-- MAIN CONTENT -->
 
                 <div class="title">
-                    <h1 class="title__heading js-ref"><span class=
-                    "title__title">Before you get work done on your home</span></h1>
+                    <h1 class="title__heading js-ref"><span class="title__title">Before you get work done on your home</span></h1>
                 </div>
+
                 <div class="articleContent">
                     <div>
                         <p>Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.</p>
+
                         <ol>
-                            <li>
-                                <strong>Check if you need permission or approval</strong></br>
-                                Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.
-                            </li>
-                            <li>
-                                <strong>Find good builders or contractors</strong></br>
-                                Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.
-                            </li>
-                            <li>
-                                <strong>Get quotes before you decide who to use</strong></br>
-                                Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.
-                            </li>
-                            <li>
-                                <strong>Check there’s insurance in place</strong></br>
-                                Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.
-                            </li>
-                            <li>
-                                <strong>Get a written contract</strong></br>
-                                Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.
-                            </li>
-                            <li>
-                                <strong>Be prepared to deal with problems</strong></br>
-                                Speak to contractors as soon as problems come up, and get them to agree to put them right.
-                            </li>
+                            <li><strong>Check if you need permission or approval</strong><br>
+                            Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.</li>
+
+                            <li><strong>Find good builders or contractors</strong><br>
+                            Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.</li>
+
+                            <li><strong>Get quotes before you decide who to use</strong><br>
+                            Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.</li>
+
+                            <li><strong>Check there’s insurance in place</strong><br>
+                            Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.</li>
+
+                            <li><strong>Get a written contract</strong><br>
+                            Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.</li>
+
+                            <li><strong>Be prepared to deal with problems</strong><br>
+                            Speak to contractors as soon as problems come up, and get them to agree to put them right.</li>
                         </ol>
-                        <h2>Step 1: Check if you need permission or approval</h2>
-                        <p>You may have to get more than one kind of permission or approval before you go ahead with work on your home.</p>
-                        <p>Always check if you need:</p>
-                        <ul>
-                            <li>building regulations approval - you may need this even for small improvements, eg replacing windows or doors </li>
-                            <li>planning permission - you usually need this to build something new or make a major change, eg an extension</li>
-                        </ul>
-                        <div class="callout">
-                            <p>You don’t have to apply for building regulations approval yourself if you hire a contractor from a ‘competent person scheme’.</p>
+
+                        <section id="step1">
+                            <h2 id="step1">Step 1: Check if you need permission or approval</h2>
+
+                            <p>You may have to get more than one kind of permission or approval before you go ahead with work on your home.</p>
+
+                            <p>Always check if you need:</p>
+
+                            <ul>
+                                <li>building regulations approval - you may need this even for small improvements, eg replacing windows or doors</li>
+
+                                <li>planning permission - you usually need this to build something new or make a major change, eg an extension</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>You don’t have to apply for building regulations approval yourself if you hire a contractor from a ‘competent person scheme’.</p>
+                            </div>
+
+                            <h3>If you have to get approval or permission</h3>
+
+                            <p>You may need to hire a surveyor or architect to help you apply for building regulations approval or planning permission. If you’d struggle to pay for this, ask the Chartered Surveyor's Voluntary Scheme for advice about applying.</p>
+
+                            <h3>If you’re in a conservation area</h3>
+
+                            <p>You must also check with your local council before doing work on your home if it’s in conservation area.</p>
+
+                            <h3>If you’re a leaseholder</h3>
+
+                            <p>Check your lease if you own the leasehold (not the freehold) on your home. You may have to get permission from the freeholder before work starts. If the lease says you can’t make changes, you can still ask the freeholder for permission. You may have to pay some costs.</p>
+
+                            <div class="callout--warning">
+                                <p>If you don’t get the permission or approval you need, you could be fined, prosecuted or made to pay to put things right.</p>
+                            </div>
+                        </section>
+
+                        <section id="step2">
+                            <h2>Step 2: Find good builders or contractors</h2>
+
+                            <p>Recommendations and references are good ways to find reliable contractors who do a good job.</p>
+
+                            <p>If you can’t get personal recommendations from people you know, ask contractors for references. It’s best to get:</p>
+
+                            <ul>
+                                <li>2 or 3 recent examples of similar work they’ve done</li>
+
+                                <li>contact details for the people they did the work for - it’s best to get in touch because written references aren’t always genuine</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t give references - it’s a sign they could be dishonest.</p>
+                            </div>
+
+                            <h3>Do the proper checks</h3>
+
+                            <p>It’s dangerous to use someone who doesn’t know what they’re doing, especially for anything involving gas or electrics.</p>
+
+                            <p>It’s important to check that you’re using:</p>
+
+                            <ul>
+                                <li>a registered gas engineer for gas work, eg installing a boiler or cooker</li>
+
+                                <li>a registered electrician for electrical work, eg installing new lighting or rewiring</li>
+
+                                <li>someone in a competent person scheme for work that needs building regulations approval (unless you got approval yourself)</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>You could be breaking the law if you don’t do these checks.</p>
+                            </div>
+
+                            <p>You should also do the following checks to help you find a contractor you can trust.</p>
+
+                            <h4>Check for approved contractors</h4>
+
+                            <p>Contractors can sign up for schemes that list them as ‘approved’. This means they’ve agreed to meet professional standards. The scheme may also have checked they’re trustworthy and do a good job - check the scheme’s website to find out how they approve contractors.</p>
+
+                            <p>These are good places to search for approved contractors:</p>
+
+                            <ul>
+                                <li>TrustMark - check the type of work you need is listed in the contractor’s ‘licensed trades’ (they’ll have passed checks proving that they’re qualified for that trade)</li>
+
+                                <li>Buy With Confidence for contractors approved by Trading Standards</li>
+
+                                <li>your local council’s approved trader scheme, if they have one</li>
+                            </ul>
+
+                            <h4>Check what a contractor says</h4>
+
+                            <p>It’s good idea to check what a contractor or their website tells you - especially if they’ve knocked on your door or telephoned you to offer their services. For instance, you can:</p>
+
+                            <ul>
+                                <li>ask to see a business card or letterhead, or get full contact details, then ring the business to check it exists and the contractor works for them</li>
+
+                                <li>ask to see proof of qualifications - eg an NVQ in construction for builders or a card from the Construction Skills Certification Scheme (trade associations can tell you about qualifications for particular types of work)</li>
+
+                                <li>search trade association websites to check they’re a member if they say they are</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who just give a mobile number. They may be hard to contact if problems come up. It could also be a sign they’re unreliable or dishonest.</p>
+                            </div>
+
+                            <h4>Interview contractors in person</h4>
+
+                            <p>It’s a good idea to speak with contractors in person before you hire them, eg when they come to your home to give a quote.</p>
+
+                            <p>Trust your instincts and make sure you can communicate with them easily - this will help you sort out any problems that come up later.</p>
+
+                            <p>Before you meet them, it’s a good idea to write down:</p>
+
+                            <ul>
+                                <li>a clear and detailed description of exactly what you want done</li>
+
+                                <li>a list of questions to help you get all the information you need to compare and choose between contractors - Trustmark has questions you can use as a checklist</li>
+                            </ul>
+
+                            <p>When you meet them, write down what they say they’ll do - if they don’t end up doing it, having it in writing can help you hold them to their word or get some of your money back.</p>
+                        </section>
+
+                        <section id="step3">
+                            <h2>Step 3: Get quotes before you decide who to use</h2>
+
+                            <p>A quote is a promise from the contractor to do the work at a fixed price.</p>
+
+                            <p>It’s a good idea to get at least 3 written quotes before you decide on a contractor. Comparing quotes will help you decide if you’re getting a fair price.</p>
+
+                            <p>Don’t rely on a verbal quote - get it in writing. After you say yes to a quote, it’s a binding agreement between you and the contractor, whether it’s written down or not. But having it in writing means you can check what you agreed and prove it if there’s a dispute later.</p>
+
+                            <p>Some contractors charge for quotes - ask about this first.</p>
+
+                            <div class="callout">
+                                <p>Make sure you get a quote, not an estimate. An estimate is just a rough guess of the price, and you could end up having to pay more.</p>
+                            </div>
+
+                            <p>The contractor can’t charge you more than the price on their quote unless:</p>
+
+                            <ul>
+                                <li>you ask for extra work that’s not included in the quote</li>
+
+                                <li>they let you know they have to do extra work and you agree to pay more for it</li>
+
+                                <li>they made a genuine mistake when writing down or calculating the price - they have the legal right to charge you what it should have been</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t put a quote in writing. It’s a sign they could be unreliable.</p>
+
+                                <p>Also be cautious if their price is a lot lower than other quotes you get. It could mean they don’t have the right skills or experience, or they’re not being honest.</p>
+                            </div>
+
+                            <h3>What a quote should include</h3>
+
+                            <p>Be very clear about the work you want done - this will help you get the most accurate price and save misunderstandings later.</p>
+
+                            <p>A quote should include:</p>
+
+                            <ul>
+                                <li>a fixed total price - not a daily rate</li>
+
+                                <li>a breakdown of all the work to be done and the materials needed</li>
+
+                                <li>separate costs for each material and part of the work</li>
+
+                                <li>how long the price is valid for</li>
+
+                                <li>if the price includes VAT</li>
+
+                                <li>when the price can go up, eg only if you agree to extra work</li>
+                            </ul>
+
+                            <p>If you get a daily rate instead of a fixed total price there’s a risk the contractor could string out the work to get more money. Avoid this by getting them to put in writing:</p>
+
+                            <ul>
+                                <li>how many days the work will take</li>
+
+                                <li>how many hours of work counts as a day</li>
+
+                                <li>when they need your go-ahead to work more days</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Before saying yes to a quote, you should check there’s insurance in place and try to get a written contract.</p>
+                            </div>
+
+                            <h4>See a sample quote</h4>
+
+                            <p>You can download a PDF of a sample quote.</p>
+                        </section>
+
+                        <section id="step4">
+                            <h2>Step 4: Check there’s insurance in place</h2>
+
+                            <h3>Contractors’ insurance - what to check</h3>
+
+                            <p>Ask to see insurance policies and check they don’t run out before the work will be finished. If it’s insurance they must have, they have to let you see the policy.</p>
+
+                            <h4>Insurance they must have</h4>
+
+                            <p>Public liability insurance - contractors are breaking the law if they don’t have this. It covers you and them if someone’s hurt or property is damaged (eg your home or your neighbour’s).</p>
+
+                            <p>Employers’ liability insurance - contractors who work through a company are breaking the law if they don’t have this. It doesn’t matter if it’s their own company or not. It covers you and the company if they’re hurt on the job.</p>
+
+                            <div class="callout--warning">
+                                <p>If a contractor doesn’t have the right insurance, and things go wrong or someone’s hurt, you could be forced to pay to fix things, or go to court and pay damages and legal fees.</p>
+                            </div>
+
+                            <h4>Other insurance to check for</h4>
+
+                            <p>Other types of insurance are optional, but they’re worth looking for.</p>
+
+                            <p>Contractors’ all-risk cover - this cover the cost of replacing work that’s destroyed before it’s completed, and before your insurance covers it.</p>
+
+                            <p>Insurance-backed warranties or guarantees - you can buy one of these as part of the cost of the work, if the contractor offers it. Check exactly what’s covered before you decide to buy one - it should cover the cost of finishing or fixing the work if the contractor does a bad job or goes out of business.</p>
+
+                            <h3>Your insurance - what to check</h3>
+
+                            <p>If you have home or contents insurance, contact your insurer to check you will be covered during the work. You may have to pay more for your insurance during and after the work.</p>
+
+                            <p>Your insurer will probably want to know what contractor you’re using and what insurance they have. They might suggest that you take out joint insurance with the contractor.</p>
+
+                            <div class="callout">
+                                <p>If you don’t have home and contents insurance, it’s worth getting some before the work starts - there’s a bigger risk your home will be damaged or your things stolen while work’s going on.</p>
+                            </div>
+                        </section>
+
+                        <section id="step5">
+                            <h2>Step 5: Get a written contract</h2>
+
+                            <p>As soon as you give a contractor the go-ahead, you’ve made a contract with them, even if it’s not written down.</p>
+
+                            <p>But you should always try to get a contract in writing before you give the go-ahead. If the contractor doesn’t do what you agreed, a written contract can help you get what you paid for at least get some of your money back.</p>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t put anything in writing - it’s a sign they could be dishonest.</p>
+                            </div>
+
+                            <p>If the contractor gives you a contract, check if covers everything you agreed. If they don’t you can write your own.</p>
+
+                            <p>Written contracts don’t need to be in legal language - they just need to outline:</p>
+
+                            <ul>
+                                <li>exactly what you’re paying for (they can refer back to the quote for this)</li>
+
+                                <li>everything you’ve agreed on, eg timings, tidying up and payments</li>
+                            </ul>
+
+                            <h3>Timings</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>start and finish dates</li>
+
+                                <li>if you’ve agreed on a daily rate, the number of days the work will take and how many working hours are in a day</li>
+
+                                <li>delays - why they might happen, and what the contractor will do about them</li>
+                            </ul>
+
+                            <h3>Tidying up</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>how and when the contractors will remove rubbish and clear up after themselves</li>
+
+                                <li>who pays for delivery and collection of any skips</li>
+                            </ul>
+
+                            <h3>Materials, equipment and subcontractors</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>who pays to buy or hire materials and equipment</li>
+
+                                <li>for things the contractor buys, how they’ll give you receipts and paperwork</li>
+
+                                <li>if and when they’ll use subcontractors</li>
+                            </ul>
+
+                            <h3>Payments</h3>
+
+                            <p>Make sure the contract covers how and when you’ll pay. Aim to:</p>
+
+                            <ul>
+                                <li>pay by card not cash</li>
+
+                                <li>pay in stages</li>
+
+                                <li>avoid deposits or upfront payments</li>
+
+                                <li>get some protection for your money</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who only accept cash or want you to pay everything upfront - it’s a sign they could be dishonest or unreliable.</p>
+                            </div>
+
+                            <h4>Paying by card not cash</h4>
+
+                            <p>If you pay by credit or debit card, you may be able to get your money back through your bank if something goes wrong, eg the contractor doesn’t turn up but refuses to pay back your deposit.</p>
+
+                            <p>If this happens, you can contact your bank and say you want to use the ‘chargeback’ scheme. Many bank staff don’t know about the scheme, so you may need to talk to a manager.</p>
+
+                            <p>If you pay more than £100 by credit card, it may be easier to tell your bank you want to ‘make a section 75 claim’. It’s another way to get your money back.</p>
+
+                            <h4>Paying in stages</h4>
+
+                            <p>This is a good idea, particularly if it’s a big job, because it means problems can be put right before you make the final payment. Be clear about the point in the work when payments are due.</p>
+
+                            <h4>Avoiding deposits</h4>
+
+                            <p>Don’t agree to pay everything up front, in case something goes wrong or the contractor doesn’t turn up.</p>
+
+                            <p>If they ask for a deposit to pay for materials, offer to buy them yourself instead of paying a deposit - that way, at least you own the materials if something goes wrong.</p>
+
+                            <p>If the work will take a long time, you may not be able to avoid a deposit. Aim to push it down as much as possible, and don’t agree to more than 25%.</p>
+
+                            <p>Always get a receipt for a deposit, as well as receipts for any materials it covers.</p>
+
+                            <h4>Getting protection</h4>
+
+                            <p>You can protect your deposit or staged payments until the work’s complete, eg with a:</p>
+
+                            <ul>
+                                <li>deposit protection scheme - your money will be stored in a secure account until you and the builder are happy with the work</li>
+
+                                <li>insurance-backed warranty or guarantee - you can buy one of these from some contractors to cover the cost of finishing or fixing work if they do a bad job or go out of business</li>
+                            </ul>
+
+                            <h3>Help writing your own contract</h3>
+
+                            <p>It can help to look at example contracts, or create a contract using a template - eg for:</p>
+
+                            <ul>
+                                <li>home repairs or maintenance - you can download a free contract template</li>
+
+                                <li>building work - you can download an example contract or buy a contract template</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>You have 14 days to cancel the contract after giving the go-ahead or signing a written contract. This is known as the cooling-off period.</p>
+                            </div>
+                        </section>
+
+                        <div class="callout--yellow">
+                            <h3>Further help</h3>
+
+                            <p>Contact the Citizens Advice consumer helpline if you need more help - a trained adviser can give you advice over the phone or by email.</p>
                         </div>
-                        <h3> If you have to get approval or permission</h3>
-                        <p>You may need to hire a surveyor or architect to help you apply for building regulations approval or planning permission. If you’d struggle to pay for this, ask the Chartered Surveyor's Voluntary Scheme for advice about applying.</p>
-                        <h3> If you’re in a conservation area</h3>
-                        <p>You must also check with your local council before doing work on your home if it’s in conservation area.</p>
-                        <h3> If you’re a leaseholder</h3>
-                        <p>Check your lease if you own the leasehold (not the freehold) on your home. You may have to get permission from the freeholder before work starts. If the lease says you can’t make changes, you can still ask the freeholder for permission. You may have to pay some costs.</p>
-                        <div class="callout--warning">
-                            <p>If you don’t get the permission or approval you need, you could be fined, prosecuted or made to pay to put things right.</p>
-                        </div>
+
+                        <section id="step6">
+                            <h2>Step 6: Be prepared to deal with problems</h2>
+
+                            <p>Get the contractor’s full contact details before work starts. If you know how to get in touch, it’s easier to deal with any problems that come up.</p>
+
+                            <p>As soon as something happens that you’re not happy with:</p>
+
+                            <ul>
+                                <li>ask the builder or contractor to put it right</li>
+
+                                <li>come to an agreement about how they’ll fix it, and ask them to put it in writing</li>
+                            </ul>
+
+                            <div class="callout--turquoise">
+                                <h3>Next steps</h3>
+
+                                <p>If a contractor does a bad job or doesn’t do what you agreed, you should be entitled to get it fixed or get some money back. Find out what you can do about problems with building work, decorating and home repairs.</p>
+                            </div>
+                        </section>
                     </div>
-                </div>
-
-                <!-- END MAIN CONTENT -->
-
+                </div><!-- END MAIN CONTENT -->
             </main>
 
-            <aside class="main-content__sidebar beta-extent-switcher hide-offline"
-            data-track-zone="page-beta-extent-swticher">
-                <h2 class="beta-extent-switcher__heading">This advice applies
-                to England</h2>
+            <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher">
+                <h2 class="beta-extent-switcher__heading">This advice applies to England</h2>
 
-                <p>Advice can vary depending on where you live.</p>
-                <!-- Can't use asp:DropDownList as it needs to sit in form tag -->
+                <p>Advice can vary depending on where you live.</p><!-- Can't use asp:DropDownList as it needs to sit in form tag -->
 
                 <form method="get">
-                    <select class="custom-dropdown__select" id="ddlExtents"
-                    name="lang">
+                    <select class="custom-dropdown__select" id="ddlExtents" name="lang">
                         <option disabled selected>
                             Change country
                         </option>
@@ -288,243 +634,67 @@
                         <option value="en-WLS">
                             Wales
                         </option>
-                    </select> <button class=
-                    "custom-dropdown__button js-track-extent" type=
-                    "submit">Go</button>
+                    </select> <button class="custom-dropdown__button js-track-extent" type="submit">Go</button>
                 </form>
-            </aside>
+            </aside><!-- SIDEBAR -->
 
             <nav class="side-nav" data-track-zone="side-nav" id="beta-dap-menu-accordion">
                 <ul class="beta-dap-menu-accordion__sections sticker">
                     <li class="beta-dap-menu-accordion__section has-sub -active -open">
-                        <a class="beta-dap-menu-accordion__link">Before you
-                        apply for Universal Credit</a>
+                        <a class="beta-dap-menu-accordion__link">Builders and home improvements</a>
 
                         <ul class="beta-dap-menu-accordion__pages">
                             <li class="beta-dap-menu-accordion__page -current">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Check if you're eligible for Universal
-                                Credit</a>
+                                <a class="beta-dap-menu-accordion__link" href="">Before you get work done on your home</a>
+
+                                <ul class="o2">
+                                    <li class="o2__link">
+                                        <a class="" href="#step1">Step 1: Check if you need permission or approval</a>
+                                    </li>
+
+                                    <li class="o2__link">
+                                        <a class="" href="#step2">Step 2: Find good builders or contractors</a>
+                                    </li>
+
+                                    <li class="o2__link">
+                                        <a class="" href="#step3">Step 3: Get quotes before you decide who to use</a>
+                                    </li>
+
+                                    <li class="o2__link">
+                                        <a class="" href="#step4">Step 4: Check there’s insurance in place</a>
+                                    </li>
+
+                                    <li class="o2__link">
+                                        <a class="" href="#step5">Step 5: Get a written contract</a>
+                                    </li>
+
+                                    <li class="o2__link">
+                                        <a class="" href="#step6">Step 6: Be prepared to deal with problems</a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Eligibility for Universal Credit if you’re
-                                not a British Citizen</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">How Universal Credit works for couples</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">How Universal Credit works if you're
-                                self-employed</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">How much Universal Credit you could get</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="beta-dap-menu-accordion__section has-sub">
-                        <a class="beta-dap-menu-accordion__link">Apply for
-                        Universal Credit</a>
-
-                        <ul class="beta-dap-menu-accordion__pages">
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Apply for Universal Credit</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Get an advance payment of Universal
-                                Credit</a>
+                                <a class="beta-dap-menu-accordion__link" href="">Problems with home improvements</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="beta-dap-menu-accordion__section has-sub">
-                        <a class="beta-dap-menu-accordion__link">Before you go
-                        to your interview</a>
+                        <a class="beta-dap-menu-accordion__link">Home installation not done properly</a>
 
                         <ul class="beta-dap-menu-accordion__pages">
                             <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Preparing for your Universal Credit
-                                interview</a>
+                                <a class="beta-dap-menu-accordion__link" href="">Lorem ipsum</a>
                             </li>
 
                             <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Claimant commitment: what work-related
-                                activity group you should be in</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="beta-dap-menu-accordion__section has-sub">
-                        <a class="beta-dap-menu-accordion__link">While you're
-                        on Universal Credit</a>
-
-                        <ul class="beta-dap-menu-accordion__pages">
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">If your Universal Credit payment is
-                                wrong</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Changing your claimant commitment</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Get help with debt and rent arrears if
-                                you're on Universal Credit</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Budgeting advances - get a loan if you’re on
-                                Universal Credit</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Getting a job or pay increase</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="beta-dap-menu-accordion__section has-sub">
-                        <a class="beta-dap-menu-accordion__link">If you've been
-                        sanctioned</a>
-
-                        <ul class="beta-dap-menu-accordion__pages">
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">What to do if you've been sanctioned while
-                                on Universal Credit</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Get a hardship payment if you've been
-                                sanctioned</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Arguments for challenging a sanction</a>
-                            </li>
-
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Check you've been given the right
-                                sanction</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="beta-dap-menu-accordion__section has-sub">
-                        <a class="beta-dap-menu-accordion__link">Reapply for
-                        Universal Credit</a>
-
-                        <ul class="beta-dap-menu-accordion__pages">
-                            <li class="beta-dap-menu-accordion__page">
-                                <a class="beta-dap-menu-accordion__link" href=
-                                "">Reapply for Universal Credit</a>
+                                <a class="beta-dap-menu-accordion__link" href="">Lorem ipsum</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-
-            <form action="" id="aspnetForm" method="post" name="aspnetForm">
-                <div class="aspNetHidden">
-                    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden"
-                    value=
-                    "/wEPDwUKMTg0NDk0NTczNmQYAgUjY3RsMDAkY3RsMDAkUmVxdWlyZWRSZXNvdXJjZXNGb290ZXIPBQZGb290ZXJkBSNjdGwwMCRjdGwwMCRSZXF1aXJlZFJlc291cmNlc0hlYWRlcg8FBkhlYWRlcmTZs25ec2SgrBpvM/nsH8ETEVty8A==">
-                </div>
-
-                <div class="aspNetHidden">
-                    <input id="__VIEWSTATEGENERATOR" name=
-                    "__VIEWSTATEGENERATOR" type="hidden" value="9FBE3340">
-                    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION"
-                    type="hidden" value=
-                    "/wEdAAMwLrp3pV6d+6ZoGqWAqTNYNh6tVZLIW6EAov1yqV83uKPhRyk3c785ouyWFdVgc/yxf0argd6fsASr1bN+l/lWLhjZTA==">
-                    </div>
-
-                <div class="share-bar__outer hide-offline hide-no-js">
-                    <nav class="share-bar js-make-sticky" style="">
-                        <a class="share-bar__link--twitter js-twitter" href=
-                        ""><i class="icon-twitter"></i> <span>Share on
-                        Twitter</span></a> <a class=
-                        "share-bar__link--facebook js-facebook" href=
-                        ""><i class="icon-facebook"></i> <span>Share on
-                        Facebook</span></a> <a class=
-                        "share-bar__link--google js-google-plus a-external"
-                        href=""><i class="icon-google"></i> <span>Share on
-                        Google +</span></a> <a class=
-                        "share-bar__link--email js-email-page" href=
-                        ""><i class="icon-email"></i> <span>Email
-                        page</span></a> <a class="share-bar__link--print" href=
-                        ""><i class="icon-print"></i> <span>Print this
-                        page</span></a>
-                    </nav>
-                </div>
-
-                <div class="popup-background no-print hide-offline" style=
-                "display:none;">
-                    <div class="popup_email popup_content" id=
-                    "RootPlaceHolder_ShareBar_mailOptions" style="display:none"
-                    tabindex="-1">
-                        <a class="popup__close" data-action="close" href=
-                        ""><i class="icon-cross"></i>Close</a>
-
-                        <h2 class="popup__heading">Email a link to this
-                        page</h2>
-
-                        <p><i class="icon-email"></i> <a href="" target=
-                        "_blank">Send from your own account</a> or:</p>
-
-                        <div class="form">
-                            <label class="form__row" for=
-                            "RootPlaceHolder_ShareBar_toEmailAddress">To email
-                            address (required): <input id=
-                            "RootPlaceHolder_ShareBar_toEmailAddress" name=
-                            "ctl00$ctl00$RootPlaceHolder$ShareBar$toEmailAddress"
-                            type="email"></label> <label class="form__row" for=
-                            "RootPlaceHolder_ShareBar_yourName">Your name
-                            (required): <input id=
-                            "RootPlaceHolder_ShareBar_yourName" name=
-                            "ctl00$ctl00$RootPlaceHolder$ShareBar$yourName"
-                            type="text"></label> <input class=
-                            "form__button-row button--big" data-track-submit=
-                            "Email page" id=
-                            "RootPlaceHolder_ShareBar_submitMail" name=
-                            "ctl00$ctl00$RootPlaceHolder$ShareBar$submitMail"
-                            type="submit" value="Submit">
-                        </div>
-                    </div>
-
-                    <div class="popup_feedback popup_content" id=
-                    "RootPlaceHolder_ShareBar_divPopup" style="display:none;"
-                    tabindex="-1">
-                        <a class="popup__close" data-action="close" href=
-                        ""><i class="icon-cross"></i>Close</a>
-
-                        <div id="RootPlaceHolder_ShareBar_plcPopup"></div>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 
@@ -532,8 +702,7 @@
         <h2 class="screenreader">Feedback</h2>
 
         <div class="footer-feedback__content">
-            <p>Is there anything wrong with this page? <a href="">Let us
-            know</a>.&nbsp;</p>
+            <p>Is there anything wrong with this page? <a href="">Let us know</a>.&nbsp;</p>
         </div>
     </aside>
 
@@ -697,21 +866,15 @@
 
             <div class="main-footer__box main-footer__box--copyright">
                 <div>
-                    <p><img alt="" height="100" src=
-                    "images/ca-logo_100px.svg.png" width="100"> Copyright © 2015
-                    Citizens Advice. All rights reserved.<br>
-                    Citizens Advice is an operating name of the National
-                    Association of Citizens Advice Bureaux. Registered charity
-                    number 279057<br>
-                    VAT number 726 0202 76 Company limited by guarantee.
-                    Registered number 1436945 England<br>
-                    Registered office: Citizens Advice, 3rd Floor North, 200
-                    Aldersgate, London, EC1A 4HD</p>
+                    <p><img alt="" height="100" src="images/ca-logo_100px.svg.png" width="100"> Copyright © 2015 Citizens Advice. All rights reserved.<br>
+                    Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>
+                    VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>
+                    Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
                 </div>
             </div>
         </div>
-    </footer>
-    <!--[if gt IE 7]><i --><script src="js/core"></script><!--<![endif]-->
+    </footer><!--[if gt IE 7]><i --><script src="js/core"></script><!--<![endif]-->
+
     <div id="_oldTag_158_"></div><!--[if IE 8]></div><![endif]-->
     <!-- Sticky JS -->
     <script src="js/jquery.sticky.js"></script>

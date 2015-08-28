@@ -1,0 +1,16 @@
+.o2 {
+  display: block !important;
+}
+.o2 li a {
+  background-color: #eff3f9;
+  padding: 0.875em 1.75em !important;
+  border-top: 1px solid #eee;
+  text-decoration: none !important;
+  display: block;
+}
+.o2 .active {
+  background-image: url('../images/nav-active.png') !important;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-color: #DCE5F2;
+}

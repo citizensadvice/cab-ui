@@ -62,7 +62,8 @@
  */
 .callout {
 	.callout(); // Create unstyled box
-	&--turquoise 	{ .callout(@text-color, @turquoise) }
-	&--green 		{ .callout(@green, @green-light) }
-	&--warning 		{ .callout(darken(@red-brighter, 10%), @red-brighter-tint) }
+	&--turquoise 	{ .callout( @text-color, @turquoise ) }
+	&--green 		{ .callout( @green, @green-light ) }
+	&--warning 		{ .callout( darken(@red-brighter, 10%), @red-brighter-tint ) }
+	&--yellow 		{ .callout( @text-color, #FEF8D4 ) }
 }
