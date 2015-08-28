@@ -1,0 +1,78 @@
+/**
+ * FRAMEWORK.
+ *
+ * Fitting within the grid.less.
+ * Structure following bootstrap principles
+ * 12 columns, using 3/4 columns
+ */
+
+// Row - full width this is a row for horizontal division
+.flex-row {
+    max-width: @full-page-width;
+    margin: auto;
+    clear: both;
+    padding: calc(@box-padding-vertical * 2) 0em;
+}
+// Keeping columns flexible, to combine together where needed
+// Base layout
+// Container - content 
+.flex-container {
+    max-width: @max-page-width;
+    clear: both;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    // Ensure nested boxes all line up
+    height: calc( ~"100% + 1em" ); 
+}
+// Full width
+.flex-col-1-1 {
+    width: @width-span-12;
+}
+// Half
+.flex-col-1-2 {
+    width: @width-span-6;
+}
+// Third
+.flex-col-1-3 {
+    width: @width-span-4;
+}
+// Two thirds
+.flex-col-2-3 {
+    width: @width-span-8;
+}
+// Quarter
+.flex-col-1-4 {
+    width: @width-span-3;
+}
+// Three Quarter
+.flex-col-3-4 {
+    width: @width-span-9;
+}
+// Sixth
+.flex-col-1-6 {
+    width: @width-span-2;
+}
+
+// Extended layout
+// 1/12
+.flex-col-1-12 {
+    width: @width-span-1;
+}
+
+// 8/12 combine with 
+.flex-col-2-8 {
+    width: @width-span-9;
+}
+
+.flex-row--header__heritage-blue {
+    max-width: @full-page-width;
+    margin: auto;
+    clear: left;
+    padding: calc(@box-padding-vertical * 2) 0em;
+    background-color: @heritage-blue !important;
+}

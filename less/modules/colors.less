@@ -1,0 +1,146 @@
+/**
+ * COLOR DEFINITIONS.
+ *
+ * Defines the colors we will use across the site.
+ * This is our palette, which is used within _variables.scss and elsewhere.
+ */
+
+
+/***************************************************************************
+ * COLORS
+ */
+
+@cloud:                 #EFF3F3;    // Off white
+@silver:                #BDC3C7;
+@gray:                  #333;       // May switch to text colour following test
+@blue-darker:           #32457E;
+@blue-corporate:        #034EA2;    // May switch to corporate blue following brand development
+@blue-corporate-light:  #A5BDDC;
+@red:                   #B53A1F;    // Error
+@red-tint:              lighten(@red, 15%); // Tint for background of boxes
+@red-heritage:          #623534;
+@red-mellow:            #C02F43;	// Danger content border colour
+@red-brighter:			#df3034;
+@red-brighter-tint:     lighten(@red-brighter, 30%);    // Danger content background box colour
+@red-mellow-lighter:	#FFAAAC;
+@purple:                #503460;
+@mauve:                 #C5A5CE;
+@pink:                  #F9B9BA;
+@peach:                 #F8A484;
+@orange:                #FCBB69;    // Warning colour
+@orange-tint:           lighten(@orange, 10%); // Tint for background of boxes
+@yellow:                #E9E083;
+@green-heritage:        #00553F;
+@green-blue:            #005E7F;
+@green:                 #008286;
+@green-tint:            lighten(@green, 50%); // Tint for background of boxes
+@green-light:           #C5E1AC;    // Correct colour
+@green-light-tint:      lighten(@green-light, 50%); // Tint for bg of boxes
+@turquoise:             #81CEC6;
+@turquoise-tint:        lighten(@turquoise, 15%);
+@turquoise-light:       lighten(@turquoise, 25%);
+
+// Monochrome
+
+@black:                 #000;
+@gray-0:                #111;
+@gray-1:                #333;
+@gray-2:                #666;
+@gray-3:                #999;
+@gray-4:                #CCC;
+@gray-5:                #EEE;
+@gray-6:                #DFE1E3;
+@gray-7:                #F8F8F8;
+@white:                 #FFF;
+
+// New Beta brand colors, as we need them...
+// We'll need to rationalise the color names at some point.
+
+@beta-red-deep:         #623543;
+@beta-blue-light:       #D2DEED;
+
+// Actual brand colours
+
+@heritage-blue:         #004B88;
+@heritage-yellow:       #FCBB69;
+@responsible-purple:    #57486B;
+@responsible-aqua:      #90CE9C;
+@inventive-teal:        #006278;
+@inventive-pink:        #FBC0AD;
+@generous-green:        #00553F;
+@generous-mauve:        #B5AFD7;
+
+// Beta colours for EPiServer
+
+@beta-red:              #B10E1E;
+@beta-orange:           #F47738;
+@beta-green:            #006435;
+@beta-blue-darker:      #003C64;
+@beta-blue-light:       #A5BDDC;
+@beta-blue-light-tint:  lighten(@beta-blue-light, 15%);
+@beta-aqua:             #81CEC6;
+@beta-yellow:           #FFBF47;
+@beta-yellow-light:     lighten(@beta-yellow, 25%);
+
+/***************************************************************************
+ * PRIMARY
+ */
+
+@body-bg:               #F6FBFB;
+@text-color:            #191926;
+
+@brand-primary:         #253460;    // Blue
+@brand-secondary:       @turquoise;
+
+
+/***************************************************************************
+ * STATE COLORS.
+ * Used for Alerts, Media, States and form field validation states.
+ */
+
+@danger-bg:             @red-brighter-tint;
+@danger-border:         @red-brighter;
+@danger-color:          @text-color;   // For use on @danger-bg.
+@danger-text-color:     @red-brighter; // For use on normal background.
+
+@warning-bg:            @orange-tint;
+@warning-border:        @orange;
+@warning-color:         @text-color; // For use on @warning-bg.
+@warning-text-color:    @orange;     // For use on normal background:
+
+@success-bg:            @green-light;
+@success-border:        @green;
+@success-color:         @text-color; // For use on @success-bg.
+@success-text-color:    @green;      // For use on normal background.
+
+// For consistency with some things that need a background colour when they
+// don't have a real state.
+@plain-bg:              @white;
+@plain-border:          @blue-corporate;
+@plain-color:           @text-color;
+
+/***************************************************************************
+ * PRIORITY COLORS.
+ * Used for Media, Priorities.
+ */
+
+@optional-bg:            @white;
+@optional-border:        @white;
+@optional-title-color:   @text-color;
+
+@important-bg:           @white;
+@important-border:       @blue-corporate;
+@important-title-color:  @blue-corporate;
+
+@essential-bg:           @white;
+@essential-border:       @red;
+@essential-title-color:  @red;
+
+/***************************************************************************
+ * HEADERS. h1, h2, etc.
+ */
+
+@heading-primary-color:       @brand-primary;
+@heading-secondary-color:     @blue-corporate;
+@heading-sub-color:           @text-color;
+

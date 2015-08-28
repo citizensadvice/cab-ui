@@ -1,0 +1,37 @@
+/**
+ * GRID STRUCTURE FOR CONTENT.
+ *
+ * Defines the content area dimensions, grid structure and breakpoints.
+ */
+
+// Break points
+@full-page-width: 100%;
+@max-page-width: 1080px;
+// Revisit sharing option
+@max-page-width-before-the-share-bar-ruins-it-all: 1148px;
+
+// Breakpoints - raw numbers
+@breakpoint-sm: 480; // Greater than or equal
+@breakpoint-md: 768; // Greater than or equal
+@breakpoint-lg: 1080; // Greater than or equal
+
+// Breakpoints - pixel values 
+@screen-xs-max: unit(@breakpoint-sm - 1, px);
+@screen-sm-min: unit(@breakpoint-sm, px);
+@screen-sm-max: unit(@breakpoint-md - 1, px);
+@screen-md-min: unit(@breakpoint-md, px);
+@screen-lg-min: unit(@breakpoint-lg, px);
+
+// Widths for the responsive framework (see layout)
+@width-span-12: 100%;
+@width-span-11: 91.66666667%;
+@width-span-10: 83.33333333%;
+@width-span-9: 75%;
+@width-span-8: 66.66666667%;
+@width-span-7: 58.33333333%;
+@width-span-6: 50%;
+@width-span-5: 41.66666667%;
+@width-span-4: 33.33333333%;
+@width-span-3: 25%;
+@width-span-2: 16.66666667%;
+@width-span-1: 8.33333333%;

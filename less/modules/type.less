@@ -1,0 +1,113 @@
+/**
+ * TYPE
+ *
+ * Styles for basic type-related styles. Headings, paragraphs, etc.
+ *
+ * When we use h1, h2 etc within other elements we'll probably need to
+ * give them a class and assign specific sizes, margins etc to that
+ * particular usage.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height:    @line-height-heading;
+    color:          @heading-primary-color;
+    font-weight:    @font-weight-bolder;
+}
+
+h1 {
+    font-size:      @font-size-heading-1;
+    font-weight:    @font-weight-boldest;
+    color:          @heritage-blue;
+    margin-top:     (@font-size-heading-1 * 0.75);
+    margin-bottom:  (@font-size-heading-1 * 0.4);
+}
+
+h2 {
+    font-size:      @font-size-heading-2;
+    color:          @heritage-blue;
+    margin-top:     (@font-size-heading-2 * 0.75);
+    margin-bottom:  (@font-size-heading-2 * 0.4);
+}
+
+h3 {
+    font-size:      @font-size-heading-3;
+    margin-top:     (@font-size-heading-3 * 0.75);
+    margin-bottom:  (@font-size-heading-3 * 0.4);
+}
+
+h4 {
+    font-size:      @font-size-heading-4;
+    margin-top:     (@font-size-heading-4 * 0.75);
+    margin-bottom:  (@font-size-heading-4 * 0.4);
+}
+
+h5 {
+    font-size:      @font-size-heading-5;
+    margin-top:     (@font-size-heading-5 * 0.75);
+    margin-bottom:  (@font-size-heading-5 * 0.4);
+}
+
+h6 {
+    font-size:      @font-size-heading-5;
+    margin-top:     (@font-size-heading-5 * 0.75);
+    margin-bottom:  (@font-size-heading-5 * 0.4);
+}
+
+h1 + h2,
+h2 + h3,
+h4 + h5,
+h5 + h6 {
+    margin-top: -(@line-height-computed * 0.25);
+}
+
+h3 + h4 {
+    margin-top: -(@line-height-computed * 0.6);
+}
+
+p {
+    font-size:      @font-size-base;
+    line-height:    @line-height-base;
+    font-weight:    @font-weight-base;
+    margin: 0 0 @paragraph-margin-bottom 0;
+}
+
+b,
+strong {
+    font-weight: @font-weight-bold;
+}
+
+// Site wide links
+
+a {
+    color:    @link-color;
+    text-decoration: none !important;
+    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
+    
+    &:hover,
+    &:focus {
+        color:    @link-hover-color;
+    }
+
+    &:active {
+        color:    @link-active-colour;
+    }
+
+    &:visited {
+        color:    @link-visited-color;
+    }
+}
+
+// Horizontal rules
+hr {
+    margin-top:    @line-height-computed;
+    margin-bottom: @line-height-computed;
+    border: 0;
+    border-top: 1px solid @gray-4;
+}
+
+// Intro paragraphs
+.p-lede {
+    font-size: @font-size-medium;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-base;
+}
