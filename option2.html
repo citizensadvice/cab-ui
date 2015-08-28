@@ -28,6 +28,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- Accordion script -->
     <script src="js/beta-dap-accordion.js"></script>
+    <!-- Sticky JS call -->
+    <script>
+        $(window).load(function(){
+            var height = $('#footer').height();
+            $(".sticker").sticky({ topSpacing: 20, bottomSpacing: height + 80 });
+            $(".js-make-sticky").sticky({ topSpacing: 20, bottomSpacing: height + 20 });
+        });
+    </script>
 </head>
 
 <body class="beta">
@@ -228,14 +236,71 @@
                             </li>
                         </ol>
                     </div>
+                    <div>
+                        <p>Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.</p>
+                        <ol>
+                            <li>
+                                <strong>Check if you need permission or approval</strong></br>
+                                Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.
+                            </li>
+                            <li>
+                                <strong>Find good builders or contractors</strong></br>
+                                Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.
+                            </li>
+                            <li>
+                                <strong>Get quotes before you decide who to use</strong></br>
+                                Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.
+                            </li>
+                            <li>
+                                <strong>Check there’s insurance in place</strong></br>
+                                Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.
+                            </li>
+                            <li>
+                                <strong>Get a written contract</strong></br>
+                                Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.
+                            </li>
+                            <li>
+                                <strong>Be prepared to deal with problems</strong></br>
+                                Speak to contractors as soon as problems come up, and get them to agree to put them right.
+                            </li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p>Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.</p>
+                        <ol>
+                            <li>
+                                <strong>Check if you need permission or approval</strong></br>
+                                Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.
+                            </li>
+                            <li>
+                                <strong>Find good builders or contractors</strong></br>
+                                Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.
+                            </li>
+                            <li>
+                                <strong>Get quotes before you decide who to use</strong></br>
+                                Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.
+                            </li>
+                            <li>
+                                <strong>Check there’s insurance in place</strong></br>
+                                Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.
+                            </li>
+                            <li>
+                                <strong>Get a written contract</strong></br>
+                                Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.
+                            </li>
+                            <li>
+                                <strong>Be prepared to deal with problems</strong></br>
+                                Speak to contractors as soon as problems come up, and get them to agree to put them right.
+                            </li>
+                        </ol>
+                    </div>
                 </div>
 
                 <!-- END MAIN CONTENT -->
 
             </main>
 
-            <aside class=
-            "main-content__sidebar beta-extent-switcher hide-offline"
+            <aside class="main-content__sidebar beta-extent-switcher hide-offline"
             data-track-zone="page-beta-extent-swticher">
                 <h2 class="beta-extent-switcher__heading">This advice applies
                 to England</h2>
@@ -267,9 +332,8 @@
                 </form>
             </aside>
 
-            <nav class="side-nav" data-track-zone="side-nav" id=
-            "beta-dap-menu-accordion">
-                <ul class="beta-dap-menu-accordion__sections">
+            <nav class="side-nav" data-track-zone="side-nav" id="beta-dap-menu-accordion">
+                <ul class="beta-dap-menu-accordion__sections sticker">
                     <li class="beta-dap-menu-accordion__section has-sub -active -open">
                         <a class="beta-dap-menu-accordion__link">Before you
                         apply for Universal Credit</a>
@@ -687,5 +751,7 @@
     </footer>
     <!--[if gt IE 7]><i --><script src="js/core"></script><!--<![endif]-->
     <div id="_oldTag_158_"></div><!--[if IE 8]></div><![endif]-->
+    <!-- Sticky JS -->
+    <script src="js/jquery.sticky.js"></script>
 </body>
 </html>
