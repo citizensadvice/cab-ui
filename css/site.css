@@ -1,0 +1,821 @@
+/** Steps
+* Used in option 3
+*/
+/**
+ * COLOR DEFINITIONS.
+ *
+ * Defines the colors we will use across the site.
+ * This is our palette, which is used within _variables.scss and elsewhere.
+ */
+/***************************************************************************
+ * COLORS
+ */
+/***************************************************************************
+ * PRIMARY
+ */
+/***************************************************************************
+ * STATE COLORS.
+ * Used for Alerts, Media, States and form field validation states.
+ */
+/***************************************************************************
+ * PRIORITY COLORS.
+ * Used for Media, Priorities.
+ */
+/***************************************************************************
+ * HEADERS. h1, h2, etc.
+ */
+/**
+ * GRID STRUCTURE FOR CONTENT.
+ *
+ * Defines the content area dimensions, grid structure and breakpoints.
+ */
+/**
+ * FRAMEWORK.
+ *
+ * Fitting within the grid.less.
+ * Structure following bootstrap principles
+ * 12 columns, using 3/4 columns
+ */
+.flex-row {
+  max-width: 100%;
+  margin: auto;
+  clear: both;
+  padding: calc(1.5em) 0em;
+}
+.flex-container {
+  max-width: 1080px;
+  clear: both;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: calc(100% + 1em);
+}
+.flex-col-1-1 {
+  width: 100%;
+}
+.flex-col-1-2 {
+  width: 50%;
+}
+.flex-col-1-3 {
+  width: 33.33333333%;
+}
+.flex-col-2-3 {
+  width: 66.66666667%;
+}
+.flex-col-1-4 {
+  width: 25%;
+}
+.flex-col-3-4 {
+  width: 75%;
+}
+.flex-col-1-6 {
+  width: 16.66666667%;
+}
+.flex-col-1-12 {
+  width: 8.33333333%;
+}
+.flex-col-2-8 {
+  width: 75%;
+}
+.flex-row--header__heritage-blue {
+  max-width: 100%;
+  margin: auto;
+  clear: left;
+  padding: calc(1.5em) 0em;
+  background-color: #004b88 !important;
+}
+/**
+ * VARIABLES.
+ *
+ * All non-color variables.
+ */
+/***************************************************************************
+ * TEXT SIZES
+ */
+/***************************************************************************
+ * FONT WEIGHTS
+ */
+/***************************************************************************
+ * LINE HEIGHTS
+ */
+/* eg, 20px when font size is 14px */
+/***************************************************************************
+ * LINKS
+ */
+/****************************************************************************
+ * TABLES.
+ */
+/***************************************************************************
+ * PANELS
+ */
+/***************************************************************************
+ * FORMS
+ */
+/***************************************************************************
+ * PADDED BOXES.
+ * Used for shaded boxes of various kinds.
+ * Usually, use the .box class and modifications like .box--1, etc.
+ */
+/***************************************************************************
+ * REVEALERS
+ */
+/***************************************************************************
+ * BADGES.
+ */
+/***************************************************************************
+ * MENUS.
+ */
+/***************************************************************************
+ * LETTERS.
+ */
+/***************************************************************************
+ * BANNER
+ * The top of page stripes.
+ */
+/***************************************************************************
+ * FOOTER
+ */
+/**
+ * NAVIGATION.
+ * 
+ * Breadcrumb
+ * Left hand menu
+*/
+.breadcrumb {
+  margin-top: 1em;
+  font-size: 1em;
+}
+.breadcrumb p a:after {
+  content: "›";
+  font-size: 1.5em;
+  color: #dce5f1;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background-color: #ffffff;
+}
+/**
+ * CALLOUTS.
+ *
+ * Styles for content boxes and coloured sections.
+ */
+/* Creates a mixin for making box styles, including their links */
+/**
+ * Creates the various box styles using two colours
+ * .callout(text, background)
+ */
+.callout {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #dfe1e3;
+  color: #191926;
+  border-color: #b6bbbf;
+}
+.callout h1,
+.callout h2,
+.callout h3 {
+  color: #191926;
+}
+.callout *:first-child {
+  padding-top: 0.75em;
+}
+.callout *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--border {
+  border-left: 5px #b6bbbf solid;
+  padding-left: calc(0.75em);
+}
+.callout .callout__link {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #f3f4f5;
+  color: #191926;
+  border-bottom: 1px solid #9ba1a7;
+}
+.callout .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #191926;
+  padding: 0 1.25em;
+  background-color: #c4c8cb;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 290%;
+}
+.callout .callout__link:hover {
+  background-color: #fafbfb;
+  color: #191926;
+}
+.callout .callout__link:hover:after {
+  background-color: #b6bbbf;
+}
+.callout--turquoise {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #81cec6;
+  color: #191926;
+  border-color: #4ab9ad;
+}
+.callout--turquoise h1,
+.callout--turquoise h2,
+.callout--turquoise h3 {
+  color: #191926;
+}
+.callout--turquoise *:first-child {
+  padding-top: 0.75em;
+}
+.callout--turquoise *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--turquoise--border {
+  border-left: 5px #4ab9ad solid;
+  padding-left: calc(0.75em);
+}
+.callout--turquoise .callout__link {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #9dd9d2;
+  color: #191926;
+  border-bottom: 1px solid #3a958c;
+}
+.callout--turquoise .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #191926;
+  padding: 0 1.25em;
+  background-color: #5cc0b5;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 290%;
+}
+.callout--turquoise .callout__link:hover {
+  background-color: #a6dcd7;
+  color: #191926;
+}
+.callout--turquoise .callout__link:hover:after {
+  background-color: #4ab9ad;
+}
+.callout--green {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #c5e1ac;
+  color: #008286;
+  border-color: #9ecd74;
+}
+.callout--green h1,
+.callout--green h2,
+.callout--green h3 {
+  color: #008286;
+}
+.callout--green *:first-child {
+  padding-top: 0.75em;
+}
+.callout--green *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--green--border {
+  border-left: 5px #9ecd74 solid;
+  padding-left: calc(0.75em);
+}
+.callout--green .callout__link {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #d9ebc8;
+  color: #008286;
+  border-bottom: 1px solid #84bf4e;
+}
+.callout--green .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #008286;
+  padding: 0 1.25em;
+  background-color: #abd387;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 290%;
+}
+.callout--green .callout__link:hover {
+  background-color: #dfefd1;
+  color: #008286;
+}
+.callout--green .callout__link:hover:after {
+  background-color: #9ecd74;
+}
+.callout--warning {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #f3b5b6;
+  color: #bf1d21;
+  border-color: #e97275;
+}
+.callout--warning h1,
+.callout--warning h2,
+.callout--warning h3 {
+  color: #bf1d21;
+}
+.callout--warning *:first-child {
+  padding-top: 0.75em;
+}
+.callout--warning *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--warning--border {
+  border-left: 5px #e97275 solid;
+  padding-left: calc(0.75em);
+}
+.callout--warning .callout__link {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #f9d6d6;
+  color: #bf1d21;
+  border-bottom: 1px solid #e2464a;
+}
+.callout--warning .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #bf1d21;
+  padding: 0 1.25em;
+  background-color: #ed888b;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 290%;
+}
+.callout--warning .callout__link:hover {
+  background-color: #fae1e1;
+  color: #bf1d21;
+}
+.callout--warning .callout__link:hover:after {
+  background-color: #e97275;
+}
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/**
+ * UTILITY
+ *
+ * Basic utility classes.
+ * And one or two odds and ends that coule be moved elsewhere at some point.
+ */
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-text-nowrap {
+  white-space: nowrap;
+}
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+.u-text-large {
+  font-size: 1.5em;
+}
+.u-text-small {
+  font-size: 0.875em;
+}
+.u-text-light {
+  color: #999999;
+}
+.u-border-1 {
+  border: 1px solid #253460;
+}
+.u-border-2 {
+  border: 2px solid #253460;
+}
+.u-border-3 {
+  border: 3px solid #253460;
+}
+.u-pull-left {
+  float: left;
+}
+.u-pull-right {
+  float: right;
+}
+/**
+ * First paragraph at start of some things.
+ */
+.u-lede {
+  font-weight: 700;
+  line-height: 1.69;
+  margin-top: 0.8em;
+  margin-bottom: 0.5em;
+}
+/**
+ * For the Alpha project we may want to indicate some portions are disabled
+ * because they're not yet finished. So use this class on it. */
+.alpha-disabled a {
+  cursor: default;
+}
+/**********************************************************************
+ * Hiding elements for various reasons.
+ */
+/**
+ * Hide revealable blocks by default, unless the user has no JS.
+ */
+.js-revealable {
+  display: none;
+}
+.no-js .js-revealable {
+  display: block;
+}
+@media print {
+  /**
+     * Use on elements not covered by the print stylesheet that shouldn't be
+     * printed. eg, form-based widgets, dynamic things that don't have much
+     * benefit to being printed.
+     */
+  .u-noprint {
+    display: none !important;
+  }
+  /**
+     * Use these to make invisible things show up in the print version.
+     * Probably combine with .u-visuallyhidden (below).
+     */
+  .u-print {
+    display: block !important;
+  }
+  span.u-print {
+    display: inline !important;
+  }
+}
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+@media print {
+  /**
+     * But, if it also has .u-print, then make it show up when printing.
+     */
+  .u-hidden.u-print {
+    display: block !important;
+    visibility: visible !important;
+  }
+  span.u-hidden.u-print {
+    display: inline !important;
+  }
+}
+@media print {
+  /**
+     * But, if it also has .u-print then make it show up when printing.
+     */
+  .u-visuallyhidden.u-print {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    position: relative;
+    width: auto;
+  }
+}
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.u-visuallyhidden.u-focusable:active,
+.u-visuallyhidden.u-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.u-invisible {
+  visibility: hidden;
+}
+/**
+ * LISTS.
+ * Basic list styles.
+ */
+ul {
+  padding-left: 1.5em;
+}
+ul,
+ol,
+dl {
+  margin: 0 0 1em 0;
+}
+ul ul,
+ol ul,
+dl ul,
+ul ol,
+ol ol,
+dl ol,
+ul dl,
+ol dl,
+dl dl {
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 0.5em;
+}
+li > ul,
+li > ol {
+  margin-top: 0.5em;
+}
+.list-unstyled .list-unstyled {
+  padding-left: 1.5em;
+}
+.list--sessions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+.list--sessions li a {
+  display: block;
+  padding: 0.5em;
+  text-decoration: underline;
+}
+.list--sessions li a:hover,
+.list--sessions li a:focus {
+  color: #253460;
+  background-color: #ddf2f0;
+}
+.list--sessions li a:active {
+  color: #034ea2;
+}
+.list--sessions li a:visited {
+  color: #253460;
+}
+/**
+ * ICONS
+ *
+ * Using Fontawesome
+ * Including icons as part of content using classes.
+ * Can also be called into the script using <i class="fa fa-ICON-NAME"></i>
+ * References: http://fortawesome.github.io/Font-Awesome
+ */
+.a-link:after {
+  font-family: FontAwesome;
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-external-link:after {
+  font-family: FontAwesome;
+  content: "\f08e";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-action:after {
+  font-family: FontAwesome;
+  content: "\f016";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-word-doc:after {
+  font-family: FontAwesome;
+  content: "\f1c2";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-excel-doc:after {
+  font-family: FontAwesome;
+  content: "\f1c3";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-pdf-doc:after {
+  font-family: FontAwesome;
+  content: "\f1c1";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
+.a-file-doc:after {
+  font-family: FontAwesome;
+  content: "\f016";
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  color: #253460;
+  font-size: 75%;
+}
