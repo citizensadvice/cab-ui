@@ -1,82 +1,9 @@
-/*
-Responsive Accordion
-Author: marcoarib
-License: http://codecanyon.net/licenses/standard
-*/
-
-/* Accordion
-=================================*/
-.revealable *{
-	font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
-	outline: 0;
+.accordion-toggle {
+  cursor: pointer;
 }
-.revealable{
-	background-color: #ffffff;
-	border: solid 1px #e9e9e9;
+.accordion-content {
+  display: none;
 }
-
-/* Header
-=================================*/
-.revealable-header{
-	min-height: 40px;
-	padding: 10px 35px 10px 15px;
-	line-height: 20px;
-	font-size: 13px;
-	font-weight: 600;
-	color: #434955;
-	border-bottom: solid 1px #e9e9e9;
-	cursor: pointer;
-	overflow: hidden;
-	position: relative;
-	background-color: #fdfdfd;
-	-webkit-tap-highlight-color: transparent;
-	transition: background .2s linear;
-}
-.revealable-item:last-child .revealable-header{
-	border-bottom: none;
-}
-.revealable-header:hover,
-.revealable-item.active .revealable-header{
-	background-color: #f7f8f9;
-}
-/* Header icons (Font Awesome) */
-.revealable-header i{
-	width: 26px;
-	text-align: left;
-	font-size: 16px;
-}
-/* Header arrows */
-.revealable-header .revealable-item-arrow{
-	position: absolute;
-	right: 15px;
-	height: 20px;
-	margin-top: -10px;
-	top: 50%;
-}
-.revealable-header .revealable-item-arrow:before{
-	content: "\f107";
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	float: right;
-	transition: all .2s linear;
-}
-.revealable-item.active .revealable-header .revealable-item-arrow:before{
-	-ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg); 
-    transform: rotate(180deg);
-}
-
-/* Content
-=================================*/
-.revealable-content{
-	padding: 15px;
-	display: none;
-	border-bottom: solid 1px #e9e9e9;
-	font-size: 14px;
-	color: #434955;
-}
-.revealable-item:last-child .revealable-content{
-	border-bottom: none;
-	border-top: solid 1px #e9e9e9;
+.accordion-content.default {
+  display: block;
 }
