@@ -28,7 +28,13 @@
   padding: 0;
   border: 0;
   margin: -0.75em -1em 0.75em -1em !important;
-  padding: 0 1em 2em 1em;
+  padding: 0 1em 1em 1em;
   border: solid #253460;
   border-width: 0px 1px 1px 1px;
+}
+#accordion .accordion-toggle-close {
+  cursor: pointer;
+}
+#accordion .accordion-toggle-close:before {
+  content: "\f00d";
 }

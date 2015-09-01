@@ -78,8 +78,12 @@
 
         $(document).ready(function($) {
             $('#accordion').find('.accordion-toggle').click(function(){
-                $(this).next().slideToggle();
                 $(this).toggleClass("open");
+                $(this).next().slideToggle();
+            });
+            $('#accordion').find('.accordion-toggle-close').click(function(){
+                $(this).parent().slideToggle();
+                $(this).parent().prev().toggleClass("open");
             });
         });
     </script>
@@ -282,6 +286,9 @@
 
                                 <div class="callout--turquoise"><a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
                                 </div>
+
+                                <a class="accordion-toggle-close">Close</a>
+
                             </section>
 
                             <a class="accordion-toggle callout__link callout__link--anchor">If you think you’re being overcharged</a>
@@ -324,6 +331,8 @@
 
                                 <div class="callout--turquoise"><a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
                                 </div>
+
+                                <a class="accordion-toggle-close">Close</a>
                             </section>
 
                             <a class="accordion-toggle callout__link callout__link--anchor">If the garage did work you didn’t ask for</a>
@@ -342,6 +351,8 @@
 
                                 <div class="callout--turquoise"><a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
                                 </div>
+
+                                <a class="accordion-toggle-close">Close</a>
                             </section>
 
                             <a class="accordion-toggle callout__link callout__link--anchor">If the repair is taking too long</a>
@@ -378,6 +389,8 @@
 
                                 <div class="callout--turquoise"><a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
                                 </div>
+
+                                <a class="accordion-toggle-close">Close</a>
                             </section>
                         </div>
 
