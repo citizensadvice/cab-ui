@@ -7,3 +7,28 @@
 .accordion-content.default {
   display: block;
 }
+#accordion {
+  background-color: white !important;
+}
+#accordion .accordion-toggle {
+  margin-bottom: 0.75em !important;
+  background-color: #004B88;
+  color: white;
+  border-color: #253460;
+}
+#accordion .accordion-toggle:after {
+  background-color: #253460;
+  color: white;
+  content: "\f067";
+}
+#accordion .open:after {
+  content: "\f068";
+}
+#accordion .accordion-content {
+  padding: 0;
+  border: 0;
+  margin: -0.75em -1em 0.75em -1em !important;
+  padding: 0 1em 2em 1em;
+  border: solid #253460;
+  border-width: 0px 1px 1px 1px;
+}
