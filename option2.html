@@ -50,7 +50,7 @@ $(window).load(function(){
                 menu = target;
             $target = $(target);
             $('html, body').stop().animate({
-                'scrollTop': $target.offset().top-14
+                'scrollTop': $target.offset().top+2
             }, 500, 'swing', function () {
                 window.location.hash = target;
                 $(document).on("scroll", onScroll);
@@ -240,7 +240,7 @@ $(window).load(function(){
                         </ol>
 
                         <section id="step1">
-                            <h2 id="step1">Step 1: Check if you need permission or approval</h2>
+                            <h2>Step 1: Check if you need permission or approval</h2>
 
                             <p>You may have to get more than one kind of permission or approval before you go ahead with work on your home.</p>
 
@@ -581,13 +581,13 @@ $(window).load(function(){
                             <div class="callout">
                                 <p>You have 14 days to cancel the contract after giving the go-ahead or signing a written contract. This is known as the cooling-off period.</p>
                             </div>
+
+                            <div class="callout--yellow">
+                                <h3>Further help</h3>
+
+                                <p>Contact the Citizens Advice consumer helpline if you need more help - a trained adviser can give you advice over the phone or by email.</p>
+                            </div>
                         </section>
-
-                        <div class="callout--yellow">
-                            <h3>Further help</h3>
-
-                            <p>Contact the Citizens Advice consumer helpline if you need more help - a trained adviser can give you advice over the phone or by email.</p>
-                        </div>
 
                         <section id="step6">
                             <h2>Step 6: Be prepared to deal with problems</h2>
@@ -649,27 +649,27 @@ $(window).load(function(){
 
                                 <ul class="o2">
                                     <li class="o2__link">
-                                        <a class="" href="#step1">Step 1: Check if you need permission or approval</a>
+                                        <a class="" href="#step1"><strong>Step 1:</strong> Check if you need permission or approval</a>
                                     </li>
 
                                     <li class="o2__link">
-                                        <a class="" href="#step2">Step 2: Find good builders or contractors</a>
+                                        <a class="" href="#step2"><strong>Step 2:</strong> Find good builders or contractors</a>
                                     </li>
 
                                     <li class="o2__link">
-                                        <a class="" href="#step3">Step 3: Get quotes before you decide who to use</a>
+                                        <a class="" href="#step3"><strong>Step 3:</strong> Get quotes before you decide who to use</a>
                                     </li>
 
                                     <li class="o2__link">
-                                        <a class="" href="#step4">Step 4: Check there’s insurance in place</a>
+                                        <a class="" href="#step4"><strong>Step 4:</strong> Check there’s insurance in place</a>
                                     </li>
 
                                     <li class="o2__link">
-                                        <a class="" href="#step5">Step 5: Get a written contract</a>
+                                        <a class="" href="#step5"><strong>Step 5:</strong> Get a written contract</a>
                                     </li>
 
                                     <li class="o2__link">
-                                        <a class="" href="#step6">Step 6: Be prepared to deal with problems</a>
+                                        <a class="" href="#step6"><strong>Step 6:</strong> Be prepared to deal with problems</a>
                                     </li>
                                 </ul>
                             </li>

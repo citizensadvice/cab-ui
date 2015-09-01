@@ -5,35 +5,49 @@
  */
 
 /* Creates a mixin for making box styles, including their links */
-.callout (@box-color: @text-color, @box-color-bg: @box-3-bg) {
+.callout (@box-color: @text-color, @box-color-h: #666666, @box-color-bg: #f8f8f8) {
     padding: 0 @box-padding-horizontal @box-padding-vertical @box-padding-horizontal;
     margin: @box-padding-vertical 0;
     background-color: @box-color-bg;
     color: @box-color;
     border-color: darken(@box-color-bg, 15%);
 	h1, h2, h3 {
-		color: @box-color; 
+		color: @box-color-h !important; 
 	}
     *:first-child {
     	padding-top: @box-padding-vertical;
+    }
+    h1:first-child,
+    h2:first-child,
+    h3:first-child,
+    h4:first-child,
+    h5:first-child,
+    h6:first-child {
+    	padding-top: 0;
+    }
+    li:first-child {
+    	padding-top: 0;
     }
     *:last-child {
     	margin-bottom: 0 !important;
     }
 	&--border {
-		border-left: 5px darken(@box-color-bg, 15%) solid;
+		border: 1px darken(@box-color-bg, 15%) solid;
+	}
+	&--border-left {
+		border: 5px darken(@box-color-bg, 15%) solid;
 		padding-left: calc(@box-padding-horizontal*.75);
 	}
 	.callout__link {
 	 	cursor: pointer;
-	 	width: 100%;
 	 	display: block;
 	    padding: @box-padding-vertical @box-padding-horizontal;
 	    margin: @box-padding-vertical -@box-padding-horizontal -@box-padding-vertical -@box-padding-horizontal !important;
 	    border: none;
-	    background-color: lighten(@box-color-bg, 7.5%);
+	    background-color: lighten(@box-color-bg, .5%);
 	    color: @box-color;
 	    border-bottom: 1px solid darken(@box-color-bg, 25%);
+	    text-decoration: none !important;
 		&:after {
 			box-sizing: border-box;
 		    font-family: FontAwesome;
@@ -44,7 +58,7 @@
 		    background-color: darken(@box-color-bg, 10%);
 		    margin-top: -@box-padding-vertical;
 		    margin-right: -@box-padding-horizontal;
-		    line-height: 290%;
+		    line-height: 300%;
 		}
 	    &:hover {
 	    	background-color: lighten(@box-color-bg, 10%);
@@ -52,6 +66,9 @@
 	    	&:after {
 	    		background-color: darken(@box-color-bg, 15%);
 	    	}
+	    }
+	    &--anchor:after {
+		    content: "\f063";
 	    }
 	}
 }
@@ -62,8 +79,9 @@
  */
 .callout {
 	.callout(); // Create unstyled box
-	&--turquoise 	{ .callout( @text-color, @turquoise ) }
-	&--green 		{ .callout( @green, @green-light ) }
-	&--warning 		{ .callout( darken(@red-brighter, 10%), @red-brighter-tint ) }
-	&--yellow 		{ .callout( @text-color, #FEF8D4 ) }
+	&--turquoise 	{ .callout( @text-color, @text-color, @turquoise ) }
+	&--green 		{ .callout( @green, @green, @green-light ) }
+	&--warning 		{ .callout( @text-color, #B10B1E, #FCDBDF ) }
+	&--alert 		{ .callout( @text-color, @text-color, #FEF8D4 ) }
+	&--info			{ .callout( @text-color, #0A4B88, #EEF7FF ) }
 }

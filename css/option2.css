@@ -13,4 +13,12 @@
   background-position: center left;
   background-repeat: no-repeat;
   background-color: #DCE5F2;
+  font-weight: 700;
+}
+.o2 .active strong {
+  font-weight: 700;
+}
+section {
+  border-top: 1px solid #EEEEEE;
+  margin-top: 20px;
 }

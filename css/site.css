@@ -1,6 +1,3 @@
-/** Steps
-* Used in option 3
-*/
 /**
  * COLOR DEFINITIONS.
  *
@@ -170,35 +167,49 @@
 .callout {
   padding: 0 1em 0.75em 1em;
   margin: 0.75em 0;
-  background-color: #dfe1e3;
+  background-color: #f8f8f8;
   color: #191926;
-  border-color: #b6bbbf;
+  border-color: #d2d2d2;
 }
 .callout h1,
 .callout h2,
 .callout h3 {
-  color: #191926;
+  color: #666666 !important;
 }
 .callout *:first-child {
   padding-top: 0.75em;
+}
+.callout h1:first-child,
+.callout h2:first-child,
+.callout h3:first-child,
+.callout h4:first-child,
+.callout h5:first-child,
+.callout h6:first-child {
+  padding-top: 0;
+}
+.callout li:first-child {
+  padding-top: 0;
 }
 .callout *:last-child {
   margin-bottom: 0 !important;
 }
 .callout--border {
-  border-left: 5px #b6bbbf solid;
+  border: 1px #d2d2d2 solid;
+}
+.callout--border-left {
+  border: 5px #d2d2d2 solid;
   padding-left: calc(0.75em);
 }
 .callout .callout__link {
   cursor: pointer;
-  width: 100%;
   display: block;
   padding: 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
-  background-color: #f3f4f5;
+  background-color: #f9f9f9;
   color: #191926;
-  border-bottom: 1px solid #9ba1a7;
+  border-bottom: 1px solid #b8b8b8;
+  text-decoration: none !important;
 }
 .callout .callout__link:after {
   box-sizing: border-box;
@@ -207,17 +218,20 @@
   float: right;
   color: #191926;
   padding: 0 1.25em;
-  background-color: #c4c8cb;
+  background-color: #dfdfdf;
   margin-top: -0.75em;
   margin-right: -1em;
-  line-height: 290%;
+  line-height: 300%;
 }
 .callout .callout__link:hover {
-  background-color: #fafbfb;
+  background-color: #ffffff;
   color: #191926;
 }
 .callout .callout__link:hover:after {
-  background-color: #b6bbbf;
+  background-color: #d2d2d2;
+}
+.callout .callout__link--anchor:after {
+  content: "\f063";
 }
 .callout--turquoise {
   padding: 0 1em 0.75em 1em;
@@ -229,28 +243,42 @@
 .callout--turquoise h1,
 .callout--turquoise h2,
 .callout--turquoise h3 {
-  color: #191926;
+  color: #191926 !important;
 }
 .callout--turquoise *:first-child {
   padding-top: 0.75em;
+}
+.callout--turquoise h1:first-child,
+.callout--turquoise h2:first-child,
+.callout--turquoise h3:first-child,
+.callout--turquoise h4:first-child,
+.callout--turquoise h5:first-child,
+.callout--turquoise h6:first-child {
+  padding-top: 0;
+}
+.callout--turquoise li:first-child {
+  padding-top: 0;
 }
 .callout--turquoise *:last-child {
   margin-bottom: 0 !important;
 }
 .callout--turquoise--border {
-  border-left: 5px #4ab9ad solid;
+  border: 1px #4ab9ad solid;
+}
+.callout--turquoise--border-left {
+  border: 5px #4ab9ad solid;
   padding-left: calc(0.75em);
 }
 .callout--turquoise .callout__link {
   cursor: pointer;
-  width: 100%;
   display: block;
   padding: 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
-  background-color: #9dd9d2;
+  background-color: #83cfc7;
   color: #191926;
   border-bottom: 1px solid #3a958c;
+  text-decoration: none !important;
 }
 .callout--turquoise .callout__link:after {
   box-sizing: border-box;
@@ -262,7 +290,7 @@
   background-color: #5cc0b5;
   margin-top: -0.75em;
   margin-right: -1em;
-  line-height: 290%;
+  line-height: 300%;
 }
 .callout--turquoise .callout__link:hover {
   background-color: #a6dcd7;
@@ -270,6 +298,9 @@
 }
 .callout--turquoise .callout__link:hover:after {
   background-color: #4ab9ad;
+}
+.callout--turquoise .callout__link--anchor:after {
+  content: "\f063";
 }
 .callout--green {
   padding: 0 1em 0.75em 1em;
@@ -281,28 +312,42 @@
 .callout--green h1,
 .callout--green h2,
 .callout--green h3 {
-  color: #008286;
+  color: #008286 !important;
 }
 .callout--green *:first-child {
   padding-top: 0.75em;
+}
+.callout--green h1:first-child,
+.callout--green h2:first-child,
+.callout--green h3:first-child,
+.callout--green h4:first-child,
+.callout--green h5:first-child,
+.callout--green h6:first-child {
+  padding-top: 0;
+}
+.callout--green li:first-child {
+  padding-top: 0;
 }
 .callout--green *:last-child {
   margin-bottom: 0 !important;
 }
 .callout--green--border {
-  border-left: 5px #9ecd74 solid;
+  border: 1px #9ecd74 solid;
+}
+.callout--green--border-left {
+  border: 5px #9ecd74 solid;
   padding-left: calc(0.75em);
 }
 .callout--green .callout__link {
   cursor: pointer;
-  width: 100%;
   display: block;
   padding: 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
-  background-color: #d9ebc8;
+  background-color: #c6e2ae;
   color: #008286;
   border-bottom: 1px solid #84bf4e;
+  text-decoration: none !important;
 }
 .callout--green .callout__link:after {
   box-sizing: border-box;
@@ -314,7 +359,7 @@
   background-color: #abd387;
   margin-top: -0.75em;
   margin-right: -1em;
-  line-height: 290%;
+  line-height: 300%;
 }
 .callout--green .callout__link:hover {
   background-color: #dfefd1;
@@ -323,92 +368,126 @@
 .callout--green .callout__link:hover:after {
   background-color: #9ecd74;
 }
+.callout--green .callout__link--anchor:after {
+  content: "\f063";
+}
 .callout--warning {
   padding: 0 1em 0.75em 1em;
   margin: 0.75em 0;
-  background-color: #f3b5b6;
-  color: #bf1d21;
-  border-color: #e97275;
+  background-color: #fcdbdf;
+  color: #191926;
+  border-color: #f694a0;
 }
 .callout--warning h1,
 .callout--warning h2,
 .callout--warning h3 {
-  color: #bf1d21;
+  color: #b10b1e !important;
 }
 .callout--warning *:first-child {
   padding-top: 0.75em;
+}
+.callout--warning h1:first-child,
+.callout--warning h2:first-child,
+.callout--warning h3:first-child,
+.callout--warning h4:first-child,
+.callout--warning h5:first-child,
+.callout--warning h6:first-child {
+  padding-top: 0;
+}
+.callout--warning li:first-child {
+  padding-top: 0;
 }
 .callout--warning *:last-child {
   margin-bottom: 0 !important;
 }
 .callout--warning--border {
-  border-left: 5px #e97275 solid;
+  border: 1px #f694a0 solid;
+}
+.callout--warning--border-left {
+  border: 5px #f694a0 solid;
   padding-left: calc(0.75em);
 }
 .callout--warning .callout__link {
   cursor: pointer;
-  width: 100%;
   display: block;
   padding: 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
-  background-color: #f9d6d6;
-  color: #bf1d21;
-  border-bottom: 1px solid #e2464a;
+  background-color: #fcdde1;
+  color: #191926;
+  border-bottom: 1px solid #f26576;
+  text-decoration: none !important;
 }
 .callout--warning .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
   float: right;
-  color: #bf1d21;
+  color: #191926;
   padding: 0 1.25em;
-  background-color: #ed888b;
+  background-color: #f8acb5;
   margin-top: -0.75em;
   margin-right: -1em;
-  line-height: 290%;
+  line-height: 300%;
 }
 .callout--warning .callout__link:hover {
-  background-color: #fae1e1;
-  color: #bf1d21;
+  background-color: #ffffff;
+  color: #191926;
 }
 .callout--warning .callout__link:hover:after {
-  background-color: #e97275;
+  background-color: #f694a0;
 }
-.callout--yellow {
+.callout--warning .callout__link--anchor:after {
+  content: "\f063";
+}
+.callout--alert {
   padding: 0 1em 0.75em 1em;
   margin: 0.75em 0;
   background-color: #fef8d4;
   color: #191926;
   border-color: #fcec89;
 }
-.callout--yellow h1,
-.callout--yellow h2,
-.callout--yellow h3 {
-  color: #191926;
+.callout--alert h1,
+.callout--alert h2,
+.callout--alert h3 {
+  color: #191926 !important;
 }
-.callout--yellow *:first-child {
+.callout--alert *:first-child {
   padding-top: 0.75em;
 }
-.callout--yellow *:last-child {
+.callout--alert h1:first-child,
+.callout--alert h2:first-child,
+.callout--alert h3:first-child,
+.callout--alert h4:first-child,
+.callout--alert h5:first-child,
+.callout--alert h6:first-child {
+  padding-top: 0;
+}
+.callout--alert li:first-child {
+  padding-top: 0;
+}
+.callout--alert *:last-child {
   margin-bottom: 0 !important;
 }
-.callout--yellow--border {
-  border-left: 5px #fcec89 solid;
+.callout--alert--border {
+  border: 1px #fcec89 solid;
+}
+.callout--alert--border-left {
+  border: 5px #fcec89 solid;
   padding-left: calc(0.75em);
 }
-.callout--yellow .callout__link {
+.callout--alert .callout__link {
   cursor: pointer;
-  width: 100%;
   display: block;
   padding: 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
-  background-color: #fffef9;
+  background-color: #fef8d6;
   color: #191926;
   border-bottom: 1px solid #fbe457;
+  text-decoration: none !important;
 }
-.callout--yellow .callout__link:after {
+.callout--alert .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -418,14 +497,86 @@
   background-color: #fdf0a2;
   margin-top: -0.75em;
   margin-right: -1em;
-  line-height: 290%;
+  line-height: 300%;
 }
-.callout--yellow .callout__link:hover {
+.callout--alert .callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--yellow .callout__link:hover:after {
+.callout--alert .callout__link:hover:after {
   background-color: #fcec89;
+}
+.callout--alert .callout__link--anchor:after {
+  content: "\f063";
+}
+.callout--info {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #eef7ff;
+  color: #191926;
+  border-color: #a2d3ff;
+}
+.callout--info h1,
+.callout--info h2,
+.callout--info h3 {
+  color: #0a4b88 !important;
+}
+.callout--info *:first-child {
+  padding-top: 0.75em;
+}
+.callout--info h1:first-child,
+.callout--info h2:first-child,
+.callout--info h3:first-child,
+.callout--info h4:first-child,
+.callout--info h5:first-child,
+.callout--info h6:first-child {
+  padding-top: 0;
+}
+.callout--info li:first-child {
+  padding-top: 0;
+}
+.callout--info *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--info--border {
+  border: 1px #a2d3ff solid;
+}
+.callout--info--border-left {
+  border: 5px #a2d3ff solid;
+  padding-left: calc(0.75em);
+}
+.callout--info .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #f1f8ff;
+  color: #191926;
+  border-bottom: 1px solid #6fbbff;
+  text-decoration: none !important;
+}
+.callout--info .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  float: right;
+  color: #191926;
+  padding: 0 1.25em;
+  background-color: #bbdfff;
+  margin-top: -0.75em;
+  margin-right: -1em;
+  line-height: 300%;
+}
+.callout--info .callout__link:hover {
+  background-color: #ffffff;
+  color: #191926;
+}
+.callout--info .callout__link:hover:after {
+  background-color: #a2d3ff;
+}
+.callout--info .callout__link--anchor:after {
+  content: "\f063";
 }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
