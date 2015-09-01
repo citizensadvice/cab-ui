@@ -79,3 +79,58 @@ span.steps--number {
   margin-right: 0.5em;
   padding: 0.5em;
 }
+
+/**
+ * Steps navigation
+ */
+.steps--navigation {
+  margin: 0.75em 0;
+  background-color: #f3f4f5;
+  color: #191926;
+  border-top: 4px #004b88 solid;
+}
+.steps--navigation h1,
+.steps--navigation h2,
+.steps--navigation h3,
+.steps--navigation h4,
+.steps--navigation h5,
+.steps--navigation h6
+ {
+  color: #191926;
+  padding: 0.5em 1em 0em 0.75em;
+  margin-bottom: 0.5em !important;
+}
+.steps--navigation__link {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    padding: 0.5em 1em 0.5em 2em;
+    border: none;
+    background-color: #f3f4f5;
+    border-bottom: 1px dashed #fff;
+}
+.steps--navigation__link:hover {
+    background-color: #ffffff;
+}
+span.steps--navigation-1 {
+  color: #999;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1em;
+  text-align: center;
+  margin-right: 0.5em;
+}
+span.steps--navigation--number {
+  font-weight: 900;
+  line-height: 1em;
+  margin-right: 5px;
+  text-align: center;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  margin-left: -1.2em;
+  border-top: 0px #004b88 solid;
+}
+.steps--navigation__link:hover  span.steps--navigation--number {
+  color: #999;
+}

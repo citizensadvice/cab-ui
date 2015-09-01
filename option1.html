@@ -29,6 +29,7 @@
 
     <script src="js/beta-dap-accordion.js"></script><!-- Sticky JS call -->
 
+
     <script>
         $(window).load(function(){
             var height = $('#footer').height();
@@ -36,10 +37,50 @@
             $(".js-make-sticky").sticky({ topSpacing: 20, bottomSpacing: height + 20 });
         });
 
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+            
+            //smoothscroll
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+                
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+              
+                var target = this.hash,
+                    menu = target;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+
+        function onScroll(event){
+            var scrollPos = $(document).scrollTop();
+            $('.o2__link a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                    $('.o2__link').removeClass("active");
+                    currLink.addClass("active");
+                }
+                else{
+                    currLink.removeClass("active");
+                }
+            });
+        }
+
         $(document).ready(function($) {
             $('#accordion').find('.accordion-toggle').click(function(){
-                //Expand or collapse this panel
                 $(this).next().slideToggle();
+                $(this).toggleClass("open");
             });
         });
     </script>
@@ -189,44 +230,13 @@
                 <div class="articleContent">
                     <div>
 
-                        <div id="accordion" class="callout">
-                          <a class="accordion-toggle callout__link">Accordion 1</a>
-                          <div class="accordion-content default">
-                            <p>Cras malesuada ultrices augue molestie risus.</p>
-                          </div>
-                          <a class="accordion-toggle callout__link">Accordion 2</a>
-                          <div class="accordion-content">
-                            <p>Lorem ipsum dolor sit amet mauris eu turpis.</p>
-                          </div>
-                          <a class="accordion-toggle callout__link">Accordion 3</a>
-                          <div class="accordion-content">
-                            <p>Vivamus facilisisnibh scelerisque laoreet.</p>
-                          </div>
-                        </div>
-
                         <p>Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.</p>
 
-                        <ol>
-                            <li><strong>Check if you need permission or approval</strong><br>
-                            Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.</li>
+                        <div id="accordion" class="callout">
+                            <a class="accordion-toggle callout__link callout__link--anchor"><strong>Check if you need permission or approval</strong><!--br>
+                            Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.--></a>
+                            <section id="step1" class="accordion-content">
 
-                            <li><strong>Find good builders or contractors</strong><br>
-                            Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.</li>
-
-                            <li><strong>Get quotes before you decide who to use</strong><br>
-                            Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.</li>
-
-                            <li><strong>Check there’s insurance in place</strong><br>
-                            Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.</li>
-
-                            <li><strong>Get a written contract</strong><br>
-                            Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.</li>
-
-                            <li><strong>Be prepared to deal with problems</strong><br>
-                            Speak to contractors as soon as problems come up, and get them to agree to put them right.</li>
-                        </ol>
-
-                        <h2>Step 1: Check if you need permission or approval</h2>
 
                         <p>You may have to get more than one kind of permission or approval before you go ahead with work on your home.</p>
 
@@ -256,6 +266,390 @@
 
                         <div class="callout--warning">
                             <p>If you don’t get the permission or approval you need, you could be fined, prosecuted or made to pay to put things right.</p>
+                        </div>
+                            </section>
+
+                            <a class="accordion-toggle callout__link callout__link--anchor">
+                            <strong>Find good builders or contractors</strong><!--br>
+                            Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.--></a>
+                            <section id="step2" class="accordion-content">
+
+                            <p>Recommendations and references are good ways to find reliable contractors who do a good job.</p>
+
+                            <p>If you can’t get personal recommendations from people you know, ask contractors for references. It’s best to get:</p>
+
+                            <ul>
+                                <li>2 or 3 recent examples of similar work they’ve done</li>
+
+                                <li>contact details for the people they did the work for - it’s best to get in touch because written references aren’t always genuine</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t give references - it’s a sign they could be dishonest.</p>
+                            </div>
+
+                            <h3>Do the proper checks</h3>
+
+                            <p>It’s dangerous to use someone who doesn’t know what they’re doing, especially for anything involving gas or electrics.</p>
+
+                            <p>It’s important to check that you’re using:</p>
+
+                            <ul>
+                                <li>a registered gas engineer for gas work, eg installing a boiler or cooker</li>
+
+                                <li>a registered electrician for electrical work, eg installing new lighting or rewiring</li>
+
+                                <li>someone in a competent person scheme for work that needs building regulations approval (unless you got approval yourself)</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>You could be breaking the law if you don’t do these checks.</p>
+                            </div>
+
+                            <p>You should also do the following checks to help you find a contractor you can trust.</p>
+
+                            <h4>Check for approved contractors</h4>
+
+                            <p>Contractors can sign up for schemes that list them as ‘approved’. This means they’ve agreed to meet professional standards. The scheme may also have checked they’re trustworthy and do a good job - check the scheme’s website to find out how they approve contractors.</p>
+
+                            <p>These are good places to search for approved contractors:</p>
+
+                            <ul>
+                                <li>TrustMark - check the type of work you need is listed in the contractor’s ‘licensed trades’ (they’ll have passed checks proving that they’re qualified for that trade)</li>
+
+                                <li>Buy With Confidence for contractors approved by Trading Standards</li>
+
+                                <li>your local council’s approved trader scheme, if they have one</li>
+                            </ul>
+
+                            <h4>Check what a contractor says</h4>
+
+                            <p>It’s good idea to check what a contractor or their website tells you - especially if they’ve knocked on your door or telephoned you to offer their services. For instance, you can:</p>
+
+                            <ul>
+                                <li>ask to see a business card or letterhead, or get full contact details, then ring the business to check it exists and the contractor works for them</li>
+
+                                <li>ask to see proof of qualifications - eg an NVQ in construction for builders or a card from the Construction Skills Certification Scheme (trade associations can tell you about qualifications for particular types of work)</li>
+
+                                <li>search trade association websites to check they’re a member if they say they are</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who just give a mobile number. They may be hard to contact if problems come up. It could also be a sign they’re unreliable or dishonest.</p>
+                            </div>
+
+                            <h4>Interview contractors in person</h4>
+
+                            <p>It’s a good idea to speak with contractors in person before you hire them, eg when they come to your home to give a quote.</p>
+
+                            <p>Trust your instincts and make sure you can communicate with them easily - this will help you sort out any problems that come up later.</p>
+
+                            <p>Before you meet them, it’s a good idea to write down:</p>
+
+                            <ul>
+                                <li>a clear and detailed description of exactly what you want done</li>
+
+                                <li>a list of questions to help you get all the information you need to compare and choose between contractors - Trustmark has questions you can use as a checklist</li>
+                            </ul>
+
+                            <p>When you meet them, write down what they say they’ll do - if they don’t end up doing it, having it in writing can help you hold them to their word or get some of your money back.</p>
+
+                                <div class="callout--info callout--border">
+                                    <h3>Quote vs estimate</h3>
+
+                                    <p>A quote when a trader has promised to do work at an agreed price - it should say what work will be done and the price.</p>
+
+                                    <p>An estimate is a trader's best guess as to how much the work will cost - it’s not a quote.</p>
+                                </div>
+
+                                <p>You can take further action if they’re charging you more than the agreed amount and you think it’s unreasonable.</p>
+
+                                <h3>If you didn’t agree a price before the work was done (or you only got an estimate)</h3>
+
+                                <p>If the trader only gave an estimate then they can charge you more within reason. If you don't think the extra charged is reasonable, ask the garage to come down on the price.</p>
+
+                                <div class="callout callout--border">
+                                    <h3>Your rights and what to say</h3>
+
+                                    <p>If no price was agreed before the work was done, the Consumer Rights Act 2015 gives you the legal right to only pay a ‘reasonable price’. Tell this to the garage.</p>
+
+                                    <p>It can be difficult agreeing on what is ‘reasonable’. It would be reasonable, for example, to be charged more if the garage needed a bit more time for the repairs or they needed more parts. You can get a second opinion from another garage if you’re not sure what is reasonable.</p>
+                                </div>
+
+                                <p>If you think the cost is unreasonable and they won’t come down on the price, you should take further action.</p>
+
+                                <h3>Get help</h3>
+
+                                <p>Contact the consumer helpline and explain your circumstances. They’ll be able to tell you your legal rights and give you advice on your options.</p>
+                                    <h3>Next steps</h3>
+
+                                    <p>Take further action if they’re charging you for work that you didn’t ask for.</p>
+
+                                <div class="callout--turquoise"><a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
+                                </div>
+                            </section>
+
+                            <a class="accordion-toggle callout__link callout__link--anchor">
+                            <strong>Get quotes before you decide who to use</strong><!--br>
+                            Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.--></a>
+                            <section id="step3" class="accordion-content">
+
+                            <p>A quote is a promise from the contractor to do the work at a fixed price.</p>
+
+                            <p>It’s a good idea to get at least 3 written quotes before you decide on a contractor. Comparing quotes will help you decide if you’re getting a fair price.</p>
+
+                            <p>Don’t rely on a verbal quote - get it in writing. After you say yes to a quote, it’s a binding agreement between you and the contractor, whether it’s written down or not. But having it in writing means you can check what you agreed and prove it if there’s a dispute later.</p>
+
+                            <p>Some contractors charge for quotes - ask about this first.</p>
+
+                            <div class="callout">
+                                <p>Make sure you get a quote, not an estimate. An estimate is just a rough guess of the price, and you could end up having to pay more.</p>
+                            </div>
+
+                            <p>The contractor can’t charge you more than the price on their quote unless:</p>
+
+                            <ul>
+                                <li>you ask for extra work that’s not included in the quote</li>
+
+                                <li>they let you know they have to do extra work and you agree to pay more for it</li>
+
+                                <li>they made a genuine mistake when writing down or calculating the price - they have the legal right to charge you what it should have been</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t put a quote in writing. It’s a sign they could be unreliable.</p>
+
+                                <p>Also be cautious if their price is a lot lower than other quotes you get. It could mean they don’t have the right skills or experience, or they’re not being honest.</p>
+                            </div>
+
+                            <h3>What a quote should include</h3>
+
+                            <p>Be very clear about the work you want done - this will help you get the most accurate price and save misunderstandings later.</p>
+
+                            <p>A quote should include:</p>
+
+                            <ul>
+                                <li>a fixed total price - not a daily rate</li>
+
+                                <li>a breakdown of all the work to be done and the materials needed</li>
+
+                                <li>separate costs for each material and part of the work</li>
+
+                                <li>how long the price is valid for</li>
+
+                                <li>if the price includes VAT</li>
+
+                                <li>when the price can go up, eg only if you agree to extra work</li>
+                            </ul>
+
+                            <p>If you get a daily rate instead of a fixed total price there’s a risk the contractor could string out the work to get more money. Avoid this by getting them to put in writing:</p>
+
+                            <ul>
+                                <li>how many days the work will take</li>
+
+                                <li>how many hours of work counts as a day</li>
+
+                                <li>when they need your go-ahead to work more days</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Before saying yes to a quote, you should check there’s insurance in place and try to get a written contract.</p>
+                            </div>
+
+                            <h4>See a sample quote</h4>
+
+                            <p>You can download a PDF of a sample quote.</p>
+                            </section>
+
+                            <a class="accordion-toggle callout__link callout__link--anchor">
+                            <strong>Check there’s insurance in place</strong><!--br>
+                            Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.--></a>
+                            <section id="step4" class="accordion-content">
+
+                            <p>Ask to see insurance policies and check they don’t run out before the work will be finished. If it’s insurance they must have, they have to let you see the policy.</p>
+
+                            <h4>Insurance they must have</h4>
+
+                            <p>Public liability insurance - contractors are breaking the law if they don’t have this. It covers you and them if someone’s hurt or property is damaged (eg your home or your neighbour’s).</p>
+
+                            <p>Employers’ liability insurance - contractors who work through a company are breaking the law if they don’t have this. It doesn’t matter if it’s their own company or not. It covers you and the company if they’re hurt on the job.</p>
+
+                            <div class="callout--warning">
+                                <p>If a contractor doesn’t have the right insurance, and things go wrong or someone’s hurt, you could be forced to pay to fix things, or go to court and pay damages and legal fees.</p>
+                            </div>
+
+                            <h4>Other insurance to check for</h4>
+
+                            <p>Other types of insurance are optional, but they’re worth looking for.</p>
+
+                            <p>Contractors’ all-risk cover - this cover the cost of replacing work that’s destroyed before it’s completed, and before your insurance covers it.</p>
+
+                            <p>Insurance-backed warranties or guarantees - you can buy one of these as part of the cost of the work, if the contractor offers it. Check exactly what’s covered before you decide to buy one - it should cover the cost of finishing or fixing the work if the contractor does a bad job or goes out of business.</p>
+
+                            <h3>Your insurance - what to check</h3>
+
+                            <p>If you have home or contents insurance, contact your insurer to check you will be covered during the work. You may have to pay more for your insurance during and after the work.</p>
+
+                            <p>Your insurer will probably want to know what contractor you’re using and what insurance they have. They might suggest that you take out joint insurance with the contractor.</p>
+
+                            <div class="callout">
+                                <p>If you don’t have home and contents insurance, it’s worth getting some before the work starts - there’s a bigger risk your home will be damaged or your things stolen while work’s going on.</p>
+                            </div>
+
+                            </section>
+
+
+                            <a class="accordion-toggle callout__link callout__link--anchor">
+                            <strong>Get a written contract</strong><!--br>
+                            Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.--></a>
+                            <section id="step5" class="accordion-content">
+
+                            <p>As soon as you give a contractor the go-ahead, you’ve made a contract with them, even if it’s not written down.</p>
+
+                            <p>But you should always try to get a contract in writing before you give the go-ahead. If the contractor doesn’t do what you agreed, a written contract can help you get what you paid for at least get some of your money back.</p>
+
+                            <div class="callout">
+                                <p>Avoid contractors who won’t put anything in writing - it’s a sign they could be dishonest.</p>
+                            </div>
+
+                            <p>If the contractor gives you a contract, check if covers everything you agreed. If they don’t you can write your own.</p>
+
+                            <p>Written contracts don’t need to be in legal language - they just need to outline:</p>
+
+                            <ul>
+                                <li>exactly what you’re paying for (they can refer back to the quote for this)</li>
+
+                                <li>everything you’ve agreed on, eg timings, tidying up and payments</li>
+                            </ul>
+
+                            <h3>Timings</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>start and finish dates</li>
+
+                                <li>if you’ve agreed on a daily rate, the number of days the work will take and how many working hours are in a day</li>
+
+                                <li>delays - why they might happen, and what the contractor will do about them</li>
+                            </ul>
+
+                            <h3>Tidying up</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>how and when the contractors will remove rubbish and clear up after themselves</li>
+
+                                <li>who pays for delivery and collection of any skips</li>
+                            </ul>
+
+                            <h3>Materials, equipment and subcontractors</h3>
+
+                            <p>Make sure the contract covers:</p>
+
+                            <ul>
+                                <li>who pays to buy or hire materials and equipment</li>
+
+                                <li>for things the contractor buys, how they’ll give you receipts and paperwork</li>
+
+                                <li>if and when they’ll use subcontractors</li>
+                            </ul>
+
+                            <h3>Payments</h3>
+
+                            <p>Make sure the contract covers how and when you’ll pay. Aim to:</p>
+
+                            <ul>
+                                <li>pay by card not cash</li>
+
+                                <li>pay in stages</li>
+
+                                <li>avoid deposits or upfront payments</li>
+
+                                <li>get some protection for your money</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>Avoid contractors who only accept cash or want you to pay everything upfront - it’s a sign they could be dishonest or unreliable.</p>
+                            </div>
+
+                            <h4>Paying by card not cash</h4>
+
+                            <p>If you pay by credit or debit card, you may be able to get your money back through your bank if something goes wrong, eg the contractor doesn’t turn up but refuses to pay back your deposit.</p>
+
+                            <p>If this happens, you can contact your bank and say you want to use the ‘chargeback’ scheme. Many bank staff don’t know about the scheme, so you may need to talk to a manager.</p>
+
+                            <p>If you pay more than £100 by credit card, it may be easier to tell your bank you want to ‘make a section 75 claim’. It’s another way to get your money back.</p>
+
+                            <h4>Paying in stages</h4>
+
+                            <p>This is a good idea, particularly if it’s a big job, because it means problems can be put right before you make the final payment. Be clear about the point in the work when payments are due.</p>
+
+                            <h4>Avoiding deposits</h4>
+
+                            <p>Don’t agree to pay everything up front, in case something goes wrong or the contractor doesn’t turn up.</p>
+
+                            <p>If they ask for a deposit to pay for materials, offer to buy them yourself instead of paying a deposit - that way, at least you own the materials if something goes wrong.</p>
+
+                            <p>If the work will take a long time, you may not be able to avoid a deposit. Aim to push it down as much as possible, and don’t agree to more than 25%.</p>
+
+                            <p>Always get a receipt for a deposit, as well as receipts for any materials it covers.</p>
+
+                            <h4>Getting protection</h4>
+
+                            <p>You can protect your deposit or staged payments until the work’s complete, eg with a:</p>
+
+                            <ul>
+                                <li>deposit protection scheme - your money will be stored in a secure account until you and the builder are happy with the work</li>
+
+                                <li>insurance-backed warranty or guarantee - you can buy one of these from some contractors to cover the cost of finishing or fixing work if they do a bad job or go out of business</li>
+                            </ul>
+
+                            <h3>Help writing your own contract</h3>
+
+                            <p>It can help to look at example contracts, or create a contract using a template - eg for:</p>
+
+                            <ul>
+                                <li>home repairs or maintenance - you can download a free contract template</li>
+
+                                <li>building work - you can download an example contract or buy a contract template</li>
+                            </ul>
+
+                            <div class="callout">
+                                <p>You have 14 days to cancel the contract after giving the go-ahead or signing a written contract. This is known as the cooling-off period.</p>
+                            </div>
+
+                            <div class="callout--yellow">
+                                <h3>Further help</h3>
+
+                                <p>Contact the Citizens Advice consumer helpline if you need more help - a trained adviser can give you advice over the phone or by email.</p>
+                            </div>
+                            </section>
+
+
+                            <a class="accordion-toggle callout__link callout__link--anchor">
+                            <strong>Be prepared to deal with problems</strong><!--br>
+                            Speak to contractors as soon as problems come up, and get them to agree to put them right.--></a>
+                            <section id="step5" class="accordion-content">
+                            <p>Get the contractor’s full contact details before work starts. If you know how to get in touch, it’s easier to deal with any problems that come up.</p>
+
+                            <p>As soon as something happens that you’re not happy with:</p>
+
+                            <ul>
+                                <li>ask the builder or contractor to put it right</li>
+
+                                <li>come to an agreement about how they’ll fix it, and ask them to put it in writing</li>
+                            </ul>
+
+                            <div class="callout--turquoise">
+                                <h3>Next steps</h3>
+
+                                <p>If a contractor does a bad job or doesn’t do what you agreed, you should be entitled to get it fixed or get some money back. Find out what you can do about problems with building work, decorating and home repairs.</p>
+                            </div>
+
+
+                            </section>
                         </div>
                     </div>
                 </div><!-- END MAIN CONTENT -->
@@ -287,7 +681,7 @@
                 </form>
             </aside>
 
-            <nav class="side-nav" data-track-zone="side-nav">
+            <!-- nav class="side-nav" data-track-zone="side-nav">
                 <div class="sticker">
                     <div class="steps">
                         <h4>Steps in this guide</h4><a class="steps__link"><span class="steps--number">1</span>Link one</a> <a class="steps__link"><span class="steps--number">2</span>Link one</a> <a class="steps__link"><span class="steps--number">3</span>Link one</a> <a class="steps__link"><span class="steps--number">4</span>Link one</a> <a class="steps__link"><span class="steps--number">5</span>Link one</a> <a class="steps__link"><span class="steps--number">6</span>Link one</a>
