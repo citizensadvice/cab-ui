@@ -203,25 +203,27 @@
 .callout .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #f9f9f9;
   color: #191926;
   border-bottom: 1px solid #b8b8b8;
   text-decoration: none !important;
+  position: relative;
 }
 .callout .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #191926;
   padding: 0 1.25em;
   background-color: #dfdfdf;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout .callout__link:hover {
   background-color: #ffffff;
@@ -272,25 +274,27 @@
 .callout--turquoise .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #83cfc7;
   color: #191926;
   border-bottom: 1px solid #3a958c;
   text-decoration: none !important;
+  position: relative;
 }
 .callout--turquoise .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #191926;
   padding: 0 1.25em;
   background-color: #5cc0b5;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout--turquoise .callout__link:hover {
   background-color: #a6dcd7;
@@ -341,25 +345,27 @@
 .callout--green .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #c6e2ae;
   color: #008286;
   border-bottom: 1px solid #84bf4e;
   text-decoration: none !important;
+  position: relative;
 }
 .callout--green .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #008286;
   padding: 0 1.25em;
   background-color: #abd387;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout--green .callout__link:hover {
   background-color: #dfefd1;
@@ -410,25 +416,27 @@
 .callout--warning .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #fcdde1;
   color: #191926;
   border-bottom: 1px solid #f26576;
   text-decoration: none !important;
+  position: relative;
 }
 .callout--warning .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #191926;
   padding: 0 1.25em;
   background-color: #f8acb5;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout--warning .callout__link:hover {
   background-color: #ffffff;
@@ -479,25 +487,27 @@
 .callout--alert .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #fef8d6;
   color: #191926;
   border-bottom: 1px solid #fbe457;
   text-decoration: none !important;
+  position: relative;
 }
 .callout--alert .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #191926;
   padding: 0 1.25em;
   background-color: #fdf0a2;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout--alert .callout__link:hover {
   background-color: #ffffff;
@@ -548,25 +558,27 @@
 .callout--info .callout__link {
   cursor: pointer;
   display: block;
-  padding: 0.75em 1em;
+  padding: 0.75em 4.5em 0.75em 1em;
   margin: 0.75em -1em -0.75em -1em !important;
   border: none;
   background-color: #f1f8ff;
   color: #191926;
   border-bottom: 1px solid #6fbbff;
   text-decoration: none !important;
+  position: relative;
 }
 .callout--info .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
-  float: right;
   color: #191926;
   padding: 0 1.25em;
   background-color: #bbdfff;
-  margin-top: -0.75em;
-  margin-right: -1em;
-  line-height: 300%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
 }
 .callout--info .callout__link:hover {
   background-color: #ffffff;

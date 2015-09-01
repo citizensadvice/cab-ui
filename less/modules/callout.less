@@ -41,24 +41,26 @@
 	.callout__link {
 	 	cursor: pointer;
 	 	display: block;
-	    padding: @box-padding-vertical @box-padding-horizontal;
+	    padding: @box-padding-vertical @box-padding-horizontal*4.5 @box-padding-vertical @box-padding-horizontal;
 	    margin: @box-padding-vertical -@box-padding-horizontal -@box-padding-vertical -@box-padding-horizontal !important;
 	    border: none;
 	    background-color: lighten(@box-color-bg, .5%);
 	    color: @box-color;
 	    border-bottom: 1px solid darken(@box-color-bg, 25%);
 	    text-decoration: none !important;
+	    position: relative;
 		&:after {
 			box-sizing: border-box;
 		    font-family: FontAwesome;
 		    content: "\f054";
-		    float: right;
 		    color: @box-color;
 		    padding: 0 @box-padding-horizontal*1.25;
 		    background-color: darken(@box-color-bg, 10%);
-		    margin-top: -@box-padding-vertical;
-		    margin-right: -@box-padding-horizontal;
-		    line-height: 300%;
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
 		}
 	    &:hover {
 	    	background-color: lighten(@box-color-bg, 10%);

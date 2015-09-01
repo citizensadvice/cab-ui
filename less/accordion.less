@@ -14,6 +14,15 @@
 			color: white;
 			content: "\f067";
 		}
+		h1,
+	    h2,
+	    h3,
+	    h4,
+	    h5,
+	    h6 {
+	    	margin: 0;
+	    	color: white !important;
+	    }
 	}
 	.open:after {
 		content: "\f068";
@@ -22,14 +31,20 @@
 		padding: 0;
 		border: 0;
 	    margin: -0.75em -1em 0.75em -1em !important;
-	    padding: 0 1em 1em 1em;
+	    padding: 0.75em 1em 0.75em 1em;
 	    border: solid #253460;
 	    border-width: 0px 1px 1px 1px;
 	}
 	.accordion-toggle-close {
 		cursor: pointer;
-		&:before {
-			content: "\f00d";
+		border: none;
+		background-color: fadeout(#004B88, 90%);
+		color: #004B88;
+		margin-top: 1.5em !important;
+		&:after {
+			background-color: fadeout(#253460, 90%);
+			content: "\f068";
+			color: #253460;
 		}
 	}
 }
