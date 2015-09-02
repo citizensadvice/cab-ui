@@ -23,7 +23,7 @@
     h4:first-child,
     h5:first-child,
     h6:first-child {
-    	padding-top: 0;
+    	margin-top: 0;
     }
     li:first-child {
     	padding-top: 0;
@@ -34,8 +34,9 @@
 	&--border {
 		border: 1px darken(@box-color-bg, 15%) solid;
 	}
-	&--border-left {
+	&--border--left {
 		border: 5px darken(@box-color-bg, 15%) solid;
+		border-width: 0 0 0 5px;
 		padding-left: calc(@box-padding-horizontal*.75);
 	}
 	.callout__link {
