@@ -162,7 +162,7 @@
 /* Creates a mixin for making box styles, including their links */
 /**
  * Creates the various box styles using two colours
- * .callout(text, background)
+ * .callout(text, title, background)
  */
 .callout {
   padding: 0 1em 0.75em 1em;
@@ -201,7 +201,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout .callout__link {
+.callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -213,7 +213,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout .callout__link:after {
+.callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -226,14 +226,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout .callout__link:hover {
+.callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout .callout__link:hover:after {
+.callout__link:hover:after {
   background-color: #d2d2d2;
 }
-.callout .callout__link--anchor:after {
+.callout__link--anchor:after {
   content: "\f063";
 }
 .callout--turquoise {
@@ -273,7 +273,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--turquoise .callout__link {
+.callout--turquoise__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -285,7 +285,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--turquoise .callout__link:after {
+.callout--turquoise__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -298,14 +298,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--turquoise .callout__link:hover {
+.callout--turquoise__link:hover {
   background-color: #a6dcd7;
   color: #191926;
 }
-.callout--turquoise .callout__link:hover:after {
+.callout--turquoise__link:hover:after {
   background-color: #4ab9ad;
 }
-.callout--turquoise .callout__link--anchor:after {
+.callout--turquoise__link--anchor:after {
   content: "\f063";
 }
 .callout--green {
@@ -345,7 +345,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--green .callout__link {
+.callout--green__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -357,7 +357,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--green .callout__link:after {
+.callout--green__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -370,14 +370,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--green .callout__link:hover {
+.callout--green__link:hover {
   background-color: #dfefd1;
   color: #008286;
 }
-.callout--green .callout__link:hover:after {
+.callout--green__link:hover:after {
   background-color: #9ecd74;
 }
-.callout--green .callout__link--anchor:after {
+.callout--green__link--anchor:after {
   content: "\f063";
 }
 .callout--warning {
@@ -417,7 +417,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--warning .callout__link {
+.callout--warning__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -429,7 +429,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--warning .callout__link:after {
+.callout--warning__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -442,14 +442,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--warning .callout__link:hover {
+.callout--warning__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--warning .callout__link:hover:after {
+.callout--warning__link:hover:after {
   background-color: #f694a0;
 }
-.callout--warning .callout__link--anchor:after {
+.callout--warning__link--anchor:after {
   content: "\f063";
 }
 .callout--alert {
@@ -489,7 +489,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--alert .callout__link {
+.callout--alert__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -501,7 +501,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--alert .callout__link:after {
+.callout--alert__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -514,14 +514,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--alert .callout__link:hover {
+.callout--alert__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--alert .callout__link:hover:after {
+.callout--alert__link:hover:after {
   background-color: #fcec89;
 }
-.callout--alert .callout__link--anchor:after {
+.callout--alert__link--anchor:after {
   content: "\f063";
 }
 .callout--info {
@@ -561,7 +561,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--info .callout__link {
+.callout--info__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -573,7 +573,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--info .callout__link:after {
+.callout--info__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -586,14 +586,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--info .callout__link:hover {
+.callout--info__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--info .callout__link:hover:after {
+.callout--info__link:hover:after {
   background-color: #a2d3ff;
 }
-.callout--info .callout__link--anchor:after {
+.callout--info__link--anchor:after {
   content: "\f063";
 }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */

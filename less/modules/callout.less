@@ -39,7 +39,7 @@
 		border-width: 0 0 0 5px;
 		padding-left: calc(@box-padding-horizontal*.75);
 	}
-	.callout__link {
+	&__link {
 	 	cursor: pointer;
 	 	display: block;
 	    padding: @box-padding-vertical @box-padding-horizontal*4.5 @box-padding-vertical @box-padding-horizontal;
@@ -78,7 +78,7 @@
 
 /**
  * Creates the various box styles using two colours
- * .callout(text, background)
+ * .callout(text, title, background)
  */
 .callout {
 	.callout(); // Create unstyled box
