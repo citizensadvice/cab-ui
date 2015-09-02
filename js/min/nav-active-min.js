@@ -35,3 +35,4 @@ function onScroll(event){
         $('.o2mobile').removeClass("open").css('opacity',0);
     });
 }
+
