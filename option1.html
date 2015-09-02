@@ -16,7 +16,6 @@
     <link href="css/main.css" media="screen" rel="stylesheet">
     <link href="css/site.css" media="screen" rel="stylesheet">
     <link href="css/option2.css" media="screen" rel="stylesheet">
-    <link href="css/accordion.css" rel="stylesheet"><!-- Accordion styles -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/css/print.css" media="print" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
@@ -25,11 +24,10 @@
     <meta content="" name="description"><!-- Revealables -->
 
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/beta-dap-accordion.js"></script>
     <script src="js/sticky-nav.js"></script><!-- Sticky Navigation JS -->
-
     <script src="js/nav-active.js"></script><!-- Navigation Updating JS -->
-
-    <script src="js/accordion.js"></script><!-- Accordion JS -->
+    <script src="js/collapse.js"></script><!-- Accordion JS -->
 </head>
 
 <body class="beta">
@@ -176,11 +174,13 @@
                     <div>
                         <p>Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.</p>
 
-                        <div class="callout" id="accordion">
-                            <a class="accordion-toggle callout__link callout__link--anchor"><strong>Check if you need permission or approval</strong><!--br>
-                            Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.--></a>
+                        <div id="collapse" class="collapse">
 
-                            <section class="accordion-content" id="step1">
+                            <div class="collapse-toggle">
+                                <strong>Check if you need permission or approval</strong><!--br>
+                                Avoid costly penalties by checking if you need building regulations approval for home improvements, planning permission for building work, or permission as a leaseholder.-->
+                            </div>
+                            <div class="collapse-content" id="step1">
                                 <p>You may have to get more than one kind of permission or approval before you go ahead with work on your home.</p>
 
                                 <p>Always check if you need:</p>
@@ -209,13 +209,14 @@
 
                                 <div class="callout--warning">
                                     <p>If you don’t get the permission or approval you need, you could be fined, prosecuted or made to pay to put things right.</p>
-                                </div>
+                                </div><a class="collapse-toggle-close">Close</a>
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section><a class="accordion-toggle callout__link callout__link--anchor"><strong>Find good builders or contractors</strong><!--br>
-                            Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.--></a>
-
-                            <section class="accordion-content" id="step2">
+                            <div class="collapse-toggle">
+                                <strong>Find good builders or contractors</strong><!--br>
+                                Don’t just rely on what it says on contractors’ websites. Get personal recommendations or references and do the proper checks to find someone you can trust to do a good job.-->
+                            </div>
+                            <div class="collapse-content" id="step2">
                                 <p>Recommendations and references are good ways to find reliable contractors who do a good job.</p>
 
                                 <p>If you can’t get personal recommendations from people you know, ask contractors for references. It’s best to get:</p>
@@ -330,13 +331,14 @@
 
                                 <div class="callout--turquoise">
                                     <a class="callout__link" href="#next-steps">Take further action if your negotiations have failed</a>
-                                </div>
+                                </div><a class="collapse-toggle-close">Close</a>
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section><a class="accordion-toggle callout__link callout__link--anchor"><strong>Get quotes before you decide who to use</strong><!--br>
-                            Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.--></a>
-
-                            <section class="accordion-content" id="step3">
+                            <div class="collapse-toggle">
+                                <strong>Get quotes before you decide who to use</strong><!--br>
+                                Check you’re getting a fair price by getting at least 3 quotes before you decide. Get a quote not an estimate - a quote gives you a fixed price, so you know exactly how much you’ll pay.-->
+                            </div>
+                            <div class="collapse-content" id="step3">
                                 <p>A quote is a promise from the contractor to do the work at a fixed price.</p>
 
                                 <p>It’s a good idea to get at least 3 written quotes before you decide on a contractor. Comparing quotes will help you decide if you’re getting a fair price.</p>
@@ -401,13 +403,14 @@
 
                                 <h4>See a sample quote</h4>
 
-                                <p>You can download a PDF of a sample quote.</p>
+                                <p>You can download a PDF of a sample quote.</p><a class="collapse-toggle-close">Close</a>
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section><a class="accordion-toggle callout__link callout__link--anchor"><strong>Check there’s insurance in place</strong><!--br>
-                            Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.--></a>
-
-                            <section class="accordion-content" id="step4">
+                            <div class="collapse-toggle">
+                                <strong>Check there’s insurance in place</strong><!--br>
+                                Check the contractor’s insurance to make sure you don’t face big costs if things go wrong. Then check that your home insurance still covers you while the work’s being done.-->
+                            </div>
+                            <div class="collapse-content" id="step4">
                                 <p>Ask to see insurance policies and check they don’t run out before the work will be finished. If it’s insurance they must have, they have to let you see the policy.</p>
 
                                 <h4>Insurance they must have</h4>
@@ -436,13 +439,14 @@
 
                                 <div class="callout">
                                     <p>If you don’t have home and contents insurance, it’s worth getting some before the work starts - there’s a bigger risk your home will be damaged or your things stolen while work’s going on.</p>
-                                </div>
+                                </div><a class="collapse-toggle-close">Close</a>
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section><a class="accordion-toggle callout__link callout__link--anchor"><strong>Get a written contract</strong><!--br>
-                            Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.--></a>
-
-                            <section class="accordion-content" id="step5">
+                            <div class="collapse-toggle">
+                                <strong>Get a written contract</strong><!--br>
+                                Avoid disputes later by getting agreement in writing on details like start and finish dates, tidying up and how you’ll pay.-->
+                            </div>
+                            <div class="collapse-content" id="step5">
                                 <p>As soon as you give a contractor the go-ahead, you’ve made a contract with them, even if it’s not written down.</p>
 
                                 <p>But you should always try to get a contract in writing before you give the go-ahead. If the contractor doesn’t do what you agreed, a written contract can help you get what you paid for at least get some of your money back.</p>
@@ -563,13 +567,14 @@
                                     <h3>Further help</h3>
 
                                     <p>Contact the Citizens Advice consumer helpline if you need more help - a trained adviser can give you advice over the phone or by email.</p>
-                                </div>
+                                </div><a class="collapse-toggle-close">Close</a>
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section><a class="accordion-toggle callout__link callout__link--anchor"><strong>Be prepared to deal with problems</strong><!--br>
-                            Speak to contractors as soon as problems come up, and get them to agree to put them right.--></a>
-
-                            <section class="accordion-content" id="step5">
+                            <div class="collapse-toggle">
+                                <strong>Be prepared to deal with problems</strong><!--br>
+                                Speak to contractors as soon as problems come up, and get them to agree to put them right.-->
+                            </div>
+                            <div class="collapse-content" id="step5">
                                 <p>Get the contractor’s full contact details before work starts. If you know how to get in touch, it’s easier to deal with any problems that come up.</p>
 
                                 <p>As soon as something happens that you’re not happy with:</p>
@@ -584,13 +589,12 @@
                                     <h3>Next steps</h3>
 
                                     <p>If a contractor does a bad job or doesn’t do what you agreed, you should be entitled to get it fixed or get some money back. Find out what you can do about problems with building work, decorating and home repairs.</p>
-                                </div>
+                                </div><a class="collapse-toggle-close">Close</a> 
+                            </div>
 
-                                <a class="callout__link accordion-toggle-close">Close</a>
-                            </section>
                         </div>
-                    </div>
-                </div><!-- END MAIN CONTENT -->
+                    </div><!-- END MAIN CONTENT -->
+                </div>
             </main>
 
             <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher">

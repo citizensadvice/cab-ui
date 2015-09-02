@@ -201,7 +201,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout__link {
+.callout .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -213,7 +213,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout__link:after {
+.callout .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -226,14 +226,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout__link:hover {
+.callout .callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout__link:hover:after {
+.callout .callout__link:hover:after {
   background-color: #d2d2d2;
 }
-.callout__link--anchor:after {
+.callout .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--turquoise {
@@ -273,7 +273,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--turquoise__link {
+.callout--turquoise .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -285,7 +285,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--turquoise__link:after {
+.callout--turquoise .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -298,14 +298,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--turquoise__link:hover {
+.callout--turquoise .callout__link:hover {
   background-color: #a6dcd7;
   color: #191926;
 }
-.callout--turquoise__link:hover:after {
+.callout--turquoise .callout__link:hover:after {
   background-color: #4ab9ad;
 }
-.callout--turquoise__link--anchor:after {
+.callout--turquoise .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--green {
@@ -345,7 +345,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--green__link {
+.callout--green .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -357,7 +357,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--green__link:after {
+.callout--green .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -370,14 +370,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--green__link:hover {
+.callout--green .callout__link:hover {
   background-color: #dfefd1;
   color: #008286;
 }
-.callout--green__link:hover:after {
+.callout--green .callout__link:hover:after {
   background-color: #9ecd74;
 }
-.callout--green__link--anchor:after {
+.callout--green .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--warning {
@@ -417,7 +417,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--warning__link {
+.callout--warning .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -429,7 +429,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--warning__link:after {
+.callout--warning .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -442,14 +442,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--warning__link:hover {
+.callout--warning .callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--warning__link:hover:after {
+.callout--warning .callout__link:hover:after {
   background-color: #f694a0;
 }
-.callout--warning__link--anchor:after {
+.callout--warning .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--alert {
@@ -489,7 +489,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--alert__link {
+.callout--alert .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -501,7 +501,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--alert__link:after {
+.callout--alert .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -514,14 +514,14 @@
   top: 0;
   line-height: 3em;
 }
-.callout--alert__link:hover {
+.callout--alert .callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--alert__link:hover:after {
+.callout--alert .callout__link:hover:after {
   background-color: #fcec89;
 }
-.callout--alert__link--anchor:after {
+.callout--alert .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--info {
@@ -561,7 +561,7 @@
   border-width: 0 0 0 5px;
   padding-left: calc(0.75em);
 }
-.callout--info__link {
+.callout--info .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75em 4.5em 0.75em 1em;
@@ -573,7 +573,7 @@
   text-decoration: none !important;
   position: relative;
 }
-.callout--info__link:after {
+.callout--info .callout__link:after {
   box-sizing: border-box;
   font-family: FontAwesome;
   content: "\f054";
@@ -586,15 +586,396 @@
   top: 0;
   line-height: 3em;
 }
-.callout--info__link:hover {
+.callout--info .callout__link:hover {
   background-color: #ffffff;
   color: #191926;
 }
-.callout--info__link:hover:after {
+.callout--info .callout__link:hover:after {
   background-color: #a2d3ff;
 }
-.callout--info__link--anchor:after {
+.callout--info .callout__link--anchor:after {
   content: "\f063";
+}
+/**
+ * COLLAPSIBLES.
+ *
+ * Styles for content boxes and coloured sections.
+ */
+/* Creates a mixin for making box styles, including their links */
+.collapse-toggle {
+  cursor: pointer;
+}
+.collapse-content {
+  display: none;
+}
+.collapse-content.default {
+  display: block;
+}
+/**
+ * Creates the various box styles using three colours
+ * .collapse(button background, button icon background, button text)
+ * 
+ * However, setting one colour should also intelligently create the styles
+ */
+.collapse {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: white;
+  color: #191926;
+}
+.collapse .collapse-toggle {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+  margin-bottom: 0.75em !important;
+  background-color: #004b88;
+  color: white;
+}
+.collapse .collapse-toggle h1,
+.collapse .collapse-toggle h2,
+.collapse .collapse-toggle h3,
+.collapse .collapse-toggle h4,
+.collapse .collapse-toggle h5,
+.collapse .collapse-toggle h6 {
+  margin: 0;
+  color: white;
+}
+.collapse .collapse-toggle:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: white;
+  padding: 0 1.25em;
+  background-color: #253460;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+}
+.collapse .collapse-toggle:hover {
+  background-color: #004379;
+  color: white;
+}
+.collapse .collapse-toggle:hover:after {
+  background-color: #212e55;
+}
+.collapse .collapse-toggle-close {
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  text-decoration: none !important;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 75, 136, 0.1);
+  color: #004b88;
+  margin-top: 1em !important;
+}
+.collapse .collapse-toggle-close:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  padding: 0 1.25em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  content: "\f068";
+  background-color: rgba(37, 52, 96, 0.1);
+  color: #253460;
+}
+.collapse .collapse-toggle-close:hover {
+  background-color: rgba(0, 75, 136, 0.13);
+}
+.collapse .collapse-toggle-close:hover:after {
+  background-color: rgba(37, 52, 96, 0.13);
+}
+.collapse .open:after {
+  content: "\f068";
+}
+.collapse .collapse-content {
+  padding: 0;
+  border: 0;
+  margin: -0.75em -1em 0.75em -1em !important;
+  padding: 0.75em 1em 0.75em 1em;
+  border: solid #253460;
+  border-width: 1px;
+}
+.collapse--turquoise {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: white;
+  color: #191926;
+}
+.collapse--turquoise .collapse-toggle {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+  margin-bottom: 0.75em !important;
+  background-color: #81cec6;
+  color: white;
+}
+.collapse--turquoise .collapse-toggle h1,
+.collapse--turquoise .collapse-toggle h2,
+.collapse--turquoise .collapse-toggle h3,
+.collapse--turquoise .collapse-toggle h4,
+.collapse--turquoise .collapse-toggle h5,
+.collapse--turquoise .collapse-toggle h6 {
+  margin: 0;
+  color: white;
+}
+.collapse--turquoise .collapse-toggle:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: white;
+  padding: 0 1.25em;
+  background-color: #5cc0b5;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+}
+.collapse--turquoise .collapse-toggle:hover {
+  background-color: #76cac1;
+  color: white;
+}
+.collapse--turquoise .collapse-toggle:hover:after {
+  background-color: #51bbb0;
+}
+.collapse--turquoise .collapse-toggle-close {
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  text-decoration: none !important;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(129, 206, 198, 0.1);
+  color: #81cec6;
+  margin-top: 1em !important;
+}
+.collapse--turquoise .collapse-toggle-close:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  padding: 0 1.25em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  content: "\f068";
+  background-color: rgba(92, 192, 181, 0.1);
+  color: #5cc0b5;
+}
+.collapse--turquoise .collapse-toggle-close:hover {
+  background-color: rgba(129, 206, 198, 0.13);
+}
+.collapse--turquoise .collapse-toggle-close:hover:after {
+  background-color: rgba(92, 192, 181, 0.13);
+}
+.collapse--turquoise .open:after {
+  content: "\f068";
+}
+.collapse--turquoise .collapse-content {
+  padding: 0;
+  border: 0;
+  margin: -0.75em -1em 0.75em -1em !important;
+  padding: 0.75em 1em 0.75em 1em;
+  border: solid #5cc0b5;
+  border-width: 1px;
+}
+.collapse--green {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: white;
+  color: #191926;
+}
+.collapse--green .collapse-toggle {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+  margin-bottom: 0.75em !important;
+  background-color: #008286;
+  color: white;
+}
+.collapse--green .collapse-toggle h1,
+.collapse--green .collapse-toggle h2,
+.collapse--green .collapse-toggle h3,
+.collapse--green .collapse-toggle h4,
+.collapse--green .collapse-toggle h5,
+.collapse--green .collapse-toggle h6 {
+  margin: 0;
+  color: white;
+}
+.collapse--green .collapse-toggle:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: white;
+  padding: 0 1.25em;
+  background-color: #005153;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+}
+.collapse--green .collapse-toggle:hover {
+  background-color: #007377;
+  color: white;
+}
+.collapse--green .collapse-toggle:hover:after {
+  background-color: #004244;
+}
+.collapse--green .collapse-toggle-close {
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  text-decoration: none !important;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 130, 134, 0.1);
+  color: #008286;
+  margin-top: 1em !important;
+}
+.collapse--green .collapse-toggle-close:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  padding: 0 1.25em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  content: "\f068";
+  background-color: rgba(0, 81, 83, 0.1);
+  color: #005153;
+}
+.collapse--green .collapse-toggle-close:hover {
+  background-color: rgba(0, 130, 134, 0.13);
+}
+.collapse--green .collapse-toggle-close:hover:after {
+  background-color: rgba(0, 81, 83, 0.13);
+}
+.collapse--green .open:after {
+  content: "\f068";
+}
+.collapse--green .collapse-content {
+  padding: 0;
+  border: 0;
+  margin: -0.75em -1em 0.75em -1em !important;
+  padding: 0.75em 1em 0.75em 1em;
+  border: solid #005153;
+  border-width: 1px;
+}
+.collapse--warning {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: white;
+  color: #191926;
+}
+.collapse--warning .collapse-toggle {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+  margin-bottom: 0.75em !important;
+  background-color: #b10b1e;
+  color: white;
+}
+.collapse--warning .collapse-toggle h1,
+.collapse--warning .collapse-toggle h2,
+.collapse--warning .collapse-toggle h3,
+.collapse--warning .collapse-toggle h4,
+.collapse--warning .collapse-toggle h5,
+.collapse--warning .collapse-toggle h6 {
+  margin: 0;
+  color: white;
+}
+.collapse--warning .collapse-toggle:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: white;
+  padding: 0 1.25em;
+  background-color: #810816;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+}
+.collapse--warning .collapse-toggle:hover {
+  background-color: #a30a1c;
+  color: white;
+}
+.collapse--warning .collapse-toggle:hover:after {
+  background-color: #730713;
+}
+.collapse--warning .collapse-toggle-close {
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  text-decoration: none !important;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(177, 11, 30, 0.1);
+  color: #b10b1e;
+  margin-top: 1em !important;
+}
+.collapse--warning .collapse-toggle-close:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  padding: 0 1.25em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  content: "\f068";
+  background-color: rgba(129, 8, 22, 0.1);
+  color: #810816;
+}
+.collapse--warning .collapse-toggle-close:hover {
+  background-color: rgba(177, 11, 30, 0.13);
+}
+.collapse--warning .collapse-toggle-close:hover:after {
+  background-color: rgba(129, 8, 22, 0.13);
+}
+.collapse--warning .open:after {
+  content: "\f068";
+}
+.collapse--warning .collapse-content {
+  padding: 0;
+  border: 0;
+  margin: -0.75em -1em 0.75em -1em !important;
+  padding: 0.75em 1em 0.75em 1em;
+  border: solid #810816;
+  border-width: 1px;
 }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
