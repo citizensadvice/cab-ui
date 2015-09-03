@@ -596,6 +596,78 @@
 .callout--info .callout__link--anchor:after {
   content: "\f063";
 }
+.callout--example {
+  padding: 0 1em 0.75em 1em;
+  margin: 0.75em 0;
+  background-color: #dfe1e3;
+  color: #191926;
+  border-color: #b6bbbf;
+}
+.callout--example h1,
+.callout--example h2,
+.callout--example h3 {
+  color: #eff3f3 !important;
+}
+.callout--example *:first-child {
+  padding-top: 0.75em;
+}
+.callout--example h1:first-child,
+.callout--example h2:first-child,
+.callout--example h3:first-child,
+.callout--example h4:first-child,
+.callout--example h5:first-child,
+.callout--example h6:first-child {
+  margin-top: 0;
+}
+.callout--example li:first-child {
+  padding-top: 0;
+}
+.callout--example *:last-child {
+  margin-bottom: 0 !important;
+}
+.callout--example--border {
+  border: 1px #b6bbbf solid;
+}
+.callout--example--border--left {
+  border: 5px #b6bbbf solid;
+  border-width: 0 0 0 5px;
+  padding-left: calc(0.75em);
+}
+.callout--example .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75em 4.5em 0.75em 1em;
+  margin: 0.75em -1em -0.75em -1em !important;
+  border: none;
+  background-color: #e0e2e4;
+  color: #191926;
+  border-bottom: 1px solid #9ba1a7;
+  text-decoration: none !important;
+  position: relative;
+}
+.callout--example .callout__link:after {
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  content: "\f054";
+  color: #191926;
+  padding: 0 1.25em;
+  background-color: #c4c8cb;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+}
+.callout--example .callout__link:hover {
+  background-color: #fafbfb;
+  color: #191926;
+}
+.callout--example .callout__link:hover:after {
+  background-color: #b6bbbf;
+}
+.callout--example .callout__link--anchor:after {
+  content: "\f063";
+}
 /**
  * COLLAPSIBLES.
  *
