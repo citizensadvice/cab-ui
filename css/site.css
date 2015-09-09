@@ -718,7 +718,7 @@
 }
 .collapse .collapse-toggle:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   content: "\f067";
   color: white;
   padding: 0 1.25em;
@@ -751,7 +751,7 @@
 }
 .collapse .collapse-toggle-close:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   padding: 0 1.25em;
   height: 100%;
   position: absolute;
@@ -808,7 +808,7 @@
 }
 .collapse--turquoise .collapse-toggle:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   content: "\f067";
   color: white;
   padding: 0 1.25em;
@@ -841,7 +841,7 @@
 }
 .collapse--turquoise .collapse-toggle-close:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   padding: 0 1.25em;
   height: 100%;
   position: absolute;
@@ -898,7 +898,7 @@
 }
 .collapse--green .collapse-toggle:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   content: "\f067";
   color: white;
   padding: 0 1.25em;
@@ -931,7 +931,7 @@
 }
 .collapse--green .collapse-toggle-close:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   padding: 0 1.25em;
   height: 100%;
   position: absolute;
@@ -988,7 +988,7 @@
 }
 .collapse--warning .collapse-toggle:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   content: "\f067";
   color: white;
   padding: 0 1.25em;
@@ -1021,7 +1021,7 @@
 }
 .collapse--warning .collapse-toggle-close:after {
   box-sizing: border-box;
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
   padding: 0 1.25em;
   height: 100%;
   position: absolute;
