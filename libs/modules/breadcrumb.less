@@ -1,0 +1,30 @@
+/**
+ * BREADCRUMB
+ *
+ * Beta breadcrumb amends.
+ * Functional changes to be made in 
+ */
+
+.breadcrumb {
+    // Hack as we have Bootstrap in the mix
+    background-color: @white;
+    padding: 0;
+    margin-top: @font-size-base;
+    font-size: @font-size-base;
+    p {
+        font-size: @font-size-base;
+        color: @beta-blue-light;
+        a {
+            padding: 0em @font-size-base*.5;
+            color: @text-color;
+            &:after {
+                content: "›";
+                font-size: @font-size-large;
+                color: @beta-blue-lighter;
+                padding-left: @font-size-base*.75;
+                padding-right: @font-size-base*.75;
+                background-color: @white;
+            }
+        }
+    }
+}

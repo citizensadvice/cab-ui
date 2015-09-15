@@ -1,0 +1,261 @@
+/**
+ * FORMS
+ */
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+//
+// 'Borrowed' from Bootstrap v4
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: @line-height-computed;
+  font-size: (@font-size-base * 1.5);
+  line-height: inherit;
+  color: @legend-color;
+  border: 0;
+  border-bottom: 1px solid @heritage-blue;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+//
+// BEGIN STYLES
+//
+
+form {
+  //.callout( @white, @gray-7 );
+  //.callout--border;
+  //border-width: 3px;
+  .invalid {
+    display: none;
+    color: @beta-red;
+    padding-top: @box-spacing/4;
+  }
+  .valid {
+    display: none;
+    color: @beta-green;
+    padding-top: @box-spacing/4;
+  }
+}
+
+fieldset {
+  margin-bottom: @box-spacing;
+}
+
+label {
+  display: block;
+  font-weight: normal;
+}
+
+form small {
+  color: @gray-3;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid @gray-6;
+}
+
+textarea {
+  height: 5.5rem;
+  resize: vertical;
+}
+
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+  border-radius: @form-border-radius;
+  &:focus:required:invalid {
+    border-color: @beta-red;
+    & ~ .invalid {
+      display: block !important;
+    }
+  }
+  &:focus:required:valid {
+    border-color: @beta-green;
+    & ~ .valid {
+      display: block !important;
+    }
+  }
+  &:focus {
+    border-color: @heritage-blue-light;
+    outline: none;
+  }
+}
+
+input[type="file"] {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+/* Overrides 'Choose file' button
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type="file"]::before {
+  content: 'Choose';
+  display: inline-block;
+  overflow: hidden;
+  outline: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: @form-border-radius;
+  background-color: @beta-green-light;
+  border: 1px solid @beta-green;
+  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+}
+*/
+
+/*
+.radio,
+.checkbox {
+  //background-color: @gray-7;
+  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+  cursor: pointer;
+  border: 1px solid @gray-6;
+  border-radius: @form-border-radius;
+  &:hover {
+    border-color: @gray-4;
+  }
+}
+*/
+
+.radio,
+.checkbox {
+  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+  cursor: pointer;
+  border-radius: @form-border-radius;
+  position: relative;
+  margin-right: @box-spacing-horizontal/2;
+  z-index: 1;
+  input {
+    &:before {
+      content: '';
+      display: block;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      -webkit-user-select: none;
+      cursor: pointer;
+      border-radius: @form-border-radius;
+      border: 1px solid @gray-6;
+      z-index: -1;
+      background-color: @gray-7;
+    }
+    &:hover:before {
+      border-color: @gray-5;
+    }
+    &:disabled {
+      cursor: not-allowed !important;
+      &:before {
+        cursor: not-allowed !important;
+        background-color: @form-disabled-bg;
+        border-color: @form-disabled-bg;
+      }
+    }
+    &:checked {
+      &:before {
+        border-color: @beta-blue-lighter;
+        background-color: @beta-blue-lighter;
+      }
+      &:hover:before {
+        border-color: @beta-blue-light;
+      }
+    }
+  }
+}
+
+.multi-select {
+  height: 5.5rem !important;
+  padding: 0;
+  option {
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+  }
+}
+
+.dropdown {
+  //padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+  border-radius: @form-border-radius;
+  border: 1px solid @gray-6;
+  select {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.checkbox, .radio {
+  display: inline-block;
+}
+
+*:disabled,
+.disabled {
+  cursor: not-allowed !important;
+  color: @form-disabled-text;
+  background-color: @form-disabled-bg;
+  border: none;
+  resize: none;
+}
+
+button[type="submit"] {
+  border-radius: @form-border-radius;
+  background-color: @beta-aqua-light;
+  border: none;
+  color: @heritage-blue;
+  padding: @box-spacing-vertical @box-spacing-horizontal;
+  font-weight: bold;
+  &:hover {
+    background-color: darken(@beta-aqua, 5%)
+  }
+}
