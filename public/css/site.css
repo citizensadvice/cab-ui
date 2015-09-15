@@ -96,6 +96,9 @@ ul li {
 .beta-dap-cover a {
   color: #ffffff;
 }
+.beta .main-nav {
+  overflow: hidden !important;
+}
 .alpha-badge {
   font-weight: 700;
   color: #eff3f3;
@@ -1406,7 +1409,7 @@ strong {
   font-weight: 600;
 }
 small {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 a {
   color: #253460;
@@ -2757,17 +2760,18 @@ button[type="submit"]:hover {
  */
 .steps {
   margin: 0.75em 0;
-  background-color: #fff;
-  color: #333;
 }
 .steps a {
   cursor: pointer;
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: #ececec;
+  background-color: #f2f8ff;
   color: #191926;
-  border: 0px #acacac solid;
+  border: 0px #d5ecff solid;
   display: block;
+  border-width: 1px;
+  position: relative;
+  padding-top: 0.75rem;
 }
 .steps a h1,
 .steps a h2,
@@ -2776,7 +2780,7 @@ button[type="submit"]:hover {
   font-size: 1.5rem;
 }
 .steps a a {
-  border-bottom-color: #acacac;
+  border-bottom-color: #d5ecff;
 }
 .steps a > *:first-child {
   padding-top: 0.75rem;
@@ -2801,9 +2805,9 @@ button[type="submit"]:hover {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem !important;
   border: none;
-  background-color: #dfdfdf;
+  background-color: #d9e1ff;
   color: #191926;
-  border-bottom: 1px solid #acacac;
+  border-bottom: 1px solid #d5ecff;
   text-decoration: none !important;
   position: relative;
 }
@@ -2812,7 +2816,7 @@ button[type="submit"]:hover {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #d2d2d2;
+  background-color: #bfcdff;
   height: 100%;
   position: absolute;
   right: 0;
@@ -2822,41 +2826,46 @@ button[type="submit"]:hover {
   text-align: center;
 }
 .steps a .callout__link:hover {
-  background-color: #d2d2d2;
+  background-color: #bfcdff;
   color: #191926;
 }
 .steps a .callout__link:hover:after {
-  background-color: #b9b9b9;
+  background-color: #8ca4ff;
 }
 .steps a .callout__link--anchor:after {
   content: "\f063";
 }
-.steps a:hover {
-  background-color: #A5BDDC;
+.steps a .callout__link:last-child {
+  border: none;
 }
-.steps a span.steps--number {
-  background: #fff;
+.steps a:hover {
+  background-color: #d5ecff;
+}
+.steps a .steps--number {
+  background: #ffffff;
+  color: #191926;
+  font-weight: 700;
+  line-height: 0.5rem;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  color: #004b88;
   display: inline-block;
-  font-weight: 700;
-  line-height: 1em;
-  text-align: center;
-  width: 2em;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  padding: 0.5em;
-  border-top: 0px #004b88 solid;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.125rem !important;
+}
+.steps a p {
+  display: inline-block;
+  margin: 0 0 0 3rem !important;
 }
 /**
  * Steps navigation
  */
 .steps--navigation {
   color: #191926;
-  border-top: 5px #004b88 solid;
 }
 .steps--navigation h1,
 .steps--navigation h2,
@@ -2864,10 +2873,11 @@ button[type="submit"]:hover {
 .steps--navigation h4,
 .steps--navigation h5,
 .steps--navigation h6 {
-  background-color: #ececec;
-  color: #191926;
+  background-color: #004b88;
+  color: #ffffff !important;
   padding: 0.75rem 1rem;
   margin: 0 0 1px 0 !important;
+  font-size: 0.875rem !important;
 }
 .steps--navigation .steps--navigation__link {
   cursor: pointer;
@@ -2875,10 +2885,10 @@ button[type="submit"]:hover {
   display: block;
   padding: 0.75rem 1rem 0.75rem 2rem;
   border: none;
-  background-color: #ececec;
+  background-color: #f2f8ff;
   margin-bottom: 1px;
   text-decoration: none !important;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 .steps--navigation .steps--navigation__link:hover {
   background-color: #dce5f1;
@@ -2890,9 +2900,118 @@ button[type="submit"]:hover {
   font-weight: 900;
   margin-right: 0.5rem;
   margin-left: -1rem;
+  color: #004b88;
 }
 .beta-dap-menu-accordion__sections {
   margin-bottom: 0.75rem !important;
+}
+/**
+ * Mobile styles
+ */
+section {
+  border-top: 1px solid #dfdfdf;
+  margin-top: 20px;
+}
+.steps--navigation--fixed {
+  background: none !important;
+}
+.steps--navigation--fixed li {
+  display: none;
+  color: white;
+}
+.steps--navigation--fixed li span {
+  background-color: #004b88;
+  padding: 0.75rem 3rem 0.75rem 2rem;
+  text-decoration: none !important;
+  display: block;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.steps--navigation--fixed li span:after {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  content: "+";
+  width: 20px;
+  display: block;
+  font-size: 2em;
+}
+.steps--navigation--fixed li span strong {
+  margin-right: 0.25rem;
+  margin-left: -1rem;
+}
+@media (max-width: 767px) {
+  .steps--navigation--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .steps--navigation--fixed li {
+    display: none !important;
+  }
+}
+.steps--navigation--overlay {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  visibility: hidden;
+  padding-bottom: 2rem !important;
+}
+.steps--navigation--overlay strong {
+  margin-right: 0.25rem;
+  margin-left: -1rem;
+}
+.steps--navigation--overlay li a {
+  background-color: #f2f8ff;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  border: 0px;
+  border-bottom: 1px solid #ffffff;
+  text-decoration: none !important;
+  display: block;
+  font-size: 0.875rem;
+}
+.steps--navigation--overlay li .active {
+  background-color: #dce5f1;
+}
+.steps--navigation--overlay .close a {
+  cursor: pointer;
+  background-color: #004b88;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+}
+.steps--navigation--overlay .close a:active,
+.steps--navigation--overlay .close a:visited,
+.steps--navigation--overlay .close a:hover {
+  color: #ffffff;
+}
+.steps--navigation--overlay .close a:after {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  content: "–";
+  width: 20px;
+  display: block;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+.open,
+.open li,
+.open li a {
+  visibility: visible;
+  display: block !important;
 }
 /**
  * UTILITY
@@ -2919,7 +3038,7 @@ button[type="submit"]:hover {
   font-size: 1.5rem;
 }
 .u-text-small {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 .u-text-light {
   color: #808080;

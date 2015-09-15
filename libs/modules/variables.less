@@ -20,9 +20,9 @@
 @breakpoint-lg: 					1080; // Greater than or equal
 
 // Breakpoints - pixel values 
-@screen-xs-max: 					unit(@breakpoint-sm - 1, px);
+@screen-xs-max: 					unit((@breakpoint-sm - 1), px);
 @screen-sm-min: 					unit(@breakpoint-sm, px);
-@screen-sm-max: 					unit(@breakpoint-md - 1, px);
+@screen-sm-max: 					unit((@breakpoint-md - 1), px);
 @screen-md-min: 					unit(@breakpoint-md, px);
 @screen-lg-min: 					unit(@breakpoint-lg, px);
 
@@ -50,7 +50,7 @@
 @font-size-large:           		1.5rem;
 @font-size-medium:          		1.2rem;
 @font-size-base:            		1rem;
-@font-size-small:           		0.8rem;
+@font-size-small:           		0.875rem;
 
 @font-size-h1:      				@font-size-largest;
 @font-size-h2:      				@font-size-larger;
