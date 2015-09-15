@@ -1,0 +1,100 @@
+.js .beta #beta-dap-menu-accordion ul ul {
+  display: block;
+}
+.-open .o2,
+.-open .o2mobile--sub {
+  display: block !important;
+}
+.o2 {
+  display: block;
+}
+.o2 li a {
+  background-color: #eff3f9;
+  padding: 0.875em 1.75em !important;
+  border-top: 1px solid #eee;
+  text-decoration: none !important;
+  display: block;
+}
+.o2 .active {
+  background-image: url('../images/nav-active.png') !important;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-color: #DCE5F2;
+  font-weight: 700;
+}
+.o2 .active strong {
+  font-weight: 700;
+}
+section {
+  border-top: 1px solid #EEEEEE;
+  margin-top: 20px;
+}
+.o2fixed {
+  background: none !important;
+}
+.o2fixed li {
+  display: none;
+  color: white;
+}
+.o2fixed li span {
+  background-color: #004D88;
+  padding: 0.875em 3.5em 0.875em 0.875em;
+  border-top: 1px solid #eee;
+  text-decoration: none !important;
+  display: block;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.o2fixed li span:after {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  content: "+";
+  width: 20px;
+  display: block;
+  font-size: 2em;
+}
+@media (max-width: 767px) {
+  .o2fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .o2fixed li {
+    display: none !important;
+  }
+}
+.o2mobile {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: white !important;
+  visibility: hidden;
+  transition: opacity .2s linear;
+}
+.o2mobile li a {
+  background-color: #eff3f9;
+  padding: 0.875em 1.75em;
+  border-top: 1px solid #eee;
+  text-decoration: none !important;
+  display: block;
+}
+.o2mobile .close a {
+  background-color: #EEEEEE;
+  padding: 0.4375em 0.875em;
+}
+.open,
+.open li,
+.open li a {
+  visibility: visible;
+  display: block !important;
+}
