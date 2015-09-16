@@ -113,12 +113,15 @@
 .collapse-content.default {
 	display: block;
 }
+.open + .collapse-content {
+	display: list-item;
+}
 
 /**
  * Creates various collapse styles using mixin
  * .collapse( @collapse-button-bg, @collapse-button-icon-bg, @collapse-button-text, @collapse-button-close-bg, @collapse-button-close-icon-bg, @collapse-button-close-text )
  */
-.collapse {
+.collapsible {
 	.collapse( @collapse-button-icon-bg: #253460 ); // Create unstyled collapse
 	&--aqua 		{ .collapse( @beta-aqua ) }
 	&--green 		{ .collapse( @beta-green ) }

@@ -11,11 +11,13 @@ $(document).ready(function($) {
     $('.collapse').find('.collapse-toggle').click(function(){
         $(this).toggleClass("open");
         $(this).next().slideToggle();
-        $(this).goTo();
+        if ( !$(this).parent().hasClass('side-nav') ) {
+            $(this).goTo();
+        }
     });
     $('.collapse').find('.collapse-toggle-close').click(function(){
         $(this).parent().slideToggle();
         $(this).parent().prev().toggleClass("open");
-        $(this).parent().prev().goTo();
+        $(this).goTo();
     });
 });

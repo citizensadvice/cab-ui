@@ -1,0 +1,21 @@
+.nav--beta {
+	background-color: red;
+	padding: 0;
+	a {
+		border: none;
+		color: @text-color !important;
+	}
+	li {
+		padding: @box-spacing-vertical @box-spacing-horizontal !important;
+		border-bottom: 1px solid white;
+	}
+	.collapse-toggle {
+		background-color: @beta-yellow;
+	}
+	ul {
+		margin: -@box-spacing-vertical -@box-spacing-horizontal;
+		li {
+			background-color: lighten(@beta-yellow, 10%);
+		}
+	}
+}

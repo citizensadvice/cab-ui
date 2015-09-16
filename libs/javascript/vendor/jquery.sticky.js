@@ -87,6 +87,7 @@
             s.stickyElement
               .css('width', newWidth)
               .css('position', 'fixed')
+              //.css('margin-top', '0')
               .css('top', newTop);
 
             s.stickyElement.parent().addClass(s.className);
