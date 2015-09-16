@@ -63,51 +63,51 @@
 
     <nav class="main-nav" data-track-zone="main-nav" style="overflow: visible;">
         <ul class="nav-list-primary">
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Benefits</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Work</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Debt and money</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Consumer</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Relationships</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Housing</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Law and rights</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Discrimination</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Tax</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Healthcare</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">Education</a>
             </li>
 
-            <li class="top-item js-mega-menu" style="display: list-item;">
+            <li class="top-item js-mega-menu" style="display: list-item; margin: 0 !important; list-style-type: none;">
                 <a href="#">More from us</a>
             </li>
 
@@ -150,7 +150,7 @@
                             <a href="#">Wales home</a>
                         </li>
                     </ul>
-                </div><span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a href="index.html">Consumer</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a>Problem with a used car</a></span>
+                </div><span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a href="#">Consumer</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i> <a>Problem with a used car</a></span>
             </div>
         </nav>
 
@@ -172,18 +172,13 @@
 
                 <div class="articleContent">
 
-                    <div>
 
-                        <div class="js-energyBillOwner" id="energy_widget">
-                            <p class="first-paragraph">Answer some questions to find out if you're responsible for paying a gas or electricity bill you've received.</p>
-                            <p>
-                            <script type="text/javascript">// <![CDATA[
-                            $(function() {  $.loadScriptTag('./js/tools/usedCarsTool.js').then(function() { CABWidgets.energyBillTool(document.getElementById("energy_widget")) }) });
-                            // ]]></script>
-                            </p>
+                        <div id="usedCarFrame">
+                            <script src="../js/usedCarsTool.js"></script>
+                            <script>CABWidgets.usedCarsChecker(document.getElementById("usedCarFrame"));</script>
                         </div>
 
-                    </div>
+                </div>
 
             </main>
 
