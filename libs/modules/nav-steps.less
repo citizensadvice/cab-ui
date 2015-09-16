@@ -1,17 +1,28 @@
+section {
+    //border-top: 1px solid @gray-6;
+    margin-top: @box-spacing*2;
+}
+
 /**
  * Option 3 variations
  */
 .steps {
     margin: 0.75em 0;
+    .callout(@heritage-blue-lightest, @callout-border: @heritage-blue-lighter);
+    .callout--border;
+    padding-bottom: 0;
     a {
         cursor: pointer;
-        .callout(@heritage-blue-lightest, @callout-border: @heritage-blue-lighter);
-        .callout--border;
         position: relative;
-        padding-top: @box-spacing-vertical;
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal !important;
+        margin: 0 !important;
+        border: none !important;
+        margin: 0 -1rem !important;
         &:hover {
             background-color: @heritage-blue-lighter;
         }
+    }
+    &--ordered a {
         .steps--number {
             background: @white;
             color: @text-color;
@@ -26,11 +37,21 @@
             display: inline-block;
             position: absolute;
             top: 50%;
-            margin-top: -@box-spacing-vertical*1.5 !important;
+            margin-top: -@box-spacing-vertical*1.25 !important;
         }
         p {
             display: inline-block;
             margin: 0 0 0 @box-spacing*2 + @box-spacing-horizontal !important;
+        }
+    }
+    a {
+        cursor: pointer;
+        .callout( @heritage-blue-lightest, @callout-border: @heritage-blue-lighter );
+        .callout--border;
+        position: relative;
+        padding-top: @box-spacing-vertical;
+        &:hover {
+            background-color: @heritage-blue-lighter;
         }
     }
 }
@@ -80,11 +101,6 @@
 /**
  * Mobile styles
  */
-
-section {
-    border-top: 1px solid @gray-6;
-    margin-top: 20px;
-}
 
 .steps--navigation--fixed {
     background: none !important;
