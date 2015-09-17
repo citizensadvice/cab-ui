@@ -1,27 +1,23 @@
-.beta {
-    
-    .beta-dap-cover {
-       background: @dap-turquoise-tint;
-    }
-    
-    .beta-dap-cover__content {
-        .limit-width();
-        padding: 0 1em;
-        overflow: hidden; // Prevent collapsing margins
-        margin-bottom: 1em;
-    }
-    
-    @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
-        .js .beta-dap-cover {
-            padding-right: 3.5em;
-        }
-    }
-    
-        h1 {
-            color: @dap-heritage-blue;
-        }
-        h2, p, a {
-            color: @dap-gray-1;
-        }
+.beta-dap-cover {
+   background: @dap-turquoise-tint;
+}
 
+.beta-dap-cover__content {
+    .limit-width();
+    padding: 0 1em;
+    overflow: hidden; // Prevent collapsing margins
+    margin-bottom: 1em;
+}
+
+@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .beta-dap-cover {
+        padding-right: 3.5em;
+    }
+}
+
+h1 {
+    color: @dap-heritage-blue;
+}
+h2, p, a {
+    color: @dap-gray-1;
 }

@@ -5,36 +5,34 @@
  * Badge
  */
 
-.beta {
-    .status {
-        padding: 1.5em 1em 0.5em 1em;
-        background-color: @beta-yellow-light;
-        color: @dap-gray-1;
-        vertical-align: middle;
-        margin: 0;
+.status {
+    padding: 1.5em 1em 0.5em 1em;
+    background-color: @beta-yellow-light;
+    color: @dap-gray-1;
+    vertical-align: middle;
+    margin: 0;
 
+}
+.alpha-badge {
+    font-weight: 700;
+    background-color: @beta-yellow;
+    color: @dap-gray-1;
+    display: inline-block;
+    float: left;
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+.breadcrumb {
+    background-color: @dap-white;
+    p {
+        font-size: 0.9em;
     }
+}
+@media (max-width: 767px) {
+    .status p {
+    font-size: 0.8em;
+  }
     .alpha-badge {
-        font-weight: 700;
-        background-color: @beta-yellow;
-        color: @dap-gray-1;
-        display: inline-block;
-        float: left;
-        padding: 0.5em;
-        margin-right: 0.5em;
-    }
-    .breadcrumb {
-        background-color: @dap-white;
-        p {
-            font-size: 0.9em;
-        }
-    }
-    @media (max-width: 767px) {
-        .status p {
-        font-size: 0.8em;
-      }
-        .alpha-badge {
-        margin-top: 0px;
-      }
-    }
+    margin-top: 0px;
+  }
 }

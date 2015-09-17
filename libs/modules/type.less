@@ -17,46 +17,40 @@ h6 {
     line-height:    @line-height-heading;
     color:          @heading-primary-color;
     font-weight:    @font-weight-bolder;
+    margin-top:     0.75em;
+    margin-bottom:  0.75em;
 }
 
 h1 {
     font-size:      @font-size-h1;
     font-weight:    @font-weight-boldest;
-    margin-top:     @font-size-h1 * 0.75;
-    margin-bottom:  @font-size-h1 * 0.4;
+
+    &.title__heading {
+        margin-top: 0;
+    }
 }
 
 h2 {
     font-size:      @font-size-h2;
-    margin-top:     @font-size-h2 * 0.75;
-    margin-bottom:  @font-size-h2 * 0.4;
 }
 
 h3 {
     font-size:      @font-size-h3;
-    margin-top:     @font-size-h3 * 0.75;
-    margin-bottom:  @font-size-h3 * 0.4;
     font-weight:    600 !important;
 }
 
 h4 {
     font-size:      @font-size-h4;
-    margin-top:     @font-size-h4 * 0.75;
-    margin-bottom:  @font-size-h4 * 0.4;
     font-weight:    600 !important;
 }
 
 h5 {
     font-size:      @font-size-h5;
-    margin-top:     @font-size-h5 * 0.75;
-    margin-bottom:  @font-size-h5 * 0.4;
     font-weight:    600 !important;
 }
 
 h6 {
     font-size:      @font-size-h5;
-    margin-top:     @font-size-h5 * 0.75;
-    margin-bottom:  @font-size-h5 * 0.4;
     font-weight:    600 !important;
 }
 
@@ -91,11 +85,13 @@ small {
 
 a {
     color: @link-color;
-    text-decoration: none !important;
+    text-decoration: none;
+    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
     
     &:hover,
     &:focus {
         color: @link-hover-color;
+        text-decoration: none;
     }
 
     &:active {
@@ -105,10 +101,10 @@ a {
     &:visited {
         color: @link-visited-color;
     }
-}
 
-.main-content__right a {
-    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
+    &:not([href]) {
+        text-decoration: none;
+    }
 }
 
 a.img-link,
@@ -131,4 +127,12 @@ hr {
     font-size: @font-size-medium;
     font-weight: @font-weight-bold;
     line-height: @line-height-base;
+}
+
+.page-info {
+    color: #444;
+}
+
+.page-info + .page-info {
+    margin-top: -1em;
 }
