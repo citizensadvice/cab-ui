@@ -1,0 +1,154 @@
+﻿// The wrapping at iPad sizes probably isn't quite right, but as we are changing this I'm not spending too long on it
+
+.main-header {
+    background-color: @white;
+    overflow: hidden; // Collapsing margin issues
+}
+
+.advisernet {
+    .main-header {
+        background-color: #CBE0E4;
+    }
+}
+
+.bmis {
+    .main-header {
+        background-color: #DDDAE1;
+    }
+}
+
+.cablink {
+    .main-header {
+        background-color: #FFE4C1;
+    }
+}
+
+.main-header__content {
+    .limit-width;
+    .clearfix;
+    padding: 0 1em .5em 1em;
+}
+
+.main-header__logo {
+    float: left;
+    margin-top: .7em; // Slightly better centering
+    max-width: 30%; // For old IE
+    max-width: calc(300px); // For modern browsers
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        text-align: center;
+        display: block;
+        margin-top: .5em;
+        max-width: none;
+    }
+}
+
+.main-header__menu-link {
+    display: none;
+}
+
+.main-header__top-nav, .main-header__search {
+    float: right;
+    clear: right;
+}
+
+.main-header__top-nav {
+    margin: .5em -.4em .2em 0; 
+    text-align: right;
+    max-width: 70%; // For old IE
+    max-width: calc( ~"100% - 300px" ); // For modern browsers (~ to stop less auto calculating)
+}
+
+.main-header__top-nav > a {
+    padding: 0 .4em;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.main-header__top-nav__link--current {
+    font-weight: bold;
+}
+
+.main-header__search {
+    white-space: nowrap;
+    margin: .4em 0;
+}
+
+input.main-header__search__input {
+    width: 25em;
+    float: left;
+
+    .ie8 & {
+        padding: .3em .2em;
+    }
+}
+
+.main-header__search__submit {
+    border: 1px solid #585858;
+    background: #585858;
+    overflow: hidden;
+    padding: .2em;
+    border-radius: 0;
+    float: left;
+    margin: 0 0 0 -1px;
+    width: 2em;
+}
+
+.main-header__search__submit:hover, .main-header__search__submit:focus {
+    background: #333;
+}
+
+@media ( max-width: @screen-xs-max ) {
+     
+      .main-header__content {
+         padding: 0;
+      }
+
+     .main-header__links {
+        display: table;
+        width: 100%;
+        background: @blue;
+     }
+     
+     html[lang="en-SCT"] .main-header__links {
+         background: @casblue;
+     }
+     
+     .main-header__top-nav, .main-header__bottom-nav {
+         display: none;
+     }
+
+    .main-header__menu-link {
+        color: white;
+        padding: 0 1em;
+        width: 0; // As this is a table cell this will reduce the width of the cell to fit the content
+
+        &:link {
+            text-decoration: none;
+        }
+    }
+
+     .main-header__search, .main-header__menu-link {
+        display: table-cell;
+        vertical-align: middle;
+     }
+
+     .main-header__search {
+        width: 100%;
+        padding-right: 1em;
+        position: relative;
+     }
+
+     input.main-header__search__input {
+        float: none;
+        width: 100%;
+
+     }
+     .main-header__search__submit {
+        position: absolute;
+        right: .5em;
+        top: 0;
+     }
+}
+  

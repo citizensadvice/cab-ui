@@ -1,0 +1,24 @@
+﻿.extent-switcher {
+    &:extend(.box all);
+    &:extend(.box--pull-right);
+    margin-top: 0;
+}
+
+// dotless doesn't extent media queries properly.  Really should file a bug
+@media (max-width: @screen-sm-max ) {
+    .extent-switcher {
+        margin: 1em 0 1em 1em;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .extent-switcher {
+        display: none;
+    }
+}
+
+@media (min-width: @screen-sm-min ) {
+    .mobile-extent-switcher {
+        display: none;
+    }
+}

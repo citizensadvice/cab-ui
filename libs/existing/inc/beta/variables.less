@@ -1,0 +1,264 @@
+/**
+ * VARIABLES.
+ *
+ * All non-color variables.
+ * Using 'dap-' prefix to avoid name clashes with existing styles (Digital alpha project)
+ */
+
+
+/***************************************************************************
+ * TEXT SIZES
+ */
+
+@dap-font-size-largest:         2.3em;
+@dap-font-size-larger:          1.8em;
+@dap-font-size-large:           1.5em;
+@dap-font-size-medium:          1.2em;
+@dap-font-size-base:            1em;
+@dap-font-size-small:           0.875em;
+
+@dap-font-size-heading-1:      @dap-font-size-largest;
+@dap-font-size-heading-2:      @dap-font-size-larger;
+@dap-font-size-heading-3:      @dap-font-size-large;
+@dap-font-size-heading-4:      @dap-font-size-medium;
+@dap-font-size-heading-5:      @dap-font-size-base;
+
+
+/***************************************************************************
+ * FONT WEIGHTS
+ */
+
+@dap-heading-font-weight:       300;
+
+@dap-font-weight-base:          400;
+@dap-font-weight-bold:          600;
+@dap-font-weight-bolder:        700;
+@dap-font-weight-boldest:       800;
+
+
+/***************************************************************************
+ * LINE HEIGHTS
+ */
+
+@dap-line-height-base:          1.7;
+@dap-line-height-large:         1.3;
+@dap-line-height-small:         1.5; /* eg, 20px when font size is 14px */
+@dap-line-height-heading:       @dap-line-height-large;
+// Computed "line-height" for use with `margin`, `padding`, etc.
+@dap-line-height-computed:      floor((@dap-font-size-base * @dap-line-height-base));
+
+// Also used for other elements that require similar spacing:
+@dap-paragraph-margin-bottom:    1em;
+
+
+/***************************************************************************
+ * LINKS
+ */
+
+@dap-link-color:            @dap-brand-primary;
+@dap-link-active-colour:    @dap-blue-corporate;
+@dap-link-hover-color:      @dap-link-color;
+@dap-link-visited-color:    @dap-brand-primary;
+
+
+/****************************************************************************
+ * TABLES.
+ */
+
+@dap-table-padding-vertical: 0.5em;
+@dap-table-padding-horizontal: 10px;
+@dap-table-border:       @dap-gray-6;
+@dap-table-font-size:    @dap-font-size-small;
+
+@dap-table-striped-head-bg:     @dap-gray-4;
+@dap-table-striped-row-a-bg:    @dap-gray-7;
+@dap-table-striped-row-b-bg:    @dap-gray-6;
+@dap-table-striped-border:      @dap-gray-3;
+
+
+/***************************************************************************
+ * PANELS
+ */
+
+@dap-panel-default-bg:      @dap-white;
+@dap-panel-default-color:   @dap-text-color;
+@dap-panel-default-border:  @dap-white;
+
+@dap-panel-a-bg:            @dap-white;
+@dap-panel-a-color:         @dap-text-color;
+@dap-panel-a-border:        @dap-silver;
+
+@dap-panel-b-bg:            #215e77;
+@dap-panel-b-color:         @dap-white;
+@dap-panel-b-border:        @dap-green-light;
+@dap-panel-b-border:        @dap-turquoise;
+
+@dap-panel-c-bg:            @dap-turquoise-tint;
+@dap-panel-c-color:         @dap-white;
+@dap-panel-c-border:        @dap-turquoise;
+
+/***************************************************************************
+ * FORMS
+ */
+
+// <input>s
+@dap-field-bg:              @dap-white;
+@dap-field-bg-disabled:     @dap-gray-5;
+
+@dap-field-color:           @dap-text-color;
+@dap-field-border:          @dap-gray-4;
+
+@dap-field-border-focus:    #66afe9;
+
+@dap-field-color-placeholder: @dap-gray-3;
+
+// Top and bottom padding for inputs, selects, buttons, etc.
+@dap-field-padding-base-vertical: 5px;
+@dap-field-padding-base-horizontal: 10px;
+
+@dap-field-padding-large-vertical: 10px;
+@dap-field-padding-large-horizontal: 15px;
+
+@dap-field-padding-small-vertical: 2px;
+@dap-field-padding-small-horizontal: 8px;
+
+// Heights for inputs, selects, etc.
+// These allow for text + paddings + border.
+@dap-field-height-base:     (@dap-line-height-computed + (@dap-field-padding-base-vertical * 2) + 2);
+@dap-field-height-large:    (ceil(@dap-font-size-large * @dap-line-height-large) + (@dap-field-padding-large-vertical * 2) + 2);
+@dap-field-height-small:    (floor(@dap-font-size-small * @dap-line-height-small) + (@dap-field-padding-small-vertical * 2) + 2);
+
+@dap-legend-color:          @dap-gray-1;
+
+@dap-cursor-disabled:       not-allowed;
+
+@dap-field-boxed-bg:            @dap-white;
+@dap-field-boxed-hover-bg:      @dap-cloud;
+@dap-field-boxed-active-bg:     @dap-turquoise-tint;
+
+@dap-field-boxed-border:        transparent;
+@dap-field-boxed-hover-border:  @dap-gray-4;
+@dap-field-boxed-active-border: transparent;
+
+@dap-progress-border:           @dap-blue-corporate-light;
+@dap-progress-bg:               @dap-white;
+@dap-progress-color:            @dap-blue-corporate;
+
+/***************************************************************************
+ * PADDED BOXES.
+ * Used for shaded boxes of various kinds.
+ * Usually, use the .box class and modifications like .box--1, etc.
+ */
+
+// You might just want to `@include box` rather than use these directly.
+@dap-box-padding-vertical:      10px;
+@dap-box-padding-horizontal:    15px;
+
+// Usually applied using something like `@include box-bg(@box-1-bg)`.
+@dap-box-1-bg:                 @dap-turquoise-tint;
+@dap-box-1-light-bg:           @dap-turquoise-light;
+@dap-box-2-bg:                 @dap-white;
+@dap-box-2-light-bg:           @dap-white; // For consistency.
+@dap-box-3-bg:                 @dap-gray-6;
+@dap-box-3-light-bg:           @dap-gray-7;
+@dap-box-4-bg:                 @dap-blue-corporate-light;
+@dap-box-4-light-bg:           @beta-blue-light;
+@dap-box-5-bg:                 @dap-green;
+@dap-box-5-light-bg:           @dap-turquoise;
+
+/***************************************************************************
+ * REVEALERS
+ */
+
+@dap-revealer-large-body-bg:        @dap-blue-corporate;
+@dap-revealer-large-body-color:     @dap-white;
+@dap-revealer-large-icon-bg:        #3498db;
+@dap-revealable-content-large-bg:   @dap-white;
+
+@dap-revealer-small-body-bg:        #32457E;
+@dap-revealer-small-body-color:     @dap-white;
+@dap-revealer-small-icon-bg:        #3498db;
+@dap-revealable-content-small-bg:   @dap-white;
+@dap-revealable-content-small-margin: 10px;
+
+/***************************************************************************
+ * BADGES.
+ */
+
+@dap-badge-bg:      @beta-red-deep;
+@dap-badge-color:   @dap-white;
+
+/***************************************************************************
+ * MENUS.
+ */
+
+// White and gray.
+@dap-menu-1-bg:                 @dap-white;
+@dap-menu-1-hover-bg:           @dap-gray-5;
+@dap-menu-1-text-color:         @dap-text-color;
+@dap-menu-1-border:             @dap-gray-5;
+@dap-menu-1-icon-color:         @dap-gray-3;
+// Yellow and gray.
+@dap-menu-2-bg:                 @beta-yellow-light;
+@dap-menu-2-hover-bg:           @beta-yellow;
+@dap-menu-2-text-color:         @dap-text-color;
+@dap-menu-2-border:             @dap-white;
+@dap-menu-2-icon-color:         @dap-gray-3;
+// Mid blue.
+@dap-menu-3-bg:                 @dap-blue-corporate-light;
+@dap-menu-3-hover-bg:           darken(@dap-blue-corporate-light, 10%);
+@dap-menu-3-text-color:         @dap-text-color;
+@dap-menu-3-border:             @dap-menu-3-hover-bg;
+@dap-menu-3-icon-color:         @dap-gray-2;
+// Light blue and white.
+@dap-menu-4-bg:                 @dap-white;
+@dap-menu-4-hover-bg:           @beta-blue-light;
+@dap-menu-4-text-color:         @dap-text-color;
+@dap-menu-4-border:             @beta-blue-light;
+@dap-menu-4-icon-color:         @dap-gray-3;
+// Turquoise
+@dap-menu-5-bg:                 @dap-turquoise;
+@dap-menu-5-hover-bg:           darken(@dap-menu-5-bg, 15%);
+@dap-menu-5-text-color:         @dap-text-color;
+@dap-menu-5-border:             @dap-white;
+@dap-menu-5-icon-color:         @dap-white;
+// Dark green.
+@dap-menu-6-bg:                 @dap-green;
+@dap-menu-6-hover-bg:           darken(@dap-menu-6-bg, 10%);
+@dap-menu-6-text-color:         @dap-white;
+@dap-menu-6-border:             @dap-white;
+@dap-menu-6-icon-color:         @dap-white;
+
+/***************************************************************************
+ * LETTERS.
+ */
+
+@dap-letter-bg:      @dap-white;
+@dap-letter-color:   @dap-text-color;
+@dap-letter-border:  @dap-gray-4;
+// Used for preview at small widths. Don't want to set this as an overall
+// @font-size-smaller, as we don't want it proliferating across the site
+// for other uses.
+@dap-letter-font-size-small: 12px;
+
+/***************************************************************************
+ * BANNER
+ * The top of page stripes.
+ */
+
+@dap-banner-primary-bg:         @dap-brand-primary;
+@dap-banner-primary-color:      @dap-white;
+
+@dap-banner-secondary-bg:       @dap-white;
+@dap-banner-secondary-color:    @dap-text-color;
+
+@dap-banner-title-height:       (@dap-box-padding-vertical * 6);
+@dap-breadcrumb-color:          @dap-text-color;
+@dap-breadcrumb-active-color:   @dap-text-color;
+
+/***************************************************************************
+ * FOOTER
+ */
+
+@dap-footer-bg:                 @dap-blue-corporate-light;
+@dap-footer-border-color:       @dap-brand-primary;

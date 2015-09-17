@@ -13,8 +13,7 @@
     <meta content="EWS" name="cab-extent">
     <meta content="/static/images/apple-touch-icon.png">
     <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
-    <link href="css/main.css" media="screen" rel="stylesheet">
-    <link href="css/site.css" media="screen" rel="stylesheet">
+    <link href="css/site-2.css" media="screen" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/css/print.css" media="print" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
@@ -25,10 +24,9 @@
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
     <script src="../libs/javascript/sticky-nav.js"></script><!-- Sticky Navigation JS -->
-
     <script src="../libs/javascript/nav-active.js"></script><!-- Navigation Updating JS -->
-
     <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
+    <script src="../libs/javascript/vendor/jquery.sticky.js"></script>
 </head>
 
 <body class="beta">
@@ -419,10 +417,10 @@
                 </div><!-- END MAIN CONTENT -->
             </main>
 
-            <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher">
+            <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher" style="margin-bottom: 2rem;">
                 <h2 class="beta-extent-switcher__heading">This advice applies to England</h2>
 
-                <p>Advice can vary depending on where you live.</p><!-- Can't use asp:DropDownList as it needs to sit in form tag -->
+                <p>Advice can vary depending on where you live.</p>
 
                 <form method="get">
                     <select class="custom-dropdown__select" id="ddlExtents" name="lang">
@@ -443,7 +441,7 @@
                         </option>
                     </select> <button class="custom-dropdown__button js-track-extent" type="submit">Go</button>
                 </form>
-            </aside><!-- SIDEBAR -->
+            </aside>
 
             <nav class="side-nav" data-track-zone="side-nav" id="beta-dap-menu-accordion">
                 <ul class="beta-dap-menu-accordion__sections">
@@ -463,32 +461,28 @@
                 </ul>
             </nav>
 
-            <ul class="side-nav collapse nav--beta">
+            <!--<ul class="side-nav collapse nav--beta">
 
-                <li class="collapse-toggle open">On this page</li>
-                <li class="collapse-content" style="display: list-item;"><ul>
-                    <li><a href="#step1">Make sure a trader is trustworthy</a></li>
-                    <li><a href="#step2">Buying from an auction</a></li>
-                    <li><a href="#step3">Check a car's history</a></li>
-                    <li><a href="#step4">Inspect the car and take a test drive</a></li>
-                    <li><a href="#step5">Get a written contract</a></li>
-                    <li><a href="#step6">When you buy the car</a></li>
-                    <li><a href="#step7">How to pay</a></li>
-                    <li><a href="#step8">Further help</a></li>
+                <li class="collapse-toggle open">Consumer</li>
+                <li class="collapse-content start-open"><ul>
+                    <li><a href="#">Make sure a trader is trustworthy</a></li>
+                    <li class="active"><a href="#">Buying a used car</a></li>
+                    <li><a href="#">Check a car's history</a></li>
+                    <li><a href="#">Check a car's history</a></li>
                 </ul></li>
 
-                <li class="collapse-toggle">On this page</li>
+                <li class="collapse-toggle">Consumer</li>
                 <li class="collapse-content"><ul>
-                    <li><a href="#step1">Make sure a trader is trustworthy</a></li>
-                    <li><a href="#step2">Buying from an auction</a></li>
-                    <li><a href="#step3">Check a car's history</a></li>
-                    <li><a href="#step4">Inspect the car and take a test drive</a></li>
-                    <li><a href="#step5">Get a written contract</a></li>
-                    <li><a href="#step6">When you buy the car</a></li>
-                    <li><a href="#step7">How to pay</a></li>
-                    <li><a href="#step8">Further help</a></li>
+                    <li><a href="#">Make sure a trader is trustworthy</a></li>
+                    <li><a href="#">Buying from an auction</a></li>
+                    <li><a href="#">Check a car's history</a></li>
+                    <li><a href="#">Inspect the car and take a test drive</a></li>
+                    <li><a href="#">Get a written contract</a></li>
+                    <li><a href="#">When you buy the car</a></li>
+                    <li><a href="#">How to pay</a></li>
+                    <li><a href="#">Further help</a></li>
                 </ul></li>
-            </ul>
+            </ul>-->
 
             <nav class="side-nav">
                 <div class="steps--navigation">
@@ -740,6 +734,6 @@
                 </div>
             </div>
         </div>
-    </footer><script src="../libs/javascript/vendor/jquery.sticky.js"></script>
+    </footer>
 </body>
 </html>

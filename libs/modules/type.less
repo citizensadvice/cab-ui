@@ -92,7 +92,6 @@ small {
 a {
     color: @link-color;
     text-decoration: none !important;
-    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
     
     &:hover,
     &:focus {
@@ -106,6 +105,10 @@ a {
     &:visited {
         color: @link-visited-color;
     }
+}
+
+.main-content__right a {
+    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
 }
 
 a.img-link,

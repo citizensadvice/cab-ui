@@ -1,15 +1,18 @@
 .steps {
-    .callout( @white, @callout-border: @gray-7 );
+    .callout( @white, @callout-border: @gray-5, @callout-background: @gray-7 );
     .callout--border;
     .callout--border--left;
     li a:hover, li a.active {
-        background-color: @gray-7;
+        background-color: @gray-6;
     }
 }
 
 .steps--navigation {
-    .callout( @heritage-blue-lightest, @callout-border: @heritage-blue-lighter );
+    .callout( @heritage-blue-lightest );
     .callout--border;
+    ul {
+        background-color: red !important;
+    }
     li a:hover, li a.active {
         background-color: @heritage-blue-lighter;
     }
@@ -20,12 +23,12 @@
     margin-top: 0;
     padding-bottom: 0;
     .title {
-        padding: 0 !important;
+        padding: 0;
         text-decoration: none;
-        border: none !important;
+        border: none;
     }
     ul {
-        background: none !important;
+        background: none;
         list-style: none;
         padding: 0;
         li {
@@ -34,7 +37,7 @@
             a {
                 cursor: pointer;
                 display: block;
-                border: none !important;
+                border: none;
                 text-decoration: none !important;
                 margin: 0 -@box-spacing !important;
                 font-size: @font-size-small;

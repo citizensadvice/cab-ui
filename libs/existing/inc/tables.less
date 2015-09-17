@@ -1,0 +1,164 @@
+/*=Tables
+======================================================================= */
+
+/*Default Table*/
+
+table {
+  margin: 1em 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ccc;
+  padding: .4em;
+  text-align: left;
+  vertical-align: top;
+}
+
+td {background: #fff;}
+
+th {
+  background: @blue;
+  color: #fff;
+  font-weight: normal;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+}
+
+td > *:first-child {padding-top:0;}
+    
+/*Sortable Table*/
+
+.tablesorter {
+    th {
+        cursor: pointer;
+        background: @blue url('/static/layout/sortable-default.png') no-repeat 99%;
+
+        &:hover {
+            background-color: #01468D;
+        }   
+    }
+
+    .tablesorter-headerDesc{background-image: url('/static/layout/sortable-active.png');}
+    .tablesorter-headerAsc{background-image: url('/static/layout/sortable-desc.png');}
+}
+.tablesorter-header-inner{padding-right: 15px;}    
+
+
+/*Properties table - a table with no borders for listing properties*/
+
+.table--properties {
+    td {
+        border: none;
+        background: transparent;
+    }
+
+    th[scope=row] {
+        border: none;
+        background: transparent;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #000;
+        padding: .4em 1em .4em 0;
+        
+        // Reset the colours changed for the standard tables
+        // Pity we can't use :not for the selector above
+        a {
+             color: @blue;
+             text-decoration: none;
+
+             &:hover, &:focus {
+                 text-decoration: underline;
+             }
+        }
+    }
+
+    tr:first-child {
+        td, th {
+            padding-top: 0;
+        }
+    }
+
+    tr:last-child {
+        td, th {
+            padding-bottom: 0;
+        }
+    }
+    /* This is for the Signposting pages on the Consumer KB and is partly an artifact of the migration */
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.table--full-width {
+    width: 100%;
+}
+
+.td--green {
+    background-color: #c3ecd1;
+}
+.td--amber {
+    background-color: #feebd5;
+}
+.td--red {
+    background-color: #e88ea5;
+}
+
+/*Blind Table*/
+  
+.blindtable{WIDTH: auto; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM-STYLE: none; border: 0;}
+.blindtable tr{background-color: transparent; border: 0;}
+.blindtable tr td{border: 0;}
+.blindtable tr td:first-child{width: 10%;}
+    
+/*Fifty Fifty Table */
+  
+.fiftyfiftytable tr td{width:50%;}      
+
+/*Simple Table*/
+table.simple-table, table.simple-table tr, table.simple-table th, table.simple-table td {color:#353535; vertical-align: middle;}
+table.simple-table tr, table.simple-table td {border:0;}
+table.simple-table th {background-color:#fff; font-weight:bold;}
+table.simple-table th, table.simple-table td {padding:0px 5px;}
+
+/*Contact us Table*/
+
+@media screen and (min-width:1200px) {
+  table.contactus tr td {width:10%;}
+  table.contactus tr td + td {width:40%;}
+  table.contactus tr td + td + td {width:50%;}
+}
+
+@media screen and (min-width:768px) {
+  table.contactus tr:not(:last-child) {border-bottom:1px dotted #ccc;}
+}
+
+@media screen and (max-width:768px) {
+  table.contactus thead, table.contactus thead th {display:none;}
+  table.contactus tr {margin-bottom:20px; background-color:#f3f6f6; padding:10px;}
+  table.contactus tr:nth-child(even) {background-color:#e5efef;}
+  table.contactus tr td, table.contactus tr td:before, table.contactus tr {display:inline-block;}
+  table.contactus tr td {width:100%; clear:both;}
+  table.contactus tr td:not(:last-child) {border-bottom:1px dotted #666;}
+  table.contactus tr td:before {width:50%; content:''; font-weight:bold;}
+  table.contactus tr td:before {content:'Day';}
+  table.contactus tr td + td:before {content:'Time';}
+  table.contactus tr td + td + td:before {content:'Further information';}
+}
+
+// A wrapper to make tables responsive
+// This is automatically added by the htmlrewriter
+.table-scroll {
+    overflow-x: auto; 
+    margin: 1em 0;
+
+    & > table {
+        margin: 0;
+    }
+}

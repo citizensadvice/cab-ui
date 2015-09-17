@@ -8,9 +8,11 @@
 })(jQuery);
 
 $(document).ready(function($) {
+    //$('.open').next.slideDown();
     $('.collapse').find('.collapse-toggle').click(function(){
         $(this).toggleClass("open");
         $(this).next().slideToggle();
+        //$(this).goTo();
         if ( !$(this).parent().hasClass('side-nav') ) {
             $(this).goTo();
         }

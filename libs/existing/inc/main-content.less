@@ -1,0 +1,60 @@
+﻿.main-content{
+    .limit-width;
+    .clearfix;
+    padding: 0 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.main-content--full-width {
+    max-width: 60em;
+    width: 80%;
+
+    @media (max-width: @screen-sm-max ) {
+        max-width: none;
+        width: auto;
+    }
+}
+
+// @todo This needs renamed
+.articleContent {
+    width: 80%;
+
+     @media (max-width: @screen-sm-max ) {
+        width: auto;
+    }
+}
+
+@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .main-content {
+        padding-right: 3.5em;
+    }
+}
+
+.main-content__right {
+    float: right;
+    width: @width-span-9;
+
+    padding-left: 2em;
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+
+}
+
+.main-content__sidebar {
+    float: left;
+    clear: left;
+    width: @width-span-3;
+    overflow: hidden; // Stop margin collapsing issues
+    margin-bottom: 1.5em;
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        margin-top: 1.5em;
+    }
+}

@@ -17,12 +17,16 @@ body {
 section {
   margin-top: 2.5rem;
 }
+.main-content {
+  padding: 0 !important;
+  max-width: 1024px;
+}
 .main-content__right {
   width: 70%;
 }
 .beta-extent-switcher,
 .side-nav {
-  width: 30%;
+  width: 30% !important;
 }
 /* Base */
 /**
@@ -1032,9 +1036,6 @@ blockquote p.lighten {
  * BETA COLORS
  */
 /***************************************************************************
- * NAVIGATION COLOURS
- */
-/***************************************************************************
  * COLORS
 
 @blue-corporate:        	#034EA2;    // May switch to corporate blue following brand development
@@ -1429,6 +1430,7 @@ small {
 a {
   color: #253460;
   text-decoration: none !important;
+  border-bottom: 0.0625rem solid #ccd4eb;
 }
 a:hover,
 a:focus {
@@ -1439,9 +1441,6 @@ a:active {
 }
 a:visited {
   color: #253460;
-}
-.main-content__right a {
-  border-bottom: 0.0625rem solid #ccd4eb;
 }
 a.img-link,
 a.img-link:visited,
@@ -2170,9 +2169,6 @@ hr {
 .collapse-content.default {
   display: block;
 }
-.start-open {
-  display: block;
-}
 /**
  * Creates various collapse styles using mixin
  * .collapse( @collapse-button-bg, @collapse-button-icon-bg, @collapse-button-text, @collapse-button-close-bg, @collapse-button-close-icon-bg, @collapse-button-close-text )
@@ -2778,9 +2774,9 @@ button[type="submit"]:hover {
 .steps {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: #ececec;
+  background-color: #ffffff;
   color: #191926;
-  border: 0px #bfbfbf solid;
+  border: 0px #ececec solid;
   display: block;
   border-width: 1px;
   border-left-width: 0.5rem;
@@ -2789,11 +2785,11 @@ button[type="submit"]:hover {
 .steps h1,
 .steps h2,
 .steps h3 {
-  color: #ffffff !important;
+  color: #191926 !important;
   font-size: 1.5rem;
 }
 .steps a {
-  border-bottom-color: #bfbfbf;
+  border-bottom-color: #ececec;
 }
 .steps > *:first-child {
   padding-top: 0.75rem;
@@ -2818,9 +2814,9 @@ button[type="submit"]:hover {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem !important;
   border: none;
-  background-color: #dfdfdf;
+  background-color: #f2f2f2;
   color: #191926;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #ececec;
   text-decoration: none !important;
   position: relative;
 }
@@ -2829,7 +2825,7 @@ button[type="submit"]:hover {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #d2d2d2;
+  background-color: #e6e6e6;
   height: 100%;
   position: absolute;
   right: 0;
@@ -2839,11 +2835,11 @@ button[type="submit"]:hover {
   text-align: center;
 }
 .steps .callout__link:hover {
-  background-color: #d2d2d2;
+  background-color: #e6e6e6;
   color: #191926;
 }
 .steps .callout__link:hover:after {
-  background-color: #b9b9b9;
+  background-color: #cccccc;
 }
 .steps .callout__link--anchor:after {
   content: "\f063";
@@ -2853,14 +2849,14 @@ button[type="submit"]:hover {
 }
 .steps li a:hover,
 .steps li a.active {
-  background-color: #dfdfdf;
+  background-color: #ececec;
 }
 .steps--navigation {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
   background-color: #f2f8ff;
   color: #191926;
-  border: 0px #72b3ff solid;
+  border: 0px #d5ecff solid;
   display: block;
   border-width: 1px;
 }
@@ -2871,7 +2867,7 @@ button[type="submit"]:hover {
   font-size: 1.5rem;
 }
 .steps--navigation a {
-  border-bottom-color: #72b3ff;
+  border-bottom-color: #d5ecff;
 }
 .steps--navigation > *:first-child {
   padding-top: 0.75rem;
@@ -2898,7 +2894,7 @@ button[type="submit"]:hover {
   border: none;
   background-color: #d9e1ff;
   color: #191926;
-  border-bottom: 1px solid #72b3ff;
+  border-bottom: 1px solid #d5ecff;
   text-decoration: none !important;
   position: relative;
 }
@@ -2929,9 +2925,6 @@ button[type="submit"]:hover {
 .steps--navigation .callout__link:last-child {
   border: none;
 }
-.steps--navigation ul {
-  background-color: red !important;
-}
 .steps--navigation li a:hover,
 .steps--navigation li a.active {
   background-color: #d5ecff;
@@ -2944,13 +2937,13 @@ button[type="submit"]:hover {
 }
 .steps .title,
 .steps--navigation .title {
-  padding: 0;
+  padding: 0 !important;
   text-decoration: none;
-  border: none;
+  border: none !important;
 }
 .steps ul,
 .steps--navigation ul {
-  background: none;
+  background: none !important;
   list-style: none;
   padding: 0;
 }
@@ -2963,7 +2956,7 @@ button[type="submit"]:hover {
 .steps--navigation ul li a {
   cursor: pointer;
   display: block;
-  border: none;
+  border: none !important;
   text-decoration: none !important;
   margin: 0 -1rem !important;
   font-size: 0.875rem;
@@ -3109,45 +3102,20 @@ button[type="submit"]:hover {
 }
 .nav--beta a {
   border: none;
-  display: block;
-  padding: 0.75rem 1rem !important;
+  color: #191926 !important;
 }
 .nav--beta li {
-  border-bottom: 1px solid white !important;
-  color: #57486b !important;
-}
-.nav--beta li.collapse-content {
-  padding: 0 !important;
-}
-.nav--beta li:last-child {
-  border-bottom: none !important;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 1px solid white;
 }
 .nav--beta .collapse-toggle {
-  padding: 0.75rem 1rem !important;
-  background-color: #90ce9c;
-  position: relative;
-  font-weight: 700;
+  background-color: #ffbf47;
 }
-.nav--beta .collapse-toggle:after {
-  box-sizing: border-box;
-  font-family: 'FontAwesome';
-  content: "\f067";
-  padding: 0 1.25rem;
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-.nav--beta .open:after {
-  content: "\f068";
+.nav--beta ul {
+  margin: -0.75rem -1rem;
 }
 .nav--beta ul li {
-  background-color: #d7eddb;
-}
-.nav--beta ul li:hover {
-  background-color: #c5e5cb;
-}
-.nav--beta ul .active {
-  background-color: #c5e5cb;
+  background-color: #ffd17a;
 }
 /**
  * UTILITY

@@ -1,0 +1,42 @@
+﻿.revealable__content[aria-hidden=true] {
+	display: none;
+} 
+
+.revealable {
+  padding: 0 1em;
+  background: white;
+  margin: 1em 0;
+}
+
+.revealable__heading {
+  font-size: 1.5em;
+  margin: 0 -1/1.5em;
+  padding: .5em 1/1.5em .5em 2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.revealable__icon {
+    .icon;
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    margin-top: -.6em;
+
+    &:before {
+        content: @icon-symbol-chevron-down;
+    }
+}
+
+.revealable__heading[aria-expanded=true] .revealable__icon:before {
+    content: @icon-symbol-chevron-up;
+}
+
+.revealable__close {
+    display: block;
+    margin: 1em 0;
+}
+
+.revealable__content {
+    margin-top: -.5em;
+}
