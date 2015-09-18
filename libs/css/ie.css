@@ -1,0 +1,7 @@
+.ie8 input[type=password] {
+  font-family: sans-serif;
+}
+.ie8 {
+  min-width: 800px;
+}
+/*# sourceMappingURL=ie.css.map */
