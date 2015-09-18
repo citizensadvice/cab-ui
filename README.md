@@ -69,6 +69,7 @@ Use site-new.less as a checklist. The aim is to eventually go through each file 
 + Is the code duplicated already elsewhere is any form?
 + Can these two duplicate files be merged? (there's a good chance one is overwriting the other)
 + Are there any !important classes? If so, fix them.
++ Replace padding and margin values with @box-spacing (1rem), @box-spacing-vertical (0.75rem) and @box-spacing horizontal (1rem). Obvious exceptions to this are spacing around text elements that need to follow the rules of the type contained. E.g. between breadcrumb items, or around headings.
 + Are there any variables used? Make sure they use a variable defined in either base > variables.less or base > colors.less
 + Are there any outdated mixins, or missing mixins?
 + Is there anything that would warrent its own mixin?
