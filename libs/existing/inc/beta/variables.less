@@ -28,7 +28,7 @@
  * FONT WEIGHTS
  */
 
-@dap-heading-font-weight:       300;
+@heading-font-weight:       300;
 
 @dap-font-weight-base:          400;
 @dap-font-weight-bold:          600;
@@ -55,10 +55,10 @@
  * LINKS
  */
 
-@dap-link-color:            @dap-brand-primary;
+@dap-link-color:            @brand-primary;
 @dap-link-active-colour:    @dap-blue-corporate;
 @dap-link-hover-color:      @dap-link-color;
-@dap-link-visited-color:    @dap-brand-primary;
+@dap-link-visited-color:    @brand-primary;
 
 
 /****************************************************************************
@@ -67,34 +67,34 @@
 
 @dap-table-padding-vertical: 0.5em;
 @dap-table-padding-horizontal: 10px;
-@dap-table-border:       @dap-gray-6;
+@dap-table-border:       @gray-6;
 @dap-table-font-size:    @dap-font-size-small;
 
-@dap-table-striped-head-bg:     @dap-gray-4;
-@dap-table-striped-row-a-bg:    @dap-gray-7;
-@dap-table-striped-row-b-bg:    @dap-gray-6;
-@dap-table-striped-border:      @dap-gray-3;
+@dap-table-striped-head-bg:     @gray-4;
+@dap-table-striped-row-a-bg:    @gray-7;
+@dap-table-striped-row-b-bg:    @gray-6;
+@dap-table-striped-border:      @gray-3;
 
 
 /***************************************************************************
  * PANELS
  */
 
-@dap-panel-default-bg:      @dap-white;
+@dap-panel-default-bg:      @white;
 @dap-panel-default-color:   @dap-text-color;
-@dap-panel-default-border:  @dap-white;
+@dap-panel-default-border:  @white;
 
-@dap-panel-a-bg:            @dap-white;
+@dap-panel-a-bg:            @white;
 @dap-panel-a-color:         @dap-text-color;
 @dap-panel-a-border:        @dap-silver;
 
 @dap-panel-b-bg:            #215e77;
-@dap-panel-b-color:         @dap-white;
+@dap-panel-b-color:         @white;
 @dap-panel-b-border:        @dap-green-light;
 @dap-panel-b-border:        @dap-turquoise;
 
 @dap-panel-c-bg:            @dap-turquoise-tint;
-@dap-panel-c-color:         @dap-white;
+@dap-panel-c-color:         @white;
 @dap-panel-c-border:        @dap-turquoise;
 
 /***************************************************************************
@@ -102,15 +102,15 @@
  */
 
 // <input>s
-@dap-field-bg:              @dap-white;
-@dap-field-bg-disabled:     @dap-gray-5;
+@dap-field-bg:              @white;
+@dap-field-bg-disabled:     @gray-5;
 
 @dap-field-color:           @dap-text-color;
-@dap-field-border:          @dap-gray-4;
+@dap-field-border:          @gray-4;
 
 @dap-field-border-focus:    #66afe9;
 
-@dap-field-color-placeholder: @dap-gray-3;
+@dap-field-color-placeholder: @gray-3;
 
 // Top and bottom padding for inputs, selects, buttons, etc.
 @dap-field-padding-base-vertical: 5px;
@@ -128,20 +128,20 @@
 @dap-field-height-large:    (ceil(@dap-font-size-large * @dap-line-height-large) + (@dap-field-padding-large-vertical * 2) + 2);
 @dap-field-height-small:    (floor(@dap-font-size-small * @dap-line-height-small) + (@dap-field-padding-small-vertical * 2) + 2);
 
-@dap-legend-color:          @dap-gray-1;
+@dap-legend-color:          @gray-1;
 
 @dap-cursor-disabled:       not-allowed;
 
-@dap-field-boxed-bg:            @dap-white;
+@dap-field-boxed-bg:            @white;
 @dap-field-boxed-hover-bg:      @dap-cloud;
 @dap-field-boxed-active-bg:     @dap-turquoise-tint;
 
 @dap-field-boxed-border:        transparent;
-@dap-field-boxed-hover-border:  @dap-gray-4;
+@dap-field-boxed-hover-border:  @gray-4;
 @dap-field-boxed-active-border: transparent;
 
 @dap-progress-border:           @dap-blue-corporate-light;
-@dap-progress-bg:               @dap-white;
+@dap-progress-bg:               @white;
 @dap-progress-color:            @dap-blue-corporate;
 
 /***************************************************************************
@@ -157,10 +157,10 @@
 // Usually applied using something like `@include box-bg(@box-1-bg)`.
 @dap-box-1-bg:                 @dap-turquoise-tint;
 @dap-box-1-light-bg:           @dap-turquoise-light;
-@dap-box-2-bg:                 @dap-white;
-@dap-box-2-light-bg:           @dap-white; // For consistency.
-@dap-box-3-bg:                 @dap-gray-6;
-@dap-box-3-light-bg:           @dap-gray-7;
+@dap-box-2-bg:                 @white;
+@dap-box-2-light-bg:           @white; // For consistency.
+@dap-box-3-bg:                 @gray-6;
+@dap-box-3-light-bg:           @gray-7;
 @dap-box-4-bg:                 @dap-blue-corporate-light;
 @dap-box-4-light-bg:           @beta-blue-light;
 @dap-box-5-bg:                 @dap-green;
@@ -171,14 +171,14 @@
  */
 
 @dap-revealer-large-body-bg:        @dap-blue-corporate;
-@dap-revealer-large-body-color:     @dap-white;
+@dap-revealer-large-body-color:     @white;
 @dap-revealer-large-icon-bg:        #3498db;
-@dap-revealable-content-large-bg:   @dap-white;
+@dap-revealable-content-large-bg:   @white;
 
 @dap-revealer-small-body-bg:        #32457E;
-@dap-revealer-small-body-color:     @dap-white;
+@dap-revealer-small-body-color:     @white;
 @dap-revealer-small-icon-bg:        #3498db;
-@dap-revealable-content-small-bg:   @dap-white;
+@dap-revealable-content-small-bg:   @white;
 @dap-revealable-content-small-margin: 10px;
 
 /***************************************************************************
@@ -186,56 +186,56 @@
  */
 
 @dap-badge-bg:      @beta-red-deep;
-@dap-badge-color:   @dap-white;
+@dap-badge-color:   @white;
 
 /***************************************************************************
  * MENUS.
  */
 
 // White and gray.
-@dap-menu-1-bg:                 @dap-white;
-@dap-menu-1-hover-bg:           @dap-gray-5;
+@dap-menu-1-bg:                 @white;
+@dap-menu-1-hover-bg:           @gray-5;
 @dap-menu-1-text-color:         @dap-text-color;
-@dap-menu-1-border:             @dap-gray-5;
-@dap-menu-1-icon-color:         @dap-gray-3;
+@dap-menu-1-border:             @gray-5;
+@dap-menu-1-icon-color:         @gray-3;
 // Yellow and gray.
 @dap-menu-2-bg:                 @beta-yellow-light;
 @dap-menu-2-hover-bg:           @beta-yellow;
 @dap-menu-2-text-color:         @dap-text-color;
-@dap-menu-2-border:             @dap-white;
-@dap-menu-2-icon-color:         @dap-gray-3;
+@dap-menu-2-border:             @white;
+@dap-menu-2-icon-color:         @gray-3;
 // Mid blue.
 @dap-menu-3-bg:                 @dap-blue-corporate-light;
 @dap-menu-3-hover-bg:           darken(@dap-blue-corporate-light, 10%);
 @dap-menu-3-text-color:         @dap-text-color;
 @dap-menu-3-border:             @dap-menu-3-hover-bg;
-@dap-menu-3-icon-color:         @dap-gray-2;
+@dap-menu-3-icon-color:         @gray-2;
 // Light blue and white.
-@dap-menu-4-bg:                 @dap-white;
+@dap-menu-4-bg:                 @white;
 @dap-menu-4-hover-bg:           @beta-blue-light;
 @dap-menu-4-text-color:         @dap-text-color;
 @dap-menu-4-border:             @beta-blue-light;
-@dap-menu-4-icon-color:         @dap-gray-3;
+@dap-menu-4-icon-color:         @gray-3;
 // Turquoise
 @dap-menu-5-bg:                 @dap-turquoise;
 @dap-menu-5-hover-bg:           darken(@dap-menu-5-bg, 15%);
 @dap-menu-5-text-color:         @dap-text-color;
-@dap-menu-5-border:             @dap-white;
-@dap-menu-5-icon-color:         @dap-white;
+@dap-menu-5-border:             @white;
+@dap-menu-5-icon-color:         @white;
 // Dark green.
 @dap-menu-6-bg:                 @dap-green;
 @dap-menu-6-hover-bg:           darken(@dap-menu-6-bg, 10%);
-@dap-menu-6-text-color:         @dap-white;
-@dap-menu-6-border:             @dap-white;
-@dap-menu-6-icon-color:         @dap-white;
+@dap-menu-6-text-color:         @white;
+@dap-menu-6-border:             @white;
+@dap-menu-6-icon-color:         @white;
 
 /***************************************************************************
  * LETTERS.
  */
 
-@dap-letter-bg:      @dap-white;
+@dap-letter-bg:      @white;
 @dap-letter-color:   @dap-text-color;
-@dap-letter-border:  @dap-gray-4;
+@dap-letter-border:  @gray-4;
 // Used for preview at small widths. Don't want to set this as an overall
 // @font-size-smaller, as we don't want it proliferating across the site
 // for other uses.
@@ -246,10 +246,10 @@
  * The top of page stripes.
  */
 
-@dap-banner-primary-bg:         @dap-brand-primary;
-@dap-banner-primary-color:      @dap-white;
+@dap-banner-primary-bg:         @brand-primary;
+@dap-banner-primary-color:      @white;
 
-@dap-banner-secondary-bg:       @dap-white;
+@dap-banner-secondary-bg:       @white;
 @dap-banner-secondary-color:    @dap-text-color;
 
 @dap-banner-title-height:       (@dap-box-padding-vertical * 6);
@@ -261,4 +261,4 @@
  */
 
 @dap-footer-bg:                 @dap-blue-corporate-light;
-@dap-footer-border-color:       @dap-brand-primary;
+@dap-footer-border-color:       @brand-primary;

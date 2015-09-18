@@ -1,7 +1,19 @@
+/* Override files */
+//@import "modules/body";
+@import "styleguide/guide";
+
+/* Base files */
+@import "modules/colors";
+@import "modules/variables";
+
+/* Vendor files */
+@import "vendor/normalize";
+
 // Exitsting styles
 	//@import "existing/inc/magic-numbers";
+	@import "existing/inc/mixins-flex-box";
 	@import "existing/inc/mixins";
-	@import "existing/inc/normalise";
+	//@import "existing/inc/normalise";
 	@import "existing/inc/icons";
 	@import "existing/inc/helpers";
 	@import "existing/inc/global";
@@ -85,18 +97,7 @@
 	@import "existing/inc/members";
 	@import "existing/inc/episerver";
 
-// For styleguide files only
-//@import "modules/body";
-@import "styleguide/guide";
-
-// Variable files
-@import "modules/colors";
-@import "modules/variables";
-
-// Vendors
-@import "vendor/normalize";
-
-// Structure and base elements
+/* Mixin files */
 @import "modules/framework";
 @import "modules/type";
 @import "modules/breadcrumb";
@@ -106,7 +107,7 @@
 @import "modules/nav-steps";
 @import "modules/navigation";
 
-// Partials
+/* Module files */
 @import "partials/utility";
 @import "partials/lists";
 @import "partials/icons";

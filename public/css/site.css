@@ -141,9 +141,9 @@ pre {
   border: 0px #9f9f9f solid;
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: #caeaff;
+  background-color: #dce5f1;
   color: #191926;
-  border: 0px #4ab7ff solid;
+  border: 0px #80a2ce solid;
   display: block;
   border-width: 1px;
   padding: 0.75rem 1rem;
@@ -215,11 +215,11 @@ pre .callout__link--anchor:after {
 pre h1,
 pre h2,
 pre h3 {
-  color: #dce5f1 !important;
+  color: #a5bddc !important;
   font-size: 1.5rem;
 }
 pre a {
-  border-bottom-color: #4ab7ff;
+  border-bottom-color: #80a2ce;
 }
 pre > *:first-child {
   padding-top: 0.75rem;
@@ -244,9 +244,9 @@ pre .callout__link {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem !important;
   border: none;
-  background-color: #b0ccff;
+  background-color: #cad0ea;
   color: #191926;
-  border-bottom: 1px solid #4ab7ff;
+  border-bottom: 1px solid #80a2ce;
   text-decoration: none !important;
   position: relative;
 }
@@ -255,7 +255,7 @@ pre .callout__link:after {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #97bbff;
+  background-color: #b7c0e3;
   height: 100%;
   position: absolute;
   right: 0;
@@ -265,11 +265,11 @@ pre .callout__link:after {
   text-align: center;
 }
 pre .callout__link:hover {
-  background-color: #97bbff;
+  background-color: #b7c0e3;
   color: #191926;
 }
 pre .callout__link:hover:after {
-  background-color: #649aff;
+  background-color: #939fd5;
 }
 pre .callout__link--anchor:after {
   content: "\f063";
@@ -921,10 +921,10 @@ pre--generous .callout__link--anchor:after {
   color: #ffffff;
 }
 .swatch.swatch--beta--blue-light {
-  background-color: #dce5f1;
+  background-color: #a5bddc;
 }
 .swatch.swatch--beta--blue-light-tint {
-  background-color: #caeaff;
+  background-color: #dce5f1;
 }
 .swatch.swatch--beta--aqua {
   background-color: #81cec6;
@@ -1023,41 +1023,10 @@ blockquote p.lighten {
  */
 /***************************************************************************
  * COLORS
-
-@blue-corporate:        	#034EA2;    // May switch to corporate blue following brand development
-@blue-corporate-light:  	#A5BDDC;
-@blue-darker:           	#32457E;
-@red:                   	#B53A1F;    // Error
-@red-tint:              	lighten(@red, 15%); // Tint for background of boxes
-@red-heritage:          	#623534;
-@red-mellow:           		#C02F43;	// Danger content border colour
-@red-brighter:				#df3034;
-@red-brighter-tint:     	lighten(@red-brighter, 30%);    // Danger content background box colour
-@red-mellow-lighter:		#FFAAAC;
-@purple:                	#503460;
-@mauve:                 	#C5A5CE;
-@pink:                  	#F9B9BA;
-@peach:                 	#F8A484;
-@orange:                	#FCBB69;    // Warning colour
-@orange-tint:           	lighten(@orange, 10%); // Tint for background of boxes
-@yellow:                	#E9E083;
-@green-heritage:        	#00553F;
-@green-blue:            	#005E7F;
-@green:                 	#008286;
-@green-tint:            	lighten(@green, 50%); // Tint for background of boxes
-@green-light:           	#C5E1AC;    // Correct colour
-@green-light-tint:      	lighten(@green-light, 50%); // Tint for bg of boxes
-@aqua:             			#81CEC6;
-@aqua-tint:        			lighten(@aqua, 15%);
-@aqua-light:       			lighten(@aqua, 25%);
 */
 /***************************************************************************
  * STATE COLORS
  * Used for Alerts, Media, States and form field validation states.
- */
-/***************************************************************************
- * PRIORITY COLORS
- * Used for Media, Priorities.
  */
 /***************************************************************************
  * HEADERS
@@ -1462,7 +1431,7 @@ hr {
 }
 .breadcrumb p {
   font-size: 1rem;
-  color: #dce5f1;
+  color: #a5bddc;
 }
 .breadcrumb p a {
   padding: 0em 0.5rem;
@@ -1471,7 +1440,7 @@ hr {
 .breadcrumb p a:after {
   content: "›";
   font-size: 1.5rem;
-  color: #caeaff;
+  color: #dce5f1;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   background-color: #ffffff;
@@ -1498,9 +1467,9 @@ hr {
 .callout {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: #caeaff;
+  background-color: #dce5f1;
   color: #191926;
-  border: 0px #4ab7ff solid;
+  border: 0px #80a2ce solid;
   display: block;
   border-width: 1px;
   border-left-width: 0.5rem;
@@ -1509,11 +1478,11 @@ hr {
 .callout h1,
 .callout h2,
 .callout h3 {
-  color: #dce5f1 !important;
+  color: #a5bddc !important;
   font-size: 1.5rem;
 }
 .callout a {
-  border-bottom-color: #4ab7ff;
+  border-bottom-color: #80a2ce;
 }
 .callout > *:first-child {
   padding-top: 0.75rem;
@@ -1538,9 +1507,9 @@ hr {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem !important;
   border: none;
-  background-color: #b0ccff;
+  background-color: #cad0ea;
   color: #191926;
-  border-bottom: 1px solid #4ab7ff;
+  border-bottom: 1px solid #80a2ce;
   text-decoration: none !important;
   position: relative;
 }
@@ -1549,7 +1518,7 @@ hr {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #97bbff;
+  background-color: #b7c0e3;
   height: 100%;
   position: absolute;
   right: 0;
@@ -1559,11 +1528,11 @@ hr {
   text-align: center;
 }
 .callout .callout__link:hover {
-  background-color: #97bbff;
+  background-color: #b7c0e3;
   color: #191926;
 }
 .callout .callout__link:hover:after {
-  background-color: #649aff;
+  background-color: #939fd5;
 }
 .callout .callout__link--anchor:after {
   content: "\f063";
@@ -2717,12 +2686,12 @@ input[type="file"]::before {
 }
 .radio input:checked:before,
 .checkbox input:checked:before {
-  border-color: #caeaff;
-  background-color: #caeaff;
+  border-color: #dce5f1;
+  background-color: #dce5f1;
 }
 .radio input:checked:hover:before,
 .checkbox input:checked:hover:before {
-  border-color: #dce5f1;
+  border-color: #a5bddc;
 }
 .multi-select {
   height: 5.5rem !important;

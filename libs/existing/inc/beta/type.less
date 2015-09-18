@@ -12,7 +12,7 @@
 .main-container {
     h1, h2, h3, h4, h5, h6 {
         line-height: @dap-line-height-heading;
-        color: @dap-heading-primary-color;
+        color: @heading-primary-color;
         margin-top: (@dap-line-height-computed * 0.5);
         margin-bottom: (@dap-line-height-computed * 1);
         font-weight: @dap-font-weight-bolder;
@@ -76,10 +76,12 @@
     // Site wide links
     a {
         color: @dap-link-color;
+        text-decoration: none;
 
         &:hover,
         &:focus {
             color: @dap-link-hover-color;
+            text-decoration: none;
         }
 
         &:active {

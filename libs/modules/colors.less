@@ -31,6 +31,7 @@
 @gray-4:            		lighten(@black, 62.5%); // #BFBFBF
 @gray-5:            		lighten(@black, 75%); 	// #DFDFDF
 @gray-6:            		lighten(@black, 87.5%); // #F8F8F8
+@gray-6-5:          		#f2f2f2;
 @gray-7:            		lighten(@black, 92.5%); // #ECECEC
 @white:                 	#FFF;
 
@@ -59,8 +60,10 @@
 @beta-green-light:          lighten(@beta-green, 45%); // NEEDS TO BE CHECKED
 @beta-green-lighter:        lighten(@beta-green, 60%); // NEEDS TO BE CHECKED
 @beta-blue:      			#003C64;
-@beta-blue-light:       	#dce5f1;
-@beta-blue-lighter:  		lighten(@beta-blue, 70%);
+@beta-blue-light:       	#A5BDDC;
+@beta-blue-lighter:  		lighten(@beta-blue-light, 15%);
+//@beta-blue-light:       	#dce5f1;
+//@beta-blue-lighter:  		lighten(@beta-blue, 70%);
 @beta-aqua:             	#81CEC6;
 @beta-aqua-light:          	lighten(@beta-aqua, 15%);
 @beta-yellow:           	#FFBF47;
@@ -80,33 +83,6 @@
 
 /***************************************************************************
  * COLORS
-
-@blue-corporate:        	#034EA2;    // May switch to corporate blue following brand development
-@blue-corporate-light:  	#A5BDDC;
-@blue-darker:           	#32457E;
-@red:                   	#B53A1F;    // Error
-@red-tint:              	lighten(@red, 15%); // Tint for background of boxes
-@red-heritage:          	#623534;
-@red-mellow:           		#C02F43;	// Danger content border colour
-@red-brighter:				#df3034;
-@red-brighter-tint:     	lighten(@red-brighter, 30%);    // Danger content background box colour
-@red-mellow-lighter:		#FFAAAC;
-@purple:                	#503460;
-@mauve:                 	#C5A5CE;
-@pink:                  	#F9B9BA;
-@peach:                 	#F8A484;
-@orange:                	#FCBB69;    // Warning colour
-@orange-tint:           	lighten(@orange, 10%); // Tint for background of boxes
-@yellow:                	#E9E083;
-@green-heritage:        	#00553F;
-@green-blue:            	#005E7F;
-@green:                 	#008286;
-@green-tint:            	lighten(@green, 50%); // Tint for background of boxes
-@green-light:           	#C5E1AC;    // Correct colour
-@green-light-tint:      	lighten(@green-light, 50%); // Tint for bg of boxes
-@aqua:             			#81CEC6;
-@aqua-tint:        			lighten(@aqua, 15%);
-@aqua-light:       			lighten(@aqua, 25%);
 */
 @blue: #004B88;
 @blue-40: #99B7C4;
@@ -139,38 +115,6 @@
  * STATE COLORS
  * Used for Alerts, Media, States and form field validation states.
  */
-
-@danger-bg:             	@beta-red-lighter;
-@danger-border:         	@beta-red-light;
-@danger-color:          	@text-color;   // For use on @danger-bg.
-@danger-text-color:     	@beta-red; // For use on normal background.
-
-@warning-bg:            	@beta-orange-lighter;
-@warning-border:        	@beta-orange-light;
-@warning-color:         	@text-color; // For use on @warning-bg.
-@warning-text-color:    	@beta-orange;     // For use on normal background:
-
-@success-bg:            	@beta-green-lighter;
-@success-border:        	@beta-green-light;
-@success-color:         	@text-color; // For use on @success-bg.
-@success-text-color:    	@beta-green;      // For use on normal background.
-
-/***************************************************************************
- * PRIORITY COLORS
- * Used for Media, Priorities.
- */
-
-@optional-bg:            	@white;
-@optional-border:        	@white;
-@optional-title-color:   	@text-color;
-
-@important-bg:           	@white;
-@important-border:       	@heritage-blue;
-@important-title-color:  	@heritage-blue;
-
-@essential-bg:           	@white;
-@essential-border:       	@beta-red;
-@essential-title-color:  	@beta-red;
 
 /***************************************************************************
  * HEADERS
