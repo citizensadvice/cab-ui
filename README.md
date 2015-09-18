@@ -3,6 +3,7 @@ www.citizensadvice.org.uk design elements
 ---
 
 The design elements repository is used for three purposes:
+
 1. A resource for design styles, to be referenced by other Citizens Advice digital services
 2. A visual guide to show examples of design patterns and approved design styles
 3. A location to develop and test new patterns
