@@ -8551,6 +8551,8 @@ li.ref-dialog__list-item--highlight {
   -moz-transform: scale(0.9999);
 }
 /**
+ * CALLOUTS
+ *
  * Creates various callout styles using mixin
  * .callout( @callout-background, @callout-headings, @callout-text, @callout-border )
  */
@@ -9822,6 +9824,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #6fc7be;
 }
+/**
+ * STEPS NAVIGATION
+ *
+ * This is the less file for developing the sidebar navigation (steps on this page) for long format content
+ *
+ */
 .steps {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
@@ -10147,6 +10155,12 @@ button[type="submit"]:hover {
   visibility: visible;
   display: block !important;
 }
+/**
+ * NAVIGATION
+ *
+ * This is the less file for developing the sidebar navigation (dropdown tree structure)
+ *
+ */
 .nav--beta {
   background-color: red;
   padding: 0;
