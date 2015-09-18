@@ -7,7 +7,7 @@ The attempt is to reduce the overall files, while keeping the styles working for
 
 Gradually, the LESS files will need to fit into a new folder structure.
 
-	. site-2.less 			imports all LESS files  
+	. site-new.less 			imports all LESS files  
 	+-- base 				used for all base level LESS files, such as  
 	| +-- colors.less  
 	| +-- variables.less  
@@ -17,7 +17,7 @@ Gradually, the LESS files will need to fit into a new folder structure.
 
 Currently, the LESS files are terribly organised.
 
-	. site-2.less 			imports all LESS files directly  
+	. site-new.less 			imports all LESS files directly  
 	+-- existing			this contains all the LESS imports from the existing websites LESS structure  
 	| +-- inc 				this contains all the original LESS files  
 	| +-- beta				this contains all the beta styles used for beta templates over the top of inc files  
@@ -42,11 +42,11 @@ The 'test' naming module should be kept specifically for repo's that will be pus
 
 ## Working process
 
-Currently there is a second file site-2.less that directly compiles everything into it, rather that site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. Make all clean up changes to site-2.less.
+Currently there is a second file site-new.less that directly compiles everything into it, rather that site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. Make all clean up changes to site-new.less.
 
-site-2.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.
+site-new.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.
 
-Use site-2.less as a checklist. The aim is to eventually go through each file listed in there in order and gradually modify them. Refer to the checklist below for guidance on what to change and how.
+Use site-new.less as a checklist. The aim is to eventually go through each file listed in there in order and gradually modify them. Refer to the checklist below for guidance on what to change and how.
 
 
 ### Clean up checklist
@@ -60,4 +60,4 @@ Use site-2.less as a checklist. The aim is to eventually go through each file li
 + Is there anything that would warrent its own mixin?
 + Could the LESS use BEM structure better (without adjusting the HTML)?
 + Is the file in the correct folder?
-+ Is the file correctly listed in site-2.less?
++ Is the file correctly listed in site-new.less?

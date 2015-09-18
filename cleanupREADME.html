@@ -12,7 +12,7 @@
 
 <p>Gradually, the LESS files will need to fit into a new folder structure.</p>
 
-<pre><code>. site-2.less           imports all LESS files  
+<pre><code>. site-new.less             imports all LESS files  
 +-- base                used for all base level LESS files, such as  
 | +-- colors.less  
 | +-- variables.less  
@@ -23,7 +23,7 @@
 
 <p>Currently, the LESS files are terribly organised.</p>
 
-<pre><code>. site-2.less           imports all LESS files directly  
+<pre><code>. site-new.less             imports all LESS files directly  
 +-- existing            this contains all the LESS imports from the existing websites LESS structure  
 | +-- inc               this contains all the original LESS files  
 | +-- beta              this contains all the beta styles used for beta templates over the top of inc files  
@@ -48,11 +48,11 @@
 
 <h2 id="workingprocess">Working process</h2>
 
-<p>Currently there is a second file site&#8211;2.less that directly compiles everything into it, rather that site.less. This allows us to run a &#8216;cleanup&#8217; stylesheet and test stylesheet alongside one another. Make all clean up changes to site&#8211;2.less.</p>
+<p>Currently there is a second file site-new.less that directly compiles everything into it, rather that site.less. This allows us to run a &#8216;cleanup&#8217; stylesheet and test stylesheet alongside one another. Make all clean up changes to site-new.less.</p>
 
-<p>site&#8211;2.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.</p>
+<p>site-new.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.</p>
 
-<p>Use site&#8211;2.less as a checklist. The aim is to eventually go through each file listed in there in order and gradually modify them. Refer to the checklist below for guidance on what to change and how.</p>
+<p>Use site-new.less as a checklist. The aim is to eventually go through each file listed in there in order and gradually modify them. Refer to the checklist below for guidance on what to change and how.</p>
 
 <h3 id="cleanupchecklist">Clean up checklist</h3>
 
@@ -66,7 +66,7 @@
 <li>Is there anything that would warrent its own mixin?</li>
 <li>Could the LESS use BEM structure better (without adjusting the HTML)?</li>
 <li>Is the file in the correct folder?</li>
-<li>Is the file correctly listed in site&#8211;2.less?</li>
+<li>Is the file correctly listed in site-new.less?</li>
 </ol>
 
 </body>
