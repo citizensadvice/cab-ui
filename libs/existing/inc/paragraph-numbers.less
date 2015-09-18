@@ -1,0 +1,18 @@
+﻿.paragraph-numbers {
+    
+    // Push everything 3em to the right
+    // and pull back the TOC, headings, paragraph numbers and boxes
+    
+    & > * {
+        margin-left: 3em;
+    }
+
+    & > h2, & > h3, & > h4, & > h5, & > nav, & > .inlineContent {
+         margin-left: 0;
+    }
+
+    .paranum {
+        position: absolute;
+        margin-left: -3em;
+    }
+}

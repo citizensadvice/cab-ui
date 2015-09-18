@@ -1,0 +1,44 @@
+﻿.index-page__box:extend( .box all ) {
+}
+.index-page__box--orange:extend( .box--orange ) {
+}
+.index-page__box--purple:extend( .box--purple ) {
+}
+.index-page__box--green:extend( .box--green ) {
+}
+.index-page__box--grey:extend( .box--grey ) {
+}
+
+.index-intro {
+    // This is to avoid the index introduction being hidden under the share bar
+    padding-right: 2.5em;
+    margin-bottom: 1em;
+
+    @media ( max-width: @screen-xs-max ) {
+        padding-right: 0;
+
+        .editor-align-left {
+            float: right;
+            margin: 0 0 0 1em;
+            max-width: 40%;
+            height: auto;
+        }
+    }
+}
+
+
+.index-page__box--information.index-page__box--information.index-page__box--information {
+    background: @notice-orange;
+    border-top: none;
+    border-left: .5em solid @notice-orange-dark;
+
+    & > h2 {
+        color: black;
+        font-size: 1.5em;
+    }
+
+    & > ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}

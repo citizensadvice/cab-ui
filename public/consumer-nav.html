@@ -13,8 +13,7 @@
     <meta content="EWS" name="cab-extent">
     <meta content="/static/images/apple-touch-icon.png">
     <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
-    <link href="css/main.css" media="screen" rel="stylesheet">
-    <link href="css/site.css" media="screen" rel="stylesheet">
+    <link href="css/site-2.css" media="screen" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/css/print.css" media="print" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
@@ -25,13 +24,12 @@
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
     <script src="../libs/javascript/sticky-nav.js"></script><!-- Sticky Navigation JS -->
-
     <script src="../libs/javascript/nav-active.js"></script><!-- Navigation Updating JS -->
-
     <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
+    <script src="../libs/javascript/vendor/jquery.sticky.js"></script>
 </head>
 
-<body class="beta">
+<body class="">
     <div class="skip-nav">
         <a class="screenreader screenreader--focusable" href="">Skip to content</a> <a class="screenreader screenreader--focusable" href="">Skip to footer</a>
     </div>
@@ -177,24 +175,18 @@
 
                         <p>Doing the proper checks can help save you distress and money down the line.</p>
 
-                        <div class="steps steps--ordered" id="overview">
-                            <h4>On this page</h4><a href="#step1"><span class="steps--number">1</span>
-
-                            <p><strong>Make sure a trader is trustworthy</strong></p></a> <a href="#step2"><span class="steps--number">2</span>
-
-                            <p><strong>Buying from an auction</strong></p></a> <a href="#step3"><span class="steps--number">3</span>
-
-                            <p><strong>Check a car's history</strong></p></a> <a href="#step4"><span class="steps--number">4</span>
-
-                            <p><strong>Inspect the car and take a test drive</strong></p></a> <a href="#step5"><span class="steps--number">5</span>
-
-                            <p><strong>If you’re still not sure - get an independent report</strong></p></a> <a href="#step6"><span class="steps--number">6</span>
-
-                            <p><strong>When you buy the car</strong></p></a> <a href="#step7"><span class="steps--number">7</span>
-
-                            <p><strong>How to pay</strong></p></a> <a href="#step8"><span class="steps--number">8</span>
-
-                            <p><strong>Further help</strong></p></a>
+                        <div class="steps" id="overview">
+                            <h4>On this page</h4>
+                            <ul>
+                                <li><a href="#step1">Make sure a trader is trustworthy</a></li>
+                                <li><a href="#step2">Buying from an auction</a></li>
+                                <li><a href="#step3">Check a car's history</a></li>
+                                <li><a href="#step4">Inspect the car and take a test drive</a></li>
+                                <li><a href="#step5">Get a written contract</a></li>
+                                <li><a href="#step6">When you buy the car</a></li>
+                                <li><a href="#step7">How to pay</a></li>
+                                <li><a href="#step8">Further help</a></li>
+                            </ul>
                         </div>
 
                         <section id="step1">
@@ -425,10 +417,10 @@
                 </div><!-- END MAIN CONTENT -->
             </main>
 
-            <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher">
+            <aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher" style="margin-bottom: 2rem;">
                 <h2 class="beta-extent-switcher__heading">This advice applies to England</h2>
 
-                <p>Advice can vary depending on where you live.</p><!-- Can't use asp:DropDownList as it needs to sit in form tag -->
+                <p>Advice can vary depending on where you live.</p>
 
                 <form method="get">
                     <select class="custom-dropdown__select" id="ddlExtents" name="lang">
@@ -449,7 +441,7 @@
                         </option>
                     </select> <button class="custom-dropdown__button js-track-extent" type="submit">Go</button>
                 </form>
-            </aside><!-- SIDEBAR -->
+            </aside>
 
             <nav class="side-nav" data-track-zone="side-nav" id="beta-dap-menu-accordion">
                 <ul class="beta-dap-menu-accordion__sections">
@@ -467,102 +459,103 @@
                         </ul>
                     </li>
                 </ul>
+            </nav>
 
-                <div class="steps--navigation sticker">
-                    <a href="#overview">
-                    <h4>On this page</h4></a>
+            <!--<ul class="side-nav collapse nav--beta">
 
+                <li class="collapse-toggle open">Consumer</li>
+                <li class="collapse-content start-open"><ul>
+                    <li><a href="#">Make sure a trader is trustworthy</a></li>
+                    <li class="active"><a href="#">Buying a used car</a></li>
+                    <li><a href="#">Check a car's history</a></li>
+                    <li><a href="#">Check a car's history</a></li>
+                </ul></li>
+
+                <li class="collapse-toggle">Consumer</li>
+                <li class="collapse-content"><ul>
+                    <li><a href="#">Make sure a trader is trustworthy</a></li>
+                    <li><a href="#">Buying from an auction</a></li>
+                    <li><a href="#">Check a car's history</a></li>
+                    <li><a href="#">Inspect the car and take a test drive</a></li>
+                    <li><a href="#">Get a written contract</a></li>
+                    <li><a href="#">When you buy the car</a></li>
+                    <li><a href="#">How to pay</a></li>
+                    <li><a href="#">Further help</a></li>
+                </ul></li>
+            </ul>-->
+
+            <nav class="side-nav">
+                <div class="steps--navigation">
+                    <a href="#overview" class="title"><h4>On this page</h4></a>
                     <ul>
-                        <li>
-                            <a class="steps--navigation__link" href="#step1"><span>1</span>Make sure a trader is trustworthy</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step2"><span>2</span>Buying from an auction</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step3"><span>3</span>Check a car's history</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step4"><span>4</span>Inspect the car and take a test drive</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step5"><span>5</span>Get a written contract</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step6"><span>6</span>When you buy the car</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step7"><span>7</span>How to pay</a>
-                        </li>
-
-                        <li>
-                            <a class="steps--navigation__link" href="#step8"><span>8</span>Further help</a>
-                        </li>
+                        <li><a href="#step1">Make sure a trader is trustworthy</a></li>
+                        <li><a href="#step2">Buying from an auction</a></li>
+                        <li><a href="#step3">Check a car's history</a></li>
+                        <li><a href="#step4">Inspect the car and take a test drive</a></li>
+                        <li><a href="#step5">Get a written contract</a></li>
+                        <li><a href="#step6">When you buy the car</a></li>
+                        <li><a href="#step7">How to pay</a></li>
+                        <li><a href="#step8">Further help</a></li>
                     </ul>
                 </div>
-
-                <ul class="steps--navigation--fixed">
-                    <li class="steps--navigation--fixed__link"><span class="#step1"><strong>1</strong> Make sure a trader is trustworthy</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step2"><strong>2</strong> Buying from an auction</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step3"><strong>3</strong> Check a car's history</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step4"><strong>4</strong> Inspect the car and take a test drive</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step5"><strong>5</strong> Get a written contract</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step6"><strong>6</strong> When you buy the car</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step7"><strong>7</strong> How to pay</span></li>
-
-                    <li class="steps--navigation--fixed__link"><span class="#step8"><strong>8</strong> Further help</span></li>
-                </ul>
-
-                <ul class="steps--navigation--overlay">
-                    <li class="steps--navigation--overlay__link close">
-                        <a>On this page</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step1"><strong>1</strong> Make sure a trader is trustworthy</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step2"><strong>2</strong> Buying from an auction</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step3"><strong>3</strong> Check a car's history</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step4"><strong>4</strong> Inspect the car and take a test drive</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step5"><strong>5</strong> Get a written contract</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step6"><strong>6</strong> When you buy the car</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step6"><strong>7</strong> How to pay</a>
-                    </li>
-
-                    <li class="steps--navigation--overlay__link">
-                        <a href="#step6"><strong>8</strong> Further help</a>
-                    </li>
-                </ul>
             </nav>
+
+            <ul class="steps--navigation--fixed">
+                <li class="steps--navigation--fixed__link"><span class="#step1"><strong>1</strong> Make sure a trader is trustworthy</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step2"><strong>2</strong> Buying from an auction</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step3"><strong>3</strong> Check a car's history</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step4"><strong>4</strong> Inspect the car and take a test drive</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step5"><strong>5</strong> Get a written contract</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step6"><strong>6</strong> When you buy the car</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step7"><strong>7</strong> How to pay</span></li>
+
+                <li class="steps--navigation--fixed__link"><span class="#step8"><strong>8</strong> Further help</span></li>
+            </ul>
+
+            <ul class="steps--navigation--overlay">
+                <li class="steps--navigation--overlay__link close">
+                    <a>On this page</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step1"><strong>1</strong> Make sure a trader is trustworthy</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step2"><strong>2</strong> Buying from an auction</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step3"><strong>3</strong> Check a car's history</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step4"><strong>4</strong> Inspect the car and take a test drive</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step5"><strong>5</strong> Get a written contract</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step6"><strong>6</strong> When you buy the car</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step6"><strong>7</strong> How to pay</a>
+                </li>
+
+                <li class="steps--navigation--overlay__link">
+                    <a href="#step6"><strong>8</strong> Further help</a>
+                </li>
+            </ul>
+
         </div>
     </div>
 
@@ -741,6 +734,6 @@
                 </div>
             </div>
         </div>
-    </footer><script src="../libs/javascript/vendor/jquery.sticky.js"></script>
+    </footer>
 </body>
 </html>

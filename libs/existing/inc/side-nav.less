@@ -1,0 +1,167 @@
+﻿.side-nav > h2 {
+    background: @blue;
+    margin: 0;
+    font-size: 1.2em;
+    padding: .7em .5em; // This is supposed to be the same height as the main title
+
+    & > a {
+        color: white;
+    }
+}
+
+html[lang="en-SCT"] .side-nav > h2 {
+    background: @casblue;
+}
+
+.side-nav ul, .side-nav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-nav > ul a {
+    display: block;
+    padding: .5em;
+    color: black;
+}
+
+// Messy selector to override the selector above
+.side-nav > ul .side-nav__current {
+    font-weight: 600;
+    position: relative; // To absolutely position to the icon
+    padding-right: 2em;
+}
+
+.side-nav__current__icon {
+    position: absolute;
+    right: .5em;
+    top: 50%;
+    font-size: 150%;
+    margin-top: -.7em;
+}
+
+.side-nav__ul--level2 > li > a {
+    padding-left: 1em;
+}
+.side-nav__ul--level3 > li > a {
+    padding-left: 1.5em;
+}
+.side-nav__ul--level4 > li > a {
+    padding-left: 2em;
+}
+.side-nav__ul--level5 > li > a {
+    padding-left: 2.5em;
+}
+.side-nav__ul--level6 > li > a {
+    padding-left: 3em;
+}
+.side-nav__ul--level7 > li > a {
+    padding-left: 3.5em;
+}
+.side-nav__ul--level8 > li > a {
+    padding-left: 4em;
+}
+
+
+// Level 1
+.side-nav--levels-1 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-7;
+}
+
+.side-nav--levels-2 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 2
+.side-nav--levels-3 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-3 .side-nav__ul--level2 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 3
+.side-nav--levels-4 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-2;
+}
+.side-nav--levels-4 .side-nav__ul--level2 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-4 .side-nav__ul--level3 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 4
+.side-nav--levels-5 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-1;
+}
+.side-nav--levels-5 .side-nav__ul--level2 > li {
+    background-color: @colour-nav-2;
+}
+.side-nav--levels-5 .side-nav__ul--level3 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-5 .side-nav__ul--level4 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 5
+.side-nav--levels-6 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-1;
+}
+.side-nav--levels-6 .side-nav__ul--level2 > li {
+    background-color: @colour-nav-2;
+}
+.side-nav--levels-6 .side-nav__ul--level3 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-6 .side-nav__ul--level4 > li {
+    background-color: @colour-nav-4;
+}
+.side-nav--levels-6 .side-nav__ul--level5 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 6
+.side-nav--levels-7 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-1;
+}
+.side-nav--levels-7 .side-nav__ul--level2 > li {
+    background-color: @colour-nav-2;
+}
+.side-nav--levels-7 .side-nav__ul--level3 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-7 .side-nav__ul--level4 > li {
+    background-color: @colour-nav-4;
+}
+.side-nav--levels-7 .side-nav__ul--level5 > li {
+    background-color: @colour-nav-5;
+}
+.side-nav--levels-7 .side-nav__ul--level6 > li {
+    background-color: @colour-nav-7;
+}
+
+// Level 7
+.side-nav--levels-8 .side-nav__ul--level1 > li {
+    background-color: @colour-nav-1;
+}
+.side-nav--levels-8 .side-nav__ul--level2  li {
+    background-color: @colour-nav-2;
+}
+.side-nav--levels-8 .side-nav__ul--level3 > li {
+    background-color: @colour-nav-3;
+}
+.side-nav--levels-8 .side-nav__ul--level4 > li {
+    background-color: @colour-nav-4;
+}
+.side-nav--levels-8 .side-nav__ul--level5 > li {
+    background-color: @colour-nav-5;
+}
+.side-nav--levels-8 .side-nav__ul--level6 > li {
+    background-color: @colour-nav-6;
+}
+.side-nav--levels-8 .side-nav__ul--level7 > li {
+    background-color: @colour-nav-7;
+}
+

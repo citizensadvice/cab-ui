@@ -4,7 +4,7 @@ function onScroll(event){
     $('.steps--navigation li a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top + 100 <= scrollPos && refElement.position().top + 130 + refElement.height() > scrollPos) {
             currLink.addClass("active");
         }
         else{

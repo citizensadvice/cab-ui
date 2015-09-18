@@ -1,0 +1,60 @@
+﻿.tablesort-button {
+	border: 0;
+	-webkit-appearance: none;
+	padding:0;
+	margin: 0 5px 0 .5em;
+	vertical-align: middle;
+	position: absolute; right: 0; top: 0;
+	cursor: pointer;
+    color: #fff;
+    background: none;   
+}
+
+.tablesort-button:focus {
+    outline: 1px dotted #aaa;
+}
+
+.tablesort-button:before {
+    .icon;
+    content: @icon-symbol-sort;
+}
+
+.tablesort-button span {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.tablesort-wrap {position: relative; padding-right: 20px;}
+
+.tablesort-sortable th {cursor: pointer;}
+.tablesort-sortable th[data-tablesort-nosort] {cursor: default;}
+
+.tablesort-span-filter {display:block; width: 100%;}
+.tablesort-filter {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .1em;
+}
+input.tablesort-filter {
+    background-image: url(/Static/images/icon-search.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.tablesort-asc .tablesort-button:before {
+    content: @icon-symbol-sort-asc;
+}
+.tablesort-desc .tablesort-button:before {
+    content: @icon-symbol-sort-desc;
+}
+
+@media print {
+	.tablesort-button, .tablesort-span-filter {display: none !important;}
+}

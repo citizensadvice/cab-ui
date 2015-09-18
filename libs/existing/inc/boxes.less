@@ -1,0 +1,131 @@
+﻿// WARNING These boxes are extended by the home page, index page and side bars
+
+// Box with a bar along the top
+.box {
+    border-top: 8px solid @blue-40;
+    background: #fff;
+    padding: 1em;
+    margin-bottom: 1.5em;
+
+    & > h2 {
+        margin: 0;
+        font-size: 1.6em;
+    }
+
+    & > h3, & > h4 {
+        margin: 0;
+    }
+
+    & > img:first-child {
+        margin: calc(-1em) -1em 0 -1em;
+        max-width: none;
+        width: 100%;
+        width: calc( ~"100% + 2em" );
+    }
+}
+
+// There is blue top
+
+.box--orange {
+    border-top-color: @orange;
+}
+
+.box--green {
+    border-top-color: @green;
+}
+
+.box--purple {
+    border-top-color: @purple;
+}
+
+.box--grey {
+    border-top-color: @grey;
+}
+
+.box--pink {
+    border-top-color: @pink;
+}
+
+// Box with a line along the side
+
+.box--side {
+    padding: 0 1em;
+    
+    background-color: @green-40;
+
+    & > h2 {
+        font-size: 1.2em;
+        padding: 0;
+        margin: .7em 0;
+    }
+}
+
+// Box with a border
+
+.box--outline {
+    
+    border: 2px solid @blue;
+    background: #fff;
+    margin-bottom: 1.5em;
+    padding: 0 1em;
+    
+    & > h2 {
+        font-size: 1.2em;
+        padding: 0;
+        margin: .7em 0;
+    }
+}
+
+// Pull boxes right in the content area
+
+.box--pull-right {
+    float: right;
+    clear: right;
+    margin: 0 -25% 1em 1em;
+    width: 50%;
+}
+
+@media (max-width: @screen-sm-max ) {
+    .box--pull-right {
+        margin: 0 0 1em 1em;
+    }
+}
+
+@media (max-width: @screen-xs-max ) {
+    .box--pull-right {
+        float: none;
+        clear: none;
+        width: auto;
+    }
+}
+
+.box--content-right {
+    .box;
+    .box--pull-right
+}
+
+.box--warning {
+  overflow: hidden; // Allow to sit next to side boxes
+  background: lighten( @orange, 40% );
+  padding: .5em 1em;
+  border-left: 3px solid @orange;
+}
+
+// A box with two 50% halfs
+.two-column-box {
+    .clearfix;
+    margin: 1em 0;
+}
+.two-column-box__col {
+    width: 50%;
+    float: left;
+
+    @media (max-width: @screen-xs-max ) {
+        width: auto;
+        float: none;
+    }
+}
+.two-column-box__col + .two-column-box__col {
+    padding-left: 1em;
+}
+
