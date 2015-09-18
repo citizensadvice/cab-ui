@@ -37,16 +37,18 @@
 
 <h2 id="gitstructure">Git structure</h2>
 
-<p>We will need to come up with a working process and structure for git that allows us to easily create test products from the master, without affecting other things. I currently have two ideas for this;</p>
+<p>When creating products for testing we will now use a new branch, with modular naming convention.</p>
 
-<ol>
-<li>Create a new branch for each product we test, branching from the most current version of the master (or, if applicable, a similar product). This will also allow us to easily keep track of all the products we&#8217;ve tested, as the state we tested them in the future. However it is likely to contain a lot of dead branches.</li>
-<li>A folder structure specifically for product tests, where each product keeps its own compiled CSS file to prevent future updates breaking old test products.</li>
-</ol>
+<p>Branches should now be named with purpose/epic/product. For example:</p>
+
+<pre><code>test/consumer/side-navigation
+</code></pre>
+
+<p>The &#8216;test&#8217; naming module should be kept specifically for repo&#8217;s that will be pushed to gh-pages for user testing.</p>
 
 <h2 id="workingprocess">Working process</h2>
 
-<p>Currently there is a second file site&#8211;2.less that directly compiles everything into it, rather that site.less. This allows us to run a &#8216;cleanup&#8217; stylesheet and test stylesheet alongside one another. MAKE ALL CLEAN UP CHANGES TO site&#8211;2.less.</p>
+<p>Currently there is a second file site&#8211;2.less that directly compiles everything into it, rather that site.less. This allows us to run a &#8216;cleanup&#8217; stylesheet and test stylesheet alongside one another. Make all clean up changes to site&#8211;2.less.</p>
 
 <p>site&#8211;2.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.</p>
 

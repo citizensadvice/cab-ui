@@ -31,15 +31,18 @@ Currently, the LESS files are terribly organised.
 
 ## Git structure
 
-We will need to come up with a working process and structure for git that allows us to easily create test products from the master, without affecting other things. I currently have two ideas for this;
+When creating products for testing we will now use a new branch, with modular naming convention.
 
-1. Create a new branch for each product we test, branching from the most current version of the master (or, if applicable, a similar product). This will also allow us to easily keep track of all the products we've tested, as the state we tested them in the future. However it is likely to contain a lot of dead branches.
-2. A folder structure specifically for product tests, where each product keeps its own compiled CSS file to prevent future updates breaking old test products.
+Branches should now be named with purpose/epic/product. For example:
+
+	test/consumer/side-navigation
+
+The 'test' naming module should be kept specifically for repo's that will be pushed to gh-pages for user testing.
 
 
 ## Working process
 
-Currently there is a second file site-2.less that directly compiles everything into it, rather that site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. MAKE ALL CLEAN UP CHANGES TO site-2.less.
+Currently there is a second file site-2.less that directly compiles everything into it, rather that site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. Make all clean up changes to site-2.less.
 
 site-2.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.
 
