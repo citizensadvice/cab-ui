@@ -56,7 +56,7 @@ The 'test' naming module should be kept specifically for repo's that will be pus
 
 ### Working process
 
-Currently there is a second file site-new.less that directly compiles everything into it, rather that site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. Make all clean up changes to site-new.less.
+Currently there is a second file site-new.less that directly compiles everything into it, rather than site.less. This allows us to run a 'cleanup' stylesheet and test stylesheet alongside one another. Make all clean up changes to site-new.less.
 
 site-new.less currently imports every file directly, rather than using imports of import files. This helps keep track of all the files.
 
