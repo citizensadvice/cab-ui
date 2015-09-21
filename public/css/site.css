@@ -1011,6 +1011,9 @@ blockquote p.lighten {
  * COLORS
 */
 /***************************************************************************
+ * CORPORATE COLOURS
+*/
+/***************************************************************************
  * STATE COLORS
  * Used for Alerts, Media, States and form field validation states.
  */
@@ -1231,6 +1234,121 @@ hr {
   background: #9f9f9f;
   border: 0;
 }
+button,
+.button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  border-radius: 2px;
+  background-color: #b8e3df;
+  border: none;
+  color: #004b88;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+}
+button:hover,
+.button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover,
+button:focus,
+.button:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+input[type=button]:focus,
+button:active,
+.button:active,
+input[type=submit]:active,
+input[type=reset]:active,
+input[type=button]:active {
+  background-color: #6fc7be;
+}
+a.button {
+  display: inline-block;
+}
+.button--blue.button--blue {
+  background-color: #004b88;
+}
+.button--blue.button--blue:hover,
+.button--blue.button--blue:focus,
+.button--blue.button--blue:active {
+  background: #003d6f;
+}
+.button--green.button--green {
+  background-color: #00553f;
+}
+.button--green.button--green:hover,
+.button--green.button--green:focus,
+.button--green.button--green:active {
+  background: #003b2c;
+}
+.button--orange.button--orange {
+  background-color: #ec7a3c;
+}
+.button--orange.button--orange:hover,
+.button--orange.button--orange:focus,
+.button--orange.button--orange:active {
+  background: #df5d16;
+}
+.button--pink.button--pink {
+  background-color: #fbc0ad;
+  color: #000000;
+}
+.button--pink.button--pink:hover,
+.button--pink.button--pink:focus,
+.button--pink.button--pink:active {
+  background: #f99b7c;
+  color: #000000;
+}
+.button--purple.button--purple {
+  background-color: #57486b;
+}
+.button--purple.button--purple:hover,
+.button--purple.button--purple:focus,
+.button--purple.button--purple:active {
+  background: #3e334d;
+}
+.button--grey.button--grey {
+  background-color: #bfbfbf;
+  color: black;
+}
+.button--grey.button--grey:hover,
+.button--grey.button--grey:focus,
+.button--grey.button--grey:active {
+  background: #a6a6a6;
+}
+.button--big.button--big {
+  padding: 0.6em;
+}
+button:disabled {
+  cursor: not-allowed;
+  color: #9f9f9f;
+  background-color: #eeeeee;
+  border: none;
+  resize: none;
+  box-shadow: none;
+}
+button:disabled:hover {
+  cursor: not-allowed;
+  color: #9f9f9f;
+  background-color: #eeeeee;
+  border: none;
+  resize: none;
+  box-shadow: none;
+}
+.button--submitting {
+  position: relative;
+}
+.button--submitting:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #dddddd url("/static/images/ajax-loader.gif") no-repeat center center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 .ie8 input[type=password] {
   font-family: sans-serif;
 }
@@ -1241,10 +1359,8 @@ hr {
  * FORMS
  */
 fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  min-width: 0;
+  padding: 1em;
+  margin: 1em 0;
 }
 legend {
   display: block;
@@ -1256,6 +1372,51 @@ legend {
   color: #404040;
   border: 0;
   border-bottom: 1px solid #004b88;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+textarea,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search] {
+  padding: .2em;
+  width: 100%;
+  border-radius: 0;
+}
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type=checkbox] + label {
+  font-weight: normal;
+  padding-left: .5em;
+}
+input[type=text][size="1"] {
+  width: 3em;
+}
+input[type=search] {
+  width: 70%;
+}
+input[type=search].search--full-width {
+  width: 100%;
+}
+select {
+  padding: .2em;
+  max-width: 100%;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
 }
 label {
   display: inline-block;
@@ -1355,32 +1516,32 @@ input[type="file"] {
 }
 /* Overrides 'Choose file' button
 input[type="file"]::-webkit-file-upload-button {
-  visibility: hidden;
+    visibility: hidden;
 }
 input[type="file"]::before {
-  content: 'Choose';
-  display: inline-block;
-  overflow: hidden;
-  outline: none;
-  -webkit-user-select: none;
-  cursor: pointer;
-  border-radius: @form-border-radius;
-  background-color: @beta-green-light;
-  border: 1px solid @beta-green;
-  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    content: 'Choose';
+    display: inline-block;
+    overflow: hidden;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    background-color: @beta-green-light;
+    border: 1px solid @beta-green;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
 }
 */
 /*
 .radio,
 .checkbox {
-  //background-color: @gray-7;
-  padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-  cursor: pointer;
-  border: 1px solid @gray-6;
-  border-radius: @form-border-radius;
-  &:hover {
-    border-color: @gray-4;
-  }
+    //background-color: @gray-7;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    cursor: pointer;
+    border: 1px solid @gray-6;
+    border-radius: @form-border-radius;
+    &:hover {
+        border-color: @gray-4;
+    }
 }
 */
 .radio,
@@ -1459,17 +1620,6 @@ input[type="file"]::before {
   background-color: #eeeeee;
   border: none;
   resize: none;
-}
-button[type="submit"] {
-  border-radius: 2px;
-  background-color: #b8e3df;
-  border: none;
-  color: #004b88;
-  padding: 0.75rem 1rem;
-  font-weight: bold;
-}
-button[type="submit"]:hover {
-  background-color: #6fc7be;
 }
 /**
  * FRAMEWORK
@@ -1591,6 +1741,223 @@ button[type="submit"]:hover {
   padding-right: 0.25em;
   color: #253460;
   font-size: 75%;
+}
+/* 
+
+    ICOMOON
+
+    For icons the current site is using https://icomoon.io/app/
+
+    # Updating
+
+    If these are modified please upload the file /Static/font/selection.json and edit, and download again
+    Copy the font declaration (you'll need to edit the eot path) and edit the icon declarations so they are in the same format as below
+
+    # Usage
+
+    The correct accessible usage is, for example
+    <button><i aria-hidden="true" class="icon-cross"></i>Button label</button>
+
+    If you don't want the label to show then use this pattern
+    <button><i aria-hidden="true" class="icon-cross icon--no-text"></i><span class="screenreader">Button label</span></button>
+
+    # Implementation note
+
+    For the icon font you need to set the font, and the icon content.  This leaves with a few choices
+    
+    1. Use class="icon icon-name", using .icon for the font and .icon-name for the content
+       Result is extra HTML markup
+    2. Use class="icon-name" and use [class^="icon-"], [class*=" icon-"] for the font selector
+       Result is the use of an evil selector
+    3. Use class="icon-name" and define the font individually on the each icon-name declaration
+       Result is less HTML, but more CSS
+    4. Create your own <icon> element and declare the font on the icon selector
+       This is evil and will require extra hacks for <= IE8 to get it to work
+
+    I've gone for option 3.  See below for the LESS implementation
+
+*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('/static/font/icomoon.eot');
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon,
+.icon-megaphone:before,
+.icon-zws:before,
+.icon-search:before,
+.icon-menu:before,
+.icon-down:before,
+.icon-clock:before,
+.icon-key:before,
+.icon-target:before,
+.icon-bubble:before,
+.icon-bin:before,
+.icon-happy:before,
+.icon-exit:before,
+.icon-google:before,
+.icon-facebook:before,
+.icon-twitter:before,
+.icon-email:before,
+.icon-new-window:before,
+.icon-save:before,
+.icon-load:before,
+.icon-cross:before,
+.icon-copy:before,
+.icon-tick:before,
+.icon-help:before,
+.icon-undo:before,
+.icon-inbox:before,
+.icon-print:before,
+.icon-right:before,
+.icon-guillemet-double-right:before,
+.icon-guillemet-right:before,
+.icon-sort:before,
+.icon-sort-desc:before,
+.icon-sort-asc:before,
+.icon-star:before,
+.icon-word:before,
+.icon-chevron-down:before,
+.icon-chevron-up:before,
+.icon-chevron-left:before,
+.icon-chevron-right:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: .2em;
+}
+.icon--after {
+  padding-left: .2em;
+}
+.icon--no-text {
+  padding-right: 0;
+}
+.icon-megaphone:before {
+  content: "\261e";
+}
+.icon-zws:before {
+  content: "_";
+}
+.icon-search:before {
+  content: "\e600";
+}
+.icon-menu:before {
+  content: "\2630";
+}
+.icon-down:before {
+  content: "\25bc";
+}
+.icon-clock:before {
+  content: "\231a";
+  font-size: 90%;
+}
+.icon-key:before {
+  content: "\e604";
+}
+.icon-target:before {
+  content: "\e605";
+}
+.icon-bubble:before {
+  content: "\e606";
+}
+.icon-bin:before {
+  content: "\e607";
+}
+.icon-happy:before {
+  content: "\263a";
+}
+.icon-exit:before {
+  content: "\e60a";
+}
+.icon-google:before {
+  content: "\e60b";
+}
+.icon-facebook:before {
+  content: "\e60c";
+}
+.icon-twitter:before {
+  content: "\e60d";
+}
+.icon-email:before {
+  content: "\2709";
+}
+.icon-new-window:before {
+  content: "\e60f";
+}
+.icon-save:before {
+  content: "\e610";
+}
+.icon-load:before {
+  content: "\e611";
+}
+.icon-cross:before {
+  content: "\2716";
+  font-size: 80%;
+}
+.icon-copy:before {
+  content: "\e614";
+}
+.icon-tick:before {
+  content: "\2713";
+}
+.icon-help:before {
+  content: "\3f";
+}
+.icon-undo:before {
+  content: "\238c";
+}
+.icon-inbox:before {
+  content: "\e618";
+}
+.icon-print:before {
+  content: "\2399";
+}
+.icon-right:before {
+  content: "\25b6";
+}
+.icon-guillemet-double-right:before {
+  content: "\bb";
+}
+.icon-guillemet-right:before {
+  content: "\203a";
+}
+.icon-sort:before {
+  content: "\2195";
+}
+.icon-sort-desc:before {
+  content: "\2193";
+}
+.icon-sort-asc:before {
+  content: "\2191";
+}
+.icon-star:before {
+  content: "\2605";
+}
+.icon-word:before {
+  content: "\eadc";
+}
+.icon-chevron-down:before {
+  content: "\2c5";
+}
+.icon-chevron-up:before {
+  content: "\2c4";
+}
+.icon-chevron-left:before {
+  content: "\3c";
+}
+.icon-chevron-right:before {
+  content: "\3e";
 }
 /**
  * LISTS.
@@ -1950,6 +2317,61 @@ hr {
 .u-invisible {
   visibility: hidden;
 }
+/**
+ * HELPERS
+ * JS hints, screenreader and clearfixes
+ */
+.js .hide-js {
+  display: none;
+}
+.no-js .hide-no-js {
+  display: none;
+}
+.no-cookies .hide-no-cookies {
+  display: none;
+}
+.print-only {
+  display: none;
+}
+.right {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.screenreader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.screenreader--focusable:active,
+.screenreader--focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+.clear {
+  clear: both;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
 /* Vendor files */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -2132,272 +2554,6 @@ table {
 td,
 th {
   padding: 0;
-}
-/* 
-
-    For icons we are using https://icomoon.io/app/
-
-    # Updating
-
-    If these are modified please upload the file /Static/font/selection.json and edit, and download again
-    Copy the font declaration (you'll need to edit the eot path) and edit the icon declarations so they are in the same format as below
-
-    # Usage
-
-    The correct accessible usage is, for example
-    <button><i aria-hidden="true" class="icon-cross"></i>Button label</button>
-
-    If you don't want the label to show then use this pattern
-    <button><i aria-hidden="true" class="icon-cross icon--no-text"></i><span class="screenreader">Button label</span></button>
-
-    # Implementation note
-
-    For the icon font you need to set the font, and the icon content.  This leaves with a few choices
-    
-    1. Use class="icon icon-name", using .icon for the font and .icon-name for the content
-       Result is extra HTML markup
-    2. Use class="icon-name" and use [class^="icon-"], [class*=" icon-"] for the font selector
-       Result is the use of an evil selector
-    3. Use class="icon-name" and define the font individually on the each icon-name declaration
-       Result is less HTML, but more CSS
-    4. Create your own <icon> element and declare the font on the icon selector
-       This is evil and will require extra hacks for <= IE8 to get it to work
-
-    I've gone for option 3.  See below for the LESS implementation
-
-*/
-@font-face {
-  font-family: 'icomoon';
-  src: url('/static/font/icomoon.eot');
-}
-@font-face {
-  font-family: 'icomoon';
-  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-.icon,
-.icon-megaphone:before,
-.icon-zws:before,
-.icon-search:before,
-.icon-menu:before,
-.icon-down:before,
-.icon-clock:before,
-.icon-key:before,
-.icon-target:before,
-.icon-bubble:before,
-.icon-bin:before,
-.icon-happy:before,
-.icon-exit:before,
-.icon-google:before,
-.icon-facebook:before,
-.icon-twitter:before,
-.icon-email:before,
-.icon-new-window:before,
-.icon-save:before,
-.icon-load:before,
-.icon-cross:before,
-.icon-copy:before,
-.icon-tick:before,
-.icon-help:before,
-.icon-undo:before,
-.icon-inbox:before,
-.icon-print:before,
-.icon-right:before,
-.icon-guillemet-double-right:before,
-.icon-guillemet-right:before,
-.icon-sort:before,
-.icon-sort-desc:before,
-.icon-sort-asc:before,
-.icon-star:before,
-.icon-word:before,
-.icon-chevron-down:before,
-.icon-chevron-up:before,
-.icon-chevron-left:before,
-.icon-chevron-right:before {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: .2em;
-}
-.icon--after {
-  padding-left: .2em;
-}
-.icon--no-text {
-  padding-right: 0;
-}
-.icon-megaphone:before {
-  content: "\261e";
-}
-.icon-zws:before {
-  content: "_";
-}
-.icon-search:before {
-  content: "\e600";
-}
-.icon-menu:before {
-  content: "\2630";
-}
-.icon-down:before {
-  content: "\25bc";
-}
-.icon-clock:before {
-  content: "\231a";
-  font-size: 90%;
-}
-.icon-key:before {
-  content: "\e604";
-}
-.icon-target:before {
-  content: "\e605";
-}
-.icon-bubble:before {
-  content: "\e606";
-}
-.icon-bin:before {
-  content: "\e607";
-}
-.icon-happy:before {
-  content: "\263a";
-}
-.icon-exit:before {
-  content: "\e60a";
-}
-.icon-google:before {
-  content: "\e60b";
-}
-.icon-facebook:before {
-  content: "\e60c";
-}
-.icon-twitter:before {
-  content: "\e60d";
-}
-.icon-email:before {
-  content: "\2709";
-}
-.icon-new-window:before {
-  content: "\e60f";
-}
-.icon-save:before {
-  content: "\e610";
-}
-.icon-load:before {
-  content: "\e611";
-}
-.icon-cross:before {
-  content: "\2716";
-  font-size: 80%;
-}
-.icon-copy:before {
-  content: "\e614";
-}
-.icon-tick:before {
-  content: "\2713";
-}
-.icon-help:before {
-  content: "\3f";
-}
-.icon-undo:before {
-  content: "\238c";
-}
-.icon-inbox:before {
-  content: "\e618";
-}
-.icon-print:before {
-  content: "\2399";
-}
-.icon-right:before {
-  content: "\25b6";
-}
-.icon-guillemet-double-right:before {
-  content: "\bb";
-}
-.icon-guillemet-right:before {
-  content: "\203a";
-}
-.icon-sort:before {
-  content: "\2195";
-}
-.icon-sort-desc:before {
-  content: "\2193";
-}
-.icon-sort-asc:before {
-  content: "\2191";
-}
-.icon-star:before {
-  content: "\2605";
-}
-.icon-word:before {
-  content: "\eadc";
-}
-.icon-chevron-down:before {
-  content: "\2c5";
-}
-.icon-chevron-up:before {
-  content: "\2c4";
-}
-.icon-chevron-left:before {
-  content: "\3c";
-}
-.icon-chevron-right:before {
-  content: "\3e";
-}
-.js .hide-js {
-  display: none;
-}
-.no-js .hide-no-js {
-  display: none;
-}
-.no-cookies .hide-no-cookies {
-  display: none;
-}
-.print-only {
-  display: none;
-}
-.right {
-  float: right;
-}
-.hide {
-  display: none;
-}
-.screenreader {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.screenreader--focusable:active,
-.screenreader--focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-@media print {
-  .no-print {
-    display: none;
-  }
-}
-.clear {
-  clear: both;
-}
-.text-align-center {
-  text-align: center;
-}
-.text-align-right {
-  text-align: right;
 }
 .box,
 .highlight-adviseronly,
@@ -2670,122 +2826,6 @@ th {
 .inlineContent > h3 {
   margin: 0;
   font-size: 1.6em;
-}
-button,
-input[type=submit],
-input[type=reset],
-input[type=button],
-.button {
-  border: none;
-  padding: 0;
-  padding: .1em .4em;
-  border-radius: .2em;
-  background-color: #004b88;
-  color: white;
-  font-weight: 600;
-}
-button:hover,
-input[type=submit]:hover,
-input[type=reset]:hover,
-input[type=button]:hover,
-.button:hover,
-button:focus,
-input[type=submit]:focus,
-input[type=reset]:focus,
-input[type=button]:focus,
-.button:focus,
-button:active,
-input[type=submit]:active,
-input[type=reset]:active,
-input[type=button]:active,
-.button:active {
-  border-color: #005A9B;
-  box-shadow: 0 0 1px 1px #F9BD20;
-  transition: all .1s;
-  background: #002f55;
-  text-decoration: none;
-}
-a.button {
-  display: inline-block;
-}
-.button--blue.button--blue {
-  background-color: #004b88;
-}
-.button--blue.button--blue:hover,
-.button--blue.button--blue:focus,
-.button--blue.button--blue:active {
-  background: #003d6f;
-}
-.button--green.button--green {
-  background-color: #00553f;
-}
-.button--green.button--green:hover,
-.button--green.button--green:focus,
-.button--green.button--green:active {
-  background: #003b2c;
-}
-.button--orange.button--orange {
-  background-color: #ec7a3c;
-}
-.button--orange.button--orange:hover,
-.button--orange.button--orange:focus,
-.button--orange.button--orange:active {
-  background: #df5d16;
-}
-.button--pink.button--pink {
-  background-color: #fbc0ad;
-  color: #000000;
-}
-.button--pink.button--pink:hover,
-.button--pink.button--pink:focus,
-.button--pink.button--pink:active {
-  background: #f99b7c;
-  color: #000000;
-}
-.button--purple.button--purple {
-  background-color: #57486b;
-}
-.button--purple.button--purple:hover,
-.button--purple.button--purple:focus,
-.button--purple.button--purple:active {
-  background: #3e334d;
-}
-.button--grey.button--grey {
-  background-color: #d9dada;
-  color: black;
-}
-.button--grey.button--grey:hover,
-.button--grey.button--grey:focus,
-.button--grey.button--grey:active {
-  background: #bfc1c1;
-}
-.button--big.button--big {
-  padding: 0.6em;
-}
-button:disabled {
-  background-color: #888;
-  opacity: 0.8;
-  cursor: default;
-  border-color: none;
-  box-shadow: none;
-}
-button:disabled:hover {
-  background-color: #888;
-  box-shadow: none;
-  border-color: none;
-}
-.button--submitting {
-  position: relative;
-}
-.button--submitting:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: #dddddd url("/static/images/ajax-loader.gif") no-repeat center center;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 fieldset {
   padding: 1em;
@@ -5589,102 +5629,6 @@ html[lang="en-SCT"] .side-nav > h2 {
 .popup_content .form-validation {
   margin-left: 0;
 }
-/*Budget Tool Forms*/
-.budgetTool .form-item label {
-  width: 39%;
-  float: left;
-}
-.budgetTool .form-item input[type="submit"] {
-  margin-right: 1%;
-}
-.budget-body {
-  background: #fff;
-  border: 1px solid #cccccc;
-}
-.budget-body fieldset {
-  border: none;
-  padding-top: 0!important;
-  padding-bottom: 4px!important;
-  margin-bottom: 0!important;
-}
-.budget-body legend {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-}
-.budget-intro {
-  margin-bottom: 10px;
-}
-.budget-header {
-  padding-left: 10px;
-  margin-top: 20px;
-  color: #47565b;
-  background: #d9dada;
-}
-.budget-header.current {
-  background: #004b88;
-  color: #fff;
-}
-.budget-header.completed {
-  color: #fff;
-  background: #477e26 url('/Static/images/icons/white-check.png') no-repeat 98% center;
-}
-.budget-total-container {
-  clear: left;
-  padding-bottom: 20px;
-  overflow: hidden;
-}
-.budget-total-container .total {
-  color: #477E26;
-  font-weight: 600;
-  width: 32.4%;
-  float: left;
-}
-.budget-total-container .total.long {
-  width: 39%;
-}
-.budget-total-container.four-cols .total {
-  width: 24.3%;
-}
-.budget-total-container.four-cols .total-box {
-  width: 24%;
-}
-.formpadding {
-  height: 120px;
-  margin-top: -120px;
-  display: block;
-}
-.total-box {
-  width: 32.4%;
-  float: left;
-  border: 1px solid #00af43;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-  vertical-align: middle;
-  margin: 2px;
-  padding-left: 8px;
-}
-.total-box p {
-  padding: 8px 0;
-}
-.custom-input-field {
-  font-weight: 600;
-}
-.pr-3 {
-  text-align: left;
-  margin-left: 10px;
-}
-.budget-left {
-  float: left!important;
-}
-.budget-right {
-  float: right!important;
-}
 /*Three Column layout*/
 .column-headers {
   padding-left: 32.5%;
@@ -5855,10 +5799,31 @@ input[type="submit"].button-small {
 /*Search block*/
 /*.search-block {
         margin: 1em 0;
-    }*/
-.log-in-container .form-item input[type="submit"] {
-  margin-right: 0;
+    }
+.search-block input {
+    box-sizing: border-box;
 }
+.search-block input[type="text"] {
+    width: 65%;
+    float: left;
+    height: 40px;
+}
+.search-block input[type="submit"] {
+    width: 30%;
+    float: right;
+    height: 40px;
+    border-radius: 5px;
+    background: #477e26;
+    font-size: 1em;
+    color: #FFF;
+    border: none;
+}
+.search-block input[type="submit"]:hover {
+    background: #2B4C17!important;
+}
+.log-in-container .form-item input[type="submit"] {
+    margin-right: 0;
+} */
 /*Community CSS*/
 .subscription-module .form-item label {
   float: none!important;
@@ -5974,7 +5939,7 @@ input[type="submit"].button-small {
     width: 99%!important;
   }
 }
-/*Other form related classes (specific) */
+/* Other form related classes (specific) */
 @media screen and (max-width: 1200px) {
   .log-in-container.span8 {
     width: 80%!important;
@@ -7157,565 +7122,6 @@ input.tablesort-filter {
   display: inline-block;
   text-align: left;
 }
-/**
- * COLOR DEFINITIONS.
- *
- * Defines the colors we will use across the site.
- * This is our palette, which is used within _variables.scss and elsewhere.
- * Using 'dap-' prefix to avoid name clashes with existing styles (Digital alpha project)
- */
-/***************************************************************************
- * COLORS
- */
-/***************************************************************************
- * PRIMARY
- */
-/***************************************************************************
- * STATE COLORS.
- * Used for Alerts, Media, States and form field validation states.
- */
-/***************************************************************************
- * PRIORITY COLORS.
- * Used for Media, Priorities.
- */
-/***************************************************************************
- * HEADERS. h1, h2, etc.
- */
-/**
- * VARIABLES.
- *
- * All non-color variables.
- * Using 'dap-' prefix to avoid name clashes with existing styles (Digital alpha project)
- */
-/***************************************************************************
- * TEXT SIZES
- */
-/***************************************************************************
- * FONT WEIGHTS
- */
-/***************************************************************************
- * LINE HEIGHTS
- */
-/* eg, 20px when font size is 14px */
-/***************************************************************************
- * LINKS
- */
-/****************************************************************************
- * TABLES.
- */
-/***************************************************************************
- * PANELS
- */
-/***************************************************************************
- * FORMS
- */
-/***************************************************************************
- * PADDED BOXES.
- * Used for shaded boxes of various kinds.
- * Usually, use the .box class and modifications like .box--1, etc.
- */
-/***************************************************************************
- * REVEALERS
- */
-/***************************************************************************
- * BADGES.
- */
-/***************************************************************************
- * MENUS.
- */
-/***************************************************************************
- * LETTERS.
- */
-/***************************************************************************
- * BANNER
- * The top of page stripes.
- */
-/***************************************************************************
- * FOOTER
- */
-/* Base */
-/**
- * Style Guide
- *
- * Basic utility classes.
- * And one or two odds and ends that coule be moved elsewhere at some point.
- * Using 'dap-' prefix to avoid name clashes with existing styles (Digital alpha project)
- */
-/** Generic components/elements from site **/
-.main-nav li.top-item {
-  margin-bottom: 0;
-  line-height: inherit;
-}
-.main-container {
-  background-color: #ffffff;
-}
-.main-nav {
-  margin-bottom: 0;
-}
-.main-footer__box--survey {
-  display: none;
-}
-.nav-list-primary-more {
-  float: right;
-  margin: 0;
-  padding: 6px 0;
-  position: relative;
-  /* So we can position the more menu within this */
-}
-.nav-list-primary-more > a {
-  padding: 8px 8px;
-  display: inline-block;
-  font-weight: 600;
-  background: #003A6A;
-  color: #ffffff;
-  text-decoration: none;
-  line-height: 25px;
-}
-.nav-list-primary-more > a > i {
-  margin-left: 10px;
-}
-.nav-list-primary-more:hover,
-.nav-list-primary-more.active {
-  background-color: #003A6A;
-}
-.nav-list-primary-more:hover > a,
-.nav-list-primary-more.active > a {
-  background-color: #003A6A;
-}
-.nav-list-primary-more:hover > .main-nav__more-links,
-.nav-list-primary-more.active > .main-nav__more-links {
-  display: block;
-}
-/** Beta index (menu) page **/
-.li--no-style {
-  list-style: none;
-  padding-left: 0;
-}
-/** Beta content page **/
-.articleContent {
-  width: 100%;
-}
-.starter-template {
-  padding: 0px;
-  text-align: left;
-}
-#logo {
-  padding: 15px 0px 15px 0px;
-}
-.navbar-inverse {
-  background-color: #004B88;
-  border-color: #080808;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
-  background-color: #003a6a;
-  font-weight: 600;
-}
-.navbar-inverse .navbar-nav > li > a {
-  color: #A5BDDC;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-.navbar-nav {
-  float: right;
-}
-.row {
-  margin-bottom: 15px;
-}
-.row--white {
-  background-color: #ffffff;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  padding: 2em 2em 0 2em;
-}
-ul.navbar-nav li {
-  font-size: 1em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin: 0;
-}
-ol li,
-ul li {
-  font-size: 1em;
-  line-height: 1.7;
-  font-weight: 400;
-  margin: 0 0 0.5em 0;
-}
-/***************************************************************************
- * Page status
- * Badge
- */
-.status {
-  padding: 10px 0 8px 0;
-  border-bottom: 1px solid #9f9f9f;
-}
-.alpha-badge {
-  font-weight: 700;
-  color: #eff3f3;
-  background-color: #df3034;
-  display: inline-block;
-  float: left;
-  padding: 0.5em;
-  margin-right: 0.5em;
-  margin-top: -10px;
-  margin-bottom: 20px;
-}
-.breadcrumb {
-  background-color: #eff3f3;
-  margin-bottom: 0px;
-  padding: 8px 15px;
-}
-@media (max-width: 767px) {
-  .status p {
-    font-size: 0.8em;
-  }
-  .alpha-badge {
-    margin-top: 0px;
-  }
-  .breadcrumb p {
-    font-size: 0.8em;
-  }
-}
-/***************************************************************************
- * Colours
- * Swatches
- */
-.swatch {
-  height: 110px;
-  width: 110px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  line-height: 0.85;
-  float: left;
-}
-.swatch p {
-  margin-top: 25%;
-  line-height: 1.36;
-  font-weight: 600;
-  font-size: 0.8em;
-}
-.swatch.swatch--brand--heritage-blue {
-  background-color: #004B88;
-  color: #ffffff;
-}
-.swatch.swatch--brand--heritage-yellow {
-  background-color: #FCBB69;
-}
-.swatch.swatch--brand--responsible-purple {
-  background-color: #57486B;
-  color: #ffffff;
-}
-.swatch.swatch--brand--responsible-aqua {
-  background-color: #90CE9C;
-}
-.swatch.swatch--brand--inventive-teal {
-  background-color: #006278;
-  color: #ffffff;
-}
-.swatch.swatch--brand--inventive-pink {
-  background-color: #FBC0AD;
-}
-.swatch.swatch--brand--generous-green {
-  background-color: #00553F;
-  color: #ffffff;
-}
-.swatch.swatch--brand--generous-mauve {
-  background-color: #B5AFD7;
-}
-.swatch.swatch--product-status--alpha {
-  background-color: #df3034;
-  color: #ffffff;
-}
-.swatch.swatch--product-status--beta {
-  background-color: #ffbf47;
-}
-.swatch.swatch--primary--text {
-  background-color: #00553F;
-  color: #ffffff;
-}
-.swatch.swatch--primary--generous-mauve {
-  background-color: #B5AFD7;
-}
-.swatch.swatch--extended--blue-darker {
-  background-color: #32457e;
-  color: #ffffff;
-}
-.swatch.swatch--extended--blue-lighter {
-  background-color: #a5bddc;
-  color: #000000;
-}
-.swatch.swatch--extended--red {
-  background-color: #b53a1f;
-  color: #ffffff;
-}
-.swatch.swatch--extended--red-heritage {
-  background-color: #623534;
-  color: #ffffff;
-}
-.swatch.swatch--extended--red-brighter {
-  background-color: #df3034;
-  color: #ffffff;
-}
-.swatch.swatch--extended--red-mellow {
-  background-color: #c02f43;
-  color: #ffffff;
-}
-.swatch.swatch--extended--purple {
-  background-color: #503460;
-  color: #ffffff;
-}
-.swatch.swatch--extended--mauve {
-  background-color: #c5a5ce;
-  color: #000000;
-}
-.swatch.swatch--extended--pink {
-  background-color: #f9b9ba;
-  color: #000000;
-}
-.swatch.swatch--extended--peach {
-  background-color: #f8a484;
-  color: #000000;
-}
-.swatch.swatch--extended--orange {
-  background-color: #fcbb69;
-  color: #000000;
-}
-.swatch.swatch--extended--yellow {
-  background-color: #e9e083;
-  color: #000000;
-}
-.swatch.swatch--extended--green-heritage {
-  background-color: #00553f;
-  color: #ffffff;
-}
-.swatch.swatch--extended--green-blue {
-  background-color: #005e7f;
-  color: #ffffff;
-}
-.swatch.swatch--extended--green {
-  background-color: #008286;
-  color: #ffffff;
-}
-.swatch.swatch--extended--turquoise {
-  background-color: #81cec6;
-  color: #000000;
-}
-.swatch.swatch--mono--black {
-  background-color: #000000;
-  color: #ffffff;
-}
-.swatch.swatch--mono--gray1 {
-  background-color: #404040;
-  color: #ffffff;
-}
-.swatch.swatch--mono--gray2 {
-  background-color: #606060;
-  color: #ffffff;
-}
-.swatch.swatch--mono--gray3 {
-  background-color: #808080;
-  color: #000000;
-}
-.swatch.swatch--mono--gray4 {
-  background-color: #9f9f9f;
-  color: #000000;
-}
-.swatch.swatch--mono--gray5 {
-  background-color: #bfbfbf;
-  color: #000000;
-}
-.swatch.swatch--mono--gray6 {
-  background-color: #dfdfdf;
-  color: #000000;
-}
-.swatch.swatch--mono--gray7 {
-  background-color: #eeeeee;
-  color: #000000;
-}
-.swatch.swatch--mono--white {
-  background-color: #ffffff;
-  color: #000000;
-}
-/* Enhancements for style guide */
-.show-grid [class^=col-] {
-  padding: 10px;
-  background-color: #eee;
-  background-color: #a5bddc;
-  border: 1px solid #034ea2;
-}
-/* Form */
-.checkbox label,
-.radio label {
-  font-size: 1em;
-  line-height: 1.7;
-  font-weight: 400;
-  color: #191926;
-  padding: 0.6em 1.5em;
-  background-color: #ffffff;
-  display: block;
-  margin: 0.6em 0;
-}
-/* Examples */
-blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #9f9f9f;
-}
-blockquote p.lighten {
-  color: #808080;
-}
-.main-header {
-  background-color: #ffffff;
-  overflow: hidden;
-}
-.advisernet .main-header {
-  background-color: #CBE0E4;
-}
-.bmis .main-header {
-  background-color: #DDDAE1;
-}
-.cablink .main-header {
-  background-color: #FFE4C1;
-}
-.main-header__content {
-  max-width: 1366px;
-  margin: auto;
-  clear: left;
-  padding: 0 1em .5em 1em;
-}
-.main-header__content:after {
-  content: " ";
-  clear: both;
-  display: block;
-}
-.main-header__logo {
-  border: none;
-  float: left;
-  margin-top: .7em;
-  max-width: 30%;
-  max-width: calc(300px);
-}
-@media (max-width: 479px) {
-  .main-header__logo {
-    float: none;
-    text-align: center;
-    display: block;
-    margin-top: .5em;
-    max-width: none;
-  }
-}
-.main-header__menu-link {
-  display: none;
-}
-.main-header__top-nav,
-.main-header__search {
-  float: right;
-  clear: right;
-}
-.main-header__top-nav {
-  margin: 0.5em -0.4em 0.2em 0;
-  text-align: right;
-  max-width: 70%;
-  max-width: calc(100% - 300px);
-}
-.main-header__top-nav > a {
-  padding: 0 .4em;
-  display: inline-block;
-  white-space: nowrap;
-  border: none;
-}
-.main-header__top-nav__link--current {
-  font-weight: bold;
-}
-.main-header__search {
-  white-space: nowrap;
-  margin: .4em 0;
-}
-input.main-header__search__input {
-  width: 25em;
-  float: left;
-}
-.ie8 input.main-header__search__input {
-  padding: .3em .2em;
-}
-.main-header__search__submit {
-  border: 1px solid #585858;
-  background: #585858;
-  overflow: hidden;
-  padding: .2em;
-  border-radius: 0;
-  float: left;
-  margin: 0 0 0 -1px;
-  width: 2em;
-}
-.main-header__search__submit:hover,
-.main-header__search__submit:focus {
-  background: #333;
-}
-@media (max-width: 479px) {
-  .main-header__content {
-    padding: 0;
-  }
-  .main-header__links {
-    display: table;
-    width: 100%;
-    background: #004b88;
-  }
-  html[lang="en-SCT"] .main-header__links {
-    background: #0057b9;
-  }
-  .main-header__top-nav,
-  .main-header__bottom-nav {
-    display: none;
-  }
-  .main-header__menu-link {
-    color: white;
-    padding: 0 1em;
-    width: 0;
-  }
-  .main-header__menu-link:link {
-    text-decoration: none;
-  }
-  .main-header__search,
-  .main-header__menu-link {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .main-header__search {
-    width: 100%;
-    padding-right: 1em;
-    position: relative;
-  }
-  input.main-header__search__input {
-    float: none;
-    width: 100%;
-  }
-  .main-header__search__submit {
-    position: absolute;
-    right: .5em;
-    top: 0;
-  }
-}
-.footer-feedback {
-  background-color: #ffffff;
-  overflow: hidden;
-  text-align: center;
-}
-.footer-feedback__content {
-  padding: 0 1em;
-  max-width: 1080px;
-  margin: auto;
-  clear: left;
-}
-@media (max-width: 479px) {
-  .footer-feedback__content {
-    text-align: left;
-  }
-}
 .main-footer {
   background-color: #b2c9db;
   color: #000;
@@ -8222,6 +7628,144 @@ li.ref-dialog__list-item--highlight {
  */
 /* These are the conditional mixins for the different syntax for IE10 Flexbox*/
 /* Module files */
+/**
+ * HEADER
+ *
+ * Defines the header area for all site (public site, BMIS, CABlink, Advisernet).
+ *
+ */
+.main-header {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.advisernet .main-header {
+  background-color: #cbe0e4;
+}
+.bmis .main-header {
+  background-color: #dddae1;
+}
+.cablink .main-header {
+  background-color: #ffe4c1;
+}
+.main-header__content {
+  max-width: 1366px;
+  margin: auto;
+  clear: left;
+  padding: 0 1em .5em 1em;
+}
+.main-header__content:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+.main-header__logo {
+  border: none;
+  float: left;
+  margin-top: .7em;
+  max-width: 30%;
+  max-width: calc(300px);
+}
+@media (max-width: 479px) {
+  .main-header__logo {
+    float: none;
+    text-align: center;
+    display: block;
+    margin-top: .5em;
+    max-width: none;
+  }
+}
+.main-header__menu-link {
+  display: none;
+}
+.main-header__top-nav,
+.main-header__search {
+  float: right;
+  clear: right;
+}
+.main-header__top-nav {
+  margin: 0.5em -0.4em 0.2em 0;
+  text-align: right;
+  max-width: 70%;
+  max-width: calc(100% - 300px);
+}
+.main-header__top-nav > a {
+  padding: 0 .4em;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+}
+.main-header__top-nav__link--current {
+  font-weight: bold;
+}
+.main-header__search {
+  white-space: nowrap;
+  margin: .4em 0;
+}
+input.main-header__search__input {
+  width: 25em;
+  float: left;
+}
+.ie8 input.main-header__search__input {
+  padding: .3em .2em;
+}
+.main-header__search__submit {
+  border: 1px solid #404040;
+  background: #404040;
+  overflow: hidden;
+  padding: .2em;
+  border-radius: 0;
+  float: left;
+  margin: 0 0 0 -1px;
+  width: 2em;
+}
+.main-header__search__submit:hover,
+.main-header__search__submit:focus {
+  background: #202020;
+}
+@media (max-width: 479px) {
+  .main-header__content {
+    padding: 0;
+  }
+  .main-header__links {
+    display: table;
+    width: 100%;
+    background: #004b88;
+  }
+  html[lang="en-SCT"] .main-header__links {
+    background: #0057b9;
+  }
+  .main-header__top-nav,
+  .main-header__bottom-nav {
+    display: none;
+  }
+  .main-header__menu-link {
+    color: white;
+    padding: 0 1em;
+    width: 0;
+  }
+  .main-header__menu-link:link {
+    text-decoration: none;
+  }
+  .main-header__search,
+  .main-header__menu-link {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .main-header__search {
+    width: 100%;
+    padding-right: 1em;
+    position: relative;
+  }
+  input.main-header__search__input {
+    float: none;
+    width: 100%;
+  }
+  .main-header__search__submit {
+    position: absolute;
+    right: .5em;
+    top: 0;
+  }
+}
 /**
  * BREADCRUMB
  *
@@ -12567,5 +12111,26 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .beta-dap-menu-accordion__page:hover {
   color: #32457e;
   background-color: #bfbfbf;
+}
+/**
+ * FOOTER FEEDBACK
+ * 
+ * This is the feedback link, above the footer and below content, used on all pages
+ */
+.footer-feedback {
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+}
+.footer-feedback__content {
+  padding: 0 1em;
+  max-width: 1080px;
+  margin: auto;
+  clear: left;
+}
+@media (max-width: 479px) {
+  .footer-feedback__content {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=site.css.map */
