@@ -1572,6 +1572,150 @@ hr {
   font-weight: 700;
   padding: .3em .5em;
 }
+/**
+ * UTILITY
+ *
+ * Basic utility classes.
+ * And one or two odds and ends that coule be moved elsewhere at some point.
+ */
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
+.u-text-center {
+  text-align: center;
+}
+.u-text-nowrap {
+  white-space: nowrap;
+}
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+.u-text-large {
+  font-size: 1.5rem;
+}
+.u-text-small {
+  font-size: 0.875rem;
+}
+.u-text-light {
+  color: #808080;
+}
+.u-border-1 {
+  border: 1px solid #253460;
+}
+.u-border-2 {
+  border: 2px solid #253460;
+}
+.u-border-3 {
+  border: 3px solid #253460;
+}
+.u-pull-left {
+  float: left;
+}
+.u-pull-right {
+  float: right;
+}
+/**
+ * First paragraph at start of some things.
+ */
+.u-lede {
+  font-weight: 700;
+  line-height: 1.69;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+/**
+ * For the Alpha project we may want to indicate some portions are disabled
+ * because they're not yet finished. So use this class on it. */
+.alpha-disabled a {
+  cursor: default;
+}
+/**********************************************************************
+ * Hiding elements for various reasons.
+ */
+/**
+ * Hide revealable blocks by default, unless the user has no JS.
+ */
+.js-revealable {
+  display: none;
+}
+.no-js .js-revealable {
+  display: block;
+}
+@media print {
+  /**
+     * Use on elements not covered by the print stylesheet that shouldn't be
+     * printed. eg, form-based widgets, dynamic things that don't have much
+     * benefit to being printed.
+     */
+  .u-noprint {
+    display: none !important;
+  }
+  /**
+     * Use these to make invisible things show up in the print version.
+     * Probably combine with .u-visuallyhidden (below).
+     */
+  .u-print {
+    display: block !important;
+  }
+  span.u-print {
+    display: inline !important;
+  }
+}
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.u-hidden {
+  display: none !important;
+  visibility: hidden;
+}
+@media print {
+  /**
+     * But, if it also has .u-print, then make it show up when printing.
+     */
+  .u-hidden.u-print {
+    display: block !important;
+    visibility: visible !important;
+  }
+  span.u-hidden.u-print {
+    display: inline !important;
+  }
+}
+@media print {
+  /**
+     * But, if it also has .u-print then make it show up when printing.
+     */
+  .u-visuallyhidden.u-print {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    position: relative;
+    width: auto;
+  }
+}
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.u-visuallyhidden.u-focusable:active,
+.u-visuallyhidden.u-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.u-invisible {
+  visibility: hidden;
+}
 /* Vendor files */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -2212,13 +2356,13 @@ th {
   width: calc(100% + 2em);
 }
 .box--content-right > h2 {
-  margin: 0 0 0.7em;
-  font-size: 1.2em;
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
   color: #004b88;
 }
 .box--content-right > h3 {
-  margin: 0 0 0.7em;
-  font-size: 1em;
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
   color: #191926;
 }
 .box--warning {
@@ -6735,44 +6879,6 @@ input.tablesort-filter {
     display: none !important;
   }
 }
-.decision-tree {
-  padding: .5em;
-  border: 1px solid #004B88;
-  background: white;
-  margin: 1em 0;
-  overflow: hidden;
-}
-.decision-tree__options {
-  list-style: none;
-  padding: 0;
-}
-.decision-tree__buttons button {
-  margin: 0 .3em .5em 0;
-}
-.staff {
-  background-color: #fff;
-  padding: 1em;
-  margin: 1em 0;
-}
-.staff__name {
-  margin: 0;
-  font-size: 1.5em;
-}
-.staff__photo {
-  float: right;
-}
-.staff__contacts {
-  list-style: none;
-  margin: 1em 0 0 0;
-  padding: 0;
-}
-.staff__contacts > li {
-  margin: 0;
-}
-.staff__list {
-  list-style: none;
-  padding: 0;
-}
 .custom-twitter .user {
   clear: left;
 }
@@ -7228,40 +7334,6 @@ blockquote {
 blockquote p.lighten {
   color: #808080;
 }
-/***************************************************************************
- * Page status
- * Badge
- */
-.status {
-  padding: 1.5em 1em 0.5em 1em;
-  background-color: #ffebc6;
-  color: #404040;
-  vertical-align: middle;
-  margin: 0;
-}
-.alpha-badge {
-  font-weight: 700;
-  background-color: #ffbf47;
-  color: #404040;
-  display: inline-block;
-  float: left;
-  padding: 0.5em;
-  margin-right: 0.5em;
-}
-.breadcrumb {
-  background-color: #ffffff;
-}
-.breadcrumb p {
-  font-size: 0.9em;
-}
-@media (max-width: 767px) {
-  .status p {
-    font-size: 0.8em;
-  }
-  .alpha-badge {
-    margin-top: 0px;
-  }
-}
 /**
  * SIDEBAR NAVIGATION.
  *
@@ -7273,7 +7345,7 @@ blockquote p.lighten {
   width: 33.33333333%;
   overflow: hidden;
   margin-bottom: 1.5em;
-  padding: 1em .7em;
+  padding: 1rem 0.75rem;
   margin: 0;
 }
 @media (max-width: 479px) {
@@ -7456,325 +7528,6 @@ blockquote p.lighten {
 .beta-dap-menu-accordion__page:hover {
   color: #32457e;
   background-color: #bfbfbf;
-}
-/**
- * Panels.
- *
- * These are the functional boxes used for callouts and indicators 
- *
- */
-.dap-panel {
-  margin-bottom: 0.75em;
-  padding: 12px;
-  /**
-     * Things within each panel.
-     */
-}
-.dap-panel h2 {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: #191926;
-  margin: 0 0 0.7em 0;
-  line-height: 1.3;
-}
-.dap-panel h3 {
-  font-size: 1em;
-  font-weight: 700;
-  margin: 0 0 0.7em 0;
-}
-/************************************************************************
- * Variations on panel styling.
- * Extend dap-panel standards
- */
-/************************************************************************
- * Base – the unstyled panel example (assuming we can use a white background on the content page.
- */
-.dap-panel--base {
-  background-color: #ffffff;
-  border: 1px solid #a5bddc;
-}
-.dap-panel--base h2 {
-  color: #191926;
-}
-.dap-panel--base h3 {
-  color: #191926;
-}
-/************************************************************************
- * Crucial – this is for only the most important mandatory tasks, we must use this sparingly.
- */
-.dap-panel--crucial {
-  background-color: #ffffff;
-  border: 1px solid #df3034;
-}
-.dap-panel--crucial h2 {
-  color: #df3034;
-}
-.dap-panel--crucial h3 {
-  color: #191926;
-}
-/************************************************************************
- * Important – these are for generally important actions clients need to take but are not mandatory.
- */
-.dap-panel--important {
-  background-color: #eef7ff;
-  border: 1px solid #004b88;
-}
-.dap-panel--important h2 {
-  color: #004b88;
-}
-.dap-panel--important h3 {
-  color: #191926;
-}
-/************************************************************************
- * Progress panel - for instructional information, primarily used for 'Next stages'.
- */
-.dap-panel--progress {
-  background-color: #a6dcd7;
-  border-left: 4px solid #81cec6;
-}
-.dap-panel--progress h2 {
-  color: #004b88;
-}
-.dap-panel--progress h3 {
-  color: #191926;
-}
-/************************************************************************
- * Adviser box - extending to style the adviser only content.
- */
-.dap-panel--adviser {
-  background-color: #ffebc6;
-  border-left: 4px solid #ffbf47;
-}
-.dap-panel--adviser h2 {
-  color: #004b88;
-}
-.dap-panel--adviser h3 {
-  color: #191926;
-}
-/************************************************************************
- * Example box - extending to style examples within content.
- */
-.dap-panel--example {
-  background-color: #ffffff;
-  border-left: 4px solid #9f9f9f;
-}
-.dap-panel--example .h2 {
-  color: #606060;
-}
-.dap-panel--example .h3 {
-  color: #191926;
-}
-/************************************************************************
- * Side panels - extending to style the panels that will run down the left-hand menu.
- */
-.dap-panel--side__blue {
-  background-color: #c6c6c6;
-  border-top: 4px solid #004b88;
-}
-.dap-panel--side__blue .h2 {
-  font-size: 1.2em;
-  color: #004b88;
-}
-.dap-panel--side__blue .h3 {
-  font-size: 1em;
-  color: #191926;
-}
-.dap-panel--side__blue .p {
-  font-size: 1em;
-  color: #191926;
-}
-.dap-panel--side__yellow {
-  background-color: #c6c6c6;
-  border-top: 4px solid #ffbf47;
-}
-.dap-panel--side__yellow .h2 {
-  font-size: 1.2em;
-  color: #004b88;
-}
-.dap-panel--side__yellow .h3 {
-  font-size: 1em;
-  color: #191926;
-}
-.dap-panel--side__yellow .p {
-  font-size: 1em;
-  color: #191926;
-}
-.dap-panel--side__aqua {
-  background-color: #c6c6c6;
-  border-top: 4px solid #81cec6;
-}
-.dap-panel--side__aqua .h2 {
-  font-size: 1.2em;
-  color: #004b88;
-}
-.dap-panel--side__aqua .h3 {
-  font-size: 1em;
-  color: #191926;
-}
-.dap-panel--side__aqua .p {
-  font-size: 1em;
-  color: #191926;
-}
-.beta-extent-switcher {
-  float: left;
-  border: #a5bddc 1px solid;
-  padding: 0.5em;
-}
-@media screen and (max-width: 479px) {
-  .beta-extent-switcher {
-    width: 100%;
-    float: none;
-  }
-}
-.beta-extent-switcher h2.beta-extent-switcher__heading {
-  font-size: 1em;
-  color: #004b88;
-}
-.beta-extent-switcher .custom-dropdown__select {
-  width: 80%;
-}
-.beta-extent-switcher .custom-dropdown__button {
-  width: 17%;
-  float: right;
-}
-.main-container .revealable {
-  border: 1px solid #dfdfdf;
-}
-.main-container h3.revealable__heading {
-  font-size: 1.2em;
-  outline: none;
-}
-.main-container .revealable__close {
-  text-decoration: none;
-}
-.content__header {
-  margin-top: -1em;
-  background: #bfbfbf;
-}
-@media (max-width: 479px) {
-  .content__header {
-    margin-top: 0;
-  }
-}
-.section-notice + * .content__header {
-  margin-top: -1em;
-}
-.content__header__content {
-  max-width: 1080px;
-  margin: auto;
-  clear: left;
-  padding: 1em;
-}
-.content__header__content h2 {
-  font-size: 1.2em;
-}
-.content__header__content ul {
-  list-style: none;
-  padding: 0;
-}
-.content__header__content a {
-  font-weight: bold;
-}
-@media (max-width: 479px) {
-  .content__header + .main-content {
-    margin-top: 0;
-  }
-}
-.beta-index-page {
-  margin-bottom: 2em;
-}
-.beta-index-page__box {
-  border-bottom: 1px solid #bfbfbf;
-  margin-bottom: 1em;
-  float: left;
-}
-.beta-index-page__box:last-child {
-  margin-bottom: 2em;
-}
-.beta-index-page__box > * {
-  float: left;
-}
-@media screen and (max-width: 479px) {
-  .beta-index-page__box .beta-index-page__section h2 {
-    margin-bottom: 0;
-  }
-}
-.box,
-.highlight-adviseronly,
-.sideContent,
-.inlineContent,
-.extent-switcher,
-.index-page__box,
-.home-page__box,
-.login,
-.home-page__box--member-welcome,
-.home-page__box--member-search,
-.home-page__box--member-contact,
-.home-page__box--member-more,
-.home-page__box--member-volunteer,
-.home-page__box--member-campaigns,
-.home-page__box--member-supporters {
-  background-color: #f2f2f2;
-  border-top-width: 4px;
-}
-.box > h2,
-.highlight-adviseronly > h2,
-.sideContent > h2,
-.inlineContent > h2,
-.extent-switcher > h2,
-.index-page__box > h2,
-.home-page__box > h2,
-.login > h2,
-.home-page__box--member-welcome > h2,
-.home-page__box--member-search > h2,
-.home-page__box--member-contact > h2,
-.home-page__box--member-more > h2,
-.home-page__box--member-volunteer > h2,
-.home-page__box--member-campaigns > h2,
-.home-page__box--member-supporters > h2 {
-  margin: 0 0 0.7em;
-  font-size: 1.2em;
-  color: #004b88;
-}
-.box > h3,
-.highlight-adviseronly > h3,
-.sideContent > h3,
-.inlineContent > h3,
-.extent-switcher > h3,
-.index-page__box > h3,
-.home-page__box > h3,
-.login > h3,
-.home-page__box--member-welcome > h3,
-.home-page__box--member-search > h3,
-.home-page__box--member-contact > h3,
-.home-page__box--member-more > h3,
-.home-page__box--member-volunteer > h3,
-.home-page__box--member-campaigns > h3,
-.home-page__box--member-supporters > h3 {
-  margin: 0 0 0.7em;
-  font-size: 1em;
-  color: #191926;
-}
-.box--yellow {
-  border-top-color: #ffbf47;
-}
-.box--aqua {
-  border-top-color: #81cec6;
-}
-.box--blue {
-  border-top-color: #004b88;
-}
-.main-content__sidebar {
-  padding: 1em .7em;
-  margin: 0;
-}
-.breadcrumb-lite {
-  padding-top: .5em;
-}
-@media screen and (max-width: 479px) {
-  .breadcrumb-lite {
-    margin-top: 1.5em;
-  }
 }
 .main-header {
   background-color: #ffffff;
@@ -8551,6 +8304,8 @@ li.ref-dialog__list-item--highlight {
   -moz-transform: scale(0.9999);
 }
 /**
+ * CALLOUTS
+ *
  * Creates various callout styles using mixin
  * .callout( @callout-background, @callout-headings, @callout-text, @callout-border )
  */
@@ -9822,6 +9577,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #6fc7be;
 }
+/**
+ * STEPS NAVIGATION
+ *
+ * This is the less file for developing the sidebar navigation (steps on this page) for long format content
+ *
+ */
 .steps {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
@@ -10147,6 +9908,12 @@ button[type="submit"]:hover {
   visibility: visible;
   display: block !important;
 }
+/**
+ * NAVIGATION
+ *
+ * This is the less file for developing the sidebar navigation (dropdown tree structure)
+ *
+ */
 .nav--beta {
   background-color: red;
   padding: 0;
@@ -10193,7 +9960,762 @@ button[type="submit"]:hover {
 .nav--beta ul .active {
   background-color: #c5e5cb;
 }
+/**
+ * Panels.
+ *
+ * These are the functional boxes used for callouts and indicators 
+ *
+ */
+.dap-panel .dap-panel--base {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #caeaff;
+  color: #191926;
+  border: 0px #4ab7ff solid;
+  display: block;
+  border-width: 1px;
+  border-left-width: 0.5rem;
+  padding-left: 1rem;
+}
+.dap-panel .dap-panel--base h1,
+.dap-panel .dap-panel--base h2,
+.dap-panel .dap-panel--base h3 {
+  color: #a5bddc !important;
+  font-size: 1.5rem;
+}
+.dap-panel .dap-panel--base a {
+  border-bottom-color: #4ab7ff;
+}
+.dap-panel .dap-panel--base > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel .dap-panel--base h1:first-child,
+.dap-panel .dap-panel--base h2:first-child,
+.dap-panel .dap-panel--base h3:first-child,
+.dap-panel .dap-panel--base h4:first-child,
+.dap-panel .dap-panel--base h5:first-child,
+.dap-panel .dap-panel--base h6:first-child {
+  margin-top: 0;
+}
+.dap-panel .dap-panel--base li:first-child {
+  padding-top: 0;
+}
+.dap-panel .dap-panel--base > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel .dap-panel--base .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #b0ccff;
+  color: #191926;
+  border-bottom: 1px solid #4ab7ff;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel .dap-panel--base .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #97bbff;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel .dap-panel--base .callout__link:hover {
+  background-color: #97bbff;
+  color: #191926;
+}
+.dap-panel .dap-panel--base .callout__link:hover:after {
+  background-color: #649aff;
+}
+.dap-panel .dap-panel--base .callout__link--anchor:after {
+  content: "\f063";
+}
+.dap-panel .dap-panel--base .callout__link:last-child {
+  border: none;
+}
+/************************************************************************
+ * Crucial – this is for only the most important mandatory tasks, we must use this sparingly.
+ */
+.dap-panel--crucial {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #fae1e1;
+  color: #191926;
+  border: 0px #e97275 solid;
+  display: block;
+  border-left-width: 0.5rem;
+  padding-left: 1rem;
+}
+.dap-panel--crucial h1,
+.dap-panel--crucial h2,
+.dap-panel--crucial h3 {
+  color: #df3034 !important;
+  font-size: 1.5rem;
+}
+.dap-panel--crucial a {
+  border-bottom-color: #e97275;
+}
+.dap-panel--crucial > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel--crucial h1:first-child,
+.dap-panel--crucial h2:first-child,
+.dap-panel--crucial h3:first-child,
+.dap-panel--crucial h4:first-child,
+.dap-panel--crucial h5:first-child,
+.dap-panel--crucial h6:first-child {
+  margin-top: 0;
+}
+.dap-panel--crucial li:first-child {
+  padding-top: 0;
+}
+.dap-panel--crucial > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel--crucial .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #f7d5cb;
+  color: #191926;
+  border-bottom: 1px solid #e97275;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel--crucial .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #f3c3b5;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel--crucial .callout__link:hover {
+  background-color: #f3c3b5;
+  color: #191926;
+}
+.dap-panel--crucial .callout__link:hover:after {
+  background-color: #ed9f88;
+}
+.dap-panel--crucial .callout__link--anchor:after {
+  content: "\f063";
+}
+/************************************************************************
+ * Important – these are for generally important actions clients need to take but are not mandatory.
+ */
+.dap-panel--important {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffebc6;
+  color: #191926;
+  border: 0px #ffbf47 solid;
+  display: block;
+  border-left-width: 0.5rem;
+  padding-left: 1rem;
+}
+.dap-panel--important h1,
+.dap-panel--important h2,
+.dap-panel--important h3 {
+  color: #191926 !important;
+  font-size: 1.5rem;
+}
+.dap-panel--important a {
+  border-bottom-color: #ffbf47;
+}
+.dap-panel--important > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel--important h1:first-child,
+.dap-panel--important h2:first-child,
+.dap-panel--important h3:first-child,
+.dap-panel--important h4:first-child,
+.dap-panel--important h5:first-child,
+.dap-panel--important h6:first-child {
+  margin-top: 0;
+}
+.dap-panel--important li:first-child {
+  padding-top: 0;
+}
+.dap-panel--important > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel--important .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #fff7ad;
+  color: #191926;
+  border-bottom: 1px solid #ffbf47;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel--important .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #fff494;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel--important .callout__link:hover {
+  background-color: #fff494;
+  color: #191926;
+}
+.dap-panel--important .callout__link:hover:after {
+  background-color: #ffef61;
+}
+.dap-panel--important .callout__link--anchor:after {
+  content: "\f063";
+}
+/************************************************************************
+ * Progress panel - for instructional information, primarily used for 'Next stages'.
+ */
+.dap-panel--progress {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #b5afd7;
+  color: #191926;
+  border: 0px #665aad solid;
+  display: block;
+}
+.dap-panel--progress h1,
+.dap-panel--progress h2,
+.dap-panel--progress h3 {
+  color: #00553f !important;
+  font-size: 1.5rem;
+}
+.dap-panel--progress a {
+  border-bottom-color: #665aad;
+}
+.dap-panel--progress > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel--progress h1:first-child,
+.dap-panel--progress h2:first-child,
+.dap-panel--progress h3:first-child,
+.dap-panel--progress h4:first-child,
+.dap-panel--progress h5:first-child,
+.dap-panel--progress h6:first-child {
+  margin-top: 0;
+}
+.dap-panel--progress li:first-child {
+  padding-top: 0;
+}
+.dap-panel--progress > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel--progress .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #b19ecf;
+  color: #191926;
+  border-bottom: 1px solid #665aad;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel--progress .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #a48dc6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel--progress .callout__link:hover {
+  background-color: #a48dc6;
+  color: #191926;
+}
+.dap-panel--progress .callout__link:hover:after {
+  background-color: #896bb5;
+}
+.dap-panel--progress .callout__link--anchor:after {
+  content: "\f063";
+}
+/************************************************************************
+ * Adviser box - extending to style the adviser only content.
+ */
+.dap-panel--adviser {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffebc6;
+  color: #191926;
+  border: 0px #ffbf47 solid;
+  display: block;
+  border-left-width: 0.5rem;
+  padding-left: 1rem;
+}
+.dap-panel--adviser h1,
+.dap-panel--adviser h2,
+.dap-panel--adviser h3 {
+  color: #191926 !important;
+  font-size: 1.5rem;
+}
+.dap-panel--adviser a {
+  border-bottom-color: #ffbf47;
+}
+.dap-panel--adviser > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel--adviser h1:first-child,
+.dap-panel--adviser h2:first-child,
+.dap-panel--adviser h3:first-child,
+.dap-panel--adviser h4:first-child,
+.dap-panel--adviser h5:first-child,
+.dap-panel--adviser h6:first-child {
+  margin-top: 0;
+}
+.dap-panel--adviser li:first-child {
+  padding-top: 0;
+}
+.dap-panel--adviser > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel--adviser .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #fff7ad;
+  color: #191926;
+  border-bottom: 1px solid #ffbf47;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel--adviser .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #fff494;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel--adviser .callout__link:hover {
+  background-color: #fff494;
+  color: #191926;
+}
+.dap-panel--adviser .callout__link:hover:after {
+  background-color: #ffef61;
+}
+.dap-panel--adviser .callout__link--anchor:after {
+  content: "\f063";
+}
+/************************************************************************
+ * Example box - extending to style examples within content.
+ */
+.dap-panel--example {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffffff;
+  color: #191926;
+  border: 0px #bfbfbf solid;
+  display: block;
+  border-width: 1px;
+  border-left-width: 0.5rem;
+  padding-left: 1rem;
+}
+.dap-panel--example h1,
+.dap-panel--example h2,
+.dap-panel--example h3 {
+  color: #606060 !important;
+  font-size: 1.5rem;
+}
+.dap-panel--example a {
+  border-bottom-color: #bfbfbf;
+}
+.dap-panel--example > *:first-child {
+  padding-top: 0.75rem;
+}
+.dap-panel--example h1:first-child,
+.dap-panel--example h2:first-child,
+.dap-panel--example h3:first-child,
+.dap-panel--example h4:first-child,
+.dap-panel--example h5:first-child,
+.dap-panel--example h6:first-child {
+  margin-top: 0;
+}
+.dap-panel--example li:first-child {
+  padding-top: 0;
+}
+.dap-panel--example > *:last-child {
+  margin-bottom: 0 !important;
+}
+.dap-panel--example .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #f2f2f2;
+  color: #191926;
+  border-bottom: 1px solid #bfbfbf;
+  text-decoration: none !important;
+  position: relative;
+}
+.dap-panel--example .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #e6e6e6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.dap-panel--example .callout__link:hover {
+  background-color: #e6e6e6;
+  color: #191926;
+}
+.dap-panel--example .callout__link:hover:after {
+  background-color: #cccccc;
+}
+.dap-panel--example .callout__link--anchor:after {
+  content: "\f063";
+}
+.dap-panel--example .callout__link:last-child {
+  border: none;
+}
+/************************************************************************
+ * Side panels - extending to style the panels that will run down the left-hand menu.
+ */
+.dap-panel--side__blue {
+  background-color: #808080;
+  border-top: 4px solid #004b88;
+}
+.dap-panel--side__blue .h2 {
+  font-size: 1.2rem;
+  color: #004b88;
+}
+.dap-panel--side__blue .h3 {
+  font-size: 1rem;
+  color: #191926;
+}
+.dap-panel--side__blue .p {
+  font-size: 1rem;
+  color: #191926;
+}
+.dap-panel--side__yellow {
+  background-color: #808080;
+  border-top: 4px solid #ffbf47;
+}
+.dap-panel--side__yellow .h2 {
+  font-size: 1.2rem;
+  color: #004b88;
+}
+.dap-panel--side__yellow .h3 {
+  font-size: 1rem;
+  color: #191926;
+}
+.dap-panel--side__yellow .p {
+  font-size: 1rem;
+  color: #191926;
+}
+.dap-panel--side__aqua {
+  background-color: #808080;
+  border-top: 4px solid #81cec6;
+}
+.dap-panel--side__aqua .h2 {
+  font-size: 1.2rem;
+  color: #004b88;
+}
+.dap-panel--side__aqua .h3 {
+  font-size: 1rem;
+  color: #191926;
+}
+.dap-panel--side__aqua .p {
+  font-size: 1rem;
+  color: #191926;
+}
 .section-notice__content {
   padding-top: 1em;
+}
+/**
+ * DECISION TREE
+ *
+ * Usage unknown.
+ * 
+ */
+.decision-tree {
+  padding: 0.5rem;
+  border: 1px solid #004b88;
+  background: #ffffff;
+  margin: box-spacing 0;
+  overflow: hidden;
+}
+.decision-tree__options {
+  list-style: none;
+  padding: 0;
+}
+.decision-tree__buttons button {
+  margin: 0 0.3rem 0.5rem 0;
+}
+/**
+ * EXTENT SWITCHER (BETA)
+ *
+ * Extent switcher, updated in beta.
+ */
+.beta-extent-switcher {
+  float: left;
+  border: #a5bddc 1px solid;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 479px) {
+  .beta-extent-switcher {
+    width: 100%;
+    float: none;
+  }
+}
+.beta-extent-switcher h2.beta-extent-switcher__heading {
+  font-size: 1rem;
+  color: #004b88;
+}
+.beta-extent-switcher .custom-dropdown__select {
+  width: 80%;
+}
+.beta-extent-switcher .custom-dropdown__button {
+  width: 17%;
+  float: right;
+}
+.main-container .revealable {
+  border: 1px solid #dfdfdf;
+}
+.main-container h3.revealable__heading {
+  font-size: 1.2rem;
+  outline: none;
+}
+.main-container .revealable__close {
+  text-decoration: none;
+}
+/**
+ * STAFF
+ *
+ * Use unknown.
+ */
+.staff {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.staff__name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.staff__photo {
+  float: right;
+}
+.staff__contacts {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+.staff__contacts > li {
+  margin: 0;
+}
+.staff__list {
+  list-style: none;
+  padding: 0;
+}
+/**
+ * STATUS
+ *
+ * Add introduction to content to show it is meant to look different
+ *
+ */
+.status {
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  background-color: #ffebc6;
+  color: #404040;
+  vertical-align: middle;
+  margin: 0;
+}
+.alpha-badge {
+  font-weight: 700;
+  background-color: #ffbf47;
+  color: #404040;
+  display: inline-block;
+  float: left;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+@media (max-width: 767px) {
+  .status p {
+    font-size: 0.8em;
+  }
+  .alpha-badge {
+    margin-top: 0px;
+  }
+}
+.content__header {
+  margin-top: -1rem;
+  background-color: #bfbfbf;
+}
+@media (max-width: 479px) {
+  .content__header {
+    margin-top: 0;
+  }
+}
+.section-notice + * .content__header {
+  margin-top: -1rem;
+}
+.content__header__content {
+  max-width: 1080px;
+  margin: auto;
+  clear: left;
+  padding: 1rem;
+}
+.content__header__content h2 {
+  font-size: 1.2rem;
+}
+.content__header__content ul {
+  list-style: none;
+  padding: 0;
+}
+.content__header__content a {
+  font-weight: 600;
+}
+@media (max-width: 479px) {
+  .content__header + .main-content {
+    margin-top: 0;
+  }
+}
+.beta-index-page {
+  margin-bottom: 2rem;
+}
+.beta-index-page__box {
+  border-bottom: 1px solid #bfbfbf;
+  margin-bottom: 1rem;
+  float: left;
+}
+.beta-index-page__box:last-child {
+  margin-bottom: 2rem;
+}
+.beta-index-page__box > * {
+  float: left;
+}
+@media screen and (max-width: 479px) {
+  .beta-index-page__box .beta-index-page__section h2 {
+    margin-bottom: 0;
+  }
+}
+.box,
+.highlight-adviseronly,
+.sideContent,
+.inlineContent,
+.extent-switcher,
+.index-page__box,
+.home-page__box,
+.login,
+.home-page__box--member-welcome,
+.home-page__box--member-search,
+.home-page__box--member-contact,
+.home-page__box--member-more,
+.home-page__box--member-volunteer,
+.home-page__box--member-campaigns,
+.home-page__box--member-supporters {
+  background-color: #f2f2f2;
+  border-top-width: 4px;
+}
+.box > h2,
+.highlight-adviseronly > h2,
+.sideContent > h2,
+.inlineContent > h2,
+.extent-switcher > h2,
+.index-page__box > h2,
+.home-page__box > h2,
+.login > h2,
+.home-page__box--member-welcome > h2,
+.home-page__box--member-search > h2,
+.home-page__box--member-contact > h2,
+.home-page__box--member-more > h2,
+.home-page__box--member-volunteer > h2,
+.home-page__box--member-campaigns > h2,
+.home-page__box--member-supporters > h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+  color: #004b88;
+}
+.box > h3,
+.highlight-adviseronly > h3,
+.sideContent > h3,
+.inlineContent > h3,
+.extent-switcher > h3,
+.index-page__box > h3,
+.home-page__box > h3,
+.login > h3,
+.home-page__box--member-welcome > h3,
+.home-page__box--member-search > h3,
+.home-page__box--member-contact > h3,
+.home-page__box--member-more > h3,
+.home-page__box--member-volunteer > h3,
+.home-page__box--member-campaigns > h3,
+.home-page__box--member-supporters > h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  color: #191926;
+}
+.box--yellow {
+  border-top-color: #ffbf47;
+}
+.box--aqua {
+  border-top-color: #81cec6;
+}
+.box--blue {
+  border-top-color: #004b88;
+}
+.main-content__sidebar {
+  padding: 1rem 0.75rem;
+  margin: 0;
+}
+.breadcrumb-lite {
+  padding-top: 0.5rem;
+}
+@media screen and (max-width: 479px) {
+  .breadcrumb-lite {
+    margin-top: 1.125rem;
+  }
 }
 /*# sourceMappingURL=site.css.map */
