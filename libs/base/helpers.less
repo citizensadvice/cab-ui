@@ -1,0 +1,76 @@
+﻿/**
+ * HELPERS
+ * JS hints, screenreader and clearfixes
+ */
+
+
+// .no-js is set on <html>, a script changes it to .js if scripts are running 
+.js .hide-js {display: none;}
+.no-js .hide-no-js {display: none;}
+
+// .no-cookies is set on <html> if a script cannot set a cookie
+.no-cookies .hide-no-cookies {
+    display: none;
+}
+
+.print-only {
+    display: none;
+}
+
+// Using these should generally be avoided in favour of
+// setting these properties explicitly using a selector
+// they are occasionally useful, though 
+.right {float: right;}
+.hide {display: none;}
+
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.screenreader {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// https://www.drupal.org/node/897638
+.screenreader--focusable {
+    &:active,&:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+.clearfix() {
+    &:after {
+        content: " "; // A space apparently works better with some older browsers
+        clear: both;
+        display: block;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+// alignment
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
