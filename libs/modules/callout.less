@@ -5,13 +5,83 @@
  * .callout( @callout-background, @callout-headings, @callout-text, @callout-border )
  */
 .callout {
-						  .callout( @beta-blue-lighter, @beta-blue-light ); .callout--border; .callout--border--left; // Create unstyled box
-	&--confirmation		{ .callout( @beta-green-light, @beta-green ); .callout--border--left; } // Green
-	&--warning 			{ .callout( @beta-red-lighter, @beta-red ); .callout--border--left; } // Red
-	&--alert 			{ .callout( @beta-yellow-light ); .callout--border--left; } //Yellow
-    &--quote      		{ .callout( @white, @gray-2 ); .callout--border; .callout--border--left; } // Gray
-    &--heritage			{ .callout( @heritage-yellow, @heritage-blue, @heritage-blue ); }
-    &--responsible		{ .callout( @responsible-aqua, @responsible-purple, @responsible-purple ); }
-    &--inventive		{ .callout( @inventive-pink, @inventive-teal ); }
-    &--generous			{ .callout( @generous-mauve, @generous-green ); }
+
+	// Unstyled
+	.callout( 
+		@beta-blue-lighter, 
+		@beta-blue-light 
+	); 
+	.callout--border; 
+	.callout--border--left; 
+
+	// Green
+	&--confirmation {
+		.callout( 
+			@beta-green-light, 
+			@beta-green 
+		); 
+		.callout--border--left; 
+	}
+
+	// Red
+	&--warning {
+		.callout( 
+			@beta-red-lighter,
+			@beta-red 
+		); 
+		.callout--border--left;
+	}
+
+	// Yellow
+	&--alert {
+		.callout( 
+			@beta-yellow-light 
+		); 
+		.callout--border--left;
+	}
+
+	// Gray
+    &--quote {
+    	.callout( 
+    		@white, 
+    		@gray-2
+    	); 
+    	.callout--border; 
+    	.callout--border--left; 
+    }
+
+    // Brand - Heritage
+    &--heritage	{
+    	.callout( 
+    		@heritage-yellow, 
+    		@heritage-blue, 
+    		@heritage-blue 
+    	); 
+    }
+
+    // Brand - Responsible
+    &--responsible { 
+    	.callout( 
+    		@responsible-aqua, 
+    		@responsible-purple, 
+    		@responsible-purple 
+    	); 
+    }
+
+    // Brand - Inventive
+    &--inventive { 
+    	.callout( 
+    		@inventive-pink, 
+    		@inventive-teal 
+    	);
+    }
+
+    // Brand - Generous
+    &--generous	{ 
+    	.callout( 
+    		@generous-mauve, 
+    		@generous-green 
+    	);
+    }
+
 }
