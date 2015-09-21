@@ -1,2 +1,5 @@
 # CodeKit config
 config.codekit
+
+# Annoying CSS files that shouldn't be there
+css/
