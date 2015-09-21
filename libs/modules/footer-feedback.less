@@ -1,0 +1,22 @@
+﻿/**
+ * FOOTER FEEDBACK
+ * 
+ * This is the feedback link, above the footer and below content, used on all pages
+ */
+
+
+ .footer-feedback {  
+    background-color: @white;
+    overflow: hidden; // Prevent collapsing margins
+    .text-align-center;
+}
+
+ .footer-feedback__content {
+    padding: 0 1em;
+    .limit-width();
+
+    @media (max-width: @screen-xs-max ) {
+        text-align: left;
+    }
+ }
+
