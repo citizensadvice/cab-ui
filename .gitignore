@@ -3,3 +3,4 @@ config.codekit
 
 # Annoying CSS files that shouldn't be there
 css/
+libs/css/
