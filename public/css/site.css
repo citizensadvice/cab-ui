@@ -14,6 +14,9 @@ body {
 section {
   margin-top: 2.5rem;
 }
+#main-nav {
+  overflow: hidden !important;
+}
 /* Base */
 /**
  * Style Guide
@@ -2899,12 +2902,12 @@ button[type="submit"]:hover {
 .steps .title,
 .steps--navigation .title {
   padding: 0;
-  text-decoration: none;
+  text-decoration: none !important;
   border: none;
 }
 .steps ul,
 .steps--navigation ul {
-  background: none;
+  background: none !important;
   list-style: none;
   padding: 0;
 }
