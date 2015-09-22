@@ -1,65 +1,7 @@
 ﻿// Basic form styling
 
-fieldset {
-    padding: 1em;
-    margin: 1em 0; 
-}
-
-legend {
-	font-size: 1.2em;
-    font-weight: 600;
-}
-
-label {
-    font-weight: 600;
-}
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    cursor: pointer;
-}
-
-textarea,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=search] {
-	padding: .2em;
-	width: 100%;
-    border-radius: 0;
-}
-
-input[type=search] {
-    -webkit-appearance: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-input[type=checkbox] + label {
-    font-weight: normal;
-    padding-left: .5em;
-}
-
-input[type=text][size="1"] {width: 3em;}
-
-input[type=search] {width: 70%}
-input[type=search].search--full-width {
-    width: 100%;
-}
-
-select {
-	padding: .2em;
-    max-width: 100%;
-}
-
 // max-width does not work on a select in a fieldset in Firefox or Chrome
 // https://bugzilla.mozilla.org/show_bug.cgi?id=823483
-fieldset select {
-    width: 100%;
-}
-
 textarea,
 input,
 select {

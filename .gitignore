@@ -4,6 +4,3 @@ config.codekit
 # Annoying CSS files that shouldn't be there
 css/
 libs/css/
-
-# Lets us create local files for hacky testing and screenshots
-*ignore.*
