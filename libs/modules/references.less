@@ -1,0 +1,128 @@
+﻿/**
+ * REFERENCES
+ *
+ * *ASSUMPTION* This is is the file for when users are logged in to record references on links.
+ *
+ */
+
+// Headings
+
+.ref-heading__toggle {
+	float: right; 
+	max-width: 25%; 
+	text-align: right; 
+	display: inline-block;
+
+    & > a {
+        // Override global word break
+        word-wrap: normal;
+    }
+}
+
+.ref-heading__heading {
+	float: left; 
+	width: 74%;
+}
+
+.ref-heading__toggle--on {
+	color: @beta-green; 
+	background: none; 
+	padding-right: 0; 
+}
+
+
+// This is where REM units should be useful.  We are resetting the size to 1rem
+h1 > .ref-heading__toggle,
+h2 > .ref-heading__toggle,
+h2 > .ref-heading__toggle,
+h2 > .ref-heading__toggle {
+    font-size: @font-size-base;
+    padding-top: @box-spacing*.2; // Give .2em of the heading size
+}
+
+
+
+/* Called this out and refactored, test on site
+
+// This is where REM units should be useful.  We are resetting the size to 1rem
+h1 > .ref-heading__toggle {
+    font-size: 1/2.5em;
+    padding-top: .4*2.5em; // Give .2em of the heading size
+}
+h2 > .ref-heading__toggle {
+    font-size: 1/2em;
+    padding-top: .4*2em;
+}
+h3 > .ref-heading__toggle {
+    font-size: 1/1.6em;
+    padding-top: .4*1.6em;
+}
+h4 > .ref-heading__toggle {
+    font-size: 1/1.3em;
+    padding-top: .4*1.3em;
+}
+*/
+
+
+// Breaks the modular nature
+.revealable__heading > .ref-heading__toggle {
+    font-size: 1/1.5em;
+    padding-top: .2*1.5em;
+}
+
+.ref-added {margin-right: @box-spacing-horizontal*.4;}
+
+/* Highlight heading when hovering over a reference */
+.ref-heading {
+	overflow: hidden; 
+	position: relative; 
+}
+
+.ref-heading__toggle a:hover:before, 
+.ref-heading__toggle a:focus:before {
+	content: " "; 
+	width: 100%; 
+	height: 100%; 
+	left: 0; 
+	top: 0; 
+	background-color: @gray-7; 
+	display: block; 
+	position: absolute; 
+	z-index: -1;
+}
+
+// Dialog
+
+.dialog--refs {
+	width: 50em;
+	height: 30em;
+}
+
+.dialog--refs--save {
+	max-width: 30em;
+	height: auto;
+}
+
+.ref-dialog__list-item {
+	position: relative; 
+	padding-right: @box-spacing-horizontal*2; // Space for the delete button
+}
+
+.ref-dialog__item-button {
+	position: absolute;
+	right: 0; 
+	top: 50%;
+	margin: -.9em 0 0 0; 
+	font-size: @font-size-small;
+	padding: .1em .2em;
+}
+.ref-dialog__list-item--removed {
+    text-decoration: line-through;
+    color: @gray-0;
+    opacity: 0.6;
+}
+// Overide arrow styling
+li.ref-dialog__list-item--highlight {
+    background-color: @gray-7;
+}
+
