@@ -17,12 +17,29 @@ h6 {
     line-height:    @line-height-heading;
     color:          @heading-primary-color;
     font-weight:    @font-weight-bolder;
-    margin-top:     0.75em;
-    margin-bottom:  0.75em;
+    margin-top:     1em;
+    margin-bottom:  0.6em;
+}
+
+.beta .main-container h1,
+.beta .main-container h2,
+.beta .main-container h3,
+.beta .main-container h4,
+.beta .main-container h5,
+.beta .main-container h6 {
+    line-height:    @line-height-heading;
+    color:          @heading-primary-color;
+    font-weight:    @font-weight-bolder;
+    margin-top:     1em;
+    margin-bottom:  0.6em;
+}
+
+.beta-extent-switcher__heading {
+    font-size:      @font-size-base;
 }
 
 h1 {
-    font-size:      @font-size-h1;
+    font-size:      @font-size-h1 !important;
     font-weight:    @font-weight-boldest;
 
     &.title__heading {
@@ -31,27 +48,28 @@ h1 {
 }
 
 h2 {
-    font-size:      @font-size-h2;
+    font-size:      @font-size-h2 !important;
+    font-weight:    @font-weight-bolder !important;
 }
 
 h3 {
-    font-size:      @font-size-h3;
-    font-weight:    600 !important;
+    font-size:      @font-size-h3 !important;
+    font-weight:    @font-weight-bold !important;
 }
 
 h4 {
-    font-size:      @font-size-h4;
-    font-weight:    600 !important;
+    font-size:      @font-size-h4 !important;
+    font-weight:    @font-weight-bold !important;
 }
 
 h5 {
-    font-size:      @font-size-h5;
-    font-weight:    600 !important;
+    font-size:      @font-size-h5 !important;
+    font-weight:    @font-weight-bold !important;
 }
 
 h6 {
-    font-size:      @font-size-h5;
-    font-weight:    600 !important;
+    font-size:      @font-size-h5 !important;
+    font-weight:    @font-weight-bold !important;
 }
 
 h1 + h2,

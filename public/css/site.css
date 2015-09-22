@@ -3,7 +3,6 @@
  *
  * Global styles and overrides
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 html,
 body {
   font-family: 'Open Sans', sans-serif;
@@ -18,7 +17,7 @@ section {
   padding: 0 !important;
   max-width: 1024px !important;
 }
-#main {
+.main-content__right {
   width: 70%;
 }
 #main-nav {
@@ -27,6 +26,88 @@ section {
 .side-nav,
 .beta-extent-switcher {
   width: 30% !important;
+}
+.related-content {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffffff;
+  color: #191926;
+  border: 0px #006278 solid;
+  display: block;
+  border-width: 1px;
+  border-width: 8px 1px 1px 1px;
+}
+.related-content h1,
+.related-content h2,
+.related-content h3 {
+  color: #006278 !important;
+  font-size: 1.3rem;
+}
+.related-content a {
+  border-bottom-color: #006278;
+}
+.related-content > *:first-child {
+  padding-top: 0.75rem;
+}
+.related-content h1:first-child,
+.related-content h2:first-child,
+.related-content h3:first-child,
+.related-content h4:first-child,
+.related-content h5:first-child,
+.related-content h6:first-child {
+  margin-top: 0;
+}
+.related-content li:first-child {
+  padding-top: 0;
+}
+.related-content > *:last-child {
+  margin-bottom: 0 !important;
+}
+.related-content .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #f2f2f2;
+  color: #191926;
+  border-bottom: 1px solid #006278;
+  text-decoration: none !important;
+  position: relative;
+}
+.related-content .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #e6e6e6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.related-content .callout__link:hover {
+  background-color: #e6e6e6;
+  color: #191926;
+}
+.related-content .callout__link:hover:after {
+  background-color: #cccccc;
+}
+.related-content .callout__link--anchor:after {
+  content: "\f063";
+}
+.related-content .callout__link:last-child {
+  border: none;
+}
+.beta .main-container h3 {
+  margin-top: 0 !important;
+}
+.beta-extent-switcher__heading {
+  font-size: 1rem !important;
+  margin-top: 0 !important;
 }
 /* Base */
 /**
@@ -168,7 +249,7 @@ pre h1,
 pre h2,
 pre h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre a {
   border-bottom-color: #9f9f9f;
@@ -230,7 +311,7 @@ pre h1,
 pre h2,
 pre h3 {
   color: #a5bddc !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre a {
   border-bottom-color: #72b3ff;
@@ -305,7 +386,7 @@ pre--confirmation h1,
 pre--confirmation h2,
 pre--confirmation h3 {
   color: #5e8e33 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--confirmation a {
   border-bottom-color: #91c661;
@@ -377,7 +458,7 @@ pre--warning h1,
 pre--warning h2,
 pre--warning h3 {
   color: #df3034 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--warning a {
   border-bottom-color: #e97275;
@@ -449,7 +530,7 @@ pre--alert h1,
 pre--alert h2,
 pre--alert h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--alert a {
   border-bottom-color: #ffbf47;
@@ -522,7 +603,7 @@ pre--quote h1,
 pre--quote h2,
 pre--quote h3 {
   color: #606060 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--quote a {
   border-bottom-color: #bfbfbf;
@@ -595,7 +676,7 @@ pre--heritage h1,
 pre--heritage h2,
 pre--heritage h3 {
   color: #004b88 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--heritage a {
   border-bottom-color: #e17f04;
@@ -665,7 +746,7 @@ pre--responsible h1,
 pre--responsible h2,
 pre--responsible h3 {
   color: #57486b !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--responsible a {
   border-bottom-color: #449a55;
@@ -735,7 +816,7 @@ pre--inventive h1,
 pre--inventive h2,
 pre--inventive h3 {
   color: #006278 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--inventive a {
   border-bottom-color: #f56333;
@@ -805,7 +886,7 @@ pre--generous h1,
 pre--generous h2,
 pre--generous h3 {
   color: #00553f !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--generous a {
   border-bottom-color: #665aad;
@@ -1338,33 +1419,49 @@ h6 {
   line-height: 1.3;
   color: #004b88;
   font-weight: 700;
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+.beta .main-container h1,
+.beta .main-container h2,
+.beta .main-container h3,
+.beta .main-container h4,
+.beta .main-container h5,
+.beta .main-container h6 {
+  line-height: 1.3;
+  color: #004b88;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+.beta-extent-switcher__heading {
+  font-size: 1rem;
 }
 h1 {
-  font-size: 2.3rem;
+  font-size: 2.3rem !important;
   font-weight: 800;
 }
 h1.title__heading {
   margin-top: 0;
 }
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem !important;
   font-weight: 600 !important;
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem !important;
   font-weight: 600 !important;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 600 !important;
 }
 h6 {
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 600 !important;
 }
 h1 + h2,
@@ -1421,7 +1518,7 @@ hr {
   border-top: 1px solid #9f9f9f;
 }
 .p-lede {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.7;
 }
@@ -1493,7 +1590,7 @@ hr {
 .callout h2,
 .callout h3 {
   color: #a5bddc !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout a {
   border-bottom-color: #72b3ff;
@@ -1568,7 +1665,7 @@ hr {
 .callout--confirmation h2,
 .callout--confirmation h3 {
   color: #5e8e33 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--confirmation a {
   border-bottom-color: #91c661;
@@ -1640,7 +1737,7 @@ hr {
 .callout--warning h2,
 .callout--warning h3 {
   color: #df3034 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--warning a {
   border-bottom-color: #e97275;
@@ -1712,7 +1809,7 @@ hr {
 .callout--alert h2,
 .callout--alert h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--alert a {
   border-bottom-color: #ffbf47;
@@ -1785,7 +1882,7 @@ hr {
 .callout--quote h2,
 .callout--quote h3 {
   color: #606060 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--quote a {
   border-bottom-color: #bfbfbf;
@@ -1858,7 +1955,7 @@ hr {
 .callout--heritage h2,
 .callout--heritage h3 {
   color: #004b88 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--heritage a {
   border-bottom-color: #e17f04;
@@ -1928,7 +2025,7 @@ hr {
 .callout--responsible h2,
 .callout--responsible h3 {
   color: #57486b !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--responsible a {
   border-bottom-color: #449a55;
@@ -1998,7 +2095,7 @@ hr {
 .callout--inventive h2,
 .callout--inventive h3 {
   color: #006278 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--inventive a {
   border-bottom-color: #f56333;
@@ -2068,7 +2165,7 @@ hr {
 .callout--generous h2,
 .callout--generous h3 {
   color: #00553f !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--generous a {
   border-bottom-color: #665aad;
@@ -2513,7 +2610,77 @@ hr {
   border-width: 1px;
 }
 .steps {
+  padding: 0 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: white;
+  color: #191926;
+  border: 0px #bfbfbf solid;
+  display: block;
   border-width: 1px;
+  border-width: 8px 1px 1px 1px;
+  margin-top: 2rem;
+}
+.steps h1,
+.steps h2,
+.steps h3 {
+  color: #191926 !important;
+  font-size: 1.3rem;
+}
+.steps a {
+  border-bottom-color: #bfbfbf;
+}
+.steps > *:first-child {
+  padding-top: 0.75rem;
+}
+.steps h1:first-child,
+.steps h2:first-child,
+.steps h3:first-child,
+.steps h4:first-child,
+.steps h5:first-child,
+.steps h6:first-child {
+  margin-top: 0;
+}
+.steps li:first-child {
+  padding-top: 0;
+}
+.steps > *:last-child {
+  margin-bottom: 0 !important;
+}
+.steps .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem !important;
+  border: none;
+  background-color: #f2f2f2;
+  color: #191926;
+  border-bottom: 1px solid #bfbfbf;
+  text-decoration: none !important;
+  position: relative;
+}
+.steps .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #e6e6e6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.steps .callout__link:hover {
+  background-color: #e6e6e6;
+  color: #191926;
+}
+.steps .callout__link:hover:after {
+  background-color: #cccccc;
+}
+.steps .callout__link--anchor:after {
+  content: "\f063";
 }
 .steps .callout__link:last-child {
   border: none;
@@ -2521,14 +2688,32 @@ hr {
 .steps .flex-row {
   padding: 0;
 }
+.steps h3 {
+  color: #004b88 !important;
+}
 .steps ul {
   margin: 0;
   padding: 0 2rem;
 }
+.steps ul li {
+  margin-bottom: 1rem !important;
+}
+.steps ul li:first-child {
+  margin-top: .5rem !important;
+}
+.steps ul li:last-child {
+  margin-bottom: 0 !important;
+}
+.steps a {
+  border-width: 0 !important;
+}
+.steps a:hover {
+  border-bottom-width: 1px !important;
+}
 .steps--navigation {
   padding: 0 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: white;
+  background-color: #ffffff;
   color: #191926;
   border: 0px #bfbfbf solid;
   display: block;
@@ -2538,7 +2723,7 @@ hr {
 .steps--navigation h2,
 .steps--navigation h3 {
   color: #f2f8ff !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .steps--navigation a {
   border-bottom-color: #bfbfbf;
