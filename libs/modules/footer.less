@@ -1,0 +1,55 @@
+﻿/**
+ * FOOTER
+ *
+ * General styling for site wide footer.
+ */
+
+.main-footer {
+    background-color: @blue-30;
+    .black-text;
+    overflow: hidden; // Prevent collapsing margins
+
+    .li--arrow {
+        list-style-image: url("/static/images/arrow-bullet-fff.png");
+        list-style-image: url("/static/images/arrow-bullet-fff.svg");
+    }
+}
+
+.main-footer__content {
+    .limit-width(@max-page-width);
+}
+
+.main-footer__box {
+    
+    padding: @box-spacing-horizontal;
+
+    & > h2 {
+        color:@blue;
+        font-size: @font-size-large;
+        margin: 0;
+    }
+
+    & > ul {
+        list-style: none;
+        padding: 0;
+        margin: @box-spacing-horizontal 0 0 0;
+
+        // Messy, but makes box reuse a bit easier
+        &.li--arrow {
+            list-style-image: none;
+        }
+        
+    }
+
+}
+
+.main-footer__box--survey {
+    border-bottom: 2px solid @white;
+}
+
+.main-footer__box--copyright {
+    & img {
+        float: left;
+        margin-right: @box-spacing-horizontal*2;
+    }
+}
