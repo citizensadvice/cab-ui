@@ -1631,6 +1631,10 @@ input[type="checkbox"] {
   margin-top: 1px \9;
   line-height: normal;
 }
+input[type="radio"][disabled],
+input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+}
 input[type="file"] {
   display: block;
 }
@@ -1708,71 +1712,8 @@ output {
   line-height: 1.6;
   color: #000000;
 }
-/**********************************************************************/
-.form__field {
-  display: block;
-  width: 100%;
-  height: 37px;
-  padding: 5px 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #000000;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-  /*
-    // Placeholder
-    @include placeholder;
-
-    // Disabled and read-only inputs
-    //
-    // HTML5 says that controls under a fieldset > legend:first-child won't be
-    // disabled if the fieldset is disabled. Due to implementation difficulty,
-    // we don't honor that edge case; we style them as disabled anyway.
-    &[disabled],
-    &[readonly],
-    fieldset[disabled] & {
-        cursor: $cursor-disabled;
-        background-color: $field-bg-disabled;
-        opacity: 1; // iOS fix for unreadable disabled content
-    }
-    */
-}
-.form__field:focus {
-  border-color: #66afe9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
-  outline: 0 none;
-}
-.form__field--day,
-.form__field--month {
-  width: 4em;
-}
-.form__field--year {
-  width: 4.5em;
-}
-.form__field--time {
-  width: 6em;
-}
 textarea.form__field {
   height: auto;
-}
-/**********************************************************************
- * Special styles for iOS temporal inputs
- *
- * In Mobile Safari, setting `display: block` on temporal inputs causes the
- * text within the input to become vertically misaligned. As a workaround, we
- * set a pixel line-height that matches the given height of the input, but only
- * for Safari.
- */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    line-height: 37px;
-  }
 }
 /* Overrides 'Choose file' button
 input[type="file"]::-webkit-file-upload-button {
@@ -1881,8 +1822,22 @@ input[type="file"]::before {
   border: none;
   resize: none;
 }
+/*
+ * Grouping .form styles with the magic of LESS
+ *
+ */
 .form {
   margin: 1em 0;
+  /**********************************************************************
+     * Help text
+     *
+     * Apply to any element you wish to create light text for placement immediately
+     * below a form control. Use for general help, formatting, or instructional
+     * text.
+     */
+  /**********************************************************************
+     * Static fields.
+     */
 }
 .form__row,
 .form__group {
@@ -1897,16 +1852,16 @@ input[type="file"]::before {
   display: table;
   width: 100%;
 }
-.form--table > .form__row {
+.form--table > .form--table__row {
   display: table-row;
 }
-.form--table > .form__row > .form__label,
-.form--table > .form__row > label {
+.form--table > .form--table__row > .form--table > .form--table__row__label,
+.form--table > .form--table__row > label {
   display: table-cell;
   white-space: nowrap;
   padding: 0 1em 1em 0;
 }
-.form--table > .form__row > .form__control {
+.form--table > .form--table__row > .form--table > .form--table__row__control {
   display: table-cell;
   width: 100%;
   padding-bottom: 1em;
@@ -1915,16 +1870,16 @@ input[type="file"]::before {
   .form--table {
     display: block;
   }
-  .form--table > .form__row {
+  .form--table > .form--table__row {
     display: block;
   }
-  .form--table > .form__row > .form__label,
-  .form--table > .form__row > label {
+  .form--table > .form--table__row > .form--table > .form--table__row__label,
+  .form--table > .form--table__row > label {
     display: block;
     white-space: normal;
     padding: 0;
   }
-  .form--table > .form__row > .form__control {
+  .form--table > .form--table__row > .form--table > .form--table__row__control {
     display: block;
     width: 100%;
   }
@@ -2054,10 +2009,10 @@ input[type="file"]::before {
 .form__checkbox--boxed {
   width: 100%;
 }
-.form__radio--boxed > .form__radio__desc,
-.form__checkbox--boxed > .form__radio__desc,
-.form__radio--boxed > .form__checkbox__desc,
-.form__checkbox--boxed > .form__checkbox__desc {
+ > .form__radio--boxed__radio__desc,
+ > .form__checkbox--boxed__radio__desc,
+ > .form__radio--boxed__checkbox__desc,
+ > .form__checkbox--boxed__checkbox__desc {
   padding-left: 40px;
   padding-top: 0;
   margin-top: -10px;
@@ -2102,40 +2057,6 @@ input[type="file"]::before {
   top: -10px;
   margin-bottom: -10px;
 }
-.box--1 .form__radio--boxed.is-selected,
-.box--1 .form__checkbox--boxed.is-selected,
-.box--1 .form__radio-inline--boxed.is-selected,
-.box--1 .form__checkbox-inline--boxed.is-selected {
-  background: none repeat scroll 0 0 #fff;
-}
-.box--2 .form__radio--boxed,
-.box--2 .form__checkbox--boxed,
-.box--2 .form__radio-inline--boxed,
-.box--2 .form__checkbox-inline--boxed {
-  background: #eee;
-}
-.box--2 .form__radio--boxed:hover,
-.box--2 .form__checkbox--boxed:hover,
-.box--2 .form__radio-inline--boxed:hover,
-.box--2 .form__checkbox-inline--boxed:hover {
-  border-color: #ccc;
-}
-.box--2 .form__radio--boxed.is-selected,
-.box--2 .form__checkbox--boxed.is-selected,
-.box--2 .form__radio-inline--boxed.is-selected,
-.box--2 .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
-  background: #ccc;
-}
-input[type="radio"][disabled],
-input[type="checkbox"][disabled] {
-  cursor: not-allowed;
-}
-.form__radio-inline.is-disabled,
-.form__checkbox-inline.is-disabled {
-  color: #999;
-  cursor: not-allowed;
-}
 .form__radio,
 .form__checkbox {
   cursor: pointer;
@@ -2149,23 +2070,34 @@ input[type="checkbox"][disabled] {
 .form__checkbox.is-disabled label {
   cursor: not-allowed;
 }
-.panel--a .form__radio--boxed,
-.panel--a .form__checkbox--boxed,
-.panel--a .form__radio-inline--boxed,
-.panel--a .form__checkbox-inline--boxed {
-  background: #eee;
+.form__radio-inline.is-disabled,
+.form__checkbox-inline.is-disabled {
+  color: #999;
+  cursor: not-allowed;
 }
-.panel--a .form__radio--boxed:hover,
-.panel--a .form__checkbox--boxed:hover,
-.panel--a .form__radio-inline--boxed:hover,
-.panel--a .form__checkbox-inline--boxed:hover {
-  background: #ccc;
+.form__help {
+  color: #666;
+  margin-bottom: 5px;
 }
-.panel--a .form__radio--boxed.is-selected,
-.panel--a .form__checkbox--boxed.is-selected,
-.panel--a .form__radio-inline--boxed.is-selected,
-.panel--a .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
+.form__hint {
+  color: #999;
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.panel .form__hint {
+  display: none;
+}
+.form__error {
+  color: #c02f43;
+  display: block;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.form__field--static {
+  max-width: 100%;
+  margin-bottom: 5px;
+  display: block;
 }
 .form--inline-group .form__group {
   display: inline-block;
@@ -2218,39 +2150,58 @@ input[type="checkbox"][disabled] {
     width: 1px;
   }
 }
-/**********************************************************************
- * Help text
- *
- * Apply to any element you wish to create light text for placement immediately
- * below a form control. Use for general help, formatting, or instructional
- * text.
- */
-.form__help {
-  color: #666;
-  margin-bottom: 5px;
+.form__field--day,
+.form__field--month {
+  width: 4em;
 }
-.form__hint {
-  color: #999;
-  display: inline-block;
-  font-weight: 400;
-  margin-left: 2px;
+.form__field--year {
+  width: 4.5em;
 }
-.panel .form__hint {
-  display: none;
+.form__field--time {
+  width: 6em;
 }
-.form__error {
-  color: #c02f43;
-  display: block;
-  font-weight: 400;
-  margin-top: 5px;
+.box--1 .form__radio--boxed.is-selected,
+.box--1 .form__checkbox--boxed.is-selected,
+.box--1 .form__radio-inline--boxed.is-selected,
+.box--1 .form__checkbox-inline--boxed.is-selected {
+  background: none repeat scroll 0 0 #fff;
 }
-/**********************************************************************
- * Static fields.
- */
-.form__field--static {
-  max-width: 100%;
-  margin-bottom: 5px;
-  display: block;
+.box--2 .form__radio--boxed,
+.box--2 .form__checkbox--boxed,
+.box--2 .form__radio-inline--boxed,
+.box--2 .form__checkbox-inline--boxed {
+  background: #eee;
+}
+.box--2 .form__radio--boxed:hover,
+.box--2 .form__checkbox--boxed:hover,
+.box--2 .form__radio-inline--boxed:hover,
+.box--2 .form__checkbox-inline--boxed:hover {
+  border-color: #ccc;
+}
+.box--2 .form__radio--boxed.is-selected,
+.box--2 .form__checkbox--boxed.is-selected,
+.box--2 .form__radio-inline--boxed.is-selected,
+.box--2 .form__checkbox-inline--boxed.is-selected {
+  border-color: #ccc;
+  background: #ccc;
+}
+.panel--a .form__radio--boxed,
+.panel--a .form__checkbox--boxed,
+.panel--a .form__radio-inline--boxed,
+.panel--a .form__checkbox-inline--boxed {
+  background: #eee;
+}
+.panel--a .form__radio--boxed:hover,
+.panel--a .form__checkbox--boxed:hover,
+.panel--a .form__radio-inline--boxed:hover,
+.panel--a .form__checkbox-inline--boxed:hover {
+  background: #ccc;
+}
+.panel--a .form__radio--boxed.is-selected,
+.panel--a .form__checkbox--boxed.is-selected,
+.panel--a .form__radio-inline--boxed.is-selected,
+.panel--a .form__checkbox-inline--boxed.is-selected {
+  border-color: #ccc;
 }
 .custom-dropdown {
   display: inline-block;
@@ -2286,6 +2237,13 @@ input[type="checkbox"][disabled] {
 }
 .custom-dropdown > i:before {
   padding: 0;
+}
+.custom-dropdown__select {
+  width: 80%;
+}
+.custom-dropdown__button {
+  width: 17%;
+  float: right;
 }
 .no-pointer-events .custom-dropdown > i {
   display: none;
@@ -2339,410 +2297,6 @@ input.custom-dropdown__button {
 .checkbox-radio-inner label {
   display: inline-block;
   margin-left: 1em;
-}
-/*
- * Old form styles
- *
- */
-.letter-buttons input[type="submit"],
-.letter-buttons a {
-  clear: both;
-  margin: 10px 0;
-  margin-right: 0;
-}
-.letter-buttons a {
-  padding-top: 12px;
-}
-.email-section-desc {
-  display: none;
-}
-.form-item .example-image {
-  float: left;
-  max-width: 60%;
-}
-.form-item-inner {
-  margin-bottom: 10px;
-}
-.log-in-container .valMessage {
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 10px;
-}
-.log-in-container label {
-  margin-bottom: 5px;
-}
-.log-in-container input[type="text"],
-.log-in-container input[type="password"] {
-  width: 100%;
-}
-.remember-me-item label {
-  width: auto;
-  display: inline;
-  margin-right: 10px;
-}
-.remember-me-item input {
-  margin-top: 11px!important;
-}
-/*Letters*/
-.letter-preview {
-  padding: 20px;
-  background: #fff;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  box-shadow: 3px 3px 5px #ccc;
-}
-.popup_content .form-validation {
-  margin-left: 0;
-}
-/*Three Column layout*/
-.column-headers {
-  padding-left: 32.5%;
-}
-.column-headers.long {
-  padding-left: 39.5%;
-}
-.column-headers p {
-  width: 49%;
-  float: left;
-  padding-top: 0;
-}
-/*Budget validation*/
-.budget-body .valMessage {
-  margin: 10px 0 5px 39%;
-  width: auto!important;
-}
-.budget-body .valMessage span {
-  width: 100%!important;
-}
-.budget-body .three-cols .valMessage {
-  margin: 10px 0 5px 32.7%;
-}
-.budget-body .four-cols .valMessage {
-  margin: 10px 0 5px 24.5%;
-}
-#validationError .valMessage {
-  margin: 10px 0 20px 33%;
-}
-.valMessage a,
-.valMessage a:visited,
-.valMessage a:visited {
-  color: red!important;
-}
-.validation-summary {
-  margin-bottom: 20px;
-  color: red;
-  padding: 20px;
-  background: #FFF0F0;
-  border: 1px solid red;
-}
-/*Button variants*/
-input[type="submit"].secondary-button {
-  background: #004b88;
-}
-input[type="submit"].secondary-button:hover {
-  background: #004d9b;
-}
-input[type="submit"].secondary-button-small {
-  background: #004b88;
-  height: 25px;
-}
-input[type="submit"].secondary-button-small:hover {
-  background: #004d9b;
-}
-input[type="submit"].button-small {
-  height: 25px;
-}
-/*Checkbox styles - To be used on full search page */
-.form-item.checkbox-container label {
-  width: 80%;
-  text-align: left;
-  float: left;
-  font-weight: normal;
-}
-.form-item.checkbox-container input[type="checkbox"] {
-  margin: 8px 10px 0 0;
-  float: left;
-  background: transparent;
-  border: 0;
-}
-.form-item.checkbox-left label {
-  width: 70%;
-  text-align: left;
-  float: left;
-  font-weight: normal;
-}
-.form-item.checkbox-left input[type="checkbox"] {
-  margin: 10px;
-  float: left;
-  background: transparent;
-  border: 0;
-}
-/*Nav Search*/
-.header-search select {
-  width: 100%;
-}
-.search-field {
-  margin: 0px 10px 0px 10px;
-}
-.search-field input[type="text"] {
-  float: left;
-  height: 32px;
-  margin-bottom: 0px;
-  width: 325px;
-}
-/*Search*/
-.search {
-  float: right;
-  clear: both;
-}
-.search-form input[type="text"] {
-  width: 100%;
-  height: 50px;
-}
-.search-form input[type="submit"] {
-  width: 100%;
-  height: 50px;
-  color: #FFF;
-  background: #477e26;
-  border: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.search-form input[type="submit"]:hover {
-  background: #2B4C17;
-}
-.search-form select {
-  width: 100%;
-  margin-top: 10px;
-}
-.search-form h1 {
-  padding-bottom: 10px;
-}
-.search-form p {
-  padding: 5px 0;
-}
-.search-form.adviceAZ {
-  margin-top: 20px;
-}
-/*Faceted search*/
-.filter-form span {
-  width: 100%;
-  display: block;
-}
-.filter-form input[type="checkbox"] {
-  margin: 10px;
-  float: left;
-  background: transparent;
-  border: 0;
-  clear: left;
-}
-.filter-form label {
-  width: 70%;
-  text-align: left;
-  float: left;
-  font-weight: normal;
-}
-/*Small Form*/
-.form-item.small label,
-.form-item.small input[type="text"],
-.form-item.small select,
-.form-item.small input[type="email"],
-.form-item.small input[type="password"] {
-  display: block;
-  width: 95%;
-}
-.form-item.small input[type="submit"] {
-  display: block;
-  margin: 10px 0 10px 10px;
-  width: 95%;
-  float: none;
-}
-.form-item.small {
-  margin: 10px 0;
-}
-/*Search block*/
-/*.search-block {
-        margin: 1em 0;
-    }
-.search-block input {
-    box-sizing: border-box;
-}
-.search-block input[type="text"] {
-    width: 65%;
-    float: left;
-    height: 40px;
-}
-.search-block input[type="submit"] {
-    width: 30%;
-    float: right;
-    height: 40px;
-    border-radius: 5px;
-    background: #477e26;
-    font-size: 1em;
-    color: #FFF;
-    border: none;
-}
-.search-block input[type="submit"]:hover {
-    background: #2B4C17!important;
-}
-.log-in-container .form-item input[type="submit"] {
-    margin-right: 0;
-} */
-/*Community CSS*/
-.subscription-module .form-item label {
-  float: none!important;
-  display: inline!important;
-  width: auto!important;
-}
-.subscription-module span {
-  margin-top: 10px;
-  display: block;
-}
-@media screen and (max-width: 767px) {
-  .total-box,
-  .budget-total-container.four-cols .total-box {
-    width: 99%;
-  }
-  .budget-body .valMessage,
-  .budget-body .three-cols .valMessage,
-  #validationError .valMessage {
-    margin: 10px 0 5px 0;
-  }
-  .budgetTool input[type="submit"] {
-    margin-right: 0!important;
-  }
-  .budget-right {
-    float: none!important;
-  }
-  .budgetTool input[type="text"] {
-    margin-left: 2px!important;
-  }
-  .monthlyTotalSalary {
-    width: 98%;
-  }
-  .budget-total-container .total,
-  .budget-total-container .total.long,
-  .budget-total-container.four-cols .total {
-    width: 100%;
-  }
-  .column-headers {
-    display: none;
-  }
-  .form-item .example-image {
-    max-width: 100%;
-  }
-  .search-form select {
-    width: 60%;
-    float: right;
-  }
-  .false-label {
-    width: 100%;
-  }
-  .form-item label {
-    margin-bottom: 10px;
-  }
-  .form-item label,
-  .form-item input[type="text"],
-  .form-item select,
-  .form-item input[type="email"],
-  .form-item input[type="password"] {
-    display: block;
-    width: 98%!important;
-  }
-  .form-item input[type="submit"] {
-    display: block;
-    margin: 10px 0 10px 0px;
-    width: 95%;
-    float: none;
-  }
-  .form-item textarea {
-    width: 98%!important;
-  }
-  .valMessage {
-    margin-left: 0;
-  }
-  .search-field input[type="submit"] {
-    margin-top: 2px;
-  }
-  .form-item {
-    margin-bottom: 10px;
-  }
-  .form-item.checkbox-container label {
-    width: 90%;
-  }
-  .form-item.checkbox-container input[type="checkbox"] {
-    float: left;
-  }
-  .default-form textarea {
-    width: 99%!important;
-  }
-  .default-form div label,
-  .default-form input[type="text"],
-  .default-form textarea {
-    width: 95%;
-  }
-  .form-item .text-box-example,
-  .form-item .text-box-example-second {
-    margin-left: 0;
-  }
-  .form-item .text-box-example,
-  .form-item .text-box-example-second {
-    width: 100%;
-  }
-  .form-item label {
-    float: none;
-    padding-left: 0;
-  }
-  .form-item.checkbox-radio div {
-    width: 100%;
-  }
-  .form-item.checkbox-radio .checkbox-radio-inner {
-    width: 100%;
-  }
-  .budgetTool input[type="submit"] {
-    width: 99%!important;
-  }
-}
-/* Other form related classes (specific) */
-@media screen and (max-width: 1200px) {
-  .log-in-container.span8 {
-    width: 80%!important;
-  }
-}
-@media screen and (max-width: 980px) {
-  .log-in-container .form-item label,
-  .log-in-container .form-item input[type="text"],
-  .log-in-container .form-item select,
-  .log-in-container .form-item input[type="email"],
-  .log-in-container .form-item input[type="password"] {
-    display: block;
-    width: 95%;
-  }
-  .log-in-container .form-item.remember-me-item label {
-    width: auto;
-    display: inline;
-  }
-  .log-in-container .form-item input[type="submit"] {
-    display: block;
-    margin: 10px 0 10px 10px;
-    width: 95%;
-    float: none;
-  }
-  .search-field input[type="text"] {
-    float: left;
-    height: 32px;
-    margin-bottom: 0px;
-    width: 80%;
-  }
-  .search-field input[type="submit"] {
-    width: 19%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .log-in-container.span8 {
-    width: 100%!important;
-  }
 }
 /**
  * FRAMEWORK
@@ -6965,50 +6519,6 @@ input.tablesort-filter {
   .tablesort-span-filter {
     display: none !important;
   }
-}
-.custom-twitter .user {
-  clear: left;
-}
-.custom-twitter .user span {
-  display: none;
-}
-.custom-twitter .user img {
-  float: left;
-  margin-right: 15px;
-}
-.custom-twitter .tweet {
-  padding: 0;
-  overflow: hidden;
-}
-.custom-twitter .timePosted {
-  color: #555555;
-  font-size: .8em;
-  padding: 0;
-  margin: -0.5em 0 1em 63px;
-}
-.bureau-results {
-  list-style: none;
-  padding: 0;
-}
-.bureau-results__heading {
-  font-size: 1.2em;
-}
-.environment-marker {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 0;
-  text-align: center;
-}
-.environment-marker__container {
-  background: #fcbb69;
-  padding: .1em .5em;
-  font-weight: bold;
-  border-radius: 0 0 .5em .5em;
-  z-index: 100000;
-  display: inline-block;
-  text-align: left;
 }
 /* Mixin files */
 /**
@@ -12061,5 +11571,64 @@ li.ref-dialog__list-item--highlight {
 .members-social-footer .members-social-footer__youtube {
   background: url("/Static/images/members/socialmedia_youtube.png") center no-repeat;
   background-size: 50px;
+}
+/**
+ * BUREAU SEARCH
+ *
+ * Not sure where this is for, doesn't appear in the bureau results page 'https://citizensadvice.citizensadvice.org.uk/getadvice.htm'.
+ */
+.bureau-results {
+  list-style: none;
+  padding: 0;
+}
+.bureau-results__heading {
+  font-size: 1.3rem;
+}
+/**
+ * CUSTOM TWITTER
+ *
+ * Think this was on the homepage previously, think the twitter widget has replaced this.
+ */
+.custom-twitter .user {
+  clear: left;
+}
+.custom-twitter .user span {
+  display: none;
+}
+.custom-twitter .user img {
+  float: left;
+  margin-right: 15px;
+}
+.custom-twitter .tweet {
+  padding: 0;
+  overflow: hidden;
+}
+.custom-twitter .timePosted {
+  color: #404040;
+  font-size: 0.875rem;
+  padding: 0;
+  margin: -0.5rem 0 1rem 63px;
+}
+/**
+ * ENVIRONMENT MARKER
+ *
+ * Example unknown.
+ */
+.environment-marker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  text-align: center;
+}
+.environment-marker__container {
+  background: #fcbb69;
+  padding: 0.1rem 0.5rem;
+  font-weight: bold;
+  border-radius: 0 0 .5em .5em;
+  z-index: 100000;
+  display: inline-block;
+  text-align: left;
 }
 /*# sourceMappingURL=site.css.map */
