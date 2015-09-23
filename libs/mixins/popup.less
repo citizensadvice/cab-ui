@@ -1,0 +1,29 @@
+.popup() {
+    border-top: 6px solid #134172;
+    box-shadow: 3px 3px 10px #5c5c5c;
+    background: #fff;
+    position: absolute;
+    padding: .5em 1em;
+    z-index: 1;
+
+    .ie8 & {
+        border: 1px solid #134172;
+        border-top-width: 6px;
+    }
+}
+
+.popup-arrow() {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #134172;
+  position: absolute;
+  /* We actually position this in JS as Chrome and Firefox cannot agree how position
+     inside a display: table element with borders
+     The following works correctly in Chrome and IE    
+  */
+  top: 0;
+  /* Create a slight overlap to hide any gap while zooming */
+  margin-top: -9px;
+  /* Firefox is created jagged arrows.  This fixes it*/
+  -moz-transform: scale(0.9999);
+}
