@@ -1,0 +1,16 @@
+﻿/**
+ * EPISERVER 
+ *
+ *
+ * Episerver icon, when logged into episerver, this displays.
+ * This file amends how that is displayed.
+ */
+
+// Put the navigator on the left hand side
+#epi-quickNavigator {
+    right: auto !important; // need to override the injected styles
+    left: 10px;
+}
+
+// The edit link at the top of the page doesn't get its margin right
+#epi-quickNavigator li {margin: 0;}

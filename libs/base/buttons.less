@@ -1,0 +1,105 @@
+
+// Basic button styling
+// To style a link to look like a button use .button
+
+button,
+.button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    background-color: @beta-aqua-light;
+    border: none;
+    color: @heritage-blue;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    font-weight: bold;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken(@beta-aqua, 5%)
+    }
+}
+
+a.button {
+    display: inline-block;
+}
+
+.button--blue.button--blue {
+    background-color: @blue;
+
+    &:hover, &:focus, &:active {
+        background: darken(@blue,5%);
+    }
+}
+.button--green.button--green {
+    background-color: @green;
+
+    &:hover, &:focus, &:active {
+        background: darken(@green,5%);
+    }
+}
+.button--orange.button--orange {
+    background-color: @orange;
+
+    &:hover, &:focus, &:active {
+        background: darken(@orange,10%);
+    }
+}
+.button--pink.button--pink {
+    background-color: @pink;
+    color: @black;
+
+    &:hover, &:focus, &:active {
+        background: darken(@pink,10%);
+        color: @black;
+    }
+}
+.button--purple.button--purple {
+    background-color: @purple;
+
+    &:hover, &:focus, &:active {
+        background: darken(@purple,10%);
+    }
+}
+.button--grey.button--grey {
+    background-color: @gray-5;
+    color: black;
+
+    &:hover, &:focus, &:active {
+        background: darken(@gray-5,10%);
+    }
+}
+
+
+.button--big.button--big { // Specificity hack to override input[type]
+    padding: 0.6em;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: @form-disabled-text;
+    background-color: @form-disabled-bg;
+    border: none;
+    resize: none;
+    box-shadow: none;
+    &:hover {
+        cursor: not-allowed;
+        color: @form-disabled-text;
+        background-color: @form-disabled-bg;
+        border: none;
+        resize: none;
+        box-shadow: none;
+    }
+}
+
+
+// Shows a loading icon over a button
+.button--submitting {position:relative;}
+.button--submitting:after {
+    content: ' ';
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background: #ddd url("/static/images/ajax-loader.gif") no-repeat center center;
+    background-color: rgba( 255,255,255,.7);
+}

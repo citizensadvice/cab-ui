@@ -1,0 +1,1334 @@
+/**
+ * FORMS
+ */
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+//
+// 'Borrowed' from Bootstrap v4
+//
+// Basic form styling
+
+form {
+    .invalid {
+        display: none;
+        color: @beta-red;
+        padding-top: @box-spacing/4;
+    }
+    .valid {
+        display: none;
+        color: @beta-green;
+        padding-top: @box-spacing/4;
+    }
+}
+
+form small {
+    color: @gray-3;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+    margin-bottom: @box-spacing;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: @line-height-computed;
+    font-size: (@font-size-base * 1.5);
+    line-height: inherit;
+    color: @heritage-blue;
+    border: 0;
+    border-bottom: 1px solid @heritage-blue;
+    font-size: @font-size-h3;
+    font-weight: @font-weight-bold;
+}
+
+label,
+.form__label {
+    display: inline-block;
+    max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+    //margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form__label--hidden {
+    .screenreader;
+}
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=search] {
+    padding: .2em;
+    width: 100%;
+    border-radius: 0;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+    &.search--full-width {
+       width: 100%;
+    }
+}
+
+input[type=checkbox] + label {
+    font-weight: normal;
+    padding-left: .5em;
+}
+
+input[type=text][size="1"] {
+    width: 3em;
+}
+
+
+select {
+    padding: .2em;
+    max-width: 100%;
+    width: 100%;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9; // IE8-9
+    line-height: normal;
+}
+
+input[type="file"] {
+    display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+textarea,
+input,
+select {
+    border: 1px solid @gray-6;
+}
+
+textarea {
+    height: 5.5rem;
+    resize: vertical;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    border-radius: @form-border-radius;
+    &:focus:required:invalid {
+        border-color: @beta-red;
+        & ~ .invalid {
+            display: block !important;
+        }
+    }
+    &:focus:required:valid {
+        border-color: @beta-green;
+        & ~ .valid {
+            display: block !important;
+        }
+    }
+    &:focus {
+        border-color: @heritage-blue-light;
+        outline: none;
+    }
+}
+
+input[type="file"] {
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+output {
+    display: block;
+    padding-top: 11px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: @black;
+}
+
+/**********************************************************************/
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form__field` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+.form__field {
+    display: block;
+    width: 100%;
+    // Make inputs at least the height of their button counterpart
+    // (base line-height + padding-top + padding-bottom + border)
+    height: 37px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: @black;
+    background-color: @white;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus{
+        border-color: #66afe9;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+        outline: 0 none;
+    }
+
+    /*
+    // Placeholder
+    @include placeholder;
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty,
+    // we don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        background-color: $field-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content
+    }
+    */
+    // [converter] extracted textarea& to textarea.form__field
+}
+
+// Small fields for day, month and year.
+.form__field--day,
+.form__field--month {
+    width: 4em;
+}
+.form__field--year {
+    width: 4.5em;
+}
+
+// Small field for time.
+.form__field--time {
+    width: 6em;
+}
+
+// Reset height for `textarea`s
+textarea.form__field {
+    height: auto;
+}
+
+/**********************************************************************
+ * Special styles for iOS temporal inputs
+ *
+ * In Mobile Safari, setting `display: block` on temporal inputs causes the
+ * text within the input to become vertically misaligned. As a workaround, we
+ * set a pixel line-height that matches the given height of the input, but only
+ * for Safari.
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="month"] {
+        line-height: 37px;
+    }
+    
+    input[type="date"].form__field--sm,
+    input[type="time"].form__field--sm,
+    input[type="datetime-local"].form__field--sm,
+    input[type="month"].form__field--sm {
+    }
+
+    input[type="date"].form__field--lg,
+    input[type="time"].form__field--lg,
+    input[type="datetime-local"].form__field--lg,
+    input[type="month"].form__field--lg {
+    }
+    
+}
+
+/* Overrides 'Choose file' button
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+input[type="file"]::before {
+    content: 'Choose';
+    display: inline-block;
+    overflow: hidden;
+    outline: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    background-color: @beta-green-light;
+    border: 1px solid @beta-green;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+}
+*/
+
+/*
+.radio,
+.checkbox {
+    //background-color: @gray-7;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    cursor: pointer;
+    border: 1px solid @gray-6;
+    border-radius: @form-border-radius;
+    &:hover {
+        border-color: @gray-4;
+    }
+}
+*/
+
+.radio,
+.checkbox {
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    position: relative;
+    margin-right: @box-spacing-horizontal/2;
+    z-index: 1;
+    input {
+        &:before {
+            content: '';
+            display: block;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @gray-7;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @beta-blue-lighter;
+                background-color: @beta-blue-lighter;
+            }
+            &:hover:before {
+                border-color: @beta-blue-light;
+            }
+        }
+    }
+}
+
+.multi-select {
+    height: 5.5rem !important;
+    padding: 0;
+    option {
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    }
+}
+
+.dropdown {
+    //padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    border-radius: @form-border-radius;
+    border: 1px solid @gray-6;
+    select {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.checkbox, .radio {
+    display: inline-block;
+}
+
+*:disabled,
+.disabled {
+    cursor: not-allowed !important;
+    color: @form-disabled-text;
+    background-color: @form-disabled-bg;
+    border: none;
+    resize: none;
+}
+
+.form {
+    margin: 1em 0;
+}
+
+
+.form__row, .form__group {
+    display: block; // This can be added to labels
+    margin-bottom: 1em;
+}
+
+.form__button-row {
+    // For big submit buttons
+    margin-top: 1em;
+    width: 100%;
+}
+
+.form--table {
+    display: table;
+    width: 100%;
+
+    & > .form__row {
+        display: table-row;
+
+        & > .form__label, & > label {
+            display: table-cell;
+            white-space: nowrap;
+            padding: 0 1em 1em 0;
+        }
+
+        & > .form__control {
+            display: table-cell;
+            width: 100%;
+            padding-bottom: 1em;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        display: block;
+
+        & > .form__row {
+            display: block;
+
+            & > .form__label, & > label {
+                display: block;
+                white-space: normal;
+                padding: 0;
+            }
+
+            & > .form__control {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.form__radio-list {
+    border: none;
+    margin: 1em 0 0 0;
+    padding: 0;
+
+    & > legend {
+        font-size: 1em;
+    }
+}
+
+.form__radio-item {
+    display: block;
+}
+
+.form__radio,
+.form__checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    label {
+        // Ensure the input doesn't jump when there is no text
+        min-height: 25px;
+        padding-left: 25px;
+        margin-bottom: 0;
+        font-weight: normal;
+        cursor: pointer;
+    }
+}
+.form__radio input[type="radio"],
+.form__radio-inline input[type="radio"],
+.form__checkbox input[type="checkbox"],
+.form__checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -(25px);
+    margin-top: 6px \9;
+}
+
+// Radios and checkboxes on same line.
+// See also the .form__*-inline--boxed styles above for a variation.
+.form__radio-inline,
+.form__checkbox-inline {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+.form__radio-inline + .form__radio-inline,
+.form__checkbox-inline + .form__checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px; // space out consecutive inline controls
+}
+
+.form__radio,
+.form__checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    label {
+        // Ensure the input doesn't jump when there is no text
+        min-height: 25px;
+        padding-left: 25px;
+        margin-bottom: 0;
+        font-weight: normal;
+        cursor: pointer;
+    }
+}
+.form__radio input[type="radio"],
+.form__radio-inline input[type="radio"],
+.form__checkbox input[type="checkbox"],
+.form__checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -(25px);
+    margin-top: 6px \9;
+}
+
+// Radios and checkboxes on same line.
+// See also the .form__*-inline--boxed styles above for a variation.
+.form__radio-inline,
+.form__checkbox-inline {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+.form__radio-inline + .form__radio-inline,
+.form__checkbox-inline + .form__checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px; // space out consecutive inline controls
+}
+
+// BOXED RADIOS AND CHECKBOXES.
+// Put the control and the label inside a full-width coloured box.
+.form__radio--boxed,
+.form__checkbox--boxed,
+.form__radio-inline--boxed,
+.form__checkbox-inline--boxed {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid transparent;
+
+    &:not(.is-disabled):hover {
+        background: none repeat scroll 0 0 #eff3f3;
+        border-color: #ccc;
+    }
+
+    > label {
+        padding-left: (15px + 25px);
+        width: 100%;
+    }
+
+    &.is-selected {
+        background: none repeat scroll 0 0 #b8e3df;
+
+        &:hover {
+            border-color: transparent;
+            background: none repeat scroll 0 0 #b8e3df;
+        }
+    }
+}
+.form__radio--boxed,
+.form__checkbox--boxed {
+    width: 100%;
+
+    > .form__radio__desc,
+    > .form__checkbox__desc {
+        padding-left: (15px + 25px);
+        padding-top: 0;
+        margin-top: -(10px);
+    }
+}
+
+.form__radio-inline--boxed,
+.form__checkbox-inline--boxed {
+    padding-top: 5px;
+    padding-left: (10px + 25px);
+    padding-bottom: 5px;
+}
+
+// We don't want spaces between .*--boxed and .box.js-revealable's following
+// them. Just adding negative top margin looks odd when it's revealed.
+// So, we're trying this:
+.form__radio--boxed + .box.js-revealable,
+.form__checkbox--boxed + .box.js-revealable {
+    position:      relative;
+    top:           -(10px);
+    margin-bottom: -(10px);
+}
+
+// Variations of the above styles when they appear within different boxes.
+
+.box--1 {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        // Standard style by default.
+
+        &.is-selected {
+            background: none repeat scroll 0 0 #fff;
+            // Don't add a border or it'll look odd if immediately followed by
+            // a .box--2 revealable. (eg ESA form distance questions.)
+        }
+    }
+}
+
+.box--2 {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        background: #eee;
+
+        &:hover {
+            border-color: #ccc;
+        }
+
+        &.is-selected {
+            border-color: #ccc;
+            background: #ccc;
+        }
+    }
+}
+
+// Apply same disabled cursor tweak as for inputs
+// Some special care is needed because <label>s don't inherit their parent's
+// `cursor`.
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"],
+input[type="checkbox"] {
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+// These classes are used directly on <label>s
+.form__radio-inline,
+.form__checkbox-inline {
+    &.is-disabled {
+        color: #999;
+        cursor: not-allowed;
+    }
+}
+// These classes are used on elements with <label> descendants
+.form__radio,
+.form__checkbox {
+    cursor: pointer;
+
+    &.is-disabled {
+        cursor: not-allowed;
+        color: #999;
+        label {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.panel--a {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        background: #eee;
+
+        &:hover {
+            background: #ccc;
+        }
+
+        &.is-selected {
+            border-color: #ccc;
+        }
+    }
+}
+
+
+.form--inline-group {
+    .form__group {
+        display: inline-block;
+    }
+
+    @media (max-width: @screen-sm-min) {
+        display: table;
+        margin-bottom: (1em / 2);
+
+        .form__group {
+            display: table-cell;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+
+        .form__label {
+            /* Note: If you make the label visible, things might get screwy in IE8. */
+            .screenreader;
+        }
+
+        .form__hint {
+            display: none;
+        }
+
+        .form__field {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 0;
+        }
+
+        .button {
+            display: table-cell;
+            padding: 1px 3px 2px 1px;
+
+            .fa-stack {
+                margin-left: 0;
+            }
+        }
+
+        .button__label {
+            .screenreader;
+        }
+    }
+ }
+
+/**********************************************************************
+ * Help text
+ *
+ * Apply to any element you wish to create light text for placement immediately
+ * below a form control. Use for general help, formatting, or instructional
+ * text.
+ */
+.form__help {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+// For 'required' or 'optional' hints.
+.form__hint {
+    color: #999;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 2px;
+
+    // Hasty fix; don't want to show 'required' markers on Pension Credit
+    // Checker, ESA Quick Checker, etc.
+    .panel & {
+        display: none;
+    }
+}
+
+.form__error {
+    color: #c02f43;
+    display: block;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/**********************************************************************
+ * Static fields.
+ */
+
+.form__field--static {
+    max-width: 100%;
+    margin-bottom: 5px;
+    display: block;
+}
+
+// Custom dropdown icons
+.select--custom-icon() {
+
+    display: inline-block;
+    overflow: hidden; // Hide the arrow
+    vertical-align: middle;
+
+    & > select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 0; //If you want a border set it on the parent
+        background: transparent;
+        padding: .2em;
+
+        // We need to push the pointer off the side so it is hidden in the overflow
+        // In webkit / blink there is no pointer to move
+        // In IE the padding is on the outside of the pointer, but in Firefox it is on the inside
+        // In IE8 and below we cannot move the pointer
+
+        // The width, plus the pointer, plus the padding (for IE9+)
+        // This needs to be at least 1.2em to hide the pointer in IE
+        // (In our case this is therefore 1em + .2em padding)
+        // In <=IE8 this will be ignored
+        width: calc( ~"100% + 1.2em" );
+
+        // The image width plus some padding so the text isn't against the arrow in Blink/Webkit
+        // In IE/Firefox there will be extra space between the text and arrow due to the native arrow
+        // In <=IE8 this will be ignored
+        margin: 0 calc( ~"33px + .2em" ) 0 0;
+
+        // For chrome - the outline is cut off on the right so hide it completely */
+        outline: none;
+
+        /* The right positioning is the extra width from above
+               In <=IE8 this will be ignored as we've used the four value poitioning syntax
+            */
+    }
+}
+
+.custom-dropdown {
+    .select--custom-icon;
+    position: relative;
+    width: 85%;
+    float: left;
+    background: @grey;
+
+    & > i {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: @blue;
+        color: white;
+        padding: 0 .2em;
+        font-size: 1.3em;
+        pointer-events: none; 
+        &:before {
+            padding: 0;
+        }
+    }
+}
+
+// If pointer events aren't supported hide the custom dropdown
+.no-pointer-events .custom-dropdown > i {
+    display: none;
+}
+
+// Overrider attibute selector
+input.custom-dropdown__button {
+    margin-left: 1%;
+    width: 14%;
+    float: left;
+    border-radius: 0;
+    padding: .2em;
+}
+
+/* Search fields used in blocks */
+.search-inline {
+    display: table;
+    margin: 1em 0;
+
+    & > label {
+        display: block;
+        width: 5em;
+        font-weight: bold;
+    }
+}
+
+.search-inline__field {
+    display: table-cell;
+    width: 100%;
+    padding-right: .5em;
+   
+    & > input {
+         width: 100%;
+    }
+}
+
+.search-inline__button {
+    display: table-cell;
+
+    & > input, & > button {
+        padding: .2em .6em;
+    }
+}
+
+.search-inline--hide-label {
+
+    & > label {
+        .screenreader;
+    }
+}
+
+
+.checkbox-radio-inner input[type="radio"],
+.checkbox-radio-inner input[type="checkbox"] {
+    position: absolute;
+}
+.checkbox-radio-inner label {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Old form styles
+ *
+ */
+ 
+.letter-buttons input[type="submit"], .letter-buttons a {
+    clear: both;
+    margin: 10px 0;
+    margin-right: 0;
+}
+.letter-buttons a {
+    padding-top: 12px;
+}
+.email-section-desc {
+    display: none;
+}
+.form-item .example-image {
+    float: left;
+    max-width: 60%;
+}
+.form-item-inner {
+    margin-bottom: 10px;
+}
+.log-in-container .valMessage {
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 10px;
+}
+.log-in-container label {
+    margin-bottom: 5px;
+}
+.log-in-container input[type="text"], .log-in-container input[type="password"] {
+    width: 100%;
+}
+.remember-me-item label {
+    width: auto;
+    display: inline;
+    margin-right: 10px;
+}
+.remember-me-item input {
+    margin-top: 11px!important;
+}
+
+    
+
+
+/*Letters*/
+.letter-preview {
+    padding: 20px;
+    background: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px #ccc;
+}
+.popup_content .form-validation {
+    margin-left: 0;
+}
+
+   
+
+
+
+/*Three Column layout*/
+.column-headers {
+    padding-left: 32.5%;
+}
+.column-headers.long {
+    padding-left: 39.5%;
+}
+.column-headers p {
+    width: 49%;
+    float: left;
+    padding-top: 0;
+}
+
+  
+/*Budget validation*/
+.budget-body .valMessage {
+    margin: 10px 0 5px 39%;
+    width: auto!important;
+}
+.budget-body .valMessage span {
+    width: 100%!important;
+}
+.budget-body .three-cols .valMessage {
+    margin: 10px 0 5px 32.7%;
+}
+.budget-body .four-cols .valMessage {
+    margin: 10px 0 5px 24.5%;
+}
+#validationError .valMessage {
+    margin: 10px 0 20px 33%;
+}
+.valMessage a, .valMessage a:visited, .valMessage a:visited {
+    color: red!important;
+}
+.validation-summary {
+    margin-bottom: 20px;
+    color: red;
+    padding: 20px;
+    background: #FFF0F0;
+    border: 1px solid red;
+}
+
+
+
+/*Button variants*/
+input[type="submit"].secondary-button {
+    background: @blue;
+}
+input[type="submit"].secondary-button:hover {
+    background: #004d9b;
+}
+input[type="submit"].secondary-button-small {
+    background: @blue;
+    height: 25px;
+}
+input[type="submit"].secondary-button-small:hover {
+    background: #004d9b;
+}
+input[type="submit"].button-small {
+    height: 25px;
+}
+
+      
+    
+  /*Checkbox styles - To be used on full search page */
+.form-item.checkbox-container label {
+    width: 80%;
+    text-align: left;
+    float: left;
+    font-weight: normal;
+}
+.form-item.checkbox-container input[type="checkbox"] {
+    margin: 8px 10px 0 0;
+    float: left;
+    background: transparent;
+    border: 0;
+}
+.form-item.checkbox-left label {
+    width: 70%;
+    text-align: left;
+    float: left;
+    font-weight: normal;
+}
+.form-item.checkbox-left input[type="checkbox"] {
+    margin: 10px;
+    float: left;
+    background: transparent;
+    border: 0;
+}
+
+
+  /*Nav Search*/
+.header-search select {
+    width: 100%;
+}
+.search-field {
+    margin: 0px 10px 0px 10px;
+}
+.search-field input[type="text"] {
+    float: left;
+    height: 32px;
+    margin-bottom: 0px;
+    width: 325px;
+}
+
+       
+  /*Search*/
+.search {
+    float: right;
+    clear: both;
+}
+.search-form input[type="text"] {
+    width: 100%;
+    height: 50px;
+}
+.search-form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    color: #FFF;
+    background: #477e26;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.search-form input[type="submit"]:hover {
+    background: #2B4C17;
+}
+.search-form select {
+    width: 100%;
+    margin-top: 10px;
+}
+.search-form h1 {
+    padding-bottom: 10px;
+}
+.search-form p {
+    padding: 5px 0;
+}
+.search-form.adviceAZ {
+    margin-top: 20px;
+}
+
+
+  /*Faceted search*/
+.filter-form span {
+    width: 100%;
+    display: block;
+}
+.filter-form input[type="checkbox"] {
+    margin: 10px;
+    float: left;
+    background: transparent;
+    border: 0;
+    clear: left;
+}
+.filter-form label {
+    width: 70%;
+    text-align: left;
+    float: left;
+    font-weight: normal;
+}
+
+    
+    
+  /*Small Form*/
+.form-item.small label, .form-item.small input[type="text"], .form-item.small select, .form-item.small input[type="email"], .form-item.small input[type="password"] {
+    display: block;
+    width: 95%;
+}
+.form-item.small input[type="submit"] {
+    display: block;
+    margin: 10px 0 10px 10px;
+    width: 95%;
+    float: none;
+}
+.form-item.small {
+    margin: 10px 0;
+}
+
+/*Search block*/
+/*.search-block {
+        margin: 1em 0;
+    }
+.search-block input {
+    box-sizing: border-box;
+}
+.search-block input[type="text"] {
+    width: 65%;
+    float: left;
+    height: 40px;
+}
+.search-block input[type="submit"] {
+    width: 30%;
+    float: right;
+    height: 40px;
+    border-radius: 5px;
+    background: #477e26;
+    font-size: 1em;
+    color: #FFF;
+    border: none;
+}
+.search-block input[type="submit"]:hover {
+    background: #2B4C17!important;
+}
+.log-in-container .form-item input[type="submit"] {
+    margin-right: 0;
+} */
+
+
+/*Community CSS*/
+.subscription-module .form-item label {
+    float: none!important;
+    display: inline!important;
+    width: auto!important;
+}
+.subscription-module span {
+    margin-top: 10px;
+    display: block;
+}
+@media screen and (max-width:767px) {
+    .total-box, .budget-total-container.four-cols .total-box {
+        width: 99%;
+    }
+    .budget-body .valMessage, .budget-body .three-cols .valMessage, #validationError .valMessage {
+        margin: 10px 0 5px 0;
+    }
+    .budgetTool input[type="submit"] {
+        margin-right: 0!important;
+    }
+    .budget-right {
+        float: none!important;
+    }
+    .budgetTool input[type="text"] {
+        margin-left: 2px!important;
+    }
+    .monthlyTotalSalary {
+        width: 98%;
+    }
+    .budget-total-container .total, .budget-total-container .total.long, .budget-total-container.four-cols .total {
+        width: 100%;
+    }
+    .column-headers {
+        display: none;
+    }
+    .form-item .example-image {
+        max-width: 100%;
+    }
+    .search-form select {
+        width: 60%;
+        float: right;
+    }
+    .false-label {
+        width: 100%;
+    }
+    .form-item label {
+        margin-bottom: 10px;
+    }
+    .form-item label, .form-item input[type="text"], .form-item select, .form-item input[type="email"], .form-item input[type="password"] {
+        display: block;
+        width: 98%!important;
+    }
+    .form-item input[type="submit"] {
+        display: block;
+        margin: 10px 0 10px 0px;
+        width: 95%;
+        float: none;
+    }
+    .form-item textarea {
+        width: 98%!important;
+    }
+    .valMessage {
+        margin-left: 0;
+    }
+    .search-field input[type="submit"] {
+        margin-top: 2px;
+    }
+    .form-item {
+        margin-bottom: 10px;
+    }
+    .form-item.checkbox-container label {
+        width: 90%;
+    }
+    .form-item.checkbox-container input[type="checkbox"] {
+        float: left;
+    }
+    .default-form textarea {
+        width: 99%!important;
+    }
+    .default-form div label, .default-form input[type="text"], .default-form textarea {
+        width: 95%;
+    }
+    .form-item .text-box-example, .form-item .text-box-example-second {
+        margin-left: 0;
+    }
+    .form-item .text-box-example, .form-item .text-box-example-second {
+        width: 100%;
+    }
+    .form-item label {
+        float: none;
+        padding-left: 0;
+    }
+    .form-item.checkbox-radio div {
+        width: 100%;
+    }
+    .form-item.checkbox-radio .checkbox-radio-inner {
+        width: 100%;
+    }
+    .budgetTool input[type="submit"] {
+        width: 99%!important;
+    }
+}
+
+
+/* Other form related classes (specific) */
+@media screen and (max-width:1200px) {
+    .log-in-container.span8 {
+        width: 80%!important;
+    }
+}
+@media screen and (max-width:980px) {
+    .log-in-container .form-item label, .log-in-container .form-item input[type="text"], .log-in-container .form-item select, .log-in-container .form-item input[type="email"], .log-in-container .form-item input[type="password"] {
+        display: block;
+        width: 95%;
+    }
+    .log-in-container .form-item.remember-me-item label {
+        width: auto;
+        display: inline;
+    }
+    .log-in-container .form-item input[type="submit"] {
+        display: block;
+        margin: 10px 0 10px 10px;
+        width: 95%;
+        float: none;
+    }
+    .search-field input[type="text"] {
+        float: left;
+        height: 32px;
+        margin-bottom: 0px;
+        width: 80%;
+    }
+    .search-field input[type="submit"] {
+        width: 19%;
+    }
+}
+@media screen and (max-width:767px) {
+    .log-in-container.span8 {
+        width: 100%!important;
+    }
+}

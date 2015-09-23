@@ -1,25 +1,146 @@
-// For styleguide files only
-@import "modules/body";
+/* Vendor files */
+@import "vendors/normalize";
+
+/* Override files */
+//@import "base/body";
 @import "styleguide/guide";
 
-// Variable files
-@import "modules/colors";
-@import "modules/variables";
+/* Base files */
+@import "base/colors";
+@import "base/variables";
+@import "base/global";
+@import "base/buttons";
+@import "base/ie";
+@import "base/forms";
+@import "base/framework";
+@import "base/icons";
+@import "base/lists";
+@import "base/type";
+@import "base/utility";
+@import "base/helpers";
+// @import "base/base"; // This file has not been updated as shouldn't have been included
 
-// Vendors
-@import "vendor/normalize";
+// Existing styles
+	//@import "existing/inc/magic-numbers";
+	//@import "existing/inc/mixins-flex-box";
+	//@import "existing/inc/mixins";
+	//@import "existing/inc/normalise"; // Already used
+	//@import "existing/inc/icons"; // Merged into base/icons.less
+	//@import "existing/inc/helpers";
+	//@import "existing/inc/global"; // Moved to base
+	@import "existing/inc/boxes";
+	@import "existing/inc/highlight";
 
-// Structure and base elements
-@import "modules/framework";
-@import "modules/type";
+	//@import "existing/inc/buttons"; // Moved to base
+	//@import "existing/inc/forms";
+	//@import "existing/inc/forms-v2";
+
+
+	@import "existing/inc/framework";
+
+	// Modules
+	@import "existing/inc/cookie-monster";
+	@import "existing/inc/skip-nav";
+	@import "existing/inc/main-nav";
+	//@import "existing/inc/breadcrumb";
+	@import "existing/inc/section-notice";
+	@import "existing/inc/main-content";
+	@import "existing/inc/page-info";
+	@import "existing/inc/side-nav";
+	@import "existing/inc/side-tags";
+	@import "existing/inc/side-links";
+	@import "existing/inc/side-chat";
+	@import "existing/inc/calls-for-evidence";
+	@import "existing/inc/extent-switcher";
+	@import "existing/inc/feed";
+	@import "existing/inc/top-news";
+	@import "existing/inc/news-list";
+	@import "existing/inc/page-list";
+	@import "existing/inc/search-results";
+	@import "existing/inc/page-tree";
+
+	@import "existing/inc/share-bar";
+	@import "existing/inc/index-page";
+	@import "existing/inc/home-page";
+	@import "existing/inc/login";
+	@import "existing/inc/atoz";
+
+	@import "existing/inc/modules";
+	//@import "existing/inc/forms-old";
+	@import "existing/inc/lists";
+	@import "existing/inc/tables";
+	@import "existing/inc/paragraph-numbers.less";
+	@import "existing/inc/plugins";
+	@import "existing/inc/toc";
+	@import "existing/inc/letter";
+	@import "existing/inc/accordion";
+	@import "existing/inc/revealable";
+	@import "existing/inc/tablesort";
+	//@import "existing/inc/decision-tree";
+	//@import "existing/inc/staff";
+	//@import "existing/inc/twitter";
+	//@import "existing/inc/bureau-search";
+	//@import "existing/inc/environment-marker";
+
+	// Beta files
+		//@import "existing/inc/beta/colors";
+		//@import "existing/inc/beta/variables";
+		//@import "existing/inc/beta/type";
+
+		//@import "existing/inc/beta/base"; // This file has not been updated as shouldn't have been included
+		//@import "existing/inc/beta/status";
+		//@import "existing/inc/beta/sidebar-navigation";
+		//@import "existing/inc/beta/sidebar-navigation-accordion";
+		//@import "existing/inc/beta/breadcrumb";
+		//@import "existing/inc/beta/section-notice"; Moved to modules
+		//@import "existing/inc/beta/panels";
+		//@import "existing/inc/beta/extent-switcher";
+		//@import "existing/inc/beta/revealable";
+		//@import "existing/inc/beta/boxes";
+
+		//@import "existing/inc/header";
+		//@import "existing/inc/footer-feedback";
+		//@import "existing/inc/footer";
+		//@import "existing/inc/title";
+		//@import "existing/inc/dialog";
+		//@import "existing/inc/references";
+		//@import "existing/inc/members"; // To be finished
+		//@import "existing/inc/episerver";
+
+/* Mixin files */
+@import "mixins/callout";
+@import "mixins/fit-content";
+@import "mixins/flex-box";
+@import "mixins/limit-width";
+
+/* Module files */
+@import "modules/header";
+@import "modules/title";
 @import "modules/breadcrumb";
+@import "modules/cab-forms";
 @import "modules/callout";
 @import "modules/collapse";
-@import "modules/forms";
 @import "modules/nav-steps";
 @import "modules/navigation";
+@import "modules/panels";
+@import "modules/section-notice";
+@import "modules/decision-tree";
+@import "modules/extent-switcher";
+@import "modules/revealable";
+@import "modules/staff";
+@import "modules/status";
+@import "modules/boxes";
+@import "modules/sidebar-navigation";
+@import "modules/sidebar-navigation-accordion";
+@import "modules/footer-feedback";
+@import "modules/footer";
+@import "modules/dialog";
+@import "modules/references";
+@import "modules/episerver";
+@import "modules/members";
+@import "modules/bureau-search";
 
-// Partials
-@import "partials/utility";
-@import "partials/lists";
-@import "partials/icons";
+
+@import "modules/twitter";
+@import "modules/environment-marker";
+

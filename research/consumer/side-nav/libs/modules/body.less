@@ -1,0 +1,51 @@
+/**
+ * BODY
+ *
+ * Global styles and overrides
+ */
+
+html,
+body {
+    font-family:        'Open Sans', sans-serif;
+    background-color:   @white;
+    color: 				@black;
+    font-size:			16px;
+}
+
+section {
+    //border-top: 0px solid @gray-6;
+    margin-top: @box-spacing*2.5;
+}
+
+
+.main-content {
+    padding: 0 !important;
+    max-width: 1024px !important;
+}
+.main-content__right {
+    //padding: 0 2rem 0 4rem;
+    width: 70%;
+}
+
+#main-nav {
+	overflow: hidden !important;
+}
+
+.side-nav, .beta-extent-switcher {
+    width: 30% !important;
+}
+
+.related-content {
+    .callout(@callout-border: @inventive-teal, @callout-background: @white, @callout-headings: @inventive-teal);
+    .callout--border;
+    border-width: 8px 1px 1px 1px;
+}
+
+.beta .main-container h3 {
+    margin-top: 0 !important;
+}
+
+.beta-extent-switcher__heading {
+    font-size: @font-size-base !important;
+    margin-top: 0 !important;
+}

@@ -1,2 +1,11 @@
 # CodeKit config
 config.codekit
+
+# Annoying CSS files that shouldn't be there
+css/
+libs/css/
+public/css/site.css
+
+public/css/site.css.map
+
+public/css/site.css.map

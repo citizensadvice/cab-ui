@@ -1,0 +1,140 @@
+/**
+ * UTILITY
+ *
+ * Basic utility classes.
+ * And one or two odds and ends that coule be moved elsewhere at some point.
+ */
+
+
+.u-text-left        { text-align: left; }
+.u-text-right       { text-align: right; }
+.u-text-center      { text-align: center; }
+.u-text-nowrap      { white-space: nowrap; }
+
+.u-text-uppercase   { text-transform: uppercase; }
+
+.u-text-large       { font-size: @font-size-large; }
+.u-text-small       { font-size: @font-size-small; }
+
+.u-text-light       { color: @gray-3; }
+
+.u-border-1         { border: 1px solid @brand-primary; }
+.u-border-2         { border: 2px solid @brand-primary; }
+.u-border-3         { border: 3px solid @brand-primary; }
+
+.u-pull-left  { float: left; }
+.u-pull-right { float: right; }
+
+/**
+ * First paragraph at start of some things.
+ */
+.u-lede {
+    font-weight:    @font-weight-bolder;
+    line-height:    (@line-height-heading * 1.3);
+    margin-top:     (@line-height-computed * 0.8);
+    margin-bottom:  (@line-height-computed * 0.5);
+}
+
+/**
+ * For the Alpha project we may want to indicate some portions are disabled
+ * because they're not yet finished. So use this class on it. */
+.alpha-disabled {
+    a {
+        cursor: default;
+    }
+}
+
+/**********************************************************************
+ * Hiding elements for various reasons.
+ */
+
+/**
+ * Hide revealable blocks by default, unless the user has no JS.
+ */
+.js-revealable {
+    display: none;
+
+    .no-js & {
+        display: block;
+    }
+}
+
+@media print {
+    /**
+     * Use on elements not covered by the print stylesheet that shouldn't be
+     * printed. eg, form-based widgets, dynamic things that don't have much
+     * benefit to being printed.
+     */
+    .u-noprint {
+        display: none !important;
+    }
+
+    /**
+     * Use these to make invisible things show up in the print version.
+     * Probably combine with .u-visuallyhidden (below).
+     */
+    .u-print {
+        display: block !important;
+    }
+    span.u-print {
+        display: inline !important;
+    }
+}
+
+// Accessibility-related classes from HTML5 Bootstrap.
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+.u-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+@media print {
+    /**
+     * But, if it also has .u-print, then make it show up when printing.
+     */
+    .u-hidden.u-print {
+        display: block !important;
+        visibility: visible !important;
+    }
+    span.u-hidden.u-print {
+        display: inline !important;
+    }
+}
+@media print {
+    /**
+     * But, if it also has .u-print then make it show up when printing.
+     */
+    .u-visuallyhidden.u-print {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        position: relative;
+        width: auto;
+    }
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.u-visuallyhidden.u-focusable:active,
+.u-visuallyhidden.u-focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.u-invisible {
+    visibility: hidden;
+}
+

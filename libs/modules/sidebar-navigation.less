@@ -1,0 +1,67 @@
+/**
+ * SIDEBAR NAVIGATION.
+ *
+ * Beta sidebar navigation for content pages.
+ */
+
+.side-nav {
+    .main-content__sidebar;
+    
+    @media screen and (max-width: @screen-xs-max) {
+        float: none;
+        width: 100%;
+    }
+    
+    ul {
+        color: @text-color;
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        padding: 0;
+        margin: 0;
+        //border-bottom: 0.1em solid @beta-blue-light;
+    }
+    li:last-child {
+       border-bottom: none;
+    }
+    li.current {
+        font-weight: @font-weight-bold;
+        background-color: @beta-blue-lighter;
+        padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
+        margin: 0;
+        border-bottom: 0.1em solid @beta-blue-light;
+    }
+    li.title,
+    li.side-nav__group {
+        font-weight: @font-weight-bold;
+        background-color: @beta-blue-light;
+        color: @heritage-blue;
+        margin: 0;
+        border-bottom: 0.1em solid @white;
+        
+        .side-nav__group-title {
+            display: block;
+            padding: @box-spacing*.7 @box-spacing*.6 @box-spacing*.9 @box-spacing*.6;
+        }
+    }
+    li.side-nav__item {
+        padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
+        
+        a {
+            text-decoration: none;
+            padding: 0;
+        }
+        
+        &.-current {
+            font-weight: @font-weight-bold;
+            background-color: @beta-blue-lighter;
+            border-bottom: 0.1em solid @beta-blue-light;
+        }
+        
+        &:hover {
+            background-color: @gray-6;
+        }
+    }
+}
+
