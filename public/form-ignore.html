@@ -24,11 +24,8 @@
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
     <script src="../libs/javascript/sticky-nav.js"></script><!-- Sticky Navigation JS -->
-
     <script src="../libs/javascript/nav-active.js"></script><!-- Navigation Updating JS -->
-
     <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
-
     <script src="../libs/javascript/vendor/jquery.sticky.js"></script>
 </head>
 
@@ -175,394 +172,233 @@
                 <div class="articleContent">
 
 
-
-
-
-
-
-
-
-
-                    <h2>Form 1</h2>
-
-                    <div class="div-letter-tab">
-                        <span class="topmask"></span>
-
-                        <form action="?" class="form" method="post" novalidate="">
-                            <input name="hidden_submitted" type="hidden" value="letterGenerator"> <input name="hidden_utf8" type="hidden" value="Ā">
-
-                            <div class="div-letter-tab-contents">
-                                <fieldset class="" data-disable-if="" id="auto_0">
-                                    <legend>Questions</legend>
-
-                                    <div class="control control-state-required" id="ClientName-control">
-                                        <div class="control-label">
-                                            <label for="ClientName">Your name:</label> <span class="control-error" id="ClientName-error"></span> <span class="control-notes">Put your name as you want it to appear on the letter. If this is a joint letter you can put both your names in this box. For example, Ann Smith and George Smith</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="ClientName" name="ClientName" required="required" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="ClientAddress-control">
-                                        <div class="control-label">
-                                            <label for="ClientAddress">Your address:</label> <span class="control-error" id="ClientAddress-error"></span> <span class="control-notes">Put your address as you would like it to appear at the top of the letter</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <textarea class="input-type-text" id="ClientAddress" name="ClientAddress" required="required"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="control" id="RecipientName-control">
-                                        <div class="control-label">
-                                            <label for="RecipientName">Trader's name:</label> <span class="control-error" id="RecipientName-error"></span> <span class="control-notes">Put the recipient's name if you know it. Otherwise, leave blank</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="RecipientName" name="RecipientName" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="RecipientAddress-control">
-                                        <div class="control-label">
-                                            <label for="RecipientAddress">Trader's address:</label> <span class="control-error" id="RecipientAddress-error"></span> <span class="control-notes">Put the recipient's address as you would like it to appear at the top of the letter</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <textarea class="input-type-text" id="RecipientAddress" name="RecipientAddress" required="required"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="AccountNo-control">
-                                        <div class="control-label">
-                                            <label for="AccountNo">Account Number:</label> <span class="control-error" id="AccountNo-error"></span> <span class="control-notes">The number of your account with the creditor. You will find this on any letters from the creditor or on your Hire Purchase contract</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="AccountNo" name="AccountNo" required="required" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="InsertDate-control">
-                                        <div class="control-label">
-                                            <label for="InsertDate">Date of agreement:</label> <span class="control-error" id="InsertDate-error"></span> <span class="control-notes">Put the date you entered into the Hire Purchase agreement here</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="InsertDate" name="InsertDate" required="required" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="EnterDetailsOfGoods-control">
-                                        <div class="control-label">
-                                            <label for="EnterDetailsOfGoods">What you bought:</label> <span class="control-error" id="EnterDetailsOfGoods-error"></span> <span class="control-notes">Put in a short description of the item bought (e.g. A Blackstar Tumble dryer)</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="EnterDetailsOfGoods" name="EnterDetailsOfGoods" required="required" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="InsertSuppliersDetails-control">
-                                        <div class="control-label">
-                                            <label for="InsertSuppliersDetails">Name of supplier:</label> <span class="control-error" id="InsertSuppliersDetails-error"></span> <span class="control-notes">Put in the name of the company that supplied the goods</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <input class="input-type-text" id="InsertSuppliersDetails" name="InsertSuppliersDetails" required="required" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="control control-state-required" id="GiveBriefOutlineOfProblemAndAnyActionTaken-control">
-                                        <div class="control-label">
-                                            <label for="GiveBriefOutlineOfProblemAndAnyActionTaken">Problem and history:</label> <span class="control-error" id="GiveBriefOutlineOfProblemAndAnyActionTaken-error"></span> <span class="control-notes">Put down a description of what is wrong with the goods and anything you have done to solve the problem so far</span>
-                                        </div>
-
-                                        <div class="control-field">
-                                            <textarea class="input-type-text" id="GiveBriefOutlineOfProblemAndAnyActionTaken" name="GiveBriefOutlineOfProblemAndAnyActionTaken" required="required"></textarea>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div class="div-letter-tab-buttons">
-                                <button formnovalidate="" name="button-to-stage" type="submit" value="introduction">&lt;&lt; Introduction</button> <button name="button-to-stage" type="submit" value="preview">Preview letter &gt;&gt;</button>
-                            </div>
-                        </form>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-                    <h2>Form 2</h2>
-
-                    <form action="contactus.htm" id="frmContactUs" method="post" name="frmContactUs" onsubmit="return validateForm(this);" target="form-frame">
-                        <input id="txt_submit" name="txt_submit" size="35" type="hidden" value="submitted">
-
-                        <fieldset>
-                            <legend>Type of feedback</legend>
-
-                            <div class="fieldrow">
-                                <div class="label">
-                                    Comment type
-                                </div>
-
-                                <div class="field">
-                                    <input checked id="cmb_dat_nature_of_comment1" name="cmb_dat_nature_of_Comment" type="radio" value="1"> &nbsp;<label for="cmb_dat_nature_of_comment1">Comment about Citizens Advice</label>
-                                </div>
-
-                                <div class="field">
-                                    <input id="cmb_dat_nature_of_comment3" name="cmb_dat_nature_of_Comment" type="radio" value="3"> &nbsp;<label for="cmb_dat_nature_of_comment3">Make a complaint about the Citizens Advice service</label>
-                                </div>
-
-                                <div class="field">
-                                    <input id="cmb_dat_nature_of_comment4" name="cmb_dat_nature_of_Comment" type="radio" value="4"> &nbsp;<label for="cmb_dat_nature_of_comment4">Comment about Adviceline</label>
-                                </div>
-
-                                <div class="field">
-                                    <input id="cmb_dat_nature_of_comment5" name="cmb_dat_nature_of_Comment" type="radio" value="5"> &nbsp;<label for="cmb_dat_nature_of_comment5">Enquiry about Education resources</label>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="fieldinfo">
-                                    <h3>Citizens Advice consumer service</h3>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="fieldinfo">
-                                    <a class="a-external" href="https://www.adviceguide.org.uk/england/consumer_e/consumer_protection_for_the_consumer_e/consumer_citizens_advice_consumer_service_e/if_you_need_more_help.htm" target="_blank">Contact the Citizens Advice consumer service</a>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="fieldinfo">
-                                    <a class="a-external" href="https://www.adviceguide.org.uk/england/consumer_e/consumer_protection_for_the_consumer_e/consumer_citizens_advice_consumer_service_e/if_you_need_more_help/consumer_feedback_form.htm" target="_blank">Feedback about the Citizens Advice consumer service</a>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Feedback details</legend>
-
-                            <div class="ct-complaint" style="display: none;">
-                                <div class="fieldrow">
-                                    <div class="fieldinfo">
-                                        <strong>If you prefer you can make your complaint by phone: 03000 231 900, Monday - Friday, 9.00am - 5.00pm</strong><br>
-                                        <br>
-                                        For information on how we deal with complaints: <a href="https://citizensadvice.citizensadvice.org.uk/epi-frame/index/aboutus/complaints_policy.htm">Citizens Advice complaints policy and procedure</a>
-                                    </div>
-                                </div>
-
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_complaint">Which Citizens Advice Bureau or service are you complaining about?</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <textarea cols="50" id="txt_complaint" name="txt_complaint" rows="6"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="label">
-                                    <label for="txt_firstname">Your name (required)</label>
-                                </div>
-
-                                <div class="field">
-                                    <input id="txt_firstname" name="txt_firstname" size="35" type="text" value="">
-                                </div>
-                            </div>
-
-                            <div class="ct-complaint" style="display: none;">
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_postcode">Your address including post code (required)</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <textarea cols="50" id="txt_postcode" name="txt_postcode" rows="10"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="label">
-                                    <label for="txt_email">Your email address (required)</label>
-                                </div>
-
-                                <div class="field">
-                                    <input id="txt_email" name="txt_email" size="35" type="text" value="">
-                                </div>
-                            </div>
-
-                            <div class="ct-complaint" style="display: none;">
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_telephone">Your phone number (required)</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <input id="txt_telephone" name="txt_telephone" size="35" type="text" value="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="fieldrow">
-                                <div class="label">
-                                    <label for="txt_comment">Details of your comment (required)</label>
-                                </div>
-
-                                <div class="field">
-                                    <textarea cols="50" id="txt_comment" name="txt_comment" rows="6"></textarea>
-                                </div>
-                            </div>
-
-                            <div id="ct-adviceline" style="display: none;">
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_adviceline_cab">Name of your local CAB</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <input id="txt_adviceline_cab" name="txt_adviceline_cab" size="35" type="text" value="">
-                                    </div>
-                                </div>
-
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_adviceline_contact">Contact number used to contact Adviceline</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <input id="txt_adviceline_contact" name="txt_adviceline_contact" size="35" type="text" value="">
-                                    </div>
-                                </div>
-
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_adviceline_phone">The number you dialled to access Adviceline<br>
-                                        (e.g. 03444 111 444)</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <input id="txt_adviceline_phone" name="txt_adviceline_phone" size="35" type="text" value="">
-                                    </div>
-                                </div>
-
-                                <div class="fieldrow">
-                                    <div class="label">
-                                        <label for="txt_adviceline_date">Date of your call to Adviceline</label>
-                                    </div>
-
-                                    <div class="field">
-                                        <input id="txt_adviceline_date" name="txt_adviceline_date" size="35" type="text" value="">
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="fieldrow">
-                            <div class="fieldbuttons">
-                                <input name="submit" type="submit" value="Submit">
-                            </div>
-                        </div>
-                    </form>
-
-
-
-
-
-
-
-
-
-
-                    <h2>Form 3</h2>
-
-                    <form>
-                        <fieldset>
-                            <label for="exampleInputEmail1">Email address</label> <input id="exampleInputEmail1" placeholder="Enter email" required="" type="email"> <small>We'll never share your email with anyone else.</small>
-
-                            <div class="invalid">
-                                Please enter a valid email
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleInputPassword1">Password</label> <input id="exampleInputPassword1" pattern=".{3,10}" placeholder="Password" required="" type="password">
-
-                            <div class="valid">
-                                Wonderful!
-                            </div>
-
-                            <div class="invalid">
-                                Please enter a password between 3 and 10 characters
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleInputPassword1">Don't fill this out</label> <input disabled id="exampleInputPassword1" placeholder="Disabled field" type="password">
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleSelect1">Example select</label>
-
-                            <div class="dropdown">
-                                <select id="exampleSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleSelect2">Example multiple select</label> <select class="multi-select" id="exampleSelect2" multiple>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleTextarea">Example textarea</label> 
-                            <textarea id="exampleTextarea" rows="3"></textarea>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleInputFile">File input</label> <input class="form-control-file" id="exampleInputFile" type="file"> <small>This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleInputFile">Radio buttons</label> <label class="radio"><input checked name="radio" type="radio" value="option1"> Yes</label> <label class="radio"><input name="radio" type="radio" value="option2"> No</label> <label class="radio disabled"><input disabled name="radio" type="radio" value="option3"> Not sure</label>
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="exampleInputFile">Checkboxes</label> <label class="checkbox"><input name="checkbox" type="checkbox"> Option one</label> <label class="checkbox"><input name="checkbox" type="checkbox"> Option two</label> <label class="checkbox disabled"><input disabled name="checkbox" type="checkbox"> Disabled</label>
-                        </fieldset><button class="btn btn-primary" type="submit">Submit</button>
-                    </form>
-
-
-
-
-
-
+                    
+
+<div class="div-letter-tab">
+        <span class="topmask"></span>
+        
+        
+        <form method="post" action="?" class="form" novalidate="">
+                
+    <input type="hidden" name="hidden_submitted" value="letterGenerator">
+    <input type="hidden" name="hidden_utf8" value="Ā">
+    
+    <div class="div-letter-tab-contents">
+        
+        <fieldset id="auto_0" class="" data-disable-if="">
+    <legend>Questions</legend>
+    
+    <div class="control control-state-required " id="ClientName-control">
+    <div class="control-label">
+        <label for="ClientName">Your name:</label>
+        <span class="control-error" id="ClientName-error"></span>
+        <span class="control-notes">Put your name as you want it to appear on the letter. If this is a joint letter you can put both your names in this box. For example, Ann Smith and George Smith</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="ClientName" id="ClientName" required="required" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="ClientAddress-control">
+    <div class="control-label">
+        <label for="ClientAddress">Your address:</label>
+        <span class="control-error" id="ClientAddress-error"></span>
+        <span class="control-notes">Put your address as you would like it to appear at the top of the letter</span>
+    </div>
+    <div class="control-field">
+        <textarea name="ClientAddress" id="ClientAddress" required="required" class="input-type-text"></textarea>
+    </div>
+</div><div class="control " id="RecipientName-control">
+    <div class="control-label">
+        <label for="RecipientName">Trader's name:</label>
+        <span class="control-error" id="RecipientName-error"></span>
+        <span class="control-notes">Put the recipient's name if you know it. Otherwise, leave blank</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="RecipientName" id="RecipientName" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="RecipientAddress-control">
+    <div class="control-label">
+        <label for="RecipientAddress">Trader's address:</label>
+        <span class="control-error" id="RecipientAddress-error"></span>
+        <span class="control-notes">Put the recipient's address as you would like it to appear at the top of the letter</span>
+    </div>
+    <div class="control-field">
+        <textarea name="RecipientAddress" id="RecipientAddress" required="required" class="input-type-text"></textarea>
+    </div>
+</div><div class="control control-state-required " id="AccountNo-control">
+    <div class="control-label">
+        <label for="AccountNo">Account Number:</label>
+        <span class="control-error" id="AccountNo-error"></span>
+        <span class="control-notes">The number of your account with the creditor. You will find this on any letters from the creditor or on your Hire Purchase contract</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="AccountNo" id="AccountNo" required="required" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="InsertDate-control">
+    <div class="control-label">
+        <label for="InsertDate">Date of agreement:</label>
+        <span class="control-error" id="InsertDate-error"></span>
+        <span class="control-notes">Put the date you entered into the Hire Purchase agreement here</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="InsertDate" id="InsertDate" required="required" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="EnterDetailsOfGoods-control">
+    <div class="control-label">
+        <label for="EnterDetailsOfGoods">What you bought:</label>
+        <span class="control-error" id="EnterDetailsOfGoods-error"></span>
+        <span class="control-notes">Put in a short description of the item bought (e.g. A Blackstar Tumble dryer)</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="EnterDetailsOfGoods" id="EnterDetailsOfGoods" required="required" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="InsertSuppliersDetails-control">
+    <div class="control-label">
+        <label for="InsertSuppliersDetails">Name of supplier:</label>
+        <span class="control-error" id="InsertSuppliersDetails-error"></span>
+        <span class="control-notes">Put in the name of the company that supplied the goods</span>
+    </div>
+    <div class="control-field">
+        <input type="text" name="InsertSuppliersDetails" id="InsertSuppliersDetails" required="required" class="input-type-text">
+    </div>
+</div><div class="control control-state-required " id="GiveBriefOutlineOfProblemAndAnyActionTaken-control">
+    <div class="control-label">
+        <label for="GiveBriefOutlineOfProblemAndAnyActionTaken">Problem and history:</label>
+        <span class="control-error" id="GiveBriefOutlineOfProblemAndAnyActionTaken-error"></span>
+        <span class="control-notes">Put down a description of what is wrong with the goods and anything you have done to solve the problem so far</span>
+    </div>
+    <div class="control-field">
+        <textarea name="GiveBriefOutlineOfProblemAndAnyActionTaken" id="GiveBriefOutlineOfProblemAndAnyActionTaken" required="required" class="input-type-text"></textarea>
+    </div>
+</div></fieldset>
+    
+    </div>
+    
+    <div class="div-letter-tab-buttons">
+        <button type="submit" name="button-to-stage" value="introduction" formnovalidate="">&lt;&lt; Introduction</button>
+        <button type="submit" name="button-to-stage" value="preview">Preview letter &gt;&gt;</button>
+        
+    </div>
+    
+    
+</form>
+        
+        
+    </div>
+
+
+
+
+
+
+<form name="frmContactUs" action="contactus.htm" method="post" onsubmit="return validateForm(this);" target="form-frame">
+    
+    <input type="hidden" size="35" name="txt_submit" id="txt_submit" value="submitted">
+    
+    <fieldset>
+        <legend>Type of feedback</legend>
+        
+        <div class="fieldrow">
+            <div class="label">Comment type</div>
+            <div class="field"><input type="radio" checked="" name="cmb_dat_nature_of_Comment" id="cmb_dat_nature_of_comment1" value="1">
+&nbsp;<label for="cmb_dat_nature_of_comment1">Comment about Citizens Advice</label></div>
+<div class="field"><input type="radio" name="cmb_dat_nature_of_Comment" id="cmb_dat_nature_of_comment3" value="3">
+&nbsp;<label for="cmb_dat_nature_of_comment3">Make a complaint about the Citizens Advice service</label></div>
+<div class="field"><input type="radio" name="cmb_dat_nature_of_Comment" id="cmb_dat_nature_of_comment4" value="4">
+&nbsp;<label for="cmb_dat_nature_of_comment4">Comment about Adviceline</label></div>
+<div class="field"><input type="radio" name="cmb_dat_nature_of_Comment" id="cmb_dat_nature_of_comment5" value="5">
+&nbsp;<label for="cmb_dat_nature_of_comment5">Enquiry about Education resources</label></div>
+
+        </div>
+        
+        <div class="fieldrow">
+            <div class="fieldinfo"><h3>Citizens Advice consumer service</h3></div>
+        </div>
+        
+        <div class="fieldrow">
+            <div class="fieldinfo"><a href="https://www.adviceguide.org.uk/england/consumer_e/consumer_protection_for_the_consumer_e/consumer_citizens_advice_consumer_service_e/if_you_need_more_help.htm" target="_blank" class="a-external">Contact the Citizens Advice consumer service</a></div>
+        </div>
+        
+        <div class="fieldrow">
+            <div class="fieldinfo"><a href="https://www.adviceguide.org.uk/england/consumer_e/consumer_protection_for_the_consumer_e/consumer_citizens_advice_consumer_service_e/if_you_need_more_help/consumer_feedback_form.htm" target="_blank" class="a-external">Feedback about the Citizens Advice consumer service</a></div>
+        </div>
+        
+    </fieldset>
+
+
+
+    <fieldset>
+        <legend>Feedback details</legend>
+        
+        <div class="ct-complaint" style="display: none;">
+            <div class="fieldrow">
+                <div class="fieldinfo"><strong>If you prefer you can make your complaint by phone: 03000 231 900, Monday - Friday, 9.00am - 5.00pm</strong><br><br>
+                For information on how we deal with complaints: <a href="https://citizensadvice.citizensadvice.org.uk/epi-frame/index/aboutus/complaints_policy.htm">Citizens Advice complaints policy and procedure</a></div>
+            </div>
+            <div class="fieldrow">
+                <div class="label"><label for="txt_complaint">Which Citizens Advice Bureau or service are you complaining about?</label></div>
+                <div class="field"><textarea rows="6" cols="50" name="txt_complaint" id="txt_complaint"></textarea></div>
+            </div>
+        </div>
+        
+        <div class="fieldrow">
+            <div class="label"><label for="txt_firstname">Your name (required)</label></div>
+            <div class="field"><input type="text" size="35" name="txt_firstname" id="txt_firstname" value=""></div>
+        </div>
+        
+        <div class="ct-complaint" style="display: none;">
+            <div class="fieldrow">
+                <div class="label"><label for="txt_postcode">Your address including post code (required)</label></div>
+                <div class="field"><textarea id="txt_postcode" name="txt_postcode" cols="50" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fieldrow">
+            <div class="label"><label for="txt_email">Your email address (required)</label></div>
+            <div class="field"><input type="text" size="35" name="txt_email" id="txt_email" value=""></div>
+        </div>
+        
+        <div class="ct-complaint" style="display: none;">
+            <div class="fieldrow">
+                <div class="label"><label for="txt_telephone">Your phone number (required)</label></div>
+                <div class="field"><input type="text" size="35" name="txt_telephone" id="txt_telephone" value=""></div>
+            </div>
+        </div>
+        
+        <div class="fieldrow">
+            <div class="label"><label for="txt_comment">Details of your comment (required)</label></div>
+            <div class="field"><textarea rows="6" cols="50" name="txt_comment" id="txt_comment"></textarea></div>
+        </div>
+        
+        <div id="ct-adviceline" style="display: none;">
+            <div class="fieldrow">
+                <div class="label"><label for="txt_adviceline_cab">Name of your local CAB</label></div>
+                <div class="field"><input type="text" size="35" name="txt_adviceline_cab" id="txt_adviceline_cab" value=""></div>
+            </div>
+            
+            <div class="fieldrow">
+                <div class="label"><label for="txt_adviceline_contact">Contact number used to contact Adviceline</label></div>
+                <div class="field"><input type="text" size="35" name="txt_adviceline_contact" id="txt_adviceline_contact" value=""></div>
+            </div>
+            
+            <div class="fieldrow">
+                <div class="label"><label for="txt_adviceline_phone">The number you dialled to access Adviceline <br>(e.g. 03444 111 444)</label></div>
+                <div class="field"><input type="text" size="35" name="txt_adviceline_phone" id="txt_adviceline_phone" value=""></div>
+            </div>
+            
+            <div class="fieldrow">
+                <div class="label"><label for="txt_adviceline_date">Date of your call to Adviceline</label></div>
+                <div class="field"><input type="text" size="35" name="txt_adviceline_date" id="txt_adviceline_date" value=""></div>
+            </div>
+        </div>
+        
+    </fieldset>
+    
+    <div class="fieldrow">
+        <div class="fieldbuttons"><input type="submit" name="submit" value="Submit"></div>
+    </div>
+    
+</form>
 
 
 
@@ -612,7 +448,9 @@
                         </ul>
                     </li>
                 </ul>
-            </nav><!--<ul class="side-nav collapse nav==beta">
+            </nav>
+
+            <!--<ul class="side-nav collapse nav--beta">
 
                 <li class="collapse-toggle open">Consumer</li>
                 <li class="collapse-content start-open"><ul>
@@ -637,41 +475,16 @@
 
             <nav class="side-nav">
                 <div class="steps--navigation">
-                    <a class="title" href="#overview">
-                    <h4>On this page</h4></a>
-
+                    <a href="#overview" class="title"><h4>On this page</h4></a>
                     <ul>
-                        <li>
-                            <a href="#step1">Make sure a trader is trustworthy</a>
-                        </li>
-
-                        <li>
-                            <a href="#step2">Buying from an auction</a>
-                        </li>
-
-                        <li>
-                            <a href="#step3">Check a car's history</a>
-                        </li>
-
-                        <li>
-                            <a href="#step4">Inspect the car and take a test drive</a>
-                        </li>
-
-                        <li>
-                            <a href="#step5">Get a written contract</a>
-                        </li>
-
-                        <li>
-                            <a href="#step6">When you buy the car</a>
-                        </li>
-
-                        <li>
-                            <a href="#step7">How to pay</a>
-                        </li>
-
-                        <li>
-                            <a href="#step8">Further help</a>
-                        </li>
+                        <li><a href="#step1">Make sure a trader is trustworthy</a></li>
+                        <li><a href="#step2">Buying from an auction</a></li>
+                        <li><a href="#step3">Check a car's history</a></li>
+                        <li><a href="#step4">Inspect the car and take a test drive</a></li>
+                        <li><a href="#step5">Get a written contract</a></li>
+                        <li><a href="#step6">When you buy the car</a></li>
+                        <li><a href="#step7">How to pay</a></li>
+                        <li><a href="#step8">Further help</a></li>
                     </ul>
                 </div>
             </nav>
@@ -731,6 +544,7 @@
                     <a href="#step6"><strong>8</strong> Further help</a>
                 </li>
             </ul>
+
         </div>
     </div>
 
