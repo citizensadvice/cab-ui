@@ -1,0 +1,156 @@
+/**
+ * TYPE
+ *
+ * Styles for basic type-related styles. Headings, paragraphs, etc.
+ *
+ * When we use h1, h2 etc within other elements we'll probably need to
+ * give them a class and assign specific sizes, margins etc to that
+ * particular usage.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height:    @line-height-heading;
+    color:          @heading-primary-color;
+    font-weight:    @font-weight-bolder;
+    margin-top:     1em;
+    margin-bottom:  0.6em;
+}
+
+.beta .main-container h1,
+.beta .main-container h2,
+.beta .main-container h3,
+.beta .main-container h4,
+.beta .main-container h5,
+.beta .main-container h6 {
+    line-height:    @line-height-heading;
+    color:          @heading-primary-color;
+    font-weight:    @font-weight-bolder;
+    margin-top:     1em;
+    margin-bottom:  0.6em;
+}
+
+.beta-extent-switcher__heading {
+    font-size:      @font-size-base;
+}
+
+h1 {
+    font-size:      @font-size-h1 !important;
+    font-weight:    @font-weight-boldest;
+
+    &.title__heading {
+        margin-top: 0;
+    }
+}
+
+h2 {
+    font-size:      @font-size-h2 !important;
+    font-weight:    @font-weight-bolder !important;
+}
+
+h3 {
+    font-size:      @font-size-h3 !important;
+    font-weight:    @font-weight-bold !important;
+}
+
+h4 {
+    font-size:      @font-size-h4 !important;
+    font-weight:    @font-weight-bold !important;
+}
+
+h5 {
+    font-size:      @font-size-h5 !important;
+    font-weight:    @font-weight-bold !important;
+}
+
+h6 {
+    font-size:      @font-size-h5 !important;
+    font-weight:    @font-weight-bold !important;
+}
+
+h1 + h2,
+h2 + h3,
+h4 + h5,
+h5 + h6 {
+    margin-top: -(@line-height-computed * 0.25);
+}
+
+h3 + h4 {
+    margin-top: -(@line-height-computed * 0.6);
+}
+
+p {
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    font-weight: @font-weight-base;
+    margin: 0 0 @paragraph-margin-bottom 0;
+}
+
+b,
+strong {
+    font-weight: @font-weight-bold;
+}
+
+small {
+    font-size: @font-size-small;
+}
+
+// Site wide links
+
+a {
+    color: @link-color;
+    text-decoration: none !important;
+    border-bottom: 0.0625rem solid lighten(@link-color, 60%);
+    
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: @link-active-colour;
+    }
+
+    &:visited {
+        color: @link-visited-color;
+    }
+
+    &:not([href]) {
+        text-decoration: none;
+    }
+}
+
+a.img-link,
+a.img-link:visited,
+a.img-link:hover,
+a.img-link:active {
+    border: none;
+}
+
+// Horizontal rules
+hr {
+    margin-top: @line-height-computed;
+    margin-bottom: @line-height-computed;
+    border: 0;
+    border-top: 1px solid @gray-4;
+}
+
+// Intro paragraphs
+.p-lede {
+    font-size: @font-size-medium;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-base;
+}
+
+.page-info {
+    color: #444;
+}
+
+.page-info + .page-info {
+    margin-top: -1em;
+}

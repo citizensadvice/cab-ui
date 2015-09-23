@@ -1,0 +1,129 @@
+/**
+ * COLLAPSIBLES
+ *
+ * Styles for content boxes and coloured sections.
+ */
+
+/* Creates a mixin for making box styles, including their links */
+.collapse ( 
+	@collapse-button-bg: #004B88, 
+	@collapse-button-icon-bg: darken(@collapse-button-bg, 10%), 
+	@collapse-button-text: @white, 
+	@collapse-button-close-bg: fade(@collapse-button-bg, 20%), 
+	@collapse-button-close-icon-bg: fade(@collapse-button-icon-bg, 20%), 
+	@collapse-button-close-text: @collapse-button-bg 
+	) {
+
+    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical 0;
+    background-color: @white;
+    color: @text-color;
+	.collapse-toggle {
+	 	cursor: pointer;
+	 	display: block;
+	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
+	    border: none;
+	    background-color: @collapse-button-bg;
+	    text-decoration: none !important;
+	    position: relative;
+		margin-bottom: @box-spacing-vertical !important;
+		background-color: @collapse-button-bg;
+		color: @collapse-button-text;
+		h1, h2, h3, h4, h5, h6 {
+	    	margin-top: 0;
+	    	color: @collapse-button-text;
+	    }
+		&:after {
+			box-sizing: border-box;
+		    font-family: 'FontAwesome';
+			content: "\f067";
+		    color: @collapse-button-text;
+		    padding: 0 @box-spacing-horizontal*1.25;
+		    background-color: @collapse-button-icon-bg;
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
+		}
+	    &:hover {
+	    	background-color: darken(@collapse-button-bg, 7.5%);
+	    	&:after {
+	    		background-color: darken(@collapse-button-icon-bg, 7.5%);
+	    	}
+	    }
+	    *:last-child {
+	    	margin-bottom: 0;
+	    }
+	}
+	.collapse-toggle-close {
+	 	cursor: pointer;
+	 	display: block;
+	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
+	    text-decoration: none !important;
+	    position: relative;
+		color: @collapse-button-close-text;
+		cursor: pointer;
+		border: none;
+		background-color: @collapse-button-close-bg;
+		color: @collapse-button-bg;
+		margin-top: 1rem !important;
+		&:after {
+			box-sizing: border-box;
+		    font-family: 'FontAwesome';
+		    padding: 0 @box-spacing-horizontal*1.25;
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
+			content: "\f068";
+			background-color: @collapse-button-close-icon-bg;
+			color: @collapse-button-icon-bg;
+		}
+	    &:hover {
+	    	background-color: darken(@collapse-button-close-bg, 20%);
+	    	&:after {
+	    		background-color: darken(@collapse-button-close-icon-bg, 20%);
+	    	}
+	    }
+	}
+	.open:after {
+		content: "\f068";
+	}
+	.collapse-content {
+		padding: 0;
+		border: 0;
+	    margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal !important;
+	    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+	    border: solid @collapse-button-icon-bg;
+	    border-width: 1px;
+	}
+}
+
+// Finctional CSS for JS
+.collapse-toggle {
+	cursor: pointer;
+}
+.collapse-content {
+	display: none;
+}
+.collapse-content.default {
+	display: block;
+}
+.start-open {
+	display: block;
+}
+
+/**
+ * Creates various collapse styles using mixin
+ * .collapse( @collapse-button-bg, @collapse-button-icon-bg, @collapse-button-text, @collapse-button-close-bg, @collapse-button-close-icon-bg, @collapse-button-close-text )
+ */
+.collapsible {
+	.collapse( @collapse-button-icon-bg: #253460 ); // Create unstyled collapse
+	&--aqua 		{ .collapse( @beta-aqua ) }
+	&--green 		{ .collapse( @beta-green ) }
+	&--red 			{ .collapse( @beta-red ) }
+}

@@ -7010,179 +7010,6 @@ input.tablesort-filter {
   display: inline-block;
   text-align: left;
 }
-/*
-    Members styles
-*/
-.home-page--member {
-  margin-top: 1em;
-}
-.home-page__box--member-welcome {
-  border-top: 8px solid #004b88;
-}
-.home-page__box--member-welcome > h2 {
-  color: #004b88;
-  width: 49%;
-}
-.home-page__box--member-welcome > img:first-child {
-  float: right;
-  margin: calc(-1em) -1em;
-  max-width: none;
-  width: 51%;
-}
-.home-page__box--member-welcome > div {
-  width: 49%;
-}
-.home-page__box--member-welcome > ul.li--arrow {
-  width: 49%;
-}
-.home-page__box--member-welcome > a.button {
-  max-width: 49%;
-}
-.home-page__box--member-search {
-  background: #fcbb69 url("/static/images/members/heritageyellow-speech-bubble-20pcw-400x220px.png") no-repeat right top;
-  background-size: 250px;
-  border-top: none;
-}
-.home-page__box--member-search > h2 {
-  color: #004b88;
-}
-.home-page__box--member-search .button--green {
-  background-color: #004b88;
-  color: #ffffff;
-}
-.home-page__box--member-contact {
-  background-color: #004b88;
-  border-top: none;
-  color: #ffffff;
-}
-.home-page__box--member-contact .button {
-  background-color: #fcbb69;
-  color: #000000;
-}
-.home-page__box--member-more > h2 {
-  color: #004b88;
-}
-.home-page__box--member-more img:first-child {
-  max-width: none;
-  width: 100%;
-  width: calc(100%);
-}
-.home-page__box--member-volunteer {
-  background: #90ce9b url("/static/images/members/responsiblepurple-volunteer-man-200x200px.png") no-repeat center bottom;
-  border-top: none;
-  padding-bottom: 250px;
-}
-.home-page__box--member-volunteer a,
-.home-page__box--member-volunteer a:hover,
-.home-page__box--member-volunteer a:focus {
-  color: #ffffff;
-}
-.home-page__box--member-campaigns {
-  background: #026278 url("/static/images/policy-foot.png") no-repeat center bottom;
-  border-top: none;
-  color: #ffffff;
-  padding-bottom: 180px;
-}
-.home-page__box--member-campaigns a,
-.home-page__box--member-campaigns a:hover,
-.home-page__box--member-campaigns a:focus {
-  color: #ffffff;
-}
-.home-page__box--member-supporters > h2 {
-  color: #004b88;
-}
-.home-page__box--member-supporters table {
-  width: 100%;
-}
-.home-page__box--member-supporters td,
-.home-page__box--member-supporters th {
-  border: none;
-}
-.main-content__right--member-contactus {
-  background: #ffffff;
-  border-top: 8px solid #99b7c4;
-  margin-bottom: 1.5em;
-  padding: 2em;
-  width: 73%;
-}
-@media (max-width: 480px) {
-  .main-content__right--member-contactus {
-    width: auto;
-  }
-}
-.main-content__right--member-contactus .articleContent {
-  width: auto;
-}
-.main-content__right--member-contactus th {
-  border: none;
-}
-.member-location {
-  /*
-    .highlight--warning;
-    border: none;
-    */
-}
-.member-location .member-map {
-  margin-top: 3em;
-  min-height: 200px;
-}
-@media (max-width: 480px) {
-  .member-location .member-map {
-    display: none;
-  }
-}
-.member-location:before,
-.member-location:after {
-  content: "";
-  display: table;
-  flex-basis: 0;
-  order: 1;
-}
-.member-location:after {
-  clear: both;
-}
-.member-location {
-  zoom: 1;
-  /* ie 6/7 */
-}
-.side-nav--member > h2 {
-  background: #004b88;
-  color: white;
-  margin: 0;
-  font-size: 1.2em;
-  padding: .7em .5em;
-}
-.side-nav--member .member_group_label {
-  background: #CCDBE8;
-  display: block;
-  padding: .5em;
-}
-.members-social-footer {
-  margin: 1em 0 0 0;
-}
-.members-social-footer > a {
-  margin-right: .5em;
-  padding: 25px;
-}
-.members-social-footer .members-social-footer__twitter {
-  background: url("/Static/images/members/socialmedia_twitter.png") center no-repeat;
-  background-size: 50px;
-}
-.members-social-footer .members-social-footer__facebook {
-  background: url("/Static/images/members/socialmedia_facebook.png") center no-repeat;
-  background-size: 50px;
-}
-.members-social-footer .members-social-footer__youtube {
-  background: url("/Static/images/members/socialmedia_youtube.png") center no-repeat;
-  background-size: 50px;
-}
-#epi-quickNavigator {
-  right: auto !important;
-  left: 10px;
-}
-#epi-quickNavigator li {
-  margin: 0;
-}
 /* Mixin files */
 /**
  * CALLOUT
@@ -12052,5 +11879,187 @@ h4 > .ref-heading__toggle {
 }
 li.ref-dialog__list-item--highlight {
   background-color: #eeeeee;
+}
+/**
+ * EPISERVER 
+ *
+ *
+ * Episerver icon, when logged into episerver, this displays.
+ * This file amends how that is displayed.
+ */
+#epi-quickNavigator {
+  right: auto !important;
+  left: 10px;
+}
+#epi-quickNavigator li {
+  margin: 0;
+}
+/**
+ * MEMBERS
+ *
+ * Local citizens advice 'microsites'. Customisation of pages in /members
+ */
+.home-page--member {
+  margin-top: 1rem;
+}
+.home-page__box--member-welcome {
+  border-top: 8px solid #004b88;
+}
+.home-page__box--member-welcome > h2 {
+  color: #004b88;
+  width: 49%;
+}
+.home-page__box--member-welcome > img:first-child {
+  float: right;
+  margin: calc(-1em) -1em;
+  max-width: none;
+  width: 51%;
+}
+.home-page__box--member-welcome > div {
+  width: 49%;
+}
+.home-page__box--member-welcome > ul.li--arrow {
+  width: 49%;
+}
+.home-page__box--member-welcome > a.button {
+  max-width: 49%;
+}
+.home-page__box--member-search {
+  background: #fcbb69 url("/static/images/members/heritageyellow-speech-bubble-20pcw-400x220px.png") no-repeat right top;
+  background-size: 250px;
+  border-top: none;
+}
+.home-page__box--member-search > h2 {
+  color: #004b88;
+}
+.home-page__box--member-search .button--green {
+  background-color: #004b88;
+  color: #ffffff;
+}
+.home-page__box--member-contact {
+  background-color: #004b88;
+  border-top: none;
+  color: #ffffff;
+}
+.home-page__box--member-contact .button {
+  background-color: #fcbb69;
+  color: #000000;
+}
+.home-page__box--member-more > h2 {
+  color: #004b88;
+}
+.home-page__box--member-more img:first-child {
+  max-width: none;
+  width: 100%;
+  width: calc(100%);
+}
+.home-page__box--member-volunteer {
+  background: #90ce9c url("/static/images/members/responsiblepurple-volunteer-man-200x200px.png") no-repeat center bottom;
+  border-top: none;
+  padding-bottom: 250px;
+}
+.home-page__box--member-volunteer a,
+.home-page__box--member-volunteer a:hover,
+.home-page__box--member-volunteer a:focus {
+  color: #ffffff;
+}
+.home-page__box--member-campaigns {
+  background: #026278 url("/static/images/policy-foot.png") no-repeat center bottom;
+  border-top: none;
+  color: #ffffff;
+  padding-bottom: 180px;
+}
+.home-page__box--member-campaigns a,
+.home-page__box--member-campaigns a:hover,
+.home-page__box--member-campaigns a:focus {
+  color: #ffffff;
+}
+.home-page__box--member-supporters > h2 {
+  color: #004b88;
+}
+.home-page__box--member-supporters table {
+  width: 100%;
+}
+.home-page__box--member-supporters td,
+.home-page__box--member-supporters th {
+  border: none;
+}
+.main-content__right--member-contactus {
+  background: #ffffff;
+  border-top: 8px solid #99b7c4;
+  margin-bottom: 1.5em;
+  padding: 2em;
+  width: 73%;
+}
+@media (max-width: 480px) {
+  .main-content__right--member-contactus {
+    width: auto;
+  }
+}
+.main-content__right--member-contactus .articleContent {
+  width: auto;
+}
+.main-content__right--member-contactus th {
+  border: none;
+}
+.member-location {
+  /*
+    .highlight--warning;
+    border: none;
+    */
+}
+.member-location .member-map {
+  margin-top: 3rem;
+  min-height: 200px;
+}
+@media (max-width: 480px) {
+  .member-location .member-map {
+    display: none;
+  }
+}
+.member-location:before,
+.member-location:after {
+  content: "";
+  display: table;
+  flex-basis: 0;
+  order: 1;
+}
+.member-location:after {
+  clear: both;
+}
+.member-location {
+  zoom: 1;
+  /* ie 6/7 */
+}
+.side-nav--member > h2 {
+  background: #004b88;
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+  padding: 0.7rem 0.5rem;
+}
+.side-nav--member .member_group_label {
+  background: #a5bddc;
+  display: block;
+  padding: .5em;
+}
+.members-social-footer {
+  margin: 1em 0 0 0;
+}
+.members-social-footer > a {
+  margin-right: 0.5rem;
+  padding: 25px;
+}
+.members-social-footer .members-social-footer__twitter {
+  background: url("/Static/images/members/socialmedia_twitter.png") center no-repeat;
+  background-size: 50px;
+}
+.members-social-footer .members-social-footer__facebook {
+  background: url("/Static/images/members/socialmedia_facebook.png") center no-repeat;
+  background-size: 50px;
+}
+.members-social-footer .members-social-footer__youtube {
+  background: url("/Static/images/members/socialmedia_youtube.png") center no-repeat;
+  background-size: 50px;
 }
 /*# sourceMappingURL=site.css.map */

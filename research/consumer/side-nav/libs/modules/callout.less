@@ -1,0 +1,110 @@
+/**
+ * CALLOUT
+ *
+ * Styles for content callouts and coloured sections.
+ */
+
+// Creates a mixin for making callout styles, including their links
+.callout ( 
+	@callout-background: @gray-6,
+	@callout-headings: @text-color, 
+	@callout-text: @text-color, 
+	@callout-border: darken(@callout-background, 25%) 
+	) {
+
+    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical 0;
+    background-color: @callout-background;
+    color: @callout-text;
+    border: 0px @callout-border solid;
+    display: block;
+	h1, h2, h3 {
+		color: @callout-headings !important; 
+		font-size: @font-size-h3;
+	}
+	a {
+		border-bottom-color: @callout-border;
+	}
+    > *:first-child {
+    	padding-top: @box-spacing-vertical;
+    }
+    h1:first-child,
+    h2:first-child,
+    h3:first-child,
+    h4:first-child,
+    h5:first-child,
+    h6:first-child {
+    	margin-top: 0;
+    }
+    li:first-child {
+    	padding-top: 0;
+    }
+    > *:last-child {
+    	margin-bottom: 0 !important;
+    }
+	.callout__link {
+	 	cursor: pointer;
+	 	display: block;
+	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
+	    border: none;
+	    background-color: darken(spin(@callout-background, 15), 5%);
+	    color: @callout-text;
+	    border-bottom: 1px solid @callout-border;
+	    text-decoration: none !important;
+	    position: relative;
+		&:after {
+			box-sizing: border-box;
+		    font-family: 'FontAwesome';
+		    content: "\f054";
+		    color: @callout-text;
+		    background-color: darken(spin(@callout-background, 15), 10%);
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
+		    width: 3em;
+		    text-align: center;
+		}
+	    &:hover {
+	    	background-color: darken(spin(@callout-background, 15), 10%);
+	    	color: @callout-text;
+	    	&:after {
+	    		background-color: darken(spin(@callout-background, 15), 20%);
+	    	}
+	    }
+	    &--anchor:after {
+		    content: "\f063";
+	    }
+	}
+}
+
+// Callout borders, can be used as either a class in the DOM, or part of a mixin
+.callout--border {
+	border-width: 1px;
+	.callout__link:last-child {
+		border: none;
+	}
+}
+.callout--border--left {
+	border-left-width: @box-spacing/2;
+	padding-left: @box-spacing-horizontal;
+    //border-radius: @box-spacing/2 0 0 @box-spacing/2;
+}
+
+/**
+ * Creates various callout styles using mixin
+ * .callout( @callout-background, @callout-headings, @callout-text, @callout-border )
+ */
+.callout {
+	.callout(  @heritage-blue-lightest, @beta-blue-light ); .callout--border; .callout--border--left; // Create unstyled box
+	&--confirmation		{ .callout( @beta-green-light, @beta-green ); .callout--border--left; } // Green
+	&--warning 			{ .callout( @beta-red-lighter, @beta-red ); .callout--border--left; } // Red
+	&--alert 			{ .callout( @beta-yellow-light ); .callout--border--left; } //Yellow
+    &--quote      		{ .callout( @white, @gray-2 ); .callout--border; .callout--border--left; } // Gray
+    &--heritage			{ .callout( @heritage-yellow, @heritage-blue, @heritage-blue ); }
+    &--responsible		{ .callout( @responsible-aqua, @responsible-purple, @responsible-purple ); }
+    &--inventive		{ .callout( @inventive-pink, @inventive-teal ); }
+    &--generous			{ .callout( @generous-mauve, @generous-green ); }
+}

@@ -1,0 +1,230 @@
+/* Base */
+
+/**
+ * Style Guide
+ *
+ * Basic utility classes.
+ * And one or two odds and ends that coule be moved elsewhere at some point.
+ */
+
+body {
+    padding-top:        0px;
+    margin:             0;
+    font-family:        'Open Sans', sans-serif;
+    background-color:   @white;
+}
+
+.starter-template {
+    padding:            0px;
+    text-align:         left;
+}
+
+
+#logo {
+    padding:            15px 0px 15px 0px;
+}
+.navbar-inverse {
+    background-color:   #004B88;
+    border-color:       #080808;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color:   #003a6a;  
+    font-weight:        600;  
+}
+.navbar-inverse .navbar-nav>li>a {
+    color:              #A5BDDC;
+    padding-top:        25px; 
+    padding-bottom:     25px; 
+}
+.navbar-nav {
+    float: right;
+}
+.row {
+    margin-bottom:      (@box-spacing-vertical * 1.5);
+}
+
+.row--white {
+    background-color:   @white;
+    margin-top:         (@box-spacing-vertical * 2);
+    margin-bottom:      (@box-spacing-vertical * 1.5);
+    padding:            (@paragraph-margin-bottom * 2)  (@paragraph-margin-bottom * 2) 0  (@paragraph-margin-bottom * 2);    
+}
+ol {
+}
+
+ul.navbar-nav li {
+    font-size:          @font-size-base;
+    line-height:        @line-height-base;
+    font-weight:        @font-weight-base;
+    margin:             0;
+}
+
+
+ol li, ul li {
+    font-size:          @font-size-base;
+    line-height:        @line-height-base;
+    font-weight:        @font-weight-base;
+    margin:             0 0 (@paragraph-margin-bottom / 2) 0;
+}
+/***************************************************************************
+ * Page status
+ * Badge
+ */
+.status {
+    padding: 10px 0 8px 0;
+    border-bottom: 1px solid @gray-4;
+}
+.beta-dap-cover {
+    margin: -15px 0 2em 0;
+    padding: 10px 0 20px 0;
+    background-color: @heritage-blue;
+    min-height: 15em;
+    h1 {
+        color: @heritage-yellow;
+    }
+    h2, p, a {
+        color: @white;
+    }
+}
+.alpha-badge {
+    font-weight:        @font-weight-bolder;
+    color:              @cloud;
+    background-color:   @beta-red-lighter;
+    display:            inline-block;
+    float:              left;
+    padding:            (@paragraph-margin-bottom * 0.5);
+    margin-right:       (@paragraph-margin-bottom * 0.5);
+    margin-top:         -10px;
+    margin-bottom:      20px;
+}
+@media (max-width: 767px) {
+    .status p {
+        font-size: (@font-size-base * 0.8);
+    }
+    .alpha-badge {
+        margin-top:         0px;
+    }
+    .breadcrumb p {
+        font-size: (@font-size-base * 0.8);
+    }
+}
+
+// For code
+.example-box {
+    color: #333;
+    padding: 20px;
+    margin: 1em 0 3em;
+    font-family: monaco,monospace;
+    line-height: 1.7em;
+    background-color: #f8f8f8;
+    border: 1px solid #dfe1e3;
+    border-radius: 2px;
+    code {
+        color: @gray-4;
+        padding: 0 2em; 
+    }
+}
+
+div[class*="callout"] code {
+    color: inherit;
+    padding: 0;
+}
+
+pre {
+    .callout();
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    .callout--border--left;
+}
+
+/***************************************************************************
+ * Colours
+ * Swatches
+ */
+.swatch {
+    height: 110px;
+    width: 110px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: (@line-height-base * 0.5);
+    float: left;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    p {
+        line-height: (@line-height-base * 0.8);
+        font-weight: @font-weight-bold;
+        font-size: (@font-size-base * 0.8);
+    }
+
+    &.swatch--brand--heritage-blue      { background-color: #004B88; color: @white; }
+    &.swatch--brand--heritage-yellow    { background-color: #FCBB69; }
+    &.swatch--brand--responsible-purple { background-color: #57486B; color: @white; }
+    &.swatch--brand--responsible-aqua   { background-color: #90CE9C; }
+    &.swatch--brand--inventive-teal     { background-color: #006278; color: @white; }
+    &.swatch--brand--inventive-pink     { background-color: #FBC0AD; }
+    &.swatch--brand--generous-green     { background-color: #00553F; color: @white; }
+    &.swatch--brand--generous-mauve     { background-color: #B5AFD7; }
+
+    &.swatch--beta--red                 { background-color: @beta-red; color: @white; }
+    &.swatch--beta--orange              { background-color: @beta-orange; }
+    &.swatch--beta--green               { background-color: @beta-green; color: @white; }
+    &.swatch--beta--blue-darker         { background-color: @beta-blue; color: @white; }
+    &.swatch--beta--blue-light          { background-color: @beta-blue-light; }
+    &.swatch--beta--blue-light-tint     { background-color: @beta-blue-lighter; }
+    &.swatch--beta--aqua                { background-color: @beta-aqua; }
+    &.swatch--beta--yellow              { background-color: @beta-yellow; }
+    &.swatch--beta--yellow-light        { background-color: @beta-yellow-light; }
+
+    &.swatch--mono--black               { background-color: @black; color: @white; }
+    &.swatch--mono--gray0               { background-color: @gray-0; color: @white; }
+    &.swatch--mono--gray1               { background-color: @gray-1; color: @white; }
+    &.swatch--mono--gray2               { background-color: @gray-2; color: @white; }
+    &.swatch--mono--gray3               { background-color: @gray-3; color: @black; }
+    &.swatch--mono--gray4               { background-color: @gray-4; color: @black; }
+    &.swatch--mono--gray5               { background-color: @gray-5; color: @black; }
+    &.swatch--mono--gray6               { background-color: @gray-6; color: @black; }
+    &.swatch--mono--gray7               { background-color: @gray-6; color: @black; }
+    &.swatch--mono--white               { background-color: @white; color: @black; }
+}
+
+
+/* Enhancements for style guide */
+.show-grid [class^=col-] {
+  padding:              10px;
+  background-color:     #eee;
+  background-color:     @heritage-blue-light;
+  border: 1px solid     @heritage-blue;
+}
+
+/* Form */
+.checkbox label, .radio label {
+    font-size:      @font-size-base;
+    line-height:    @line-height-base;
+    font-weight:    @font-weight-base;
+    color:          @text-color;
+    padding:        (@line-height-computed * 0.6) (@line-height-computed * 1.5);
+    background-color:   @white;
+    display: block;
+    margin:         (@line-height-computed * 0.6) 0;
+}
+
+/* Examples */
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid @gray-4;
+
+  p.lighten {
+    color: @gray-3;
+  }
+}
