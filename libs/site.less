@@ -18,7 +18,6 @@
 @import "base/type";
 @import "base/utility";
 @import "base/helpers";
-// @import "base/base"; // This file has not been updated as shouldn't have been included
 
 // Existing styles
 	//@import "existing/inc/magic-numbers";
@@ -28,7 +27,7 @@
 	//@import "existing/inc/icons"; // Merged into base/icons.less
 	//@import "existing/inc/helpers";
 	//@import "existing/inc/global"; // Moved to base
-	@import "existing/inc/boxes";
+	//@import "existing/inc/boxes";
 	//@import "existing/inc/highlight"; // Compiled into modules/callouts
 
 	//@import "existing/inc/buttons"; // Moved to base
@@ -36,7 +35,7 @@
 	//@import "existing/inc/forms-v2";
 
 
-	@import "existing/inc/framework";
+	//@import "existing/inc/framework";
 
 	// Modules
 	//@import "existing/inc/cookie-monster";
@@ -73,7 +72,7 @@
 	@import "existing/inc/plugins";
 	@import "existing/inc/toc";
 	@import "existing/inc/letter";
-	@import "existing/inc/accordion";
+	//@import "existing/inc/accordion";
 	//@import "existing/inc/revealable";
 	//@import "existing/inc/tablesort";
 	//@import "existing/inc/decision-tree";
@@ -112,6 +111,8 @@
 @import "mixins/fit-content";
 @import "mixins/flex-box";
 @import "mixins/limit-width";
+@import "mixins/collapse";
+@import "mixins/popup";
 
 /* Module files */
 @import "modules/header";
@@ -146,7 +147,13 @@
 @import "modules/side-links";
 @import "modules/side-chat";
 @import "modules/calls-for-evidence";
+<<<<<<< HEAD
 @import "modules/search-results";
 @import "modules/cookie-monster";
 @import "modules/paragraph-numbers.less";
 @import "modules/atoz";
+=======
+@import "modules/index-page";
+@import "modules/search-results";
+@import "modules/cookie-monster";
+>>>>>>> origin/master
