@@ -1,3 +1,186 @@
+/* Vendor files */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
 /* Override files */
 /* Base */
 /**
@@ -139,7 +322,7 @@ pre h1,
 pre h2,
 pre h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre a {
   border-bottom-color: #9f9f9f;
@@ -201,7 +384,7 @@ pre h1,
 pre h2,
 pre h3 {
   color: #003c64 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre a {
   border-bottom-color: #4ab7ff;
@@ -276,7 +459,7 @@ pre--confirmation h1,
 pre--confirmation h2,
 pre--confirmation h3 {
   color: #537d2d !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--confirmation a {
   border-bottom-color: #85c050;
@@ -348,7 +531,7 @@ pre--warning h1,
 pre--warning h2,
 pre--warning h3 {
   color: #df3034 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--warning a {
   border-bottom-color: #e97275;
@@ -420,7 +603,7 @@ pre--alert h1,
 pre--alert h2,
 pre--alert h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--alert a {
   border-bottom-color: #ffbf47;
@@ -493,7 +676,7 @@ pre--quote h1,
 pre--quote h2,
 pre--quote h3 {
   color: #606060 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--quote a {
   border-bottom-color: #bfbfbf;
@@ -566,7 +749,7 @@ pre--heritage h1,
 pre--heritage h2,
 pre--heritage h3 {
   color: #004b88 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--heritage a {
   border-bottom-color: #e17f04;
@@ -636,7 +819,7 @@ pre--responsible h1,
 pre--responsible h2,
 pre--responsible h3 {
   color: #57486b !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--responsible a {
   border-bottom-color: #449a55;
@@ -706,7 +889,7 @@ pre--inventive h1,
 pre--inventive h2,
 pre--inventive h3 {
   color: #006278 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--inventive a {
   border-bottom-color: #f56333;
@@ -776,7 +959,7 @@ pre--generous h1,
 pre--generous h2,
 pre--generous h3 {
   color: #00553f !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 pre--generous a {
   border-bottom-color: #665aad;
@@ -1363,6 +1546,19 @@ button:disabled:hover {
 /**
  * FORMS
  */
+form .invalid {
+  display: none;
+  color: #df3034;
+  padding-top: 0.25rem;
+}
+form .valid {
+  display: none;
+  color: #537d2d;
+  padding-top: 0.25rem;
+}
+form small {
+  color: #808080;
+}
 fieldset {
   padding: 0;
   margin: 0;
@@ -1377,17 +1573,27 @@ legend {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   line-height: inherit;
-  color: #404040;
+  color: #004b88;
   border: 0;
   border-bottom: 1px solid #004b88;
-  font-size: 1.2em;
+  font-size: 1.3rem;
   font-weight: 600;
 }
-label {
+label,
+.form__label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
   font-weight: bold;
+}
+.form__label--hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 textarea,
 input[type=text],
@@ -1404,15 +1610,15 @@ input[type=search] {
   box-sizing: border-box;
   width: 70%;
 }
+input[type=search].search--full-width {
+  width: 100%;
+}
 input[type=checkbox] + label {
   font-weight: normal;
   padding-left: .5em;
 }
 input[type=text][size="1"] {
   width: 3em;
-}
-input[type=search].search--full-width {
-  width: 100%;
 }
 select {
   padding: .2em;
@@ -1436,22 +1642,9 @@ select[multiple],
 select[size] {
   height: auto;
 }
-form .invalid {
-  display: none;
-  color: #df3034;
-  padding-top: 0.25rem;
-}
-form .valid {
-  display: none;
-  color: #537d2d;
-  padding-top: 0.25rem;
-}
-form small {
-  color: #808080;
-}
+textarea,
 input,
-select,
-textarea {
+select {
   border: 1px solid #dfdfdf;
 }
 textarea {
@@ -1460,6 +1653,7 @@ textarea {
 }
 input[type="email"],
 input[type="password"],
+input[type="text"],
 textarea,
 select {
   width: 100%;
@@ -1468,30 +1662,35 @@ select {
 }
 input[type="email"]:focus:required:invalid,
 input[type="password"]:focus:required:invalid,
+input[type="text"]:focus:required:invalid,
 textarea:focus:required:invalid,
 select:focus:required:invalid {
   border-color: #df3034;
 }
 input[type="email"]:focus:required:invalid ~ .invalid,
 input[type="password"]:focus:required:invalid ~ .invalid,
+input[type="text"]:focus:required:invalid ~ .invalid,
 textarea:focus:required:invalid ~ .invalid,
 select:focus:required:invalid ~ .invalid {
   display: block !important;
 }
 input[type="email"]:focus:required:valid,
 input[type="password"]:focus:required:valid,
+input[type="text"]:focus:required:valid,
 textarea:focus:required:valid,
 select:focus:required:valid {
   border-color: #537d2d;
 }
 input[type="email"]:focus:required:valid ~ .valid,
 input[type="password"]:focus:required:valid ~ .valid,
+input[type="text"]:focus:required:valid ~ .valid,
 textarea:focus:required:valid ~ .valid,
 select:focus:required:valid ~ .valid {
   display: block !important;
 }
 input[type="email"]:focus,
 input[type="password"]:focus,
+input[type="text"]:focus,
 textarea:focus,
 select:focus {
   border-color: #229cff;
@@ -1501,6 +1700,79 @@ input[type="file"] {
   border: none;
   width: 100%;
   outline: none;
+}
+output {
+  display: block;
+  padding-top: 11px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+}
+/**********************************************************************/
+.form__field {
+  display: block;
+  width: 100%;
+  height: 37px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  /*
+    // Placeholder
+    @include placeholder;
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty,
+    // we don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        background-color: $field-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content
+    }
+    */
+}
+.form__field:focus {
+  border-color: #66afe9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+  outline: 0 none;
+}
+.form__field--day,
+.form__field--month {
+  width: 4em;
+}
+.form__field--year {
+  width: 4.5em;
+}
+.form__field--time {
+  width: 6em;
+}
+textarea.form__field {
+  height: auto;
+}
+/**********************************************************************
+ * Special styles for iOS temporal inputs
+ *
+ * In Mobile Safari, setting `display: block` on temporal inputs causes the
+ * text within the input to become vertically misaligned. As a workaround, we
+ * set a pixel line-height that matches the given height of the input, but only
+ * for Safari.
+ */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: 37px;
+  }
 }
 /* Overrides 'Choose file' button
 input[type="file"]::-webkit-file-upload-button {
@@ -1608,6 +1880,465 @@ input[type="file"]::before {
   background-color: #eeeeee;
   border: none;
   resize: none;
+}
+.form {
+  margin: 1em 0;
+}
+.form__row,
+.form__group {
+  display: block;
+  margin-bottom: 1em;
+}
+.form__button-row {
+  margin-top: 1em;
+  width: 100%;
+}
+.form--table {
+  display: table;
+  width: 100%;
+}
+.form--table > .form__row {
+  display: table-row;
+}
+.form--table > .form__row > .form__label,
+.form--table > .form__row > label {
+  display: table-cell;
+  white-space: nowrap;
+  padding: 0 1em 1em 0;
+}
+.form--table > .form__row > .form__control {
+  display: table-cell;
+  width: 100%;
+  padding-bottom: 1em;
+}
+@media (max-width: 479px) {
+  .form--table {
+    display: block;
+  }
+  .form--table > .form__row {
+    display: block;
+  }
+  .form--table > .form__row > .form__label,
+  .form--table > .form__row > label {
+    display: block;
+    white-space: normal;
+    padding: 0;
+  }
+  .form--table > .form__row > .form__control {
+    display: block;
+    width: 100%;
+  }
+}
+.form__radio-list {
+  border: none;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+.form__radio-list > legend {
+  font-size: 1em;
+}
+.form__radio-item {
+  display: block;
+}
+.form__radio,
+.form__checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form__radio label,
+.form__checkbox label {
+  min-height: 25px;
+  padding-left: 25px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.form__radio input[type="radio"],
+.form__radio-inline input[type="radio"],
+.form__checkbox input[type="checkbox"],
+.form__checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 6px \9;
+}
+.form__radio-inline,
+.form__checkbox-inline {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.form__radio-inline + .form__radio-inline,
+.form__checkbox-inline + .form__checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.form__radio,
+.form__checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form__radio label,
+.form__checkbox label {
+  min-height: 25px;
+  padding-left: 25px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.form__radio input[type="radio"],
+.form__radio-inline input[type="radio"],
+.form__checkbox input[type="checkbox"],
+.form__checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -25px;
+  margin-top: 6px \9;
+}
+.form__radio-inline,
+.form__checkbox-inline {
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.form__radio-inline + .form__radio-inline,
+.form__checkbox-inline + .form__checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.form__radio--boxed,
+.form__checkbox--boxed,
+.form__radio-inline--boxed,
+.form__checkbox-inline--boxed {
+  background: none repeat scroll 0 0 #fff;
+  border: 1px solid transparent;
+}
+.form__radio--boxed:not(.is-disabled):hover,
+.form__checkbox--boxed:not(.is-disabled):hover,
+.form__radio-inline--boxed:not(.is-disabled):hover,
+.form__checkbox-inline--boxed:not(.is-disabled):hover {
+  background: none repeat scroll 0 0 #eff3f3;
+  border-color: #ccc;
+}
+.form__radio--boxed > label,
+.form__checkbox--boxed > label,
+.form__radio-inline--boxed > label,
+.form__checkbox-inline--boxed > label {
+  padding-left: 40px;
+  width: 100%;
+}
+.form__radio--boxed.is-selected,
+.form__checkbox--boxed.is-selected,
+.form__radio-inline--boxed.is-selected,
+.form__checkbox-inline--boxed.is-selected {
+  background: none repeat scroll 0 0 #b8e3df;
+}
+.form__radio--boxed.is-selected:hover,
+.form__checkbox--boxed.is-selected:hover,
+.form__radio-inline--boxed.is-selected:hover,
+.form__checkbox-inline--boxed.is-selected:hover {
+  border-color: transparent;
+  background: none repeat scroll 0 0 #b8e3df;
+}
+.form__radio--boxed,
+.form__checkbox--boxed {
+  width: 100%;
+}
+.form__radio--boxed > .form__radio__desc,
+.form__checkbox--boxed > .form__radio__desc,
+.form__radio--boxed > .form__checkbox__desc,
+.form__checkbox--boxed > .form__checkbox__desc {
+  padding-left: 40px;
+  padding-top: 0;
+  margin-top: -10px;
+}
+.form__radio-inline--boxed,
+.form__checkbox-inline--boxed {
+  padding-top: 5px;
+  padding-left: 35px;
+  padding-bottom: 5px;
+}
+.form__radio--boxed + .box.js-revealable,
+.form__checkbox--boxed + .box.js-revealable,
+.form__radio--boxed + .highlight-adviseronly.js-revealable,
+.form__checkbox--boxed + .highlight-adviseronly.js-revealable,
+.form__radio--boxed + .sideContent.js-revealable,
+.form__checkbox--boxed + .sideContent.js-revealable,
+.form__radio--boxed + .inlineContent.js-revealable,
+.form__checkbox--boxed + .inlineContent.js-revealable,
+.form__radio--boxed + .extent-switcher.js-revealable,
+.form__checkbox--boxed + .extent-switcher.js-revealable,
+.form__radio--boxed + .index-page__box.js-revealable,
+.form__checkbox--boxed + .index-page__box.js-revealable,
+.form__radio--boxed + .home-page__box.js-revealable,
+.form__checkbox--boxed + .home-page__box.js-revealable,
+.form__radio--boxed + .login.js-revealable,
+.form__checkbox--boxed + .login.js-revealable,
+.form__radio--boxed + .home-page__box--member-welcome.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-welcome.js-revealable,
+.form__radio--boxed + .home-page__box--member-search.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-search.js-revealable,
+.form__radio--boxed + .home-page__box--member-contact.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-contact.js-revealable,
+.form__radio--boxed + .home-page__box--member-more.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-more.js-revealable,
+.form__radio--boxed + .home-page__box--member-volunteer.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-volunteer.js-revealable,
+.form__radio--boxed + .home-page__box--member-campaigns.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-campaigns.js-revealable,
+.form__radio--boxed + .home-page__box--member-supporters.js-revealable,
+.form__checkbox--boxed + .home-page__box--member-supporters.js-revealable {
+  position: relative;
+  top: -10px;
+  margin-bottom: -10px;
+}
+.box--1 .form__radio--boxed.is-selected,
+.box--1 .form__checkbox--boxed.is-selected,
+.box--1 .form__radio-inline--boxed.is-selected,
+.box--1 .form__checkbox-inline--boxed.is-selected {
+  background: none repeat scroll 0 0 #fff;
+}
+.box--2 .form__radio--boxed,
+.box--2 .form__checkbox--boxed,
+.box--2 .form__radio-inline--boxed,
+.box--2 .form__checkbox-inline--boxed {
+  background: #eee;
+}
+.box--2 .form__radio--boxed:hover,
+.box--2 .form__checkbox--boxed:hover,
+.box--2 .form__radio-inline--boxed:hover,
+.box--2 .form__checkbox-inline--boxed:hover {
+  border-color: #ccc;
+}
+.box--2 .form__radio--boxed.is-selected,
+.box--2 .form__checkbox--boxed.is-selected,
+.box--2 .form__radio-inline--boxed.is-selected,
+.box--2 .form__checkbox-inline--boxed.is-selected {
+  border-color: #ccc;
+  background: #ccc;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+}
+.form__radio-inline.is-disabled,
+.form__checkbox-inline.is-disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+.form__radio,
+.form__checkbox {
+  cursor: pointer;
+}
+.form__radio.is-disabled,
+.form__checkbox.is-disabled {
+  cursor: not-allowed;
+  color: #999;
+}
+.form__radio.is-disabled label,
+.form__checkbox.is-disabled label {
+  cursor: not-allowed;
+}
+.panel--a .form__radio--boxed,
+.panel--a .form__checkbox--boxed,
+.panel--a .form__radio-inline--boxed,
+.panel--a .form__checkbox-inline--boxed {
+  background: #eee;
+}
+.panel--a .form__radio--boxed:hover,
+.panel--a .form__checkbox--boxed:hover,
+.panel--a .form__radio-inline--boxed:hover,
+.panel--a .form__checkbox-inline--boxed:hover {
+  background: #ccc;
+}
+.panel--a .form__radio--boxed.is-selected,
+.panel--a .form__checkbox--boxed.is-selected,
+.panel--a .form__radio-inline--boxed.is-selected,
+.panel--a .form__checkbox-inline--boxed.is-selected {
+  border-color: #ccc;
+}
+.form--inline-group .form__group {
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  .form--inline-group {
+    display: table;
+    margin-bottom: 0.5em;
+  }
+  .form--inline-group .form__group {
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .form--inline-group .form__label {
+    /* Note: If you make the label visible, things might get screwy in IE8. */
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .form--inline-group .form__hint {
+    display: none;
+  }
+  .form--inline-group .form__field {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0;
+  }
+  .form--inline-group .button {
+    display: table-cell;
+    padding: 1px 3px 2px 1px;
+  }
+  .form--inline-group .button .fa-stack {
+    margin-left: 0;
+  }
+  .form--inline-group .button__label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+/**********************************************************************
+ * Help text
+ *
+ * Apply to any element you wish to create light text for placement immediately
+ * below a form control. Use for general help, formatting, or instructional
+ * text.
+ */
+.form__help {
+  color: #666;
+  margin-bottom: 5px;
+}
+.form__hint {
+  color: #999;
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.panel .form__hint {
+  display: none;
+}
+.form__error {
+  color: #c02f43;
+  display: block;
+  font-weight: 400;
+  margin-top: 5px;
+}
+/**********************************************************************
+ * Static fields.
+ */
+.form__field--static {
+  max-width: 100%;
+  margin-bottom: 5px;
+  display: block;
+}
+.custom-dropdown {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative;
+  width: 85%;
+  float: left;
+  background: #d9dada;
+}
+.custom-dropdown > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: .2em;
+  width: calc(100% + 1.2em);
+  margin: 0 calc(33px + .2em) 0 0;
+  outline: none;
+  /* The right positioning is the extra width from above
+               In <=IE8 this will be ignored as we've used the four value poitioning syntax
+            */
+}
+.custom-dropdown > i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #004b88;
+  color: white;
+  padding: 0 .2em;
+  font-size: 1.3em;
+  pointer-events: none;
+}
+.custom-dropdown > i:before {
+  padding: 0;
+}
+.no-pointer-events .custom-dropdown > i {
+  display: none;
+}
+input.custom-dropdown__button {
+  margin-left: 1%;
+  width: 14%;
+  float: left;
+  border-radius: 0;
+  padding: .2em;
+}
+/* Search fields used in blocks */
+.search-inline {
+  display: table;
+  margin: 1em 0;
+}
+.search-inline > label {
+  display: block;
+  width: 5em;
+  font-weight: bold;
+}
+.search-inline__field {
+  display: table-cell;
+  width: 100%;
+  padding-right: .5em;
+}
+.search-inline__field > input {
+  width: 100%;
+}
+.search-inline__button {
+  display: table-cell;
+}
+.search-inline__button > input,
+.search-inline__button > button {
+  padding: .2em .6em;
+}
+.search-inline--hide-label > label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.checkbox-radio-inner input[type="radio"],
+.checkbox-radio-inner input[type="checkbox"] {
+  position: absolute;
+}
+.checkbox-radio-inner label {
+  display: inline-block;
+  margin-left: 1em;
 }
 /*
  * Old form styles
@@ -2448,8 +3179,8 @@ h6 {
   line-height: 1.3;
   color: #004b88;
   font-weight: 700;
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
 }
 h1 {
   font-size: 2.3rem;
@@ -2462,11 +3193,11 @@ h2 {
   font-size: 1.8rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600 !important;
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600 !important;
 }
 h5 {
@@ -2539,7 +3270,7 @@ hr {
   border-top: 1px solid #9f9f9f;
 }
 .p-lede {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.7;
 }
@@ -2764,189 +3495,6 @@ hr {
 .text-align-right {
   text-align: right;
 }
-/* Vendor files */
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
-a {
-  background: transparent;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-b,
-strong {
-  font-weight: bold;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-mark {
-  background: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-img {
-  border: 0;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-pre {
-  overflow: auto;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-}
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-html input[type="button"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-button input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-input {
-  line-height: normal;
-}
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  border: 0;
-  padding: 0;
-}
-textarea {
-  overflow: auto;
-}
-optgroup {
-  font-weight: bold;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-}
 .box,
 .highlight-adviseronly,
 .sideContent,
@@ -3139,7 +3687,7 @@ th {
 }
 .box--content-right > h2 {
   margin: 0 0 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #004b88;
 }
 .box--content-right > h3 {
@@ -3218,594 +3766,6 @@ th {
 .inlineContent > h3 {
   margin: 0;
   font-size: 1.6em;
-}
-textarea,
-input,
-select {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-textarea:focus,
-input:focus,
-select:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-}
-.form {
-  margin: 1em 0;
-}
-.form__row {
-  display: block;
-  margin-bottom: 1em;
-}
-.form__button-row {
-  margin-top: 1em;
-  width: 100%;
-}
-.form--table {
-  display: table;
-  width: 100%;
-}
-.form--table > .form__row {
-  display: table-row;
-}
-.form--table > .form__row > .form__label,
-.form--table > .form__row > label {
-  display: table-cell;
-  white-space: nowrap;
-  padding: 0 1em 1em 0;
-}
-.form--table > .form__row > .form__control {
-  display: table-cell;
-  width: 100%;
-  padding-bottom: 1em;
-}
-@media (max-width: 479px) {
-  .form--table {
-    display: block;
-  }
-  .form--table > .form__row {
-    display: block;
-  }
-  .form--table > .form__row > .form__label,
-  .form--table > .form__row > label {
-    display: block;
-    white-space: normal;
-    padding: 0;
-  }
-  .form--table > .form__row > .form__control {
-    display: block;
-    width: 100%;
-  }
-}
-.form__radio-list {
-  border: none;
-  margin: 1em 0 0 0;
-  padding: 0;
-}
-.form__radio-list > legend {
-  font-size: 1em;
-}
-.form__radio-item {
-  display: block;
-}
-.custom-dropdown {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: middle;
-  position: relative;
-  width: 85%;
-  float: left;
-  background: #d9dada;
-}
-.custom-dropdown > select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 0;
-  background: transparent;
-  padding: .2em;
-  width: calc(100% + 1.2em);
-  margin: 0 calc(33px + .2em) 0 0;
-  outline: none;
-  /* The right positioning is the extra width from above
-		       In <=IE8 this will be ignored as we've used the four value poitioning syntax
-		    */
-}
-.custom-dropdown > i {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background: #004b88;
-  color: white;
-  padding: 0 .2em;
-  font-size: 1.3em;
-  pointer-events: none;
-}
-.custom-dropdown > i:before {
-  padding: 0;
-}
-.no-pointer-events .custom-dropdown > i {
-  display: none;
-}
-input.custom-dropdown__button {
-  margin-left: 1%;
-  width: 14%;
-  float: left;
-  border-radius: 0;
-  padding: .2em;
-}
-/* Search fields used in blocks */
-.search-inline {
-  display: table;
-  margin: 1em 0;
-}
-.search-inline > label {
-  display: block;
-  width: 5em;
-  font-weight: bold;
-}
-.search-inline__field {
-  display: table-cell;
-  width: 100%;
-  padding-right: .5em;
-}
-.search-inline__field > input {
-  width: 100%;
-}
-.search-inline__button {
-  display: table-cell;
-}
-.search-inline__button > input,
-.search-inline__button > button {
-  padding: .2em .6em;
-}
-.search-inline--hide-label > label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.checkbox-radio-inner input[type="radio"],
-.checkbox-radio-inner input[type="checkbox"] {
-  position: absolute;
-}
-.checkbox-radio-inner label {
-  display: inline-block;
-  margin-left: 1em;
-}
-.form__group {
-  margin-bottom: 15px;
-}
-.form__label,
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  max-width: 100%;
-}
-.form__label--hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/**********************************************************************/
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
-  line-height: normal;
-}
-input[type="file"] {
-  display: block;
-}
-input[type="range"] {
-  display: block;
-  width: 100%;
-}
-select[multiple],
-select[size] {
-  height: auto;
-}
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: thin dotted;
-  outline-offset: -2px;
-}
-output {
-  display: block;
-  padding-top: 11px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #000000;
-}
-/**********************************************************************/
-.form__field {
-  display: block;
-  width: 100%;
-  height: 37px;
-  padding: 5px 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #000000;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-  /*
-    // Placeholder
-    @include placeholder;
-
-    // Disabled and read-only inputs
-    //
-    // HTML5 says that controls under a fieldset > legend:first-child won't be
-    // disabled if the fieldset is disabled. Due to implementation difficulty,
-    // we don't honor that edge case; we style them as disabled anyway.
-    &[disabled],
-    &[readonly],
-    fieldset[disabled] & {
-        cursor: $cursor-disabled;
-        background-color: $field-bg-disabled;
-        opacity: 1; // iOS fix for unreadable disabled content
-    }
-    */
-}
-.form__field:focus {
-  border-color: #66afe9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
-  outline: 0 none;
-}
-.form__field--day,
-.form__field--month {
-  width: 4em;
-}
-.form__field--year {
-  width: 4.5em;
-}
-.form__field--time {
-  width: 6em;
-}
-textarea.form__field {
-  height: auto;
-}
-/**********************************************************************
- * Special styles for iOS temporal inputs
- *
- * In Mobile Safari, setting `display: block` on temporal inputs causes the
- * text within the input to become vertically misaligned. As a workaround, we
- * set a pixel line-height that matches the given height of the input, but only
- * for Safari.
- */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type="date"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="month"] {
-    line-height: 37px;
-  }
-}
-/**********************************************************************
- * Form groups
- * Designed to help with the organization and spacing of vertical forms.
- */
-.form__group {
-  margin-bottom: 15px;
-}
-/**********************************************************************
- * Checkboxes and radios
- * Indent the labels to position radios/checkboxes as hanging controls.
- */
-.form__radio,
-.form__checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.form__radio label,
-.form__checkbox label {
-  min-height: 25px;
-  padding-left: 25px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio input[type="radio"],
-.form__radio-inline input[type="radio"],
-.form__checkbox input[type="checkbox"],
-.form__checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -25px;
-  margin-top: 6px \9;
-}
-.form__radio-inline,
-.form__checkbox-inline {
-  display: inline-block;
-  padding-left: 25px;
-  padding-right: 10px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio-inline + .form__radio-inline,
-.form__checkbox-inline + .form__checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
-input[type="radio"][disabled],
-input[type="checkbox"][disabled] {
-  cursor: not-allowed;
-}
-.form__radio-inline.is-disabled,
-.form__checkbox-inline.is-disabled {
-  color: #999;
-  cursor: not-allowed;
-}
-.form__radio,
-.form__checkbox {
-  cursor: pointer;
-}
-.form__radio.is-disabled,
-.form__checkbox.is-disabled {
-  cursor: not-allowed;
-  color: #999;
-}
-.form__radio.is-disabled label,
-.form__checkbox.is-disabled label {
-  cursor: not-allowed;
-}
-.form__radio--boxed,
-.form__checkbox--boxed,
-.form__radio-inline--boxed,
-.form__checkbox-inline--boxed {
-  background: none repeat scroll 0 0 #fff;
-  border: 1px solid transparent;
-}
-.form__radio--boxed:not(.is-disabled):hover,
-.form__checkbox--boxed:not(.is-disabled):hover,
-.form__radio-inline--boxed:not(.is-disabled):hover,
-.form__checkbox-inline--boxed:not(.is-disabled):hover {
-  background: none repeat scroll 0 0 #eff3f3;
-  border-color: #ccc;
-}
-.form__radio--boxed > label,
-.form__checkbox--boxed > label,
-.form__radio-inline--boxed > label,
-.form__checkbox-inline--boxed > label {
-  padding-left: 40px;
-  width: 100%;
-}
-.form__radio--boxed.is-selected,
-.form__checkbox--boxed.is-selected,
-.form__radio-inline--boxed.is-selected,
-.form__checkbox-inline--boxed.is-selected {
-  background: none repeat scroll 0 0 #b8e3df;
-}
-.form__radio--boxed.is-selected:hover,
-.form__checkbox--boxed.is-selected:hover,
-.form__radio-inline--boxed.is-selected:hover,
-.form__checkbox-inline--boxed.is-selected:hover {
-  border-color: transparent;
-  background: none repeat scroll 0 0 #b8e3df;
-}
-.form__radio--boxed,
-.form__checkbox--boxed {
-  width: 100%;
-}
-.form__radio--boxed > .form__radio__desc,
-.form__checkbox--boxed > .form__radio__desc,
-.form__radio--boxed > .form__checkbox__desc,
-.form__checkbox--boxed > .form__checkbox__desc {
-  padding-left: 40px;
-  padding-top: 0;
-  margin-top: -10px;
-}
-.form__radio-inline--boxed,
-.form__checkbox-inline--boxed {
-  padding-top: 5px;
-  padding-left: 35px;
-  padding-bottom: 5px;
-}
-.form__radio--boxed + .box.js-revealable,
-.form__checkbox--boxed + .box.js-revealable,
-.form__radio--boxed + .highlight-adviseronly.js-revealable,
-.form__checkbox--boxed + .highlight-adviseronly.js-revealable,
-.form__radio--boxed + .sideContent.js-revealable,
-.form__checkbox--boxed + .sideContent.js-revealable,
-.form__radio--boxed + .inlineContent.js-revealable,
-.form__checkbox--boxed + .inlineContent.js-revealable,
-.form__radio--boxed + .extent-switcher.js-revealable,
-.form__checkbox--boxed + .extent-switcher.js-revealable,
-.form__radio--boxed + .index-page__box.js-revealable,
-.form__checkbox--boxed + .index-page__box.js-revealable,
-.form__radio--boxed + .home-page__box.js-revealable,
-.form__checkbox--boxed + .home-page__box.js-revealable,
-.form__radio--boxed + .login.js-revealable,
-.form__checkbox--boxed + .login.js-revealable,
-.form__radio--boxed + .home-page__box--member-welcome.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-welcome.js-revealable,
-.form__radio--boxed + .home-page__box--member-search.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-search.js-revealable,
-.form__radio--boxed + .home-page__box--member-contact.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-contact.js-revealable,
-.form__radio--boxed + .home-page__box--member-more.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-more.js-revealable,
-.form__radio--boxed + .home-page__box--member-volunteer.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-volunteer.js-revealable,
-.form__radio--boxed + .home-page__box--member-campaigns.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-campaigns.js-revealable,
-.form__radio--boxed + .home-page__box--member-supporters.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-supporters.js-revealable {
-  position: relative;
-  top: -10px;
-  margin-bottom: -10px;
-}
-.box--1 .form__radio--boxed.is-selected,
-.box--1 .form__checkbox--boxed.is-selected,
-.box--1 .form__radio-inline--boxed.is-selected,
-.box--1 .form__checkbox-inline--boxed.is-selected {
-  background: none repeat scroll 0 0 #fff;
-}
-.box--2 .form__radio--boxed,
-.box--2 .form__checkbox--boxed,
-.box--2 .form__radio-inline--boxed,
-.box--2 .form__checkbox-inline--boxed {
-  background: #eee;
-}
-.box--2 .form__radio--boxed:hover,
-.box--2 .form__checkbox--boxed:hover,
-.box--2 .form__radio-inline--boxed:hover,
-.box--2 .form__checkbox-inline--boxed:hover {
-  border-color: #ccc;
-}
-.box--2 .form__radio--boxed.is-selected,
-.box--2 .form__checkbox--boxed.is-selected,
-.box--2 .form__radio-inline--boxed.is-selected,
-.box--2 .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
-  background: #ccc;
-}
-.panel--a .form__radio--boxed,
-.panel--a .form__checkbox--boxed,
-.panel--a .form__radio-inline--boxed,
-.panel--a .form__checkbox-inline--boxed {
-  background: #eee;
-}
-.panel--a .form__radio--boxed:hover,
-.panel--a .form__checkbox--boxed:hover,
-.panel--a .form__radio-inline--boxed:hover,
-.panel--a .form__checkbox-inline--boxed:hover {
-  background: #ccc;
-}
-.panel--a .form__radio--boxed.is-selected,
-.panel--a .form__checkbox--boxed.is-selected,
-.panel--a .form__radio-inline--boxed.is-selected,
-.panel--a .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
-}
-/**********************************************************************
- * Form control sizing
- * Build on `.form__field` with modifier classes to decrease or increase the
- * height and font-size of form controls.
- */
-/**********************************************************************
- * Feedback states
- */
-/**********************************************************************
- * Help text
- *
- * Apply to any element you wish to create light text for placement immediately
- * below a form control. Use for general help, formatting, or instructional
- * text.
- */
-.form__help {
-  color: #666;
-  margin-bottom: 5px;
-}
-.form__hint {
-  color: #999;
-  display: inline-block;
-  font-weight: 400;
-  margin-left: 2px;
-}
-.panel .form__hint {
-  display: none;
-}
-.form__error {
-  color: #c02f43;
-  display: block;
-  font-weight: 400;
-  margin-top: 5px;
-}
-/**********************************************************************
- * Static fields.
- */
-.form__field--static {
-  max-width: 100%;
-  margin-bottom: 5px;
-  display: block;
-}
-/**********************************************************************
- * Inline forms.
- *
- * Wrap inputs and buttons in a .form--inline element.
- * They will then go inline, except at the narrowest width.
- */
-/**
- * Probably to put around a .form__group (containing a label and input) plus
- * a button. It will hide the label and the button's text, and butt the
- * button up to the right-hand end of the input.
- * Good for a search box.
- */
-.form--inline-group .form__group {
-  display: inline-block;
-}
-@media (max-width: 480px) {
-  .form--inline-group {
-    display: table;
-    margin-bottom: 0.5em;
-  }
-  .form--inline-group .form__group {
-    display: table-cell;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form--inline-group .form__label {
-    /* Note: If you make the label visible, things might get screwy in IE8. */
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  .form--inline-group .form__hint {
-    display: none;
-  }
-  .form--inline-group .form__field {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 0;
-  }
-  .form--inline-group .button {
-    display: table-cell;
-    padding: 1px 3px 2px 1px;
-  }
-  .form--inline-group .button .fa-stack {
-    margin-left: 0;
-  }
-  .form--inline-group .button__label {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
 }
 .flex-row {
   clear: both;
@@ -4226,7 +4186,6 @@ input[type="checkbox"][disabled] {
 }
 .main-nav {
   background-color: #004b88;
-  margin-bottom: 1em;
 }
 .main-nav:after {
   content: " ";
@@ -9393,7 +9352,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout h2,
 .callout h3 {
   color: #003c64 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout a {
   border-bottom-color: #4ab7ff;
@@ -9468,7 +9427,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--confirmation h2,
 .callout--confirmation h3 {
   color: #537d2d !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--confirmation a {
   border-bottom-color: #85c050;
@@ -9540,7 +9499,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--warning h2,
 .callout--warning h3 {
   color: #df3034 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--warning a {
   border-bottom-color: #e97275;
@@ -9612,7 +9571,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--alert h2,
 .callout--alert h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--alert a {
   border-bottom-color: #ffbf47;
@@ -9685,7 +9644,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--quote h2,
 .callout--quote h3 {
   color: #606060 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--quote a {
   border-bottom-color: #bfbfbf;
@@ -9758,7 +9717,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--heritage h2,
 .callout--heritage h3 {
   color: #004b88 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--heritage a {
   border-bottom-color: #e17f04;
@@ -9828,7 +9787,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--responsible h2,
 .callout--responsible h3 {
   color: #57486b !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--responsible a {
   border-bottom-color: #449a55;
@@ -9898,7 +9857,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--inventive h2,
 .callout--inventive h3 {
   color: #006278 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--inventive a {
   border-bottom-color: #f56333;
@@ -9968,7 +9927,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .callout--generous h2,
 .callout--generous h3 {
   color: #00553f !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .callout--generous a {
   border-bottom-color: #665aad;
@@ -10433,7 +10392,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .steps h2,
 .steps h3 {
   color: #ffffff !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .steps a {
   border-bottom-color: #bfbfbf;
@@ -10511,7 +10470,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .steps--navigation h2,
 .steps--navigation h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .steps--navigation a {
   border-bottom-color: #72b3ff;
@@ -10816,7 +10775,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel .dap-panel--base h2,
 .dap-panel .dap-panel--base h3 {
   color: #a5bddc !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel .dap-panel--base a {
   border-bottom-color: #4ab7ff;
@@ -10894,7 +10853,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel--crucial h2,
 .dap-panel--crucial h3 {
   color: #df3034 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel--crucial a {
   border-bottom-color: #e97275;
@@ -10969,7 +10928,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel--important h2,
 .dap-panel--important h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel--important a {
   border-bottom-color: #ffbf47;
@@ -11042,7 +11001,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel--progress h2,
 .dap-panel--progress h3 {
   color: #00553f !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel--progress a {
   border-bottom-color: #665aad;
@@ -11117,7 +11076,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel--adviser h2,
 .dap-panel--adviser h3 {
   color: #191926 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel--adviser a {
   border-bottom-color: #ffbf47;
@@ -11193,7 +11152,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .dap-panel--example h2,
 .dap-panel--example h3 {
   color: #606060 !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .dap-panel--example a {
   border-bottom-color: #bfbfbf;
@@ -11262,7 +11221,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   border-top: 4px solid #004b88;
 }
 .dap-panel--side__blue .h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #004b88;
 }
 .dap-panel--side__blue .h3 {
@@ -11278,7 +11237,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   border-top: 4px solid #ffbf47;
 }
 .dap-panel--side__yellow .h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #004b88;
 }
 .dap-panel--side__yellow .h3 {
@@ -11294,7 +11253,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   border-top: 4px solid #81cec6;
 }
 .dap-panel--side__aqua .h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #004b88;
 }
 .dap-panel--side__aqua .h3 {
@@ -11371,7 +11330,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   border: 1px solid #dfdfdf;
 }
 .main-container h3.revealable__heading {
-  font-size: 1.2rem;
+  font-size: 1rem;
   outline: none;
 }
 .main-container .revealable__close {
@@ -11461,7 +11420,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   padding: 1rem;
 }
 .content__header__content h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .content__header__content ul {
   list-style: none;
@@ -11528,7 +11487,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .home-page__box--member-campaigns > h2,
 .home-page__box--member-supporters > h2 {
   margin: 0 0 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #004b88;
 }
 .box > h3,
@@ -11913,7 +11872,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   flex-shrink: 0;
 }
 .dialog__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0;
   text-overflow: ellipsis;
   height: 1.4em;
@@ -11931,7 +11890,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
   top: 50%;
   margin-top: -0.7rem;
   margin-right: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.2rem;
   line-height: 1;
   width: 1.4em;
