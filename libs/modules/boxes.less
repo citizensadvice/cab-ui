@@ -114,3 +114,12 @@
         margin-top: @box-spacing-vertical*1.5;
     }
 }
+
+.highlight-adviseronly:extend( .box all ) {
+    overflow: hidden; // Allows the div to wrap around floated divs
+    
+    & > h4 {
+        margin-top: 0;
+    }
+
+}

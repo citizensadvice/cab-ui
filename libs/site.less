@@ -29,7 +29,7 @@
 	//@import "existing/inc/helpers";
 	//@import "existing/inc/global"; // Moved to base
 	@import "existing/inc/boxes";
-	@import "existing/inc/highlight";
+	//@import "existing/inc/highlight"; // Compiled into modules/callouts
 
 	//@import "existing/inc/buttons"; // Moved to base
 	//@import "existing/inc/forms";
@@ -39,7 +39,7 @@
 	@import "existing/inc/framework";
 
 	// Modules
-	@import "existing/inc/cookie-monster";
+	//@import "existing/inc/cookie-monster";
 	//@import "existing/inc/skip-nav";
 	@import "existing/inc/main-nav";
 	//@import "existing/inc/breadcrumb";
@@ -92,8 +92,8 @@
 		//@import "existing/inc/beta/sidebar-navigation";
 		//@import "existing/inc/beta/sidebar-navigation-accordion";
 		//@import "existing/inc/beta/breadcrumb";
-		//@import "existing/inc/beta/section-notice"; Moved to modules
-		//@import "existing/inc/beta/panels";
+		//@import "existing/inc/beta/section-notice"; // Moved to modules
+		//@import "existing/inc/beta/panels"; // Compiled into modules/callouts
 		//@import "existing/inc/beta/extent-switcher";
 		//@import "existing/inc/beta/revealable";
 		//@import "existing/inc/beta/boxes";
@@ -124,7 +124,6 @@
 @import "modules/tablesort";
 @import "modules/nav-steps";
 @import "modules/navigation";
-@import "modules/panels";
 @import "modules/section-notice";
 @import "modules/decision-tree";
 @import "modules/extent-switcher";
@@ -146,7 +145,11 @@
 @import "modules/skip-nav";
 @import "modules/side-links";
 @import "modules/side-chat";
+<<<<<<< HEAD
 
 	@import "modules/calls-for-evidence";
 	@import "modules/index-page";
 	@import "modules/search-results";
+=======
+@import "modules/cookie-monster";
+>>>>>>> origin/master
