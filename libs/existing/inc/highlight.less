@@ -13,9 +13,11 @@
 }
 
 .highlight--error {
-  background: lighten( @red, 60% );
-  padding: .5em 1em;
-  border-left: 3px solid @red;
+  .callout(
+    @callout-background: lighten( @red, 60% ),
+    @callout-border: @red
+  );
+  .callout--border--left;
 }
 
 // Boxes
