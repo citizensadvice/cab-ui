@@ -1,16 +1,19 @@
-﻿/*
-    Members styles
-*/
+﻿/**
+ * MEMBERS
+ *
+ * Local citizens advice 'microsites'. Customisation of pages in /members
+ */
+
 
 .home-page--member {
-    margin-top: 1em;
+    margin-top: @box-spacing;
 }
 
 .home-page__box--member-welcome:extend(.box all ) {
-    border-top: 8px solid @blue;
+    border-top: 8px solid @heritage-blue;
 
     & > h2 {
-        color: @blue;
+        color: @heritage-blue;
         width: 49%;
     }
 
@@ -35,27 +38,27 @@
 }
 
 .home-page__box--member-search:extend(.box all ) {
-    background: @yellow url("/static/images/members/heritageyellow-speech-bubble-20pcw-400x220px.png") no-repeat right top;
+    background: @heritage-yellow url("/static/images/members/heritageyellow-speech-bubble-20pcw-400x220px.png") no-repeat right top;
     background-size: 250px;
     border-top: none;
 
     & > h2 {
-        color: @blue;
+        color: @heritage-blue;
     }
 
     .button--green {
-        background-color: @blue;
+        background-color: @heritage-blue;
         color: @white;
     }
 }
 
 .home-page__box--member-contact:extend(.box all ) {
-    background-color: @blue;
+    background-color: @heritage-blue;
     border-top: none;
     color: @white;
 
     .button {
-        background-color: @yellow;
+        background-color: @heritage-yellow;
         color: @black;
     }
 }
@@ -63,7 +66,7 @@
 .home-page__box--member-more:extend(.box all ) {
 
     & > h2 {
-        color: @blue;
+        color: @heritage-blue;
     }
 
     & img:first-child {
@@ -74,7 +77,7 @@
 }
 
 .home-page__box--member-volunteer:extend(.box all ) {
-    background: #90CE9B url("/static/images/members/responsiblepurple-volunteer-man-200x200px.png") no-repeat center bottom;
+    background: @responsible-aqua url("/static/images/members/responsiblepurple-volunteer-man-200x200px.png") no-repeat center bottom;
     border-top: none;
     padding-bottom: 250px;
 
@@ -100,7 +103,7 @@
 .home-page__box--member-supporters:extend(.box all ) {
     
     & > h2 {
-        color: @blue;
+        color: @heritage-blue;
     }
 
     & table {
@@ -139,7 +142,7 @@
     */
 
     & .member-map {
-        margin-top: 3em;
+        margin-top: @box-spacing*3;
         min-height: 200px;
         @media (max-width: @screen-sm-min) {
             display: none;
@@ -169,12 +172,12 @@
         background: @blue;
         color: white;
         margin: 0;
-        font-size: 1.2em;
-        padding: .7em .5em; // This is supposed to be the same height as the main title
+        font-size: @font-size-medium;
+        padding: @box-spacing-horizontal*.7 @box-spacing-horizontal*.5; // This is supposed to be the same height as the main title
     }
 
     & .member_group_label {
-        background: #CCDBE8;
+        background: @beta-blue-light;
         display: block;
         padding: .5em;
     }
@@ -184,7 +187,7 @@
     margin: 1em 0 0 0;
 
     & > a {
-        margin-right: .5em;
+        margin-right: @box-spacing-horizontal*.5;
         padding: 25px;
     }
 
