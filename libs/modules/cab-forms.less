@@ -180,7 +180,7 @@
 }
 .cab-widget mark {
     background: #ff0;
-    color: #000
+    color: @black
 }
 .cab-widget small {
     font-size: 80%
@@ -326,7 +326,7 @@
     font-size: 2em
 }
 .cab-widget .cab-widget__icon.cab-widget__inverse {
-    color: #fff
+    color: @white
 }
 .cab-widget .cab-widget__icon {
     display: inline-block;
@@ -547,7 +547,7 @@
     width: 100%;
     height: 2.8em;
     padding: 5px 10px;
-    background-color: #fff;
+    background-color: @white;
     background-image: none;
     border: 1px solid #ccc;
     -webkit-box-shadow: 'inset 0 1px 1px rgba(0,0,0,.075)';
@@ -1090,14 +1090,14 @@ fieldset[disabled] fieldset[disabled] .cab-widget .button:hover {
 }
 .cab-widget .button--action,
 .cab-widget .button--action:visited {
-    color: #fff;
+    color: @white;
     background-color: #034ea2;
     border-color: #034ea2
 }
 .cab-widget .button--action:active,
 .cab-widget .button--action:focus,
 .cab-widget .button--action:hover {
-    color: #fff;
+    color: @white;
     background-color: #023670;
     border-color: #023166
 }
@@ -1186,14 +1186,14 @@ fieldset[disabled] .cab-widget .button--previous:hover {
 }
 .cab-widget .button--alt-submit,
 .cab-widget .button--alt-submit:visited {
-    color: #fff;
+    color: @white;
     background-color: #034ea2;
     border-color: #034ea2
 }
 .cab-widget .button--alt-submit:active,
 .cab-widget .button--alt-submit:focus,
 .cab-widget .button--alt-submit:hover {
-    color: #fff;
+    color: @white;
     background-color: #023670;
     border-color: #023166
 }
@@ -1219,8 +1219,8 @@ fieldset[disabled] .cab-widget .button--alt-submit:hover {
 .cab-widget .button--back,
 .cab-widget .button--back:visited {
     color: #253460;
-    background-color: #fff;
-    border-color: #fff
+    background-color: @white;
+    border-color: @white
 }
 .cab-widget .button--back:active,
 .cab-widget .button--back:focus,
@@ -1245,12 +1245,12 @@ fieldset[disabled] .cab-widget .button--back,
 fieldset[disabled] .cab-widget .button--back:active,
 fieldset[disabled] .cab-widget .button--back:focus,
 fieldset[disabled] .cab-widget .button--back:hover {
-    background-color: #fff;
-    border-color: #fff
+    background-color: @white;
+    border-color: @white
 }
 .cab-widget .button .cab-widget__icon-stack {
     margin-left: .7em;
-    color: #fff;
+    color: @white;
     text-decoration: none
 }
 .cab-widget .button .cab-widget__icon-chevron-right {
@@ -1300,11 +1300,11 @@ fieldset[disabled] .cab-widget .button--back:hover {
     padding-top: 0
 }
 .cab-widget .panel--default {
-    border-color: #fff
+    border-color: @white
 }
 .cab-widget .panel--default,
 .cab-widget .panel--white {
-    background: #fff;
+    background: @white;
     color: #191926
 }
 @media all and (min-width768px) {} .cab-widget .panel--white .panel__title,
@@ -1316,7 +1316,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 }
 .cab-widget .panel--blue {
     background: #215e77;
-    color: #fff
+    color: @white
 }
 @media all and (min-width: 768px) {
     .cab-widget .panel--blue {
@@ -1324,7 +1324,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     }
 }
 .cab-widget .panel--blue a {
-    color: #fff
+    color: @white
 }
 .cab-widget .panel--blue a:active,
 .cab-widget .panel--blue a:focus,
@@ -1337,14 +1337,14 @@ fieldset[disabled] .cab-widget .button--back:hover {
 }
 .cab-widget .panel--blue .panel__subtitle,
 .cab-widget .panel--blue .panel__title {
-    color: #fff
+    color: @white
 }
 .cab-widget .panel--blue .panel__title__subtitle {
     color: #81cec6
 }
 .cab-widget .panel--green {
     background: #b8e3df;
-    color: #000
+    color: @black
 }
 @media all and (min-width: 768px) {
     .cab-widget .panel--green {
@@ -1496,7 +1496,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 }
 .cab-widget a.revealer--large {
     border-left: 0 solid #3498db;
-    color: #fff;
+    color: @white;
     text-decoration: none
 }
 @media (max-width: 767px) {
@@ -1510,7 +1510,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 .cab-widget a.revealer--large:focus,
 .cab-widget a.revealer--large:hover,
 .cab-widget a.revealer--large:visited {
-    color: #fff;
+    color: @white;
     text-decoration: none
 }
 .cab-widget a.revealer--large>.revealer__body {
@@ -1518,7 +1518,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     padding: 10px 15px
 }
 .cab-widget a.revealer--large .revealer__body__title {
-    color: #fff
+    color: @white
 }
 .cab-widget a.revealer--large>.revealer__icon {
     background: #3498db;
@@ -1583,7 +1583,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     margin-bottom: 0
 }
 .cab-widget .revealable-content--large {
-    background: #fff;
+    background: @white;
     border-left: 0 solid #3498db;
     margin-bottom: 1em
 }
@@ -1594,7 +1594,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 }
 .cab-widget .revealable-content--box {
     padding: 10px 15px;
-    background-color: #fff
+    background-color: @white
 }
 .cab-widget .revealable-content--box>h1:first-child,
 .cab-widget .revealable-content--box>h2:first-child,
@@ -1630,7 +1630,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     margin-bottom: 0
 }
 .cab-widget .media--plain {
-    background-color: #fff;
+    background-color: @white;
     border-color: #034ea2;
     color: #191926
 }
@@ -1650,14 +1650,14 @@ fieldset[disabled] .cab-widget .button--back:hover {
     color: #191926
 }
 .cab-widget .media--optional {
-    background-color: #fff;
-    border: 1px solid #fff
+    background-color: @white;
+    border: 1px solid @white
 }
 .cab-widget .media--optional .media__title {
     color: #191926
 }
 .cab-widget .media--important {
-    background-color: #fff;
+    background-color: @white;
     border: 1px solid #034ea2;
     background-color: #eef7ff
 }
@@ -1665,7 +1665,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     color: #034ea2
 }
 .cab-widget .media--essential {
-    background-color: #fff;
+    background-color: @white;
     border: 1px solid #b53a1f
 }
 .cab-widget .media--essential .media__title {
@@ -1716,7 +1716,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
 }
 .energy-bill-checker .button .cab-widget__icon-stack-reverse {
     margin-right: .7em;
-    color: #fff;
+    color: @white;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -1764,7 +1764,7 @@ fieldset[disabled] .cab-widget .button--back:hover {
     display: block;
     padding: .5em!important;
     margin-bottom: .5em!important;
-    background-color: #fff;
+    background-color: @white;
     border: 1px #dfe1e3 solid!important;
     overflow: hidden;
     box-sizing: border-box

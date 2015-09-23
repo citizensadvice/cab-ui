@@ -27,7 +27,7 @@ a:hover, a:focus, a:focus {
 }
 
 a:not([href]) {
-    color: #000;
+    color: @black;
     text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ img {
 }
 
 .img--bordered {
-    border: 1px solid #e6e7e8;
+    border: 1px solid @gray-7;
 }
 
 /* External links */
@@ -50,10 +50,10 @@ img {
 
 // For areas with black text
 .black-text() {
-    color: #000;
+    color: @black;
 
     a {
-        color: #000; 
+        color: @black; 
     }
 
     .a-external:after {
@@ -72,10 +72,10 @@ img {
 
 // For areas with white text
 .white-text() {
-    color: #fff;
+    color: @white;
 
     a {
-        color: #fff; 
+        color: @white; 
     }
 
     .a-external:after {
@@ -99,14 +99,16 @@ img {
     padding-left: 0.05em;
 }
 
-.first-paragraph{font-weight: 600;}
+.first-paragraph{
+    font-weight: 600;
+}
 
 .underline {
     text-decoration: underline;
 }
 
 .badge {
-  background: #FFBF47;
+  background: @beta-yellow;
   font-weight: 700;
   padding: .3em .5em;
 }
@@ -115,7 +117,7 @@ h1 {
     font-size: 2.5em;
     padding: 0;
     margin: 0 0 1/2.5em;
-    color: #01355A;
+    color: @heritage-blue;
     line-height: 1.2;
 }
 h2 {
@@ -169,7 +171,7 @@ ul.li--arrow {
 
 .view-all { 
     background: url("../assets/layout/view-all.png") left center no-repeat;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid @gray-5;
     padding-left: 1.4em;
     margin-left: -.2em; /* It's a wide image.  This improves the spacing */
     margin-top: .5em;

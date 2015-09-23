@@ -13,20 +13,20 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    background: #ddd;
+    background: @gray-5;
     opacity: 0.97;
     z-index: 10000;
-    border: 1px solid #b5b5b5;
+    border: 1px solid @gray-4;
     border-width: 1px 0;
     &__content {
         .limit-width();
-        padding: 0 7em 0 1em; // Enough for the button
+        padding: 0 @box-spacing-horizontal*7 0 @box-spacing-horizontal; // Enough for the button
         position: relative;
     }
     &__close {
         position: absolute;
         top: 0;
-        right: 1em;
+        right: @box-spacing-horizontal;
     }
     @media screen and (max-width: @screen-xs-max) {
         font-size: 14px;

@@ -3,10 +3,28 @@
  * .collapse( @collapse-button-bg, @collapse-button-icon-bg, @collapse-button-text, @collapse-button-close-bg, @collapse-button-close-icon-bg, @collapse-button-close-text )
  */
 .collapsible {
-	.collapse( @collapse-button-icon-bg: #253460 ); // Create unstyled collapse
-	&--aqua 		{ .collapse( @beta-aqua ) }
-	&--green 		{ .collapse( @beta-green ) }
-	&--red 			{ .collapse( @beta-red ) }
+    // Create unstyled collapse
+	.collapse( 
+        @collapse-button-icon-bg: #253460 
+    );
+
+    &--aqua {
+        .collapse( 
+            @beta-aqua 
+        ) 
+    }
+
+    &--green {
+        .collapse( 
+            @beta-green 
+        ) 
+    }
+
+    &--red {
+        .collapse( 
+            @beta-red 
+        ) 
+    }
 }
 
 /**
@@ -14,13 +32,12 @@
  */
 
 .accordion .group {
-    background: #fff;
+    background: @white;
     margin-bottom: 1em;
 }
 .accordion h3 {
-    font-size: 1em;
-    margin: 1em 1em 0 1em;
-    padding: 1em 1em 1em 1.5em;
+    margin: @box-spacing-horizontal @box-spacing-vertical 0 @box-spacing-vertical;
+    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal*1.5;
     cursor: pointer;
 
     .no-js & {
@@ -35,5 +52,5 @@
 }
 
 .accordionContent {
-    padding: 0 1em 1em 1em;
+    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
 }
