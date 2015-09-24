@@ -13,12 +13,12 @@
 form {
     .invalid {
         display: none;
-        color: @beta-red;
+        color: @red;
         padding-top: @box-spacing/4;
     }
     .valid {
         display: none;
-        color: @beta-green;
+        color: @green;
         padding-top: @box-spacing/4;
     }
     small {
@@ -143,13 +143,13 @@ select {
     padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
-        border-color: @beta-red;
+        border-color: @red;
         & ~ .invalid {
             display: block !important;
         }
     }
     &:focus:required:valid {
-        border-color: @beta-green;
+        border-color: @green;
         & ~ .valid {
             display: block !important;
         }
@@ -191,8 +191,8 @@ input[type="file"]::before {
     -webkit-user-select: none;
     cursor: pointer;
     border-radius: @form-border-radius;
-    background-color: @beta-green-light;
-    border: 1px solid @beta-green;
+    background-color: @green-light;
+    border: 1px solid @green;
     padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
 }
 */
@@ -249,11 +249,11 @@ input[type="file"]::before {
         }
         &:checked {
             &:before {
-                border-color: @beta-blue-lighter;
-                background-color: @beta-blue-lighter;
+                border-color: @blue-lighter;
+                background-color: @blue-lighter;
             }
             &:hover:before {
-                border-color: @beta-blue-light;
+                border-color: @blue-light;
             }
         }
     }

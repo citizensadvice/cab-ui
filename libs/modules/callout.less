@@ -10,8 +10,8 @@
 
 	// Unstyled
 	.callout( 
-		@beta-blue-lighter, 
-		@beta-blue 
+		@blue-lighter, 
+		@blue 
 	); 
 	.callout--border; 
 	.callout--border--left; 
@@ -19,8 +19,8 @@
 	// Green
 	&--confirmation {
 		.callout( 
-			@beta-green-light, 
-			@beta-green 
+			@green-light, 
+			@green 
 		); 
 		.callout--border--left; 
 	}
@@ -28,8 +28,8 @@
 	// Red
 	&--warning {
 		.callout( 
-			@beta-red-lighter,
-			@beta-red 
+			@red-lighter,
+			@red 
 		); 
 		.callout--border--left;
 	}
@@ -37,7 +37,7 @@
 	// Yellow
 	&--alert {
 		.callout( 
-			@beta-yellow-light 
+			@yellow-light 
 		); 
 		.callout--border--left;
 	}
@@ -104,16 +104,16 @@
 
 .highlight--warning {
   .callout(
-    @callout-background: lighten( @beta-orange, 40% ),
-    @callout-border: @beta-orange
+    @callout-background: lighten( @orange, 40% ),
+    @callout-border: @orange
   );
   .callout--border--left;
 }
 
 .highlight--error {
   .callout(
-    @callout-background: lighten( @beta-red, 60% ),
-    @callout-border: @beta-red
+    @callout-background: lighten( @red, 60% ),
+    @callout-border: @red
   );
   .callout--border--left;
 }
@@ -159,17 +159,17 @@
  */
 
 .dap-panel .dap-panel--base {
-    .callout( @beta-blue-lighter, @beta-blue-light ); .callout--border; .callout--border--left; // .callout
+    .callout( @blue-lighter, @blue-light ); .callout--border; .callout--border--left; // .callout
 }
 
 // Crucial – this is for only the most important mandatory tasks, we must use this sparingly.
 .dap-panel--crucial {
-    .callout( @beta-red-lighter, @beta-red ); .callout--border--left; // .callout--warning
+    .callout( @red-lighter, @red ); .callout--border--left; // .callout--warning
 }
 
 // Important – these are for generally important actions clients need to take but are not mandatory.
 .dap-panel--important {
-    .callout( @beta-yellow-light ); .callout--border--left; // .callout--alert
+    .callout( @yellow-light ); .callout--border--left; // .callout--alert
 }
 
 // Progress panel - for instructional information, primarily used for 'Next stages'.
@@ -179,7 +179,7 @@
 
 // Adviser box - extending to style the adviser only content.
 .dap-panel--adviser {
-    .callout( @beta-yellow-light ); .callout--border--left; // .callout--alert
+    .callout( @yellow-light ); .callout--border--left; // .callout--alert
 
 }
 
@@ -216,7 +216,7 @@
 // Advisory sidebar panel
 .dap-panel--side__yellow {
     background-color: @gray-3;
-    border-top: 4px solid @beta-yellow;
+    border-top: 4px solid @yellow;
 
     .h2 {
       font-size: @font-size-medium;
@@ -237,7 +237,7 @@
 // Additional sidebar help panel
 .dap-panel--side__aqua {
     background-color: @gray-3;
-    border-top: 4px solid @beta-aqua;
+    border-top: 4px solid @aqua;
 
     .h2 {
       font-size: @font-size-medium;
