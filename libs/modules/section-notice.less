@@ -10,14 +10,14 @@
 }
 
 .section-notice {
-   background: @heritage-yellow;
+   background: @heritage-yellow-lighter;
 }
 
 .section-notice__content {
     .limit-width;
-    padding: 0 1em;
+    padding: @box-spacing-horizontal 0 0 0;
     overflow: hidden; // Prevent collapsing margins
-    margin-bottom: 1em;
+    margin-bottom: @box-spacing;
 }
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
@@ -25,4 +25,3 @@
         padding-right: @box-spacing-horizontal*3.5;
     }
 }
-
