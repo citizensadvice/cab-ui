@@ -4,9 +4,25 @@
  * Beta sidebar navigation for content pages.
  */
 
+.main-content__sidebar {
+    float: left;
+    clear: left;
+    width: @width-span-4;
+    overflow: hidden; // Stop margin collapsing issues
+    margin-bottom: @box-spacing*1.5;
+    //padding: @box-spacing @box-spacing-vertical;
+    margin: 0;
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        margin-top: @box-spacing*1.5;
+    }
+}
+
 .side-nav {
     .main-content__sidebar;
-    
+
     @media screen and (max-width: @screen-xs-max) {
         float: none;
         width: 100%;
@@ -63,5 +79,170 @@
             background-color: @gray-6;
         }
     }
+    > h2 {
+        background: @heritage-blue;
+        margin: 0;
+        font-size: @font-size-medium;
+        padding: .7em .5em; // This is supposed to be the same height as the main title
+
+        & > a {
+            color: @white;
+        }
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    > ul a {
+        display: block;
+        padding: .5em;
+        color: black;
+    }
+
+    // Messy selector to override the selector above
+    > ul &__current {
+        font-weight: @font-weight-bold;
+        position: relative; // To absolutely position to the icon
+        padding-right: 2em;
+    }
+
+    &__current__icon {
+        position: absolute;
+        right: .5em;
+        top: 50%;
+        font-size: 150%;
+        margin-top: -.7em;
+    }
+
+    &__ul--level2 > li > a {
+        padding-left: 1em;
+    }
+    &__ul--level3 > li > a {
+        padding-left: 1.5em;
+    }
+    &__ul--level4 > li > a {
+        padding-left: 2em;
+    }
+    &__ul--level5 > li > a {
+        padding-left: 2.5em;
+    }
+    &__ul--level6 > li > a {
+        padding-left: 3em;
+    }
+    &__ul--level7 > li > a {
+        padding-left: 3.5em;
+    }
+    &__ul--level8 > li > a {
+        padding-left: 4em;
+    }
+
+
+    // Level 1
+    &--levels-1 &__ul--level1 > li {
+        background-color: @colour-nav-7;
+    }
+
+    &--levels-2 &__ul--level1 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 2
+    &--levels-3 &__ul--level1 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-3 &__ul--level2 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 3
+    &--levels-4 &__ul--level1 > li {
+        background-color: @colour-nav-2;
+    }
+    &--levels-4 &__ul--level2 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-4 &__ul--level3 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 4
+    &--levels-5 &__ul--level1 > li {
+        background-color: @colour-nav-1;
+    }
+    &--levels-5 &__ul--level2 > li {
+        background-color: @colour-nav-2;
+    }
+    &--levels-5 &__ul--level3 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-5 &__ul--level4 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 5
+    &--levels-6 &__ul--level1 > li {
+        background-color: @colour-nav-1;
+    }
+    &--levels-6 &__ul--level2 > li {
+        background-color: @colour-nav-2;
+    }
+    &--levels-6 &__ul--level3 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-6 &__ul--level4 > li {
+        background-color: @colour-nav-4;
+    }
+    &--levels-6 &__ul--level5 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 6
+    &--levels-7 &__ul--level1 > li {
+        background-color: @colour-nav-1;
+    }
+    &--levels-7 &__ul--level2 > li {
+        background-color: @colour-nav-2;
+    }
+    &--levels-7 &__ul--level3 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-7 &__ul--level4 > li {
+        background-color: @colour-nav-4;
+    }
+    &--levels-7 &__ul--level5 > li {
+        background-color: @colour-nav-5;
+    }
+    &--levels-7 &__ul--level6 > li {
+        background-color: @colour-nav-7;
+    }
+
+    // Level 7
+    &--levels-8 &__ul--level1 > li {
+        background-color: @colour-nav-1;
+    }
+    &--levels-8 &__ul--level2  li {
+        background-color: @colour-nav-2;
+    }
+    &--levels-8 &__ul--level3 > li {
+        background-color: @colour-nav-3;
+    }
+    &--levels-8 &__ul--level4 > li {
+        background-color: @colour-nav-4;
+    }
+    &--levels-8 &__ul--level5 > li {
+        background-color: @colour-nav-5;
+    }
+    &--levels-8 &__ul--level6 > li {
+        background-color: @colour-nav-6;
+    }
+    &--levels-8 &__ul--level7 > li {
+        background-color: @colour-nav-7;
+    }
+}
+
+html[lang="en-SCT"] .side-nav > h2 {
+    background: @heritage-blue;
 }
 

@@ -15,10 +15,10 @@
     width: 100%;
 
     .main-breadcrumb__content {
-        .limit-width;
-        width: @screen-lg-min;
+        .limit-width(@max-page-width);
         margin: 0 auto;   
         background-color: transparent;
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal;
     }
     
     .breadcrumb__extent-link {
