@@ -6,7 +6,7 @@
 
 /* Creates a mixin for making box styles, including their links */
 .collapse ( 
-    @collapse-button-bg: #004B88, 
+    @collapse-button-bg: @heritage-blue, 
     @collapse-button-icon-bg: darken(@collapse-button-bg, 10%), 
     @collapse-button-text: @white, 
     @collapse-button-close-bg: fade(@collapse-button-bg, 20%), 
@@ -22,12 +22,12 @@
         cursor: pointer;
         display: block;
         padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
-        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
+        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
         border: none;
         background-color: @collapse-button-bg;
-        text-decoration: none !important;
+        text-decoration: none;
         position: relative;
-        margin-bottom: @box-spacing-vertical !important;
+        margin-bottom: @box-spacing-vertical;
         background-color: @collapse-button-bg;
         color: @collapse-button-text;
         h1, h2, h3, h4, h5, h6 {
@@ -61,15 +61,15 @@
         cursor: pointer;
         display: block;
         padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
-        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
-        text-decoration: none !important;
+        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+        text-decoration: none;
         position: relative;
         color: @collapse-button-close-text;
         cursor: pointer;
         border: none;
         background-color: @collapse-button-close-bg;
         color: @collapse-button-bg;
-        margin-top: 1rem !important;
+        margin-top: 1rem;
         &:after {
             box-sizing: border-box;
             font-family: 'FontAwesome';
@@ -96,7 +96,7 @@
     .collapse-content {
         padding: 0;
         border: 0;
-        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal !important;
+        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
         padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
         border: solid @collapse-button-icon-bg;
         border-width: 1px;
