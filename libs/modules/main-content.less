@@ -1,0 +1,70 @@
+﻿/**
+ * MAIN CONTENT WRAPPER
+ */
+
+.main-content{
+    .limit-width;
+    .clearfix;
+    padding: 0 @box-spacing;
+    margin-top: @box-spacing;
+    margin-bottom: @box-spacing*1.5;
+    &--full-width {
+        max-width: 60em;
+        @media ( max-width: @screen-sm-max ) {
+            max-width: none;
+            width: auto;
+        }
+    }
+    &__right {
+        float: right;
+        width: @width-span-8;
+
+        padding-left: 2em;
+
+        @media ( max-width: @screen-xs-max ) {
+            float: none;
+            width: auto;
+            padding: 0;
+        }
+    }
+    &__sidebar {
+        float: left;
+        clear: left;
+        width: @width-span-4;
+        overflow: hidden; // Stop margin collapsing issues
+        margin-bottom: @box-spacing*1.5;
+
+        @media ( max-width: @screen-xs-max ) {
+            float: none;
+            width: auto;
+            margin-top: @box-spacing*1.5;
+        }
+    }
+}
+
+// @todo This needs renamed
+.articleContent {
+     @media ( max-width: @screen-sm-max ) {
+        width: auto;
+    }
+}
+
+@media ( max-width: @max-page-width-before-the-share-bar-ruins-it-all ) and ( min-width: @screen-sm-min ) {
+    .js .main-content {
+        padding-right: 3.5em;
+    }
+}
+
+.main-content__sidebar {
+    float: left;
+    clear: left;
+    width: @width-span-4;
+    overflow: hidden; // Stop margin collapsing issues
+    margin-bottom: @box-spacing*1.5;
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        margin-top: @box-spacing*1.5;
+    }
+}
