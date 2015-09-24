@@ -5,27 +5,54 @@
  *
  */
  
- .steps {
-    .callout( @white, @callout-border: @gray-5, @callout-background: @gray-8 );
+.steps {
+    .callout( @callout-border: @gray-5, @callout-background: white );
     .callout--border;
-    .callout--border--left;
-    li a:hover, li a.active {
-        background-color: @gray-6;
+    //.callout--border--left;
+    border-width: 8px 1px 1px 1px;
+    margin-top: 2rem;
+    .flex-row {
+        padding: 0;
+    }
+    h3 {
+        color: @heritage-blue;
+    }
+    ul {
+        margin: 0;
+        //padding: 0 1rem;
+        padding: 0 2rem;
+        //list-style: none;
+        li {
+            margin-bottom: 1rem;
+            &:first-child {
+                margin-top: .5rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    a {
+        border-width: 0;
+        &:hover {
+            border-bottom-width: 1px;
+        }
     }
 }
 
 .steps--navigation {
-    .callout( @heritage-blue-lightest );
+    .callout( @heritage-blue-lightest, @callout-background: @white );
     .callout--border;
+    //border-width: 8px 1px 1px 1px;
     ul {
-        //background-color: none !important;
+        //background-color: none;
     }
     li a:hover, li a.active {
-        background-color: @heritage-blue-lighter;
+        background-color: @gray-7;
     }
 }
 
-.steps, .steps--navigation {;
+.steps--navigation {;
     color: @text-color;
     margin-top: 0;
     padding-bottom: 0;
@@ -38,15 +65,16 @@
         background: none;
         list-style: none;
         padding: 0;
+        margin: 0;
         li {
-            padding: 0 !important;
-            margin: 0 !important;
+            padding: 0;
+            margin: 0;
             a {
                 cursor: pointer;
                 display: block;
                 border: none;
-                text-decoration: none !important;
-                margin: 0 -@box-spacing !important;
+                text-decoration: none;
+                margin: 0 -@box-spacing;
                 font-size: @font-size-small;
                 padding: @box-spacing-vertical/1.5 @box-spacing-horizontal;
             }
@@ -54,7 +82,7 @@
     }
     &--ordered {
         a {
-            padding-left: @box-spacing-horizontal*2 !important;
+            padding-left: @box-spacing-horizontal*2;
         }
         span {
             font-weight: 900;
@@ -64,14 +92,14 @@
         }
     }
     h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
-        padding: 0 0 @box-spacing 0;
+        padding: @box-spacing 0;
         margin: 0;
         color: @heritage-blue;
     }
 }
 
 .beta-dap-menu-accordion__sections {
-  margin-bottom: @box-spacing-vertical !important;
+  margin-bottom: @box-spacing-vertical;
 }
 
 
@@ -80,14 +108,14 @@
  */
 
 .steps--navigation--fixed {
-    background: none !important;
+    background: none;
     li {
         display: none;
         color: white;
         span {
             background-color: @heritage-blue;
             padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal*2;
-            text-decoration: none !important; 
+            text-decoration: none; 
             display: block;
             border: none;
             font-size: 14px;
@@ -116,7 +144,7 @@
     }
     @media (min-width: @screen-sm-max) {
         li {
-            display: none !important;
+            display: none;
         }
     }
 }
@@ -129,9 +157,9 @@
     width: 100%;
     height: 100%;
     overflow: scroll;
-    background-color: rgba(255, 255, 255, 0.75) !important;
+    background-color: rgba(255, 255, 255, 0.75);
     visibility: hidden;
-    padding-bottom: @box-spacing*2 !important;
+    padding-bottom: @box-spacing*2;
     strong {
         margin-right: @box-spacing-horizontal/4;
         margin-left: -@box-spacing-horizontal;
@@ -142,7 +170,7 @@
             padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal*2;
             border: 0px;
             border-bottom: 1px solid @white;
-            text-decoration: none !important; 
+            text-decoration: none; 
             display: block;
             font-size: @font-size-small;
         }
@@ -180,5 +208,5 @@
 .open li,
 .open li a {
     visibility: visible;
-    display: block !important;
+    display: block;
 }
