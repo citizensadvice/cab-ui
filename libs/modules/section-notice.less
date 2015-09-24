@@ -1,11 +1,28 @@
 ﻿/**
  * SECTION NOTICE
  *
- * Need and use unknown.
+ * Callout for the header area of page to indicate new content e.g .
  * 
  */
 
  .section-notice__content {
     padding-top: 1em;
+}
+
+.section-notice {
+   background: @heritage-yellow;
+}
+
+.section-notice__content {
+    .limit-width;
+    padding: 0 1em;
+    overflow: hidden; // Prevent collapsing margins
+    margin-bottom: 1em;
+}
+
+@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .section-notice__content {
+        padding-right: @box-spacing-horizontal*3.5;
+    }
 }
 
