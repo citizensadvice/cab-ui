@@ -22,30 +22,6 @@
     }
 }
 
-// Arrrrggggggg
-.section-notice + * .content__header {
-    margin-top: -@box-spacing;
-}
-
-.content__header__content {
-    .limit-width();
-    padding: @box-spacing;
-
-    h2 {
-        font-size: @font-size-medium;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    a {
-        font-weight: @font-weight-bold;
-    }
-}
-
-
 @media (max-width: @screen-xs-max ) {
     .content__header + .main-content {
         margin-top: 0;
@@ -188,13 +164,6 @@
 .box--content-right {
     .box;
     .box--pull-right
-}
-
-.box--warning {
-  overflow: hidden; // Allow to sit next to side boxes
-  background: lighten( @orange, 40% );
-  padding: .5em 1em;
-  border-left: 3px solid @orange;
 }
 
 // A box with two 50% halfs

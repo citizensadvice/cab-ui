@@ -42,3 +42,26 @@
         margin-top: 0; // No breadcrumb trail
     }
 }
+
+// Arrrrggggggg
+.section-notice + * .content__header {
+    margin-top: -@box-spacing;
+}
+
+.content__header__content {
+    .limit-width();
+    padding: @box-spacing;
+
+    h2 {
+        font-size: @font-size-medium;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    a {
+        font-weight: @font-weight-bold;
+    }
+}
