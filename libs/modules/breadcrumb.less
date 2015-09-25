@@ -9,16 +9,17 @@
     padding: 0;
     clear: left;
     // Hack as we have Bootstrap in the mix
-    background-color: @gray-8;
+    background-color: @heritage-blue-lightest;
     padding: 0;
     max-width: none;
-    width: 100%;
+    width: @full-page-width;
 
     .main-breadcrumb__content {
         .limit-width(@max-page-width);
         margin: 0 auto;   
         background-color: transparent;
         padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+        max-width: @breakpoint-lg;
     }
     
     .breadcrumb__extent-link {
@@ -31,12 +32,12 @@
         line-height: (@line-height-small * 2);
         
         &>i {
-            margin: 0;
+            margin: 0em @box-spacing-horizontal*.5 0 0;
         }
     }
     
     .breadcrumb__item a {
-        margin: 0em .5em 0 0;
+        margin: 0em @box-spacing-horizontal*.5 0 0;
         color: @text-color;
     }
 
@@ -47,7 +48,7 @@
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
     .js .main-breadcrumb {
-        padding-right: 3.5em;
+        padding-right: @box-spacing-horizontal*3.5;
     }
 }
 
@@ -65,11 +66,12 @@
     }
     
     > i {
-        margin: .5em;
+        margin-right: @box-spacing-horizontal*.5;
     }
 
     &:last-child a {
         border: none;
+        margin-right: @box-spacing-horizontal*.5;
     }
 }
 

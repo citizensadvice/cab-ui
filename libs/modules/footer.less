@@ -5,7 +5,7 @@
  */
 
 .main-footer {
-    background-color: @blue-footer;
+    background-color: @heritage-blue-lightest;
     .black-text;
     overflow: hidden; // Prevent collapsing margins
 
@@ -20,6 +20,7 @@
 
 .main-footer__content {
     .limit-width(@max-page-width);
+    max-width: @breakpoint-lg;
 }
 
 .main-footer__box {
@@ -51,6 +52,10 @@
 }
 
 .main-footer__box--copyright {
+    p { 
+        font-size: @font-size-small;
+    }
+
     & img {
         float: left;
         margin-right: @box-spacing-horizontal*2;
