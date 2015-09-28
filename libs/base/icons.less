@@ -40,66 +40,39 @@
     &:extend(.a-);
 }
 
-
-// Must be a better way of mixins with pseudo classes 
-/*
-.a-link:after {
-    font-family: FontAwesome;
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
-}
-.a-external-link:after {
-    font-family: FontAwesome;
-    content: "\f08e";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
-}
-.a-action:after {
-    font-family: FontAwesome;
-    content: "\f016";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
-}
-.a-word-doc:after {
-    font-family: FontAwesome;
-    content: "\f1c2";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
-}
-.a-excel-doc:after {
-    font-family: FontAwesome;
-    content: "\f1c3";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
-}
-.a-pdf-doc:after {
-    font-family: FontAwesome;
-    content: "\f1c1";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+.icon-mixin() {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    left: 0;
 }
 
-.a-file-doc:after {
+.a-icon-stack {
     font-family: FontAwesome;
-    content: "\f016";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    width: @box-spacing*2;
+    height: @box-spacing*1.4;
+    margin-left: @box-spacing;
+    line-height: 1.2rem;
+    vertical-align: middle;
+    color: @white;
+
+    &:before {
+        content: "\f1db";
+        font-size: @font-size-largest;
+        .icon-mixin;
+    }
+    &:after {
+        content: "\f02f";
+        vertical-align: middle;
+        color: @white;
+        .icon-mixin;
+    }
 }
-*/
+
 
 /* 
 

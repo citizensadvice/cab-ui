@@ -50,14 +50,26 @@ legend {
 
 label,
 .form__label {
-    display: inline-block;
+    display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     //margin-bottom: 5px;
+    margin-bottom: @box-spacing*.5;
     font-weight: bold;
+    .form__label--inline {
+        display: inline-block;
+    }
 }
 
 .form__label--hidden {
     .screenreader;
+}
+
+span.form-hint {
+    display: block;
+    color: @gray-3;
+    margin-bottom: @box-spacing*.5;
+    margin-top: -@box-spacing*.5;
+    font-weight: @font-weight-base;
 }
 
 textarea,
@@ -99,7 +111,7 @@ select {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 4px 0 0;
+    margin: 4px 5px 2px 0px;
     margin-top: 1px \9; // IE8-9
     line-height: normal;
     &[disabled] {
@@ -143,20 +155,24 @@ select {
     padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
-        border-color: @red;
+//      border-color: @red;
+        outline: 2px solid @red;
         & ~ .invalid {
             display: block !important;
         }
     }
     &:focus:required:valid {
-        border-color: @green;
+//      border-color: @green;
+        outline: 2px solid @green;
         & ~ .valid {
             display: block !important;
         }
     }
     &:focus {
-        border-color: @heritage-blue-light;
-        outline: none;
+//        border-color: @heritage-blue-lighter;
+//        outline: none;
+        border-width: 1px;
+        outline: 2px solid @heritage-blue-lighter;
     }
 }
 
@@ -211,12 +227,68 @@ input[type="file"]::before {
 }
 */
 
-.radio,
-.checkbox {
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+.radio--inline,
+.checkbox--inline {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
+    margin-right: @box-spacing-horizontal;
+    z-index: 1;
+    clear: none;
+    float: left;
+    input {
+        &:before {
+            content: '';
+            display: block;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @gray-8;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-lighter;
+                background-color: @blue-lighter;
+            }
+            &:hover:before {
+                border-color: @blue-light;
+            }
+        }
+    }
+}
+
+.radio--block {
+    clear: left;
+    float: left;
+}
+
+.radio,
+.checkbox {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    position: relative;
+    display: block;
     margin-right: @box-spacing-horizontal/2;
     z-index: 1;
     input {
