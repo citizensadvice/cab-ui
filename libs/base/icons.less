@@ -7,8 +7,42 @@
  * References: http://fortawesome.github.io/Font-Awesome
  */
 
+.a- {
+    font-family: FontAwesome;
+    padding-left: 0.5em;
+    padding-right: 0.25em;
+    color: @link-color;
+    font-size: 75%;
+}
+.a-external-link:after {
+    content: "\f08e";
+    &:extend(.a-);
+}
+.a-action:after {
+    content: "\f016";
+    &:extend(.a-);
+}
+.a-word-doc:after {
+    content: "\f1c2";
+    &:extend(.a-);
+}
+.a-excel-doc:after {
+    content: "\f1c3";
+    &:extend(.a-);
+}
+.a-pdf-doc:after {
+    content: "\f1c1";
+    &:extend(.a-);
+}
+
+.a-file-doc:after {
+    content: "\f016";
+    &:extend(.a-);
+}
+
 
 // Must be a better way of mixins with pseudo classes 
+/*
 .a-link:after {
     font-family: FontAwesome;
     padding-left: 0.5em;
@@ -65,7 +99,7 @@
     color: @link-color;
     font-size: 75%;
 }
-
+*/
 
 /* 
 
