@@ -7,8 +7,22 @@
  * References: http://fortawesome.github.io/Font-Awesome
  */
 
-.a- {
+/* FONT AWESOME FONTS */
+
+.icon-fa () {
     font-family: FontAwesome;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+// Inline icons for use in paragraph and headings
+
+.a- {
+    .icon-fa;
     padding-left: 0.5em;
     padding-right: 0.25em;
     color: @link-color;
@@ -48,7 +62,7 @@
     left: 0;
 }
 
-.a-icon-stack {
+.a-icon-stack (@button-icon: "\f054") {
     font-family: FontAwesome;
     font-weight: normal;
     position: relative;
@@ -63,15 +77,54 @@
     &:before {
         content: "\f1db";
         font-size: @font-size-largest;
-        .icon-mixin;
     }
     &:after {
-        content: "\f02f";
+        content: @button-icon;
+        vertical-align: middle;
+        color: @white;
+        .icon-mixin;
+    }
+    &-email:after {
+        content: "\f003";
         vertical-align: middle;
         color: @white;
         .icon-mixin;
     }
 }
+// Directions
+.tick-button-icon {
+    .a-icon-stack("\f00c");
+}
+.right-button-icon {
+    .a-icon-stack("\f054");
+}
+.left-button-icon {
+    .a-icon-stack("\f053");
+}
+.down-button-icon {
+    .a-icon-stack("\f078");
+}
+.up-button-icon {
+    .a-icon-stack("\f077");
+}
+.exclamation-button-icon {
+    .a-icon-stack("\f12a");
+}
+// Actions
+.email-button-icon {
+    .a-icon-stack("\f003");
+}
+.print-button-icon {
+    .a-icon-stack("\f02f");
+}
+.restart-button-icon {
+    .a-icon-stack("\f01e");
+}
+.save-button-icon {
+    .a-icon-stack("\f019");
+}
+
+
 
 
 /* 
@@ -188,6 +241,9 @@
 @icon-symbol-chevron-up: "\2c4";
 @icon-symbol-chevron-left: "\3c";
 @icon-symbol-chevron-right: "\3e";
+@icon-symbol-restart: "\e602";
+@icon-symbol-checkmark: "\e601";
+
 
 .icon-megaphone:before {
     content: @icon-symbol-megaphone;

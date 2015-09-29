@@ -10,6 +10,51 @@
 //
 // Basic form styling
 
+// Buttons
+
+.btn {
+    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
+}
+.btn-primary {
+    color: @heritage-blue;
+    background-color: @brand-secondary;
+    &:hover {
+        background-color: darken(@brand-secondary, 10%);
+    }
+}
+.btn-secondary {
+    color: @white;
+    background-color: @heritage-blue; 
+    &:hover {
+        background-color: darken(@heritage-blue, 5%);
+    }
+}
+.btn-disabled {
+    color: @gray-3;
+    background-color: @gray-6; 
+    &:hover {
+        color: @gray-3;
+        background-color: @gray-6;             
+    }
+}    
+.btn-warning {
+    color: @white;
+    background-color: @red; 
+    &:hover {
+        color: @white;
+        background-color: darken(@red, 10%);             
+    }
+}    
+
+.btn-primary-outline {
+    background-color: @white;
+    border: 1px solid @heritage-blue-light;
+    color: @heritage-blue;
+    &:hover {
+        background-color: @heritage-blue-lighter;
+    }
+}
+
 form {
     .invalid {
         display: none;
