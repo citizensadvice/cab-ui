@@ -16,10 +16,9 @@
         }
     }
     &__right {
-        float: right;
+        float: left;
         width: @width-span-8;
-
-        padding-left: 2em;
+        padding-right: 2em;
 
         @media ( max-width: @screen-xs-max ) {
             float: none;
@@ -28,9 +27,8 @@
         }
     }
     &__sidebar {
-        float: left;
-        clear: left;
-        width: @width-span-4;
+        float: right;
+        width: @width-span-2;
         overflow: hidden; // Stop margin collapsing issues
         margin-bottom: @box-spacing*1.5;
 
