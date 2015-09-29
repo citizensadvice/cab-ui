@@ -49,17 +49,24 @@
 
     &__sibling {
         //background-color: @gray-8;
-        a {
+        span {
+            border-bottom: 1px solid;
         }
         &:hover {
             background-color: @gray-8;
         }
     }
-    .active a {
-        background-color: @white;
-        cursor: default;
-        border-left: @box-spacing/2 solid @inventive-teal;
-        font-weight: @font-weight-boldest;
+    .active {
+        background-color: @gray-8;
+        color: @inventive-teal;
+        //border-left: @box-spacing/2 solid @inventive-teal;
+        font-weight: @font-weight-bolder;
+        a {
+            cursor: default;            
+        }
+        span {
+            border: none;
+        }
     }
 }
 
