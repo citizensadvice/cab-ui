@@ -4619,7 +4619,7 @@ input.main-header__search__input {
 .main-content__right {
   float: left;
   width: 66.66666667%;
-  padding-right: 2em;
+  padding-right: 6rem;
 }
 @media (max-width: 479px) {
   .main-content__right {
