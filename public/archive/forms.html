@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Citizens Advice style guide</title>
+  <meta name="description" content="Citizens Advice style guide">
+  <meta name="author" content="Eliot Hill">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,700,600,800,400,300' rel='stylesheet' type='text/css'>
+
+  <!-- ICONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" type="text/css" href="css/site.css" />
+
+  <!-- JAVASCRIPT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/collapse-min.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/32.png" />
+
+</head>
+<body>
+
+  <!-- Content
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="flex-row--header__heritage-blue">
+    <div class="flex-container">
+        <a href="index.html" class="img-link"><img src="assets/images/citizensadvice-white-sm.png" alt="Citizens Advice logo"></a>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-col-2-3">
+      <h1>Form styles</h1>
+
+      <form>
+        <fieldset>
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" id="exampleInputEmail1" placeholder="Enter email" required>
+          <small>We'll never share your email with anyone else.</small>
+          <div class="invalid">Please enter a valid email</div>
+        </fieldset>
+        <fieldset>
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" id="exampleInputPassword1" placeholder="Password" pattern=".{3,10}" required>
+          <div class="valid">Wonderful!</div>
+          <div class="invalid">Please enter a password between 3 and 10 characters</div>
+        </fieldset>
+        <fieldset>
+          <label for="exampleInputPassword1">Don't fill this out</label>
+          <input type="password" id="exampleInputPassword1" placeholder="Disabled field" disabled>
+        </fieldset>
+        <fieldset>
+          <label for="exampleSelect1">Example select</label>
+          <div class="dropdown">
+            <select id="exampleSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label for="exampleSelect2">Example multiple select</label>
+          <select multiple id="exampleSelect2" class="multi-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="exampleTextarea">Example textarea</label>
+          <textarea id="exampleTextarea" rows="3"></textarea>
+        </fieldset>
+        <fieldset>
+          <label for="exampleInputFile">File input</label>
+          <input type="file" class="form-control-file" id="exampleInputFile">
+          <small>This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </fieldset>
+        <fieldset>
+          <label for="exampleInputFile">Radio buttons</label>
+          <label class="radio">
+            <input type="radio" name="radio" value="option1" checked>
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="radio" value="option2">
+            No
+          </label>
+          <label class="radio disabled">
+            <input type="radio" name="radio" value="option3" disabled>
+            Not sure
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="exampleInputFile">Checkboxes</label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox"> Option one
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="checkbox"> Option two
+          </label>
+          <label class="checkbox disabled">
+            <input type="checkbox" name="checkbox" disabled> Disabled
+          </label>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

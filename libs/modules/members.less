@@ -117,7 +117,7 @@
 
 .main-content__right--member-contactus {
     background: @white;
-    border-top: 8px solid @blue-40;
+    border-top: 8px solid @blue-navigation;
     margin-bottom: 1.5em;
     padding: 2em;
     width: 73%;
@@ -169,7 +169,7 @@
 
 .side-nav--member {
     & > h2 {
-        background: @blue;
+        background: @heritage-blue;
         color: white;
         margin: 0;
         font-size: @font-size-medium;
@@ -177,7 +177,7 @@
     }
 
     & .member_group_label {
-        background: @beta-blue-light;
+        background: @blue-light;
         display: block;
         padding: .5em;
     }
@@ -205,4 +205,57 @@
         background: url("/Static/images/members/socialmedia_youtube.png") center no-repeat;
         background-size: 50px;
     }
+}
+
+.member-logo, .member-title {
+    float: left;
+}
+.member-logo {
+    padding-right: 20px;
+    margin: @box-spacing 0;
+}
+.member-title {
+    display: block;
+    font-size: 1.8em;
+    color: @heritage-blue;
+    width: 70%;
+    font-weight: @font-weight-bold;
+    text-rendering: optimizelegibility;
+    margin: 35px 0 0 0;
+    padding: 0px 0;
+}
+@media screen and (max-width:525px) {
+    .member-title {
+        font-size: @font-size-medium;
+        width: 55%;
+    }
+}
+.bureau-colour {
+    margin-left: 0px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+}
+.bureau-colour.green {
+    background: @green;
+}
+.bureau-colour.blue {
+    background: @blue;
+}
+.bureau-colour.orange {
+    background: @orange;
+}
+.bureau-colour.purple {
+    background: @purple;
+}
+.bureau-colour.yellow {
+    background: @yellow;
+}
+.key-container {
+    margin-top: 10px;
+}
+.key-container .span6 {
+    margin-left: 0px!important;
 }

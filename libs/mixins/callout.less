@@ -12,21 +12,21 @@
 		@callout-border: darken(@callout-background, 25%) 
 	){
 
-    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
     margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
     display: block;
 	h1, h2, h3 {
-		color: @callout-headings !important; 
+		color: @callout-headings; 
 		font-size: @font-size-h3;
 	}
 	a {
 		border-bottom-color: @callout-border;
 	}
     > *:first-child {
-    	padding-top: @box-spacing-vertical;
+    	padding-top: 0;
     }
     h1:first-child,
     h2:first-child,
@@ -35,23 +35,24 @@
     h5:first-child,
     h6:first-child {
     	margin-top: 0;
+    	padding-top: 0;
     }
     li:first-child {
     	padding-top: 0;
     }
     > *:last-child {
-    	margin-bottom: 0 !important;
+    	margin-bottom: 0;
     }
 	.callout__link {
 	 	cursor: pointer;
 	 	display: block;
 	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
-	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal !important;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
 	    border: none;
 	    background-color: darken(spin(@callout-background, 15), 5%);
 	    color: @callout-text;
 	    border-bottom: 1px solid @callout-border;
-	    text-decoration: none !important;
+	    text-decoration: none;
 	    position: relative;
 		&:after {
 			box-sizing: border-box;
@@ -89,5 +90,7 @@
 }
 .callout--border--left ( @callout--border--left--width: @box-spacing/2 ) {
 	border-left-width: @callout--border--left--width;
-	padding-left: @box-spacing-horizontal;
+}
+.callout--border--top ( @callout--border--top--width: @box-spacing/2 ) {
+	border-top-width: @callout--border--top--width;
 }

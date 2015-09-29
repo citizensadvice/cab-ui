@@ -1,17 +1,25 @@
-﻿.revealable__content[aria-hidden=true] {
+﻿/**
+ * REVEALABLE
+ *
+ * Dropdown used on site.
+ * To be replaced by 'modules/collapse'.
+ *
+ */
+
+.revealable__content[aria-hidden=true] {
 	display: none;
 } 
 
 .revealable {
-  padding: 0 1em;
-  background: white;
-  margin: 1em 0;
+  padding: 0 @box-spacing-horizontal;
+  background: @white;
+  margin: @box-spacing-horizontal 0;
 }
 
 .revealable__heading {
-  font-size: 1.5em;
+  font-size: @font-size-large;
   margin: 0 -1/1.5em;
-  padding: .5em 1/1.5em .5em 2em;
+  padding: @box-spacing*.5 1/1.5em @box-spacing*.5 @box-spacing*2;
   cursor: pointer;
   position: relative;
 }
@@ -34,7 +42,7 @@
 
 .revealable__close {
     display: block;
-    margin: 1em 0;
+    margin: @box-spacing-horizontal 0;
 }
 
 .revealable__content {

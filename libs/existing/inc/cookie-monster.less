@@ -1,38 +1,31 @@
-﻿.cookie-monster__content {
-    .limit-width();
-    padding: 0 7em 0 1em; // Enough for the button
-    position: relative;
-}
-
-.hide-cookie-monster .cookie-monster {
+﻿.hide-cookie-monster .cookie-monster {
     display: none;
 }
 
 .cookie-monster {
-  position: fixed;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  background: #ddd;
-  opacity: 0.97;
-  z-index: 10000;
-  border: 1px solid #b5b5b5;
-  border-width: 1px 0;
-  
-}
-
-.cookie-monster__close {
-    position: absolute;
-    top: 0;
-    right: 1em;
-}
-
-@media screen and (max-width: @screen-xs-max) {
-    .cookie-monster {
-        font-size: 14px;
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #ddd;
+    opacity: 0.97;
+    z-index: 10000;
+    border: 1px solid #b5b5b5;
+    border-width: 1px 0;
+    &__content {
+        .limit-width();
+        padding: 0 7em 0 1em; // Enough for the button
+        position: relative;
     }
-
-    .cookie-monster__close {
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 1em;
+    }
+    @media screen and (max-width: @screen-xs-max) {
         font-size: 14px;
+        &__close {
+            font-size: 14px;
+        }
     }
 }

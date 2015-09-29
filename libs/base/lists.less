@@ -48,7 +48,7 @@ li > ol {
         &:hover,
         &:focus {
             color:    @link-hover-color;
-            background-color: @beta-aqua-light;
+            background-color: @aqua-light;
         }
 
         &:active {
@@ -57,6 +57,192 @@ li > ol {
 
         &:visited {
             color:    @link-visited-color;
+        }
+    }
+}
+
+
+
+// This lot was in buttons.less - I've moved it here while I sort out actual buttons
+
+/**
+ * Tabs
+ */
+  
+.tabContainer {
+    background: @gray-7;
+    overflow: hidden;
+    width: 65.81196581196582%;
+
+    @media screen and (max-width:@screen-sm-max) {
+        .tabContainer{
+            width: 100%;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    li {
+        float: left;
+        width: 25%;
+        margin-bottom: 0;
+
+        a {
+            padding: @box-spacing @box-spacing*.6;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .selected {
+        a {
+            background: @heritage-blue;
+            color: @white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.search-tab-container{
+    background: @gray-7;
+    overflow: hidden;
+    margin-top: @box-spacing*.6;
+    border-bottom: @box-spacing*.6 solid @heritage-blue;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: table;
+        width: 100%;
+    }
+    li {
+        width: 33.333%;
+        margin-bottom: 0;
+        display: table-cell;
+        vertical-align: top;
+
+        a {
+            padding: @box-spacing @box-spacing*.6;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .selected {
+        background: @heritage-blue;
+        a {
+            color: @white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.letters-tab-container {
+    background: @gray-7;
+    overflow: hidden;
+    margin-top: @box-spacing*.6;
+    border-bottom: @box-spacing*.6 solid @heritage-blue;
+    clear: both;
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+    li {
+        float: left;
+        width: 25%;
+        margin-bottom: 0;
+        a {
+            padding: @box-spacing @box-spacing*.6;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            &:hover, .selected {
+                background: @heritage-blue;
+                color: @white;
+                text-decoration: none;
+            }
+        }
+    }
+    .selected {
+        a {
+            background: @heritage-blue;
+            color: @white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Doc List
+.doc-list {
+    margin-left: 0px;
+}
+
+// Adviceguide A-Z Index
+.AdviceAZList {
+    margin-left: 5px;
+    * {
+        list-style: none;
+    }
+    > li {
+        background: url("/static/layout/blue-arrow.gif") left 0.5em no-repeat;
+        padding-left: 18px;
+    }
+    li ul {
+        margin-bottom: 0;
+        margin-left: 12px;
+        display: none;
+    }
+    a span {
+        color: @gray-2;
+    }
+}
+
+// Pagination
+.pagination ul {
+    margin: @box-spacing 0;
+    padding: 0;
+    overflow: hidden;
+    & > li {
+        display: inline;
+        &.active {
+            cursor: default;
+            & > span {
+                background-color: @heritage-blue;
+            }
+        }
+        & > a, & > span {
+            text-decoration: none;
+            background-color: @gray-background;
+            color: @white;
+            display: inline-block;
+            padding: .2em .7em;
+            margin: 0 .5em .5em 0;
+        }
+        & > a {
+            &:hover, &:focus, &:active {
+                background-color: @heritage-blue;
+            }
+        }
+        &.pagination--dot {
+            padding: .2em .7em;
+            margin-right: .3em;
+            margin-left: -.2em;
+            font-weight: 600;
+            line-height: 1;
+            position: relative;
+            bottom: .3em;
         }
     }
 }

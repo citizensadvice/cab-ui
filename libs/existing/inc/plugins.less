@@ -1,3 +1,11 @@
+/**
+ * PLUGINS
+ *
+ * Slider as used on homepage of CABLINK http://www.slidesjs.com/.
+ *
+ * Also uses sidr (menu sidebar) https://github.com/artberri/sidr.
+ */
+
 /*=Plugins
 ======================================================================= */
 
@@ -31,7 +39,7 @@
 .cablink-slider-controls li { /*float: left; width: 33.333%; margin-bottom: 0;*/
     display: table-cell;
     width: 33.333%;
-    background-color: @blue;
+    background-color: @heritage-blue;
     &.active {
         background-color: #CCE0F4;
     }
@@ -56,10 +64,10 @@
 .cablink-slider-controls .active a {
 
     background: #CCE0F4 url('/static/images/icons/down-arrow.png') no-repeat 50% 0!important;
-    color: @blue;
+    color: @heritage-blue;
 
     &, :visited {
-        color: @blue;
+        color: @heritage-blue;
     }
 }
 
@@ -142,7 +150,7 @@
     }
 
     .cablink-slider-caption a, .cablink-slider-caption a:visited {
-        color: @blue;
+        color: @heritage-blue;
     }
 
     /*.cablink-slider li {
@@ -233,7 +241,7 @@
     margin: 0px auto;
     padding: 1em;
     max-width: 500px;
-    border-top: 10px solid @blue;
+    border-top: 10px solid @heritage-blue;
     position: relative;
     top: 10%;
     overflow: hidden;
@@ -255,7 +263,7 @@
           clear: both;
       }
       .extent-overlay .span2{
-          background:@blue; 
+          background:@heritage-blue; 
           color: @white; 
           display: block; 
           float:left;
@@ -286,7 +294,7 @@
        
     
     @media screen and (max-width: @screen-xs-max ) {
-      .popup_content{ background: #fff; margin: 0px auto; padding:1em; max-width: 500px; border-top: 10px solid @blue;  max-width: auto;}
+      .popup_content{ background: #fff; margin: 0px auto; padding:1em; max-width: 500px; border-top: 10px solid @heritage-blue;  max-width: auto;}
       .extent-overlay .span2{width: 100%!important; margin: 0 0 1em 0;}
       .extent-overlay{width: 100%; max-width: 100%; overflow: hidden; top: 0px; bottom: 0; height: 100%; overflow-y: scroll; }
       .extent-selection-mobile{display: block; margin-top: 10px;}

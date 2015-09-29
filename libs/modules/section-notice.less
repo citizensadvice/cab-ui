@@ -1,10 +1,44 @@
 ﻿/**
  * SECTION NOTICE
  *
- * Need and use unknown.
+ * Callout for the header area of page to indicate new content e.g 'https://www.citizensadvice.org.uk/benefits/universal-credit/'.
  * 
  */
 
  .section-notice__content {
     padding-top: 1em;
+    p a {
+        border-bottom: none;        
+
+        &:hover {
+                border-bottom: 0.0625rem solid @heritage-yellow-darker;        
+        }
+    }
+}
+
+.section-notice {
+   background: @heritage-yellow-lighter;
+}
+
+.section-notice__content {
+    .limit-width;
+    padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
+    overflow: hidden; // Prevent collapsing margins
+    margin-bottom: @box-spacing;
+}
+
+@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .section-notice__content {
+        padding-right: @box-spacing-horizontal*3.5;
+    }
+}
+
+@media (max-width: @screen-sm-max ) {
+     .section-notice__content {
+        padding: @box-spacing-horizontal @box-spacing-horizontal 0 @box-spacing-horizontal;
+
+        p {
+            font-size: @font-size-small;
+        }
+    }
 }

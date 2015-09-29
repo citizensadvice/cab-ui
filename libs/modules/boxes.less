@@ -6,7 +6,7 @@
  */
 
  .beta-box() {
-    background-color: @gray-6-5;
+    background-color: @gray-7;
     border-top-width: 4px;
 
     & > h2 {
@@ -22,68 +22,9 @@
     }
 }
 
-
-.content__header {
-    margin-top: -@box-spacing;
-    background-color: @gray-5;
-
-    @media (max-width: @screen-xs-max) {
-        margin-top: 0; // No breadcrumb trail
-    }
-}
-// Arrrrggggggg
-.section-notice + * .content__header {
-    margin-top: -@box-spacing;
-}
-
-.content__header__content {
-    .limit-width();
-    padding: @box-spacing;
-
-    h2 {
-        font-size: @font-size-medium;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    a {
-        font-weight: @font-weight-bold;
-    }
-}
-
-
 @media (max-width: @screen-xs-max ) {
     .content__header + .main-content {
         margin-top: 0;
-    }
-}
-
-.beta-index-page {
-    margin-bottom: @box-spacing*2;
-}
-
-.beta-index-page__box {
-    border-bottom: 1px solid @gray-5;
-    margin-bottom: @box-spacing;
-    float: left;
-
-    &:last-child {
-        margin-bottom: @box-spacing*2;
-    }
-
-    & > * {
-        float: left;
-    }
-
-    @media screen and (max-width: @screen-xs-max) {
-        .beta-index-page__section {
-            h2 {
-                margin-bottom: 0;
-            }
-        }
     }
 }
 
@@ -92,20 +33,15 @@
 }
 
 .box--yellow {
-    border-top-color: @beta-yellow;
+    border-top-color: @yellow;
 }
 
 .box--aqua {
-    border-top-color: @beta-aqua;
+    border-top-color: @aqua;
 }
 
 .box--blue {
     border-top-color: @heritage-blue;
-}
-
-.main-content__sidebar {
-    padding: @box-spacing @box-spacing-vertical;
-    margin: 0;
 }
 
 .breadcrumb-lite {
@@ -113,4 +49,137 @@
     @media screen and (max-width: @screen-xs-max) {
         margin-top: @box-spacing-vertical*1.5;
     }
+}
+
+.highlight-adviseronly:extend( .box all ) {
+    overflow: hidden; // Allows the div to wrap around floated divs
+    
+    & > h4 {
+        margin-top: 0;
+    }
+
+}
+
+// WARNING These boxes are extended by the home page, index page and side bars
+
+// Box with a bar along the top
+.box {
+    border-top: 8px solid @blue-navigation;
+    background: @white;
+    padding: 1em;
+    margin-bottom: 1.5em;
+
+    & > h2 {
+        margin: 0;
+        font-size: 1.6em;
+    }
+
+    & > h3, & > h4 {
+        margin: 0;
+    }
+
+    & > img:first-child {
+        margin: calc(-1em) -1em 0 -1em;
+        max-width: none;
+        width: 100%;
+        width: calc( ~"100% + 2em" );
+    }
+}
+
+// There is blue top
+
+.box--orange {
+    border-top-color: @orange;
+}
+
+.box--green {
+    border-top-color: @green;
+}
+
+.box--purple {
+    border-top-color: @purple-dark;
+}
+
+.box--grey {
+    border-top-color: @gray-6;
+}
+
+.box--pink {
+    border-top-color: @pink;
+}
+
+// Box with a line along the side
+
+.box--side {
+    padding: 0 1em;
+    
+    background-color: @green-lighter;
+
+    & > h2 {
+        font-size: 1.2em;
+        padding: 0;
+        margin: .7em 0;
+    }
+}
+
+// Box with a border
+
+.box--outline {
+    
+    border: 2px solid @heritage-blue;
+    background: @white;
+    margin-bottom: 1.5em;
+    padding: 0 1em;
+    
+    & > h2 {
+        font-size: 1.2em;
+        padding: 0;
+        margin: .7em 0;
+    }
+}
+
+// Pull boxes right in the content area
+
+.box--pull-right {
+    float: right;
+    clear: right;
+    margin: 0 -25% 1em 1em;
+    width: 50%;
+}
+
+@media (max-width: @screen-sm-max ) {
+    .box--pull-right {
+        margin: 0 0 1em 1em;
+    }
+}
+
+@media (max-width: @screen-xs-max ) {
+    .box--pull-right {
+        float: none;
+        clear: none;
+        width: auto;
+    }
+}
+
+.box--content-right {
+    .box;
+    .box--pull-right
+}
+
+// A box with two 50% halfs
+.two-column-box {
+    .clearfix;
+    margin: 1em 0;
+}
+.two-column-box__col {
+    width: 50%;
+    float: left;
+
+    @media (max-width: @screen-xs-max ) {
+        width: auto;
+        float: none;
+    }
+}
+.two-column-box__col + .two-column-box__col {
+    padding-left: 1em;
 }

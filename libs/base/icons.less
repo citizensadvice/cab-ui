@@ -7,64 +7,124 @@
  * References: http://fortawesome.github.io/Font-Awesome
  */
 
+/* FONT AWESOME FONTS */
 
-// Must be a better way of mixins with pseudo classes 
-.a-link:after {
+.icon-fa () {
     font-family: FontAwesome;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+// Inline icons for use in paragraph and headings
+
+.a- {
+    .icon-fa;
     padding-left: 0.5em;
     padding-right: 0.25em;
     color: @link-color;
     font-size: 75%;
 }
 .a-external-link:after {
-    font-family: FontAwesome;
     content: "\f08e";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
 .a-action:after {
-    font-family: FontAwesome;
     content: "\f016";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
 .a-word-doc:after {
-    font-family: FontAwesome;
     content: "\f1c2";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
 .a-excel-doc:after {
-    font-family: FontAwesome;
     content: "\f1c3";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
 .a-pdf-doc:after {
-    font-family: FontAwesome;
     content: "\f1c1";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
 
 .a-file-doc:after {
-    font-family: FontAwesome;
     content: "\f016";
-    padding-left: 0.5em;
-    padding-right: 0.25em;
-    color: @link-color;
-    font-size: 75%;
+    &:extend(.a-);
 }
+
+.icon-mixin() {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    left: 0;
+}
+
+.a-icon-stack (@button-icon: "\f054") {
+    font-family: FontAwesome;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    width: @box-spacing*2;
+    height: @box-spacing*1.4;
+    margin-left: @box-spacing;
+    line-height: 1.2rem;
+    vertical-align: middle;
+    color: @white;
+
+    &:before {
+        content: "\f1db";
+        font-size: @font-size-largest;
+    }
+    &:after {
+        content: @button-icon;
+        vertical-align: middle;
+        color: @white;
+        .icon-mixin;
+    }
+    &-email:after {
+        content: "\f003";
+        vertical-align: middle;
+        color: @white;
+        .icon-mixin;
+    }
+}
+// Directions
+.tick-button-icon {
+    .a-icon-stack("\f00c");
+}
+.right-button-icon {
+    .a-icon-stack("\f054");
+}
+.left-button-icon {
+    .a-icon-stack("\f053");
+}
+.down-button-icon {
+    .a-icon-stack("\f078");
+}
+.up-button-icon {
+    .a-icon-stack("\f077");
+}
+.exclamation-button-icon {
+    .a-icon-stack("\f12a");
+}
+// Actions
+.email-button-icon {
+    .a-icon-stack("\f003");
+}
+.print-button-icon {
+    .a-icon-stack("\f02f");
+}
+.restart-button-icon {
+    .a-icon-stack("\f01e");
+}
+.save-button-icon {
+    .a-icon-stack("\f019");
+}
+
+
 
 
 /* 
@@ -181,6 +241,9 @@
 @icon-symbol-chevron-up: "\2c4";
 @icon-symbol-chevron-left: "\3c";
 @icon-symbol-chevron-right: "\3e";
+@icon-symbol-restart: "\e602";
+@icon-symbol-checkmark: "\e601";
+
 
 .icon-megaphone:before {
     content: @icon-symbol-megaphone;

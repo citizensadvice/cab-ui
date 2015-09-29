@@ -1,0 +1,365 @@
+/**
+ * COLOR DEFINITIONS
+ *
+ * Defines the colors we will use across the site.
+ * This is our palette, which is used within _variables.scss and elsewhere.
+ *
+ * Using the convention of 'base, base-dark, base-darker, base-light, base-lighter'.
+ */
+/***************************************************************************
+ * PRIMARY
+ */
+/***************************************************************************
+ * BETA COLORS
+ */
+/***************************************************************************
+ * NAVIGATION COLOURS
+ */
+/***************************************************************************
+ * HEADER COLOURS
+*/
+/***************************************************************************
+ * SOCIAL BRAND COLOURS
+*/
+/***************************************************************************
+ * HEADERS
+ */
+/**
+ * VARIABLES
+ *
+ * All non-color variables.
+ */
+/***************************************************************************
+ * GRID
+ */
+/***************************************************************************
+ * TEXT SIZES
+ */
+/***************************************************************************
+ * FONT WEIGHTS
+ */
+/***************************************************************************
+ * LINE HEIGHTS
+ */
+/* eg, 20px when font size is 14px */
+/***************************************************************************
+ * LINKS
+ */
+/****************************************************************************
+ * TABLES.
+ */
+/***************************************************************************
+ * FORMS
+ */
+/***************************************************************************
+ * CALLOUTS.
+ * Used for shaded boxes of various kinds.
+ * Usually, use the .box class and modifications like .box--1, etc.
+ */
+/***************************************************************************
+ * SHADOWS.
+ * Used for inner and outer shadows.
+ */
+/***************************************************************************
+ * FORMS
+ */
+/**
+ * TYPE
+ *
+ * Styles for basic type-related styles. Headings, paragraphs, etc.
+ *
+ * When we use h1, h2 etc within other elements we'll probably need to
+ * give them a class and assign specific sizes, margins etc to that
+ * particular usage.
+ */
+@font-face {
+  font-family: 'open_sans';
+  src: url('../assets/font/OpenSans-Regular-webfont.eot');
+  src: url('../assets/font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/font/OpenSans-Regular-webfont.woff') format('woff'), url('../assets/font/OpenSans-Regular-webfont.ttf') format('truetype'), url('../assets/font/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'open_sans';
+  src: url('../assets/font/OpenSans-Semibold-webfont.eot');
+  src: url('../assets/font/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/font/OpenSans-Semibold-webfont.woff') format('woff'), url('../assets/font/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../assets/font/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'open_sans';
+  src: url('../assets/font/OpenSans-Bold-webfont.eot');
+  src: url('../assets/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/font/OpenSans-Bold-webfont.woff') format('woff'), url('../assets/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('../assets/font/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'open_sans';
+  src: url('../assets/font/opensans-extrabold-webfont.eot');
+  src: url('../assets/font/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/font/opensans-extrabold-webfont.woff') format('woff'), url('../assets/font/opensans-extrabold-webfont.ttf') format('truetype'), url('../assets/font/opensans-extrabold-webfont.svg#open_sansbold') format('svg');
+  font-weight: 800;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+  color: #004b88;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+h1.title__heading {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600 !important;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: 600 !important;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600 !important;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600 !important;
+}
+h1 + h2,
+h2 + h3,
+h4 + h5,
+h5 + h6 {
+  margin-top: -0.25rem;
+}
+h3 + h4 {
+  margin-top: -0.6rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
+b,
+strong {
+  font-weight: 600;
+}
+small {
+  font-size: 0.875rem;
+}
+a {
+  color: #253460;
+  text-decoration: none;
+  border-bottom: 0.0625rem solid #ccd4eb;
+}
+a:hover,
+a:focus {
+  color: #253460;
+  text-decoration: none;
+}
+a:active {
+  color: #004b88;
+}
+a:visited {
+  color: #253460;
+}
+a:not([href]) {
+  text-decoration: none;
+}
+a.img-link,
+a.img-link:visited,
+a.img-link:hover,
+a.img-link:active {
+  border: none;
+}
+.a-external:after {
+  /* This method is easier to deploy across the site than just using padding */
+  content: "";
+  background: url("../assets/images/icons/icon_external.png") no-repeat center right;
+  padding-right: 18px;
+  padding-right: calc(13px + .3em);
+  /* image is 13px wide.  ~ to suppress LESS calculating for us grrr*/
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #9f9f9f;
+}
+.p-lede {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.page-info {
+  color: #404040;
+}
+.page-info + .page-info {
+  margin-top: -1em;
+}
+/* Type icons shown inside */
+.type-icon {
+  vertical-align: middle;
+  padding-left: 0.05em;
+}
+.first-paragraph {
+  font-weight: 600;
+}
+.underline {
+  text-decoration: underline;
+}
+.badge {
+  background: #ffbf47;
+  font-weight: 700;
+  padding: .3em .5em;
+}
+.statusmessage {
+  font-weight: 600;
+  color: #df3034;
+}
+.fieldtitles {
+  color: #000000;
+}
+.surveyquestions {
+  font-weight: 600;
+  color: #000000;
+}
+.surveytitle {
+  color: #000000;
+  font-size: 1.3rem;
+}
+.bannermessage {
+  color: #004b88;
+}
+.bannermessage b {
+  font-size: 1.3rem;
+  color: #004b88;
+}
+.noservicemessage {
+  color: #004b88;
+}
+#SelectedSessionConversation {
+  border-color: #dfdfdf !important;
+  color: #bfbfbf;
+}
+#currentsession {
+  color: #bfbfbf;
+}
+#currentsessionwithnobordercontrol {
+  border-color: #dfdfdf !important;
+  color: #bfbfbf;
+}
+input[type="text"],
+textarea {
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  padding: 7px;
+}
+/* web chat engage */
+body {
+  background: #ffffff;
+  font: 1rem "open_sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 10px 0 0 0 !important;
+  padding: 0 !important;
+}
+body,
+#currentsession,
+#Banner,
+.bannermessage,
+#Content,
+#Buttons,
+#SelectedSessionConversation,
+#ConversationAlerts,
+#EntryArea,
+#SurveyArea {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  color: #55555 !important;
+}
+#SelectedSessionConversation,
+.bannermessage,
+.noservicemessage,
+.fieldtitles,
+#ConversationAlerts .statusmessage,
+#SurveyArea .bannermessage {
+  color: #000000 !important;
+}
+textarea[name=requestinfo] {
+  height: 137px !important;
+}
+.chat {
+  margin-top: 10px !important;
+}
+#EntryArea .fieldtitles {
+  display: inline-block !important;
+  margin-bottom: 6px !important;
+}
+#ConversationAlerts {
+  margin-top: 10px !important;
+}
+#EntryArea {
+  margin-bottom: 15px !important;
+  background: transparent !important;
+}
+body #SelectedSessionConversation {
+  height: 128px !important;
+}
+#SurveyArea {
+  background: transparent !important;
+}
+#SurveyArea select {
+  width: 100%;
+  padding: 3px 2px;
+  color: #444;
+  text-transform: lowercase;
+  margin-top: 7px !important;
+}
+#Buttons img {
+  margin-right: 7px !important;
+}
+#currentsession .fieldtitles {
+  margin-bottom: 2px !important;
+  font-weight: normal !important;
+}
+#currentsession .fieldtitles label {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  margin-bottom: 3px !important;
+}
+label,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  float: left;
+  margin-right: .5em;
+}
+#currentsession {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+#currentsession input[type=text],
+textarea {
+  width: 100% !important;
+  margin-bottom: 10px !important;
+}
+/* Hyperlinks */
+/* Buttons */
+.submit-blue {
+  background: #004b88;
+  color: #ffffff;
+}

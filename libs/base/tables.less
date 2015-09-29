@@ -1,0 +1,237 @@
+/**
+ * TABLE SYTLES
+ */
+
+// Default Table
+table {
+    margin: @box-spacing-vertical 0;
+    border-collapse: collapse;
+}
+
+td, 
+th {
+    border: 1px solid @gray-7;
+    padding: @box-spacing*.4;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    background: @white;
+    > *:first-child {
+        padding-top:0;
+    }
+}
+
+th {
+    background: @heritage-blue;
+    color: @white;
+    font-weight: normal;
+
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+
+}
+    
+// Sortable Table
+.tablesorter {
+    th {
+        cursor: pointer;
+        background: @heritage-blue url('/static/layout/sortable-default.png') no-repeat 99%;
+        &:hover {
+            background-color: @blue;
+        }   
+    }
+
+    .tablesorter-headerDesc{
+        background-image: url('/static/layout/sortable-active.png');
+    }
+    .tablesorter-headerAsc{
+        background-image: url('/static/layout/sortable-desc.png');
+    }
+    &-header-inner{
+        padding-right: @box-spacing-horizontal;
+    }
+}
+
+// Properties table - a table with no borders for listing properties
+.table--properties {
+    td {
+        border: none;
+        background: transparent;
+    }
+
+    th[scope=row] {
+        border: none;
+        background: transparent;
+        white-space: nowrap;
+        font-weight: bold;
+        color: @black;
+        padding: @box-spacing-vertical*.4 @box-spacing-horizontal @box-spacing-vertical*.4 0;
+        
+        // Reset the colours changed for the standard tables
+        // Pity we can't use :not for the selector above
+        a {
+             color: @heritage-blue;
+             text-decoration: none;
+             &:hover, &:focus {
+                 text-decoration: underline;
+             }
+        }
+    }
+
+    tr:first-child {
+        td, 
+        th {
+            padding-top: 0;
+        }
+    }
+
+    tr:last-child {
+        td, 
+        th {
+            padding-bottom: 0;
+        }
+    }
+    /* This is for the Signposting pages on the Consumer KB and is partly an artifact of the migration */
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.table--full-width {
+    width: 100%;
+}
+
+.td {
+    &--green {
+        background-color: @green-lighter;
+    }
+    &--amber {
+        background-color: @yellow-light;
+    }
+    &--red {
+        background-color: @red-lighter;
+    }
+}
+
+/*Blind Table*/
+.blindtable {
+    width: auto;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-collapse: collapse;
+    border-bottom-style: none;
+    border: 0;
+}
+.blindtable tr {
+    background-color: transparent;
+    border: 0;
+}
+.blindtable tr td {
+    border: 0;
+}
+.blindtable tr td:first-child {
+    width: 10%;
+}
+    
+/*Fifty Fifty Table */
+  
+.fiftyfiftytable tr td {
+    width: 50%;
+}
+      
+
+/*Simple Table*/
+table.simple-table, 
+table.simple-table tr, 
+table.simple-table th, 
+table.simple-table td {
+    color: @gray-0;
+    vertical-align: middle;
+}
+table.simple-table tr, 
+table.simple-table td {
+    border: 0;
+}
+table.simple-table th {
+    background-color: @white;
+    font-weight: bold;
+}
+table.simple-table th, 
+table.simple-table td {
+    padding: 0px @box-spacing-horizontal/2;
+}
+
+
+/*Contact us Table*/
+@media screen and ( min-width: 1200px ) {
+    table.contactus tr td {
+        width: 10%;
+    }
+    table.contactus tr td + td {
+        width: 40%;
+    }
+    table.contactus tr td + td + td {
+        width: 50%;
+    }
+}
+@media screen and ( min-width: @screen-md-min ) {
+    table.contactus tr:not(:last-child) {
+        border-bottom: 1px dotted @gray-5;
+    }
+}
+@media screen and ( max-width: @screen-md-min ) {
+    table.contactus thead, 
+    table.contactus thead th {
+        display: none;
+    }
+    table.contactus tr {
+        margin-bottom: @box-spacing-horizontal*1.3;
+        background-color: @gray-7;
+        padding: @box-spacing*.6;
+    }
+    table.contactus tr:nth-child(even) {
+        background-color: @gray-7;
+    }
+    table.contactus tr td, 
+    table.contactus tr td:before, 
+    table.contactus tr {
+        display: inline-block;
+    }
+    table.contactus tr td {
+        width: 100%;
+        clear: both;
+    }
+    table.contactus tr td:not(:last-child) {
+        border-bottom: 1px dotted @gray-1;
+    }
+    table.contactus tr td:before {
+        width: 50%;
+        content: '';
+        font-weight: bold;
+    }
+    table.contactus tr td:before {
+        content: 'Day';
+    }
+    table.contactus tr td + td:before {
+        content: 'Time';
+    }
+    table.contactus tr td + td + td:before {
+        content: 'Further information';
+    }
+}
+// a wrapper to make tables responsive
+// this is automatically added by the htmlrewriter
+.table-scroll {
+    overflow-x: auto;
+    margin: @box-spacing-vertical 0;
+    & > table {
+        margin: 0;
+    }
+}

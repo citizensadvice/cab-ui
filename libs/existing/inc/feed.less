@@ -1,4 +1,6 @@
-﻿// Styling for the RSS feeds
+﻿/**
+ * RSS FEED
+ */
 
 // This ensures the more link is at the bottom of the box
 .feed__box {
@@ -9,7 +11,7 @@
 // Override the default list styling
 .feed {
     list-style: none;
-    margin: 1em 0;
+    margin: @box-spacing 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -37,19 +39,19 @@
 }
 
 .feed--content-page .feed__item {
-    margin-bottom: 1em;
+    margin-bottom: @box-spacing;
 }
 
 .feed__heading {
     padding: 0;
     margin: 0;
-    font-size: 1em;
+    font-size: @font-size-base;
     font-weight: normal;
 }
 
 .feed--content-page .feed__heading {
-    font-weight: 600;
-    font-size: 1.1em;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-medium;
 }
 
 .feed__avatar {
@@ -62,8 +64,8 @@
 }
 
 .feed__time {
-  font-size: .8em;
-  color: #000;
+  font-size: @font-size-small;
+  color: @black;
   display: block;
 }
 
@@ -97,7 +99,7 @@
     }
 
     .feed {
-        margin-bottom: 1em;
+        margin-bottom: @box-spacing;
     }
 }
 
@@ -109,7 +111,7 @@
 .feed-tabs .feed__title {
     font-size: 1.6em;
     margin: 0 0 1/1.6em 0;
-    color: @blue;
+    color: @heritage-blue;
 }
 
 // Really ugly, but the forms framework can make it difficult to pass values to controls
@@ -153,14 +155,14 @@
     }
 
     & > a {
-        font-weight: 600;
+        font-weight: @font-weight-bold;
         display: block;
         padding: 1em;
     }
 
     &[aria-expanded=true] {
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
+        border-left: 1px solid @gray-6;
+        border-right: 1px solid @gray-6;
         border-bottom: none;
 
         &:first-child {
@@ -172,45 +174,3 @@
         }
     }
 }
-
-
-
-
-/*
-
-  .feed-avatar{float: left; width: 10%; margin-right: 3%; margin-top: 2px;}
-    .feed-content{float: right; width: 87%;}
-    
-    .feed-links a, .feed-links a:visited, .meta-info p{color: #939393;}
-    
-    .left-link i, .right-link i{margin-right: 10px; color: #c4c4c4;}
-    .left-link{float: left;}
-    .dynamic .left-link{margin-top: 15px;}
-    .right-link{float: right;}
-
-.feed-tabs {
-    list-style: none;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
-    .feed-tabs li{float: left; margin-bottom: 0;  width: 33.333%;}
-
-    .feed-tabs > li > a {
-        padding: 15px 10px 0;
-        display: block;
-        text-align: center;
-        font-weight: 600;
-        min-height: 60px;
-        border-bottom: 1px solid #ccc;
-    }
-
-      .feed-tabs .selected{border-bottom: 1px solid #FFF; border-right: 1px solid #CCC; border-left: 1px solid #CCC;}
-        .feed-tabs li:first-child .feed-controller.selected{border-bottom: 1px solid #FFF; border-right: 1px solid #CCC; border-left: 0;}
-        .feed-tabs li:last-child .feed-controller.selected{border-bottom: 1px solid #FFF; border-right: 0; border-left: 1px solid #CCC;}
-
-
-
-*/
