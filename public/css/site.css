@@ -4583,7 +4583,11 @@ input.main-header__search__input {
  * MAIN CONTENT WRAPPER
  */
 .title__subheading {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 0 1rem 0;
+  border-top: #eeeeee 1px solid;
+  border-bottom: #eeeeee 1px solid;
   font-size: 0.875rem;
   color: #606060;
 }
@@ -10198,7 +10202,6 @@ input.tablesort-filter {
 .side-nav-beta li {
   padding: 0;
   margin: 0;
-  border-left: 0.5rem solid #dfdfdf;
 }
 .side-nav-beta li a {
   margin-bottom: 1px;
