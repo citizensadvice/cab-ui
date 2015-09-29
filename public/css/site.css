@@ -10198,6 +10198,7 @@ input.tablesort-filter {
 .side-nav-beta li {
   padding: 0;
   margin: 0;
+  border-left: 0.5rem solid #dfdfdf;
 }
 .side-nav-beta li a {
   margin-bottom: 1px;
@@ -10205,22 +10206,21 @@ input.tablesort-filter {
   display: block;
   border-bottom: none;
 }
-.side-nav-beta__heading {
-  background-color: #006278;
-}
 .side-nav-beta__heading a {
-  color: #ffffff;
+  color: #004b88;
+  font-weight: 800;
+  font-size: 1.3rem;
 }
 .side-nav-beta__sibling span {
-  border-bottom: 1px solid;
+  border: none;
 }
 .side-nav-beta__sibling:hover {
   background-color: #f2f2f2;
 }
 .side-nav-beta .active {
-  background-color: #f2f2f2;
-  color: #006278;
+  background-color: #f2f8ff;
   font-weight: 700;
+  border-color: #a2d5ff;
 }
 .side-nav-beta .active a {
   cursor: default;
