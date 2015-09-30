@@ -1,0 +1,117 @@
+/**
+ * REVEALABLE MIXIN
+ *
+ * Mixin created for styling revealables and colapsibles
+ */
+
+.revealable (
+        @revealable-background: @heritage-blue-lighter,  
+        @revealable-heading: @text-color, 
+        @revealable-border: darken(@revealable-background, 25%)
+    ) {
+
+    margin: @box-spacing-vertical 0;
+    background-color: @white;
+    color: @text-color;
+    border: solid @revealable-border;
+    border-width: 1px 1px 0px @box-spacing/2;
+
+    i.revealable__icon,
+    i.icon-chevron-up {
+        display: none;
+    }
+
+    .collapse-toggle, // This needs to be removed eventually
+    &__heading {
+        cursor: pointer;
+        display: block;
+        padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
+        margin: 0;
+        border: none;
+        background-color: @revealable-background;
+        text-decoration: none;
+        position: relative;
+        background-color: @revealable-background;
+        color: @revealable-heading;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bold;
+        line-height: @line-height-small;
+        border-bottom: 1px solid @revealable-border;
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            color: @revealable-heading;
+        }
+        &:after {
+            box-sizing: border-box;
+            font-family: 'FontAwesome';
+            content: "\f067";
+            padding: 0 @box-spacing-horizontal*1.25;
+
+            position: absolute;
+            top: 50%;
+            right: 0;
+            float: right;
+            transform: translateY(-50%);
+        }
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .collapse-toggle-close, // This needs to be removed eventually
+    &__close {
+        cursor: pointer;
+        display: block;
+        padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
+        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+        text-decoration: none;
+        position: relative;
+        color: @revealable-heading;
+        cursor: pointer;
+        border: none;
+        margin-top: 1rem;
+        border-bottom: 1px solid @revealable-border;
+        text-align: right;
+        &:before {
+            box-sizing: border-box;
+            font-family: 'FontAwesome';
+            padding: 0 @box-spacing-horizontal*1.25;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            line-height: 3em;
+            content: "\f068";
+        }
+        &:hover {
+            background-color: fade(@revealable-background, 20%);
+        }
+    }
+
+    .open:after, // This needs to be removed eventually
+    &__heading[aria-expanded=true]:after {
+        content: "\f068";
+    }
+
+    .collapse-content, // This needs to be removed eventually
+    &__content {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    }
+}
+
+// Finctional CSS for JS
+.collapse-toggle {
+    cursor: pointer;
+}
+.collapse-content {
+    display: none;
+}
+.collapse-content.default {
+    display: block;
+}
+.start-open {
+    display: block;
+}
