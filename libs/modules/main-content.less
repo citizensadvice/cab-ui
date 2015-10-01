@@ -35,7 +35,18 @@
     &__right {
         float: left;
         width: @width-span-8;
-        padding-right: @box-spacing*6;
+
+        @media ( min-width: @screen-sm-min ) {
+            padding-right: @box-spacing*2;
+        }
+
+        @media ( min-width: @screen-md-min ) {
+            padding-right: @box-spacing*3;
+        }
+
+        @media ( min-width: @screen-lg-min ) {
+            padding-right: @box-spacing*6;
+        }
 
         @media ( max-width: @screen-xs-max ) {
             float: none;
