@@ -4,6 +4,18 @@
  * Current sharing sidebar, social icons.
  */
 
+/* User agent check needed, are we doing this on a server level or page level? */
+.a-social-whatsapp {
+    display: visible;
+}
+
+html[data-useragent*='Mobi'] .a-social-whatsapp {
+    display: inline-block;
+}
+
+
+/* Previous styling for sharing options */
+
 .main-container {
     // Used to wrap 
     position: relative;

@@ -123,8 +123,57 @@
 .save-button-icon {
     .a-icon-stack("\f019");
 }
-
-
+// Social
+.a-social- {
+    .icon-fa;
+    display: inline-block;
+    padding: 0 0.25em 0 0.65em;
+    border-bottom: 0.0625rem solid @white;
+    font-size: 175%;
+}
+.a-social-facebook:before {
+    content: "\f230";
+    color: @facebook-brand-colour;
+    &:extend(.a-social-);
+}
+.a-social-twitter:before {
+    margin-left: -0.65em;
+    content: "\f081";
+    color: @twitter-brand-colour;
+    &:extend(.a-social-);
+}
+.a-social-whatsapp:before {
+    content: "\f232";
+    color: @whatsapp-brand-colour;
+    &:extend(.a-social-);
+}
+.a-social-google-plus:before {
+    content: "\f0d4";
+    color: @google-plus-brand-colour;
+    &:extend(.a-social-);
+}
+.a-social-top- {
+    .icon-fa;
+    display: inline-block;
+    padding: 0 0.45em 0 0.85em;
+    border-bottom: 1rem solid #ffffff;
+    font-size: 125%;
+}
+.a-social-print:before {
+    content: "\f02f";
+    color: @blue-light;
+    &:extend(.a-social-top-);
+}
+.a-social-references:before {
+    content: "\f005";
+    color: @blue-light;
+    &:extend(.a-social-top-);
+}
+.a-social-email:before {
+    content: "\f003";
+    color: @blue-light;
+    &:extend(.a-social-top-);
+}
 
 
 /* 
