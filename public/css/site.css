@@ -3575,6 +3575,68 @@ input.custom-dropdown__button {
   width: 100%;
   left: 0;
 }
+.a-social-,
+.a-social-facebook:before,
+.a-social-twitter:before,
+.a-social-whatsapp:before,
+.a-social-google-plus:before {
+  font-family: FontAwesome;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  padding: 0 0.25em 0 0.65em;
+  border-bottom: 0.0625rem solid #ffffff;
+  font-size: 175%;
+}
+.a-social-facebook:before {
+  content: "\f230";
+  color: #3b579d;
+}
+.a-social-twitter:before {
+  margin-left: -0.65em;
+  content: "\f081";
+  color: #55acee;
+}
+.a-social-whatsapp:before {
+  content: "\f232";
+  color: #30d74d;
+}
+.a-social-google-plus:before {
+  content: "\f0d4";
+  color: #dc4e41;
+}
+.a-social-top-,
+.a-social-print:before,
+.a-social-references:before,
+.a-social-email:before {
+  font-family: FontAwesome;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  padding: 0 0.45em 0 0.85em;
+  border-bottom: 1rem solid #ffffff;
+  font-size: 125%;
+}
+.a-social-print:before {
+  content: "\f02f";
+  color: #a5bddc;
+}
+.a-social-references:before {
+  content: "\f005";
+  color: #a5bddc;
+}
+.a-social-email:before {
+  content: "\f003";
+  color: #a5bddc;
+}
 /* 
 
     ICOMOON
@@ -11933,6 +11995,14 @@ li.ref-dialog__list-item--highlight {
  *
  * Current sharing sidebar, social icons.
  */
+/* User agent check needed, are we doing this on a server level or page level? */
+.a-social-whatsapp {
+  display: visible;
+}
+html[data-useragent*='Mobi'] .a-social-whatsapp {
+  display: inline-block;
+}
+/* Previous styling for sharing options */
 .main-container {
   position: relative;
 }
