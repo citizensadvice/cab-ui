@@ -32,6 +32,7 @@
 </head>
 
 <body class="beta">
+<!-- Test this for capturing User agent, may be a better way of doing this server side -->
 <script>
 var txt = "";
 txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
@@ -45,6 +46,14 @@ txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
 
 document.getElementById("demo").innerHTML = txt;
 </script>
+
+<!-- Email page content functionality, probably move to JS libs -->
+<script language="javascript">
+    function emailCurrentPage(){
+        window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
+    }
+</script>
+
     <div class="skip-nav">
         <a class="screenreader screenreader--focusable" href="">Skip to content</a> <a class="screenreader screenreader--focusable" href="">Skip to footer</a>
     </div>
@@ -163,7 +172,7 @@ document.getElementById("demo").innerHTML = txt;
                         <a href="" id="showSimpleModal" class="btn btn-primary-outline">Cymru</a>
                         <a href="" id="showSimpleModal" class="btn btn-primary-outline">Northern Ireland</a>
                     -->
-                        <a class="a-social-email" href="#!" data-track="Email page">Email</a>
+                        <a class="a-social-email" href="javascript:emailCurrentPage()" data-track="Email page">Email</a>
                     
                         <a class="a-social-print" href="javascript:window.print();" data-track="Print">Print</a>
                     
