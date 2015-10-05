@@ -162,7 +162,7 @@ small {
 a {
   color: #253460;
   text-decoration: none;
-  border-bottom: 0.0625rem solid #ccd4eb;
+  border-bottom: 0.0625rem solid #a7b5dd;
 }
 a:hover,
 a:focus {
@@ -1953,3 +1953,4 @@ img[src="/Global/Migrated_Images/bmis/dl-icon.gif"] {
 .toc-legacy__num {
   padding-left: 1em;
 }
+/*# sourceMappingURL=print.css.map */

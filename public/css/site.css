@@ -1912,6 +1912,13 @@ button:disabled:hover {
 .btn-primary:hover {
   background-color: #5cc0b5;
 }
+.btn-primary-light {
+  color: #004b88;
+  background-color: #b8e3df;
+}
+.btn-primary-light:hover {
+  background-color: #81cec6;
+}
 .btn-secondary {
   color: #ffffff;
   background-color: #004b88;
@@ -4098,7 +4105,7 @@ small {
 a {
   color: #253460;
   text-decoration: none;
-  border-bottom: 0.0625rem solid #ccd4eb;
+  border-bottom: 0.0625rem solid #a7b5dd;
 }
 a:hover,
 a:focus {
@@ -4390,6 +4397,140 @@ hr {
  * Allows you to easily vertical align center anything by using .vertical-align;
  */
 /* Module files */
+/**
+ * EXTENT SWITCHER MODAL
+ *
+ * New approach to extent switcher.
+ *
+ */
+.modal {
+  position: fixed;
+  padding: 10% 20% 0 20%;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  background: rgba(0, 0, 0, 0) url("../assets/images/popup-background.png") repeat scroll 0 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+}
+@media (max-width: 599px) {
+  .modal {
+    padding: 5% 5% 0 5%;
+  }
+}
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.extent-country-select {
+  width: 100%;
+  background-color: #f2f8ff;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+.extent-country-select h2 {
+  font-size: 1rem;
+  margin-top: -0.25rem;
+}
+/* Add background fill when active */
+.popup-background {
+  display: none;
+  background: rgba(0, 0, 0, 0) url("../assets/images/popup-background.png") repeat scroll 0 0;
+  z-index: 5000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: scroll;
+}
+.popup_content,
+.extent-overlay {
+  z-index: 5001;
+  /* any number + 1 */
+  background-color: #f2f8ff;
+  display: block;
+  margin: 0px auto;
+  padding: 1rem;
+  max-width: 500px;
+  position: relative;
+  top: 5%;
+  overflow: visible;
+}
+.extent-overlay {
+  width: 80%;
+  max-width: 50em;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.extent-overlay .row::before,
+.extent-overlay .row::after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+/* Not sure if we still need anything here
+
+.extent-overlay .row::after{
+    clear: both;
+}
+.extent-overlay .span2{
+    background:@heritage-blue; 
+    color: @white; 
+    display: block; 
+    float:left;
+    font-weight: bold; 
+    height: 60px; 
+    margin: 0 1.5%; 
+    padding: 5px 10px; 
+    width: 17%; 
+}
+
+.popup_feedback {
+    max-width: 800px;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+
+.popup__heading {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.extent-overlay .span2:hover{text-decoration: none; background: darken( @blue, 10%);}
+.extent-overlay .span2 span{width: 100%; display: block;}
+
+.extent-selection-mobile{display: none;}
+
+
+.popup_wrapper {
+z-index: 5001; /* any number + 1 */
+/*}
+
+.popup__close {
+    float: right;
+    margin-top: -.5em;
+}
+
+*/
 /**
  * HEADER
  *
@@ -12039,107 +12180,4 @@ li.ref-dialog__list-item--highlight {
   text-decoration: none;
   opacity: 1;
 }
-/**
- * EXTENT SWITCHER MODAL
- *
- * New approach to extent switcher.
- *
- */
-.extent-country-select {
-  width: 100%;
-  background-color: #f2f8ff;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-.extent-country-select h2 {
-  font-size: 1rem;
-  margin-top: -0.25rem;
-}
-/* Add background fill when active */
-.popup-background {
-  display: none;
-  background: rgba(0, 0, 0, 0) url("../assets/images/popup-background.png") repeat scroll 0 0;
-  z-index: 5000;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  overflow: scroll;
-}
-.popup_content,
-.extent-overlay {
-  z-index: 5001;
-  /* any number + 1 */
-  background-color: #f2f8ff;
-  display: block;
-  margin: 0px auto;
-  padding: 1rem;
-  max-width: 500px;
-  position: relative;
-  top: 5%;
-  overflow: visible;
-}
-.extent-overlay {
-  width: 80%;
-  max-width: 50em;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.extent-overlay .row::before,
-.extent-overlay .row::after {
-  content: "";
-  display: table;
-  line-height: 0;
-}
-/* Not sure if we still need anything here
-
-.extent-overlay .row::after{
-    clear: both;
-}
-.extent-overlay .span2{
-    background:@heritage-blue; 
-    color: @white; 
-    display: block; 
-    float:left;
-    font-weight: bold; 
-    height: 60px; 
-    margin: 0 1.5%; 
-    padding: 5px 10px; 
-    width: 17%; 
-}
-
-.popup_feedback {
-    max-width: 800px;
-    height: 80%;
-    overflow-y: scroll;
-}
-
-
-.popup__heading {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.extent-overlay .span2:hover{text-decoration: none; background: darken( @blue, 10%);}
-.extent-overlay .span2 span{width: 100%; display: block;}
-
-.extent-selection-mobile{display: none;}
-
-
-.popup_wrapper {
-z-index: 5001; /* any number + 1 */
-/*}
-
-.popup__close {
-    float: right;
-    margin-top: -.5em;
-}
-
-*/
+/*# sourceMappingURL=site.css.map */
