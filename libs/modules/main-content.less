@@ -3,7 +3,11 @@
  */
 
  .title__subheading {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem 0 1rem 0;
+    border-top: @gray-7 1px solid;
+    border-bottom: @gray-7 1px solid;
     font-size: @font-size-small;
     color: @gray-2;
     .btn {
@@ -31,7 +35,18 @@
     &__right {
         float: left;
         width: @width-span-8;
-        padding-right: 2em;
+
+        @media ( min-width: @screen-sm-min ) {
+            padding-right: @box-spacing*2;
+        }
+
+        @media ( min-width: @screen-md-min ) {
+            padding-right: @box-spacing*3;
+        }
+
+        @media ( min-width: @screen-lg-min ) {
+            padding-right: @box-spacing*6;
+        }
 
         @media ( max-width: @screen-xs-max ) {
             float: none;
