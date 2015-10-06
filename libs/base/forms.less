@@ -128,6 +128,7 @@ textarea,
 input[type=text],
 input[type=password],
 input[type=email],
+input[type=number],
 input[type=search] {
     padding: .2em;
     width: 100%;
@@ -404,6 +405,23 @@ input[type="file"]::before {
 
 .checkbox, .radio {
     display: inline-block;
+}
+
+input[id*="dob-"],
+input[class*="dob-"] {
+    padding: .2em;
+    border-radius: @form-border-radius;
+    display: inline-block;
+}
+
+.form-group-date {
+    width: 5rem;
+    display: inline-block;
+    float: left;
+    margin-right: @box-spacing;
+    &:last-child {
+        margin: 0;
+    }
 }
 
 *:disabled,
