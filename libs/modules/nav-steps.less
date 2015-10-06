@@ -6,22 +6,26 @@
  */
  
 .steps {
-    .callout( @callout-border: @gray-5, @callout-background: white );
+    .callout( @callout-border: @white, @callout-background: @heritage-blue-lightest );
     .callout--border;
-    .callout--border--top;
+    //.callout--border--top;
     margin-top: 2rem;
     .flex-row {
         padding: 0;
     }
     h3 {
         color: @heritage-blue;
+        font-weight: @font-weight-bolder;
+        font-size: 1.1rem;
+        margin-bottom: @box-spacing-vertical*1.25;
     }
     ul {
         margin: 0;
         //padding: 0 1rem;
-        padding: 0 2rem;
+        padding: 0.25rem 2rem;
         //list-style: none;
         li {
+            font-size: 0.95rem;
             margin-bottom: 1rem;
             &:first-child {
                 margin-top: .5rem;
@@ -34,6 +38,7 @@
     a {
         border-width: 0;
         &:hover {
+            border-bottom: 0px @heritage-blue solid;
             border-bottom-width: 1px;
         }
     }
