@@ -43,6 +43,7 @@ a {
 	&[href^="javascript:"]:after,
 	&[href^="#"]:after {
     	content: "";
+    	text-decoration: none;
     }
     img {
 		border-style: none;
@@ -75,8 +76,13 @@ abbr[title]:after {
 .revealable__close,
 #overview,
 nav,
-aside {
+aside,
+.title__subheading .btn {
 	display: none;
+}
+
+.callout* {
+	page-break-inside: avoid;
 }
 
 .revealable,
@@ -88,6 +94,7 @@ aside {
 	border: 1px solid @gray-5;
 	padding: @box-spacing;
 	margin: @box-spacing 0;
+	page-break-inside: avoid;
 }
 
 .accordionContent,
@@ -97,7 +104,7 @@ aside {
 }
 
 pre, blockquote {
-	border: 1px solid #999;
+	border: 1px solid @gray-4;
 	page-break-inside: avoid;
 }
 thead {
@@ -148,7 +155,7 @@ p {
 
 table {
 	text-align: left;
-	border: 1px solid #000;
+	border: 1px solid @black;
 	border-collapse: collapse;
 	width: 100% !important;
 }
@@ -159,12 +166,12 @@ table ul, table ol {
 
 th, td {
 	padding: 4px;
-	border: 1px solid #000;
+	border: 1px solid @black;
 	vertical-align: top;
 }
 
 th {
-	border-bottom: 2px solid #333333;
+	border-bottom: 2px solid @gray-1;
 }
 
 .page-image {
