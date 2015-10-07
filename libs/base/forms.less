@@ -282,7 +282,7 @@ input[type="file"]::before {
 
 .radio--inline,
 .checkbox--inline {
-    padding: @box-spacing-vertical @box-spacing-horizontal;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal*.75;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
@@ -337,7 +337,7 @@ input[type="file"]::before {
 
 .radio,
 .checkbox {
-    padding: @box-spacing-vertical @box-spacing-horizontal;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal*.75;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
@@ -418,7 +418,7 @@ input[class*="dob-"] {
     width: 5rem;
     display: inline-block;
     float: left;
-    margin-right: @box-spacing;
+    margin-right: @box-spacing-horizontal/2;
     &:last-child {
         margin: 0;
     }
