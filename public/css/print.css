@@ -605,77 +605,6 @@ hr {
 .callout--quote .callout__link:last-child {
   border: none;
 }
-.callout--white {
-  padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 0.75rem 0;
-  background-color: #ffffff;
-  color: #191926;
-  border: 0px #bfbfbf solid;
-  display: block;
-}
-.callout--white h1,
-.callout--white h2,
-.callout--white h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-}
-.callout--white a {
-  border-bottom-color: #bfbfbf;
-}
-.callout--white > *:first-child {
-  padding-top: 0;
-}
-.callout--white h1:first-child,
-.callout--white h2:first-child,
-.callout--white h3:first-child,
-.callout--white h4:first-child,
-.callout--white h5:first-child,
-.callout--white h6:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-.callout--white li:first-child {
-  padding-top: 0;
-}
-.callout--white > *:last-child {
-  margin-bottom: 0;
-}
-.callout--white .callout__link {
-  cursor: pointer;
-  display: block;
-  padding: 0.75rem 4.5rem 0.75rem 1rem;
-  margin: 0.75rem -1rem -0.75rem -1rem;
-  border: none;
-  background-color: #f2f2f2;
-  color: #191926;
-  border-bottom: 1px solid #bfbfbf;
-  text-decoration: none;
-  position: relative;
-}
-.callout--white .callout__link:after {
-  box-sizing: border-box;
-  font-family: 'FontAwesome';
-  content: "\f054";
-  color: #191926;
-  background-color: #e6e6e6;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  line-height: 3em;
-  width: 3em;
-  text-align: center;
-}
-.callout--white .callout__link:hover {
-  background-color: #e6e6e6;
-  color: #191926;
-}
-.callout--white .callout__link:hover:after {
-  background-color: #cccccc;
-}
-.callout--white .callout__link--anchor:after {
-  content: "\f063";
-}
 .callout--heritage {
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
@@ -1926,8 +1855,7 @@ aside,
 .callout--heritage,
 .callout--responsible,
 .callout--inventive,
-.callout--generous,
-.callout--white {
+.callout--generous {
   border: 1px solid #bfbfbf;
   padding: 1rem;
   margin: 1rem 0;
