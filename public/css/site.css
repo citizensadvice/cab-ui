@@ -4454,100 +4454,68 @@ hr {
 .text-align-right {
   text-align: right;
 }
+/**
+ * SIMPLE GRID
+ * New simple grid built with a mixin and loop
+ */
 .span-12 {
+  width: 98%;
   width: calc(100% - 2rem);
   float: left;
 }
-.ie8 .span-12 {
-  width: 100%;
-  float: left;
-}
 .span-11 {
+  width: 89.66666667%;
   width: calc(91.66666667% - 2rem);
   float: left;
 }
-.ie8 .span-11 {
-  width: 91.66666667%;
-  float: left;
-}
 .span-10 {
+  width: 81.33333333%;
   width: calc(83.33333333% - 2rem);
   float: left;
 }
-.ie8 .span-10 {
-  width: 83.33333333%;
-  float: left;
-}
 .span-9 {
+  width: 73%;
   width: calc(75% - 2rem);
   float: left;
 }
-.ie8 .span-9 {
-  width: 75%;
-  float: left;
-}
 .span-8 {
+  width: 64.66666667%;
   width: calc(66.66666667% - 2rem);
   float: left;
 }
-.ie8 .span-8 {
-  width: 66.66666667%;
-  float: left;
-}
 .span-7 {
+  width: 56.33333333%;
   width: calc(58.33333333% - 2rem);
   float: left;
 }
-.ie8 .span-7 {
-  width: 58.33333333%;
-  float: left;
-}
 .span-6 {
+  width: 48%;
   width: calc(50% - 2rem);
   float: left;
 }
-.ie8 .span-6 {
-  width: 50%;
-  float: left;
-}
 .span-5 {
+  width: 39.66666667%;
   width: calc(41.66666667% - 2rem);
   float: left;
 }
-.ie8 .span-5 {
-  width: 41.66666667%;
-  float: left;
-}
 .span-4 {
+  width: 31.33333333%;
   width: calc(33.33333333% - 2rem);
   float: left;
 }
-.ie8 .span-4 {
-  width: 33.33333333%;
-  float: left;
-}
 .span-3 {
+  width: 23%;
   width: calc(25% - 2rem);
   float: left;
 }
-.ie8 .span-3 {
-  width: 25%;
-  float: left;
-}
 .span-2 {
+  width: 14.66666667%;
   width: calc(16.66666667% - 2rem);
   float: left;
 }
-.ie8 .span-2 {
-  width: 16.66666667%;
-  float: left;
-}
 .span-1 {
+  width: 6.33333333%;
   width: calc(8.33333333% - 2rem);
-  float: left;
-}
-.ie8 .span-1 {
-  width: 8.33333333%;
   float: left;
 }
 /* Mixin files */
@@ -8011,12 +7979,11 @@ input.tablesort-filter {
 .steps {
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: white;
+  background-color: #f2f8ff;
   color: #191926;
-  border: 0px #bfbfbf solid;
+  border: 0px #ffffff solid;
   display: block;
   border-width: 1px;
-  border-top-width: 0.5rem;
   margin-top: 2rem;
 }
 .steps h1,
@@ -8026,7 +7993,7 @@ input.tablesort-filter {
   font-size: 1.3rem;
 }
 .steps a {
-  border-bottom-color: #bfbfbf;
+  border-bottom-color: #ffffff;
 }
 .steps > *:first-child {
   padding-top: 0;
@@ -8052,9 +8019,9 @@ input.tablesort-filter {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #d9e1ff;
   color: #191926;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #ffffff;
   text-decoration: none;
   position: relative;
 }
@@ -8063,7 +8030,7 @@ input.tablesort-filter {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #e6e6e6;
+  background-color: #bfcdff;
   height: 100%;
   position: absolute;
   right: 0;
@@ -8073,11 +8040,11 @@ input.tablesort-filter {
   text-align: center;
 }
 .steps .callout__link:hover {
-  background-color: #e6e6e6;
+  background-color: #bfcdff;
   color: #191926;
 }
 .steps .callout__link:hover:after {
-  background-color: #cccccc;
+  background-color: #8ca4ff;
 }
 .steps .callout__link--anchor:after {
   content: "\f063";
@@ -8090,12 +8057,16 @@ input.tablesort-filter {
 }
 .steps h3 {
   color: #004b88;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.9375rem;
 }
 .steps ul {
   margin: 0;
-  padding: 0 2rem;
+  padding: 0.25rem 2rem;
 }
 .steps ul li {
+  font-size: 0.95rem;
   margin-bottom: 1rem;
 }
 .steps ul li:first-child {
@@ -8108,6 +8079,7 @@ input.tablesort-filter {
   border-width: 0;
 }
 .steps a:hover {
+  border-bottom: 0px #004b88 solid;
   border-bottom-width: 1px;
 }
 /**
@@ -8846,7 +8818,7 @@ input.tablesort-filter {
 }
 .side-nav-beta li a {
   margin-bottom: 1px;
-  padding: 0.75rem 1rem;
+  padding: 0.5625rem 0.75rem;
   display: block;
   border-bottom: none;
 }

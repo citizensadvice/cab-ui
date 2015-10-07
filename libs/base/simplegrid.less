@@ -1,19 +1,31 @@
+/**
+ * SIMPLE GRID
+ * New simple grid built with a mixin and loop
+ */
+
+
+// Define column variable
 @columns: 12;
 
+// Mixin allows you to make any element a fraction width,
+// for example .col(3/5); will make an element width 60%
 .col(@x;@y;) {
+	// Create IE8 fallback, due to lack of calc() support,
+	// just removes 2% of width for gutters
+	width: unit(percentage((@x/@y)) - 2, ~"%");
+	// Create calc grid for modern browsers
 	width: calc(percentage((@x/@y)) ~"-"@box-spacing*2);
 	float: left;
-	.ie8 & {
-		width: percentage((@x/@y));
-		float: left;
-	}
 }
 
+// Create loop that iterate through the columns
 .grid-loop (@i) when (@i > 0) {
+	// Rename this to change column class names
 	.span-@{i} {
 		.col(@i,@columns);
 	}
 	.grid-loop(@i - 1);
 }
 
+// Create a class for each column
 .grid-loop(@columns);
