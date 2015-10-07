@@ -4454,8 +4454,39 @@ hr {
 .text-align-right {
   text-align: right;
 }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+/**
+ * SIMPLE GRID
+ * New simple grid built with a mixin and loop
+ */
+.row {
+  margin: 0 -2rem 2rem 0;
+  clear: both;
+  padding: 0;
+  overflow: hidden;
+}
+.span12 {
+=======
+>>>>>>> Stashed changes
 .span-12 {
   width: calc(100% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 98%\9;
+  margin-right: 2%\9;
+  width: calc(100% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span12 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span11 {
+=======
+.ie8 .span-12 {
+  width: 100%;
   float: left;
 }
 .ie8 .span-12 {
@@ -4464,6 +4495,21 @@ hr {
 }
 .span-11 {
   width: calc(91.66666667% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 89.66666667%\9;
+  margin-right: 2%\9;
+  width: calc(91.66666667% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span11 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span10 {
+=======
+.ie8 .span-11 {
+  width: 91.66666667%;
   float: left;
 }
 .ie8 .span-11 {
@@ -4472,6 +4518,21 @@ hr {
 }
 .span-10 {
   width: calc(83.33333333% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 81.33333333%\9;
+  margin-right: 2%\9;
+  width: calc(83.33333333% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span10 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span9 {
+=======
+.ie8 .span-10 {
+  width: 83.33333333%;
   float: left;
 }
 .ie8 .span-10 {
@@ -4480,6 +4541,21 @@ hr {
 }
 .span-9 {
   width: calc(75% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 73%\9;
+  margin-right: 2%\9;
+  width: calc(75% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span9 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span8 {
+=======
+.ie8 .span-9 {
+  width: 75%;
   float: left;
 }
 .ie8 .span-9 {
@@ -4488,6 +4564,21 @@ hr {
 }
 .span-8 {
   width: calc(66.66666667% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 64.66666667%\9;
+  margin-right: 2%\9;
+  width: calc(66.66666667% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span8 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span7 {
+=======
+.ie8 .span-8 {
+  width: 66.66666667%;
   float: left;
 }
 .ie8 .span-8 {
@@ -4496,6 +4587,21 @@ hr {
 }
 .span-7 {
   width: calc(58.33333333% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 56.33333333%\9;
+  margin-right: 2%\9;
+  width: calc(58.33333333% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span7 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span6 {
+=======
+.ie8 .span-7 {
+  width: 58.33333333%;
   float: left;
 }
 .ie8 .span-7 {
@@ -4504,6 +4610,21 @@ hr {
 }
 .span-6 {
   width: calc(50% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 48%\9;
+  margin-right: 2%\9;
+  width: calc(50% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span6 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span5 {
+=======
+.ie8 .span-6 {
+  width: 50%;
   float: left;
 }
 .ie8 .span-6 {
@@ -4512,6 +4633,21 @@ hr {
 }
 .span-5 {
   width: calc(41.66666667% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 39.66666667%\9;
+  margin-right: 2%\9;
+  width: calc(41.66666667% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span5 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span4 {
+=======
+.ie8 .span-5 {
+  width: 41.66666667%;
   float: left;
 }
 .ie8 .span-5 {
@@ -4520,6 +4656,21 @@ hr {
 }
 .span-4 {
   width: calc(33.33333333% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 31.33333333%\9;
+  margin-right: 2%\9;
+  width: calc(33.33333333% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span4 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span3 {
+=======
+.ie8 .span-4 {
+  width: 33.33333333%;
   float: left;
 }
 .ie8 .span-4 {
@@ -4528,6 +4679,21 @@ hr {
 }
 .span-3 {
   width: calc(25% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 23%\9;
+  margin-right: 2%\9;
+  width: calc(25% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span3 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span2 {
+=======
+.ie8 .span-3 {
+  width: 25%;
   float: left;
 }
 .ie8 .span-3 {
@@ -4536,6 +4702,21 @@ hr {
 }
 .span-2 {
   width: calc(16.66666667% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 14.66666667%\9;
+  margin-right: 2%\9;
+  width: calc(16.66666667% - 2rem);
+  margin-right: 2rem;
+}
+<<<<<<< HEAD
+.span2 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.span1 {
+=======
+.ie8 .span-2 {
+  width: 16.66666667%;
   float: left;
 }
 .ie8 .span-2 {
@@ -4544,6 +4725,18 @@ hr {
 }
 .span-1 {
   width: calc(8.33333333% - 2rem);
+>>>>>>> origin/master
+  float: left;
+  width: 6.33333333%\9;
+  margin-right: 2%\9;
+  width: calc(8.33333333% - 2rem);
+  margin-right: 2rem;
+}
+.span1 > *[class^="row"]:last-child {
+  margin-bottom: 0;
+}
+.ie8 .span-1 {
+  width: 8.33333333%;
   float: left;
 }
 .ie8 .span-1 {
