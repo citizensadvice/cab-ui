@@ -3411,7 +3411,7 @@ input.custom-dropdown__button {
   left: 0;
 }
 .right-button-icon:after {
-  padding-left: 5px;
+  padding-left: 2px;
 }
 .left-button-icon {
   font-family: FontAwesome;
