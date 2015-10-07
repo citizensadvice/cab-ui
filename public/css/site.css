@@ -761,6 +761,77 @@ pre--quote .callout__link--anchor:after {
 pre--quote .callout__link:last-child {
   border: none;
 }
+pre--white {
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffffff;
+  color: #191926;
+  border: 0px #bfbfbf solid;
+  display: block;
+}
+pre--white h1,
+pre--white h2,
+pre--white h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+pre--white a {
+  border-bottom-color: #bfbfbf;
+}
+pre--white > *:first-child {
+  padding-top: 0;
+}
+pre--white h1:first-child,
+pre--white h2:first-child,
+pre--white h3:first-child,
+pre--white h4:first-child,
+pre--white h5:first-child,
+pre--white h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+pre--white li:first-child {
+  padding-top: 0;
+}
+pre--white > *:last-child {
+  margin-bottom: 0;
+}
+pre--white .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem;
+  border: none;
+  background-color: #f2f2f2;
+  color: #191926;
+  border-bottom: 1px solid #bfbfbf;
+  text-decoration: none;
+  position: relative;
+}
+pre--white .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #e6e6e6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+pre--white .callout__link:hover {
+  background-color: #e6e6e6;
+  color: #191926;
+}
+pre--white .callout__link:hover:after {
+  background-color: #cccccc;
+}
+pre--white .callout__link--anchor:after {
+  content: "\f063";
+}
 pre--heritage {
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
@@ -4455,12 +4526,16 @@ hr {
   text-align: right;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 /**
  * SIMPLE GRID
  * New simple grid built with a mixin and loop
  */
+<<<<<<< Updated upstream
 .row {
   margin: 0 -2rem 2rem 0;
   clear: both;
@@ -4470,7 +4545,10 @@ hr {
 .span12 {
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 .span-12 {
+  width: 98%;
   width: calc(100% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4489,11 +4567,8 @@ hr {
   width: 100%;
   float: left;
 }
-.ie8 .span-12 {
-  width: 100%;
-  float: left;
-}
 .span-11 {
+  width: 89.66666667%;
   width: calc(91.66666667% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4512,11 +4587,8 @@ hr {
   width: 91.66666667%;
   float: left;
 }
-.ie8 .span-11 {
-  width: 91.66666667%;
-  float: left;
-}
 .span-10 {
+  width: 81.33333333%;
   width: calc(83.33333333% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4535,11 +4607,8 @@ hr {
   width: 83.33333333%;
   float: left;
 }
-.ie8 .span-10 {
-  width: 83.33333333%;
-  float: left;
-}
 .span-9 {
+  width: 73%;
   width: calc(75% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4558,11 +4627,8 @@ hr {
   width: 75%;
   float: left;
 }
-.ie8 .span-9 {
-  width: 75%;
-  float: left;
-}
 .span-8 {
+  width: 64.66666667%;
   width: calc(66.66666667% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4581,11 +4647,8 @@ hr {
   width: 66.66666667%;
   float: left;
 }
-.ie8 .span-8 {
-  width: 66.66666667%;
-  float: left;
-}
 .span-7 {
+  width: 56.33333333%;
   width: calc(58.33333333% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4604,11 +4667,8 @@ hr {
   width: 58.33333333%;
   float: left;
 }
-.ie8 .span-7 {
-  width: 58.33333333%;
-  float: left;
-}
 .span-6 {
+  width: 48%;
   width: calc(50% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4627,11 +4687,8 @@ hr {
   width: 50%;
   float: left;
 }
-.ie8 .span-6 {
-  width: 50%;
-  float: left;
-}
 .span-5 {
+  width: 39.66666667%;
   width: calc(41.66666667% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4650,11 +4707,8 @@ hr {
   width: 41.66666667%;
   float: left;
 }
-.ie8 .span-5 {
-  width: 41.66666667%;
-  float: left;
-}
 .span-4 {
+  width: 31.33333333%;
   width: calc(33.33333333% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4673,11 +4727,8 @@ hr {
   width: 33.33333333%;
   float: left;
 }
-.ie8 .span-4 {
-  width: 33.33333333%;
-  float: left;
-}
 .span-3 {
+  width: 23%;
   width: calc(25% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4696,11 +4747,8 @@ hr {
   width: 25%;
   float: left;
 }
-.ie8 .span-3 {
-  width: 25%;
-  float: left;
-}
 .span-2 {
+  width: 14.66666667%;
   width: calc(16.66666667% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4719,11 +4767,8 @@ hr {
   width: 16.66666667%;
   float: left;
 }
-.ie8 .span-2 {
-  width: 16.66666667%;
-  float: left;
-}
 .span-1 {
+  width: 6.33333333%;
   width: calc(8.33333333% - 2rem);
 >>>>>>> origin/master
   float: left;
@@ -4734,10 +4779,6 @@ hr {
 }
 .span1 > *[class^="row"]:last-child {
   margin-bottom: 0;
-}
-.ie8 .span-1 {
-  width: 8.33333333%;
-  float: left;
 }
 .ie8 .span-1 {
   width: 8.33333333%;
@@ -6382,6 +6423,77 @@ html[lang="en-SCT"] .main-nav {
 }
 .callout--quote .callout__link:last-child {
   border: none;
+}
+.callout--white {
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #ffffff;
+  color: #191926;
+  border: 0px #bfbfbf solid;
+  display: block;
+}
+.callout--white h1,
+.callout--white h2,
+.callout--white h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.callout--white a {
+  border-bottom-color: #bfbfbf;
+}
+.callout--white > *:first-child {
+  padding-top: 0;
+}
+.callout--white h1:first-child,
+.callout--white h2:first-child,
+.callout--white h3:first-child,
+.callout--white h4:first-child,
+.callout--white h5:first-child,
+.callout--white h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.callout--white li:first-child {
+  padding-top: 0;
+}
+.callout--white > *:last-child {
+  margin-bottom: 0;
+}
+.callout--white .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem;
+  border: none;
+  background-color: #f2f2f2;
+  color: #191926;
+  border-bottom: 1px solid #bfbfbf;
+  text-decoration: none;
+  position: relative;
+}
+.callout--white .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #e6e6e6;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.callout--white .callout__link:hover {
+  background-color: #e6e6e6;
+  color: #191926;
+}
+.callout--white .callout__link:hover:after {
+  background-color: #cccccc;
+}
+.callout--white .callout__link--anchor:after {
+  content: "\f063";
 }
 .callout--heritage {
   padding: 0.75rem 1rem 0.75rem 1rem;
