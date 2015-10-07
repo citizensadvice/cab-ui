@@ -61,6 +61,15 @@
     width: 100%;
     left: 0;
 }
+.round() {
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 20px; 
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 20px;   
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 20px; 
+    border: 2px solid @white;
+}
 
 .a-icon-stack (@button-icon: "\f054") {
     font-family: FontAwesome;
@@ -68,21 +77,23 @@
     position: relative;
     display: inline-block;
     width: @box-spacing*2;
-    height: @box-spacing*1.4;
+    height: @box-spacing*2;
     margin-left: @box-spacing;
-    line-height: 1.2rem;
+    line-height: @line-height-base*1.05;
     vertical-align: middle;
+    margin-top: -@box-spacing-vertical*.1;
     color: @white;
 
-    &:before {
-        content: "\f1db";
-        font-size: @font-size-largest;
-    }
+//    &:before {
+//        content: "\f1db";
+//        font-size: @font-size-largest;
+//    }
     &:after {
         content: @button-icon;
         vertical-align: middle;
         color: @white;
         .icon-mixin;
+        .round;
     }
     &-email:after {
         content: "\f003";
@@ -97,9 +108,15 @@
 }
 .right-button-icon {
     .a-icon-stack("\f054");
+    &:after {
+        padding-left: 5px; // Encourage optical centring of arrow icon
+    }
 }
 .left-button-icon {
     .a-icon-stack("\f053");
+    &:after {
+        padding-right: 2px; // Encourage optical centring of arrow icon
+    }
 }
 .down-button-icon {
     .a-icon-stack("\f078");
@@ -113,6 +130,9 @@
 // Actions
 .email-button-icon {
     .a-icon-stack("\f003");
+    &:after {
+        padding-left: 1px; // Encourage optical centring of arrow icon
+    }
 }
 .print-button-icon {
     .a-icon-stack("\f02f");
