@@ -4595,125 +4595,138 @@ hr {
   clear: both;
   padding: 0;
   overflow: hidden;
+  margin-bottom: 2%\9 !important;
 }
 .span12 {
   float: left;
-  width: 98%\9;
-  margin-right: 2%\9;
   width: calc(100% - 2rem);
   margin-right: 2rem;
+  width: 98%\9;
+  *width: 98%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span12 > *[class^="row"]:last-child {
+.span12 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span11 {
   float: left;
-  width: 89.66666667%\9;
-  margin-right: 2%\9;
   width: calc(91.66666667% - 2rem);
   margin-right: 2rem;
+  width: 89.66666667%\9;
+  *width: 89%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span11 > *[class^="row"]:last-child {
+.span11 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span10 {
   float: left;
-  width: 81.33333333%\9;
-  margin-right: 2%\9;
   width: calc(83.33333333% - 2rem);
   margin-right: 2rem;
+  width: 81.33333333%\9;
+  *width: 81%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span10 > *[class^="row"]:last-child {
+.span10 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span9 {
   float: left;
-  width: 73%\9;
-  margin-right: 2%\9;
   width: calc(75% - 2rem);
   margin-right: 2rem;
+  width: 73%\9;
+  *width: 73%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span9 > *[class^="row"]:last-child {
+.span9 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span8 {
   float: left;
-  width: 64.66666667%\9;
-  margin-right: 2%\9;
   width: calc(66.66666667% - 2rem);
   margin-right: 2rem;
+  width: 64.66666667%\9;
+  *width: 64%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span8 > *[class^="row"]:last-child {
+.span8 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span7 {
   float: left;
-  width: 56.33333333%\9;
-  margin-right: 2%\9;
   width: calc(58.33333333% - 2rem);
   margin-right: 2rem;
+  width: 56.33333333%\9;
+  *width: 56%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span7 > *[class^="row"]:last-child {
+.span7 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span6 {
   float: left;
-  width: 48%\9;
-  margin-right: 2%\9;
   width: calc(50% - 2rem);
   margin-right: 2rem;
+  width: 48%\9;
+  *width: 48%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span6 > *[class^="row"]:last-child {
+.span6 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span5 {
   float: left;
-  width: 39.66666667%\9;
-  margin-right: 2%\9;
   width: calc(41.66666667% - 2rem);
   margin-right: 2rem;
+  width: 39.66666667%\9;
+  *width: 39%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span5 > *[class^="row"]:last-child {
+.span5 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span4 {
   float: left;
-  width: 31.33333333%\9;
-  margin-right: 2%\9;
   width: calc(33.33333333% - 2rem);
   margin-right: 2rem;
+  width: 31.33333333%\9;
+  *width: 31%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span4 > *[class^="row"]:last-child {
+.span4 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span3 {
   float: left;
-  width: 23%\9;
-  margin-right: 2%\9;
   width: calc(25% - 2rem);
   margin-right: 2rem;
+  width: 23%\9;
+  *width: 23%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span3 > *[class^="row"]:last-child {
+.span3 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span2 {
   float: left;
-  width: 14.66666667%\9;
-  margin-right: 2%\9;
   width: calc(16.66666667% - 2rem);
   margin-right: 2rem;
+  width: 14.66666667%\9;
+  *width: 14%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span2 > *[class^="row"]:last-child {
+.span2 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 .span1 {
   float: left;
-  width: 6.33333333%\9;
-  margin-right: 2%\9;
   width: calc(8.33333333% - 2rem);
   margin-right: 2rem;
+  width: 6.33333333%\9;
+  *width: 6%\9 !important;
+  margin-right: 2%\9 !important;
 }
-.span1 > *[class^="row"]:last-child {
+.span1 > *[class*="row"]:last-child {
   margin-bottom: 0;
 }
 /* Mixin files */
