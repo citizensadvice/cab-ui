@@ -3425,6 +3425,8 @@ input.custom-dropdown__button {
   vertical-align: middle;
   margin-top: -0.075rem;
   color: #ffffff;
+  margin-right: 1rem;
+  margin-left: 0;
 }
 .left-button-icon:after {
   content: "\f053";
@@ -10803,3 +10805,4 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   text-decoration: none;
   opacity: 1;
 }
+/*# sourceMappingURL=site.css.map */
