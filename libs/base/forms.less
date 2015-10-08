@@ -18,28 +18,28 @@
 .btn-primary {
     color: @heritage-blue;
     background-color: @aqua;
-    &:hover {
+    &:hover, &:active, &:focus  {
         background-color: darken(@aqua, 10%);
     }
 }
 .btn-primary-light {
     color: @heritage-blue;
     background-color: @aqua-light;
-    &:hover {
+    &:hover, &:active, &:focus  {
         background-color: @aqua;
     }
 }
 .btn-secondary {
     color: @white;
     background-color: @heritage-blue; 
-    &:hover {
+    &:hover, &:active, &:focus  {
         background-color: darken(@heritage-blue, 5%);
     }
 }
 .btn-disabled {
     color: @gray-3;
     background-color: @gray-6; 
-    &:hover {
+    &:hover, &:active, &:focus  {
         color: @gray-3;
         background-color: @gray-6;             
     }
@@ -47,7 +47,7 @@
 .btn-warning {
     color: @white;
     background-color: @red; 
-    &:hover {
+    &:hover, &:active, &:focus  {
         color: @white;
         background-color: darken(@red, 10%);             
     }
@@ -57,7 +57,7 @@
     background-color: @white;
     border: 1px solid @heritage-blue-light;
     color: @heritage-blue;
-    &:hover {
+    &:hover, &:active, &:focus  {
         background-color: @heritage-blue-lighter;
     }
 }

@@ -1845,7 +1845,6 @@ table.simple-table td {
   margin: 0;
 }
 button,
-.button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
@@ -1858,17 +1857,14 @@ input[type=button] {
   font-weight: bold;
 }
 button:hover,
-.button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 button:focus,
-.button:focus,
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
 button:active,
-.button:active,
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active {
@@ -1980,28 +1976,36 @@ button:disabled:hover {
   color: #004b88;
   background-color: #81cec6;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   background-color: #5cc0b5;
 }
 .btn-primary-light {
   color: #004b88;
   background-color: #b8e3df;
 }
-.btn-primary-light:hover {
+.btn-primary-light:hover,
+.btn-primary-light:active,
+.btn-primary-light:focus {
   background-color: #81cec6;
 }
 .btn-secondary {
   color: #ffffff;
   background-color: #004b88;
 }
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
   background-color: #003d6f;
 }
 .btn-disabled {
   color: #808080;
   background-color: #dfdfdf;
 }
-.btn-disabled:hover {
+.btn-disabled:hover,
+.btn-disabled:active,
+.btn-disabled:focus {
   color: #808080;
   background-color: #dfdfdf;
 }
@@ -2009,7 +2013,9 @@ button:disabled:hover {
   color: #ffffff;
   background-color: #df3034;
 }
-.btn-warning:hover {
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus {
   color: #ffffff;
   background-color: #bf1d21;
 }
@@ -2018,7 +2024,9 @@ button:disabled:hover {
   border: 1px solid #229cff;
   color: #004b88;
 }
-.btn-primary-outline:hover {
+.btn-primary-outline:hover,
+.btn-primary-outline:active,
+.btn-primary-outline:focus {
   background-color: #a2d5ff;
 }
 form .invalid {
@@ -3340,11 +3348,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .tick-button-icon:after {
@@ -3378,11 +3386,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .right-button-icon:after {
@@ -3419,11 +3427,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
   margin-right: 1rem;
   margin-left: 0;
@@ -3462,11 +3470,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .down-button-icon:after {
@@ -3500,11 +3508,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .up-button-icon:after {
@@ -3538,15 +3546,15 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .exclamation-button-icon:after {
-  content: "\f12a";
+  content: "\f071";
   color: #ffffff;
   position: absolute;
   text-align: center;
@@ -3576,11 +3584,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .email-button-icon:after {
@@ -3617,11 +3625,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .print-button-icon:after {
@@ -3655,11 +3663,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .restart-button-icon:after {
@@ -3693,11 +3701,11 @@ input.custom-dropdown__button {
   position: relative;
   display: inline-block;
   width: 2rem;
-  height: 2rem;
+  height: 0.5rem;
   margin-left: 1rem;
   line-height: 1.785;
   vertical-align: middle;
-  margin-top: -0.075rem;
+  margin-top: -1.875rem;
   color: #ffffff;
 }
 .save-button-icon:after {
