@@ -2054,24 +2054,28 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
   line-height: inherit;
   color: #004b88;
   border: 0;
   border-bottom: 1px solid #004b88;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 label,
 .form__label {
   display: block;
   max-width: 100%;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 label .form__label--inline,
 .form__label .form__label--inline {
   display: inline-block;
+}
+.radio,
+.checkbox,
+.radio--inline {
+  font-weight: 600;
 }
 .form__label--hidden {
   border: 0;
@@ -2123,7 +2127,7 @@ select {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 5px 2px 0px;
+  margin: 4px 10px 2px 0px;
   margin-top: 1px \9;
   line-height: normal;
 }

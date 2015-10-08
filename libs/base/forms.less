@@ -91,14 +91,15 @@ legend {
     width: 100%;
     padding: 0;
     margin-bottom: @line-height-computed;
-    font-size: (@font-size-base * 1.5);
+//    font-size: (@font-size-base * 1.5);
     line-height: inherit;
     color: @heritage-blue;
     border: 0;
     border-bottom: 1px solid @heritage-blue;
     font-size: @font-size-h3;
-    font-weight: @font-weight-bold;
+    font-weight: @font-weight-boldest;
 }
+
 
 label,
 .form__label {
@@ -106,12 +107,15 @@ label,
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     //margin-bottom: 5px;
     margin-bottom: @box-spacing*.5;
-    font-weight: bold;
+    font-weight: @font-weight-bolder;
     .form__label--inline {
         display: inline-block;
     }
 }
-
+.radio, .checkbox, .radio--inline { 
+    font-weight: @font-weight-bold;
+}
+    
 .form__label--hidden {
     .screenreader;
 }
@@ -164,7 +168,7 @@ select {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 4px 5px 2px 0px;
+    margin: 4px 10px 2px 0px;
     margin-top: 1px \9; // IE8-9
     line-height: normal;
     &[disabled] {
