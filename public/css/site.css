@@ -2022,14 +2022,14 @@ button:disabled:hover {
   background-color: #a2d5ff;
 }
 form .invalid {
-  display: none;
   color: #df3034;
   padding-top: 0.25rem;
+  clear: both;
 }
 form .valid {
-  display: none;
   color: #537d2d;
   padding-top: 0.25rem;
+  clear: both;
 }
 form small {
   color: #808080;
