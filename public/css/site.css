@@ -3392,10 +3392,10 @@ input.custom-dropdown__button {
 }
 .left-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-left: 3.5em;
 }
 .left-button-icon:after {
-  right: 0.5em;
+  left: 0.5em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f053";
@@ -10651,4 +10651,3 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   text-decoration: none;
   opacity: 1;
 }
-/*# sourceMappingURL=site.css.map */
