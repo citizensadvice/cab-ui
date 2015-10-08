@@ -70,80 +70,37 @@
     border-radius: 20px; 
     border: 2px solid @white;
 }
-
-.a-icon-stack (@button-icon: "\f054") {
-    font-family: FontAwesome;
-    font-weight: normal;
-    position: relative;
-    display: inline-block;
-    width: @box-spacing*2;
-    height: @box-spacing*.5;
-    margin-left: @box-spacing;
-    line-height: @line-height-base*1.05;
-    vertical-align: middle;
-    margin-top: -@box-spacing-vertical*2.5;
-    color: @white;
-
-//    &:before {
-//        content: "\f1db";
-//        font-size: @font-size-largest;
-//    }
-    &:after {
-        content: @button-icon;
-        vertical-align: middle;
-        color: @white;
-        .icon-mixin;
-        .round;
-    }
-    &-email:after {
-        content: "\f003";
-        vertical-align: middle;
-        color: @white;
-        .icon-mixin;
-    }
-}
 // Directions
 .tick-button-icon {
-    .a-icon-stack("\f00c");
+    .btn-icon("\f00c");
 }
 .right-button-icon {
-    .a-icon-stack("\f054");
-    &:after {
-        padding-left: 2px; // Optical centring of arrow icon
-    }
+    .btn-icon("\f054");
 }
 .left-button-icon {
-    .a-icon-stack("\f053");
-    margin-right: @box-spacing;
-    margin-left: 0;
-    &:after {
-        padding-right: 2px; // Optical centring of arrow icon
-    }
+    .btn-icon("\f053", right);
 }
 .down-button-icon {
-    .a-icon-stack("\f078");
+    .btn-icon("\f078");
 }
 .up-button-icon {
-    .a-icon-stack("\f077");
+    .btn-icon("\f077");
 }
 .exclamation-button-icon {
-    .a-icon-stack("\f071");
+    .btn-icon("\0021");
 }
 // Actions
 .email-button-icon {
-    .a-icon-stack("\f003");
-    &:after {
-        padding-left: 1px; // Optical centring of arrow icon
-    }
+    .btn-icon("\f003");
 }
 .print-button-icon {
-    .a-icon-stack("\f02f");
+    .btn-icon("\f02f");
 }
 .restart-button-icon {
-    .a-icon-stack("\f01e");
+    .btn-icon("\f01e");
 }
 .save-button-icon {
-    .a-icon-stack("\f019");
+    .btn-icon("\f019");
 }
 // Social
 .a-social- {
