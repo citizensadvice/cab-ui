@@ -149,7 +149,7 @@ select {
 }
 
 textarea {
-    height: 5.5rem;
+    height: @box-spacing*8;
     resize: vertical;
 }
 
@@ -163,6 +163,7 @@ select {
     width: 100%;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
+    -webkit-appearance: none;
     &:focus:required:invalid {
 //      border-color: @red;
         outline: 2px solid @red;
@@ -303,10 +304,15 @@ input[type="file"]::before {
 }
 
 .multi-select {
-    height: 5.5rem !important;
     padding: 0;
+    height: @box-spacing*5.5 !important;
     option {
         padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+        -webkit-appearance: none;
+    }
+    @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        height: auto !important;
     }
 }
 
@@ -336,10 +342,11 @@ input[id*="dob-"],
 input[class*="dob-"] {
     border-radius: @form-border-radius;
     display: inline-block;
+    padding-right: 0;
 }
 
 .form-group-date {
-    width: 6rem;
+    width: 5rem;
     display: inline-block;
     float: left;
     margin-right: @box-spacing-horizontal/2;

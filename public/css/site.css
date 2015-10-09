@@ -2162,7 +2162,7 @@ select {
   border: 1px solid #dfdfdf;
 }
 textarea {
-  height: 5.5rem;
+  height: 8rem;
   resize: vertical;
 }
 input[type="email"],
@@ -2175,6 +2175,7 @@ select {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 2px;
+  -webkit-appearance: none;
 }
 input[type="email"]:focus:required:invalid,
 input[type="password"]:focus:required:invalid,
@@ -2338,11 +2339,18 @@ input[type="file"]::before {
   font-weight: 700;
 }
 .multi-select {
-  height: 5.5rem !important;
   padding: 0;
+  height: 5.5rem !important;
 }
 .multi-select option {
   padding: 0.375rem 0.5rem;
+  -webkit-appearance: none;
+}
+@media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .multi-select {
+    padding: 0.75rem 1rem;
+    height: auto !important;
+  }
 }
 .dropdown {
   border-radius: 2px;
@@ -2388,9 +2396,10 @@ input[id*="dob-"],
 input[class*="dob-"] {
   border-radius: 2px;
   display: inline-block;
+  padding-right: 0;
 }
 .form-group-date {
-  width: 6rem;
+  width: 5rem;
   display: inline-block;
   float: left;
   margin-right: 0.5rem;
