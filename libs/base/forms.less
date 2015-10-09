@@ -12,57 +12,6 @@
 
 // Buttons
 
-.btn {
-    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
-}
-.btn-primary {
-    color: @heritage-blue;
-    background-color: @aqua;
-    &:hover, &:active, &:focus  {
-        background-color: darken(@aqua, 10%);
-    }
-}
-.btn-primary-light {
-    color: @heritage-blue;
-    background-color: @aqua-light;
-    &:hover, &:active, &:focus  {
-        background-color: @aqua;
-    }
-}
-.btn-secondary {
-    color: @white;
-    background-color: @heritage-blue; 
-    &:hover, &:active, &:focus  {
-        background-color: darken(@heritage-blue, 5%);
-    }
-}
-.btn-disabled {
-    color: @gray-3;
-    background-color: @gray-6;
-    cursor: not-allowed;
-    &:hover, &:active, &:focus  {
-        color: @gray-3;
-        background-color: @gray-6;             
-    }
-}    
-.btn-warning {
-    color: @white;
-    background-color: @red; 
-    &:hover, &:active, &:focus  {
-        color: @white;
-        background-color: darken(@red, 10%);             
-    }
-}    
-
-.btn-primary-outline {
-    background-color: @white;
-    border: 1px solid @heritage-blue-light;
-    color: @heritage-blue;
-    &:hover, &:active, &:focus  {
-        background-color: @heritage-blue-lighter;
-    }
-}
-
 form {
     .invalid {
         color: @red;
@@ -83,7 +32,6 @@ fieldset {
     padding: 0;
     margin: 0;
     border: 0;
-    min-width: 0;
     margin-bottom: @box-spacing;
 }
 
@@ -115,6 +63,9 @@ label,
 }
 .radio, .checkbox, .radio--inline, .checkbox--inline { 
     font-weight: @font-weight-bold;
+    input {
+        margin-right: @box-spacing/2;
+    }
 }
     
 .form__label--hidden {
@@ -135,7 +86,7 @@ input[type=password],
 input[type=email],
 input[type=number],
 input[type=search] {
-    padding: .2em;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     width: 100%;
     border-radius: 0;
 }
@@ -161,7 +112,6 @@ input[type=text][size="1"] {
 
 
 select {
-    padding: .2em;
     max-width: 100%;
     width: 100%;
 }
@@ -169,7 +119,6 @@ select {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 4px 10px 2px 0px;
     margin-top: 1px \9; // IE8-9
     line-height: normal;
     &[disabled] {
@@ -196,7 +145,7 @@ select[size] {
 textarea,
 input,
 select {
-    border: 1px solid @gray-5;
+    border: 1px solid @gray-6;
 }
 
 textarea {
@@ -212,7 +161,7 @@ input[class*="dob-"],
 textarea,
 select {
     width: 100%;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
 //      border-color: @red;
@@ -287,73 +236,9 @@ input[type="file"]::before {
 }
 */
 
-.radio--inline,
-.checkbox--inline {
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal*.75;
-    cursor: pointer;
-    border-radius: @form-border-radius;
-    position: relative;
-    margin-right: @box-spacing-horizontal;
-    z-index: 1;
-    clear: none;
-    float: left;
-    input {
-        &:before {
-            content: '';
-            display: block;
-            outline: none;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            -webkit-user-select: none;
-            cursor: pointer;
-            border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
-            z-index: -1;
-            background-color: @gray-8;
-        }
-        &:hover:before {
-            border-color: @gray-5;
-        }
-        &:disabled {
-            cursor: not-allowed !important;
-            &:before {
-                cursor: not-allowed !important;
-                background-color: @form-disabled-bg;
-                border-color: @form-disabled-bg;
-            }
-        }
-        &:checked {
-            &:before {
-                border-color: @blue-lighter;
-                background-color: @blue-lighter;
-            }
-            &:hover:before {
-                border-color: @blue-light;
-            }
-        }
-    }
-}
-
-.radio--block,
-.checkbox--block {
-    clear: left;
-    float: left;
-    p {
-       display: block;
-       float: right;
-       margin: 0; 
-        span {
-            font-weight: @font-weight-bolder;
-        }
-    }
-}
-
 .radio,
 .checkbox {
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal*.75;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
@@ -378,7 +263,7 @@ input[type="file"]::before {
             background-color: @gray-8;
         }
         &:hover:before {
-            border-color: @gray-5;
+            border-color: @gray-6;
         }
         &:disabled {
             cursor: not-allowed !important;
@@ -398,6 +283,23 @@ input[type="file"]::before {
             }
         }
     }
+    &--inline {
+        clear: none;
+        float: left;
+    }
+
+    &--block {
+        clear: left;
+        float: left;
+        p {
+           display: block;
+           float: right;
+           margin: 0; 
+            span {
+                font-weight: @font-weight-bolder;
+            }
+        }
+    }
 }
 
 .multi-select {
@@ -409,13 +311,19 @@ input[type="file"]::before {
 }
 
 .dropdown {
-    //padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
     border-radius: @form-border-radius;
     border: 1px solid @gray-6;
+    .btn-icon("\F0D7");
+    padding-right: 0;
+    &:after {
+        color: @black;
+        pointer-events:none;
+    }
     select {
         background: none;
         border: none;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 }
 
@@ -425,7 +333,6 @@ input[type="file"]::before {
 
 input[id*="dob-"],
 input[class*="dob-"] {
-    padding: .2em;
     border-radius: @form-border-radius;
     display: inline-block;
 }
@@ -445,15 +352,14 @@ input[class*="dob-"] {
     cursor: not-allowed !important;
     color: @form-disabled-text;
     background-color: @form-disabled-bg;
-    border: none;
+    border: 1px solid @form-disabled-bg;
     resize: none;
 }
 
 /*
  * Grouping .form styles with the magic of LESS
  *
- */
-
+ 
 .form {
     margin: 1em 0;
     &__row, &__group {
@@ -683,13 +589,7 @@ input[class*="dob-"] {
             }
         }
     }
-    /**********************************************************************
-     * Help text
-     *
-     * Apply to any element you wish to create light text for placement immediately
-     * below a form control. Use for general help, formatting, or instructional
-     * text.
-     */
+    
     &__help {
         color: #666;
         margin-bottom: 5px;
@@ -716,9 +616,6 @@ input[class*="dob-"] {
         margin-top: 5px;
     }
 
-    /**********************************************************************
-     * Static fields.
-     */
 
     &__field--static {
         max-width: 100%;
@@ -742,7 +639,6 @@ input[class*="dob-"] {
             }
 
             .form__label {
-                /* Note: If you make the label visible, things might get screwy in IE8. */
                 .screenreader;
             }
 
@@ -785,9 +681,10 @@ input[class*="dob-"] {
         width: 6em;
     }
 }
+*/
 
 // Variations of the above styles when they appear within different boxes.
-
+/*
 .box--1 {
     .form__radio--boxed,
     .form__checkbox--boxed,
@@ -837,6 +734,7 @@ input[class*="dob-"] {
         }
     }
 }
+*/
 
 // Custom dropdown icons
 .select--custom-icon() {
@@ -850,7 +748,7 @@ input[class*="dob-"] {
         -moz-appearance: none;
         border: 0; //If you want a border set it on the parent
         background: transparent;
-        padding: .2em;
+        padding: .75em;
 
         // We need to push the pointer off the side so it is hidden in the overflow
         // In webkit / blink there is no pointer to move
@@ -858,15 +756,15 @@ input[class*="dob-"] {
         // In IE8 and below we cannot move the pointer
 
         // The width, plus the pointer, plus the padding (for IE9+)
-        // This needs to be at least 1.2em to hide the pointer in IE
-        // (In our case this is therefore 1em + .2em padding)
+        // This needs to be at least 1.75em to hide the pointer in IE
+        // (In our case this is therefore 1em + .75em padding)
         // In <=IE8 this will be ignored
-        width: calc( ~"100% + 1.2em" );
+        width: calc( ~"100% + 1.75em" );
 
         // The image width plus some padding so the text isn't against the arrow in Blink/Webkit
         // In IE/Firefox there will be extra space between the text and arrow due to the native arrow
         // In <=IE8 this will be ignored
-        margin: 0 calc( ~"33px + .2em" ) 0 0;
+        margin: 0 calc( ~"33px + .75em" ) 0 0;
 
         // For chrome - the outline is cut off on the right so hide it completely */
         outline: none;
@@ -890,7 +788,7 @@ input[class*="dob-"] {
         top: 0;
         background: @heritage-blue;
         color: white;
-        padding: 0 .2em;
+        padding: 0 .75em;
         font-size: 1.3em;
         pointer-events: none; 
         &:before {
@@ -917,7 +815,7 @@ input.custom-dropdown__button {
     width: 14%;
     float: left;
     border-radius: 0;
-    padding: .2em;
+    padding: .75em;
 }
 
 /* Search fields used in blocks */
@@ -945,7 +843,7 @@ input.custom-dropdown__button {
         display: table-cell;
 
         & > input, & > button {
-            padding: .2em .6em;
+            padding: .75em .6em;
         }
     }
 
@@ -956,6 +854,7 @@ input.custom-dropdown__button {
         }
     }
 }
+/*
 .checkbox-radio-inner {
     input[type="radio"],
     input[type="checkbox"] {
@@ -966,3 +865,4 @@ input.custom-dropdown__button {
         margin-left: 1em;
     }
 }
+*/

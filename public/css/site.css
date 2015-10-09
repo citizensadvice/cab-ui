@@ -1847,6 +1847,7 @@ table.simple-table td {
 .table-scroll > table {
   margin: 0;
 }
+.btn,
 button,
 input[type=submit],
 input[type=reset],
@@ -1858,20 +1859,82 @@ input[type=button] {
   color: #004b88;
   padding: 0.75rem 1rem;
   font-weight: bold;
+  margin: 0.5rem 0.5rem 0.5rem 0;
 }
+.btn:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
+.btn:focus,
 button:focus,
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
+.btn:active,
 button:active,
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active {
   background-color: #6fc7be;
+}
+.btn-primary {
+  color: #004b88;
+  background-color: #81cec6;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #5cc0b5;
+}
+.btn-primary-light {
+  color: #004b88;
+  background-color: #b8e3df;
+}
+.btn-primary-light:hover,
+.btn-primary-light:active,
+.btn-primary-light:focus {
+  background-color: #81cec6;
+}
+.btn-secondary {
+  color: #ffffff;
+  background-color: #004b88;
+}
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  background-color: #003d6f;
+}
+.btn-disabled {
+  color: #808080;
+  background-color: #dfdfdf;
+  cursor: not-allowed;
+}
+.btn-disabled:hover,
+.btn-disabled:active,
+.btn-disabled:focus {
+  color: #808080;
+  background-color: #dfdfdf;
+}
+.btn-warning {
+  color: #ffffff;
+  background-color: #df3034;
+}
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus {
+  color: #ffffff;
+  background-color: #bf1d21;
+}
+.btn-primary-outline {
+  background-color: #ffffff;
+  border: 1px solid #229cff;
+  color: #004b88;
+}
+.btn-primary-outline:hover,
+.btn-primary-outline:active,
+.btn-primary-outline:focus {
+  background-color: #a2d5ff;
 }
 a.button {
   display: inline-block;
@@ -1972,67 +2035,6 @@ button:disabled:hover {
 /**
  * FORMS
  */
-.btn {
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-.btn-primary {
-  color: #004b88;
-  background-color: #81cec6;
-}
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-  background-color: #5cc0b5;
-}
-.btn-primary-light {
-  color: #004b88;
-  background-color: #b8e3df;
-}
-.btn-primary-light:hover,
-.btn-primary-light:active,
-.btn-primary-light:focus {
-  background-color: #81cec6;
-}
-.btn-secondary {
-  color: #ffffff;
-  background-color: #004b88;
-}
-.btn-secondary:hover,
-.btn-secondary:active,
-.btn-secondary:focus {
-  background-color: #003d6f;
-}
-.btn-disabled {
-  color: #808080;
-  background-color: #dfdfdf;
-  cursor: not-allowed;
-}
-.btn-disabled:hover,
-.btn-disabled:active,
-.btn-disabled:focus {
-  color: #808080;
-  background-color: #dfdfdf;
-}
-.btn-warning {
-  color: #ffffff;
-  background-color: #df3034;
-}
-.btn-warning:hover,
-.btn-warning:active,
-.btn-warning:focus {
-  color: #ffffff;
-  background-color: #bf1d21;
-}
-.btn-primary-outline {
-  background-color: #ffffff;
-  border: 1px solid #229cff;
-  color: #004b88;
-}
-.btn-primary-outline:hover,
-.btn-primary-outline:active,
-.btn-primary-outline:focus {
-  background-color: #a2d5ff;
-}
 form .invalid {
   color: #df3034;
   padding-top: 0.25rem;
@@ -2050,7 +2052,6 @@ fieldset {
   padding: 0;
   margin: 0;
   border: 0;
-  min-width: 0;
   margin-bottom: 1rem;
 }
 legend {
@@ -2082,6 +2083,12 @@ label .form__label--inline,
 .checkbox--inline {
   font-weight: 600;
 }
+.radio input,
+.checkbox input,
+.radio--inline input,
+.checkbox--inline input {
+  margin-right: 0.5rem;
+}
 .form__label--hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2105,7 +2112,7 @@ input[type=password],
 input[type=email],
 input[type=number],
 input[type=search] {
-  padding: .2em;
+  padding: 0.75rem 1rem;
   width: 100%;
   border-radius: 0;
 }
@@ -2126,13 +2133,11 @@ input[type=text][size="1"] {
   width: 3em;
 }
 select {
-  padding: .2em;
   max-width: 100%;
   width: 100%;
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 10px 2px 0px;
   margin-top: 1px \9;
   line-height: normal;
 }
@@ -2154,7 +2159,7 @@ select[size] {
 textarea,
 input,
 select {
-  border: 1px solid #bfbfbf;
+  border: 1px solid #dfdfdf;
 }
 textarea {
   height: 5.5rem;
@@ -2168,7 +2173,7 @@ input[class*="dob-"],
 textarea,
 select {
   width: 100%;
-  padding: 0.375rem 0.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 2px;
 }
 input[type="email"]:focus:required:invalid,
@@ -2262,75 +2267,9 @@ input[type="file"]::before {
     }
 }
 */
-.radio--inline,
-.checkbox--inline {
-  padding: 0.375rem 0.75rem;
-  cursor: pointer;
-  border-radius: 2px;
-  position: relative;
-  margin-right: 1rem;
-  z-index: 1;
-  clear: none;
-  float: left;
-}
-.radio--inline input:before,
-.checkbox--inline input:before {
-  content: '';
-  display: block;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  -webkit-user-select: none;
-  cursor: pointer;
-  border-radius: 2px;
-  border: 1px solid #dfdfdf;
-  z-index: -1;
-  background-color: #f2f2f2;
-}
-.radio--inline input:hover:before,
-.checkbox--inline input:hover:before {
-  border-color: #bfbfbf;
-}
-.radio--inline input:disabled,
-.checkbox--inline input:disabled {
-  cursor: not-allowed !important;
-}
-.radio--inline input:disabled:before,
-.checkbox--inline input:disabled:before {
-  cursor: not-allowed !important;
-  background-color: #f2f2f2;
-  border-color: #f2f2f2;
-}
-.radio--inline input:checked:before,
-.checkbox--inline input:checked:before {
-  border-color: #caeaff;
-  background-color: #caeaff;
-}
-.radio--inline input:checked:hover:before,
-.checkbox--inline input:checked:hover:before {
-  border-color: #a5bddc;
-}
-.radio--block,
-.checkbox--block {
-  clear: left;
-  float: left;
-}
-.radio--block p,
-.checkbox--block p {
-  display: block;
-  float: right;
-  margin: 0;
-}
-.radio--block p span,
-.checkbox--block p span {
-  font-weight: 700;
-}
 .radio,
 .checkbox {
-  padding: 0.375rem 0.75rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   border-radius: 2px;
   position: relative;
@@ -2357,7 +2296,7 @@ input[type="file"]::before {
 }
 .radio input:hover:before,
 .checkbox input:hover:before {
-  border-color: #bfbfbf;
+  border-color: #dfdfdf;
 }
 .radio input:disabled,
 .checkbox input:disabled {
@@ -2378,6 +2317,26 @@ input[type="file"]::before {
 .checkbox input:checked:hover:before {
   border-color: #a5bddc;
 }
+.radio--inline,
+.checkbox--inline {
+  clear: none;
+  float: left;
+}
+.radio--block,
+.checkbox--block {
+  clear: left;
+  float: left;
+}
+.radio--block p,
+.checkbox--block p {
+  display: block;
+  float: right;
+  margin: 0;
+}
+.radio--block p span,
+.checkbox--block p span {
+  font-weight: 700;
+}
 .multi-select {
   height: 5.5rem !important;
   padding: 0;
@@ -2388,11 +2347,37 @@ input[type="file"]::before {
 .dropdown {
   border-radius: 2px;
   border: 1px solid #dfdfdf;
+  position: relative;
+  padding-right: 3.5em;
+  padding-right: 0;
+}
+.dropdown:after {
+  right: 0.5em;
+  font-family: 'Helvetica', 'FontAwesome';
+  font-weight: 300;
+  content: "\F0D7";
+  color: white;
+  line-height: 1.9em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.dropdown:after {
+  color: #000000;
+  pointer-events: none;
 }
 .dropdown select {
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-appearance: none;
 }
 .checkbox,
 .radio {
@@ -2400,7 +2385,6 @@ input[type="file"]::before {
 }
 input[id*="dob-"],
 input[class*="dob-"] {
-  padding: .2em;
   border-radius: 2px;
   display: inline-block;
 }
@@ -2418,380 +2402,386 @@ input[class*="dob-"] {
   cursor: not-allowed !important;
   color: #9f9f9f;
   background-color: #f2f2f2;
-  border: none;
+  border: 1px solid #f2f2f2;
   resize: none;
 }
 /*
  * Grouping .form styles with the magic of LESS
  *
- */
+ 
 .form {
-  margin: 1em 0;
-  /**********************************************************************
-     * Help text
-     *
-     * Apply to any element you wish to create light text for placement immediately
-     * below a form control. Use for general help, formatting, or instructional
-     * text.
-     */
-  /**********************************************************************
-     * Static fields.
-     */
+    margin: 1em 0;
+    &__row, &__group {
+        display: block; // This can be added to labels
+        margin-bottom: 1em;
+    }
+
+    &__button-row {
+        // For big submit buttons
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    &--table {
+        display: table;
+        width: 100%;
+
+        & > &__row {
+            display: table-row;
+
+            & > &__label, & > label {
+                display: table-cell;
+                white-space: nowrap;
+                padding: 0 1em 1em 0;
+            }
+
+            & > &__control {
+                display: table-cell;
+                width: 100%;
+                padding-bottom: 1em;
+            }
+        }
+
+        @media (max-width: @screen-xs-max) {
+            display: block;
+
+            & > &__row {
+                display: block;
+
+                & > &__label, & > label {
+                    display: block;
+                    white-space: normal;
+                    padding: 0;
+                }
+
+                & > &__control {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__radio-list {
+        border: none;
+        margin: 1em 0 0 0;
+        padding: 0;
+
+        & > legend {
+            font-size: 1em;
+        }
+    }
+
+    &__radio-item {
+        display: block;
+    }
+
+    &__radio,
+    &__checkbox {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        label {
+            // Ensure the input doesn't jump when there is no text
+            min-height: 25px;
+            padding-left: 25px;
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+    }
+    &__radio input[type="radio"],
+    &__radio-inline input[type="radio"],
+    &__checkbox input[type="checkbox"],
+    &__checkbox-inline input[type="checkbox"] {
+        position: absolute;
+        margin-left: -(25px);
+        margin-top: 6px \9;
+    }
+
+    // Radios and checkboxes on same line.
+    // See also the &__*-inline--boxed styles above for a variation.
+    &__radio-inline,
+    &__checkbox-inline {
+        display: inline-block;
+        padding-left: 25px;
+        padding-right: 10px;
+        margin-bottom: 0;
+        vertical-align: middle;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    &__radio-inline + &__radio-inline,
+    &__checkbox-inline + &__checkbox-inline {
+        margin-top: 0;
+        margin-left: 10px; // space out consecutive inline controls
+    }
+
+    &__radio,
+    &__checkbox {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        label {
+            // Ensure the input doesn't jump when there is no text
+            min-height: 25px;
+            padding-left: 25px;
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+    }
+    &__radio input[type="radio"],
+    &__radio-inline input[type="radio"],
+    &__checkbox input[type="checkbox"],
+    &__checkbox-inline input[type="checkbox"] {
+        position: absolute;
+        margin-left: -(25px);
+        margin-top: 6px \9;
+    }
+
+    // Radios and checkboxes on same line.
+    // See also the &__*-inline--boxed styles above for a variation.
+    &__radio-inline,
+    &__checkbox-inline {
+        display: inline-block;
+        padding-left: 25px;
+        padding-right: 10px;
+        margin-bottom: 0;
+        vertical-align: middle;
+        font-weight: normal;
+        cursor: pointer;
+    }
+    &__radio-inline + &__radio-inline,
+    &__checkbox-inline + &__checkbox-inline {
+        margin-top: 0;
+        margin-left: 10px; // space out consecutive inline controls
+    }
+
+    // BOXED RADIOS AND CHECKBOXES.
+    // Put the control and the label inside a full-width coloured box.
+    &__radio--boxed,
+    &__checkbox--boxed,
+    &__radio-inline--boxed,
+    &__checkbox-inline--boxed {
+        background: none repeat scroll 0 0 #fff;
+        border: 1px solid transparent;
+
+        &:not(.is-disabled):hover {
+            background: none repeat scroll 0 0 #eff3f3;
+            border-color: #ccc;
+        }
+
+        > label {
+            padding-left: (15px + 25px);
+            width: 100%;
+        }
+
+        &.is-selected {
+            background: none repeat scroll 0 0 #b8e3df;
+
+            &:hover {
+                border-color: transparent;
+                background: none repeat scroll 0 0 #b8e3df;
+            }
+        }
+    }
+    &__radio--boxed,
+    &__checkbox--boxed {
+        width: 100%;
+
+        > &__radio__desc,
+        > &__checkbox__desc {
+            padding-left: (15px + 25px);
+            padding-top: 0;
+            margin-top: -(10px);
+        }
+    }
+
+    &__radio-inline--boxed,
+    &__checkbox-inline--boxed {
+        padding-top: 5px;
+        padding-left: (10px + 25px);
+        padding-bottom: 5px;
+    }
+
+    // We don't want spaces between .*--boxed and .box.js-revealable's following
+    // them. Just adding negative top margin looks odd when it's revealed.
+    // So, we're trying this:
+    &__radio--boxed + .box.js-revealable,
+    &__checkbox--boxed + .box.js-revealable {
+        position:      relative;
+        top:           -(10px);
+        margin-bottom: -(10px);
+    }
+
+    // These classes are used on elements with <label> descendants
+    &__radio,
+    &__checkbox {
+        cursor: pointer;
+        &.is-disabled {
+            cursor: not-allowed;
+            color: #999;
+            label {
+                cursor: not-allowed;
+            }
+        }
+        // These classes are used directly on <label>s
+        &-inline {
+            &.is-disabled {
+                color: #999;
+                cursor: not-allowed;
+            }
+        }
+    }
+    
+    &__help {
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    // For 'required' or 'optional' hints.
+    &__hint {
+        color: #999;
+        display: inline-block;
+        font-weight: 400;
+        margin-left: 2px;
+
+        // Hasty fix; don't want to show 'required' markers on Pension Credit
+        // Checker, ESA Quick Checker, etc.
+        .panel & {
+            display: none;
+        }
+    }
+
+    &__error {
+        color: #c02f43;
+        display: block;
+        font-weight: 400;
+        margin-top: 5px;
+    }
+
+
+    &__field--static {
+        max-width: 100%;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    &--inline-group {
+        .form__group {
+            display: inline-block;
+        }
+
+        @media (max-width: @screen-sm-min) {
+            display: table;
+            margin-bottom: (1em / 2);
+
+            .form__group {
+                display: table-cell;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+
+            .form__label {
+                .screenreader;
+            }
+
+            .form__hint {
+                display: none;
+            }
+
+            .form__field {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+                margin-right: 0;
+            }
+
+            .button {
+                display: table-cell;
+                padding: 1px 3px 2px 1px;
+
+                .fa-stack {
+                    margin-left: 0;
+                }
+            }
+
+            .button__label {
+                .screenreader;
+            }
+        }
+    }
+    // Small fields for day, month and year.
+    &__field--day,
+    &__field--month {
+        width: 4em;
+    }
+    &__field--year {
+        width: 4.5em;
+    }
+
+    // Small field for time.
+    &__field--time {
+        width: 6em;
+    }
 }
-.form__row,
-.form__group {
-  display: block;
-  margin-bottom: 1em;
+*/
+/*
+.box--1 {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        // Standard style by default.
+
+        &.is-selected {
+            background: none repeat scroll 0 0 #fff;
+            // Don't add a border or it'll look odd if immediately followed by
+            // a .box--2 revealable. (eg ESA form distance questions.)
+        }
+    }
 }
-.form__button-row {
-  margin-top: 1em;
-  width: 100%;
+
+.box--2 {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        background: #eee;
+
+        &:hover {
+            border-color: #ccc;
+        }
+
+        &.is-selected {
+            border-color: #ccc;
+            background: #ccc;
+        }
+    }
 }
-.form--table {
-  display: table;
-  width: 100%;
+
+.panel--a {
+    .form__radio--boxed,
+    .form__checkbox--boxed,
+    .form__radio-inline--boxed,
+    .form__checkbox-inline--boxed {
+        background: #eee;
+
+        &:hover {
+            background: #ccc;
+        }
+
+        &.is-selected {
+            border-color: #ccc;
+        }
+    }
 }
-.form--table > .form--table__row {
-  display: table-row;
-}
-.form--table > .form--table__row > .form--table > .form--table__row__label,
-.form--table > .form--table__row > label {
-  display: table-cell;
-  white-space: nowrap;
-  padding: 0 1em 1em 0;
-}
-.form--table > .form--table__row > .form--table > .form--table__row__control {
-  display: table-cell;
-  width: 100%;
-  padding-bottom: 1em;
-}
-@media (max-width: 599px) {
-  .form--table {
-    display: block;
-  }
-  .form--table > .form--table__row {
-    display: block;
-  }
-  .form--table > .form--table__row > .form--table > .form--table__row__label,
-  .form--table > .form--table__row > label {
-    display: block;
-    white-space: normal;
-    padding: 0;
-  }
-  .form--table > .form--table__row > .form--table > .form--table__row__control {
-    display: block;
-    width: 100%;
-  }
-}
-.form__radio-list {
-  border: none;
-  margin: 1em 0 0 0;
-  padding: 0;
-}
-.form__radio-list > legend {
-  font-size: 1em;
-}
-.form__radio-item {
-  display: block;
-}
-.form__radio,
-.form__checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.form__radio label,
-.form__checkbox label {
-  min-height: 25px;
-  padding-left: 25px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio input[type="radio"],
-.form__radio-inline input[type="radio"],
-.form__checkbox input[type="checkbox"],
-.form__checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -25px;
-  margin-top: 6px \9;
-}
-.form__radio-inline,
-.form__checkbox-inline {
-  display: inline-block;
-  padding-left: 25px;
-  padding-right: 10px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio-inline + .form__radio-inline,
-.form__checkbox-inline + .form__checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
-.form__radio,
-.form__checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.form__radio label,
-.form__checkbox label {
-  min-height: 25px;
-  padding-left: 25px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio input[type="radio"],
-.form__radio-inline input[type="radio"],
-.form__checkbox input[type="checkbox"],
-.form__checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -25px;
-  margin-top: 6px \9;
-}
-.form__radio-inline,
-.form__checkbox-inline {
-  display: inline-block;
-  padding-left: 25px;
-  padding-right: 10px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.form__radio-inline + .form__radio-inline,
-.form__checkbox-inline + .form__checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
-.form__radio--boxed,
-.form__checkbox--boxed,
-.form__radio-inline--boxed,
-.form__checkbox-inline--boxed {
-  background: none repeat scroll 0 0 #fff;
-  border: 1px solid transparent;
-}
-.form__radio--boxed:not(.is-disabled):hover,
-.form__checkbox--boxed:not(.is-disabled):hover,
-.form__radio-inline--boxed:not(.is-disabled):hover,
-.form__checkbox-inline--boxed:not(.is-disabled):hover {
-  background: none repeat scroll 0 0 #eff3f3;
-  border-color: #ccc;
-}
-.form__radio--boxed > label,
-.form__checkbox--boxed > label,
-.form__radio-inline--boxed > label,
-.form__checkbox-inline--boxed > label {
-  padding-left: 40px;
-  width: 100%;
-}
-.form__radio--boxed.is-selected,
-.form__checkbox--boxed.is-selected,
-.form__radio-inline--boxed.is-selected,
-.form__checkbox-inline--boxed.is-selected {
-  background: none repeat scroll 0 0 #b8e3df;
-}
-.form__radio--boxed.is-selected:hover,
-.form__checkbox--boxed.is-selected:hover,
-.form__radio-inline--boxed.is-selected:hover,
-.form__checkbox-inline--boxed.is-selected:hover {
-  border-color: transparent;
-  background: none repeat scroll 0 0 #b8e3df;
-}
-.form__radio--boxed,
-.form__checkbox--boxed {
-  width: 100%;
-}
- > .form__radio--boxed__radio__desc,
- > .form__checkbox--boxed__radio__desc,
- > .form__radio--boxed__checkbox__desc,
- > .form__checkbox--boxed__checkbox__desc {
-  padding-left: 40px;
-  padding-top: 0;
-  margin-top: -10px;
-}
-.form__radio-inline--boxed,
-.form__checkbox-inline--boxed {
-  padding-top: 5px;
-  padding-left: 35px;
-  padding-bottom: 5px;
-}
-.form__radio--boxed + .box.js-revealable,
-.form__checkbox--boxed + .box.js-revealable,
-.form__radio--boxed + .highlight-adviseronly.js-revealable,
-.form__checkbox--boxed + .highlight-adviseronly.js-revealable,
-.form__radio--boxed + .home-page__box--member-welcome.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-welcome.js-revealable,
-.form__radio--boxed + .home-page__box--member-search.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-search.js-revealable,
-.form__radio--boxed + .home-page__box--member-contact.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-contact.js-revealable,
-.form__radio--boxed + .home-page__box--member-more.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-more.js-revealable,
-.form__radio--boxed + .home-page__box--member-volunteer.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-volunteer.js-revealable,
-.form__radio--boxed + .home-page__box--member-campaigns.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-campaigns.js-revealable,
-.form__radio--boxed + .home-page__box--member-supporters.js-revealable,
-.form__checkbox--boxed + .home-page__box--member-supporters.js-revealable,
-.form__radio--boxed + .login.js-revealable,
-.form__checkbox--boxed + .login.js-revealable {
-  position: relative;
-  top: -10px;
-  margin-bottom: -10px;
-}
-.form__radio,
-.form__checkbox {
-  cursor: pointer;
-}
-.form__radio.is-disabled,
-.form__checkbox.is-disabled {
-  cursor: not-allowed;
-  color: #999;
-}
-.form__radio.is-disabled label,
-.form__checkbox.is-disabled label {
-  cursor: not-allowed;
-}
-.form__radio-inline.is-disabled,
-.form__checkbox-inline.is-disabled {
-  color: #999;
-  cursor: not-allowed;
-}
-.form__help {
-  color: #666;
-  margin-bottom: 5px;
-}
-.form__hint {
-  color: #999;
-  display: inline-block;
-  font-weight: 400;
-  margin-left: 2px;
-}
-.panel .form__hint {
-  display: none;
-}
-.form__error {
-  color: #c02f43;
-  display: block;
-  font-weight: 400;
-  margin-top: 5px;
-}
-.form__field--static {
-  max-width: 100%;
-  margin-bottom: 5px;
-  display: block;
-}
-.form--inline-group .form__group {
-  display: inline-block;
-}
-@media (max-width: 600px) {
-  .form--inline-group {
-    display: table;
-    margin-bottom: 0.5em;
-  }
-  .form--inline-group .form__group {
-    display: table-cell;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form--inline-group .form__label {
-    /* Note: If you make the label visible, things might get screwy in IE8. */
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  .form--inline-group .form__hint {
-    display: none;
-  }
-  .form--inline-group .form__field {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 0;
-  }
-  .form--inline-group .button {
-    display: table-cell;
-    padding: 1px 3px 2px 1px;
-  }
-  .form--inline-group .button .fa-stack {
-    margin-left: 0;
-  }
-  .form--inline-group .button__label {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-}
-.form__field--day,
-.form__field--month {
-  width: 4em;
-}
-.form__field--year {
-  width: 4.5em;
-}
-.form__field--time {
-  width: 6em;
-}
-.box--1 .form__radio--boxed.is-selected,
-.box--1 .form__checkbox--boxed.is-selected,
-.box--1 .form__radio-inline--boxed.is-selected,
-.box--1 .form__checkbox-inline--boxed.is-selected {
-  background: none repeat scroll 0 0 #fff;
-}
-.box--2 .form__radio--boxed,
-.box--2 .form__checkbox--boxed,
-.box--2 .form__radio-inline--boxed,
-.box--2 .form__checkbox-inline--boxed {
-  background: #eee;
-}
-.box--2 .form__radio--boxed:hover,
-.box--2 .form__checkbox--boxed:hover,
-.box--2 .form__radio-inline--boxed:hover,
-.box--2 .form__checkbox-inline--boxed:hover {
-  border-color: #ccc;
-}
-.box--2 .form__radio--boxed.is-selected,
-.box--2 .form__checkbox--boxed.is-selected,
-.box--2 .form__radio-inline--boxed.is-selected,
-.box--2 .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
-  background: #ccc;
-}
-.panel--a .form__radio--boxed,
-.panel--a .form__checkbox--boxed,
-.panel--a .form__radio-inline--boxed,
-.panel--a .form__checkbox-inline--boxed {
-  background: #eee;
-}
-.panel--a .form__radio--boxed:hover,
-.panel--a .form__checkbox--boxed:hover,
-.panel--a .form__radio-inline--boxed:hover,
-.panel--a .form__checkbox-inline--boxed:hover {
-  background: #ccc;
-}
-.panel--a .form__radio--boxed.is-selected,
-.panel--a .form__checkbox--boxed.is-selected,
-.panel--a .form__radio-inline--boxed.is-selected,
-.panel--a .form__checkbox-inline--boxed.is-selected {
-  border-color: #ccc;
-}
+*/
 .custom-dropdown {
   display: inline-block;
   overflow: hidden;
@@ -2806,9 +2796,9 @@ input[class*="dob-"] {
   -moz-appearance: none;
   border: 0;
   background: transparent;
-  padding: .2em;
-  width: calc(100% + 1.2em);
-  margin: 0 calc(33px + .2em) 0 0;
+  padding: .75em;
+  width: calc(100% + 1.75em);
+  margin: 0 calc(33px + .75em) 0 0;
   outline: none;
   /* The right positioning is the extra width from above
                In <=IE8 this will be ignored as we've used the four value poitioning syntax
@@ -2820,7 +2810,7 @@ input[class*="dob-"] {
   top: 0;
   background: #004b88;
   color: white;
-  padding: 0 .2em;
+  padding: 0 .75em;
   font-size: 1.3em;
   pointer-events: none;
 }
@@ -2842,7 +2832,7 @@ input.custom-dropdown__button {
   width: 14%;
   float: left;
   border-radius: 0;
-  padding: .2em;
+  padding: .75em;
 }
 /* Search fields used in blocks */
 .search-inline {
@@ -2867,7 +2857,7 @@ input.custom-dropdown__button {
 }
 .search-inline__button > input,
 .search-inline__button > button {
-  padding: .2em .6em;
+  padding: .75em .6em;
 }
 .search-inline--hide-label > label {
   border: 0;
@@ -2879,14 +2869,18 @@ input.custom-dropdown__button {
   position: absolute;
   width: 1px;
 }
-.checkbox-radio-inner input[type="radio"],
-.checkbox-radio-inner input[type="checkbox"] {
-  position: absolute;
+/*
+.checkbox-radio-inner {
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+    }
+    label {
+        display: inline-block;
+        margin-left: 1em;
+    }
 }
-.checkbox-radio-inner label {
-  display: inline-block;
-  margin-left: 1em;
-}
+*/
 /**
  * FRAMEWORK
  *
@@ -10667,3 +10661,4 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   text-decoration: none;
   opacity: 1;
 }
+/*# sourceMappingURL=site.css.map */
