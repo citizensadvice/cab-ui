@@ -2372,6 +2372,7 @@ input[type="file"]::before {
 .dropdown:after {
   color: #000000;
   pointer-events: none;
+  border: none;
 }
 .dropdown select {
   background: none;
@@ -2389,7 +2390,7 @@ input[class*="dob-"] {
   display: inline-block;
 }
 .form-group-date {
-  width: 5rem;
+  width: 6rem;
   display: inline-block;
   float: left;
   margin-right: 0.5rem;
