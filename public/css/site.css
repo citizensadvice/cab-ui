@@ -2312,6 +2312,14 @@ input[type="file"]::before {
   clear: left;
   float: left;
 }
+.radio--block p {
+  display: block;
+  float: right;
+  margin: 0;
+}
+.radio--block p span {
+  font-weight: 700;
+}
 .radio,
 .checkbox {
   padding: 0.375rem 0.75rem;
@@ -10651,3 +10659,4 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   text-decoration: none;
   opacity: 1;
 }
+/*# sourceMappingURL=site.css.map */
