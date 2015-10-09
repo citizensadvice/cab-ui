@@ -209,25 +209,6 @@
 
                 <div class="example-box-plain">
                   <fieldset>
-                    <label for="exampleInputFile">Inline Radio buttons</label>
-                    <label class="radio--inline">
-                      <input type="radio" name="radio" value="option1" checked>
-                      Yes
-                    </label>
-                    <label class="radio--inline">
-                      <input type="radio" name="radio" value="option2">
-                      No
-                    </label>
-                    <label class="radio--inline disabled">
-                      <input type="radio" name="radio" value="option3" disabled>
-                      Not sure
-                    </label>
-                  </fieldset>
-                </div>
-
-
-                <div class="example-box-plain">
-                  <fieldset>
                     <label for="exampleInputFile">Radio buttons</label>
                     <label class="radio radio--block">
                       <input type="radio" name="radio" value="option1" checked>
@@ -246,62 +227,110 @@
 
                 <div class="example-box-plain">
                   <fieldset>
-                    <label for="exampleInputFile">Radio buttons (description)</label>
-                    <label class="radio radio--block">
-                      <input type="radio" name="radio" value="option1" checked>
-                      <p><span>Yes</span><br>You are in situation A</p>
+                    <label for="exampleInputFile">Inline Radio buttons</label>
+                    <label class="radio--inline">
+                      <input type="radio" name="radio-inline" value="option1" checked>
+                      Yes
                     </label>
-                    <label class="radio radio--block">
-                      <input type="radio" name="radio" value="option2">
-                      <p><span>Yes</span><br>You are in situation B</p>
+                    <label class="radio--inline">
+                      <input type="radio" name="radio-inline" value="option2">
+                      No
                     </label>
-                    <label class="radio radio--block">
-                      <input type="radio" name="radio" value="option3">
-                      <p><span>No</span><br>I'm not in any situation</p>
-
+                    <label class="radio--inline disabled">
+                      <input type="radio" name="radio-inline" value="option3" disabled>
+                      Not sure
                     </label>
                   </fieldset>
                 </div>
 
-
+                <div class="example-box-plain">
+                  <fieldset>
+                    <label for="exampleInputFile">Radio buttons (description)</label>
+                    <label class="radio radio--block">
+                      <input type="radio" name="radio-description" value="option1" checked>
+                      <p><span>Yes</span><br>You are in situation A</p>
+                    </label>
+                    <label class="radio radio--block">
+                      <input type="radio" name="radio-description" value="option2">
+                      <p><span>Yes</span><br>You are in situation B</p>
+                    </label>
+                    <label class="radio radio--block">
+                      <input type="radio" name="radio-description" value="option3">
+                      <p><span>No</span><br>I'm not in any situation</p>
+                    </label>
+                  </fieldset>
+                </div>
 
                 <div class="example-box-plain">
                   <fieldset>
-                    <label for="exampleInputFile">Inline checkboxes</label>
-                    <label class="checkbox">
+                    <label for="exampleInputFile">Checkboxes</label>
+                    <label class="checkbox checkbox--block">
                       <input type="checkbox" name="checkbox"> Option one
                     </label>
-                    <label class="checkbox">
+                    <label class="checkbox checkbox--block">
                       <input type="checkbox" name="checkbox"> Option two
                     </label>
-                    <label class="checkbox disabled">
+                    <label class="checkbox checkbox--block disabled">
                       <input type="checkbox" name="checkbox" disabled> Disabled
                     </label>
                   </fieldset>
                 </div>
 
                 <div class="example-box-plain">
+                  <fieldset>
+                    <label for="exampleInputFile">Inline checkboxes</label>
+                    <label class="checkbox checkbox--inline">
+                      <input type="checkbox" name="checkbox"> Option one
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                      <input type="checkbox" name="checkbox"> Option two
+                    </label>
+                    <label class="checkbox checkbox--inline disabled">
+                      <input type="checkbox" name="checkbox" disabled> Disabled
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div class="example-box-plain">
+                  <fieldset>
+                    <label for="exampleInputFile">Check boxes (description)</label>
+                    <label class="checkbox checkbox--block">
+                      <input type="checkbox" name="checkbox-inline">
+                      <p><span>Yes</span><br>You are in situation A</p>
+                    </label>
+                    <label class="checkbox checkbox--block">
+                      <input type="checkbox" name="checkbox-inline">
+                      <p><span>Yes</span><br>You are in situation B</p>
+                    </label>
+                    <label class="checkbox checkbox--block">
+                      <input type="checkbox" name="checkbox-inline">
+                      <p><span>No</span><br>I'm not in any situation</p>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div class="example-box-plain">
                   <label for="buttonDescription">Buttons (directions)</label>
-                  <button type="submit" class="btn btn-primary-light left-button-icon">Back</button>
-                  <button type="submit" class="btn btn-primary right-button-icon">Continue</button>
+                  <button type="button" class="btn btn-primary-light left-button-icon">Back</button>
+                  <button type="button" class="btn btn-primary right-button-icon">Continue</button>
                   <button type="submit" class="btn btn-primary tick-button-icon">Submit</button>
                   <!-- Recommending we use the lighter back button to differentiate between purposes
-                  <button type="submit" class="btn btn-primary">Back <span class="left-button-icon"></span></button-->
+                  <button type="button" class="btn btn-primary">Back <span class="left-button-icon"></span></button-->
                 </div>
 
                 <div class="example-box-plain">
                   <label for="buttonDescription">Buttons (actions)</label>
-                  <button type="submit" class="btn btn-secondary email-button-icon">Email</button>
-                  <button type="submit" class="btn btn-secondary print-button-icon">Print</button>
-                  <button type="submit" class="btn btn-secondary restart-button-icon">Restart</button>
-                  <button type="submit" class="btn btn-secondary save-button-icon">Save</button>
+                  <button type="button" class="btn btn-secondary email-button-icon">Email</button>
+                  <button type="button" class="btn btn-secondary print-button-icon">Print</button>
+                  <button type="reset" class="btn btn-secondary restart-button-icon">Restart</button>
+                  <button type="button" class="btn btn-secondary save-button-icon">Save</button>
                 </div>
 
                 <div class="example-box-plain">
                   <label for="buttonDescription">Buttons (additional)</label>
-                  <button type="submit" class="btn btn-disabled">Continue</button>
-                  <button type="submit" class="btn btn-warning exclamation-button-icon">Warning</button>
-                  <button type="submit" class="btn btn-primary-outline">England</button>
+                  <button type="button" class="btn btn-disabled" disabled>Continue</button>
+                  <button type="button" class="btn btn-warning exclamation-button-icon">Warning</button>
+                  <button type="button" class="btn btn-primary-outline">England</button>
                 </div>
 
                 </form>

@@ -38,7 +38,8 @@
 }
 .btn-disabled {
     color: @gray-3;
-    background-color: @gray-6; 
+    background-color: @gray-6;
+    cursor: not-allowed;
     &:hover, &:active, &:focus  {
         color: @gray-3;
         background-color: @gray-6;             
@@ -112,7 +113,7 @@ label,
         display: inline-block;
     }
 }
-.radio, .checkbox, .radio--inline { 
+.radio, .checkbox, .radio--inline, .checkbox--inline { 
     font-weight: @font-weight-bold;
 }
     
@@ -336,7 +337,8 @@ input[type="file"]::before {
     }
 }
 
-.radio--block {
+.radio--block,
+.checkbox--block {
     clear: left;
     float: left;
     p {

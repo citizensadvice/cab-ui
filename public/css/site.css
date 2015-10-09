@@ -312,6 +312,9 @@ ul li {
   color: #9f9f9f;
   padding: 0 2em;
 }
+.example-box-plain fieldset:last-child {
+  margin-bottom: 0;
+}
 span.code {
   color: #333;
   padding: 5px;
@@ -2002,6 +2005,7 @@ button:disabled:hover {
 .btn-disabled {
   color: #808080;
   background-color: #dfdfdf;
+  cursor: not-allowed;
 }
 .btn-disabled:hover,
 .btn-disabled:active,
@@ -2074,7 +2078,8 @@ label .form__label--inline,
 }
 .radio,
 .checkbox,
-.radio--inline {
+.radio--inline,
+.checkbox--inline {
   font-weight: 600;
 }
 .form__label--hidden {
@@ -2308,16 +2313,19 @@ input[type="file"]::before {
 .checkbox--inline input:checked:hover:before {
   border-color: #a5bddc;
 }
-.radio--block {
+.radio--block,
+.checkbox--block {
   clear: left;
   float: left;
 }
-.radio--block p {
+.radio--block p,
+.checkbox--block p {
   display: block;
   float: right;
   margin: 0;
 }
-.radio--block p span {
+.radio--block p span,
+.checkbox--block p span {
   font-weight: 700;
 }
 .radio,
