@@ -11596,6 +11596,13 @@ html[lang="en-SCT"] .side-nav > h2 {
   max-width: 25%;
   text-align: right;
   display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 400;
 }
 .ref-heading__toggle > a {
   word-wrap: normal;
@@ -11655,7 +11662,6 @@ h4 > .ref-heading__toggle {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #f2f2f2;
   display: block;
   position: absolute;
   z-index: -1;
