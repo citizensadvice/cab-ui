@@ -1861,6 +1861,10 @@ hr {
   filter: none;
   -ms-filter: none;
 }
+body {
+  font-family: 'open_sans', Calibri, Arial, Helvetica, sans-serif !important;
+  font-size: 14px;
+}
 .no-print {
   display: none !important;
 }
@@ -2031,3 +2035,4 @@ img[src="/Global/Migrated_Images/bmis/dl-icon.gif"] {
 .toc-legacy__num {
   padding-left: 1em;
 }
+/*# sourceMappingURL=print.css.map */
