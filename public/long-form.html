@@ -32,10 +32,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
-    <script src="../libs/javascript/sticky-nav.js"></script><!-- Sticky Navigation JS -->
-    <script src="../libs/javascript/nav-active.js"></script><!-- Navigation Updating JS -->
-    <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
-    <script src="../libs/javascript/vendor/jquery.sticky.js"></script>
 </head>
 
 <body>
@@ -226,17 +222,19 @@
 
             <nav class="side-nav-beta">
                 <ul class="">
-                    <li class="side-nav-beta__heading">
+                    <li class="side-nav-beta__heading -active -open">
                         <a href=""><span>Section title</span></a>
-                    </li>
-                    <li class="side-nav-beta__sibling active">
-                        <a href=""><span>Current page</span></a>
-                    </li>
-                    <li class="side-nav-beta__sibling">
-                        <a href=""><span>Sibling page</span></a>
-                    </li>
-                    <li class="side-nav-beta__sibling">
-                        <a href=""><span>Sibling page</span></a>
+                        <ul>
+                            <li class="side-nav-beta__sibling -current">
+                                <a href=""><span>Current page</span></a>
+                            </li>
+                            <li class="side-nav-beta__sibling">
+                                <a href=""><span>Sibling page</span></a>
+                            </li>
+                            <li class="side-nav-beta__sibling">
+                                <a href=""><span>Sibling page</span></a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>

@@ -42,7 +42,12 @@
     }
 
     &__heading {
-        a {
+        display: none;
+        &.-active,
+        &.-open {
+            display: block;
+        }
+        >a {
             color: @heritage-blue;
             font-weight: @font-weight-boldest;
             font-size: @font-size-medium;
@@ -57,7 +62,7 @@
             background-color: @gray-8;
         }
     }
-    .active {
+    .-current {
         background-color: @heritage-blue-lightest;
         font-weight: @font-weight-bolder;
         border-color: @heritage-blue-lighter;
