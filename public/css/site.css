@@ -189,8 +189,8 @@ th {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  src: url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../../libs/vendors/font-awesome/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6342,12 +6342,6 @@ hr {
 /**
  * Hide revealable blocks by default, unless the user has no JS.
  */
-.js-revealable {
-  display: none;
-}
-.no-js .js-revealable {
-  display: block;
-}
 @media print {
   /**
      * Use on elements not covered by the print stylesheet that shouldn't be
@@ -9652,6 +9646,10 @@ html[lang="en-SCT"] .main-nav {
   margin: 0;
   padding: 0.75rem 1rem 0.75rem 1rem;
 }
+.collapsible .revealable__content[aria-hidden=true],
+.revealable .revealable__content[aria-hidden=true] {
+  display: none;
+}
 .collapsible--aqua,
 .revealable--aqua {
   margin: 0.75rem 0;
@@ -9782,6 +9780,10 @@ html[lang="en-SCT"] .main-nav {
   border: 0;
   margin: 0;
   padding: 0.75rem 1rem 0.75rem 1rem;
+}
+.collapsible--aqua .revealable__content[aria-hidden=true],
+.revealable--aqua .revealable__content[aria-hidden=true] {
+  display: none;
 }
 .collapsible--green,
 .revealable--green {
@@ -9914,6 +9916,10 @@ html[lang="en-SCT"] .main-nav {
   margin: 0;
   padding: 0.75rem 1rem 0.75rem 1rem;
 }
+.collapsible--green .revealable__content[aria-hidden=true],
+.revealable--green .revealable__content[aria-hidden=true] {
+  display: none;
+}
 .collapsible--red,
 .revealable--red {
   margin: 0.75rem 0;
@@ -10044,6 +10050,10 @@ html[lang="en-SCT"] .main-nav {
   border: 0;
   margin: 0;
   padding: 0.75rem 1rem 0.75rem 1rem;
+}
+.collapsible--red .revealable__content[aria-hidden=true],
+.revealable--red .revealable__content[aria-hidden=true] {
+  display: none;
 }
 .accordion .group {
   background: #ffffff;

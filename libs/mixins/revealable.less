@@ -96,6 +96,11 @@
         margin: 0;
         padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
     }
+    .revealable__content {
+        &[aria-hidden=true] {
+            display: none;
+        }
+    }
 }
 
 // Finctional CSS for JS
