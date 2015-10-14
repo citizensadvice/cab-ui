@@ -10,7 +10,7 @@
 /* FONT AWESOME FONTS */
 
 .icon-fa () {
-    font-family: FontAwesome;
+    font-family: FontAwesome, icomoon;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -110,9 +110,36 @@
     border-bottom: 0.0625rem solid @white;
     font-size: 175%;
 }
-a.a-social-google-plus, a.a-social-facebook, a.a-social-twitter, a.a-social-whatsapp, a.a-social-print, a.a-social-references, a.a-social-email {
+a.a-social-google-plus, 
+a.a-social-facebook, 
+a.a-social-twitter, 
+a.a-social-whatsapp, 
+a.a-social-print, 
+a.a-social-references,
+a.a-social-email {
         border-bottom: none;
 }
+
+
+.info-reviewed:before {
+    content: @icon-symbol-clock;
+    color: @blue-light;
+    &:extend(.a-social-top-);
+    border: 0;
+}
+.info-owner:before {
+    content: @icon-symbol-happy;
+    color: @blue-light;
+    &:extend(.a-social-top-);
+    border: 0;
+}
+.info-extent:before {
+    content: @icon-symbol-target;
+    color: @blue-light;
+    &:extend(.a-social-top-);
+    border: 0;
+}
+
 .a-social-facebook:before {
     content: "\f230";
     color: @facebook-brand-colour;

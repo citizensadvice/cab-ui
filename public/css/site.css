@@ -5362,7 +5362,7 @@ input.custom-dropdown__button {
 .a-excel-doc:after,
 .a-pdf-doc:after,
 .a-file-doc:after {
-  font-family: FontAwesome;
+  font-family: FontAwesome, icomoon;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -5617,7 +5617,7 @@ input.custom-dropdown__button {
 .a-social-twitter:before,
 .a-social-whatsapp:before,
 .a-social-google-plus:before {
-  font-family: FontAwesome;
+  font-family: FontAwesome, icomoon;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -5637,6 +5637,21 @@ a.a-social-print,
 a.a-social-references,
 a.a-social-email {
   border-bottom: none;
+}
+.info-reviewed:before {
+  content: "\231a";
+  color: #a5bddc;
+  border: 0;
+}
+.info-owner:before {
+  content: "\263a";
+  color: #a5bddc;
+  border: 0;
+}
+.info-extent:before {
+  content: "\e605";
+  color: #a5bddc;
+  border: 0;
 }
 .a-social-facebook:before {
   content: "\f230";
@@ -5660,10 +5675,13 @@ a.a-social-email {
   border: 0;
 }
 .a-social-top-,
+.info-reviewed:before,
+.info-owner:before,
+.info-extent:before,
 .a-social-print:before,
 .a-social-references:before,
 .a-social-email:before {
-  font-family: FontAwesome;
+  font-family: FontAwesome, icomoon;
   speak: none;
   font-style: normal;
   font-weight: normal;
