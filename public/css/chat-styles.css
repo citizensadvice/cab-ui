@@ -118,7 +118,8 @@ h1.title__heading {
 h2 {
   font-size: 1.8rem;
 }
-h3 {
+h3,
+legend {
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -363,3 +364,4 @@ textarea {
   background: #004b88;
   color: #ffffff;
 }
+/*# sourceMappingURL=chat-styles.css.map */

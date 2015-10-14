@@ -5657,8 +5657,8 @@ input.custom-dropdown__button {
 .a-social-print:before,
 .a-social-references:before,
 .a-social-email:before,
-.ref-heading__toggle--on:before,
-.ref-heading__toggle--off:before {
+.ref-heading__toggle--on:after,
+.ref-heading__toggle--off:after {
   font-family: FontAwesome, icomoon;
   line-height: 2.5rem;
   display: inline-block;
@@ -11679,22 +11679,26 @@ html[lang="en-SCT"] .side-nav > h2 {
   width: 74%;
 }
 .ref-heading__toggle--on {
-  color: #ffbf47;
   background: none;
   padding-right: 0;
 }
 .ref-heading__toggle--on a {
-  color: #ffbf47;
+  color: #ad7100;
 }
-.ref-heading__toggle--on:before {
+.ref-heading__toggle--on:after {
   content: "\f005";
   color: #ffbf47;
   bottom: -0.05em;
+  margin: 0 0 0 .25em;
 }
-.ref-heading__toggle--off:before {
+.ref-heading__toggle--off a {
+  color: #003c64;
+}
+.ref-heading__toggle--off:after {
   content: "\f005";
   color: #a5bddc;
   bottom: -0.05em;
+  margin: 0 0 0 .25em;
 }
 /* Called this out and refactored, test on site
 
