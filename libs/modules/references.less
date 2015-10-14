@@ -15,10 +15,10 @@
 	right: 0;
 	font-size: @font-size-small;
 	font-weight: @font-weight-base;
-
     & > a {
         // Override global word break
         word-wrap: normal;
+        border: 0;
     }
 }
 
@@ -28,9 +28,30 @@
 }
 
 .ref-heading__toggle--on {
-	color: @green; 
+	color: @yellow; 
 	background: none; 
 	padding-right: 0; 
+    &:before {
+        content: "\f005";
+        color: @yellow;
+        &:extend(.a-social-top-);
+        bottom: -0.05em;
+    }
+    &:hover:before {
+    	color: @blue-light;
+    }
+}
+
+.ref-heading__toggle--off {
+    &:before {
+        content: "\f005";
+        color: @blue-light;
+        &:extend(.a-social-top-);
+        bottom: -0.05em;
+    }
+    &:hover:before {
+    	color: @yellow;
+    }
 }
 
 /* Called this out and refactored, test on site
