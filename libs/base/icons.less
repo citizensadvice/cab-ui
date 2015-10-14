@@ -110,35 +110,6 @@
     border-bottom: 0.0625rem solid @white;
     font-size: 175%;
 }
-a.a-social-google-plus, 
-a.a-social-facebook, 
-a.a-social-twitter, 
-a.a-social-whatsapp, 
-a.a-social-print, 
-a.a-social-references,
-a.a-social-email {
-        border-bottom: none;
-}
-
-
-.info-reviewed:before {
-    content: @icon-symbol-clock;
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
-}
-.info-owner:before {
-    content: @icon-symbol-happy;
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
-}
-.info-extent:before {
-    content: @icon-symbol-target;
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
-}
 
 .a-social-facebook:before {
     content: "\f230";
@@ -165,30 +136,62 @@ a.a-social-email {
     &:extend(.a-social-);
     border: 0;
 }
+
 .a-social-top- {
     .icon-fa;
     display: inline-block;
     padding: 0 0.45em 0 0.85em;
-    border-bottom: 1rem solid #ffffff;
+    border-bottom: 0;
     font-size: 125%;
 }
-.a-social-print:before {
-    content: "\f02f";
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
+
+.info-reviewed {
+    border-bottom: 0;
+    &:before {
+        content: @icon-symbol-clock;
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
 }
-.a-social-references:before {
-    content: "\f005";
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
+.info-owner {
+    border-bottom: 0;
+    &:before {
+        content: @icon-symbol-happy;
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
 }
-.a-social-email:before {
-    content: "\f003";
-    color: @blue-light;
-    &:extend(.a-social-top-);
-    border: 0;
+.info-extent {
+    border-bottom: 0;
+    &:before {
+        content: @icon-symbol-target;
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
+}
+.a-social-print {
+    border-bottom: 0;
+    &:before {
+        content: "\f02f";
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
+}
+.a-social-references {
+    border-bottom: 0;
+    &:before {
+        content: "\f005";
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
+}
+.a-social-email {
+    border-bottom: 0;
+    &:before {
+        content: "\f003";
+        color: @blue-light;
+        &:extend(.a-social-top-);
+    }
 }
 
 
