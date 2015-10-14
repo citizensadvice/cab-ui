@@ -3681,25 +3681,41 @@ table {
 }
 td,
 th {
-  border: 1px solid #eeeeee;
-  padding: 0.4rem;
+  padding: 0.66666667rem;
   text-align: left;
   vertical-align: top;
 }
-td {
-  background: #ffffff;
+tr {
+  border: solid #dfdfdf;
+  border-width: 1px 0;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr > td {
+  border: solid #dfdfdf;
+  border-width: 0 1px 0 0;
+}
+tr > td:last-child {
+  border: none;
+}
+tr > th {
+  border: solid #a2d5ff;
+  border-width: 1px 1px 1px 0;
+}
+tr > th:last-child {
+  border-right: 0;
 }
 td > *:first-child {
   padding-top: 0;
 }
 th {
-  background: #004b88;
-  color: #ffffff;
-  font-weight: normal;
-}
-th a {
-  color: #ffffff;
-  text-decoration: underline;
+  background: #f2f8ff;
+  color: #004b88;
+  font-weight: 700;
 }
 .tablesorter th {
   cursor: pointer;
@@ -11662,17 +11678,6 @@ h4 > .ref-heading__toggle {
 .ref-heading {
   overflow: hidden;
   position: relative;
-}
-.ref-heading__toggle a:hover:before,
-.ref-heading__toggle a:focus:before {
-  content: " ";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: block;
-  position: absolute;
-  z-index: -1;
 }
 .dialog--refs {
   width: 50em;

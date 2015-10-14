@@ -61,25 +61,14 @@ h4 > .ref-heading__toggle {
     padding-top: .2*1.5em;
 }
 
-.ref-added {margin-right: @box-spacing-horizontal*.4;}
+.ref-added {
+	margin-right: @box-spacing-horizontal*.4;
+}
 
 /* Highlight heading when hovering over a reference */
 .ref-heading {
 	overflow: hidden; 
 	position: relative; 
-}
-
-.ref-heading__toggle a:hover:before, 
-.ref-heading__toggle a:focus:before {
-	content: " "; 
-	width: 100%; 
-	height: 100%; 
-	left: 0; 
-	top: 0; 
-	//background-color: @gray-8; 
-	display: block; 
-	position: absolute; 
-	z-index: -1;
 }
 
 // Dialog
