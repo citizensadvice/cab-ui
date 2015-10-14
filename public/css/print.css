@@ -1936,7 +1936,6 @@ aside,
   border: 1px solid #bfbfbf;
   padding: 1rem;
   margin: 1rem 0;
-  page-break-inside: avoid;
 }
 .accordionContent,
 .collapse-content,

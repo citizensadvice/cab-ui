@@ -5625,19 +5625,23 @@ a.a-social-email {
 .a-social-facebook:before {
   content: "\f230";
   color: #3b579d;
+  border: 0;
 }
 .a-social-twitter:before {
   margin-left: -0.65em;
   content: "\f081";
   color: #55acee;
+  border: 0;
 }
 .a-social-whatsapp:before {
   content: "\f232";
   color: #30d74d;
+  border: 0;
 }
 .a-social-google-plus:before {
   content: "\f0d4";
   color: #dc4e41;
+  border: 0;
 }
 .a-social-top-,
 .a-social-print:before,
@@ -5658,14 +5662,17 @@ a.a-social-email {
 .a-social-print:before {
   content: "\f02f";
   color: #a5bddc;
+  border: 0;
 }
 .a-social-references:before {
   content: "\f005";
   color: #a5bddc;
+  border: 0;
 }
 .a-social-email:before {
   content: "\f003";
   color: #a5bddc;
+  border: 0;
 }
 /* 
 

@@ -5,5 +5,5 @@ config.codekit
 /css/
 /libs/css/
 #/public/css/site.css
-/public/css/site.css.map
 .DS_Store
+*.map
