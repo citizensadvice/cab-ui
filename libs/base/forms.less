@@ -28,7 +28,8 @@ form {
     }
 }
 
-fieldset {
+fieldset,
+.form__group {
     padding: 0;
     margin: 0;
     border: 0;
@@ -36,19 +37,8 @@ fieldset {
 }
 
 legend {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: @line-height-computed;
-//    font-size: (@font-size-base * 1.5);
-    line-height: inherit;
     color: @heritage-blue;
-    border: 0;
-    border-bottom: 1px solid @heritage-blue;
-    font-size: @font-size-h3;
-    font-weight: @font-weight-boldest;
 }
-
 
 label,
 .form__label {

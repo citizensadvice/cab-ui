@@ -3,6 +3,7 @@
 // To style a link to look like a button use .button
 
 .btn,
+.button,
 button,
 input[type=submit],
 input[type=reset],
@@ -21,13 +22,16 @@ input[type=button] {
         background-color: darken(@aqua, 5%)
     }
 }
-.btn-primary {
+
+.btn-primary,
+.button--blue {
     color: @heritage-blue;
     background-color: @aqua;
     &:hover, &:active, &:focus  {
         background-color: darken(@aqua, 10%);
     }
 }
+
 .btn-primary-light {
     color: @heritage-blue;
     background-color: @aqua-light;
@@ -35,6 +39,7 @@ input[type=button] {
         background-color: @aqua;
     }
 }
+
 .btn-secondary {
     color: @white;
     background-color: @heritage-blue; 
@@ -42,21 +47,31 @@ input[type=button] {
         background-color: darken(@heritage-blue, 5%);
     }
 }
-.btn-disabled {
+
+.btn-disabled,
+.button--grey {
     color: @gray-3;
     background-color: @gray-6;
     cursor: not-allowed;
     &:hover, &:active, &:focus  {
-        color: @gray-3;
         background-color: @gray-6;             
     }
-}    
+}
+
 .btn-warning {
     color: @white;
     background-color: @red; 
     &:hover, &:active, &:focus  {
-        color: @white;
         background-color: darken(@red, 10%);             
+    }
+}
+
+.btn-success,
+.button--green {
+    color: @white;
+    background-color: @green;
+    &:hover, &:active, &:focus  {
+        background-color: @green-dark;             
     }
 }    
 
@@ -69,24 +84,8 @@ input[type=button] {
     }
 }
 
-a.button {
-    display: inline-block;
-}
-
-.button--blue.button--blue {
-    background-color: @heritage-blue;
-
-    &:hover, &:focus, &:active {
-        background: darken(@heritage-blue,5%);
-    }
-}
-.button--green.button--green {
-    background-color: @green;
-
-    &:hover, &:focus, &:active {
-        background: darken(@green,5%);
-    }
-}
+// Old button styles
+// Do we need orange, pink and purple?
 .button--orange.button--orange {
     background-color: @orange;
 
@@ -109,19 +108,6 @@ a.button {
     &:hover, &:focus, &:active {
         background: darken(@purple-dark,10%);
     }
-}
-.button--grey.button--grey {
-    background-color: @gray-5;
-    color: black;
-
-    &:hover, &:focus, &:active {
-        background: darken(@gray-5,10%);
-    }
-}
-
-
-.button--big.button--big { // Specificity hack to override input[type]
-    padding: 0.6em;
 }
 
 button:disabled {

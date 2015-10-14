@@ -3874,6 +3874,7 @@ table.simple-table td {
   margin: 0;
 }
 .btn,
+.button,
 button,
 input[type=submit],
 input[type=reset],
@@ -3888,29 +3889,36 @@ input[type=button] {
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
 .btn:hover,
+.button:hover,
 button:hover,
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 .btn:focus,
+.button:focus,
 button:focus,
 input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus,
 .btn:active,
+.button:active,
 button:active,
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active {
   background-color: #6fc7be;
 }
-.btn-primary {
+.btn-primary,
+.button--blue {
   color: #004b88;
   background-color: #81cec6;
 }
 .btn-primary:hover,
+.button--blue:hover,
 .btn-primary:active,
-.btn-primary:focus {
+.button--blue:active,
+.btn-primary:focus,
+.button--blue:focus {
   background-color: #5cc0b5;
 }
 .btn-primary-light {
@@ -3931,15 +3939,18 @@ input[type=button]:active {
 .btn-secondary:focus {
   background-color: #003d6f;
 }
-.btn-disabled {
+.btn-disabled,
+.button--grey {
   color: #808080;
   background-color: #dfdfdf;
   cursor: not-allowed;
 }
 .btn-disabled:hover,
+.button--grey:hover,
 .btn-disabled:active,
-.btn-disabled:focus {
-  color: #808080;
+.button--grey:active,
+.btn-disabled:focus,
+.button--grey:focus {
   background-color: #dfdfdf;
 }
 .btn-warning {
@@ -3949,8 +3960,20 @@ input[type=button]:active {
 .btn-warning:hover,
 .btn-warning:active,
 .btn-warning:focus {
-  color: #ffffff;
   background-color: #bf1d21;
+}
+.btn-success,
+.button--green {
+  color: #ffffff;
+  background-color: #537d2d;
+}
+.btn-success:hover,
+.button--green:hover,
+.btn-success:active,
+.button--green:active,
+.btn-success:focus,
+.button--green:focus {
+  background-color: #3a581f;
 }
 .btn-primary-outline {
   background-color: #ffffff;
@@ -3961,25 +3984,6 @@ input[type=button]:active {
 .btn-primary-outline:active,
 .btn-primary-outline:focus {
   background-color: #a2d5ff;
-}
-a.button {
-  display: inline-block;
-}
-.button--blue.button--blue {
-  background-color: #004b88;
-}
-.button--blue.button--blue:hover,
-.button--blue.button--blue:focus,
-.button--blue.button--blue:active {
-  background: #003d6f;
-}
-.button--green.button--green {
-  background-color: #537d2d;
-}
-.button--green.button--green:hover,
-.button--green.button--green:focus,
-.button--green.button--green:active {
-  background: #476a26;
 }
 .button--orange.button--orange {
   background-color: #f47738;
@@ -4006,18 +4010,6 @@ a.button {
 .button--purple.button--purple:focus,
 .button--purple.button--purple:active {
   background: #3e2968;
-}
-.button--grey.button--grey {
-  background-color: #bfbfbf;
-  color: black;
-}
-.button--grey.button--grey:hover,
-.button--grey.button--grey:focus,
-.button--grey.button--grey:active {
-  background: #a6a6a6;
-}
-.button--big.button--big {
-  padding: 0.6em;
 }
 button:disabled {
   cursor: not-allowed;
@@ -4074,23 +4066,15 @@ form .valid {
 form small {
   color: #808080;
 }
-fieldset {
+fieldset,
+.form__group {
   padding: 0;
   margin: 0;
   border: 0;
   margin-bottom: 1rem;
 }
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 1rem;
-  line-height: inherit;
   color: #004b88;
-  border: 0;
-  border-bottom: 1px solid #004b88;
-  font-size: 1.3rem;
-  font-weight: 800;
 }
 label,
 .form__label {
@@ -6176,7 +6160,8 @@ h1.title__heading {
 h2 {
   font-size: 1.8rem;
 }
-h3 {
+h3,
+legend {
   font-size: 1.3rem;
   font-weight: 600;
 }
