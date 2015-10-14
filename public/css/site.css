@@ -11683,21 +11683,18 @@ html[lang="en-SCT"] .side-nav > h2 {
   background: none;
   padding-right: 0;
 }
+.ref-heading__toggle--on a {
+  color: #ffbf47;
+}
 .ref-heading__toggle--on:before {
   content: "\f005";
   color: #ffbf47;
   bottom: -0.05em;
 }
-.ref-heading__toggle--on:hover:before {
-  color: #a5bddc;
-}
 .ref-heading__toggle--off:before {
   content: "\f005";
   color: #a5bddc;
   bottom: -0.05em;
-}
-.ref-heading__toggle--off:hover:before {
-  color: #ffbf47;
 }
 /* Called this out and refactored, test on site
 

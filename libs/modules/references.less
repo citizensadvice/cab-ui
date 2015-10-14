@@ -30,15 +30,15 @@
 .ref-heading__toggle--on {
 	color: @yellow; 
 	background: none; 
-	padding-right: 0; 
+	padding-right: 0;
+	a {
+		color: @yellow;
+	} 
     &:before {
         content: "\f005";
         color: @yellow;
         &:extend(.a-social-top-);
         bottom: -0.05em;
-    }
-    &:hover:before {
-    	color: @blue-light;
     }
 }
 
@@ -48,9 +48,6 @@
         color: @blue-light;
         &:extend(.a-social-top-);
         bottom: -0.05em;
-    }
-    &:hover:before {
-    	color: @yellow;
     }
 }
 
