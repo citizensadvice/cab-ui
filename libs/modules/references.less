@@ -8,12 +8,12 @@
 // Headings
 
 .ref-heading__toggle {
-	float: right; 
 	max-width: 25%; 
 	text-align: right; 
 	display: inline-block;
-	.vertical-align;
-	font-size: @font-size-base;
+	.vertical-align(absolute);
+	right: 0;
+	font-size: @font-size-small;
 	font-weight: @font-weight-base;
 
     & > a {
@@ -32,18 +32,6 @@
 	background: none; 
 	padding-right: 0; 
 }
-
-
-// This is where REM units should be useful.  We are resetting the size to 1rem
-h1 > .ref-heading__toggle,
-h2 > .ref-heading__toggle,
-h2 > .ref-heading__toggle,
-h2 > .ref-heading__toggle {
-    font-size: @font-size-base;
-    padding-top: @box-spacing*.2; // Give .2em of the heading size
-}
-
-
 
 /* Called this out and refactored, test on site
 

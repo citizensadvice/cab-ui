@@ -11607,16 +11607,16 @@ html[lang="en-SCT"] .side-nav > h2 {
  *
  */
 .ref-heading__toggle {
-  float: right;
   max-width: 25%;
   text-align: right;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 1rem;
+  right: 0;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 .ref-heading__toggle > a {
@@ -11630,13 +11630,6 @@ html[lang="en-SCT"] .side-nav > h2 {
   color: #537d2d;
   background: none;
   padding-right: 0;
-}
-h1 > .ref-heading__toggle,
-h2 > .ref-heading__toggle,
-h2 > .ref-heading__toggle,
-h2 > .ref-heading__toggle {
-  font-size: 1rem;
-  padding-top: 0.2rem;
 }
 /* Called this out and refactored, test on site
 
