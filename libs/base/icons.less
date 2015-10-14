@@ -138,15 +138,20 @@
 }
 
 .a-social-top- {
-    .icon-fa;
+    font-family: FontAwesome, icomoon;
+    line-height: 2.5rem;
     display: inline-block;
-    padding: 0 0.45em 0 0.85em;
+    padding: 0 0.45em 0 0;
     border-bottom: 0;
     font-size: 125%;
+    position: relative;
+    bottom: -0.125em; //shift baseline of icons slightly down
 }
 
 .info-reviewed {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: @icon-symbol-clock;
         color: @blue-light;
@@ -155,6 +160,8 @@
 }
 .info-owner {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: @icon-symbol-happy;
         color: @blue-light;
@@ -163,6 +170,8 @@
 }
 .info-extent {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: @icon-symbol-target;
         color: @blue-light;
@@ -171,26 +180,35 @@
 }
 .a-social-print {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: "\f02f";
         color: @blue-light;
         &:extend(.a-social-top-);
+        bottom: -0.05em;
     }
 }
 .a-social-references {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: "\f005";
         color: @blue-light;
         &:extend(.a-social-top-);
+        bottom: -0.05em;
     }
 }
 .a-social-email {
     border-bottom: 0;
+    margin-right: .9em;
+    white-space: nowrap;
     &:before {
         content: "\f003";
         color: @blue-light;
         &:extend(.a-social-top-);
+        bottom: -0.05em;
     }
 }
 
