@@ -1,10 +1,10 @@
 /**
  * BUTTON ICON MIXIN
  *
- * Mixin to add icons to buttons by picking the content and position.
+ * Mixin to add icons to buttons by picking the content, position, color and border.
  */
 
-.btn-icon(@icon: "\f054", @position: right) {
+.btn-icon(@icon: "\f054", @position: right, @color: @white, @border: border) {
     position: relative;
     padding-@{position}: 3.5em;
     &:after {
@@ -12,13 +12,18 @@
         font-family: 'Helvetica', 'FontAwesome';
         font-weight: 300;
         content: @icon;
-        color: white;
+        color: @color;
         line-height: 1.9em;
         width: 2em;
         height: 2em;
         text-align: center;
-        border: 2px solid white;
+        border: 2px solid @color;
         border-radius: 50%;
         .vertical-align(absolute);
+        & when (@border = no-border) {
+            border: none;
+            line-height: 2em;
+            width: 1em;
+        }
     }
 }

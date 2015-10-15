@@ -309,12 +309,10 @@ input[type="file"]::before {
 .dropdown {
     border-radius: @form-border-radius;
     border: 1px solid @gray-6;
-    .btn-icon("\F0D7");
+    .btn-icon("\F0D7",@color:@black,@border:no-border);
     padding-right: 0;
     &:after {
-        color: @black;
         pointer-events:none;
-        border: none;
     }
     select {
         background: none;
