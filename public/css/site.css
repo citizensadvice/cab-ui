@@ -7791,6 +7791,9 @@ html[lang="en-SCT"] .main-nav {
     display: none!important;
   }
 }
+.active > .mega-menu {
+  display: table;
+}
 /**
  * PAGE INFO
  *
