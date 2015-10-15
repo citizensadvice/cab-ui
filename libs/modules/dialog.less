@@ -44,7 +44,6 @@
     }
 
 	background: @white;
-	border: 1px solid @black;
 	/* We will limit ourselves to the new syntax and the IE tweener syntax */
 	display: -webkit-flex;
 	display: flex;
@@ -70,11 +69,15 @@
 	to prevent issues with collapsing margins in IE<=9
 	*/
 	padding: @box-spacing-horizontal*.5 @box-spacing-horizontal;
-	background: @gray-0;
+	background: @heritage-blue;
 	position: relative;
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
+	color: @white;
+	h2 {
+		color: @white;
+	}
 }
 
 .dialog__title {
@@ -88,7 +91,7 @@
 }
 
 .dialog__close {
-	color: @black;
+	color: @heritage-blue-light;
 	border: none;
 	background: none;
 	cursor: pointer;
@@ -104,17 +107,19 @@
 	height: 1.4em;
 	overflow: hidden;
     text-align: center;
+	&:hover,
+	&:active,
+	&:focus {
+	    color: @white;
+	    background: none;
+	    box-shadow: none;
+	}
 }
 
 .dialog__close-icon:before {
     content: @icon-symbol-cross;
     .icon;
     padding: 0;
-}
-.dialog__close:hover,.dialog__close:active,.dialog__close:focus {
-    color: @white;
-    background: @black;
-    box-shadow: none;
 }
 
 .dialog__close-text {
@@ -125,28 +130,20 @@
 .dialog__main {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: 0 1em;
+	padding: @box-spacing-vertical @box-spacing-horizontal;
 	/* This helps make it clearer there the main content can scroll */
-	box-shadow: @inner-shadow;
+	//box-shadow: @inner-shadow;
 	-webkit-flex-grow: 2;
 	-ms-flex-positive: 2;
-	flex-grow: 2;
-		
+	flex-grow: 2;		
 }
 
 .dialog__footer {
-	
 	padding: @box-spacing*.5 @box-spacing-horizontal;
-	background: @gray-5;
+	background: @heritage-blue-lightest;
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-
-    button, a {
-        margin: @box-spacing-horizontal*.2 @box-spacing-horizontal*.4 @box-spacing-horizontal*.2 0;
-    }
-
-
 }
 
 

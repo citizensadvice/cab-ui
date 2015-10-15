@@ -11539,7 +11539,6 @@ html[lang="en-SCT"] .side-nav > h2 {
   /* Don't use height if you want to resize according to the content */
   height: 20em;
   background: #ffffff;
-  border: 1px solid #000000;
   /* We will limit ourselves to the new syntax and the IE tweener syntax */
   display: -webkit-flex;
   display: flex;
@@ -11569,11 +11568,15 @@ html[lang="en-SCT"] .side-nav > h2 {
 	to prevent issues with collapsing margins in IE<=9
 	*/
   padding: 0.5rem 1rem;
-  background: #202020;
+  background: #004b88;
   position: relative;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  color: #ffffff;
+}
+.dialog__header h2 {
+  color: #ffffff;
 }
 .dialog__title {
   font-size: 1.3rem;
@@ -11585,7 +11588,7 @@ html[lang="en-SCT"] .side-nav > h2 {
   padding-right: 1.2em;
 }
 .dialog__close {
-  color: #000000;
+  color: #229cff;
   border: none;
   background: none;
   cursor: pointer;
@@ -11602,6 +11605,13 @@ html[lang="en-SCT"] .side-nav > h2 {
   overflow: hidden;
   text-align: center;
 }
+.dialog__close:hover,
+.dialog__close:active,
+.dialog__close:focus {
+  color: #ffffff;
+  background: none;
+  box-shadow: none;
+}
 .dialog__close-icon:before {
   content: "\2716";
   font-family: 'icomoon';
@@ -11616,13 +11626,6 @@ html[lang="en-SCT"] .side-nav > h2 {
   padding-right: .2em;
   padding: 0;
 }
-.dialog__close:hover,
-.dialog__close:active,
-.dialog__close:focus {
-  color: #ffffff;
-  background: #000000;
-  box-shadow: none;
-}
 .dialog__close-text {
   border: 0;
   clip: rect(0 0 0 0);
@@ -11636,23 +11639,18 @@ html[lang="en-SCT"] .side-nav > h2 {
 .dialog__main {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 0 1em;
+  padding: 0.75rem 1rem;
   /* This helps make it clearer there the main content can scroll */
-  box-shadow: inset 0 10px 10px -13px, inset 0 -10px 10px -13px;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
   flex-grow: 2;
 }
 .dialog__footer {
   padding: 0.5rem 1rem;
-  background: #bfbfbf;
+  background: #f2f8ff;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-}
-.dialog__footer button,
-.dialog__footer a {
-  margin: 0.2rem 0.4rem 0.2rem 0;
 }
 /**
  * REFERENCES
@@ -11754,6 +11752,13 @@ h4 > .ref-heading__toggle {
   margin: -0.9em 0 0 0;
   font-size: 0.875rem;
   padding: .1em .2em;
+  background: none;
+  color: #df3034;
+}
+.ref-dialog__item-button:hover,
+.ref-dialog__item-button:focus,
+.ref-dialog__item-button:active {
+  background: none;
 }
 .ref-dialog__list-item--removed {
   text-decoration: line-through;
