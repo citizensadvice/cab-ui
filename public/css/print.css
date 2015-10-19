@@ -2277,33 +2277,61 @@ hr {
   border-left-width: 0.5rem;
 }
 .callout > h1,
+.dap-panel .dap-panel--base > h1,
+.highlight > h1,
 .callout > h2,
-.callout > h3 {
+.dap-panel .dap-panel--base > h2,
+.highlight > h2,
+.callout > h3,
+.dap-panel .dap-panel--base > h3,
+.highlight > h3 {
   color: #003C64;
   font-size: 1.3rem;
 }
-.callout a {
+.callout a,
+.dap-panel .dap-panel--base a,
+.highlight a {
   border-bottom-color: #4ab7ff;
 }
-.callout > *:first-child {
+.callout > *:first-child,
+.dap-panel .dap-panel--base > *:first-child,
+.highlight > *:first-child {
   padding-top: 0;
 }
 .callout h1:first-child,
+.dap-panel .dap-panel--base h1:first-child,
+.highlight h1:first-child,
 .callout h2:first-child,
+.dap-panel .dap-panel--base h2:first-child,
+.highlight h2:first-child,
 .callout h3:first-child,
+.dap-panel .dap-panel--base h3:first-child,
+.highlight h3:first-child,
 .callout h4:first-child,
+.dap-panel .dap-panel--base h4:first-child,
+.highlight h4:first-child,
 .callout h5:first-child,
-.callout h6:first-child {
+.dap-panel .dap-panel--base h5:first-child,
+.highlight h5:first-child,
+.callout h6:first-child,
+.dap-panel .dap-panel--base h6:first-child,
+.highlight h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-.callout li:first-child {
+.callout li:first-child,
+.dap-panel .dap-panel--base li:first-child,
+.highlight li:first-child {
   padding-top: 0;
 }
-.callout > *:last-child {
+.callout > *:last-child,
+.dap-panel .dap-panel--base > *:last-child,
+.highlight > *:last-child {
   margin-bottom: 0;
 }
-.callout .callout__link {
+.callout .callout__link,
+.dap-panel .dap-panel--base .callout__link,
+.highlight .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75rem 4.5rem 0.75rem 1rem;
@@ -2315,7 +2343,9 @@ hr {
   text-decoration: none;
   position: relative;
 }
-.callout .callout__link:after {
+.callout .callout__link:after,
+.dap-panel .dap-panel--base .callout__link:after,
+.highlight .callout__link:after {
   box-sizing: border-box;
   font-family: 'FontAwesome';
   content: "\f054";
@@ -2329,17 +2359,25 @@ hr {
   width: 3em;
   text-align: center;
 }
-.callout .callout__link:hover {
+.callout .callout__link:hover,
+.dap-panel .dap-panel--base .callout__link:hover,
+.highlight .callout__link:hover {
   background-color: #97bbff;
   color: #191926;
 }
-.callout .callout__link:hover:after {
+.callout .callout__link:hover:after,
+.dap-panel .dap-panel--base .callout__link:hover:after,
+.highlight .callout__link:hover:after {
   background-color: #649aff;
 }
-.callout .callout__link--anchor:after {
+.callout .callout__link--anchor:after,
+.dap-panel .dap-panel--base .callout__link--anchor:after,
+.highlight .callout__link--anchor:after {
   content: "\f063";
 }
-.callout .callout__link:last-child {
+.callout .callout__link:last-child,
+.dap-panel .dap-panel--base .callout__link:last-child,
+.highlight .callout__link:last-child {
   border: none;
 }
 .callout--confirmation {
@@ -2445,33 +2483,61 @@ hr {
   border-left-width: 0.5rem;
 }
 .callout--warning > h1,
+.dap-panel--crucial > h1,
+.highlight--error > h1,
 .callout--warning > h2,
-.callout--warning > h3 {
+.dap-panel--crucial > h2,
+.highlight--error > h2,
+.callout--warning > h3,
+.dap-panel--crucial > h3,
+.highlight--error > h3 {
   color: #DF3034;
   font-size: 1.3rem;
 }
-.callout--warning a {
+.callout--warning a,
+.dap-panel--crucial a,
+.highlight--error a {
   border-bottom-color: #e13d41;
 }
-.callout--warning > *:first-child {
+.callout--warning > *:first-child,
+.dap-panel--crucial > *:first-child,
+.highlight--error > *:first-child {
   padding-top: 0;
 }
 .callout--warning h1:first-child,
+.dap-panel--crucial h1:first-child,
+.highlight--error h1:first-child,
 .callout--warning h2:first-child,
+.dap-panel--crucial h2:first-child,
+.highlight--error h2:first-child,
 .callout--warning h3:first-child,
+.dap-panel--crucial h3:first-child,
+.highlight--error h3:first-child,
 .callout--warning h4:first-child,
+.dap-panel--crucial h4:first-child,
+.highlight--error h4:first-child,
 .callout--warning h5:first-child,
-.callout--warning h6:first-child {
+.dap-panel--crucial h5:first-child,
+.highlight--error h5:first-child,
+.callout--warning h6:first-child,
+.dap-panel--crucial h6:first-child,
+.highlight--error h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-.callout--warning li:first-child {
+.callout--warning li:first-child,
+.dap-panel--crucial li:first-child,
+.highlight--error li:first-child {
   padding-top: 0;
 }
-.callout--warning > *:last-child {
+.callout--warning > *:last-child,
+.dap-panel--crucial > *:last-child,
+.highlight--error > *:last-child {
   margin-bottom: 0;
 }
-.callout--warning .callout__link {
+.callout--warning .callout__link,
+.dap-panel--crucial .callout__link,
+.highlight--error .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75rem 4.5rem 0.75rem 1rem;
@@ -2483,7 +2549,9 @@ hr {
   text-decoration: none;
   position: relative;
 }
-.callout--warning .callout__link:after {
+.callout--warning .callout__link:after,
+.dap-panel--crucial .callout__link:after,
+.highlight--error .callout__link:after {
   box-sizing: border-box;
   font-family: 'FontAwesome';
   content: "\f054";
@@ -2497,21 +2565,31 @@ hr {
   width: 3em;
   text-align: center;
 }
-.callout--warning .callout__link:hover {
+.callout--warning .callout__link:hover,
+.dap-panel--crucial .callout__link:hover,
+.highlight--error .callout__link:hover {
   background-color: #eb9880;
   color: #191926;
 }
-.callout--warning .callout__link:hover:after {
+.callout--warning .callout__link:hover:after,
+.dap-panel--crucial .callout__link:hover:after,
+.highlight--error .callout__link:hover:after {
   background-color: #e47453;
 }
-.callout--warning .callout__link--anchor:after {
+.callout--warning .callout__link--anchor:after,
+.dap-panel--crucial .callout__link--anchor:after,
+.highlight--error .callout__link--anchor:after {
   content: "\f063";
 }
-.callout--warning > :first-child {
+.callout--warning > :first-child,
+.dap-panel--crucial > :first-child,
+.highlight--error > :first-child {
   position: relative;
   padding-right: 3em;
 }
-.callout--warning > :first-child:after {
+.callout--warning > :first-child:after,
+.dap-panel--crucial > :first-child:after,
+.highlight--error > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
@@ -2539,33 +2617,75 @@ hr {
   border-left-width: 0.5rem;
 }
 .callout--alert > h1,
+.dap-panel--important > h1,
+.dap-panel--adviser > h1,
+.highlight--warning > h1,
 .callout--alert > h2,
-.callout--alert > h3 {
+.dap-panel--important > h2,
+.dap-panel--adviser > h2,
+.highlight--warning > h2,
+.callout--alert > h3,
+.dap-panel--important > h3,
+.dap-panel--adviser > h3,
+.highlight--warning > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
-.callout--alert a {
+.callout--alert a,
+.dap-panel--important a,
+.dap-panel--adviser a,
+.highlight--warning a {
   border-bottom-color: #ffbf47;
 }
-.callout--alert > *:first-child {
+.callout--alert > *:first-child,
+.dap-panel--important > *:first-child,
+.dap-panel--adviser > *:first-child,
+.highlight--warning > *:first-child {
   padding-top: 0;
 }
 .callout--alert h1:first-child,
+.dap-panel--important h1:first-child,
+.dap-panel--adviser h1:first-child,
+.highlight--warning h1:first-child,
 .callout--alert h2:first-child,
+.dap-panel--important h2:first-child,
+.dap-panel--adviser h2:first-child,
+.highlight--warning h2:first-child,
 .callout--alert h3:first-child,
+.dap-panel--important h3:first-child,
+.dap-panel--adviser h3:first-child,
+.highlight--warning h3:first-child,
 .callout--alert h4:first-child,
+.dap-panel--important h4:first-child,
+.dap-panel--adviser h4:first-child,
+.highlight--warning h4:first-child,
 .callout--alert h5:first-child,
-.callout--alert h6:first-child {
+.dap-panel--important h5:first-child,
+.dap-panel--adviser h5:first-child,
+.highlight--warning h5:first-child,
+.callout--alert h6:first-child,
+.dap-panel--important h6:first-child,
+.dap-panel--adviser h6:first-child,
+.highlight--warning h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-.callout--alert li:first-child {
+.callout--alert li:first-child,
+.dap-panel--important li:first-child,
+.dap-panel--adviser li:first-child,
+.highlight--warning li:first-child {
   padding-top: 0;
 }
-.callout--alert > *:last-child {
+.callout--alert > *:last-child,
+.dap-panel--important > *:last-child,
+.dap-panel--adviser > *:last-child,
+.highlight--warning > *:last-child {
   margin-bottom: 0;
 }
-.callout--alert .callout__link {
+.callout--alert .callout__link,
+.dap-panel--important .callout__link,
+.dap-panel--adviser .callout__link,
+.highlight--warning .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75rem 4.5rem 0.75rem 1rem;
@@ -2577,7 +2697,10 @@ hr {
   text-decoration: none;
   position: relative;
 }
-.callout--alert .callout__link:after {
+.callout--alert .callout__link:after,
+.dap-panel--important .callout__link:after,
+.dap-panel--adviser .callout__link:after,
+.highlight--warning .callout__link:after {
   box-sizing: border-box;
   font-family: 'FontAwesome';
   content: "\f054";
@@ -2591,21 +2714,36 @@ hr {
   width: 3em;
   text-align: center;
 }
-.callout--alert .callout__link:hover {
+.callout--alert .callout__link:hover,
+.dap-panel--important .callout__link:hover,
+.dap-panel--adviser .callout__link:hover,
+.highlight--warning .callout__link:hover {
   background-color: #fff494;
   color: #191926;
 }
-.callout--alert .callout__link:hover:after {
+.callout--alert .callout__link:hover:after,
+.dap-panel--important .callout__link:hover:after,
+.dap-panel--adviser .callout__link:hover:after,
+.highlight--warning .callout__link:hover:after {
   background-color: #ffef61;
 }
-.callout--alert .callout__link--anchor:after {
+.callout--alert .callout__link--anchor:after,
+.dap-panel--important .callout__link--anchor:after,
+.dap-panel--adviser .callout__link--anchor:after,
+.highlight--warning .callout__link--anchor:after {
   content: "\f063";
 }
-.callout--alert.callout--icon > :first-child {
+.callout--alert.callout--icon > :first-child,
+.dap-panel--important.callout--icon > :first-child,
+.dap-panel--adviser.callout--icon > :first-child,
+.highlight--warning.callout--icon > :first-child {
   position: relative;
   padding-right: 3em;
 }
-.callout--alert.callout--icon > :first-child:after {
+.callout--alert.callout--icon > :first-child:after,
+.dap-panel--important.callout--icon > :first-child:after,
+.dap-panel--adviser.callout--icon > :first-child:after,
+.highlight--warning.callout--icon > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
@@ -2632,33 +2770,47 @@ hr {
   border-left-width: 0.5rem;
 }
 .callout--quote > h1,
+.dap-panel--example > h1,
 .callout--quote > h2,
-.callout--quote > h3 {
+.dap-panel--example > h2,
+.callout--quote > h3,
+.dap-panel--example > h3 {
   color: #606060;
   font-size: 1.3rem;
 }
-.callout--quote a {
+.callout--quote a,
+.dap-panel--example a {
   border-bottom-color: #bfbfbf;
 }
-.callout--quote > *:first-child {
+.callout--quote > *:first-child,
+.dap-panel--example > *:first-child {
   padding-top: 0;
 }
 .callout--quote h1:first-child,
+.dap-panel--example h1:first-child,
 .callout--quote h2:first-child,
+.dap-panel--example h2:first-child,
 .callout--quote h3:first-child,
+.dap-panel--example h3:first-child,
 .callout--quote h4:first-child,
+.dap-panel--example h4:first-child,
 .callout--quote h5:first-child,
-.callout--quote h6:first-child {
+.dap-panel--example h5:first-child,
+.callout--quote h6:first-child,
+.dap-panel--example h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-.callout--quote li:first-child {
+.callout--quote li:first-child,
+.dap-panel--example li:first-child {
   padding-top: 0;
 }
-.callout--quote > *:last-child {
+.callout--quote > *:last-child,
+.dap-panel--example > *:last-child {
   margin-bottom: 0;
 }
-.callout--quote .callout__link {
+.callout--quote .callout__link,
+.dap-panel--example .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75rem 4.5rem 0.75rem 1rem;
@@ -2670,7 +2822,8 @@ hr {
   text-decoration: none;
   position: relative;
 }
-.callout--quote .callout__link:after {
+.callout--quote .callout__link:after,
+.dap-panel--example .callout__link:after {
   box-sizing: border-box;
   font-family: 'FontAwesome';
   content: "\f054";
@@ -2684,17 +2837,21 @@ hr {
   width: 3em;
   text-align: center;
 }
-.callout--quote .callout__link:hover {
+.callout--quote .callout__link:hover,
+.dap-panel--example .callout__link:hover {
   background-color: #e6e6e6;
   color: #191926;
 }
-.callout--quote .callout__link:hover:after {
+.callout--quote .callout__link:hover:after,
+.dap-panel--example .callout__link:hover:after {
   background-color: #cccccc;
 }
-.callout--quote .callout__link--anchor:after {
+.callout--quote .callout__link--anchor:after,
+.dap-panel--example .callout__link--anchor:after {
   content: "\f063";
 }
-.callout--quote .callout__link:last-child {
+.callout--quote .callout__link:last-child,
+.dap-panel--example .callout__link:last-child {
   border: none;
 }
 .callout--white {
@@ -3063,33 +3220,47 @@ hr {
   border-top-width: 0.5rem;
 }
 .callout--related > h1,
+.dap-panel--progress > h1,
 .callout--related > h2,
-.callout--related > h3 {
+.dap-panel--progress > h2,
+.callout--related > h3,
+.dap-panel--progress > h3 {
   color: #006278;
   font-size: 1.3rem;
 }
-.callout--related a {
+.callout--related a,
+.dap-panel--progress a {
   border-bottom-color: #006278;
 }
-.callout--related > *:first-child {
+.callout--related > *:first-child,
+.dap-panel--progress > *:first-child {
   padding-top: 0;
 }
 .callout--related h1:first-child,
+.dap-panel--progress h1:first-child,
 .callout--related h2:first-child,
+.dap-panel--progress h2:first-child,
 .callout--related h3:first-child,
+.dap-panel--progress h3:first-child,
 .callout--related h4:first-child,
+.dap-panel--progress h4:first-child,
 .callout--related h5:first-child,
-.callout--related h6:first-child {
+.dap-panel--progress h5:first-child,
+.callout--related h6:first-child,
+.dap-panel--progress h6:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-.callout--related li:first-child {
+.callout--related li:first-child,
+.dap-panel--progress li:first-child {
   padding-top: 0;
 }
-.callout--related > *:last-child {
+.callout--related > *:last-child,
+.dap-panel--progress > *:last-child {
   margin-bottom: 0;
 }
-.callout--related .callout__link {
+.callout--related .callout__link,
+.dap-panel--progress .callout__link {
   cursor: pointer;
   display: block;
   padding: 0.75rem 4.5rem 0.75rem 1rem;
@@ -3101,7 +3272,8 @@ hr {
   text-decoration: none;
   position: relative;
 }
-.callout--related .callout__link:after {
+.callout--related .callout__link:after,
+.dap-panel--progress .callout__link:after {
   box-sizing: border-box;
   font-family: 'FontAwesome';
   content: "\f054";
@@ -3115,14 +3287,17 @@ hr {
   width: 3em;
   text-align: center;
 }
-.callout--related .callout__link:hover {
+.callout--related .callout__link:hover,
+.dap-panel--progress .callout__link:hover {
   background-color: #d9d9d9;
   color: #191926;
 }
-.callout--related .callout__link:hover:after {
+.callout--related .callout__link:hover:after,
+.dap-panel--progress .callout__link:hover:after {
   background-color: #bfbfbf;
 }
-.callout--related .callout__link--anchor:after {
+.callout--related .callout__link--anchor:after,
+.dap-panel--progress .callout__link--anchor:after {
   content: "\f063";
 }
 .box--warning {
@@ -3197,11 +3372,6 @@ hr {
 .box--warning .callout__link--anchor:after {
   content: "\f063";
 }
-/**
- * HIGHLIGHTS
- *
- * Replacing old callout styles with new mixin.
- */
 /************************************************************************
  * Side panels - extending to style the panels that will run down the left-hand menu.
  */

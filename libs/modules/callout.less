@@ -6,8 +6,9 @@
  * Whole callouts can be automatically calculated by entering only one colour.
  */
 
-.callout {
-
+.callout,
+.dap-panel .dap-panel--base,
+.highlight {
 	// Unstyled
 	.callout( 
 		@blue-lighter, 
@@ -30,7 +31,9 @@
 }
 
 // Red
-.callout--warning {
+.callout--warning,
+.dap-panel--crucial,
+.highlight--error {
 	.callout( 
 		@red-lighter,
 		@red 
@@ -40,7 +43,10 @@
 }
 
 // Yellow
-.callout--alert {
+.callout--alert,
+.dap-panel--important,
+.dap-panel--adviser,
+.highlight--warning {
 	.callout( 
 		@yellow-light 
 	); 
@@ -51,7 +57,8 @@
 }
 
 // Gray
-.callout--quote {
+.callout--quote,
+.dap-panel--example {
 	.callout( 
 		@white, 
 		@gray-2
@@ -104,7 +111,8 @@
 
 
 // Related items callout style
-.callout--related {
+.callout--related,
+.dap-panel--progress {
     .callout( @gray-8, @inventive-teal, @callout-border: @inventive-teal );
     //.callout--border;
     .callout--border--top;
@@ -115,27 +123,6 @@
         @yellow-light 
     ); 
     .callout--border--left;
-}
-
-/**
- * HIGHLIGHTS
- *
- * Replacing old callout styles with new mixin.
- */
-.dap-panel .dap-panel--base, .highlight {
-    &:extend(.callout);
-}
-.dap-panel--crucial, .highlight--error {
-    &:extend(.callout--warning);
-}
-.dap-panel--important, .dap-panel--adviser, .highlight--warning {
-    &:extend(.callout--alert);
-}
-.dap-panel--progress {
-    &:extend(.callout--related);
-}
-.dap-panel--example {
-    &:extend(.callout--quote);
 }
 
 /************************************************************************
