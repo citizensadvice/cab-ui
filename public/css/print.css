@@ -248,9 +248,9 @@ hr {
   border-width: 1px;
   border-left-width: 0.5rem;
 }
-.callout h1,
-.callout h2,
-.callout h3 {
+.callout > h1,
+.callout > h2,
+.callout > h3 {
   color: #003C64;
   font-size: 1.3rem;
 }
@@ -323,9 +323,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.callout--confirmation h1,
-.callout--confirmation h2,
-.callout--confirmation h3 {
+.callout--confirmation > h1,
+.callout--confirmation > h2,
+.callout--confirmation > h3 {
   color: #537D2D;
   font-size: 1.3rem;
 }
@@ -414,9 +414,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.callout--warning h1,
-.callout--warning h2,
-.callout--warning h3 {
+.callout--warning > h1,
+.callout--warning > h2,
+.callout--warning > h3 {
   color: #DF3034;
   font-size: 1.3rem;
 }
@@ -505,9 +505,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.callout--alert h1,
-.callout--alert h2,
-.callout--alert h3 {
+.callout--alert > h1,
+.callout--alert > h2,
+.callout--alert > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -578,9 +578,9 @@ hr {
   border-width: 1px;
   border-left-width: 0.5rem;
 }
-.callout--quote h1,
-.callout--quote h2,
-.callout--quote h3 {
+.callout--quote > h1,
+.callout--quote > h2,
+.callout--quote > h3 {
   color: #606060;
   font-size: 1.3rem;
 }
@@ -652,9 +652,9 @@ hr {
   border: 0px #bfbfbf solid;
   display: block;
 }
-.callout--white h1,
-.callout--white h2,
-.callout--white h3 {
+.callout--white > h1,
+.callout--white > h2,
+.callout--white > h3 {
   color: #FFF;
   font-size: 1.3rem;
 }
@@ -723,9 +723,9 @@ hr {
   border: 0px #e17f04 solid;
   display: block;
 }
-.callout--heritage h1,
-.callout--heritage h2,
-.callout--heritage h3 {
+.callout--heritage > h1,
+.callout--heritage > h2,
+.callout--heritage > h3 {
   color: #004B88;
   font-size: 1.3rem;
 }
@@ -794,9 +794,9 @@ hr {
   border: 0px #449a55 solid;
   display: block;
 }
-.callout--responsible h1,
-.callout--responsible h2,
-.callout--responsible h3 {
+.callout--responsible > h1,
+.callout--responsible > h2,
+.callout--responsible > h3 {
   color: #57486B;
   font-size: 1.3rem;
 }
@@ -865,9 +865,9 @@ hr {
   border: 0px #f56333 solid;
   display: block;
 }
-.callout--inventive h1,
-.callout--inventive h2,
-.callout--inventive h3 {
+.callout--inventive > h1,
+.callout--inventive > h2,
+.callout--inventive > h3 {
   color: #006278;
   font-size: 1.3rem;
 }
@@ -936,9 +936,9 @@ hr {
   border: 0px #665aad solid;
   display: block;
 }
-.callout--generous h1,
-.callout--generous h2,
-.callout--generous h3 {
+.callout--generous > h1,
+.callout--generous > h2,
+.callout--generous > h3 {
   color: #00553F;
   font-size: 1.3rem;
 }
@@ -1008,9 +1008,9 @@ hr {
   display: block;
   border-top-width: 0.5rem;
 }
-.callout--related h1,
-.callout--related h2,
-.callout--related h3 {
+.callout--related > h1,
+.callout--related > h2,
+.callout--related > h3 {
   color: #006278;
   font-size: 1.3rem;
 }
@@ -1080,9 +1080,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.box--warning h1,
-.box--warning h2,
-.box--warning h3 {
+.box--warning > h1,
+.box--warning > h2,
+.box--warning > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1157,9 +1157,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.highlight h1,
-.highlight h2,
-.highlight h3 {
+.highlight > h1,
+.highlight > h2,
+.highlight > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1229,9 +1229,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.highlight--warning h1,
-.highlight--warning h2,
-.highlight--warning h3 {
+.highlight--warning > h1,
+.highlight--warning > h2,
+.highlight--warning > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1301,9 +1301,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.highlight--error h1,
-.highlight--error h2,
-.highlight--error h3 {
+.highlight--error > h1,
+.highlight--error > h2,
+.highlight--error > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1412,9 +1412,9 @@ hr {
   border-width: 1px;
   border-left-width: 0.5rem;
 }
-.dap-panel .dap-panel--base h1,
-.dap-panel .dap-panel--base h2,
-.dap-panel .dap-panel--base h3 {
+.dap-panel .dap-panel--base > h1,
+.dap-panel .dap-panel--base > h2,
+.dap-panel .dap-panel--base > h3 {
   color: #A5BDDC;
   font-size: 1.3rem;
 }
@@ -1487,9 +1487,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.dap-panel--crucial h1,
-.dap-panel--crucial h2,
-.dap-panel--crucial h3 {
+.dap-panel--crucial > h1,
+.dap-panel--crucial > h2,
+.dap-panel--crucial > h3 {
   color: #DF3034;
   font-size: 1.3rem;
 }
@@ -1559,9 +1559,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.dap-panel--important h1,
-.dap-panel--important h2,
-.dap-panel--important h3 {
+.dap-panel--important > h1,
+.dap-panel--important > h2,
+.dap-panel--important > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1631,9 +1631,9 @@ hr {
   display: block;
   border-top-width: 0.5rem;
 }
-.dap-panel--progress h1,
-.dap-panel--progress h2,
-.dap-panel--progress h3 {
+.dap-panel--progress > h1,
+.dap-panel--progress > h2,
+.dap-panel--progress > h3 {
   color: #006278;
   font-size: 1.3rem;
 }
@@ -1703,9 +1703,9 @@ hr {
   display: block;
   border-left-width: 0.5rem;
 }
-.dap-panel--adviser h1,
-.dap-panel--adviser h2,
-.dap-panel--adviser h3 {
+.dap-panel--adviser > h1,
+.dap-panel--adviser > h2,
+.dap-panel--adviser > h3 {
   color: #191926;
   font-size: 1.3rem;
 }
@@ -1776,9 +1776,9 @@ hr {
   border-width: 1px;
   border-left-width: 0.5rem;
 }
-.dap-panel--example h1,
-.dap-panel--example h2,
-.dap-panel--example h3 {
+.dap-panel--example > h1,
+.dap-panel--example > h2,
+.dap-panel--example > h3 {
   color: #606060;
   font-size: 1.3rem;
 }
