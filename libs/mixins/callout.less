@@ -81,6 +81,32 @@
 	}
 }
 
+// Callout icons
+.callout--icon(@icon, @color) {
+    & >:first-child {
+	    position: relative;
+	    padding-right: 3.5em;
+	    &:after {
+	    	position: absolute;
+	        right: 0;
+	        top: @box-spacing-horizontal - @box-spacing-vertical;
+	        font-family: 'Helvetica', 'FontAwesome';
+	        font-size: 2rem;
+	        font-weight: 300;
+	        content: @icon;
+	        color: @color;
+	        line-height: 1em;
+	        width: 1em;
+	        height: 1em;
+	        text-align: center;
+	        border-radius: 50%;
+	    }
+    }
+    & when (@icon = '') {
+        padding-right: 0;
+    }
+}
+
 // Callout borders
 .callout--border ( @callout--border--width: 1px ) {
 	border-width: @callout--border--width;
