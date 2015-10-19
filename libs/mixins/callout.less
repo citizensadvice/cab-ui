@@ -82,8 +82,8 @@
 }
 
 // Callout icons
-.callout--icon(@icon, @color) {
-    & >:first-child {
+.callout--icon(@icon, @color: @text-color) {
+    &.callout--icon >:first-child {
 	    position: relative;
 	    padding-right: 3em;
 	    &:after {
@@ -101,7 +101,7 @@
 	        right: -@box-spacing*.3;
 	        top: -@box-spacing*.08;
 	    }
-    }
+	}
 }
 
 // Callout borders

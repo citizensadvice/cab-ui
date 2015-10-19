@@ -2570,15 +2570,15 @@ pre--confirmation .callout__link:hover:after {
 pre--confirmation .callout__link--anchor:after {
   content: "\f063";
 }
-pre--confirmation > :first-child {
+pre--confirmation.callout--icon > :first-child {
   position: relative;
   padding-right: 3em;
 }
-pre--confirmation > :first-child:after {
+pre--confirmation.callout--icon > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
-  content: "\f058";
+  content: "\f00c";
   color: #537D2D;
   line-height: 1em;
   width: 1em;
@@ -2661,15 +2661,15 @@ pre--warning .callout__link:hover:after {
 pre--warning .callout__link--anchor:after {
   content: "\f063";
 }
-pre--warning > :first-child {
+pre--warning.callout--icon > :first-child {
   position: relative;
   padding-right: 3em;
 }
-pre--warning > :first-child:after {
+pre--warning.callout--icon > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
-  content: "\f06a";
+  content: "\f071";
   color: #DF3034;
   line-height: 1em;
   width: 1em;
@@ -2751,6 +2751,25 @@ pre--alert .callout__link:hover:after {
 }
 pre--alert .callout__link--anchor:after {
   content: "\f063";
+}
+pre--alert.callout--icon > :first-child {
+  position: relative;
+  padding-right: 3em;
+}
+pre--alert.callout--icon > :first-child:after {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  font-weight: 300;
+  content: "\f06a";
+  color: #FFBF47;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 pre--quote {
   padding: 0.75rem 1rem 0.75rem 1rem;
@@ -8225,15 +8244,15 @@ html[lang="en-SCT"] .main-nav {
 .callout--confirmation .callout__link--anchor:after {
   content: "\f063";
 }
-.callout--confirmation > :first-child {
+.callout--confirmation.callout--icon > :first-child {
   position: relative;
   padding-right: 3em;
 }
-.callout--confirmation > :first-child:after {
+.callout--confirmation.callout--icon > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
-  content: "\f058";
+  content: "\f00c";
   color: #537D2D;
   line-height: 1em;
   width: 1em;
@@ -8316,15 +8335,15 @@ html[lang="en-SCT"] .main-nav {
 .callout--warning .callout__link--anchor:after {
   content: "\f063";
 }
-.callout--warning > :first-child {
+.callout--warning.callout--icon > :first-child {
   position: relative;
   padding-right: 3em;
 }
-.callout--warning > :first-child:after {
+.callout--warning.callout--icon > :first-child:after {
   font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
-  content: "\f06a";
+  content: "\f071";
   color: #DF3034;
   line-height: 1em;
   width: 1em;
@@ -8406,6 +8425,25 @@ html[lang="en-SCT"] .main-nav {
 }
 .callout--alert .callout__link--anchor:after {
   content: "\f063";
+}
+.callout--alert.callout--icon > :first-child {
+  position: relative;
+  padding-right: 3em;
+}
+.callout--alert.callout--icon > :first-child:after {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  font-weight: 300;
+  content: "\f06a";
+  color: #FFBF47;
+  line-height: 1em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 .callout--quote {
   padding: 0.75rem 1rem 0.75rem 1rem;
