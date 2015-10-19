@@ -83,7 +83,7 @@
 
 // Callout icons
 .callout--icon(@icon, @color: @text-color) {
-    &.callout--icon >:first-child {
+    & >:first-child {
 	    position: relative;
 	    padding-right: 3em;
 	    &:after {
@@ -99,7 +99,7 @@
 	        border-radius: 50%;
 	    	position: absolute;
 	        right: -@box-spacing*.3;
-	        top: -@box-spacing*.08;
+		    top: -@box-spacing*.08;
 	    }
 	}
 }

@@ -14,95 +14,100 @@
 		@blue 
 	); 
 	.callout--border; 
-	.callout--border--left; 
+	.callout--border--left;
+}
 
-	// Green
-	&--confirmation {
-		.callout( 
-			@green-light, 
-			@green 
-		); 
-		.callout--border--left;
+// Green
+.callout--confirmation {
+	.callout( 
+		@green-light, 
+		@green 
+	); 
+	.callout--border--left;
+    &.callout--icon {
         .callout--icon("\f00c",@green);
-	}
+    }
+}
 
-	// Red
-	&--warning {
-		.callout( 
-			@red-lighter,
-			@red 
-		); 
-		.callout--border--left;
-        .callout--icon("\f071",@red);
-	}
+// Red
+.callout--warning {
+	.callout( 
+		@red-lighter,
+		@red 
+	); 
+	.callout--border--left;
+    .callout--icon("\f071",@red);
+}
 
-	// Yellow
-	&--alert {
-		.callout( 
-			@yellow-light 
-		); 
-		.callout--border--left;
+// Yellow
+.callout--alert {
+	.callout( 
+		@yellow-light 
+	); 
+	.callout--border--left;
+    &.callout--icon {
         .callout--icon("\f06a",@yellow);
-	}
-
-	// Gray
-    &--quote {
-    	.callout( 
-    		@white, 
-    		@gray-2
-    	); 
-    	.callout--border; 
-    	.callout--border--left; 
     }
+}
 
-  // White
-  &--white {
-    .callout( 
-      @white,
-      @white 
-    ); 
-  }
+// Gray
+.callout--quote {
+	.callout( 
+		@white, 
+		@gray-2
+	); 
+	.callout--border; 
+	.callout--border--left; 
+}
 
-    // Brand - Heritage
-    &--heritage	{
-    	.callout( 
-    		@heritage-yellow, 
-    		@heritage-blue, 
-    		@heritage-blue 
-    	); 
-    }
+// White
+.callout--white {
+.callout( 
+  @white,
+  @white 
+); 
+}
 
-    // Brand - Responsible
-    &--responsible { 
-    	.callout( 
-    		@responsible-aqua, 
-    		@responsible-purple, 
-    		@responsible-purple 
-    	); 
-    }
+// Brand - Heritage
+.callout--heritage	{
+	.callout( 
+		@heritage-yellow, 
+		@heritage-blue, 
+		@heritage-blue 
+	); 
+}
 
-    // Brand - Inventive
-    &--inventive { 
-    	.callout( 
-    		@inventive-pink, 
-    		@inventive-teal 
-    	);
-    }
+// Brand - Responsible
+.callout--responsible { 
+	.callout( 
+		@responsible-aqua, 
+		@responsible-purple, 
+		@responsible-purple 
+	); 
+}
 
-    // Brand - Generous
-    &--generous	{ 
-    	.callout( 
-    		@generous-mauve, 
-    		@generous-green 
-    	);
-    }
+// Brand - Inventive
+.callout--inventive { 
+	.callout( 
+		@inventive-pink, 
+		@inventive-teal 
+	);
+}
 
-    &--related {
-        .callout( @gray-8, @inventive-teal, @callout-border: @inventive-teal );
-        //.callout--border;
-        .callout--border--top;
-    }
+// Brand - Generous
+.callout--generous	{ 
+	.callout( 
+		@generous-mauve, 
+		@generous-green 
+	);
+}
 
+
+// Related items callout style
+.callout--related {
+    .callout( @gray-8, @inventive-teal, @callout-border: @inventive-teal );
+    //.callout--border;
+    .callout--border--top;
 }
 
 .box--warning {
@@ -117,101 +122,20 @@
  *
  * Replacing old callout styles with new mixin.
  */
-
-.highlight {
-  .callout(
-    @callout-background: lighten( @heritage-blue, 58% ),
-    @callout-border: @heritage-blue
-  );
-  .callout--border--left;
+.dap-panel .dap-panel--base, .highlight {
+    &:extend(.callout);
 }
-
-.highlight--warning {
-  .callout(
-    @callout-background: lighten( @orange, 40% ),
-    @callout-border: @orange
-  );
-  .callout--border--left;
+.dap-panel--crucial, .highlight--error {
+    &:extend(.callout--warning);
 }
-
-.highlight--error {
-  .callout(
-    @callout-background: lighten( @red, 60% ),
-    @callout-border: @red
-  );
-  .callout--border--left;
+.dap-panel--important, .dap-panel--adviser, .highlight--warning {
+    &:extend(.callout--alert);
 }
-
-/* Obsolete
-.sideContent:extend( .box all ) {
-
-    & > h3 {
-        // This should really be a h2
-        margin: 0;
-        font-size: 1.6em;
-    }
-
-    // Extend is broken on media selectors in dotless
-    @media (max-width: @screen-sm-max ) {
-        margin: 0 0 1em 1em;
-    }
-    
-    @media( max-width: @screen-xs-max ) {
-        float: none;
-        clear: none;
-        width: auto;
-        margin: 0;
-    }
-}
-
-// Obsolete
-.inlineContent:extend( .box all ) {
-    
-    overflow: hidden; // Allows the div to wrap around floated divs
-
-    & > h3 {
-        // This should really be a h2
-        margin: 0;
-        font-size: 1.6em;
-    }
-}*/
-
-/**
- * PANELS
- *
- * These are the functional boxes used for callouts and indicators 
- */
-
-.dap-panel .dap-panel--base {
-    .callout( @blue-lighter, @blue-light ); .callout--border; .callout--border--left; // .callout
-}
-
-// Crucial – this is for only the most important mandatory tasks, we must use this sparingly.
-.dap-panel--crucial {
-    .callout( @red-lighter, @red ); .callout--border--left; // .callout--warning
-}
-
-// Important – these are for generally important actions clients need to take but are not mandatory.
-.dap-panel--important {
-    .callout( @yellow-light ); .callout--border--left; // .callout--alert
-}
-
-// Progress panel - for instructional information, primarily used for 'Next stages'.
 .dap-panel--progress {
-    .callout( @gray-8, @inventive-teal, @callout-border: @inventive-teal );
-    //.callout--border;
-    .callout--border--top;
+    &:extend(.callout--related);
 }
-
-// Adviser box - extending to style the adviser only content.
-.dap-panel--adviser {
-    .callout( @yellow-light ); .callout--border--left; // .callout--alert
-
-}
-
-// Example box - extending to style examples within content.
 .dap-panel--example {
-    .callout( @white, @gray-2 ); .callout--border; .callout--border--left; // .callout--quote
+    &:extend(.callout--quote);
 }
 
 /************************************************************************
