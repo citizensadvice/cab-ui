@@ -2572,13 +2572,10 @@ pre--confirmation .callout__link--anchor:after {
 }
 pre--confirmation > :first-child {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 3em;
 }
 pre--confirmation > :first-child:after {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
-  font-family: 'Helvetica', 'FontAwesome';
+  font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
   content: "\f058";
@@ -2588,6 +2585,9 @@ pre--confirmation > :first-child:after {
   height: 1em;
   text-align: center;
   border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 pre--warning {
   padding: 0.75rem 1rem 0.75rem 1rem;
@@ -2663,13 +2663,10 @@ pre--warning .callout__link--anchor:after {
 }
 pre--warning > :first-child {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 3em;
 }
 pre--warning > :first-child:after {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
-  font-family: 'Helvetica', 'FontAwesome';
+  font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
   content: "\f06a";
@@ -2679,6 +2676,9 @@ pre--warning > :first-child:after {
   height: 1em;
   text-align: center;
   border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 pre--alert {
   padding: 0.75rem 1rem 0.75rem 1rem;
@@ -8227,13 +8227,10 @@ html[lang="en-SCT"] .main-nav {
 }
 .callout--confirmation > :first-child {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 3em;
 }
 .callout--confirmation > :first-child:after {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
-  font-family: 'Helvetica', 'FontAwesome';
+  font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
   content: "\f058";
@@ -8243,6 +8240,9 @@ html[lang="en-SCT"] .main-nav {
   height: 1em;
   text-align: center;
   border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 .callout--warning {
   padding: 0.75rem 1rem 0.75rem 1rem;
@@ -8318,13 +8318,10 @@ html[lang="en-SCT"] .main-nav {
 }
 .callout--warning > :first-child {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 3em;
 }
 .callout--warning > :first-child:after {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
-  font-family: 'Helvetica', 'FontAwesome';
+  font-family: 'FontAwesome';
   font-size: 2rem;
   font-weight: 300;
   content: "\f06a";
@@ -8334,6 +8331,9 @@ html[lang="en-SCT"] .main-nav {
   height: 1em;
   text-align: center;
   border-radius: 50%;
+  position: absolute;
+  right: -0.3rem;
+  top: -0.08rem;
 }
 .callout--alert {
   padding: 0.75rem 1rem 0.75rem 1rem;

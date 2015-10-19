@@ -2,6 +2,7 @@
  * PRINT STYLESHEET
  */
 
+@import "../vendors/font-awesome/less/font-awesome";
 @import "../base/colors";
 @import "../base/variables";
 @import "../base/type";
@@ -101,6 +102,10 @@ aside,
 	padding: @box-spacing;
 	margin: @box-spacing 0;
 	//page-break-inside: avoid;
+}
+
+.callout__link:after {
+	display: none;
 }
 
 .accordionContent,

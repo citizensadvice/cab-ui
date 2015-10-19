@@ -85,12 +85,9 @@
 .callout--icon(@icon, @color) {
     & >:first-child {
 	    position: relative;
-	    padding-right: 3.5em;
+	    padding-right: 3em;
 	    &:after {
-	    	position: absolute;
-	        right: 0;
-	        top: @box-spacing-horizontal - @box-spacing-vertical;
-	        font-family: 'Helvetica', 'FontAwesome';
+	        font-family: 'FontAwesome';
 	        font-size: 2rem;
 	        font-weight: 300;
 	        content: @icon;
@@ -100,10 +97,10 @@
 	        height: 1em;
 	        text-align: center;
 	        border-radius: 50%;
+	    	position: absolute;
+	        right: -@box-spacing*.3;
+	        top: -@box-spacing*.08;
 	    }
-    }
-    & when (@icon = '') {
-        padding-right: 0;
     }
 }
 
