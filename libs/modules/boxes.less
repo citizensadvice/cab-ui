@@ -5,6 +5,30 @@
  *
  */
 
+.index-page__box {
+    margin: @box-spacing*.5;
+    padding: @box-spacing;
+    background-color: @heritage-blue-lightest;
+    border-top-width: 4px;
+
+    & > h2 {
+        margin: 0 0 @box-spacing*.7;
+        font-size: @font-size-medium;
+        color: @heritage-blue;
+        a {
+            border-bottom: none;
+            color: @heritage-blue;
+        }
+    }
+
+    & > h3 {
+        margin: 0 0 @box-spacing*.7;
+        font-size: @font-size-base;
+        color: @text-color;
+    }
+}
+
+
  .beta-box() {
     background-color: @gray-7;
     border-top-width: 4px;
