@@ -9891,7 +9891,7 @@ input.tablesort-filter {
   padding: 1rem;
   margin: 0.5rem;
   background-color: #f2f8ff;
-  color: #004b88;
+  color: #191926;
   border-top-width: 4px;
   display: block;
 }
@@ -9942,7 +9942,7 @@ input.tablesort-filter {
 .index-box__purple {
   padding: 1rem;
   margin: 0.5rem;
-  background-color: #b5afd7;
+  background-color: #d4d1e8;
   color: #191926;
   border-top-width: 4px;
   display: block;
@@ -9960,6 +9960,28 @@ input.tablesort-filter {
 }
 .index-page__box--purple > h3,
 .index-box__purple > h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  color: #191926;
+}
+.index-box__info {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: #fee4c3;
+  color: #191926;
+  border-top-width: 4px;
+  display: block;
+}
+.index-box__info > h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.3rem;
+  color: #004b88;
+}
+.index-box__info > h2 a {
+  border-bottom: none;
+  color: #004b88;
+}
+.index-box__info > h3 {
   margin: 0 0 0.7rem;
   font-size: 1rem;
   color: #191926;

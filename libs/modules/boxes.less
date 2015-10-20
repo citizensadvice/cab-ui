@@ -37,7 +37,7 @@
 .index-box {
     .index-box( 
         @heritage-blue-lightest, 
-        @heritage-blue 
+        @text-color 
     ); 
 }
 .index-page__box--green,
@@ -51,7 +51,14 @@
 .index-page__box--purple,
 .index-box__purple {
     .index-box( 
-        @generous-mauve, 
+        lighten(@generous-mauve, 10%), 
+        @text-color 
+    ); 
+}
+
+.index-box__info {
+    .index-box( 
+        @heritage-yellow-lighter, 
         @text-color 
     ); 
 }
