@@ -272,3 +272,22 @@ blockquote {
     color: @gray-3;
   }
 }
+
+.advisor {
+    cursor: help;
+    display: inline;
+    background: #556270;
+    color: @white; 
+    padding: .25em;
+    position: relative;
+    padding-left: 0;
+    box-shadow: 0.25em 0 0 #556270,  
+                -.25em 0 0 #556270;
+    &--box {
+        position: relative;
+        .main-content__sidebar;
+        .callout--related;
+        display: none;
+        border-color: #556270;
+    }
+}

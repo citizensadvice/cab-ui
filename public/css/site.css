@@ -2708,6 +2708,103 @@ blockquote {
 blockquote p.lighten {
   color: #808080;
 }
+.advisor {
+  cursor: help;
+  display: inline;
+  background: #556270;
+  color: #FFF;
+  padding: .25em;
+  position: relative;
+  padding-left: 0;
+  box-shadow: 0.25em 0 0 #556270, -0.25em 0 0 #556270;
+}
+.advisor--box {
+  position: relative;
+  float: left;
+  width: 33.33333333%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  margin: 0;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin: 0.75rem 0;
+  background-color: #f2f2f2;
+  color: #191926;
+  border: 0px #006278 solid;
+  display: block;
+  border-top-width: 0.5rem;
+  display: none;
+  border-color: #556270;
+}
+@media (max-width: 599px) {
+  .advisor--box {
+    float: none;
+    width: auto;
+    margin-top: 1.5rem;
+  }
+}
+.advisor--box > h1,
+.advisor--box > h2,
+.advisor--box > h3 {
+  color: #006278;
+  font-size: 1.3rem;
+}
+.advisor--box a {
+  border-bottom-color: #006278;
+}
+.advisor--box > *:first-child {
+  padding-top: 0;
+}
+.advisor--box h1:first-child,
+.advisor--box h2:first-child,
+.advisor--box h3:first-child,
+.advisor--box h4:first-child,
+.advisor--box h5:first-child,
+.advisor--box h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.advisor--box li:first-child {
+  padding-top: 0;
+}
+.advisor--box > *:last-child {
+  margin-bottom: 0;
+}
+.advisor--box .callout__link {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 4.5rem 0.75rem 1rem;
+  margin: 0.75rem -1rem -0.75rem -1rem;
+  border: none;
+  background-color: #e5e5e5;
+  color: #191926;
+  border-bottom: 1px solid #006278;
+  text-decoration: none;
+  position: relative;
+}
+.advisor--box .callout__link:after {
+  box-sizing: border-box;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  color: #191926;
+  background-color: #d9d9d9;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 3em;
+  width: 3em;
+  text-align: center;
+}
+.advisor--box .callout__link:hover {
+  background-color: #d9d9d9;
+  color: #191926;
+}
+.advisor--box .callout__link:hover:after {
+  background-color: #bfbfbf;
+}
+.advisor--box .callout__link--anchor:after {
+  content: "\f063";
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS
