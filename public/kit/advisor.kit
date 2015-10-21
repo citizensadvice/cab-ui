@@ -117,21 +117,21 @@
                                 </span>
                             </h2>
                             <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <span class="advisor" id="advisorInline1">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</span></p>
+                            <p id="advisorInline1"><span class="inline--button" id="advisorInline1Button"></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore <span class="advisor" id="advisor1">magna</span> aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                         </section>
 
                         <section id="step2">
                             <h2>Second use of &lt;h2&gt; in content</h2>
 
                             <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis <span class="advisor" id="advisorInline2">nostrud</span> exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            <p id="advisorInline2"><span class="inline--button" id="advisorInline2Button"></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <span class="advisor" id="advisor2">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</span></p>
                         </section>
 
                         <section id="step3">
                             <h2>Third use of &lt;h2&gt; in content</h2>
 
                             <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                         </section>
 
                         <section id="step4">
@@ -234,25 +234,57 @@
     </div>
 
 <script type="text/javascript">
-    var boxTop = $('.side-nav-beta').offset().top;
-    var boxHeight = $('.side-nav-beta').height();
+    var navTop = $('.side-nav-beta').offset().top;
+    var navHeight = $('.side-nav-beta').height();
     
     var contentTop1 = $('#advisorInline1').offset().top;
-    var theTop = contentTop1 - boxTop - boxHeight;
-    $('#advisorInline1--box').css('top', theTop+'px');
+    var theTop1 = contentTop1 - navTop - navHeight;
+    //$('#advisorInline1--box').css('top', theTop+'px');
     
     var contentTop2 = $('#advisorInline2').offset().top;
-    var theTop = contentTop2 - boxTop - boxHeight;
-    $('#advisorInline2--box').css('top', theTop+'px');
+    var theTop2 = contentTop2 - navTop - navHeight;
+    //$('#advisorInline2--box').css('top', theTop+'px');
 
     $(document).ready(function(){
-        $('#advisorInline1').click(function() {        
+        $('#advisorInline1Button').click(function() {     
+            $('#advisorInline1--box').css('top', theTop1+'px');   
+
             $('#advisorInline1--box').slideToggle('show');
-            $('#advisorInline2--box').hide();
+            $('#advisorInline2--box').slideUp();
         });
-        $('#advisorInline2').click(function() {      
-            $('#advisorInline1--box').hide();  
+        $('#advisorInline2Button').click(function() {
+            $('#advisorInline2--box').css('top', theTop2+'px');  
+
+            $('#advisorInline1--box').slideUp();
             $('#advisorInline2--box').slideToggle('show');
+        });
+
+        $('#advisor1').click(function(){
+            if($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0)
+                $(".tooltip.1").remove();
+            } else {
+                $(this).attr('data-click-state', 1)
+                $("#advisor1").append('<div class="tooltip 1"><p>This is a tooltip. It is typically used to explain something to a user without taking up space on the page.</p></div>');
+                var tooltipHeight = $('.tooltip').height();
+                var tooltipHeight = tooltipHeight - tooltipHeight * 2 - 32;
+                $('.tooltip.1').css('top', tooltipHeight);
+                //alert(tooltipHeight);
+            }
+        });
+
+        $('#advisor2').click(function(){
+            if($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0)
+                $(".tooltip.2").remove();
+            } else {
+                $(this).attr('data-click-state', 1)
+                $("#advisor2").append('<div class="tooltip 2"><p>This is a tooltip. It is typically used to explain something to a user without taking up space on the page.</p></div>');
+                var tooltipHeight = $('.tooltip').height();
+                var tooltipHeight = tooltipHeight - tooltipHeight * 2 - 32;
+                $('.tooltip.2').css('top', tooltipHeight);
+                //alert(tooltipHeight);
+            }
         });
     });
 </script>

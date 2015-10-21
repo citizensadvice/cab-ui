@@ -2711,12 +2711,15 @@ blockquote p.lighten {
 .advisor {
   cursor: help;
   display: inline;
-  background: #556270;
-  color: #FFF;
+  background: #eeeee8;
   padding: .25em;
   position: relative;
   padding-left: 0;
-  box-shadow: 0.25em 0 0 #556270, -0.25em 0 0 #556270;
+  box-shadow: 0.25em 0 0 #eeeee8, -0.25em 0 0 #eeeee8;
+}
+.advisor:before {
+  content: "\00a0\f06e\00a0";
+  font-family: 'Helvetica', 'FontAwesome';
 }
 .advisor--box {
   position: relative;
@@ -2724,16 +2727,16 @@ blockquote p.lighten {
   width: 33.33333333%;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  margin: 0;
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
   background-color: #f2f2f2;
   color: #191926;
-  border: 0px #006278 solid;
+  border: 0px #b9b9a4 solid;
   display: block;
-  border-top-width: 0.5rem;
+  border-right: 0.5rem solid;
   display: none;
-  border-color: #556270;
+  border-color: #b9b9a4;
+  margin: 0;
 }
 @media (max-width: 599px) {
   .advisor--box {
@@ -2745,11 +2748,11 @@ blockquote p.lighten {
 .advisor--box > h1,
 .advisor--box > h2,
 .advisor--box > h3 {
-  color: #006278;
+  color: #191926;
   font-size: 1.3rem;
 }
 .advisor--box a {
-  border-bottom-color: #006278;
+  border-bottom-color: #b9b9a4;
 }
 .advisor--box > *:first-child {
   padding-top: 0;
@@ -2777,7 +2780,7 @@ blockquote p.lighten {
   border: none;
   background-color: #e5e5e5;
   color: #191926;
-  border-bottom: 1px solid #006278;
+  border-bottom: 1px solid #b9b9a4;
   text-decoration: none;
   position: relative;
 }
@@ -2804,6 +2807,72 @@ blockquote p.lighten {
 }
 .advisor--box .callout__link--anchor:after {
   content: "\f063";
+}
+.inline--button {
+  float: right;
+  position: relative;
+  padding-right: 3.5em;
+  margin-right: -1em;
+}
+.inline--button:after {
+  right: 0.5em;
+  font-family: 'Helvetica', 'FontAwesome';
+  font-weight: 300;
+  content: "\f06e";
+  color: #FFF;
+  line-height: 1.9em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 50%;
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 50%;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: none;
+  line-height: 2em;
+  width: 1em;
+}
+.inline--button:after {
+  background-color: #b9b9a4;
+  width: 2em;
+  cursor: pointer;
+}
+div.tooltip {
+  background-color: #f2f2f2;
+  color: #191926;
+  position: absolute;
+  left: -150px;
+  z-index: 1000000;
+  width: 300px;
+  border-bottom: 8px solid #b9b9a4;
+  padding: 10px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+div.tooltip > :last-child {
+  margin-bottom: 0;
+}
+div.tooltip:before {
+  border: 8px solid;
+  border-color: #f2f2f2 transparent transparent transparent;
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
 }
 /* Base files */
 /**

@@ -273,21 +273,73 @@ blockquote {
   }
 }
 
+@advisor-color: #b9b9a4;
+
 .advisor {
     cursor: help;
     display: inline;
-    background: #556270;
-    color: @white; 
+    background: tint(@advisor-color, 75%);
+    //color: @white; 
     padding: .25em;
     position: relative;
     padding-left: 0;
-    box-shadow: 0.25em 0 0 #556270,  
-                -.25em 0 0 #556270;
-    &--box {
-        position: relative;
-        .main-content__sidebar;
-        .callout--related;
-        display: none;
-        border-color: #556270;
+    box-shadow: 0.25em 0 0 tint(@advisor-color, 75%),
+                -.25em 0 0 tint(@advisor-color, 75%);
+    //border-radius: 2px 0 2px 0;
+    &:before {
+        content: "\00a0\f06e\00a0";
+        font-family: 'Helvetica', 'FontAwesome';
     }
+}
+
+.advisor--box {
+    position: relative;
+    .main-content__sidebar;
+    .callout(@gray-8,@callout-border:@advisor-color);
+    border-right: @box-spacing/2 solid;
+    display: none;
+    border-color: @advisor-color;
+    margin: 0;
+}
+
+.inline--button {
+    float: right;
+    .btn-icon("\f06e",@border:no-border);
+    margin-right: -1em;
+    &:after {
+        background-color: @advisor-color;
+        width: 2em;
+        cursor: pointer;
+    }
+}
+
+div.tooltip {
+    background-color: @gray-8;
+    color: @text-color;
+    position: absolute;
+    left: -150px;
+    z-index: 1000000;
+    width: 300px;
+    //border-radius: 2px;
+    border-bottom: 8px solid @advisor-color;
+    padding: 10px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    & >:last-child {
+        margin-bottom: 0;
+    }
+}
+div.tooltip:before {
+    border: 8px solid;
+    border-color: @gray-8 transparent transparent transparent;
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
 }
