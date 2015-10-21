@@ -4320,7 +4320,7 @@ input.custom-dropdown__button {
   max-width: 100%;
   margin: auto;
   clear: both;
-  padding: calc(1.5rem) 0;
+  padding: calc(0.525rem) 0 0.525rem 0.75rem;
 }
 .flex-container {
   max-width: 1366px;
@@ -4766,6 +4766,9 @@ input.custom-dropdown__button {
   padding-right: 0.25em;
   color: #253460;
   font-size: 75%;
+}
+.a- a {
+  border-bottom: none;
 }
 .a-external-link:after {
   content: "\f08e";
@@ -6599,6 +6602,9 @@ input.main-header__search__input {
   border-bottom: #eeeeee 1px solid;
   font-size: 0.875rem;
   color: #606060;
+}
+.title__subheading a {
+  border-bottom: none;
 }
 .title__subheading .btn {
   padding: .3em .5em;
@@ -9887,6 +9893,7 @@ input.tablesort-filter {
  *
  */
 .index-page__box,
+.home-page__box,
 .index-box {
   padding: 1rem;
   margin: 0.5rem;
@@ -9896,17 +9903,20 @@ input.tablesort-filter {
   display: block;
 }
 .index-page__box > h2,
+.home-page__box > h2,
 .index-box > h2 {
   margin: 0 0 0.7rem;
   font-size: 1.3rem;
   color: #004b88;
 }
 .index-page__box > h2 a,
+.home-page__box > h2 a,
 .index-box > h2 a {
   border-bottom: none;
   color: #004b88;
 }
 .index-page__box > h3,
+.home-page__box > h3,
 .index-box > h3 {
   margin: 0 0 0.7rem;
   font-size: 1rem;
