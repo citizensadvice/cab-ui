@@ -5,6 +5,68 @@
  *
  */
 
+// Move to mixins 
+
+.index-box ( 
+        @index-box-background: @heritage-blue-lightest,
+        @index-box-text: @text-color, 
+    ){
+    padding: @box-spacing;
+    margin: @box-spacing*.5;
+    background-color: @index-box-background;
+    color: @index-box-text;
+    border-top-width: 4px;
+    display: block;
+    & > h2 {
+        margin: 0 0 @box-spacing*.7;
+        font-size: @font-size-medium;
+        color: @heritage-blue;
+        a {
+            border-bottom: none;
+            color: @heritage-blue;
+        }
+    }
+    & > h3 {
+        margin: 0 0 @box-spacing*.7;
+        font-size: @font-size-base;
+        color: @text-color;
+    }
+}
+
+.index-page__box,
+.home-page__box,
+.index-box {
+    .index-box( 
+        @heritage-blue-lightest, 
+        @text-color 
+    ); 
+}
+.index-page__box--green,
+.index-box__green {
+    .index-box( 
+        @green-lighter, 
+        @text-color 
+    ); 
+}
+
+.index-page__box--purple,
+.index-box__purple {
+    .index-box( 
+        lighten(@generous-mauve, 10%), 
+        @text-color 
+    ); 
+}
+
+.index-box__info {
+    .index-box( 
+        @heritage-yellow-lighter, 
+        @text-color 
+    ); 
+}
+
+
+
+
  .beta-box() {
     background-color: @gray-7;
     border-top-width: 4px;
