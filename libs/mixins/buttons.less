@@ -1,5 +1,30 @@
 // Button mixin – add styles to 'modules/buttons.less'
 
+.btn(
+        @btn-text: @heritage-blue, 
+        @btn-background: @aqua,
+        @btn-background-hover: darken(@btn-background, 10%) 
+    ){
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    background-color: @btn-background;
+    border: none;
+    color: @btn-text;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    font-weight: bold;
+    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: @btn-background-hover;
+        outline: 0;
+    }
+    &:focus {
+        -webkit-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        -moz-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        box-shadow: 0px 0px 0px 2px @heritage-yellow;
+    }
+}
 
 .btn-small ( 
         @btn-small-text: @heritage-blue, 

@@ -2,6 +2,7 @@
 // Basic button styling
 // To style a link to look like a button use .button
 
+/*
 .btn,
 .button,
 button,
@@ -28,6 +29,7 @@ input[type=button] {
         box-shadow: 0px 0px 0px 2px @heritage-yellow;
     }
 }
+
 
 .btn-primary,
 .button--blue {
@@ -85,6 +87,90 @@ input[type=button] {
         background-color: @green-dark;  
         color: @white;           
     }
+} 
+*/
+
+.btn(
+        @btn-text: @heritage-blue, 
+        @btn-background: @aqua,
+        @btn-background-hover: darken(@btn-background, 10%) 
+    ){
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    background-color: @btn-background;
+    border: none;
+    color: @btn-text;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    font-weight: bold;
+    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: @btn-background-hover;
+        outline: 0;
+    }
+    &:focus {
+        -webkit-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        -moz-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        box-shadow: 0px 0px 0px 2px @heritage-yellow;
+    }
+}
+
+.btn,
+.button,
+.btn-primary,
+.button--blue,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    .btn(); 
+}
+
+.btn-primary-light {
+    .btn(
+    @btn-background: @aqua-light,
+    @btn-background-hover: @aqua
+    ); 
+}
+
+.btn-secondary {
+    .btn (
+    @white,
+    @heritage-blue, 
+    darken(@heritage-blue, 5%)
+    );
+}
+
+.btn-right {
+    float: right;
+    margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;    
+}
+
+.btn-disabled,
+.button--grey {
+    cursor: not-allowed;
+    .btn(
+    @gray-3,
+    @gray-6,
+    @gray-6
+    );
+}
+
+.btn-warning {
+    .btn(
+    @white,
+    @red,
+    );
+}
+
+.btn-success,
+.button--green {
+    .btn(
+    @white,
+    @green,
+    @green-dark
+    );
 }    
 
 
