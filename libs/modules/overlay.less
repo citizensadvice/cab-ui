@@ -91,6 +91,28 @@
 						background-color: @red-lightest;
 					}
 				}
+				&.removed {
+					background-color: @red-lightest;
+					a {
+						text-decoration: line-through;
+					}
+					button {
+						.btn-icon("\f0e2",@border:no-border);
+						.vertical-align(absolute);
+						right: @box-spacing-horizontal*.75;
+						margin: 0;
+						padding: @box-spacing;
+						&:hover ~ p {
+							background-color: @gray-8;
+							a {
+								text-decoration: none;
+							}
+						}
+					}
+					a {
+						border: none;
+					}
+				}
 			}
 		}
 	}
@@ -109,6 +131,25 @@
 		    &.reference__list {
 				padding: @box-spacing-vertical/3 @box-spacing-horizontal/2;
 			    font-weight: 700;
+			}
+		}
+		.btn-group {
+			display: inline-block;
+			white-space: nowrap;
+    		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
+			.btn {
+				border-radius: 0;
+				margin: 0;
+				margin-right: 1px;
+				display: inline-block;
+				//float: left;
+			}
+			& >:first-child {
+				border-radius: 2px 0 0 2px;
+			}
+			& >:last-child {
+				border-radius: 0 2px 2px 0;
+				margin: 0;
 			}
 		}
 		.left {
