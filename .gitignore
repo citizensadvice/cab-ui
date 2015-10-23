@@ -7,3 +7,4 @@ config.codekit
 #/public/css/site.css
 .DS_Store
 *.map
+README.html
