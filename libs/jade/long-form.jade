@@ -1,5 +1,5 @@
 block settings
-	- var title = "Example of a long form advice content page"
+	- var title = "Long form advice content page"
 	- var sidebar = true
 
 extends ../template/template.jade
@@ -10,9 +10,12 @@ block breadcrumbs
 		{title: "Layout"}])
 
 block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Sibling page 1", href: "#"}, 
-		{title: "Sibling page 2", href: "#"}])
+		{title: "Sibling page 1", href: "long-form.html"},
+		{title: "Sibling page 2", href: "index.html"}],
+		0)
 
 block content
 	.title__subheading

@@ -2,7 +2,7 @@ mixin link(title, href, text)
 	a(href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
 
 mixin breadcrumbs(obj)
-	.main-breadcrumb__content&attributes(attributes)
+	.main-breadcrumb__content
 		- var n = obj.length
 		- each item,index in obj
 			- if(index < n-1) {
@@ -13,12 +13,13 @@ mixin breadcrumbs(obj)
 			span.breadcrumb__item!= item.text ? item.text : item.title
 			- }
 
-mixin sidebar(obj)
-	ul&attributes(attributes)
+mixin sidebar(obj, key)
+	ul
 		li.side-nav-beta__heading.-active.-open
 			a
-				span Section title
+				span #{section}
 		ul
 			- each item,index in obj
+				- active = index === key ? "-current": ""
 				li.side-nav-beta__sibling
-					+link(item.title, item.href, item.text)
+					+link(item.title, item.href, item.text)(class=active)
