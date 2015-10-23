@@ -12284,7 +12284,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   background-color: #fae1e1;
 }
 .overlay__main .reference__list li.removed a {
-  text-decoration: line-through;
+  color: #DF3034;
 }
 .overlay__main .reference__list li.removed button {
   position: relative;
