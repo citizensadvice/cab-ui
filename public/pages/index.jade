@@ -1,0 +1,46 @@
+block settings
+	- var title = "Citizens Advice elements guide"
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		//{title: "Level 2", href: "2.html"}, 
+		{title: "Home"}])
+
+block content
+	div.articleContent
+		p.p-lede This is a guide to demonstrate elements such as layout, typography, forms, buttons and icons.
+		div.flex-container
+			div.flex-col-1-1
+				h2 Contents
+				ul
+					li
+						a(href="layout.html") Layout
+					li(style="list-style: none; display: inline")
+						ul
+							li
+								a(href="long-form.html") Long form content
+							li
+								a(href="toolbar.html") Content toolbar
+					li
+						a(href="tables.html") Tables
+					li Modals
+					li(style="list-style: none; display: inline")
+						ul
+							li
+								a(href="extent.html") Extent Switcher
+							li
+								a(href="overlay.html") Modal/Overlay
+							li
+								a(href="reference.html") Reference tool
+					li
+						a(href="typography.html") Typography
+					li
+						a(href="colours.html") Colours
+					li
+						a(href="callout.html") Callout
+					li
+						a(href="collapse.html") Collapse
+					li
+						a(href="forms.html") Forms
