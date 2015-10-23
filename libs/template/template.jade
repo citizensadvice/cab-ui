@@ -31,12 +31,12 @@ html
 		script(src="../libs/javascript/collapse.js")
 
 	body
-		div.skip-nav
+		.skip-nav
 			a.screenreader.screenreader--focusable Skip to content
 			a.screenreader.screenreader--focusable Skip to footer
 
-		div.cookie-monster.hide-no-cookies.hide-no-js.no-print
-			div.cookie-monster__content
+		.cookie-monster.hide-no-cookies.hide-no-js.no-print
+			.cookie-monster__content
 				div
 					p This site uses cookies.&nbsp; Find out more about #[a(href="#") our use of cookies].
 
@@ -45,32 +45,44 @@ html
 					| Close
 
 		header.main-header
-			div.main-header__content.main-content
+			.main-header__content.main-content
 				a.main-header__logo.no-print(href="", title="Citizens Advice home")
 					img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
 				img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
 
-		div.main-container
+		.main-container
 			nav.main-breadcrumb
 				block breadcrumbs
 
 			aside.section-notice
 				h2.screenreader Notice
 
-				div.section-notice__content
+				.section-notice__content
 					p
 						span.badge NEW
 						| &nbsp;This page is part of #[a(href="#") our new approach to digital advice].
 
-			div.main-content
-				div.title
-					h1.title__heading.js-ref
-						span.title__title #{title}
-				block content
+			.main-content
+				if sidebar
+					main.main-content__right(id="main", role="main")
+						.title
+							h1.title__heading.js-ref
+								span.title__title #{title}
+						block content
+					nav.side-nav-beta
+						block sidebar
+				else
+					.title
+						h1.title__heading.js-ref
+							span.title__title #{title}
+					block content
+
+				section.print-only
+					h2 This section is print only
 
 		footer.main-footer(data-track-zone="footer", id="footer")
-			div.main-footer__content.flex-row.js-equal-height
-				div.main-footer__box.main-footer__box--copyright
+			.main-footer__content.flex-row.js-equal-height
+				.main-footer__box.main-footer__box--copyright
 					div
 						p
 							img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")

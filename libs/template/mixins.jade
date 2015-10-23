@@ -2,7 +2,7 @@ mixin link(title, href, text)
 	a(href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
 
 mixin breadcrumbs(obj)
-	div.main-breadcrumb__content&attributes(attributes)
+	.main-breadcrumb__content&attributes(attributes)
 		- var n = obj.length
 		- each item,index in obj
 			- if(index < n-1) {
@@ -12,3 +12,13 @@ mixin breadcrumbs(obj)
 			- } else {
 			span.breadcrumb__item!= item.text ? item.text : item.title
 			- }
+
+mixin sidebar(obj)
+	ul&attributes(attributes)
+		li.side-nav-beta__heading.-active.-open
+			a
+				span Section title
+		ul
+			- each item,index in obj
+				li.side-nav-beta__sibling
+					+link(item.title, item.href, item.text)
