@@ -1,141 +1,98 @@
 <!DOCTYPE html>
-
-<html class="js hide-cookie-monster" lang="en-GB">
-<head>
+<html>
+  <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <title>Citizens Advice style guide - Digital Guide</title>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="keywords">
+    <meta name="description">
+    <title>Citizens Advice style guide – Citizens Advice elements guide</title>
+    <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
     <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
     <meta content="EWS" name="cab-extent">
     <meta content="/static/images/apple-touch-icon.png">
     <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
-
-  <!-- Stylesheet
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Stylesheets-->
     <link href="css/site.css" media="screen" rel="stylesheet">
     <link href="css/print.css" media="print" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
     <link href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Javascript-->
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
-    <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
-</head>
-
-<body>
-    <div class="skip-nav">
-        <a class="screenreader screenreader--focusable" href="">Skip to content</a> <a class="screenreader screenreader--focusable" href="">Skip to footer</a>
-    </div>
-
+    <script src="../libs/javascript/collapse.js"></script>
+  </head>
+  <body>
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
     <div class="cookie-monster hide-no-cookies hide-no-js no-print">
-        <div class="cookie-monster__content">
-            <div>
-                <p>This site uses cookies.&nbsp; Find out more about <a href="#">our use of cookies</a>.</p>
-            </div><button class="button--blue cookie-monster__close" data-action="close" type="button"><i class="icon-cross"></i> Close</button>
+      <div class="cookie-monster__content">
+        <div>
+          <p>This site uses cookies.&nbsp; Find out more about <a href="#">our use of cookies</a>.</p>
         </div>
+        <button data-action="close" type="button" class="button--blue cookie-monster__close"><i class="icon-cross"></i>Close</button>
+      </div>
     </div>
-
     <header class="main-header">
-        <div class="main-header__content main-content">
-            <a class="main-header__logo no-print" href="" title="Citizens Advice home"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;" src="assets/images/ca-logo_100px.svg"></a><img class="print-only logo" src="assets/images/ca-logo-hz-280px.svg">
-
-            <!--div class="main-header__links" data-track-zone="top-bar">
-                <a class="main-header__menu-link js-toggle-menu" href=""><i class="icon-menu"></i>Menu</a>
-
-                <nav class="main-header__top-nav">
-                    <a href="#">Cymraeg</a> <a class="hide-offline main-header__login" href=""><i class="icon-key"></i>Sign-in</a>
-                </nav>
-
-                <form action="" class="main-header__search hide-offline">
-                    <label class="screenreader" for="main-header__search__input">Search</label> <input class="main-header__search__input" id="main-header__search__input" name="q" placeholder="" type="search"> <button class="main-header__search__submit" title="Search" type="submit"><i class="icon-search icon--no-text"></i> <span class="screenreader">Search</span></button>
-                </form>
-            </div -->
-
-        </div>
-    </header><!-- MEGA MENU -->
-
+      <div class="main-header__content main-content"><a href="" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&amp;#39;/Static/images/logos/ca-logo_100px.svg.png&amp;#39;;" src="assets/images/ca-logo_100px.svg"></a><img src="assets/images/ca-logo-hz-280px.svg" class="print-only logo"></div>
+    </header>
     <div class="main-container">
-        <nav class="main-breadcrumb">
-            <div class="main-breadcrumb__content">
-                <span class="breadcrumb__item"><a href="#">Home</a></span>
-                <span class="breadcrumb__item"><i class="icon-guillemet-right"></i><a>Digital guide</a></span>
-            </div>
-        </nav>
-
-        <aside class="section-notice">
-            <h2 class="screenreader">Notice</h2>
-
-            <div class="section-notice__content">
-                <p><span class="badge">NEW</span>&nbsp;This page is part of <a href="#">our new approach to digital advice</a>.</p>
-            </div>
-        </aside>
-
-        <div class="main-content">
-            <!--main class="main-content__right" id="main" role="main">
-                <!-- MAIN CONTENT -->
-
-                <div class="title">
-                    <h1 class="title__heading js-ref"><span class="title__title">Citizens Advice elements guide</span></h1>
-                </div>
-
-                <div class="articleContent">
-
-                  <p class="p-lede">This is a guide to demonstrate elements such as layout, typography, forms, buttons and icons.</p>
-                
-                <div class="flex-container">
-                  <div class="flex-col-1-1">
-                    <h2>Contents</h2>
-                    <ul>
-                      <li><a href="layout.html">Layout</a></li>
-                      <ul>
-                          <li><a href="long-form.html">Long form content</a></li>
-                          <li><a href="toolbar.html">Content toolbar</a></li>
-                      </ul>
-                      <li><a href="tables.html">Tables</a></li>
-                      <li>Modals</li>
-                      <ul>
-                          <li><a href="extent.html">Extent Switcher</a></li>
-                          <li><a href="overlay.html">Modal/Overlay</a></li>
-                          <li><a href="reference.html">Reference tool</a></li>
-                      </ul>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="colours.html">Colours</a></li>
-                      <li><a href="callout.html">Callout</a></li>
-                      <li><a href="collapse.html">Collapse</a></li>
-                      <li><a href="forms.html">Forms</a></li>
-                    </ul>
-                  </div>
-
-                </div><!-- END MAIN CONTENT -->
-            <!--/main -->
-
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item">Home</span>
         </div>
+      </nav>
+      <aside class="section-notice">
+        <h2 class="screenreader">Notice</h2>
+        <div class="section-notice__content">
+          <p><span class="badge">NEW</span>&nbsp;This page is part of <a href="#">our new approach to digital advice</a>.</p>
+        </div>
+      </aside>
+      <div class="main-content">
+        <div class="title">
+          <h1 class="title__heading js-ref"><span class="title__title">Citizens Advice elements guide</span></h1>
+        </div>
+        <div class="articleContent">
+          <p class="p-lede">This is a guide to demonstrate elements such as layout, typography, forms, buttons and icons.</p>
+          <div class="flex-container">
+            <div class="flex-col-1-1">
+              <h2>Contents</h2>
+              <ul>
+                <li><a href="layout.html">Layout</a></li>
+                <li style="list-style: none; display: inline">
+                  <ul>
+                    <li><a href="long-form.html">Long form content</a></li>
+                    <li><a href="toolbar.html">Content toolbar</a></li>
+                  </ul>
+                </li>
+                <li><a href="tables.html">Tables</a></li>
+                <li>Modals</li>
+                <li style="list-style: none; display: inline">
+                  <ul>
+                    <li><a href="extent.html">Extent Switcher</a></li>
+                    <li><a href="overlay.html">Modal/Overlay</a></li>
+                    <li><a href="reference.html">Reference tool</a></li>
+                  </ul>
+                </li>
+                <li><a href="typography.html">Typography</a></li>
+                <li><a href="colours.html">Colours</a></li>
+                <li><a href="callout.html">Callout</a></li>
+                <li><a href="collapse.html">Collapse</a></li>
+                <li><a href="forms.html">Forms</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <footer class="main-footer" data-track-zone="footer" id="footer">
-        <div class="main-footer__content flex-row js-equal-height">
-    
-            <div class="main-footer__box main-footer__box--copyright">
-                <div>
-                    <p><img alt="" height="100" src="assets/images/ca-logo_100px.svg.png" width="100"> Copyright © 2015 Citizens Advice. All rights reserved.<br>
-                    Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>
-                    VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>
-                    Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
-                </div>
-            </div>
-
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p><img alt="" height="100" src="assets/images/ca-logo_100px.svg.png" width="100">Copyright © 2015 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="../libs/javascript/core.js"></script>
-</body>
+  </body>
 </html>
