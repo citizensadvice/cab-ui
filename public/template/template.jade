@@ -1,0 +1,85 @@
+include mixins.jade
+block settings
+doctype html
+html
+	head
+		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(name="keywords")
+		meta(name="description")
+
+		block title
+			title Citizens Advice style guide – #{title}
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+		meta(content="EWS", name="cab-extent")
+		meta(content="/static/images/apple-touch-icon.png")
+		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
+
+		// Stylesheets
+		link(href="css/site.css", media="screen", rel="stylesheet")
+		link(href="css/print.css", media="print", rel="stylesheet")
+		link(href="https://www.citizensadvice.org.uk/static/layout/favicon.ico", rel="shortcut icon")
+		link(href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png", rel="apple-touch-icon")
+
+		// Javascript
+		script(src="../libs/javascript/vendor/jquery-1.11.3.min.js")
+		script(src="../libs/javascript/beta-dap-accordion.js")
+		script(src="../libs/javascript/collapse.js")
+
+	body
+		div.skip-nav
+			a.screenreader.screenreader--focusable Skip to content
+			a.screenreader.screenreader--focusable Skip to footer
+
+		div.cookie-monster.hide-no-cookies.hide-no-js.no-print
+			div.cookie-monster__content
+				div
+					p This site uses cookies.&nbsp; Find out more about #[a(href="#") our use of cookies].
+
+				button.button--blue.cookie-monster__close(data-action="close", type="button")
+					i.icon-cross
+					| Close
+
+		header.main-header
+			div.main-header__content.main-content
+				a.main-header__logo.no-print(href="", title="Citizens Advice home")
+					img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
+				img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
+
+		div.main-container
+			nav.main-breadcrumb
+				block breadcrumbs
+
+			aside.section-notice
+				h2.screenreader Notice
+
+				div.section-notice__content
+					p
+						span.badge NEW
+						| &nbsp;This page is part of #[a(href="#") our new approach to digital advice].
+
+			div.main-content
+				div.title
+					h1.title__heading.js-ref
+						span.title__title #{title}
+				block content
+
+		footer.main-footer(data-track-zone="footer", id="footer")
+			div.main-footer__content.flex-row.js-equal-height
+				div.main-footer__box.main-footer__box--copyright
+					div
+						p
+							img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
+							| Copyright © 2015 Citizens Advice. All rights reserved.
+							br
+							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+							br
+							| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+							br
+							| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+							
+		script(src="../libs/javascript/core.js")

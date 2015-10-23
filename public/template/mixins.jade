@@ -1,0 +1,14 @@
+mixin link(title, href, text)
+	a(href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
+
+mixin breadcrumbs(obj)
+	div.main-breadcrumb__content&attributes(attributes)
+		- var n = obj.length
+		- each item,index in obj
+			- if(index < n-1) {
+			span.breadcrumb__item
+				+link(item.title, item.href, item.text)
+				i.icon-guillemet-right
+			- } else {
+			span.breadcrumb__item!= item.text ? item.text : item.title
+			- }
