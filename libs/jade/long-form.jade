@@ -1,0 +1,89 @@
+block settings
+	- var title = "Example of a long form advice content page"
+	- var sidebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Layout"}])
+
+block sidebar
+	+sidebar([
+		{title: "Sibling page 1", href: "#"}, 
+		{title: "Sibling page 2", href: "#"}])
+
+block content
+	.title__subheading
+		| This advice is for 
+		a#showSimpleModal.btn.btn-primary-outline.btn-small England
+		a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
+		a.a-social-print(href="javascript:window.print();", data-track="Print") Print
+		a.a-social-references(href="#!", data-track="References") References
+		span.info-extent Extent
+		span.info-reviewed Reviewed
+		span.info-owner EWNIS
+
+	.articleContent
+		div
+			p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+			#overview.steps
+				h3 On this page
+				.flex-row
+					ul.col-md-6
+						li
+							a(href="#step1") First use of &lt;h2&gt; in content
+						li
+							a(href="#step2") Second use of &lt;h2&gt; in content
+						li
+							a(href="#step3") Third use of &lt;h2&gt; in content
+						li
+							a(href="#step4") Fourth use of &lt;h2&gt; in content
+					ul.col-md-6
+						li
+							a(href="#step5") Fifth use of &lt;h2&gt; in content
+						li
+							a(href="#step6") Sixth use of &lt;h2&gt; in content
+						li
+							a(href="#step7") Seventh use of &lt;h2&gt; in content
+						li
+							a(href="#step8") Eigth use of &lt;h2&gt; in content
+			section#step1
+				h2#h-what-you-could-get-from-the-airline.ref-heading
+					span.ref-heading__heading First use of &lt;h2&gt; in content 
+					span.ref-heading__toggle.ref-heading__toggle--on
+						a.js-toggle-ref(href="#!") Added
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step2
+				h2 Second use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step3
+				h2 Third use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step4
+				h2 Fourth use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step5
+				h2 Fifth use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step6
+				h2 Sixth use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step7
+				h2 Seventh use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section#step8
+				h2 Eigth use of &lt;h2&gt; in content
+				h3 Example of content
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			section.print-only
+				h2 This section is print only
+				p Should be hidden on screen, but not on print.
