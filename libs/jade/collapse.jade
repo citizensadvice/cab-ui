@@ -1,0 +1,68 @@
+block settings
+	- var title = "Callouts"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Callouts"}])
+
+block content
+	.articleContent
+		.col-sm-8
+
+			.collapse.collapsible
+				.collapse-toggle
+					h2
+						code div.collapse
+					p #[code div.collapse-toggle] can also contain #[code h] and #[code p] tags.
+				.collapse-content
+					p Collapse structure wrapped inside #[code div.collapse.collapsible]</p>
+					a.collapse-toggle-close
+						code a.collapse-toggle-close
+
+			.collapse.collapsible--aqua
+				.collapse-toggle
+					Unstyled content inside #[code div.collapse-toggle]
+				.collapse-content
+					p Collapse structure wrapped inside #[code div.collapse.collapsible--aqua]
+					a.collapse-toggle-close
+						code a.collapse-toggle-close
+				.collapse-toggle
+					p two
+					p paragraphs
+				.collapse-content
+					p Collapse structure wrapped inside #[code div.collapse.collapsible--aqua]
+					a.collapse-toggle-close
+						code a.collapse-toggle-close
+
+			.collapse.collapsible--green
+				.collapse-toggle
+					Unstyled content inside #[code div.collapse-toggle]
+				.collapse-content
+					p Collapse structure wrapped inside #[code div.collapse.collapsible--green]
+					a.collapse-toggle-close
+						code a.collapse-toggle-close
+
+			.collapse.collapsible--red
+				.collapse-toggle
+					| Unstyled content inside #[code div.collapse-toggle]
+				.collapse-content
+					p Collapse structure wrapped inside #[code div.collapse.collapsible--red]
+					a.collapse-toggle-close
+						code a.collapse-toggle-close
+
+			section.revealable
+				h3#h-argument-1---you-did-the-activity-that-the-dwp-says-you-didn-t-do.revealable__heading(aria-controls="revealable-1", aria-expanded="true", tabindex="0", title="Expand section")
+					i.revealable__icon(aria-hidden="true")
+					| Argument 1 - You did the activity that the DWP says you didn't do
+				div#revealable-1.revealable__content(aria-expanded="false", aria-hidden="false")
+					p If you did do the tasks that the DWP says you didn’t, you should ask the DWP to&nbsp;reconsider the decision to sanction you. You’ll have to give them evidence that you did the tasks. For example, a copy of your application form for a job, or a letter from a company confirming you attended training or work experience.
+					a.revealable__close(href="#")
+						i.icon-chevron-up(aria-hidden="true")
+						| Close
+				h3#h-argument-2---you-did-the-activity-that-the-dwp-says-you-didn-t-do.revealable__heading(aria-controls="revealable-2", aria-expanded="false", tabindex="0", title="Expand section")
+					i.revealable__icon(aria-hidden="true")
+					| Argument 2 - You did the activity that the DWP says you didn't do

@@ -10,89 +10,88 @@ block breadcrumbs
 		{title: "Callouts"}])
 
 block content
-	div.articleContent
-		.articleContent
-			p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
-			.col-sm-8
-				p It is important to ask:
-				ul
-					li is the callout neccessary, too many, misused or unneccessary callouts weaken their value
-					li which style of callout is relevant, is the information 'useful', 'important' or 'recommending'
-				p Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using #[code h2] or #[code h3] tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.
-			.col-sm-8
-				h2 Callout styles
-				.callout
-					h3 Callout unstyled
-					p 
-						code div.callout
-					p This callout does not require an Aria tag but should be labeled with a clear heading.
-					p This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.
-					a.callout__link
-						code a.callout__link
-				.callout--confirmation.callout--icon
-					h3 Callout confirmation
-					p 
-						code div.callout--confirmation.callout--icon
-					p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
-					p The icon is optional and can be including by adding the #[code .callout--icon] class.
-					a.callout__link
-						code a.callout__link
-				.callout--warning
-					h3 Callout warning
-					p 
-						code div.callout--warning
-					p Use the Aria tag #[code aria-label="Important"].
-					p The warning callout should be used for any important snippet of text that has serious and/or legal implications if the client does not follow the advice.
-					a.callout__link
-						code a.callout__link
-				.callout--alert.callout--icon
-					h3 Callout alert
-					p 
-						code div.callout--alert.callout--icon
-					p Use the Aria tag #[code aria-label="Help"].
-					p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
-					p The icon is optional and can be including by adding the #[code .callout--icon] class.
-					a.callout__link
-						code a.callout__link
-				.callout--quote
-					h3 Callout quote
-					p 
-						code div.callout--quote
-					p Also referred to as Blockquote, this style is when a quote needs to be displayed.
-					a.callout__link
-						code a.callout__link
-				h2 Callouts combined
-				p These callouts can be combined both consecutively or combined, someexamples are shown below.
-				.callout--info
-					h3 Callout info
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					.callout--quote
-						h3 This is a quote
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					.callout--alert
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+	.articleContent
+		p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
+		.col-sm-8
+			p It is important to ask:
+			ul
+				li is the callout neccessary, too many, misused or unneccessary callouts weaken their value
+				li which style of callout is relevant, is the information 'useful', 'important' or 'recommending'
+			p Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using #[code h2] or #[code h3] tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.
+		.col-sm-8
+			h2 Callout styles
+			.callout
+				h3 Callout unstyled
+				p 
+					code div.callout
+				p This callout does not require an Aria tag but should be labeled with a clear heading.
+				p This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.
+				a.callout__link
+					code a.callout__link
+			.callout--confirmation.callout--icon
+				h3 Callout confirmation
+				p 
+					code div.callout--confirmation.callout--icon
+				p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
+				p The icon is optional and can be including by adding the #[code .callout--icon] class.
+				a.callout__link
+					code a.callout__link
+			.callout--warning
+				h3 Callout warning
+				p 
+					code div.callout--warning
+				p Use the Aria tag #[code aria-label="Important"].
+				p The warning callout should be used for any important snippet of text that has serious and/or legal implications if the client does not follow the advice.
+				a.callout__link
+					code a.callout__link
+			.callout--alert.callout--icon
+				h3 Callout alert
+				p 
+					code div.callout--alert.callout--icon
+				p Use the Aria tag #[code aria-label="Help"].
+				p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
+				p The icon is optional and can be including by adding the #[code .callout--icon] class.
+				a.callout__link
+					code a.callout__link
+			.callout--quote
+				h3 Callout quote
+				p 
+					code div.callout--quote
+				p Also referred to as Blockquote, this style is when a quote needs to be displayed.
+				a.callout__link
+					code a.callout__link
+			h2 Callouts combined
+			p These callouts can be combined both consecutively or combined, someexamples are shown below.
+			.callout--info
+				h3 Callout info
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				.callout--quote
 					h3 This is a quote
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					.callout--warning
-						h3 Callout warning
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-				h2 Brand callout styles
-				p Below are examples of callout styles utilising the brand colour palette.
-				p These should not be used as part of the advice content. They can be used after the advice content to help the client on their journey to the next step or to ask for support on a campaign related to the advice.
-				.callout--heritage
-					h3 Callout heritage
-					p
-						code div.callout--heritage
-				.callout--responsible
-					h3 Callout responsible
-					p
-						code div.callout--responsible
-				.callout--inventive
-					h3 Callout inventive
-					p
-						code div.callout--inventive
-				.callout--generous
-					h3 Callout generous
-					p
-						code div.callout--generous
+				.callout--alert
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			.callout--quote
+				h3 This is a quote
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				.callout--warning
+					h3 Callout warning
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			h2 Brand callout styles
+			p Below are examples of callout styles utilising the brand colour palette.
+			p These should not be used as part of the advice content. They can be used after the advice content to help the client on their journey to the next step or to ask for support on a campaign related to the advice.
+			.callout--heritage
+				h3 Callout heritage
+				p
+					code div.callout--heritage
+			.callout--responsible
+				h3 Callout responsible
+				p
+					code div.callout--responsible
+			.callout--inventive
+				h3 Callout inventive
+				p
+					code div.callout--inventive
+			.callout--generous
+				h3 Callout generous
+				p
+					code div.callout--generous
