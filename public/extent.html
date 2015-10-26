@@ -51,7 +51,9 @@
           <div class="title">
             <h1 class="title__heading js-ref"><span class="title__title">Extent switcher</span></h1>
           </div>
-          <div class="title__subheading">This advice is for <a id="showSimpleModal" class="btn btn-primary-outline btn-small">England</a><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a><a href="#!" data-track="References" class="a-social-references">References</a><span class="info-extent">Extent</span><span class="info-reviewed">Reviewed</span><span class="info-owner">EWNIS</span></div>
+          <div class="title__subheading">This advice is for 
+            <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a><a href="#!" data-track="References" class="a-social-references">References</a><span class="info-extent">Extent</span><span class="info-reviewed">Reviewed</span><span class="info-owner">Owner</span>
+          </div>
           <div id="simpleModal" class="modal">
             <div class="extent-country-select">
               <form>
@@ -97,6 +99,9 @@
             	}
             });
           </script>
+          <div class="title__subheading--footer">
+            <p>Share this page</p><a href="https://twitter.com/share?url=" data-track="Twitter" rel="external" class="a-social-twitter"><span>Twitter</span></a><a href="https://www.facebook.com/sharer/sharer.php?u=" data-track="Facebook" rel="external" class="a-social-facebook"><span>Facebook</span></a><a href="https://plus.google.com/share?url=" data-track="Google+" rel="external" class="a-social-google-plus"><span>Google Plus</span></a><a href="whatsapp://send" data-text="share?url=" data-track="whatsapp" rel="external" class="a-social-whatsapp"><span>Whatsapp</span></a>
+          </div>
         </main>
         <!-- Set the number at the end to the array position of the active page-->
         <nav class="side-nav-beta">

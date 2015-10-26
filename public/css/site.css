@@ -2314,7 +2314,7 @@ ul li {
 }
 .example-box {
   color: #333;
-  padding: 20px;
+  padding: 1rem;
   margin: 1em 0 3em;
   font-family: monaco,monospace;
   line-height: 1.7em;
@@ -2325,7 +2325,7 @@ ul li {
 }
 .example-box code {
   color: #9f9f9f;
-  padding: 0 2em;
+  padding: 0 0.5rem;
 }
 .example-box-plain {
   color: #333;
@@ -2353,6 +2353,39 @@ span.code {
   background-color: #f8f8f8;
   border: 1px solid #dfe1e3;
   border-radius: 2px;
+}
+.customcol13 {
+  float: left;
+  width: calc(33.33333333% - 2rem);
+  margin-right: 2rem;
+  width: 31.33333333%\9;
+  *width: 31%\9 !important;
+  margin-right: 2%\9 !important;
+}
+.customcol13 > *[class*="row"]:last-child {
+  margin-bottom: 0;
+}
+.customcol49 {
+  float: left;
+  width: calc(44.44444444% - 2rem);
+  margin-right: 2rem;
+  width: 42.44444444%\9;
+  *width: 42%\9 !important;
+  margin-right: 2%\9 !important;
+}
+.customcol49 > *[class*="row"]:last-child {
+  margin-bottom: 0;
+}
+.customcol29 {
+  float: left;
+  width: calc(22.22222222% - 2rem);
+  margin-right: 2rem;
+  width: 20.22222222%\9;
+  *width: 20%\9 !important;
+  margin-right: 2%\9 !important;
+}
+.customcol29 > *[class*="row"]:last-child {
+  margin-bottom: 0;
 }
 div[class*="callout"] code {
   color: inherit;
