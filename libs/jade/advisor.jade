@@ -24,15 +24,7 @@ block sidebar
 		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 
 block content
-	.title__subheading
-		| This advice is for 
-		a#showSimpleModal.btn.btn-primary-outline.btn-small England
-		a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
-		a.a-social-print(href="javascript:window.print();", data-track="Print") Print
-		a.a-social-references(href="#!", data-track="References") References
-		span.info-extent Extent
-		span.info-reviewed Reviewed
-		span.info-owner EWNIS
+	include ../template/title-subheading.jade
 
 	.articleContent
 		div
