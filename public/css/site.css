@@ -11901,6 +11901,7 @@ li.ref-dialog__list-item--highlight {
 }
 .cookie-monster__content p {
   margin: 0;
+  padding: 0 7rem 0 0.5rem;
   display: inline-block;
   position: absolute;
   top: 50%;
