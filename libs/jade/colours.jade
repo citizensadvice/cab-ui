@@ -1,0 +1,280 @@
+block settings
+	- var title = "Colours"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Colours"}])
+
+block content
+	.articleContent
+		.flex-container
+			.flex-col-2-3
+				h3 Colour contrast
+				p The colour contrast ratio for text and interactive elements should be at least 4.5:1 #[a(href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html") as recommended by the W3C].
+				h3 Brand
+				p Colours as defined in the #[a(href="#") Brand Guidelines]. To be used in pairs as described below. These colours are not to be used for marketing communications such as campaigns, reporting and policy.
+		.flex-container
+			.flex-col-1-6.swatch.swatch--brand--heritage-blue
+				p Heritage Blue
+					br
+					| @heritage-blue
+					br
+					| #004B88
+			.flex-col-1-6.swatch.swatch--brand--heritage-yellow
+				p Heritage Yellow
+					br
+					| @heritage-yellow
+					br
+					#FCBB69
+			.flex-col-1-6.swatch.swatch--brand--responsible-purple
+				p Responsible Purple
+					br
+					| @responsible-purple
+					br
+					| #57486B
+			.flex-col-1-6.swatch.swatch--brand--responsible-aqua
+				p Responsible Aqua
+					br
+					| @responsible-aqua
+					br
+					| #90CE9C
+			.flex-col-1-6.swatch.swatch--brand--inventive-teal
+				p Inventive Teal
+					br
+					| @inventive-teal
+					br
+					| #006278
+			.flex-col-1-6.swatch.swatch--brand--inventive-pink
+				p Inventive Pink
+					br
+					| @inventive-pink
+					br
+					| #FBC0AD
+			.flex-col-1-6.swatch.swatch--brand--generous-green
+				p Generous Green
+					br
+					| @generous-green
+					br
+					| #00553F
+			.flex-col-1-6.swatch.swatch--brand--generous-mauve
+				p Generous Mauve
+					br
+					| @generous-mauve
+					br
+					| #B5AFD7
+		.flex-container
+			.flex-col-2-3
+				h3 Brand tints
+				p There are also variations of some of these swatches in lighter tints.
+		.flex-container
+			.flex-col-1-6.swatch.swatch--beta--heritage-blue-lighter
+				p Heritage Blue Lighter
+					br
+					| @heritage-blue-lighter
+					br
+					| #A2D5FF
+			.flex-col-1-6.swatch.swatch--beta--heritage-blue-lightest
+				p Heritage Blue Lightest
+					br
+					| @heritage-blue-lightest
+					br
+					| #F2F8FF
+			.flex-col-1-6.swatch.swatch--beta--heritage-yellow-lighter
+				p Heritage Yellow Lighter
+					br
+					| @heritage-yellow-lighter
+					br
+					| #FEE4C3
+			.flex-col-1-6.swatch.swatch--beta--heritage-yellow-darker
+				p Heritage Yellow Darker
+					br
+					| @heritage-yellow-darker
+					br
+					| #FBA437
+		.flex-container
+			.flex-col-2-3
+				h3 Extended palette
+				p Colours for extending the brand colours into content to make actionable indication.
+		.flex-container
+			.flex-col-1-6.swatch.swatch--beta--red
+				p Red
+					br
+					| @red
+					br
+					| #DF3034
+			.flex-col-1-6.swatch.swatch--beta--pink
+				p Pink
+					br
+					| @pink
+					br
+					| #F499BE
+			.flex-col-1-6.swatch.swatch--beta--orange
+				p Orange
+					br
+					| @orange
+					br
+					| #F47738
+			.flex-col-1-6.swatch.swatch--beta--yellow
+				p Yellow
+					br
+					| @yellow
+					br
+					| #FFBF47
+			.flex-col-1-6.swatch.swatch--beta--green
+				p Green
+					br
+					| @green
+					br
+					| #537D2D
+			.flex-col-1-6.swatch.swatch--beta--blue
+				p Blue
+					br
+					| @blue
+					br
+					| #003C64
+			.flex-col-1-6.swatch.swatch--beta--aqua
+				p Aqua
+					br
+					| @aqua
+					br
+					| #81CEC6
+		.flex-container
+			.flex-col-2-3
+				h3 Extended palette tints
+				p There are also variations of some of these swatches in lighter tints.
+		.flex-container
+			.flex-col-1-6.swatch.swatch--beta--red-light
+				p Red Light
+					br
+					| @red-light
+					br
+					| #E76568
+			.flex-col-1-6.swatch.swatch--beta--red-lighter
+				p Red Lighter
+					br
+					| @red-lighter
+					br
+					| #F2ACAD
+			.flex-col-1-6.swatch.swatch--beta--orange-light
+				p Orange Light
+					br
+					| @orange-light
+					br
+					| #F8A980
+			.flex-col-1-6.swatch.swatch--beta--orange-lighter
+				p Orange Lighter
+					br
+					| @orange-lighter
+					br
+					| #FBCAB1
+			.flex-col-1-6.swatch.swatch--beta--green-light
+				p Green Light
+					br
+					| @green-light
+					br
+					| #B9DB9B
+			.flex-col-1-6.swatch.swatch--beta--green-lighter
+				p Green Lighter
+					br
+					| @green-lighter
+					br
+					| #D3E8C1
+			.flex-col-1-6.swatch.swatch--beta--blue-light
+				p Blue Light
+					br
+					| @blue-light
+					br
+					| #A5BDDC
+			.flex-col-1-6.swatch.swatch--beta--blue-lighter
+				p Blue Lighter
+					br
+					| @blue-lighter
+					br
+					| #CAEAFF
+			.flex-col-1-6.swatch.swatch--beta--blue-darker
+				p Blue Darker
+					br
+					| @blue-darker
+					br
+					| #002D4A
+			.flex-col-1-6.swatch.swatch--beta--aqua-light
+				p Aqua Light
+					br
+					| @aqua-light
+					br
+					| #B8E3DF
+			.flex-col-1-6.swatch.swatch--beta--yellow-light
+				p Yellow Light
+					br
+					| @yellow-light
+					br
+					| #FFEBC6
+			.flex-col-1-6.swatch.swatch--beta--purple-dark
+				p Purple Dark
+					br
+					| @purple-dark
+					br
+					| #53388D
+		.flex-container
+			.flex-col-2-3
+				h3 Monochrome palette
+				p Range for text primarily but also for neutral colouring.
+		.flex-container
+			.flex-col-1-6.swatch.swatch--mono--gray0
+				p Gray 0
+					br
+					| @gray-0
+					br
+					| #202020
+			.flex-col-1-6.swatch.swatch--mono--gray1
+				p Gray 1
+					br
+					| @gray-1
+					br
+					| #404040
+			.flex-col-1-6.swatch.swatch--mono--gray2
+				p Gray 2
+					br
+					| @gray-2
+					br
+					| #606060
+			.flex-col-1-6.swatch.swatch--mono--gray3
+				p Gray 3
+					br
+					| @gray-3
+					br
+					| #808080
+			.flex-col-1-6.swatch.swatch--mono--gray4
+				p Gray 4
+					br
+					| @gray-4
+					br
+					| #9F9F9F
+			.flex-col-1-6.swatch.swatch--mono--gray5
+				p Gray 5
+					br
+					| @gray-5
+					br
+					| #BFBFBF
+			.flex-col-1-6.swatch.swatch--mono--gray6
+				p Gray 6
+					br
+					| @gray-6
+					br
+					| #DFDFDF
+			.flex-col-1-6.swatch.swatch--mono--gray7
+				p Gray 7
+					br
+					| @gray-7
+					br
+					| #EEEEEE
+			.flex-col-1-6.swatch.swatch--mono--gray8
+				p Gray 8
+					br
+					| @gray-8
+					br
+					| #F2F2F2
