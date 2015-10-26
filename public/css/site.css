@@ -11890,23 +11890,51 @@ li.ref-dialog__list-item--highlight {
   bottom: -1px;
   left: 0;
   right: 0;
-  background: #dfdfdf;
-  opacity: 0.97;
+  background: rgba(202, 234, 255, 0.9);
   z-index: 10000;
-  border: 1px solid #bfbfbf;
-  border-width: 1px 0;
 }
 .cookie-monster__content {
   max-width: 1080px;
   margin: auto;
   clear: left;
-  padding: 0 7rem 0 1rem;
-  position: relative;
+  overflow: hidden;
+}
+.cookie-monster__content p {
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .cookie-monster__close {
+  position: relative;
+  padding-right: 3.5em;
+  float: right;
+}
+.cookie-monster__close:after {
+  right: 0.5em;
+  font-family: 'Helvetica', 'FontAwesome';
+  font-weight: 300;
+  content: "\f00d";
+  color: #FFF;
+  line-height: 1.9em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 50%;
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 50%;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 50%;
+  border: 2px solid #FFF;
   position: absolute;
-  top: 0;
-  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @media screen and (max-width: 599px) {
   .cookie-monster {

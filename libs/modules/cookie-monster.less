@@ -13,20 +13,20 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    background: @gray-6;
-    opacity: 0.97;
+    background: fade(@blue-lighter, 90%);
     z-index: 10000;
-    border: 1px solid @gray-5;
-    border-width: 1px 0;
     &__content {
         .limit-width();
-        padding: 0 @box-spacing-horizontal*7 0 @box-spacing-horizontal; // Enough for the button
-        position: relative;
+        overflow: hidden;
+        p {
+            margin: 0;
+            display: inline-block;
+            .vertical-align(absolute);
+        }
     }
     &__close {
-        position: absolute;
-        top: 0;
-        right: @box-spacing-horizontal;
+        .btn-icon("\f00d");
+        float: right;
     }
     @media screen and (max-width: @screen-xs-max) {
         font-size: 14px;
