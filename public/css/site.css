@@ -11890,7 +11890,7 @@ li.ref-dialog__list-item--highlight {
   bottom: -1px;
   left: 0;
   right: 0;
-  background: rgba(202, 234, 255, 0.9);
+  background: rgba(202, 234, 255, 0.95);
   z-index: 10000;
 }
 .cookie-monster__content {
