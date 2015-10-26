@@ -1,0 +1,40 @@
+block settings
+	- var title = "Tables"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Website elements"},
+		{title: "Tables"}])
+
+block content
+	.articleContent
+		p.p-lede Tables
+		.flex-container
+			.flex-col-2-3
+				table(style="width:100%")
+					thead
+						tr
+							th(scope="col") th
+							th(scope="col") th
+							th(scope="col") th
+					tbody
+						tr
+							td td
+							td td
+							td td
+						tr
+							td td
+							td td
+							td td
+						tr
+							td td
+							td td
+							td td
+						tr
+							td td
+							td td
+							td td

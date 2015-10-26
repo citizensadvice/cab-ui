@@ -1,0 +1,107 @@
+block settings
+	- var title = "New grid layout"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Layout"},
+		{title: "New grid layout"}])
+
+block content
+	.articleContent
+		.row
+			.span12
+				p The default page width is 1080px with a 12-spanumn grid. It is recommended for most content to use the two-thirds (content first) layout. This restricts line length to a more managable size and encourages a better reading pattern, #[a(href="#") improving cognition].
+				p The layout for pages should be 12 spanumns (full width), 3 or 4 spanumn, other variations can be used if needed.
+		.row
+			.span12
+				h3 Two Thirds (content first)
+			.span8
+				.example-box
+					| 2/3
+					code span8
+			.span4
+				.example-box
+					| 1/3
+					code span4
+		.row
+			.span12
+				h3 Two Thirds (navigation first)
+			.span4
+				.example-box
+					| 1/3
+					code span4
+			.span8
+				.example-box
+					| 2/3
+					code span8
+		.row
+			.span12
+				h3 One Quarter
+			.span3
+				.example-box
+					| 1/4
+					code span3
+			.span9
+				.example-box
+					| 3/4
+					code span9
+		.row
+			.span12
+				h3 Full Width
+			.span12
+				.example-box
+					| 1/1
+					code span12
+		.row
+			.span12
+				h3 Thirds
+			.span4
+				.example-box
+					| 1/3
+					code span4
+			.span4
+				.example-box
+					| 1/3
+					code span4
+			.span4
+				.example-box
+					| 1/3
+					code span4
+		.row
+			.span12
+				h3 Quarters
+			.span3
+				.example-box
+					| 1/4
+					code span3
+			.span3
+				.example-box
+					| 1/4
+					code span3
+			.span3
+				.example-box
+					| 1/4
+					code span3
+			.span3
+				.example-box
+					| 1/4
+					code span3
+		.row
+			.span12 
+				h3 Flexible (defined with mixin in LESS)
+			.customcol49
+				.example-box
+					| 4/9
+					code .col(4,9);
+			.customcol13
+				.example-box
+					| 3/9
+					code .col(1,3);
+			.customcol29
+				.example-box
+					| 2/9
+					code .col(2,9);
