@@ -1,0 +1,509 @@
+block settings
+	- var title = "Forms"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Molecules", href: "index.html#molecules"},
+		{title: "Forms"}])
+
+block content
+	.articleContent
+		.row
+			.span9
+				p Forms are an essential medium to help people find the information they need, complete a task or complete an application online. By maintaining the least friction possible between starting and completing the form will ensure greater completion rates for clients with the most accurate information possible.
+				p Only ask for the minimum amount of information for the client to complete the task required, this means that forms are kept shorter, improving completion rate and also trust. Any fields which are optional should be indicated as such.
+				h3 Examples of form components
+				p Using a field for a persons full name is recommended when possible, different cultures structure names in different ways and a Firstname, Surname approach isn't always appropriate.
+		.row
+			form
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="standardField") Standard field
+								input#standardField(placeholder="", type="text")
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+								| 	&lt;input id="standardField" placeholder="" type="text"&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="standardField") Standard field
+								span.form-hint With additional help text
+								input#standardField(placeholder="" type="text")
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+								| 	&lt;span class="form-hint"&gt;With additional help text&lt;/span&gt;
+								| 	&lt;input id="standardField" placeholder="" type="text"&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputEmail1") Inline validation error with field placeholder
+								input#exampleInputEmail1(placeholder="Email", required="", type="email")
+								small Information about these details.
+								.invalid Please enter a valid email address
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputEmail1"&gt;Inline validation error with field placeholder&lt;/label&gt;
+								| 	&lt;input id="exampleInputEmail1" placeholder="Email" required="" type="email"&gt;
+								| 	&lt;small&gt;Information about these details.&lt;/small&gt;
+								| 	&lt;div class="invalid"&gt;Please enter a valid email address&lt;/div&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputPassword1") Password
+								span.form-hint Enter at least 3 characters
+								input#exampleInputPassword1(pattern=".{3,10}", placeholder="Password", required="", type="password")
+								.valid Wonderful!
+								.invalid Please enter a password between 3 and 10 characters
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+								| 	&lt;span class="form-hint"&gt;Enter at least 3 characters&lt;/span&gt;
+								| 	&lt;input id="exampleInputPassword1" pattern=".{3,10}" placeholder="Password" required="" type="password"&gt;
+								| 	&lt;div class="valid"&gt;Wonderful!&lt;/div&gt;
+								| 	&lt;div class="invalid"&gt;Please enter a password between 3 and 10 characters&lt;/div&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputPassword1") Disabled field
+								span.form-hint Description why this field isn't enabled
+								input#exampleInputPassword1(disabled, placeholder="Disabled field", type="password")
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputPassword1"&gt;Disabled field&lt;/label&gt;
+								| 	&lt;span class="form-hint"&gt;Description why this field isn't enabled&lt;/span&gt;
+								| 	&lt;input id="exampleInputPassword1" disabled="" placeholder="Disabled field" type="password"&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleSelect1") Example dropdown select
+								.dropdown
+									select#exampleSelect1
+										option 1
+										option 2
+										option 3
+										option 4
+										option 5
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleSelect1"&gt;Example dropdown select&lt;/label&gt;
+								| 	&lt;div class="dropdown"&gt;
+								| 		&lt;select id="exampleSelect1"&gt;
+								| 			&lt;option&gt;1&lt;/option&gt;
+								| 			&lt;option&gt;2&lt;/option&gt;
+								| 			&lt;option&gt;3&lt;/option&gt;
+								| 			&lt;option&gt;4&lt;/option&gt;
+								| 			&lt;option&gt;5&lt;/option&gt;
+								| 		&lt;/select&gt;
+								| 	&lt;/div&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								.form-group-date
+									label(for="dob-day") Day
+									input#dob-day(max="31", min="1", placeholder="DD", type="number")
+								.form-group-date
+									label(for="dob-month") Month
+									input#dob-month(max="12", min="1", placeholder="MM", type="number")
+								.form-group-date
+									label(for="dob-year") Year
+									input#dob-year(max="2100", placeholder="YYYY", type="number")
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;div class="form-group-date"&gt;
+								| 		&lt;label for="dob-day"&gt;Day&lt;/label&gt;
+								| 		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
+								| 	&lt;/div&gt;
+								| 	&lt;div class="form-group-date"&gt;
+								| 		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
+								| 		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
+								| 	&lt;/div&gt;
+								| 	&lt;div class="form-group-date"&gt;
+								| 		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
+								| 		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
+								| 	&lt;/div&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleSelect2") Example dropdown multiple select
+								select#exampleSelect2.multi-select(multiple)
+									option 1
+									option 2
+									option 3
+									option 4
+									option 5
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleSelect2"&gt;Example dropdown multiple select&lt;/label&gt;
+								| 	&lt;select id="exampleSelect2" multiple="" class="multi-select"&gt;
+								| 		&lt;option&gt;1&lt;/option&gt;
+								| 		&lt;option&gt;2&lt;/option&gt;
+								| 		&lt;option&gt;3&lt;/option&gt;
+								| 		&lt;option&gt;4&lt;/option&gt;
+								| 		&lt;option&gt;5&lt;/option&gt;
+								| 	&lt;/select&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleTextarea") Example textarea 
+								textarea#exampleTextarea(rows="3")
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleTextarea"&gt;Example textarea &lt;/label&gt;
+								| 	&lt;textarea id="exampleTextarea" rows="3"&gt;&lt;/textarea&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") File input
+								input#exampleInputFile.form-control-file(type="file")
+								small This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+								| 	&lt;input id="exampleInputFile" type="file" class="form-control-file"&gt;
+								| 	&lt;small&gt;This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.&lt;/small&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Radio buttons
+								label.radio.radio--block
+									input(checked, name="radio", type="radio", value="option1")
+									| Yes
+								label.radio.radio--block
+									input(name="radio", type="radio", value="option2")
+									| No
+								label.radio.radio--block.disabled
+									input(disabled, name="radio", type="radio", value="option3")
+									| Not sure
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Radio buttons&lt;/label&gt;
+								| 	&lt;label class="radio radio--block"&gt;
+								| 		&lt;input checked="" name="radio" type="radio" value="option1"&gt;Yes
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--block"&gt;
+								| 		&lt;input name="radio" type="radio" value="option2"&gt;No
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--block disabled"&gt;
+								| 		&lt;input disabled="" name="radio" type="radio" value="option3"&gt;Not sure
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Inline Radio buttons
+								label.radio.radio--inline
+									input(checked name="radio-inline", type="radio", value="option1")
+									| Yes
+								label.radio.radio--inline
+									input(name="radio-inline", type="radio", value="option2")
+									| No
+								label.radio.radio--inline.disabled
+									input(disabled name="radio-inline", type="radio", value="option3")
+									| Not sure
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Inline Radio buttons&lt;/label&gt;
+								| 		&lt;label class="radio radio--inline"&gt;
+								| 	&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Yes
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--inline"&gt;
+								| 		&lt;input name="radio-inline" type="radio" value="option2"&gt;No
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--inline disabled"&gt;
+								| 		&lt;input disabled="" name="radio-inline" type="radio" value="option3"&gt;Not sure
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Radio buttons (description)
+								label.radio.radio--block
+									input(checked name="radio-description", type="radio", value="option1")
+									p
+										span Yes
+										br
+										| I'm in situation A
+								label.radio.radio--block
+									input(name="radio-description", type="radio", value="option2")
+									p
+										span Yes
+										br
+										| I'm in situation B
+								label.radio.radio--block
+									input(name="radio-description", type="radio", value="option3")
+									p
+										span No
+										br
+										| I'm not in any situation
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Radio buttons (description)&lt;/label&gt;
+								| 	&lt;label class="radio radio--block"&gt;
+								| 		&lt;input checked="" name="radio-description" type="radio" value="option1"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;I'm in situation A
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--block"&gt;
+								| 		&lt;input name="radio-description" type="radio" value="option2"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;I'm in situation B
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| 	&lt;label class="radio radio--block"&gt;
+								| 		&lt;input name="radio-description" type="radio" value="option3"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;No&lt;/span&gt;&lt;br&gt;I'm not in any situation
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Checkboxes
+								label.checkbox.checkbox--block
+									input(name="checkbox", type="checkbox")
+									| Option one
+								label.checkbox.checkbox--block
+									input(name="checkbox", type="checkbox")
+									| Option two
+								label.checkbox.checkbox--block.disabled
+									input(disabled name="checkbox", type="checkbox")
+									| Disabled
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Checkboxes&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block"&gt;
+								| 		&lt;input name="checkbox" type="checkbox"&gt;Option one
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block"&gt;
+								| 		&lt;input name="checkbox" type="checkbox"&gt;Option two
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block disabled"&gt;
+								| 		&lt;input disabled="" name="checkbox" type="checkbox"&gt;Disabled
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Inline checkboxes
+								label.checkbox.checkbox--inline
+									input(name="checkbox", type="checkbox")
+									| Option one
+								label.checkbox.checkbox--inline
+									input(name="checkbox", type="checkbox")
+									| Option two
+								label.checkbox.checkbox--inline.disabled
+									input(disabled name="checkbox", type="checkbox")
+									| Disabled
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Inline checkboxes&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--inline"&gt;
+								| 		&lt;input name="checkbox" type="checkbox"&gt;Option one
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--inline"&gt;
+								| 		&lt;input name="checkbox" type="checkbox"&gt;Option two
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--inline disabled"&gt;
+								| 		&lt;input disabled="" name="checkbox" type="checkbox"&gt;Disabled
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							fieldset
+								label(for="exampleInputFile") Check boxes (description)
+								label.checkbox.checkbox--block
+									input(name="checkbox-inline", type="checkbox")
+									p
+										span Yes
+										br
+										| You are in situation A
+								label.checkbox.checkbox--block
+									input(name="checkbox-inline", type="checkbox")
+									p
+										span Yes
+										br
+										| You are in situation B
+								label.checkbox.checkbox--block
+									input(name="checkbox-inline", type="checkbox")
+									p
+										span No
+										br
+										| I'm not in any situation
+						pre
+							code.language-html
+								| &lt;fieldset&gt;
+								| 	&lt;label for="exampleInputFile"&gt;Check boxes (description)&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block"&gt;
+								| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;You are in situation A
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block"&gt;
+								| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;You are in situation B
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| 	&lt;label class="checkbox checkbox--block"&gt;
+								| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+								| 		&lt;p&gt;
+								| 			&lt;span&gt;No&lt;/span&gt;&lt;br&gt;I'm not in any situation
+								| 		&lt;/p&gt;
+								| 	&lt;/label&gt;
+								| &lt;/fieldset&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (directions)
+							button.btn.btn-primary-light.left-button-icon(type="button") Back
+							button.btn.btn-primary.right-button-icon(type="button") Continue
+							button.btn.btn-primary.tick-button-icon(type="submit") Submit
+							button.btn.btn-primary.search-button-icon(type="button") Search
+							// Recommending we use the lighter back button to differentiate between purposes
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (directions)&lt;/label&gt;
+								| &lt;button type="button" class="btn btn-primary-light left-button-icon"&gt;Back&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-primary right-button-icon"&gt;Continue&lt;/button&gt;
+								| &lt;button type="submit" class="btn btn-primary tick-button-icon"&gt;Submit&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-primary search-button-icon"&gt;Search&lt;/button&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (actions)
+							button.btn.btn-secondary.email-button-icon(type="button") Email
+							button.btn.btn-secondary.print-button-icon(type="button") Print
+							button.btn.btn-secondary.restart-button-icon(type="reset") Restart
+							button.btn.btn-secondary.save-button-icon(type="button") Save
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (actions)&lt;/label&gt;
+								| &lt;button type="button" class="btn btn-secondary email-button-icon"&gt;Email&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-secondary print-button-icon"&gt;Print&lt;/button&gt;
+								| &lt;button type="reset" class="btn btn-secondary restart-button-icon"&gt;Restart&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-secondary save-button-icon"&gt;Save&lt;/button&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (additional)
+							button.btn.btn-disabled(disabled, type="button") Continue
+							button.btn.btn-success(type="button") Success
+							button.btn.btn-warning.exclamation-button-icon(type="button") Warning
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (additional)&lt;/label&gt;
+								| &lt;button disabled="" type="button" class="btn btn-disabled"&gt;Continue&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-warning exclamation-button-icon"&gt;Warning&lt;/button&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (right)
+							button.btn.btn-secondary.btn-right.print-button-icon(type="button") Print
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (right)&lt;/label&gt;
+								| &lt;button type="button" class="btn btn-secondary btn-right print-button-icon"&gt;Print&lt;/button&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (small)
+							button.btn.btn-disabled.btn-small(disabled type="button") Continue
+							button.btn.btn-small--green(type="button") Success
+							button.btn.btn-small--red(type="button") Delete
+							button.btn.btn-small(type="button") Basic
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (small)&lt;/label&gt;
+								| &lt;button disabled="" type="button" class="btn btn-disabled btn-small"&gt;Continue&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-small--green"&gt;Success&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-small--red"&gt;Delete&lt;/button&gt;
+								| &lt;button type="button" class="btn btn-small"&gt;Basic&lt;/button&gt;
+
+				.row
+					.span9
+						.example-box-plain
+							label(for="buttonDescription") Buttons (group)
+							.btn-group
+								button.btn(type="button") Left
+								button.btn(type="button") Middle
+								button.btn(type="button") Right
+						pre
+							code.language-html
+								| &lt;label for="buttonDescription"&gt;Buttons (group)&lt;/label&gt;
+								| &lt;div class="btn-group"&gt;
+								| 	&lt;button type="button" class="btn"&gt;Left&lt;/button&gt;
+								| 	&lt;button type="button" class="btn"&gt;Middle&lt;/button&gt;
+								| 	&lt;button type="button" class="btn"&gt;Right&lt;/button&gt;
+								| &lt;/div&gt;

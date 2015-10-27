@@ -128,14 +128,15 @@ ol li, ul li {
 .example-box-plain {
     color: #333;
     padding: 20px;
-    margin: 1em 0 1em;
+    margin: 1em 0 0 0;
     line-height: 1.7em;
     border: 1px solid #dfe1e3;
-    border-radius: 2px;
+    border-radius: @form-border-radius @form-border-radius 0 0;
+    border-bottom: 0;
     overflow: hidden;
     code {
         color: @gray-4;
-        padding: 0 2em; 
+        //padding: 0 2em; 
     }
     fieldset:last-child {
         margin-bottom: 0;
@@ -150,7 +151,7 @@ span.code {
     line-height: 1.7em;
     background-color: #f8f8f8;
     border: 1px solid #dfe1e3;
-    border-radius: 2px;
+    border-radius: @form-border-radius;
 }
 
 .customcol {
@@ -170,10 +171,12 @@ div[class*="callout"] code {
     padding: 0;
 }
 
-pre {
-    .callout();
-    padding: @box-spacing-vertical @box-spacing-horizontal;
-    .callout--border--left;
+pre[class*="language-"] {
+    .callout(@gray-8,@callout-border:@gray-6);
+    //padding: @box-spacing-vertical @box-spacing-horizontal;
+    .callout--border;
+    margin-top: 0;
+    border-radius: 0 0 @form-border-radius @form-border-radius;
 }
 
 /***************************************************************************

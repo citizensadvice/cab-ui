@@ -7,40 +7,44 @@ block breadcrumbs
 block content
 	.articleContent
 		p.p-lede This is a guide to demonstrate elements such as layout, typography, forms, buttons and icons.
-		h2 Contents
-		.flex-container
-			.flex-col-1-3
-				h3 Styles
+
+		.row
+			.span12
+				h2#principles Design principles
+				ul
+					li
+						a(href="#") Design principles
+		.row
+			.span3
+				h2#atoms Atoms
 				ul
 					li
 						a(href="typography.html") Typography
 					li
 						a(href="colours.html") Colours
-			.flex-col-1-3
-				h3 Layout
+					li
+						a(href="tables.html") Tables
+			.span3
+				h2#molecules Molecules
 				ul
 					li 
 						h4 Grid
-					li(style="list-style: none; display: inline")
 						ul
 							li
 								a(href="layout.html") Grid layout
 							li
 								a(href="new-grid.html") New grid layout
 					li
-						a(href="long-form.html") Long form content
+						a(href="forms.html") Forms
 					li
-						a(href="toolbar.html") Content toolbar
+						a(href="callout.html") Callout
 					li
-						a(href="advisor.html") Advisor content
-			.flex-col-1-3
-				h3 Elements
+						a(href="collapse.html") Collapse
+			.span3
+				h2#organisms Organisms
 				ul
-					li
-						a(href="tables.html") Tables
 					li 
 						h4 Modals
-					li(style="list-style: none; display: inline")
 						ul
 							li
 								a(href="extent.html") Extent Switcher
@@ -49,8 +53,11 @@ block content
 							li
 								a(href="reference.html") Reference tool
 					li
-						a(href="callout.html") Callout
+						a(href="toolbar.html") Content toolbar
+			.span3
+				h2#templates Templates
+				ul
 					li
-						a(href="collapse.html") Collapse
+						a(href="long-form.html") Long form content
 					li
-						a(href="forms.html") Forms
+						a(href="advisor.html") Advisor content
