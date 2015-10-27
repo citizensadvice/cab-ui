@@ -8,6 +8,7 @@
 @gutters:	@box-spacing*2;
 
 .row {
+    margin-bottom: 0;
     @media (min-width:@breakpoint-sm){
         margin: 0 -@gutters @gutters 0;
         clear: both;
@@ -24,12 +25,14 @@
 // for example .col(3/5); will make an element width 60%
 .col(@x;@y;) {
 	float: left;
-
     width: @full-page-width;
+    margin-bottom: @gutters;
+
     @media (min-width:@breakpoint-sm){
     	// Create calc grid for modern browsers
     	width: calc(percentage((@x/@y)) ~"-"@gutters);
     	margin-right: @gutters;
+        margin-bottom: 0;
 
     	// Create IE8 fallback. Due to lack of calc() support
     	// columns use an extra 2% as a gutter
@@ -43,7 +46,10 @@
 	// Remove bottom margin from the last nested row, to
 	// keep vertical spacing consistent
     & > *[class*="row"]:last-child {
-    	margin-bottom: 0;
+        margin-bottom: 0;
+    }
+    & .row:last-child *[class*="span"]:last-child {
+        margin-bottom: 0;
     }
 }
 
