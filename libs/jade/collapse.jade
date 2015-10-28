@@ -1,68 +1,112 @@
 block settings
-	- var title = "Callouts"
+	- var title = "Collapse"
 	- var sidebar = false
 
 extends ../template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "index.html"}, 
-		{title: "Callouts"}])
+		{title: "Home", href: "index.html"},
+		{title: "Molecules", href: "index.html#molecules"}, 
+		{title: "Collapse"}])
 
 block content
-	.articleContent
-		.col-sm-8
+	.articleContent.row
+		.span8
 
-			.collapse.collapsible
-				.collapse-toggle
-					h2
-						code div.collapse
-					p #[code div.collapse-toggle] can also contain #[code h] and #[code p] tags.
-				.collapse-content
-					p Collapse structure wrapped inside #[code div.collapse.collapsible]</p>
-					a.collapse-toggle-close
-						code a.collapse-toggle-close
+			.example-box-plain
+				.collapse.collapsible
+					.collapse-toggle Unstyled content inside header/toggle
+					.collapse-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.collapse-toggle-close Close button
+			pre
+				code.language-html
+					| &lt;div class="collapse collapsible"&gt;
+					| 	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
+					| 	&lt;div class="collapse-content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a class="collapse-toggle-close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
 
-			.collapse.collapsible--aqua
-				.collapse-toggle
-					Unstyled content inside #[code div.collapse-toggle]
-				.collapse-content
-					p Collapse structure wrapped inside #[code div.collapse.collapsible--aqua]
-					a.collapse-toggle-close
-						code a.collapse-toggle-close
-				.collapse-toggle
-					p two
-					p paragraphs
-				.collapse-content
-					p Collapse structure wrapped inside #[code div.collapse.collapsible--aqua]
-					a.collapse-toggle-close
-						code a.collapse-toggle-close
+			.example-box-plain
+				.collapse.collapsible--aqua
+					.collapse-toggle Collapses can be grouped
+					.collapse-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.collapse-toggle-close Close button
+					.collapse-toggle Collapses can be grouped
+					.collapse-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.collapse-toggle-close Close button
+			pre
+				code.language-html
+					| &lt;div class="collapse collapsible--aqua"&gt;
+					| 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
+					| 	&lt;div class="collapse-content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a class="collapse-toggle-close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
+					| 	&lt;div class="collapse-content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a class="collapse-toggle-close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
 
-			.collapse.collapsible--green
-				.collapse-toggle
-					Unstyled content inside #[code div.collapse-toggle]
-				.collapse-content
-					p Collapse structure wrapped inside #[code div.collapse.collapsible--green]
-					a.collapse-toggle-close
-						code a.collapse-toggle-close
+			.example-box-plain
+				.collapse.collapsible--green
+					.collapse-toggle
+						h2 H2 Heading
+						p Heading toggle can also contain formatted html.
+					.collapse-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.collapse-toggle-close Close button
+			pre
+				code.language-html
+					| &lt;div class="collapse collapsible--green"&gt;
+					| 	&lt;div class="collapse-toggle"&gt;
+					| 		&lt;h2&gt;H2 Heading&lt;/h2&gt;
+					| 		&lt;p&gt;Heading toggle can also contain formatted html.&lt;/p&gt;
+					| 	&lt;/div&gt;
+					| 	&lt;div class="collapse-content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a class="collapse-toggle-close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
 
-			.collapse.collapsible--red
-				.collapse-toggle
-					| Unstyled content inside #[code div.collapse-toggle]
-				.collapse-content
-					p Collapse structure wrapped inside #[code div.collapse.collapsible--red]
-					a.collapse-toggle-close
-						code a.collapse-toggle-close
+			.example-box-plain
+				.collapse.collapsible--red
+					.collapse-toggle Unstyled content inside header/toggle
+					.collapse-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.collapse-toggle-close Close button
+			pre
+				code.language-html
+					| &lt;div class="collapse collapsible--red"&gt;
+					| 	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
+					| 	&lt;div class="collapse-content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a class="collapse-toggle-close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
 
-			section.revealable
-				h3#h-argument-1---you-did-the-activity-that-the-dwp-says-you-didn-t-do.revealable__heading(aria-controls="revealable-1", aria-expanded="true", tabindex="0", title="Expand section")
-					i.revealable__icon(aria-hidden="true")
-					| Argument 1 - You did the activity that the DWP says you didn't do
-				div#revealable-1.revealable__content(aria-expanded="false", aria-hidden="false")
-					p If you did do the tasks that the DWP says you didn’t, you should ask the DWP to&nbsp;reconsider the decision to sanction you. You’ll have to give them evidence that you did the tasks. For example, a copy of your application form for a job, or a letter from a company confirming you attended training or work experience.
-					a.revealable__close(href="#")
-						i.icon-chevron-up(aria-hidden="true")
-						| Close
-				h3#h-argument-2---you-did-the-activity-that-the-dwp-says-you-didn-t-do.revealable__heading(aria-controls="revealable-2", aria-expanded="false", tabindex="0", title="Expand section")
-					i.revealable__icon(aria-hidden="true")
-					| Argument 2 - You did the activity that the DWP says you didn't do
+			.example-box-plain
+				h2 Old syntax styling
+				section.revealable
+					h3#heading-one.revealable__heading(aria-controls="revealable-1", aria-expanded="true", tabindex="0", title="Expand section") Heading one
+					div#revealable-1.revealable__content(aria-expanded="false", aria-hidden="false")
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+						a.revealable__close(href="#") Close button
+					h3#heading-two.revealable__heading(aria-controls="revealable-2", aria-expanded="false", tabindex="0", title="Expand section") Heading two
+			pre
+				code.language-html
+					| &lt;section class="revealable"&gt;
+					| 	&lt;h3 id="heading-one" aria-controls="revealable-1" aria-expanded="true" tabindex="0" title="Expand section" class="revealable__heading"&gt;Heading one&lt;/h3&gt;
+					| 	&lt;div id="revealable-1" aria-expanded="false" aria-hidden="false" class="revealable__content"&gt;
+					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| 		&lt;a href="#" class="revealable__close"&gt;Close button&lt;/a&gt;
+					| 	&lt;/div&gt;
+					| 	&lt;h3 id="heading-two" aria-controls="revealable-2" aria-expanded="false" tabindex="0" title="Expand section" class="revealable__heading"&gt;Heading two&lt;/h3&gt;
+					| &lt;/section&gt;
