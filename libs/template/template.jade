@@ -66,19 +66,12 @@ html
 						.title
 							h1.title__heading.js-ref
 								span.title__title #{title}
-
-						block content
-						
-						.title__subheading--footer
-							p Share this page
-							a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external")
-								span Twitter
-							a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external")
-								span Facebook
-							a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external")
-								span Google Plus
-							a.a-social-whatsapp(href="whatsapp://send" data-text="share?url=", data-track="whatsapp" rel="external")
-								span Whatsapp
+						if toolbars
+							include toolbar.jade
+							block content
+							include sharebar.jade
+						else
+							block content
 
 					block sidebar
 				else

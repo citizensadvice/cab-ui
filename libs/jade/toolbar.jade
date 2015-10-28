@@ -1,0 +1,24 @@
+block settings
+	- var title = "Content toolbar"
+	- var sidebar = true
+	- var toolbars = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Organisms", href: "index.html#organisms"}, 
+		{title: "Content toolbar"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block content
+	.articleContent
+		p Toolbars sandwich the content with functional icons.

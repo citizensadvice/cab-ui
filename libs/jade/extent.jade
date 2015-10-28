@@ -1,6 +1,7 @@
 block settings
 	- var title = "Extent switcher"
 	- var sidebar = true
+	- var toolbars = true
 
 extends ../template/template.jade
 
@@ -13,13 +14,11 @@ block sidebar
 	- var section = "Section title"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Sibling page 1", href: "long-form.html"},
-		{title: "Sibling page 2", href: "index.html"}],
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
 		0)
 
 block content
-	include ../template/toolbar.jade
-	
 	#simpleModal.modal
 			.extent-country-select
 					form

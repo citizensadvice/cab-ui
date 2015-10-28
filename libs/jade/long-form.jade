@@ -1,26 +1,25 @@
 block settings
 	- var title = "Long form advice content page"
 	- var sidebar = true
+	- var toolbars = true
 
 extends ../template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"}, 
-		{title: "Layout"},
+		{title: "Templates", href: "index.html#templates"},
 		{title: "Long form content"}])
 
 block sidebar
 	- var section = "Section title"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Sibling page 1", href: "long-form.html"},
-		{title: "Sibling page 2", href: "index.html"}],
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
 		0)
 
 block content
-	include ../template/toolbar.jade
-
 	.articleContent
 		div
 			p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
