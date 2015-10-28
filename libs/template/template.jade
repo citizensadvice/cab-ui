@@ -37,10 +37,11 @@ html
 			a.screenreader.screenreader--focusable Skip to content
 			a.screenreader.screenreader--focusable Skip to footer
 
-		.cookie-monster.hide-no-cookies.hide-no-js.no-print
-			.cookie-monster__content
-				p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
-				button.btn.cookie-monster__close(data-action="close", type="button") Close
+		if cookiemonster
+			.cookie-monster.hide-no-cookies.hide-no-js.no-print
+				.cookie-monster__content
+					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
+					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
 		header.main-header
 			.main-header__content.main-content
