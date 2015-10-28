@@ -1,353 +1,169 @@
 <!DOCTYPE html>
-
-<html class="js hide-cookie-monster" lang="en-GB">
-<head>
+<html>
+  <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <title>Citizens Advice style guide - Forms</title>
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="keywords">
+    <meta name="description">
+    <title>Citizens Advice style guide - Reference tool
+    </title>
+    <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
     <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
     <meta content="EWS" name="cab-extent">
     <meta content="/static/images/apple-touch-icon.png">
     <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
-
-  <!-- Stylesheet
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="css/site.css" media="screen" rel="stylesheet">
-    <link href="css/print.css" media="print" rel="stylesheet">
+    <!-- Stylesheets-->
+    <link href="../libs/vendors/prism/prism.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
     <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
     <link href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Javascript-->
     <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
     <script src="../libs/javascript/beta-dap-accordion.js"></script>
-    <script src="../libs/javascript/collapse.js"></script><!-- Accordion JS -->
-</head>
-
-<body>
-<body>
-    <div class="skip-nav">
-        <a class="screenreader screenreader--focusable" href="">Skip to content</a> <a class="screenreader screenreader--focusable" href="">Skip to footer</a>
-    </div>
+    <script src="../libs/javascript/collapse.js"></script>
+    <script src="../libs/vendors/prism/prism.js"></script>
+  </head>
+  <body>
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
     <div class="cookie-monster hide-no-cookies hide-no-js no-print">
-        <div class="cookie-monster__content">
-            <div>
-                <p>This site uses cookies.&nbsp; Find out more about <a href="#">our use of cookies</a>.</p>
-            </div><button class="button--blue cookie-monster__close" data-action="close" type="button"><i class="icon-cross"></i> Close</button>
-        </div>
+      <div class="cookie-monster__content">
+        <p>This site uses cookies. Find out more about <a href="#">our use of cookies</a>.</p>
+        <button data-action="close" type="button" class="btn cookie-monster__close">Close</button>
+      </div>
     </div>
     <header class="main-header">
-        <div class="main-header__content main-content">
-            <a class="main-header__logo no-print" href="" title="Citizens Advice home"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;" src="assets/images/ca-logo_100px.svg"></a><img class="print-only logo" src="assets/images/ca-logo-hz-280px.svg"> <!--div class="main-header__links" data-track-zone="top-bar">
-                <a class="main-header__menu-link js-toggle-menu" href=""><i class="icon-menu"></i>Menu</a>
-
-                <nav class="main-header__top-nav">
-                    <a href="#">Cymraeg</a> <a class="hide-offline main-header__login" href=""><i class="icon-key"></i>Sign-in</a>
-                </nav>
-
-                <form action="" class="main-header__search hide-offline">
-                    <label class="screenreader" for="main-header__search__input">Search</label> <input class="main-header__search__input" id="main-header__search__input" name="q" placeholder="" type="search"> <button class="main-header__search__submit" title="Search" type="submit"><i class="icon-search icon==no-text"></i> <span class="screenreader">Search</span></button>
-                </form>
-            </div -->
-        </div>
-    </header><!-- MEGA MENU -->
+      <div class="main-header__content main-content"><a href="" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&amp;#39;/Static/images/logos/ca-logo_100px.svg.png&amp;#39;;" src="assets/images/ca-logo_100px.svg"></a><img src="assets/images/ca-logo-hz-280px.svg" class="print-only logo"></div>
+    </header>
     <div class="main-container">
-        <nav class="main-breadcrumb">
-            <div class="main-breadcrumb__content">
-                <span class="breadcrumb__item"><a href="#">Home</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i><a href="index.html">Digital guide</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i><a href="layout.html">Layout</a></span> <span class="breadcrumb__item"><i class="icon-guillemet-right"></i>Long form content</span>
-            </div>
-        </nav>
-        <aside class="section-notice">
-            <h2 class="screenreader">Notice</h2>
-            <div class="section-notice__content">
-                <p><span class="badge">NEW</span>&nbsp;This page is part of <a href="#">our new approach to digital advice</a>.</p>
-            </div>
-        </aside>
-        <div class="main-content">
-            <main class="main-content__right" id="main" role="main">
-                <!-- MAIN CONTENT -->
-                <div class="title">
-                    <h1 class="title__heading ref-heading"><span class="ref-heading__heading"><span class="title__title">Example of a long form advice content page</span></span> <span class="ref-heading__toggle ref-heading__toggle--off"><a class="js-toggle-ref" href="#!">Add reference</a></span></h1>
-                    <div class="title__subheading">
-                        This advice is for <a class="btn btn-primary-outline" href="" id="showSimpleModal">England</a> <!-- Other buttons
-                        <a href="" id="showSimpleModal" class="btn btn-primary-outline">Scotland</a>
-                        <a href="" id="showSimpleModal" class="btn btn-primary-outline">Wales</a>
-                        <a href="" id="showSimpleModal" class="btn btn-primary-outline">Cymru</a>
-                        <a href="" id="showSimpleModal" class="btn btn-primary-outline">Northern Ireland</a>
-                    -->
-                         <a class="a-social-email" data-track="Email page" href="javascript:emailCurrentPage()">Email</a> <a class="a-social-print" data-track="Print" href="javascript:window.print();">Print</a> <a class="a-social-references" data-track="References" href="#!">References</a> <span class="info-extent">Extent</span> <span class="info-reviewed">Reviewed</span> <span class="info-owner">EWNIS</span>
-                    </div>
-                </div>
-                <div class="articleContent">
-                    <div>
-                        <p>Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.</p>
-                        <div class="steps" id="overview">
-                            <h3>On this page</h3>
-                            <div class="flex-row">
-                                <ul class="col-md-6">
-                                    <li>
-                                        <a href="#step1">First use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step2">Second use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step3">Third use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step4">Fourth use of &lt;h2&gt; in content</a>
-                                    </li>
-                                </ul>
-                                <ul class="col-md-6">
-                                    <li>
-                                        <a href="#step5">Fifth use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step6">Sixth use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step7">Seventh use of &lt;h2&gt; in content</a>
-                                    </li>
-                                    <li>
-                                        <a href="#step8">Eigth use of &lt;h2&gt; in content</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <section id="step1">
-                            <h2 class="ref-heading" id="h-what-you-could-get-from-the-airline"><span class="ref-heading__heading">First use of &lt;h2&gt; in content</span> <span class="ref-heading__toggle ref-heading__toggle--on"><a class="js-toggle-ref" href="#!">Added</a></span></h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step2">
-                            <h2>Second use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step3">
-                            <h2>Third use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step4">
-                            <h2>Fourth use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step5">
-                            <h2>Fifth use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step6">
-                            <h2>Sixth use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step7">
-                            <h2>Seventh use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section id="step8">
-                            <h2>Eigth use of &lt;h2&gt; in content</h2>
-                            <h3>Example of content</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                        </section>
-                        <section class="print-only">
-                            <h2>This section is print only</h2>
-                            <p>Should be hidden on screen, but not on print.</p>
-                        </section>
-                    </div>
-                </div>
-            </main><!-- END MAIN CONTENT -->
-            <!--<aside class="main-content__sidebar beta-extent-switcher hide-offline" data-track-zone="page-beta-extent-swticher">
-                <h2 class="beta-extent-switcher__heading">This advice applies to England</h2>
-
-                <p>Advice can vary depending on where you live.</p>
-
-                <form method="get">
-                    <select class="custom-dropdown__select" id="ddlExtents" name="lang">
-                        <option disabled selected>
-                            Change country
-                        </option>
-
-                        <option value="en-NIR">
-                            Northern Ireland
-                        </option>
-
-                        <option value="en-SCT">
-                            Scotland
-                        </option>
-
-                        <option value="en-WLS">
-                            Wales
-                        </option>
-                    </select> <button class="custom-dropdown__button js-track-extent" type="submit">Go</button>
-                </form>
-            </aside>-->
-            <nav class="side-nav-beta">
-                <ul class="">
-                    <li class="side-nav-beta__heading -active -open">
-                        <a href=""><span>Section title</span></a>
-                        <ul>
-                            <li class="side-nav-beta__sibling -current">
-                                <a href=""><span>Current page</span></a>
-                            </li>
-                            <li class="side-nav-beta__sibling">
-                                <a href=""><span>Sibling page</span></a>
-                            </li>
-                            <li class="side-nav-beta__sibling">
-                                <a href=""><span>Sibling page</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#organisms" title="Organisms">Organisms</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#modals" title="Modals">Modals</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Reference tool</span>
         </div>
-    </div>
-
-    <div class="overlay">
-        <div class="overlay__modal">
-            <div class="overlay__main">
+      </nav>
+      <aside class="section-notice">
+        <h2 class="screenreader">Notice</h2>
+        <div class="section-notice__content">
+          <p><span class="badge">NEW</span>&nbsp;This page is part of <a href="#">our new approach to digital advice</a>.</p>
+        </div>
+      </aside>
+      <div class="main-content">
+        <main id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Reference tool</span></h1>
+          </div>
+          <div class="title__subheading">This advice is for 
+            <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a><a href="#!" data-track="References" class="a-social-references">References</a><span class="info-extent">Extent</span><span class="info-reviewed">Reviewed</span><span class="info-owner">Owner</span>
+          </div>
+          <div class="overlay">
+            <div class="overlay__modal">
+              <div class="overlay__main">
                 <h3 class="overlay__header">References</h3>
-                <!--<p>Using a field for a persons full name is recommended when possible, different cultures structure names in different ways and a Firstname, Surname approach isn't always appropriate.</p>
-                <fieldset>
-                    <label for="standardField">Standard field</label>
-                    <input type="text" id="standardField" placeholder="">
-                </fieldset>
-
-                <fieldset>
-                    <label for="standardField">Standard field</label>
-                    <span class="form-hint">With additional help text</span>
-                    <input type="text" id="standardField" placeholder="">
-                </fieldset>
-
-                <fieldset>
-                    <label for="exampleInputEmail1">Inline validation error with field placeholder</label>
-                    <input type="email" id="exampleInputEmail1" placeholder="Placeholder text" required>
-                    <small>Information about these details.</small>
-                </fieldset>
-
-                <fieldset>
-                    <label for="exampleInputPassword1">Password</label>
-                    <span class="form-hint">Enter at least 3 characters</span>
-                    <input type="password" id="exampleInputPassword1" placeholder="Password" pattern=".{3,10}" required>
-                </fieldset>
-
-                <fieldset>
-                    <label for="exampleInputPassword1">Disabled field</label>
-                    <span class="form-hint">Description why this field isn't enabled</span>
-                    <input type="password" id="exampleInputPassword1" placeholder="Disabled field" disabled>
-                </fieldset>
-
-                <fieldset>
-                    <label for="exampleSelect1">Example dropdown select</label>
-                    <div class="dropdown">
-                    <select id="exampleSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    </div>
-                </fieldset>-->
                 <ul class="reference__list">
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
-                    </li>
-                    <li class="removed">
-                        <button class="btn btn-secondary"><span class="screenreader">Undo</span></button>
-                        <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI)</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI)</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI)</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
-                    </li>
-                    <li>
-                        <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
-                        <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
-                    </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
+                  </li>
+                  <li class="removed">
+                    <button class="btn btn-secondary"><span class="screenreader">Undo</span></button>
+                    <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI)</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI)</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI)</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § The right to ask for flexible working</a></p>
+                  </li>
+                  <li>
+                    <button class="btn btn-warning"><span class="screenreader">Delete</span></button>
+                    <p><a href="#">Basic rights at work (EWSNI) § Health and safety</a></p>
+                  </li>
                 </ul>
-            </div>
-            <div class="overlay__footer">
+              </div>
+              <div class="overlay__footer">
                 <button type="button" class="btn btn-primary-light">Close</button>
                 <button type="button" class="btn btn-primary">Clear All</button>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-secondary">Load</button><button type="button" class="btn btn-secondary">Save</button><button type="button" class="btn btn-secondary">Copy</button>
+                  <button type="button" class="btn btn-secondary">Load</button>
+                  <button type="button" class="btn btn-secondary">Save</button>
+                  <button type="button" class="btn btn-secondary">Copy</button>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+          <div class="title__subheading--footer">
+            <p>Share this page</p><a href="https://twitter.com/share?url=" data-track="Twitter" rel="external" class="a-social-twitter">Twitter</a><a href="https://www.facebook.com/sharer/sharer.php?u=" data-track="Facebook" rel="external" class="a-social-facebook">Facebook</a><a href="https://plus.google.com/share?url=" data-track="Google+" rel="external" class="a-social-google-plus">Google Plus</a><a href="whatsapp://send" data-text="share?url=" data-track="whatsapp" rel="external" class="a-social-whatsapp">Whatsapp</a>
+          </div>
+        </main>
+        <!-- Set the number at the end to the array position of the active page-->
+        <nav class="side-nav-beta">
+          <ul>
+            <li class="side-nav-beta__heading -active -open"><a><span>Section title</span></a></li>
+            <ul>
+              <li class="side-nav-beta__sibling"><a href="#" title="Sibling page 1" class="-current">Sibling page 1</a>
+              </li>
+              <li class="side-nav-beta__sibling"><a href="#" title="Sibling page 2">Sibling page 2</a>
+              </li>
+            </ul>
+          </ul>
+        </nav>
+        <section class="print-only">
+          <h2>This section is print only</h2>
+        </section>
+      </div>
     </div>
-
-    <footer class="main-footer" data-track-zone="footer" id="footer">
-        <div class="main-footer__content flex-row js-equal-height">
-    
-            <div class="main-footer__box main-footer__box--copyright">
-                <div>
-                    <p><img alt="" height="100" src="assets/images/ca-logo_100px.svg.png" width="100"> Copyright © 2015 Citizens Advice. All rights reserved.<br>
-                    Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>
-                    VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>
-                    Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
-                </div>
-            </div>
-
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p><img alt="" height="100" src="assets/images/ca-logo_100px.svg.png" width="100">Copyright © 2015 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
         </div>
+      </div>
     </footer>
+    <script src="../libs/javascript/advisor.js"></script>
     <script src="../libs/javascript/core.js"></script>
-</body>
+  </body>
 </html>
