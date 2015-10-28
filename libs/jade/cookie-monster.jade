@@ -1,0 +1,37 @@
+block settings
+	- var title = "Cookie Monster"
+	- var cookiemonster = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Organisms", href: "index.html#organisms"}, 
+		{title: "Cookie Monster"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block content
+	.articleContent.row
+		.span8
+			p Cookie monster appears attached to the bottom of the screen.
+			.example-box-plain
+				.cookie-monster.hide-no-cookies.hide-no-js.no-print(style="position:relative;z-index:0;")
+					.cookie-monster__content
+						p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
+						button.btn.cookie-monster__close(data-action="close", type="button") Close
+			pre
+				code.language-html
+					| &lt;div class="cookie-monster hide-no-cookies hide-no-js no-print"&gt;
+					| 	&lt;div class="cookie-monster__content"&gt;
+					| 		&lt;p&gt;This site uses cookies. Find out more about &lt;a href="#"&gt;our use of cookies&lt;/a&gt;.&lt;/p&gt;
+					| 		&lt;button data-action="close" type="button" class="btn cookie-monster__close"&gt;Close&lt;/button&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
