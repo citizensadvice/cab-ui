@@ -1,5 +1,5 @@
 block settings
-	- var title = "Content heading"
+	- var title = "Legislation"
 	- var sidebar = true
 	- var toolbars = true
 
@@ -13,18 +13,25 @@ block section-notice
 				span.badge NEW
 				| This page is part of #[a(href="#") our new approach to digital advice].
 
+	aside.section-notice__adviser
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge ADVISER
+				| This page is part of #[a(href="#") adviser only] content.
+
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
 		{title: "Templates", href: "index.html#templates"},
-		{title: "Adviser content"}])
+		{title: "Adviser content", href: "adviser.html"},
+		{title: "Adviser content – Legislation"}])
 
 block sidebar
 	- var section = "Section title"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Content page"}],
-		0)
+		{title: "Content page", href: "adviser.html"}])
 
 	nav.side-nav-beta.adviser-nav
 		ul
@@ -32,7 +39,7 @@ block sidebar
 				a
 					span Adviser pages
 			ul
-				li.side-nav-beta__sibling
+				li.side-nav-beta__sibling.-current
 					a(href="adviser-2.html") Legislation
 
 block content
@@ -40,18 +47,18 @@ block content
 		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
 		section#step1
 			h2 First use of &lt;h2&gt; in content
-			p Lorem ipsum dolor sit amet, #[span#overlay_button-1 consectetuer] adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-1 Ut wisi enim ad minim veniam], quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step2
 			h2 Second use of &lt;h2&gt; in content
-			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-2 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step3
 			h2 Third use of &lt;h2&gt; in content
-			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			p #[span#overlay_button-2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
 
 	#overlay1.overlay(style="display:none;")
 		.overlay__modal
 			.overlay__main
-				h3.overlay__header 19.1 Overlay title
+				h3.overlay__header Definition: Overlay title
 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -61,17 +68,17 @@ block content
 	#overlay2.overlay(style="display:none;")
 		.overlay__modal
 			.overlay__main
-				h3.overlay__header 19.2 Overlay title
+				h3.overlay__header 6.3 Overlay title
 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 			.overlay__footer
 				button#overlay2_close.btn.btn-primary.close-button-icon(type="button") Close
 
 	script.
 		$('#overlay_button-1').append(function() {
-			return "<sup class='adviser'>19.1</sup>";
+			return "<sup class='adviser'></sup>";
 		})
 		$('#overlay_button-2').append(function() {
-			return "<sup class='adviser'>19.2</sup>";
+			return "<sup class='adviser'>6.3</sup>";
 		})
 
 

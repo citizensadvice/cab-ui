@@ -293,19 +293,21 @@ blockquote {
 
 @advisor-color: #b9b9a4;
 
-.advisor {
+span[id*="overlay_button"] {
     cursor: help;
-    display: inline;
-    background: tint(@advisor-color, 75%);
-    //color: @white; 
-    padding: .25em;
-    position: relative;
-    padding-left: 0;
-    box-shadow: 0.25em 0 0 tint(@advisor-color, 75%),
-                -.25em 0 0 tint(@advisor-color, 75%);
-    //border-radius: 2px 0 2px 0;
+    padding: 0 .25em;
+    //display: inline-block;
+    border-bottom: 1px solid @heritage-yellow;
+    background-color: @heritage-yellow-lighter;
+    //box-shadow: 0.25em 0 0 tint(@advisor-color, 75%),
+    //            -.25em 0 0 tint(@advisor-color, 75%);
+}
+
+.adviser {
+    color: @heritage-blue;
+    font-weight: @font-weight-bold;
     &:before {
-        content: "\00a0\f06e\00a0";
+        content: "\00a0\f059\00a0";
         font-family: 'Helvetica', 'FontAwesome';
     }
 }
@@ -318,6 +320,24 @@ blockquote {
     display: none;
     border-color: @advisor-color;
     margin: 0;
+}
+
+.adviser-nav {
+    .side-nav-beta__sibling {
+        //border-left: 8px solid @heritage-yellow-lighter;
+        //background-color: @heritage-yellow-lighter;
+        a {
+            //color: @heritage-yellow-darker;
+        }
+        &:hover {
+            //a { color: @black; }
+            //background-color: @heritage-yellow-lighter;
+        }
+    }
+    .-current {
+        background-color: lighten(@heritage-yellow-lighter, 5%) !important;
+        border-color: @heritage-yellow-lighter !important;
+    }
 }
 
 .inline--button {
