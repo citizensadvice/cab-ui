@@ -1,0 +1,22 @@
+span[id*="overlay_button"] {
+    cursor: help;
+    padding: 0 .25em;
+    //display: inline-block;
+    border-bottom: 1px solid @heritage-yellow;
+    background-color: @heritage-yellow-lighter;
+    //box-shadow: 0.25em 0 0 tint(@advisor-color, 75%),
+    //            -.25em 0 0 tint(@advisor-color, 75%);
+}
+
+.adviser {
+    color: @heritage-blue;
+    font-weight: @font-weight-bold;
+    &:before {
+        content: "\00a0\f059\00a0";
+        font-family: 'Helvetica', 'FontAwesome';
+    }
+}
+
+.callout--adviser {
+    .callout;
+}
