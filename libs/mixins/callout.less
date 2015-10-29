@@ -83,24 +83,26 @@
 
 // Callout icons
 .callout--icon(@icon, @color: @text-color) {
-    & >:first-child {
-	    position: relative;
-	    padding-right: 3em;
-	    &:after {
+	    &:before {
 	        font-family: 'FontAwesome';
-	        font-size: 2rem;
+	        font-size: 1.25rem;
 	        font-weight: 300;
 	        content: @icon;
 	        color: @color;
 	        line-height: 1em;
-	        width: 1em;
-	        height: 1em;
-	        text-align: center;
-	        border-radius: 50%;
-	    	position: absolute;
-	        right: -@box-spacing*.3;
-		    top: -@box-spacing*.08;
-	    }
+	        display: block;
+	        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
+	        padding: @box-spacing-vertical @box-spacing-horizontal;
+	        //width: 1em;
+	        //height: 1em;
+	        //text-align: center;
+	        //border-radius: 50%;
+	        background-color: rgba(255, 255, 255, 0.2);
+	        //border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	    	//position: absolute;
+	        //right: -@box-spacing*.3;
+		    //top: -@box-spacing*.08;
+	    
 	}
 }
 
