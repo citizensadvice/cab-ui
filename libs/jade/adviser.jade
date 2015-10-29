@@ -1,5 +1,5 @@
 block settings
-	- var title = "Check if you're eligible for Universal Credit"
+	- var title = "Content page"
 	- var sidebar = true
 	- var toolbars = true
 
@@ -39,13 +39,23 @@ block content
 	div
 		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
 		section#step1
-			h2 First use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p Lorem ipsum dolor sit amet, #[span#overlay_button-1 consectetuer] adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step2
-			h2 Second use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-2 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
+			.callout--adviser Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step3
-			h2 Third use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 
 	#overlay1.overlay(style="display:none;")
