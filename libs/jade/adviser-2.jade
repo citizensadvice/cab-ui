@@ -3,6 +3,7 @@ block settings
 	- var logoutheader = true
 	- var sidebar = true
 	- var toolbars = true
+	- var toolbarsadviser = true
 
 extends ../template/template.jade
 
@@ -25,14 +26,14 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
 		{title: "Templates", href: "index.html#templates"},
-		{title: "Adviser content", href: "adviser.html"},
 		{title: "Adviser content – Legislation"}])
 
 block sidebar
 	- var section = "Section title"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Content page", href: "adviser.html"}])
+		{title: "Content page", href: "adviser.html"},
+		{title: "Advice tool", href: "adviser-tool.html"}])
 
 	nav.side-nav-beta.adviser-nav
 		ul
@@ -47,13 +48,22 @@ block content
 	div
 		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
 		section#step1
-			h2 First use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-1 Ut wisi enim ad minim veniam], quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step2
-			h2 Second use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 		section#step3
-			h2 Third use of &lt;h2&gt; in content
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
 			p #[span#overlay_button-2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
 
 	#overlay1.overlay(style="display:none;")
