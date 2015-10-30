@@ -8,7 +8,7 @@
     cursor: pointer;
     border-radius: @form-border-radius;
     background-color: @btn-background;
-    border: none;
+    border: 1px solid @btn-background;
     color: @btn-text;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     font-weight: bold;
@@ -17,6 +17,7 @@
     &:focus,
     &:active {
         background-color: @btn-background-hover;
+        border: 1px solid @btn-background-hover;
         outline: 0;
     }
     &:focus {

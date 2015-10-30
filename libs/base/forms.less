@@ -77,6 +77,7 @@ input[type=email],
 input[type=number],
 input[type=search] {
     padding: @box-spacing-vertical @box-spacing-horizontal;
+    -webkit-appearance: none;
     width: 100%;
     border-radius: 0;
 }
@@ -153,7 +154,6 @@ select {
     width: 100%;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
-    -webkit-appearance: none;
     &:focus:required:invalid {
 //      border-color: @red;
         outline: 2px solid @red;
@@ -243,7 +243,7 @@ input[type="file"]::before {
             outline: none;
             width: 100%;
             height: 100%;
-            top: 0;
+            top: -1px;
             left: 0;
             position: absolute;
             -webkit-user-select: none;
@@ -252,9 +252,10 @@ input[type="file"]::before {
             border: 1px solid @gray-6;
             z-index: -1;
             background-color: @gray-8;
+            box-sizing: content-box;
         }
         &:hover:before {
-            border-color: @gray-6;
+            border-color: @gray-5;
         }
         &:disabled {
             cursor: not-allowed !important;
@@ -266,7 +267,7 @@ input[type="file"]::before {
         }
         &:checked {
             &:before {
-                border-color: @blue-lighter;
+                border-color: @blue-light;
                 background-color: @blue-lighter;
             }
             &:hover:before {
@@ -276,7 +277,7 @@ input[type="file"]::before {
     }
     &--inline {
         clear: none;
-        float: left;
+        //float: left;
     }
 
     &--block {
@@ -349,8 +350,58 @@ input[class*="dob-"] {
     cursor: not-allowed !important;
     color: @form-disabled-text;
     background-color: @form-disabled-bg;
-    border: 1px solid @form-disabled-bg;
+    //border: 1px solid @form-disabled-bg;
     resize: none;
+}
+
+.field-group {
+    display: inline-table;
+    white-space: nowrap;
+    width: 100%;
+    label,
+    input,
+    button {
+        display: inline-block;
+        width: auto;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    input[type="number"] {
+        border-radius: 0;
+        border-right: 0;
+        width: 25%;
+    }
+    label {
+        width: 25%;
+        padding: @box-spacing-vertical 0;
+        text-align: center;
+        input {
+            margin-right: .25em;
+        }
+        input:before {
+            border-radius: 0;
+            border-width: 1px 0;
+        }
+        &:last-child input:before {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+            border-right-width: 1px;
+        }
+    }
+    button {
+        width: 25%;
+        padding: @box-spacing-vertical 0;
+    }
+    .dropdown {
+        width: 75%;
+        display: inline-block;
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+    }
+    input:first-of-type {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    *:last-child {
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+    }
 }
 
 /*

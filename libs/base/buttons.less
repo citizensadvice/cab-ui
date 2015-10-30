@@ -90,32 +90,6 @@ input[type=button] {
 } 
 */
 
-.btn(
-        @btn-text: @heritage-blue, 
-        @btn-background: @aqua,
-        @btn-background-hover: darken(@btn-background, 10%) 
-    ){
-    cursor: pointer;
-    border-radius: @form-border-radius;
-    background-color: @btn-background;
-    border: none;
-    color: @btn-text;
-    padding: @box-spacing-vertical @box-spacing-horizontal;
-    font-weight: bold;
-    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
-    &:hover,
-    &:focus,
-    &:active {
-        background-color: @btn-background-hover;
-        outline: 0;
-    }
-    &:focus {
-        -webkit-box-shadow: 0px 0px 0px 2px @heritage-yellow;
-        -moz-box-shadow: 0px 0px 0px 2px @heritage-yellow;
-        box-shadow: 0px 0px 0px 2px @heritage-yellow;
-    }
-}
-
 .btn,
 .button,
 .btn-primary,
@@ -129,8 +103,8 @@ input[type=button] {
 
 .btn-primary-light {
     .btn(
-    @btn-background: @aqua-light,
-    @btn-background-hover: @aqua
+        @btn-background: @aqua-light,
+        @btn-background-hover: @aqua
     ); 
 }
 
@@ -277,6 +251,6 @@ button:disabled {
     & >:last-child {
         border-radius: 0 2px 2px 0;
         margin: 0;
-        border: none;
+        border-right: 0px;
     }
 }

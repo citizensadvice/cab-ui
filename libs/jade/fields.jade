@@ -20,6 +20,64 @@ block content
 				p Using a field for a persons full name is recommended when possible, different cultures structure names in different ways and a Firstname, Surname approach isn't always appropriate.
 				.example-box-plain
 					fieldset
+						label(for="field") Field group
+						.field-group
+							input#field(placeholder="£", type="number")
+							button.btn Week
+							button.btn Month
+							button.btn Year
+				pre
+					code.language-html
+						| &lt;fieldset&gt;
+						| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+						| 	&lt;input id="standardField" placeholder="" type="text"&gt;
+						| &lt;/fieldset&gt;
+
+				.example-box-plain
+					fieldset
+						label(for="field") Field group
+						.field-group
+							input#field(placeholder="£", type="number")
+							.dropdown
+								select#exampleSelect1
+									option Daily
+									option 2
+									option 3
+									option 4
+									option 5
+				pre
+					code.language-html
+						| &lt;fieldset&gt;
+						| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+						| 	&lt;input id="standardField" placeholder="" type="text"&gt;
+						| &lt;/fieldset&gt;
+
+				.example-box-plain
+				fieldset
+					label(for="field") Field group
+					.field-group
+						input#field(placeholder="£", type="number")
+						label.radio.radio--inline
+							input(checked name="radio-inline", type="radio", value="option1")
+							| Week
+						label.radio.radio--inline
+							input(name="radio-inline", type="radio", value="option2")
+							| Month
+						label.radio.radio--inline
+							input(name="radio-inline", type="radio", value="option3")
+							| Year
+				pre
+					code.language-html
+						| &lt;fieldset&gt;
+						| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+						| 	&lt;input id="standardField" placeholder="" type="text"&gt;
+						| &lt;/fieldset&gt;
+
+
+
+
+				.example-box-plain
+					fieldset
 						label(for="standardField") Standard field
 						input#standardField(placeholder="", type="text")
 				pre
