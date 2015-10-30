@@ -2,8 +2,8 @@ span[id*="overlay_button"] {
     cursor: help;
     padding: 0 .25em;
     //display: inline-block;
-    border-bottom: 1px solid @heritage-yellow;
-    background-color: @heritage-yellow-lighter;
+    border-bottom: 1px solid @inventive-teal-light;
+    background-color: @inventive-teal-lightest;
     //box-shadow: 0.25em 0 0 tint(@advisor-color, 75%),
     //            -.25em 0 0 tint(@advisor-color, 75%);
 }
@@ -19,9 +19,27 @@ span[id*="overlay_button"] {
 
 .callout--adviser {
     .callout( 
-        @inventive-teal-lighter, 
-        @aqua-light 
+        @inventive-teal-lightest, 
+        @aqua-light
     ); 
     .callout--border; 
     .callout--border--left;
+}
+
+.adviser-nav {
+    .side-nav-beta__sibling {
+        //border-left: 8px solid @heritage-yellow-lighter;
+        //background-color: @heritage-yellow-lighter;
+        a {
+            //color: @heritage-yellow-darker;
+        }
+        &:hover {
+            //a { color: @black; }
+            //background-color: @heritage-yellow-lighter;
+        }
+    }
+    .-current {
+        background-color: lighten(@inventive-teal-lighter, 5%) !important;
+        border-color: @inventive-teal-lighter !important;
+    }
 }

@@ -3,7 +3,8 @@
 	button#showSimpleModal.btn.btn-primary-outline.btn-small(type="button") England
 	a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
 	a.a-social-print(href="javascript:window.print();", data-track="Print") Print
-	a.a-social-references(href="#!", data-track="References") References
-	//span.info-extent Extent
-	//span.info-reviewed Reviewed
-	//span.info-owner Owner
+	if toolbarsadviser
+		a.a-social-references(href="#!", data-track="References") References
+		span.info-extent Extent
+		span.info-reviewed Reviewed
+		span.info-owner Owner

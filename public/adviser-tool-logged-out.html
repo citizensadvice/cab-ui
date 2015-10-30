@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="keywords">
     <meta name="description">
-    <title>Citizens Advice style guide - Modal/Overlay
+    <title>Citizens Advice style guide - Tool for advice
     </title>
     <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
@@ -27,37 +27,44 @@
   </head>
   <body>
     <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <aside class="section-notice__login">
+      <h2 class="screenreader">Notice</h2>
+      <div class="section-notice__content">
+        <button type="button" class="btn btn-small"><a href="adviser.html">Adviser login</a></button>
+      </div>
+    </aside>
     <header class="main-header">
       <div class="main-header__content main-content"><a href="index.html" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&amp;#39;/Static/images/logos/ca-logo_100px.svg.png&amp;#39;;" src="assets/images/ca-logo_100px.svg"></a><img src="assets/images/ca-logo-hz-280px.svg" class="print-only logo"></div>
     </header>
     <div class="main-container">
       <nav class="main-breadcrumb">
-        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#organisms" title="Organisms">Organisms</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#modals" title="Modals">Modals</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Modal/Overlay</span>
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#templates" title="Templates">Templates</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Client content</span>
         </div>
       </nav>
+      <aside class="section-notice">
+        <h2 class="screenreader">Notice</h2>
+        <div class="section-notice__content">
+          <p><span class="badge">NEW</span>This page is part of <a href="#">our new approach to digital advice</a>.</p>
+        </div>
+      </aside>
       <div class="main-content">
         <main id="main" role="main" class="main-content__right">
           <div class="title">
-            <h1 class="title__heading js-ref"><span class="title__title">Modal/Overlay</span></h1>
+            <h1 class="title__heading js-ref"><span class="title__title">Tool for advice</span></h1>
           </div>
           <div class="title__subheading">This advice is for 
             <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a>
           </div>
-          <div class="overlay">
-            <div class="overlay__modal">
-              <div class="overlay__main">
-                <h3 class="overlay__header">Overlay title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem nibh, placerat in ultrices id, semper id est. Suspendisse maximus eget tortor ut efficitur. Aenean facilisis ultrices lorem volutpat pellentesque. In quis scelerisque magna. Suspendisse vel erat a sapien ornare sollicitudin quis ut quam. Vestibulum sollicitudin augue at tempor elementum. Nulla vitae nisl nisl.</p>
-                <fieldset>
-                  <label for="standardField">Standard field</label>
-                  <input id="standardField" type="text" placeholder="">
-                </fieldset>
-              </div>
-              <div class="overlay__footer">
-                <button type="button" class="btn btn-primary-light">Cancel</button>
-                <button type="button" class="btn btn-primary tick-button-icon">Agree</button>
-              </div>
-            </div>
+          <div>
+            <h2>Use this tool to receive tailored advice </h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            <h3>Before you start</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+            <button type="button" class="btn btn-primary-light right-button-icon">Start</button>
           </div>
           <div class="title__subheading--footer">
             <p>Share this page</p><a href="https://twitter.com/share?url=" data-track="Twitter" rel="external" class="a-social-twitter">Twitter</a><a href="https://www.facebook.com/sharer/sharer.php?u=" data-track="Facebook" rel="external" class="a-social-facebook">Facebook</a><a href="https://plus.google.com/share?url=" data-track="Google+" rel="external" class="a-social-google-plus">Google Plus</a><a href="whatsapp://send" data-text="share?url=" data-track="whatsapp" rel="external" class="a-social-whatsapp">Whatsapp</a>
@@ -68,11 +75,16 @@
           <ul>
             <li class="side-nav-beta__heading -active -open"><a><span>Section title</span></a></li>
             <ul>
-              <li class="side-nav-beta__sibling"><a href="#" title="Sibling page 1" class="-current">Sibling page 1</a>
+              <li class="side-nav-beta__sibling"><a href="#" title="Content page">Content page</a>
               </li>
-              <li class="side-nav-beta__sibling"><a href="#" title="Sibling page 2">Sibling page 2</a>
+              <li class="side-nav-beta__sibling"><a href="adviser-tool.html" title="Advice tool" class="-current">Advice tool</a>
               </li>
             </ul>
+          </ul>
+        </nav>
+        <nav class="side-nav-beta adviser-nav">
+          <ul>
+            <li class="side-nav-beta__heading -active -open"><a></a></li>
           </ul>
         </nav>
         <section class="print-only">

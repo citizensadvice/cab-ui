@@ -2889,10 +2889,6 @@ span[id*="overlay_button"] {
 .advisor--box .callout__link--anchor:after {
   content: "\f063";
 }
-.adviser-nav .-current {
-  background-color: #feefdc !important;
-  border-color: #fee4c3 !important;
-}
 .inline--button {
   float: right;
   position: relative;
@@ -2958,6 +2954,30 @@ div.tooltip:before {
   position: absolute;
   left: 50%;
   bottom: -16px;
+}
+.section-notice__login {
+  background: #ffffff;
+  margin: 0 0 -4em 0;
+  padding: 0;
+}
+.section-notice__login button {
+  float: right;
+}
+.section-notice__login button a {
+  border-bottom: none;
+}
+.section-notice__login__content {
+  max-width: 1080px;
+  margin: auto;
+  clear: left;
+  padding: 1rem 0 0 1rem;
+  overflow: hidden;
+}
+.section-notice__login__content p a {
+  border-bottom: none;
+}
+.section-notice__login__content p a:hover {
+  border-bottom: 0.0625rem solid #fba437;
 }
 /* Base files */
 /**
@@ -10357,13 +10377,13 @@ input.tablesort-filter {
   margin-right: 1rem;
 }
 .section-notice__adviser {
-  background-color: #a2d5ff;
+  background-color: #a3cfd8;
 }
 .section-notice__adviser p a:hover {
-  border-bottom: 0.0625rem solid #004b88;
+  border-bottom: 0.0625rem solid #007792;
 }
 .section-notice__adviser .badge {
-  background-color: #004b88;
+  background-color: #006278;
   color: #ffffff;
 }
 @media (max-width: 1148px) and (min-width: 600px) {
@@ -12236,8 +12256,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 span[id*="overlay_button"] {
   cursor: help;
   padding: 0 .25em;
-  border-bottom: 1px solid #fcbb69;
-  background-color: #fee4c3;
+  border-bottom: 1px solid #007792;
+  background-color: #c7e2e7;
 }
 .adviser {
   color: #004b88;
@@ -12248,13 +12268,11 @@ span[id*="overlay_button"] {
   font-family: 'Helvetica', 'FontAwesome';
 }
 .callout--adviser {
-  background-color: #dfdfdf;
-  border: 0px #9f9f9f solid;
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin: 0.75rem 0;
-  background-color: #caeaff;
+  background-color: #c7e2e7;
   color: #191926;
-  border: 0px #4ab7ff solid;
+  border: 0px #6db3c1 solid;
   display: block;
   border-width: 1px;
   border-left-width: 0.5rem;
@@ -12262,11 +12280,11 @@ span[id*="overlay_button"] {
 .callout--adviser > h1,
 .callout--adviser > h2,
 .callout--adviser > h3 {
-  color: #191926;
+  color: #b8e3df;
   font-size: 1.3rem;
 }
 .callout--adviser a {
-  border-bottom-color: #9f9f9f;
+  border-bottom-color: #6db3c1;
 }
 .callout--adviser > *:first-child {
   padding-top: 0;
@@ -12292,9 +12310,9 @@ span[id*="overlay_button"] {
   padding: 0.75rem 4.5rem 0.75rem 1rem;
   margin: 0.75rem -1rem -0.75rem -1rem;
   border: none;
-  background-color: #d2d2d2;
+  background-color: #b5cee0;
   color: #191926;
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid #6db3c1;
   text-decoration: none;
   position: relative;
 }
@@ -12303,7 +12321,7 @@ span[id*="overlay_button"] {
   font-family: 'FontAwesome';
   content: "\f054";
   color: #191926;
-  background-color: #c6c6c6;
+  background-color: #a3c2d8;
   height: 100%;
   position: absolute;
   right: 0;
@@ -12313,80 +12331,21 @@ span[id*="overlay_button"] {
   text-align: center;
 }
 .callout--adviser .callout__link:hover {
-  background-color: #c6c6c6;
+  background-color: #a3c2d8;
   color: #191926;
 }
 .callout--adviser .callout__link:hover:after {
-  background-color: #acacac;
-}
-.callout--adviser .callout__link--anchor:after {
-  content: "\f063";
-}
-.callout--adviser > h1,
-.callout--adviser > h2,
-.callout--adviser > h3 {
-  color: #003c64;
-  font-size: 1.3rem;
-}
-.callout--adviser a {
-  border-bottom-color: #4ab7ff;
-}
-.callout--adviser > *:first-child {
-  padding-top: 0;
-}
-.callout--adviser h1:first-child,
-.callout--adviser h2:first-child,
-.callout--adviser h3:first-child,
-.callout--adviser h4:first-child,
-.callout--adviser h5:first-child,
-.callout--adviser h6:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-.callout--adviser li:first-child {
-  padding-top: 0;
-}
-.callout--adviser > *:last-child {
-  margin-bottom: 0;
-}
-.callout--adviser .callout__link {
-  cursor: pointer;
-  display: block;
-  padding: 0.75rem 4.5rem 0.75rem 1rem;
-  margin: 0.75rem -1rem -0.75rem -1rem;
-  border: none;
-  background-color: #b0ccff;
-  color: #191926;
-  border-bottom: 1px solid #4ab7ff;
-  text-decoration: none;
-  position: relative;
-}
-.callout--adviser .callout__link:after {
-  box-sizing: border-box;
-  font-family: 'FontAwesome';
-  content: "\f054";
-  color: #191926;
-  background-color: #97bbff;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  line-height: 3em;
-  width: 3em;
-  text-align: center;
-}
-.callout--adviser .callout__link:hover {
-  background-color: #97bbff;
-  color: #191926;
-}
-.callout--adviser .callout__link:hover:after {
-  background-color: #649aff;
+  background-color: #7faac9;
 }
 .callout--adviser .callout__link--anchor:after {
   content: "\f063";
 }
 .callout--adviser .callout__link:last-child {
   border: none;
+}
+.adviser-nav .-current {
+  background-color: #b5d8e0 !important;
+  border-color: #a3cfd8 !important;
 }
 /* Print styles */
 @media print {

@@ -1,7 +1,9 @@
 block settings
 	- var title = "Content page"
+	- var logoutheader = true
 	- var sidebar = true
 	- var toolbars = true
+	- var toolbarsadviser = true
 
 extends ../template/template.jade
 
@@ -23,12 +25,14 @@ block sidebar
 	- var section = "Section title"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Content page"}],
+		{title: "Content page"},
+		{title: "Advice tool", href: "adviser-tool.html"}],
 		0)
 
 	nav.side-nav-beta.adviser-nav
 		ul
 			li.side-nav-beta__heading.-active.-open
+
 				a
 					span Adviser pages
 			ul

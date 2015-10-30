@@ -329,24 +329,6 @@ span[id*="overlay_button"] {
     margin: 0;
 }
 
-.adviser-nav {
-    .side-nav-beta__sibling {
-        //border-left: 8px solid @heritage-yellow-lighter;
-        //background-color: @heritage-yellow-lighter;
-        a {
-            //color: @heritage-yellow-darker;
-        }
-        &:hover {
-            //a { color: @black; }
-            //background-color: @heritage-yellow-lighter;
-        }
-    }
-    .-current {
-        background-color: lighten(@heritage-yellow-lighter, 5%) !important;
-        border-color: @heritage-yellow-lighter !important;
-    }
-}
-
 .inline--button {
     float: right;
     .btn-icon("\f06e",@border:no-border);
@@ -357,6 +339,9 @@ span[id*="overlay_button"] {
         cursor: pointer;
     }
 }
+
+
+// Tooltip, for future development
 
 div.tooltip {
     background-color: @gray-8;
@@ -387,4 +372,30 @@ div.tooltip:before {
     position: absolute;
     left: 50%;
     bottom: -16px;
+}
+
+
+// Logging in
+
+.section-notice__login {
+    background: @white;
+    margin: 0 0 -4em 0;
+    padding: 0;
+    button {
+        float: right;
+        a {
+            border-bottom: none;
+        }
+    }
+    &__content {
+        .limit-width;
+        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
+        overflow: hidden;
+        p a {
+            border-bottom: none;
+            &:hover {
+                border-bottom: 0.0625rem solid @heritage-yellow-darker;        
+            }
+        }
+    }
 }
