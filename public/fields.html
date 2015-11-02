@@ -48,62 +48,6 @@
               <p>Using a field for a persons full name is recommended when possible, different cultures structure names in different ways and a Firstname, Surname approach isn't always appropriate.</p>
               <div class="example-box-plain">
                 <fieldset>
-                  <label for="field">Field group</label>
-                  <div class="field-group">
-                    <input id="field" placeholder="£" type="number">
-                    <button class="btn">Week</button>
-                    <button class="btn">Month</button>
-                    <button class="btn">Year</button>
-                  </div>
-                </fieldset>
-              </div>
-              <pre><code class="language-html">&lt;fieldset&gt;
-	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
-	&lt;input id="standardField" placeholder="" type="text"&gt;
-&lt;/fieldset&gt;</code></pre>
-              <div class="example-box-plain">
-                <fieldset>
-                  <label for="field">Field group</label>
-                  <div class="field-group">
-                    <input id="field" placeholder="£" type="number">
-                    <div class="dropdown">
-                      <select id="exampleSelect1">
-                        <option>Daily</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              <pre><code class="language-html">&lt;fieldset&gt;
-	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
-	&lt;input id="standardField" placeholder="" type="text"&gt;
-&lt;/fieldset&gt;</code></pre>
-              <div class="example-box-plain"></div>
-              <fieldset>
-                <label for="field">Field group</label>
-                <div class="field-group">
-                  <input id="field" placeholder="£" type="number">
-                  <label class="radio radio--inline">
-                    <input checked name="radio-inline" type="radio" value="option1">Week
-                  </label>
-                  <label class="radio radio--inline">
-                    <input name="radio-inline" type="radio" value="option2">Month
-                  </label>
-                  <label class="radio radio--inline">
-                    <input name="radio-inline" type="radio" value="option3">Year
-                  </label>
-                </div>
-              </fieldset>
-              <pre><code class="language-html">&lt;fieldset&gt;
-	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
-	&lt;input id="standardField" placeholder="" type="text"&gt;
-&lt;/fieldset&gt;</code></pre>
-              <div class="example-box-plain">
-                <fieldset>
                   <label for="standardField">Standard field</label>
                   <input id="standardField" placeholder="" type="text">
                 </fieldset>
@@ -186,36 +130,6 @@
 			&lt;option&gt;4&lt;/option&gt;
 			&lt;option&gt;5&lt;/option&gt;
 		&lt;/select&gt;
-	&lt;/div&gt;
-&lt;/fieldset&gt;</code></pre>
-              <div class="example-box-plain">
-                <fieldset>
-                  <div class="form-group-date">
-                    <label for="dob-day">Day</label>
-                    <input id="dob-day" max="31" min="1" placeholder="DD" type="number">
-                  </div>
-                  <div class="form-group-date">
-                    <label for="dob-month">Month</label>
-                    <input id="dob-month" max="12" min="1" placeholder="MM" type="number">
-                  </div>
-                  <div class="form-group-date">
-                    <label for="dob-year">Year</label>
-                    <input id="dob-year" max="2100" placeholder="YYYY" type="number">
-                  </div>
-                </fieldset>
-              </div>
-              <pre><code class="language-html">&lt;fieldset&gt;
-	&lt;div class="form-group-date"&gt;
-		&lt;label for="dob-day"&gt;Day&lt;/label&gt;
-		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
-	&lt;/div&gt;
-	&lt;div class="form-group-date"&gt;
-		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
-		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
-	&lt;/div&gt;
-	&lt;div class="form-group-date"&gt;
-		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
-		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
 	&lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>
               <div class="example-box-plain">
@@ -440,6 +354,117 @@
 			&lt;span&gt;No&lt;/span&gt;&lt;br&gt;I'm not in any situation
 		&lt;/p&gt;
 	&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+              <h2>Field groups</h2>
+              <div class="example-box-plain">
+                <fieldset>
+                  <div class="form-group-date">
+                    <label for="dob-day">Day</label>
+                    <input id="dob-day" max="31" min="1" placeholder="DD" type="number">
+                  </div>
+                  <div class="form-group-date">
+                    <label for="dob-month">Month</label>
+                    <input id="dob-month" max="12" min="1" placeholder="MM" type="number">
+                  </div>
+                  <div class="form-group-date">
+                    <label for="dob-year">Year</label>
+                    <input id="dob-year" max="2100" placeholder="YYYY" type="number">
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-day"&gt;Day&lt;/label&gt;
+		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
+		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
+		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with buttons</label>
+                  <div class="field-group--buttons">
+                    <input id="field" placeholder="£" type="number">
+                    <button class="btn">Week</button>
+                    <button class="btn">Month</button>
+                    <button class="btn">Year</button>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
+	&lt;div class="field-group"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;button class="btn"&gt;Week&lt;/button&gt;
+		&lt;button class="btn"&gt;Month&lt;/button&gt;
+		&lt;button class="btn"&gt;Year&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with dropdown</label>
+                  <div class="field-group--dropdown">
+                    <input id="field" placeholder="£" type="number">
+                    <div class="dropdown">
+                      <select id="exampleSelect1">
+                        <option>Daily</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with dropdown&lt;/label&gt;
+	&lt;div class="field-group--dropdown"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;div class="dropdown"&gt;
+			&lt;select id="exampleSelect1"&gt;
+				&lt;option&gt;Daily&lt;/option&gt;
+				&lt;option&gt;Monthly&lt;/option&gt;
+				&lt;option&gt;Yearly&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with radio buttons</label>
+                  <div class="field-group--radio">
+                    <input id="field" placeholder="£" type="number">
+                    <label class="radio radio--inline">
+                      <input checked name="radio-inline" type="radio" value="option1">Week
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option2">Month
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option3">Year
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
+	&lt;div class="field-group--radio"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option2"&gt;Month
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option3"&gt;Year
+		&lt;/label&gt;
+	&lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>
             </div>
           </div>
