@@ -1,12 +1,13 @@
 # CodeKit config
 config.codekit
 
-# Annoying CSS files that shouldn't be there
+# Annoying CSS and .map files that shouldn't be there
 /css/
 /libs/css/
-#/public/css/site.css
-.DS_Store
 *.map
-README.htmlREADME.html
 public/css/tools.css
 public/css/chat-styles.css
+
+# Other files
+.DS_Store
+README.htmlREADME.html
