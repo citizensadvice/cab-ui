@@ -9,3 +9,4 @@ config.codekit
 *.map
 README.htmlREADME.html
 public/css/tools.css
+public/css/chat-styles.css
