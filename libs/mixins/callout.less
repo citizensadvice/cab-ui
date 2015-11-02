@@ -46,7 +46,7 @@
     > *:last-child {
     	margin-bottom: 0;
     }
-	.callout__link {
+	/*.callout__link {
 	 	cursor: pointer;
 	 	display: block;
 	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
@@ -81,11 +81,13 @@
 	    &--anchor:after {
 		    content: "\f063";
 	    }
-	}
+	}*/
 }
 
 // Callout icons
 .callout--icon(@icon) {
+		.callout--border;
+		.callout--border--left;  
 	    &:before {
 	        font-family: 'FontAwesome';
 	        font-size: .85rem;
