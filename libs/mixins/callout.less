@@ -11,13 +11,16 @@
 		@callout-text: @text-color; 
 		@callout-border: darken(@callout-background, 25%) 
 	){
-
     padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
     margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
     display: block;
+    &:before {
+    	color: @text-color;
+    	background-color: @callout-border;
+    }
 	> h1, > h2, > h3 {
 		color: @callout-headings; 
 		font-size: @font-size-h3;
@@ -82,26 +85,16 @@
 }
 
 // Callout icons
-.callout--icon(@icon, @color: @text-color) {
+.callout--icon(@icon) {
 	    &:before {
 	        font-family: 'FontAwesome';
-	        font-size: 1.25rem;
+	        font-size: .85rem;
 	        font-weight: 300;
 	        content: @icon;
-	        color: @color;
 	        line-height: 1em;
 	        display: block;
 	        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
 	        padding: @box-spacing-vertical @box-spacing-horizontal;
-	        //width: 1em;
-	        //height: 1em;
-	        //text-align: center;
-	        //border-radius: 50%;
-	        background-color: rgba(255, 255, 255, 0.2);
-	        //border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-	    	//position: absolute;
-	        //right: -@box-spacing*.3;
-		    //top: -@box-spacing*.08;
 	    
 	}
 }

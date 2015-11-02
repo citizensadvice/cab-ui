@@ -21,12 +21,12 @@
 // Green
 .callout--confirmation {
 	.callout( 
-		@green-light, 
-		@green 
+		@green-lighter, 
+		@green
 	); 
 	.callout--border--left;
     &.callout--icon {
-        .callout--icon("\f00c",@green);
+        .callout--icon("\f00c\00a0 Correct");
     }
 }
 
@@ -35,11 +35,15 @@
 .dap-panel--crucial,
 .highlight--error {
 	.callout( 
-		@red-lighter,
-		@red 
+		@red-lightest,
+		@red,
+        @callout-border: @red
 	); 
 	.callout--border--left;
-    .callout--icon("\f071",@red);
+    .callout--icon("\f071\00a0 Important");
+    &:before {
+        color: @white;
+    }
 }
 
 // Yellow
@@ -48,11 +52,14 @@
 .dap-panel--adviser,
 .highlight--warning {
 	.callout( 
-		@yellow-light 
+		@yellow-light
 	); 
 	.callout--border--left;
     &.callout--icon {
-        .callout--icon("\f06a",@yellow);
+        .callout--icon("\f06a\00a0 Worth\00a0knowing");
+    }
+    &:before {
+        color: @text-color;
     }
 }
 
