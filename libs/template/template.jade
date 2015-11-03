@@ -80,9 +80,10 @@ html
 			.main-content
 				if sidebar
 					main.main-content__right(id="main", role="main")
-						.title
-							h1.title__heading.js-ref
-								span.title__title #{title}
+						if title
+							.title
+								h1.title__heading.js-ref
+									span.title__title #{title}
 						if toolbars
 							include toolbar.jade
 							block content
