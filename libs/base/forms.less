@@ -371,7 +371,51 @@ input[class*="dob-"] {
         input {
             border-radius: 0;
             border-right: 0;
-            width: 25%;
+            //width: 25%;
+        }
+        button {
+            //width: 25%;
+            padding: @box-spacing-vertical @box-spacing-horizontal;
+        }
+        input:first-of-type {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+        }
+        *:last-child {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
+    }
+    &--radio {
+        display: inline-table;
+        white-space: nowrap;
+        width: 100%;
+        label,
+        input,
+        button {
+            display: inline-block;
+            width: auto;
+            margin-right: 0;
+            border-radius: 0;
+        }
+        input[type="number"] {
+            border-radius: 0;
+            border-right: 0;
+            //width: 25%;
+        }
+        label {
+            //width: 25%;
+            padding: @box-spacing-vertical @box-spacing-horizontal;
+            text-align: center;
+            input {
+                margin-right: .25em;
+            }
+            input:before {
+                border-radius: 0;
+                border-width: 1px 0;
+            }
+            &:last-child input:before {
+                border-radius: 0 @form-border-radius @form-border-radius 0;
+                border-right-width: 1px;
+            }
         }
         button {
             width: 25%;
@@ -399,50 +443,6 @@ input[class*="dob-"] {
             border-radius: 0 @form-border-radius @form-border-radius 0;
             .btn-primary-light;
             padding: 0;
-        }
-        input:first-of-type {
-            border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-        *:last-child {
-            border-radius: 0 @form-border-radius @form-border-radius 0;
-        }
-    }
-    &--radio {
-        display: inline-table;
-        white-space: nowrap;
-        width: 100%;
-        label,
-        input,
-        button {
-            display: inline-block;
-            width: auto;
-            margin-right: 0;
-            border-radius: 0;
-        }
-        input[type="number"] {
-            border-radius: 0;
-            border-right: 0;
-            width: 25%;
-        }
-        label {
-            width: 25%;
-            padding: @box-spacing-vertical 0;
-            text-align: center;
-            input {
-                margin-right: .25em;
-            }
-            input:before {
-                border-radius: 0;
-                border-width: 1px 0;
-            }
-            &:last-child input:before {
-                border-radius: 0 @form-border-radius @form-border-radius 0;
-                border-right-width: 1px;
-            }
-        }
-        button {
-            width: 25%;
-            padding: @box-spacing-vertical 0;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;
