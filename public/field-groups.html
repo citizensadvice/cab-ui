@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <title>Citizens Advice style guide - Field groups
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="/static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../libs/vendors/prism/prism.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
+    <link href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Javascript-->
+    <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../libs/javascript/beta-dap-accordion.js"></script>
+    <script src="../libs/javascript/collapse.js"></script>
+    <script src="../libs/vendors/prism/prism.js"></script>
+  </head>
+  <body>
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="main-header">
+      <div class="main-header__content main-content"><a href="index.html" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&amp;#39;/Static/images/logos/ca-logo_100px.svg.png&amp;#39;;" src="assets/images/ca-logo_100px.svg"></a><img src="assets/images/ca-logo-hz-280px.svg" class="print-only logo"></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#atoms" title="Atoms">Atoms</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#forms" title="Forms">Forms</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Field groups</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div class="title">
+          <h1 class="title__heading js-ref"><span class="title__title">Field groups</span></h1>
+        </div>
+        <div class="articleContent">
+          <div class="row">
+            <div class="span8">
+              <div class="example-box-plain">
+                <fieldset>
+                  <div class="form-group-date">
+                    <label for="dob-day">Day</label>
+                    <input id="dob-day" max="31" min="1" placeholder="DD" type="number">
+                  </div>
+                  <div class="form-group-date">
+                    <label for="dob-month">Month</label>
+                    <input id="dob-month" max="12" min="1" placeholder="MM" type="number">
+                  </div>
+                  <div class="form-group-date">
+                    <label for="dob-year">Year</label>
+                    <input id="dob-year" max="2100" placeholder="YYYY" type="number">
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-day"&gt;Day&lt;/label&gt;
+		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
+		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group-date"&gt;
+		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
+		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with buttons</label>
+                  <div class="field-group--buttons">
+                    <input id="field" placeholder="£" type="number">
+                    <button class="btn">Week</button>
+                    <button class="btn">Month</button>
+                    <button class="btn">Year</button>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
+	&lt;div class="field-group"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;button class="btn"&gt;Week&lt;/button&gt;
+		&lt;button class="btn"&gt;Month&lt;/button&gt;
+		&lt;button class="btn"&gt;Year&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with dropdown</label>
+                  <div class="field-group--dropdown">
+                    <input id="field" placeholder="£" type="number">
+                    <div class="dropdown">
+                      <select id="exampleSelect1">
+                        <option>Daily</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with dropdown&lt;/label&gt;
+	&lt;div class="field-group--dropdown"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;div class="dropdown"&gt;
+			&lt;select id="exampleSelect1"&gt;
+				&lt;option&gt;Daily&lt;/option&gt;
+				&lt;option&gt;Monthly&lt;/option&gt;
+				&lt;option&gt;Yearly&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with radio buttons</label>
+                  <div class="field-group--radio">
+                    <input id="field" placeholder="£" type="number">
+                    <label class="radio radio--inline">
+                      <input checked name="radio-inline" type="radio" value="option1">Week
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option2">Month
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option3">Year
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
+	&lt;div class="field-group--radio"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option2"&gt;Month
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option3"&gt;Year
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <section class="print-only">
+          <h2>This section is print only</h2>
+        </section>
+      </div>
+    </div>
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p><img alt="" height="100" src="assets/images/ca-logo_100px.svg.png" width="100">Copyright © 2015 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../libs/javascript/advisor.js"></script>
+    <script src="../libs/javascript/core.js"></script>
+  </body>
+</html>
