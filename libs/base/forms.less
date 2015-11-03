@@ -356,9 +356,10 @@ input[class*="dob-"] {
 
 .field-group {
     &--buttons {
-        display: inline-table;
+        display: table;
         white-space: nowrap;
         width: 100%;
+        table-layout: fixed;
         label,
         input,
         button {
@@ -396,6 +397,8 @@ input[class*="dob-"] {
             width: 35%;
             display: inline-block;
             border-radius: 0 @form-border-radius @form-border-radius 0;
+            .btn-primary-light;
+            padding: 0;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;
