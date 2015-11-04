@@ -12,8 +12,8 @@
 		@callout-border: darken(@callout-background, 25%) 
 	){
     padding: .75em 1em;
-    padding: @box-spacing-vertical @box-spacing-horizontal;
-    margin: @box-spacing-vertical 0;
+    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+    .spacing(margin,@box-spacing-vertical,0);
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
@@ -96,10 +96,8 @@
 	        content: @icon;
 	        line-height: 1em;
 	        display: block;
-	        margin: -.75em -1em .75em -1em;
-	        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
-    		padding: .75em 1em;
-	        padding: @box-spacing-vertical @box-spacing-horizontal;
+	        .spacing(margin,-@box-spacing-vertical,-@box-spacing-horizontal,@box-spacing-vertical,-@box-spacing-horizontal);
+	        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
 	    
 	}
 }
@@ -112,8 +110,10 @@
 	}
 }
 .callout--border--left ( @callout--border--left--width: @box-spacing/2 ) {
+	border-left-width: unit(@callout--border--left--width, em);
 	border-left-width: @callout--border--left--width;
 }
 .callout--border--top ( @callout--border--top--width: @box-spacing/2 ) {
+	border-top-width: unit(@callout--border--top--width, em);
 	border-top-width: @callout--border--top--width;
 }

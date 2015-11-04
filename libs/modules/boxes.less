@@ -11,13 +11,16 @@
         @index-box-background: @heritage-blue-lightest,
         @index-box-text: @text-color, 
     ){
+    padding: 1em;
     padding: @box-spacing;
+    margin: 1em*.5;
     margin: @box-spacing*.5;
     background-color: @index-box-background;
     color: @index-box-text;
     border-top-width: 4px;
     display: block;
     & > h2 {
+        margin: 0 0 1em*.7;
         margin: 0 0 @box-spacing*.7;
         font-size: @font-size-medium;
         color: @heritage-blue;
@@ -27,6 +30,7 @@
         }
     }
     & > h3 {
+        margin: 0 0 1em*.7;
         margin: 0 0 @box-spacing*.7;
         font-size: @font-size-base;
         color: @text-color;
@@ -72,12 +76,14 @@
     border-top-width: 4px;
 
     & > h2 {
+        margin: 0 0 1em*.7;
         margin: 0 0 @box-spacing*.7;
         font-size: @font-size-medium;
         color: @heritage-blue;
     }
 
     & > h3 {
+        margin: 0 0 1em*.7;
         margin: 0 0 @box-spacing*.7;
         font-size: @font-size-base;
         color: @text-color;
@@ -107,8 +113,10 @@
 }
 
 .breadcrumb-lite {
+    padding-top: 1em*.5; 
     padding-top: @box-spacing*.5; 
     @media screen and (max-width: @screen-xs-max) {
+        margin-top: .75em*1.5;
         margin-top: @box-spacing-vertical*1.5;
     }
 }

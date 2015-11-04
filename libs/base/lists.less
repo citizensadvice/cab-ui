@@ -96,8 +96,7 @@ li > ol {
         margin-bottom: 0;
 
         a {
-            padding: 1em 1em*.6;
-            padding: @box-spacing @box-spacing*.6;
+            .spacing(padding,@box-spacing,@box-spacing*.6);
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -119,7 +118,7 @@ li > ol {
 .search-tab-container{
     background: @gray-7;
     overflow: hidden;
-    margin-top: 1em*.6;
+    margin-top: unit(@box-spacing*.6,em);
     margin-top: @box-spacing*.6;
     border-bottom: 1em*.6 solid @heritage-blue;
     border-bottom: @box-spacing*.6 solid @heritage-blue;
@@ -137,8 +136,7 @@ li > ol {
         vertical-align: top;
 
         a {
-            padding: 1em 1em*.6;
-            padding: @box-spacing @box-spacing*.6;
+            .spacing(padding,@box-spacing,@box-spacing*.6);
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -159,9 +157,9 @@ li > ol {
 .letters-tab-container {
     background: @gray-7;
     overflow: hidden;
-    margin-top: 1em*.6;
+    margin-top: unit(@box-spacing*.6);
     margin-top: @box-spacing*.6;
-    border-bottom: 1em*.6 solid @heritage-blue;
+    border-bottom: unit(@box-spacing*.6,em) solid @heritage-blue;
     border-bottom: @box-spacing*.6 solid @heritage-blue;
     clear: both;
     ul {
@@ -173,8 +171,7 @@ li > ol {
         width: 25%;
         margin-bottom: 0;
         a {
-            padding: 1em 1em*.6;
-            padding: @box-spacing @box-spacing*.6;
+            .spacing(padding,@box-spacing,@box-spacing*.6);
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -223,8 +220,7 @@ li > ol {
 
 // Pagination
 .pagination ul {
-    margin: 1em 0;
-    margin: @box-spacing 0;
+    .spacing(margin,@box-spacing,0);
     padding: 0;
     overflow: hidden;
     & > li {
@@ -249,7 +245,7 @@ li > ol {
             }
         }
         &.pagination--dot {
-            padding: .2em .7em;
+            .spacing(padding,.2,.7);
             margin-right: .3em;
             margin-left: -.2em;
             font-weight: 600;

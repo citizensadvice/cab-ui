@@ -4,8 +4,7 @@
 
 // Default Table
 table {
-    margin: .7em 0;
-    margin: @box-spacing-vertical 0;
+    .spacing(margin,@box-spacing-vertical,0);
     border-collapse: collapse;
 }
 
@@ -71,7 +70,7 @@ th {
         background-image: url('/static/layout/sortable-desc.png');
     }
     &-header-inner{
-        padding-right: 1em;
+        padding-right: unit(@box-spacing-horizontal,em);
         padding-right: @box-spacing-horizontal;
     }
 }
@@ -89,8 +88,7 @@ th {
         white-space: nowrap;
         font-weight: bold;
         color: @black;
-        padding: .75em*.4 1em .75em*.4 0;
-        padding: @box-spacing-vertical*.4 @box-spacing-horizontal @box-spacing-vertical*.4 0;
+        .spacing(padding,@box-spacing-vertical*.4,@box-spacing-horizontal,@box-spacing-vertical*.4,0);
         
         // Reset the colours changed for the standard tables
         // Pity we can't use :not for the selector above
@@ -186,8 +184,7 @@ table.simple-table th {
 }
 table.simple-table th, 
 table.simple-table td {
-    padding: 0px 1em/2;
-    padding: 0px @box-spacing-horizontal/2;
+    .spacing(padding,0,@box-spacing-horizontal/2);
 }
 
 
@@ -254,8 +251,7 @@ table.simple-table td {
 // this is automatically added by the htmlrewriter
 .table-scroll {
     overflow-x: auto;
-    margin: .75em 0;
-    margin: @box-spacing-vertical 0;
+    .spacing(margin,@box-spacing-vertical,0);
     & > table {
         margin: 0;
     }

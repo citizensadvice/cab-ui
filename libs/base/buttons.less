@@ -29,8 +29,7 @@ input[type=button] {
 
 .btn-right {
     float: right;
-    margin: .75em*.5 0 .75em*.5 1em*.5;
-    margin: @box-spacing-vertical*.5 0 @box-spacing-vertical*.5 @box-spacing-horizontal*.5;    
+    .spacing(margin,@box-spacing-vertical*.5,0,@box-spacing-vertical*.5,@box-spacing-horizontal*.5);
 }
 
 .btn-disabled,
@@ -149,8 +148,7 @@ button:disabled {
 .btn-group {
     display: inline-table;
     white-space: nowrap;
-    margin: .75em*.5 1em*.5 .75em*.5 0;
-    margin: @box-spacing-vertical*.5 @box-spacing-horizontal*.5 @box-spacing-vertical*.5 0;
+    .spacing(margin,@box-spacing-vertical*.5,@box-spacing-horizontal*.5,@box-spacing-vertical*.5,0);
     .btn {
         border-radius: 0;
         margin: 0;

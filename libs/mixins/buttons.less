@@ -10,11 +10,9 @@
     background-color: @btn-background;
     border: 1px solid @btn-background;
     color: @btn-text;
-    padding: .75em 1em;
-    padding: @box-spacing-vertical @box-spacing-horizontal;
     font-weight: bold;
-    margin: .75em*.5 1em*.5 .75em*.5 0;
-    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
+    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+    .spacing(margin,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,0);
     &:hover,
     &:focus,
     &:active {
