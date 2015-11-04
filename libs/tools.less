@@ -1,4 +1,3 @@
-.cabtool {
 	/* Vendor files */
 	@import "vendors/normalize";
 	//@import "vendors/font-awesome/less/font-awesome";
@@ -8,11 +7,11 @@
 
 	/* Base files */
 	@import "base/colors";
+.cabtool {
 	@import "base/variables";
 	@import "base/global";
 	//@import "base/tables";
 	@import "base/buttons";
-	@import "base/ie";
 	@import "base/forms";
 	//@import "base/framework";
 	@import "base/icons";
@@ -86,5 +85,15 @@
 	@import "modules/page-tree";
 	@import "modules/share-bar";
 	@import "modules/overlay";
+	@import "modules/adviser";
 	*/
 }
+
+/* IE styles */
+@import "base/ie";
+
+/* Print styles
+@media print {
+	@import "base/print";
+}
+*/
