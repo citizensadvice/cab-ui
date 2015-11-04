@@ -1,12 +1,7 @@
 .spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) {
-	@{type}: unit(@top, em) unit(@right, em) unit(@bottom, em) unit(@left, em);
+	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
 	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
-    & when (@bottom = @top) and (@left = @right) {
-		@{type}: unit(@top, em) unit(@right, em);
-		@{type}: unit(@top, rem) unit(@right, rem);
-    }
-    & when (@right = @top) and (@bottom = @top) and (@left = @right) {
-		@{type}: unit(@top, em);
-		@{type}: unit(@top, rem);
-    }
+}
+.px(@value) {
+	@px: unit(unit(@value)*@base-size,px);
 }

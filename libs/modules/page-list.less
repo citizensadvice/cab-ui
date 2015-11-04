@@ -7,17 +7,20 @@
 
 
 .page-list {
-    margin: @box-spacing*1.5 0;
+    .spacing(margin,@box-spacing*1.5,0);
 }
 
 .page-list__item {
     overflow: hidden;
+    margin-bottom: unit(@box-spacing,em);
     margin-bottom: @box-spacing;
 }
 
 .page-list__image {
     float: left;
+    margin-top: unit(@box-spacing*.25,em);
     margin-top: @box-spacing*.25;
+    margin-right: unit(@box-spacing-horizontal,em);
     margin-right: @box-spacing-horizontal;
 }
 

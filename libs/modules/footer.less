@@ -25,7 +25,7 @@
 
 .main-footer__box {
     
-    padding: @box-spacing-horizontal;
+    .spacing(padding,@box-spacing-horizontal);
 
     & > h2 {
         color:@heritage-blue;
@@ -36,7 +36,7 @@
     & > ul {
         list-style: none;
         padding: 0;
-        margin: @box-spacing-horizontal 0 0 0;
+        .spacing(margin,@box-spacing-horizontal,0,0,0);
 
         // Messy, but makes box reuse a bit easier
         &.li--arrow {
@@ -58,6 +58,7 @@
 
     & img {
         float: left;
+        margin-right: unit(@box-spacing-horizontal*2,em);
         margin-right: @box-spacing-horizontal*2;
     }
 }

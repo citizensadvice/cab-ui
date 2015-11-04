@@ -11,7 +11,7 @@
 // Override the default list styling
 .feed {
     list-style: none;
-    margin: @box-spacing 0;
+    .spacing(margin,@box-spacing,0);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@
 }
 
 .feed--content-page .feed__item {
+    margin-bottom: unit(@box-spacing,em);
     margin-bottom: @box-spacing;
 }
 
@@ -99,6 +100,7 @@
     }
 
     .feed {
+        margin-bottom: unit(@box-spacing,em);
         margin-bottom: @box-spacing;
     }
 }

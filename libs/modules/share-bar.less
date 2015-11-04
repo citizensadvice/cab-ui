@@ -24,6 +24,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 // Fixes an issue with spacing when the section notice is present
 // SHAME Daniel
 .section-notice + .main-content .share-bar__outer {
+    margin-top: unit(@box-spacing,em);
     margin-top: @box-spacing;
 }
 
@@ -64,7 +65,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 
     .share-bar {
         @media (max-width: @screen-xs-max) {
-            margin: @box-spacing 0;
+            .spacing(margin,@box-spacing,0);
         }
     }
 
@@ -73,7 +74,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         // But it avoids doubling up on the classes
         display: block;
         color: @gray-3;
-        padding: @box-spacing-horizontal*.8;
+        .spacing(padding,@box-spacing-horizontal*.8);
         line-height: 1;
         position: relative;
         text-decoration: none;
@@ -82,7 +83,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         @media (max-width: @screen-xs-max) {
             display: inline-block;
             color: @white;
-            padding: @box-spacing-horizontal*.6 @box-spacing-horizontal;
+            .spacing(padding,@box-spacing-horizontal*.6,@box-spacing-horizontal);
             text-align: center;
             margin-bottom: .3em;
             width: 3em;
@@ -299,8 +300,3 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         }
     }
 }
-      
-      
-   
-        
-

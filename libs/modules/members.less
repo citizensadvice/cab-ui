@@ -6,6 +6,7 @@
 
 
 .home-page--member {
+    margin-top: unit(@box-spacing, em);
     margin-top: @box-spacing;
 }
 
@@ -142,6 +143,7 @@
     */
 
     & .member-map {
+        margin-top: unit(@box-spacing*3,em);
         margin-top: @box-spacing*3;
         min-height: 200px;
         @media (max-width: @screen-sm-min) {
@@ -173,7 +175,7 @@
         color: white;
         margin: 0;
         font-size: @font-size-medium;
-        padding: @box-spacing-horizontal*.7 @box-spacing-horizontal*.5; // This is supposed to be the same height as the main title
+        .spacing(padding,@box-spacing-horizontal*.7,@box-spacing-horizontal*.5); // This is supposed to be the same height as the main title
     }
 
     & .member_group_label {
@@ -187,6 +189,7 @@
     margin: 1em 0 0 0;
 
     & > a {
+        margin-right: unit(@box-spacing-horizontal*.5,em);
         margin-right: @box-spacing-horizontal*.5;
         padding: 25px;
     }
@@ -212,7 +215,7 @@
 }
 .member-logo {
     padding-right: 20px;
-    margin: @box-spacing 0;
+    .spacing(margin,@box-spacing 0);
 }
 .member-title {
     display: block;

@@ -38,8 +38,8 @@
     margin-bottom: 1em;
 }
 .accordion h3 {
-    margin: @box-spacing-horizontal @box-spacing-vertical 0 @box-spacing-vertical;
-    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal*1.5;
+    .spacing(margin,@box-spacing-horizontal,@box-spacing-vertical,0,@box-spacing-vertical);
+    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal,@box-spacing-vertical,@box-spacing-horizontal*1.5);
     cursor: pointer;
 
     .no-js & {
@@ -54,5 +54,5 @@
 }
 
 .accordionContent {
-    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    .spacing(padding,0,@box-spacing-horizontal,@box-spacing-vertical,@box-spacing-horizontal);
 }

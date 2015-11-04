@@ -30,8 +30,10 @@
 .main-content{
     .limit-width;
     .clearfix;
-    padding: 0 @box-spacing;
+    .spacing(padding,0,@box-spacing);
+    margin-top: unit(@box-spacing*2,em);
     margin-top: @box-spacing*2;
+    margin-bottom: unit(@box-spacing*1.5,em);
     margin-bottom: @box-spacing*1.5;
     &--full-width {
         max-width: 60em;
@@ -45,14 +47,17 @@
         width: @width-span-8;
 
         @media ( min-width: @screen-sm-min ) {
+            padding-right: unit(@box-spacing*2,em);
             padding-right: @box-spacing*2;
         }
 
         @media ( min-width: @screen-md-min ) {
+            padding-right: unit(@box-spacing*3,em);
             padding-right: @box-spacing*3;
         }
 
         @media ( min-width: @screen-lg-min ) {
+            padding-right: unit(@box-spacing*6,em);
             padding-right: @box-spacing*6;
         }
 
@@ -66,6 +71,7 @@
         float: right;
         width: @width-span-2;
         overflow: hidden; // Stop margin collapsing issues
+        margin-bottom: unit(@box-spacing*1.5,em);
         margin-bottom: @box-spacing*1.5;
 
         @media ( max-width: @screen-xs-max ) {

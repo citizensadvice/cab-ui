@@ -47,14 +47,15 @@
 }
 
     #beta-dap-menu-accordion .beta-dap-menu-accordion__link {
-        padding: @box-spacing*.875 @box-spacing*2 @box-spacing*.875 @box-spacing*.875;
+        .spacing(padding,@box-spacing*.875,@box-spacing*2,@box-spacing*.875,@box-spacing*.875);
         background-color: @heritage-blue-lightest;
         //border-right: 0.1em solid @blue-light;
         //border-left: 0.1em solid @blue-light;
     }
 
     #beta-dap-menu-accordion .beta-dap-menu-accordion__section > .beta-dap-menu-accordion__link {
-        padding: @box-spacing*.875;
+        .spacing(padding,@box-spacing*.875);
+        padding-right: unit(@box-spacing*2.8,em);
         padding-right: @box-spacing*2.8;
         cursor: pointer;
         z-index: 2;
@@ -129,7 +130,7 @@
     }
 /* Second Level */
 .beta-dap-menu-accordion__page {
-    padding: @box-spacing*.875 @box-spacing*2 @box-spacing*.875 @box-spacing*.875;
+    .spacing(padding,@box-spacing*.875,@box-spacing*2,@box-spacing*.875,@box-spacing*.875);
     cursor: pointer;
     z-index: 2;
     font-size: @font-size-small;

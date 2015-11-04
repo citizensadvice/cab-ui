@@ -9,7 +9,7 @@
 .page-tree ul {
   list-style: none;
   padding: 0;
-  margin: @box-spacing*.5 0 @box-spacing 0; 
+  .spacing(margin,@box-spacing*.5,0,@box-spacing,0); 
 }
 
 .page-tree > ul > li > a {
@@ -18,5 +18,6 @@
 }
 
 .page-tree ul ul {
+  padding-left: unit(@box-spacing*2,em);
   padding-left: @box-spacing*2;
 }

@@ -16,13 +16,15 @@
 .toc-legacy {
     position: relative; /* Allow absolute positioning */
     overflow: hidden; /* Stops the dots poking out on the right */
+    padding-right: unit(@box-spacing-horizontal*8,em); /* Stops paragraph numbers overlaying links */
     padding-right: @box-spacing-horizontal*8; /* Stops paragraph numbers overlaying links */
     padding-left: 0;
     list-style: none;
 
     ul {
         list-style: none;
-        margin: @box-spacing*.5 0 0 0;
+        .spacing(margin,@box-spacing*.5,0,0,0);
+        padding-left: unit(@box-spacing-horizontal*2,em);
         padding-left: @box-spacing-horizontal*2;
     }
 
@@ -45,6 +47,7 @@
     position: absolute; /* Move to the right */
     right: 0; 
     background: @heritage-blue-lightest; /* Hides the dots */
+    padding-left: unit(@box-spacing-horizontal*.5,em); 
     padding-left: @box-spacing-horizontal*.5; 
     width: 7em; /* Make sure they are left aligned */
 }
@@ -52,6 +55,7 @@
 // Pre-style the TOC to prevent the page jumping before the script is loaded
 // .js-collapse-toc is removed once the script runs
 .js .js-collapse-toc {
+    padding-left: unit(@box-spacing-horizontal*2,em);
     padding-left: @box-spacing-horizontal*2;
 
     ul {
@@ -60,6 +64,7 @@
 }
 
 .toc-legacy--expandable {
+    padding-left: unit(@box-spacing-horizontal*2,em);
     padding-left: @box-spacing-horizontal*2;
 
     [aria-expanded=false] {
@@ -75,7 +80,7 @@
     height: 1.2em;
     width: 1.2em;
     padding: 0;
-    margin: @box-spacing-horizontal*.2 0 0 0;
+    .spacing(margin,@box-spacing-horizontal*.2,0,0,0);
 }
 
 .toc-legacy__mono {

@@ -68,7 +68,7 @@
 	/* Apply our spacing here rather than margin on the h2
 	to prevent issues with collapsing margins in IE<=9
 	*/
-	padding: @box-spacing-horizontal*.5 @box-spacing-horizontal;
+	.spacing(padding,@box-spacing-horizontal*.5,@box-spacing-horizontal);
 	background: @heritage-blue;
 	position: relative;
 	-webkit-flex-shrink: 0;
@@ -96,11 +96,15 @@
 	background: none;
 	cursor: pointer;
 	position: absolute;
+	right: unit(@box-spacing-horizontal*.5,em);
 	right: @box-spacing-horizontal*.5;
 	top: 50%;
+	margin-top: unit(-@box-spacing*.7,em);
 	margin-top: -@box-spacing*.7;
+	margin-right: unit(@box-spacing-horizontal*.25,em);
 	margin-right: @box-spacing-horizontal*.25;
 	font-size: @font-size-h4;
+	padding: unit(@box-spacing-horizontal*.2,em);
 	padding: @box-spacing-horizontal*.2;
 	line-height: 1;
 	width: 1.4em;
@@ -130,7 +134,7 @@
 .dialog__main {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: @box-spacing-vertical @box-spacing-horizontal;
+	.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
 	/* This helps make it clearer there the main content can scroll */
 	//box-shadow: @inner-shadow;
 	-webkit-flex-grow: 2;
@@ -139,11 +143,9 @@
 }
 
 .dialog__footer {
-	padding: @box-spacing*.5 @box-spacing-horizontal;
+	.spacing(padding,@box-spacing*.5,@box-spacing-horizontal);
 	background: @heritage-blue-lightest;
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 }
-
-

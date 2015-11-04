@@ -37,7 +37,8 @@
 .extent-country-select {
   width: @width-span-12;
   background-color: @heritage-blue-lightest;
-  padding: @box-spacing-horizontal*1.5;
+  .spacing(padding,@box-spacing-horizontal*1.5);
+  margin-top: unit(@box-spacing*.5,em);
   margin-top: @box-spacing*.5;
   h2 {
     font-size: @font-size-base;
@@ -68,7 +69,7 @@
   background-color: @heritage-blue-lightest;
   display: block;
   margin: 0px auto;
-  padding: @box-spacing-horizontal;
+  .spacing(padding,@box-spacing-horizontal);
   max-width: 500px;
   //border-top: 10px solid @heritage-blue;
   position: relative;

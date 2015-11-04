@@ -48,7 +48,7 @@
 
 	&__header {
 		//border-bottom: 1px solid @gray-6;
-		padding: @box-spacing-vertical 0 @box-spacing-vertical 0;
+		.spacing(padding,@box-spacing-vertical,0);
 		//background-color: @heritage-blue-lightest;
 		//&:extend(h3);
 		position: relative;
@@ -63,7 +63,7 @@
 	&__main {
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		padding: @box-spacing-vertical @box-spacing-horizontal;
+		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
 		& >:first-child {
 			margin-top: 0;
 		}
@@ -77,16 +77,16 @@
 				position: relative;
 				margin: 0;
 				p {
-					padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
-					padding-right: @box-spacing*4;
+					.spacing(padding,@box-spacing-vertical*.75,@box-spacing-horizontal*.75,@box-spacing-vertical*.75,@box-spacing-horizontal*4);
 					margin: 0;
 				}
 				button {
 					.btn-icon("\f014",@border:no-border);
 					.vertical-align(absolute);
+					right: unit(@box-spacing-horizontal*.75,em);
 					right: @box-spacing-horizontal*.75;
 					margin: 0;
-					padding: @box-spacing;
+					.spacing(padding,@box-spacing);
 					&:hover ~ p {
 						background-color: @red-lightest;
 					}
@@ -100,9 +100,10 @@
 					button {
 						.btn-icon("\f0e2",@border:no-border);
 						.vertical-align(absolute);
+						right: unit(@box-spacing-horizontal*.75,em);
 						right: @box-spacing-horizontal*.75;
 						margin: 0;
-						padding: @box-spacing;
+						.spacing(padding,@box-spacing);
 						&:hover ~ p {
 							background-color: @gray-8;
 							a {
@@ -120,22 +121,22 @@
 
 	&__footer {
 		border-top: 1px solid @gray-7;
-		padding: @box-spacing-vertical @box-spacing-horizontal/2;
-		margin: 0 @box-spacing-horizontal/2;
+		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal/2);
+		.spacing(margin,0,@box-spacing-horizontal/2);
 		-webkit-flex-shrink: 0;
 		-ms-flex-negative: 0;
 		flex-shrink: 0;
 		text-align: right;
 		.btn {
-    		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
+    		.spacing(margin,@box-spacing-horizontal*.5,0,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5);
 		    //font-size: @font-size-small;
 		    &.reference__list {
-				padding: @box-spacing-vertical/3 @box-spacing-horizontal/2;
+				.spacing(padding,@box-spacing-vertical/3,@box-spacing-horizontal/2);
 			    font-weight: 700;
 			}
 		}
 		.btn-group {
-    		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
+    		.spacing(margin,@box-spacing-horizontal*.5,0,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5);
 			.btn {
 				margin: 0;
 				margin-right: 1px;
@@ -143,7 +144,7 @@
 		}
 		.left {
 			float: left;
-    		margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0; 
+    		.spacing(margin,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,0);
 		}
 	}
 }

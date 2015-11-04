@@ -6,7 +6,7 @@
  */
 
 .decision-tree {
-  padding: @box-spacing-horizontal*.5;
+  .spacing(padding,@box-spacing-horizontal*.5);
   border: 1px solid @heritage-blue;
   background: @white;
   margin: box-spacing 0;
@@ -19,5 +19,5 @@
 }
 
 .decision-tree__buttons button {
-  margin: 0 @box-spacing-horizontal*.3 @box-spacing-horizontal*.5 0;
+  .spacing(margin,0,@box-spacing-horizontal*.3,@box-spacing-horizontal*.5,0);
 }

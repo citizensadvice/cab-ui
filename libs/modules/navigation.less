@@ -11,7 +11,7 @@
 	a {
 		border: none;
 		display: block;
-		padding: @box-spacing-vertical @box-spacing-horizontal !important;
+		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
 	}
 	li {
 		border-bottom: 1px solid white !important;
@@ -24,7 +24,7 @@
 		}
 	}
 	.collapse-toggle {
-		padding: @box-spacing-vertical @box-spacing-horizontal !important;
+		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
 		background-color: @responsible-aqua;
 		position: relative;
 		font-weight: 700;
@@ -32,7 +32,7 @@
 			box-sizing: border-box;
 		    font-family: 'FontAwesome';
 			content: "\f067";
-		    padding: 0 @box-spacing-horizontal*1.25;
+		    .spacing(padding,0,@box-spacing-horizontal*1.25);
 		    height: 100%;
 		    position: absolute;
 		    right: 0;
