@@ -1,0 +1,8 @@
+.spacing(@type, @top, @right, @bottom:@top, @left:@right) {
+	@{type}: unit(@top, em) unit(@right, em) unit(@bottom, em) unit(@left, em);
+	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
+    & when (@bottom = @top) and (@left = @right) {
+		@{type}: unit(@top, em) unit(@right, em);
+		@{type}: unit(@top, rem) unit(@right, rem);
+    }
+}
