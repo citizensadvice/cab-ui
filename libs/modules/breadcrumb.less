@@ -18,8 +18,7 @@
         .limit-width(@max-page-width);
         margin: 0 auto;   
         background-color: transparent;
-        padding: .75em/2 1em;
-        padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+        .spacing(padding,@box-spacing-vertical/2,@box-spacing-horizontal);
         max-width: @breakpoint-lg;
     }
     
@@ -32,15 +31,13 @@
         line-height: (@line-height-small * 2);
         
         &>i {
-            margin: 0em 1em*.5 0 0;
-            margin: 0em @box-spacing-horizontal*.5 0 0;
+            .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
             color: @blue-light;
         }
     }
     
     .breadcrumb__item a {
-        margin: 0em 1em*.5 0 0;
-        margin: 0em @box-spacing-horizontal*.5 0 0;
+        .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
         color: @text-color;
     }
 
@@ -51,7 +48,7 @@
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
     .js .main-breadcrumb {
-        padding-right: 1em*3.5;
+        padding-right: unit(@box-spacing-horizontal*3.5,em);
         padding-right: @box-spacing-horizontal*3.5;
     }
 }
@@ -70,13 +67,13 @@
     }
     
     > i {
-        margin-right: 1em*.5;
+        margin-right: unit(@box-spacing-horizontal*.5,em);
         margin-right: @box-spacing-horizontal*.5;
     }
 
     &:last-child a {
         border: none;
-        margin-right: 1em*.5;
+        margin-right: unit(@box-spacing-horizontal*.5,em);
         margin-right: @box-spacing-horizontal*.5;
     }
 }
@@ -115,12 +112,11 @@
 .breadcrumb__extent-popup {
     .popup;
     max-width: 400px;
-    margin-top: 1em;
+    margin-top: unit(@box-spacing,em);
     margin-top: @box-spacing;
     // Bring things a little closer together in this popup
     p, ul {
-        margin: 1em/2 0;
-        margin: @box-spacing/2 0;
+        .spacing(margin,@box-spacing/2,0);
     }
 
     li {

@@ -10,16 +10,14 @@
 .atoz-letters {
     width: 100%;
     max-width: 36.4em;
-    margin: 1em 0 1em -.75em*.2; // Negative margin as all items inside 
-    margin: @box-spacing-horizontal 0 @box-spacing-horizontal -@box-spacing-horizontal*.2; // Negative margin as all items inside have a .2em padding
+    .spacing(margin,@box-spacing-horizontal,0,@box-spacing-horizontal,-@box-spacing-horizontal*.2); // Negative margin as all items inside have a .2em padding
     padding: 0;
     overflow: hidden;
     list-style: none;
 
     & > li {
         float: left;
-        padding: 0 1em*.2;
-        padding: 0 @box-spacing-horizontal*.2;
+        .spacing(padding,0,@box-spacing-horizontal*.2);
 
         & > a {
             display: inline-block;
@@ -27,8 +25,7 @@
             background-color: @gray-1;
             color: @white;
             width: 2.4em;
-            padding: 1em*.5;
-            padding: @box-spacing-horizontal*.5;
+            .spacing(padding,@box-spacing-horizontal*.5);
             &:hover, &:focus {
                 background-color: @heritage-blue;
             }
@@ -52,14 +49,13 @@
 
     & > li > ul {
         list-style: none;
-        margin: 1em*.3 0 1em 0;
-        margin: @box-spacing-horizontal*.3 0 @box-spacing 0;
-        padding-left: 1em*2;
+        .spacing(margin,@box-spacing-horizontal*.3,0,@box-spacing,0);
+        padding-left: unit(@box-spacing-horizontal*2,em);
         padding-left: @box-spacing-horizontal*2;
     }
 
     & > li > ul > li {
-         margin-bottom: 1em*.3;
+         margin-bottom: unit(@box-spacing*.3,em);
          margin-bottom: @box-spacing*.3;
          font-weight: @font-weight-base;
     }
@@ -71,7 +67,7 @@
 
 // Show gap between the see also links and the main links
 .atoz__entry--see-also + li:not(.atoz__entry--see-also), .atoz__entry--promoted + li:not(.atoz__entry--promoted) {
-    margin-top: 1em*.5;
+    margin-top: unit(@box-spacing-horizontal*.5,em);
     margin-top: @box-spacing-horizontal*.5;
 }
 
