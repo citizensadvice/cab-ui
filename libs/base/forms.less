@@ -15,11 +15,13 @@
 form {
     .invalid {
         color: @red;
+        padding-top: 1em/4;
         padding-top: @box-spacing/4;
         clear: both;
     }
     .valid {
         color: @green;
+        padding-top: 1em/4;
         padding-top: @box-spacing/4;
         clear: both;
     }
@@ -33,6 +35,7 @@ fieldset,
     padding: 0;
     margin: 0;
     border: 0;
+    margin-bottom: 1em;
     margin-bottom: @box-spacing;
 }
 
@@ -45,6 +48,7 @@ label,
     display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     //margin-bottom: 5px;
+    margin-bottom: 1em*.5;
     margin-bottom: @box-spacing*.5;
     font-weight: @font-weight-bolder;
     .form__label--inline {
@@ -54,6 +58,7 @@ label,
 .radio, .checkbox, .radio--inline, .checkbox--inline { 
     font-weight: @font-weight-bold;
     input {
+        margin-right: 1em/2;
         margin-right: @box-spacing/2;
     }
 }
@@ -65,7 +70,9 @@ label,
 span.form-hint {
     display: block;
     color: @gray-3;
+    margin-bottom: 1em*.5;
     margin-bottom: @box-spacing*.5;
+    margin-top: -1em*.5;
     margin-top: -@box-spacing*.5;
     font-weight: @font-weight-base;
 }
@@ -76,6 +83,7 @@ input[type=password],
 input[type=email],
 input[type=number],
 input[type=search] {
+    padding: .75em 1em;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     -webkit-appearance: none;
     width: 100%;
@@ -140,6 +148,7 @@ select {
 }
 
 textarea {
+    height: 1em*8;
     height: @box-spacing*8;
     resize: vertical;
 }
@@ -152,6 +161,7 @@ input[class*="dob-"],
 textarea,
 select {
     width: 100%;
+    padding: .75em 1em;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
@@ -210,6 +220,7 @@ input[type="file"]::before {
     background-color: @green-light;
     border: 1px solid @green;
     padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
 }
 */
 
@@ -217,6 +228,7 @@ input[type="file"]::before {
 .radio,
 .checkbox {
     //background-color: @gray-8;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
     padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
     cursor: pointer;
     border: 1px solid @gray-6;
@@ -229,11 +241,13 @@ input[type="file"]::before {
 
 .radio,
 .checkbox {
+    padding: .75em 1em;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
     display: block;
+    margin-right: @box-spacing-horizontal/2;
     margin-right: @box-spacing-horizontal/2;
     z-index: 1;
     input {
@@ -296,12 +310,15 @@ input[type="file"]::before {
 
 .multi-select {
     padding: 0;
+    height: 1em*5.5 !important;
     height: @box-spacing*5.5 !important;
     option {
+        padding: .75em/2 1em/2;
         padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
         -webkit-appearance: none;
     }
     @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+        padding: .75em 1em;
         padding: @box-spacing-vertical @box-spacing-horizontal;
         height: auto !important;
     }
@@ -339,6 +356,7 @@ input[class*="dob-"] {
     width: 5rem;
     display: inline-block;
     float: left;
+    margin-right: 1em/2;
     margin-right: @box-spacing-horizontal/2;
     &:last-child {
         margin: 0;
@@ -375,6 +393,7 @@ input[class*="dob-"] {
         }
         button {
             //width: 25%;
+            padding: .75em 1em;
             padding: @box-spacing-vertical @box-spacing-horizontal;
         }
         input:first-of-type {
@@ -403,6 +422,7 @@ input[class*="dob-"] {
         }
         label {
             //width: 25%;
+            padding: .75em 1em;
             padding: @box-spacing-vertical @box-spacing-horizontal;
             text-align: center;
             input {
@@ -419,6 +439,7 @@ input[class*="dob-"] {
         }
         button {
             width: 25%;
+            padding: .75em 0;
             padding: @box-spacing-vertical 0;
         }
         input:first-of-type {

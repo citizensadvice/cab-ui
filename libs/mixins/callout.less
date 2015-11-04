@@ -11,7 +11,8 @@
 		@callout-text: @text-color; 
 		@callout-border: darken(@callout-background, 25%) 
 	){
-    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+    padding: .75em 1em;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
@@ -95,7 +96,9 @@
 	        content: @icon;
 	        line-height: 1em;
 	        display: block;
+	        margin: -.75em -1em .75em -1em;
 	        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
+    		padding: .75em 1em;
 	        padding: @box-spacing-vertical @box-spacing-horizontal;
 	    
 	}

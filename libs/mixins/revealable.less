@@ -25,6 +25,7 @@
     &__heading {
         cursor: pointer;
         display: block;
+        padding: .75em 1em*3.5 .75em 1em;
         padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
         margin: 0;
         border: none;
@@ -45,6 +46,7 @@
             box-sizing: border-box;
             font-family: 'FontAwesome';
             content: "\f067";
+            padding: 0 1em*1.25;
             padding: 0 @box-spacing-horizontal*1.25;
             .vertical-align(absolute);
             right: 0;
@@ -58,7 +60,9 @@
     &__close {
         cursor: pointer;
         display: block;
+        padding: .75em 1em*3.5 .75em 1em;
         padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
+        margin: .75em -1em -.75em -1em;
         margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
         text-decoration: none;
         position: relative;
@@ -71,6 +75,7 @@
         &:before {
             box-sizing: border-box;
             font-family: 'FontAwesome';
+            padding: 0 1em*1.25;
             padding: 0 @box-spacing-horizontal*1.25;
             height: 100%;
             position: absolute;
@@ -94,7 +99,8 @@
         padding: 0;
         border: 0;
         margin: 0;
-        padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
+        padding: .75em 1em;
+        padding: @box-spacing-vertical @box-spacing-horizontal;
     }
     .revealable__content {
         &[aria-hidden=true] {
