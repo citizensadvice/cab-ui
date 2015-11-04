@@ -4,12 +4,14 @@
 
 // Default Table
 table {
+    margin: .7em 0;
     margin: @box-spacing-vertical 0;
     border-collapse: collapse;
 }
 
 td, 
 th {
+    padding: 1em*(2/3);
     padding: @box-spacing*(2/3);
     text-align: left;
     vertical-align: top;
@@ -69,6 +71,7 @@ th {
         background-image: url('/static/layout/sortable-desc.png');
     }
     &-header-inner{
+        padding-right: 1em;
         padding-right: @box-spacing-horizontal;
     }
 }
@@ -86,6 +89,7 @@ th {
         white-space: nowrap;
         font-weight: bold;
         color: @black;
+        padding: .75em*.4 1em .75em*.4 0;
         padding: @box-spacing-vertical*.4 @box-spacing-horizontal @box-spacing-vertical*.4 0;
         
         // Reset the colours changed for the standard tables
@@ -182,6 +186,7 @@ table.simple-table th {
 }
 table.simple-table th, 
 table.simple-table td {
+    padding: 0px 1em/2;
     padding: 0px @box-spacing-horizontal/2;
 }
 
@@ -209,8 +214,10 @@ table.simple-table td {
         display: none;
     }
     table.contactus tr {
+        margin-bottom: 1em*1.3;
         margin-bottom: @box-spacing-horizontal*1.3;
         background-color: @gray-7;
+        padding: 1em*.6;
         padding: @box-spacing*.6;
     }
     table.contactus tr:nth-child(even) {
@@ -247,6 +254,7 @@ table.simple-table td {
 // this is automatically added by the htmlrewriter
 .table-scroll {
     overflow-x: auto;
+    margin: .75em 0;
     margin: @box-spacing-vertical 0;
     & > table {
         margin: 0;
