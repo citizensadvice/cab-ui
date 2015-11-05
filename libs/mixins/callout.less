@@ -110,10 +110,8 @@
 	}
 }
 .callout--border--left ( @callout--border--left--width: @box-spacing/2 ) {
-	border-left-width: unit(@callout--border--left--width*@base-size,px);
-	border-left-width: @callout--border--left--width;
+	.spacing(border-left-width,@callout--border--left--width);
 }
 .callout--border--top ( @callout--border--top--width: @box-spacing/2 ) {
-	border-top-width: unit(@callout--border--top--width*@base-size,px);
-	border-top-width: @callout--border--top--width;
+	.spacing(border-top-width,@callout--border--top--width);
 }
