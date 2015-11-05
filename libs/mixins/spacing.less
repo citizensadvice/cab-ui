@@ -17,7 +17,7 @@
     	@{type}: unit(extract(@value,1)*@base-size,px) unit(extract(@value,2)*@base-size,px);
     	@{type}: unit(extract(@value,1),rem) unit(extract(@value,2),rem);
     }
-    // If length of @value = 5
+    // If length of @value = 3
     & when (@length = 3) {
     	@{type}: unit(extract(@value,1)*@base-size,px) unit(extract(@value,2)*@base-size,px) unit(extract(@value,3)*@base-size,px);
     	@{type}: unit(extract(@value,1),rem) unit(extract(@value,2),rem) unit(extract(@value,3),rem);
