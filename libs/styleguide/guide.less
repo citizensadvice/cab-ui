@@ -40,16 +40,16 @@ body {
     float: right;
 }
 .row {
-    margin-bottom:      unit(@box-spacing-vertical*1.5,em);
+    margin-bottom:      unit(@box-spacing-vertical*1.5*@base-size,px);
     margin-bottom:      @box-spacing-vertical*1.5;
 }
 
 .row--white {
     background-color:   @white;
-    margin-top:         unit(@box-spacing-vertical * 2,em);
-    margin-top:         (@box-spacing-vertical * 2);
-    margin-bottom:      unit(@box-spacing-vertical * 1.5,em);
-    margin-bottom:      (@box-spacing-vertical * 1.5);
+    margin-top:         unit(@box-spacing-vertical*2*@base-size,px);
+    margin-top:         (@box-spacing-vertical*2);
+    margin-bottom:      unit(@box-spacing-vertical*1.5*@base-size,px);
+    margin-bottom:      (@box-spacing-vertical*1.5);
     .spacing(padding,@paragraph-margin-bottom*2,@paragraph-margin-bottom*2,0,@paragraph-margin-bottom*2)   
 }
 ol {
@@ -325,7 +325,7 @@ span[id*="overlay_button"] {
     .main-content__sidebar;
     .callout(@gray-8,@callout-border:@advisor-color);
     .callout(@gray-8,@callout-border:#b9b9a4);
-    border-right: unit(@box-spacing/2,em) solid;
+    border-right: unit(@box-spacing/2*@base-size,px) solid;
     border-right: @box-spacing/2 solid;
     display: none;
     border-color: @advisor-color;

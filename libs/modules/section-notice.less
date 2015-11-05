@@ -18,7 +18,7 @@
             }
         }
         .badge {
-            margin-right: unit(@box-spacing-horizontal);
+            margin-right: unit(@box-spacing-horizontal*@base-size,px);
             margin-right: @box-spacing-horizontal;
         }
     }
@@ -36,7 +36,7 @@
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
     .js .section-notice__content {
-        padding-right: unit(@box-spacing-horizontal*3.5,em);
+        padding-right: unit(@box-spacing-horizontal*3.5*@base-size,px);
         padding-right: @box-spacing-horizontal*3.5;
     }
 }

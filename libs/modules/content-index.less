@@ -3,7 +3,7 @@
  */
 
 .beta-index-page {
-    margin-bottom: unit(@box-spacing*2,em);
+    margin-bottom: unit(@box-spacing*2*@base-size,px);
     margin-bottom: @box-spacing*2;
     h2 {
         margin-top: 0;
@@ -12,12 +12,12 @@
 
 .beta-index-page__box {
     border-bottom: 1px solid @gray-7;
-    margin-bottom: unit(@box-spacing,em);
+    margin-bottom: unit(@box-spacing*@base-size,px);
     margin-bottom: @box-spacing;
     float: left;
 
     &:last-child {
-        margin-bottom: unit(@box-spacing*2,em);
+        margin-bottom: unit(@box-spacing*2*@base-size,px);
         margin-bottom: @box-spacing*2;
     }
 
@@ -35,7 +35,7 @@
 }
 
 .content__header {
-    margin-top: unit(-@box-spacing,em);
+    margin-top: unit(-@box-spacing*@base-size,px);
     margin-top: -@box-spacing;
     background-color: @gray-7;
     h1 {
@@ -49,13 +49,13 @@
 
 // Arrrrggggggg
 .section-notice + * .content__header {
-    margin-top: unit(-@box-spacing,em);
+    margin-top: unit(-@box-spacing*@base-size,px);
     margin-top: -@box-spacing;
 }
 
 .content__header__content {
     .limit-width();
-    padding: unit(@box-spacing,em);
+    padding: unit(@box-spacing*@base-size,px);
     padding: @box-spacing;
 
     h2 {

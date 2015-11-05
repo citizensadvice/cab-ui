@@ -50,12 +50,12 @@
     & > li > ul {
         list-style: none;
         .spacing(margin,@box-spacing-horizontal*.3,0,@box-spacing,0);
-        padding-left: unit(@box-spacing-horizontal*2,em);
+        padding-left: unit(@box-spacing-horizontal*2*@base-size,px);
         padding-left: @box-spacing-horizontal*2;
     }
 
     & > li > ul > li {
-         margin-bottom: unit(@box-spacing*.3,em);
+         margin-bottom: unit(@box-spacing*.3*@base-size,px);
          margin-bottom: @box-spacing*.3;
          font-weight: @font-weight-base;
     }
@@ -67,7 +67,7 @@
 
 // Show gap between the see also links and the main links
 .atoz__entry--see-also + li:not(.atoz__entry--see-also), .atoz__entry--promoted + li:not(.atoz__entry--promoted) {
-    margin-top: unit(@box-spacing-horizontal*.5,em);
+    margin-top: unit(@box-spacing-horizontal*.5*@base-size,px);
     margin-top: @box-spacing-horizontal*.5;
 }
 

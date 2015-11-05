@@ -36,7 +36,7 @@
         img {
             // Float the image
             float: left;
-            margin-right: unit(@box-spacing-horizontal,em);
+            margin-right: unit(@box-spacing-horizontal*@base-size,px);
             margin-right: @box-spacing-horizontal;
         }
     }
@@ -44,6 +44,6 @@
 
 // Give enough width to edit the title in edit mode
 .edit-mode .title__title {
-    min-width: unit(@box-spacing-horizontal*5,em);
+    min-width: unit(@box-spacing-horizontal*5*@base-size,px);
     min-width: @box-spacing-horizontal*5;
 }
