@@ -15,14 +15,12 @@
 form {
     .invalid {
         color: @red;
-        padding-top: unit(@box-spacing/4*@base-size,px);
-        padding-top: @box-spacing/4;
+        .spacing(padding-top,@box-spacing/4);
         clear: both;
     }
     .valid {
         color: @green;
-        padding-top: unit(@box-spacing/4*@base-size,px);
-        padding-top: @box-spacing/4;
+        .spacing(padding-top,@box-spacing/4);
         clear: both;
     }
     small {
@@ -35,8 +33,7 @@ fieldset,
     padding: 0;
     margin: 0;
     border: 0;
-    margin-bottom: unit(@box-spacing*@base-size,px);
-    margin-bottom: @box-spacing;
+    .spacing(margin-bottom,@box-spacing);
 }
 
 legend {
@@ -48,8 +45,7 @@ label,
     display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     //margin-bottom: 5px;
-    margin-bottom: unit(@box-spacing*.5*@base-size,px);
-    margin-bottom: @box-spacing*.5;
+    .spacing(margin-bottom,@box-spacing*.5);
     font-weight: @font-weight-bolder;
     .form__label--inline {
         display: inline-block;
@@ -58,8 +54,7 @@ label,
 .radio, .checkbox, .radio--inline, .checkbox--inline { 
     font-weight: @font-weight-bold;
     input {
-        margin-right: unit(@box-spacing/2*@base-size,px);
-        margin-right: @box-spacing/2;
+        .spacing(margin-right,@box-spacing/2);
     }
 }
     
@@ -70,10 +65,8 @@ label,
 span.form-hint {
     display: block;
     color: @gray-3;
-    margin-bottom: unit(@box-spacing*.5*@base-size,px);
-    margin-bottom: @box-spacing*.5;
-    margin-top: unit(-@box-spacing*.5*@base-size,px);
-    margin-top: -@box-spacing*.5;
+    .spacing(margin-bottom,@box-spacing*.5);
+    .spacing(margin-top,-@box-spacing*.5);
     font-weight: @font-weight-base;
 }
 
@@ -147,8 +140,7 @@ select {
 }
 
 textarea {
-    height: unit(@box-spacing*8*@base-size,px);
-    height: @box-spacing*8;
+    .spacing(height,@box-spacing*8);
     resize: vertical;
 }
 
@@ -244,8 +236,7 @@ input[type="file"]::before {
     border-radius: @form-border-radius;
     position: relative;
     display: block;
-    margin-right: unit(@box-spacing-horizontal/2*@base-size,px);
-    margin-right: @box-spacing-horizontal/2;
+    .spacing(margin-right,@box-spacing-horizontal/2);
     z-index: 1;
     input {
         &:before {
@@ -307,8 +298,7 @@ input[type="file"]::before {
 
 .multi-select {
     padding: 0;
-    height: unit(@box-spacing*5.5*@base-size,px) !important;
-    height: @box-spacing*5.5 !important;
+    .spacing(height,@box-spacing*5.5);
     option {
         .spacing(padding,@box-spacing-vertical/2,@box-spacing-horizontal/2);
         -webkit-appearance: none;
@@ -351,8 +341,7 @@ input[class*="dob-"] {
     width: 5rem;
     display: inline-block;
     float: left;
-    margin-right: unit(@box-spacing-horizontal/2*@base-size,px);
-    margin-right: @box-spacing-horizontal/2;
+    .spacing(margin-right,@box-spacing-horizontal/2);
     &:last-child {
         margin: 0;
     }
@@ -858,8 +847,7 @@ input[class*="dob-"] {
         -moz-appearance: none;
         border: 0; //If you want a border set it on the parent
         background: transparent;
-        padding: unit(@box-spacing-vertical*@base-size,px);
-        padding: @box-spacing-vertical;
+        .spacing(padding,@box-spacing-vertical);
 
         // We need to push the pointer off the side so it is hidden in the overflow
         // In webkit / blink there is no pointer to move

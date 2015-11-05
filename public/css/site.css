@@ -2256,8 +2256,8 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 18px;
   margin-bottom: 1.125rem;
-  padding: 32px 32px 0px 32px;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 32px;
+  padding: 2rem;
 }
 ul.navbar-nav li {
   font-size: 1rem;
@@ -2318,8 +2318,8 @@ ul li {
 }
 .example-box {
   color: #333;
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
+  padding: 1rem;
   margin: 16px 48px 16px 48px;
   margin: 1rem 3rem 1rem 3rem;
   font-family: monaco,monospace;
@@ -3512,8 +3512,8 @@ input[type=button] {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn:hover,
 .button:hover,
@@ -3564,8 +3564,8 @@ input[type=button]:focus {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn-primary-light:hover,
 .btn-primary-light:focus,
@@ -3588,8 +3588,8 @@ input[type=button]:focus {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn-secondary:hover,
 .btn-secondary:focus,
@@ -3619,8 +3619,8 @@ input[type=button]:focus {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn-disabled:hover,
 .button--grey:hover,
@@ -3647,8 +3647,8 @@ input[type=button]:focus {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -3672,8 +3672,8 @@ input[type=button]:focus {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 .btn-success:hover,
 .button--green:hover,
@@ -4130,8 +4130,8 @@ input[type="file"]::before {
 }
 .multi-select {
   padding: 0;
-  height: 88px !important;
-  height: 5.5rem !important;
+  height: 88px;
+  height: 5.5rem;
 }
 .multi-select option {
   padding: 6px 8px 6px 8px;
@@ -4310,8 +4310,8 @@ input[class*="dob-"] {
   font-weight: bold;
   padding: 12px 16px 12px 16px;
   padding: 0.75rem 1rem 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
   padding: 0;
 }
 .field-group--dropdown .dropdown:hover,
@@ -7066,8 +7066,8 @@ hr {
 .extent-country-select {
   width: 100%;
   background-color: #f2f8ff;
-  padding: 24px 24px 24px 24px;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 24px;
+  padding: 1.5rem;
   margin-top: 8px;
   margin-top: 0.5rem;
 }
@@ -7097,8 +7097,8 @@ hr {
   background-color: #f2f8ff;
   display: block;
   margin: 0px auto;
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
+  padding: 1rem;
   max-width: 500px;
   position: relative;
   top: 5%;
@@ -10196,8 +10196,8 @@ html[lang="en-SCT"] .main-nav {
   width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 1.6px 1.6px 1.6px 1.6px;
-  padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+  padding: 1.6px;
+  padding: 0.1rem;
 }
 input.tablesort-filter {
   background-image: url(/Static/images/icon-search.png);
@@ -10696,8 +10696,8 @@ input.tablesort-filter {
 }
 @media (max-width: 839px) {
   .section-notice__content {
-    padding: 16px 16px 0px 16px;
-    padding: 1rem 1rem 0rem 1rem;
+    padding: 16px;
+    padding: 1rem;
   }
   .section-notice__content p {
     font-size: 0.875rem;
@@ -10710,8 +10710,8 @@ input.tablesort-filter {
  * 
  */
 .decision-tree {
-  padding: 8px 8px 8px 8px;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
   border: 1px solid #004B88;
   background: #FFF;
   margin: box-spacing 0;
@@ -10775,8 +10775,8 @@ input.tablesort-filter {
   color: #404040;
   display: inline-block;
   float: left;
-  padding: 8px 8px 8px 8px;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
   margin-right: 8px;
   margin-right: 0.5rem;
 }
@@ -10797,10 +10797,10 @@ input.tablesort-filter {
 .index-page__box,
 .home-page__box,
 .index-box {
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 8px 8px 8px 8px;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 16px;
+  padding: 1rem;
+  margin: 8px;
+  margin: 0.5rem;
   background-color: #f2f8ff;
   color: #191926;
   border-top-width: 4px;
@@ -10809,8 +10809,8 @@ input.tablesort-filter {
 .index-page__box > h2,
 .home-page__box > h2,
 .index-box > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
@@ -10823,17 +10823,17 @@ input.tablesort-filter {
 .index-page__box > h3,
 .home-page__box > h3,
 .index-box > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
 .index-page__box--green,
 .index-box__green {
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 8px 8px 8px 8px;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 16px;
+  padding: 1rem;
+  margin: 8px;
+  margin: 0.5rem;
   background-color: #d3e8c1;
   color: #191926;
   border-top-width: 4px;
@@ -10841,8 +10841,8 @@ input.tablesort-filter {
 }
 .index-page__box--green > h2,
 .index-box__green > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
@@ -10853,17 +10853,17 @@ input.tablesort-filter {
 }
 .index-page__box--green > h3,
 .index-box__green > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
 .index-page__box--purple,
 .index-box__purple {
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 8px 8px 8px 8px;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 16px;
+  padding: 1rem;
+  margin: 8px;
+  margin: 0.5rem;
   background-color: #d4d1e8;
   color: #191926;
   border-top-width: 4px;
@@ -10871,8 +10871,8 @@ input.tablesort-filter {
 }
 .index-page__box--purple > h2,
 .index-box__purple > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
@@ -10883,24 +10883,24 @@ input.tablesort-filter {
 }
 .index-page__box--purple > h3,
 .index-box__purple > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
 .index-box__info {
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 8px 8px 8px 8px;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 16px;
+  padding: 1rem;
+  margin: 8px;
+  margin: 0.5rem;
   background-color: #fee4c3;
   color: #191926;
   border-top-width: 4px;
   display: block;
 }
 .index-box__info > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
@@ -10909,8 +10909,8 @@ input.tablesort-filter {
   color: #004B88;
 }
 .index-box__info > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
@@ -10926,15 +10926,15 @@ input.tablesort-filter {
 }
 .box > h2,
 .highlight-adviseronly > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
 .box > h3,
 .highlight-adviseronly > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
@@ -11060,14 +11060,14 @@ input.tablesort-filter {
   width: 50%;
 }
 .box--content-right > h2 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1.3rem;
   color: #004B88;
 }
 .box--content-right > h3 {
-  margin: 0px 0px 11.2px 0px;
-  margin: 0rem 0rem 0.7rem 0rem;
+  margin: 0px;
+  margin: 0rem;
   font-size: 1rem;
   color: #191926;
 }
@@ -11134,8 +11134,8 @@ input.tablesort-filter {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
   margin: 0;
-  margin: 0px 0px 16px 0px;
-  margin: 0rem 0rem 1rem 0rem;
+  margin: 0px;
+  margin: 0rem;
 }
 @media (max-width: 599px) {
   .side-nav-beta {
@@ -11450,8 +11450,8 @@ html[lang="en-SCT"] .side-nav > h2 {
   background-color: #f2f8ff;
 }
 #beta-dap-menu-accordion .beta-dap-menu-accordion__section > .beta-dap-menu-accordion__link {
-  padding: 14px 14px 14px 14px;
-  padding: 0.875rem 0.875rem 0.875rem 0.875rem;
+  padding: 14px;
+  padding: 0.875rem;
   padding-right: 44.8px;
   padding-right: 2.8rem;
   cursor: pointer;
@@ -11587,8 +11587,8 @@ html[lang="en-SCT"] .side-nav > h2 {
   max-width: 1080px;
 }
 .main-footer__box {
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
+  padding: 1rem;
 }
 .main-footer__box > h2 {
   color: #004B88;
@@ -11942,8 +11942,8 @@ li.ref-dialog__list-item--highlight {
 }
 .skip-nav > a {
   background: #FFF;
-  padding: 8px 8px 8px 8px;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
   display: inline-block;
 }
 /**
@@ -12231,8 +12231,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 .main-container.main-container .share-bar > a {
   display: block;
   color: #808080;
-  padding: 12.8px 12.8px 12.8px 12.8px;
-  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  padding: 12.8px;
+  padding: 0.8rem;
   line-height: 1;
   position: relative;
   text-decoration: none;
@@ -12525,8 +12525,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   right: 12px;
   right: 0.75rem;
   margin: 0;
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
+  padding: 1rem;
 }
 .overlay__main .reference__list li button:after {
   right: 0.5em;
@@ -12574,8 +12574,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   right: 12px;
   right: 0.75rem;
   margin: 0;
-  padding: 16px 16px 16px 16px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 16px;
+  padding: 1rem;
 }
 .overlay__main .reference__list li.removed button:after {
   right: 0.5em;
@@ -12642,8 +12642,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 }
 .overlay__footer .left {
   float: left;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  margin: 8px;
+  margin: 0.5rem;
 }
 span[id*="overlay_button"] {
   cursor: help;
@@ -12849,8 +12849,8 @@ span[id*="overlay_button"] {
   .callout--generous,
   .callout--white {
     border: 1px solid #bfbfbf;
-    padding: 16px 16px 16px 16px;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 16px;
+    padding: 1rem;
     margin: 16px 0px 16px 0px;
     margin: 1rem 0rem 1rem 0rem;
   }
