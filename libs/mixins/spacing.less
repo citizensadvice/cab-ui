@@ -1,16 +1,30 @@
-.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@right = @top) {
-	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
-	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
-}
-.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@bottom = @top) {
-	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
-	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
-}
-.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@left = @right) {
-	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
-	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
-}
-.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when (@right = @top) and (@bottom = @top) and (@left = @right) {
-	@{type}: unit(@top*@base-size, px);
-	@{type}: unit(@top, rem);
+/**
+ * SPACING MIXIN
+ *
+ * Created to convert REM values into PX values, and output both for older browsers.
+ */
+
+.spacing(@type; @value...) {
+    // Get length of @value
+    @length: length(@value);
+    // If length of @value = 1
+    & when (@length = 1) {
+    	@{type}: unit(extract(@value,1)*@base-size,px);
+    	@{type}: unit(extract(@value,1),rem);
+    }
+    // If length of @value = 2
+    & when (@length = 2) {
+    	@{type}: unit(extract(@value,1)*@base-size,px) unit(extract(@value,2)*@base-size,px);
+    	@{type}: unit(extract(@value,1),rem) unit(extract(@value,2),rem);
+    }
+    // If length of @value = 5
+    & when (@length = 3) {
+    	@{type}: unit(extract(@value,1)*@base-size,px) unit(extract(@value,2)*@base-size,px) unit(extract(@value,3)*@base-size,px);
+    	@{type}: unit(extract(@value,1),rem) unit(extract(@value,2),rem) unit(extract(@value,3),rem);
+    }
+    // If length of @value = 4
+    & when (@length = 4) {
+    	@{type}: unit(extract(@value,1)*@base-size,px) unit(extract(@value,2)*@base-size,px) unit(extract(@value,3)*@base-size,px) unit(extract(@value,4)*@base-size,px);
+    	@{type}: unit(extract(@value,1),rem) unit(extract(@value,2),rem) unit(extract(@value,3),rem) unit(extract(@value,4),rem);
+    }
 }
