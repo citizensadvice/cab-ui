@@ -1,8 +1,16 @@
-.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when (@right = @top) {
-	@{type}: unit(@top*@base-size, px);
-	@{type}: unit(@top, rem);
-}
 .spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@right = @top) {
 	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
 	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
+}
+.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@bottom = @top) {
+	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
+	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
+}
+.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when not (@left = @right) {
+	@{type}: unit(@top*@base-size, px) unit(@right*@base-size, px) unit(@bottom*@base-size, px) unit(@left*@base-size, px);
+	@{type}: unit(@top, rem) unit(@right, rem) unit(@bottom, rem) unit(@left, rem);
+}
+.spacing(@type, @top, @right:@top, @bottom:@top, @left:@right) when (@right = @top) and (@bottom = @top) and (@left = @right) {
+	@{type}: unit(@top*@base-size, px);
+	@{type}: unit(@top, rem);
 }
