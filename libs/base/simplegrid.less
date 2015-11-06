@@ -28,19 +28,17 @@
     width: @full-page-width;
     margin-bottom: @gutters;
 
-    @media (min-width:@breakpoint-sm){
+    @media (min-width:@breakpoint-sm) {
     	// Create calc grid for modern browsers
     	width: calc(percentage((@x/@y)) ~"-"@gutters);
     	margin-right: @gutters;
         margin-bottom: 0;
-
-    	// Create IE8 fallback. Due to lack of calc() support
-    	// columns use an extra 2% as a gutter
-    	width: unit(percentage((@x/@y)) - 2, ~"%\9");
-    	// Create IE7 fallback. IE7 has a hard time with
-    	// decimal places in percentages
-    	*width: unit(floor(percentage((@x/@y)) - 2), ~"%\9 !important");
-    	margin-right: 2%\9 !important;
+    }
+    .ie8 {
+        // Create IE8 fallback. Due to lack of calc() support
+        // columns use an extra 2% as a gutter
+        width: unit(percentage((@x/@y)) - 2, ~"!important");
+        margin-right: 2% !important;
     }
 
 	// Remove bottom margin from the last nested row, to

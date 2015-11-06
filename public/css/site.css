@@ -2370,10 +2370,11 @@ span.code {
     width: calc(33.33333333% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 31.33333333%\9;
-    *width: 31%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.customcol13 .ie8 {
+  width: 31.33333333!important;
+  margin-right: 2% !important;
 }
 .customcol13 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -2399,10 +2400,11 @@ span.code {
     width: calc(44.44444444% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 42.44444444%\9;
-    *width: 42%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.customcol49 .ie8 {
+  width: 42.44444444!important;
+  margin-right: 2% !important;
 }
 .customcol49 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -2428,10 +2430,11 @@ span.code {
     width: calc(22.22222222% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 20.22222222%\9;
-    *width: 20%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.customcol29 .ie8 {
+  width: 20.22222222!important;
+  margin-right: 2% !important;
 }
 .customcol29 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6654,10 +6657,11 @@ hr {
     width: calc(100% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 98%\9;
-    *width: 98%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span12 .ie8 {
+  width: 98!important;
+  margin-right: 2% !important;
 }
 .span12 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6683,10 +6687,11 @@ hr {
     width: calc(91.66666667% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 89.66666667%\9;
-    *width: 89%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span11 .ie8 {
+  width: 89.66666667!important;
+  margin-right: 2% !important;
 }
 .span11 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6712,10 +6717,11 @@ hr {
     width: calc(83.33333333% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 81.33333333%\9;
-    *width: 81%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span10 .ie8 {
+  width: 81.33333333!important;
+  margin-right: 2% !important;
 }
 .span10 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6741,10 +6747,11 @@ hr {
     width: calc(75% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 73%\9;
-    *width: 73%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span9 .ie8 {
+  width: 73!important;
+  margin-right: 2% !important;
 }
 .span9 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6770,10 +6777,11 @@ hr {
     width: calc(66.66666667% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 64.66666667%\9;
-    *width: 64%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span8 .ie8 {
+  width: 64.66666667!important;
+  margin-right: 2% !important;
 }
 .span8 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6799,10 +6807,11 @@ hr {
     width: calc(58.33333333% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 56.33333333%\9;
-    *width: 56%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span7 .ie8 {
+  width: 56.33333333!important;
+  margin-right: 2% !important;
 }
 .span7 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6828,10 +6837,11 @@ hr {
     width: calc(50% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 48%\9;
-    *width: 48%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span6 .ie8 {
+  width: 48!important;
+  margin-right: 2% !important;
 }
 .span6 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6857,10 +6867,11 @@ hr {
     width: calc(41.66666667% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 39.66666667%\9;
-    *width: 39%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span5 .ie8 {
+  width: 39.66666667!important;
+  margin-right: 2% !important;
 }
 .span5 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6886,10 +6897,11 @@ hr {
     width: calc(33.33333333% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 31.33333333%\9;
-    *width: 31%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span4 .ie8 {
+  width: 31.33333333!important;
+  margin-right: 2% !important;
 }
 .span4 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6915,10 +6927,11 @@ hr {
     width: calc(25% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 23%\9;
-    *width: 23%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span3 .ie8 {
+  width: 23!important;
+  margin-right: 2% !important;
 }
 .span3 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6944,10 +6957,11 @@ hr {
     width: calc(16.66666667% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 14.66666667%\9;
-    *width: 14%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span2 .ie8 {
+  width: 14.66666667!important;
+  margin-right: 2% !important;
 }
 .span2 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6973,10 +6987,11 @@ hr {
     width: calc(8.33333333% - 2rem);
     margin-right: 2rem;
     margin-bottom: 0;
-    width: 6.33333333%\9;
-    *width: 6%\9 !important;
-    margin-right: 2%\9 !important;
   }
+}
+.span1 .ie8 {
+  width: 6.33333333!important;
+  margin-right: 2% !important;
 }
 .span1 > *[class*="row"]:last-child {
   margin-bottom: 0;
