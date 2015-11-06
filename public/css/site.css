@@ -12803,6 +12803,9 @@ span[id*="overlay_button"] {
   top: 25% !important;
   border-width: 0 !important;
 }
+.ie8 .cookie-monster {
+  background: #caeaff !important;
+}
 /* Print styles */
 @media print {
   /**

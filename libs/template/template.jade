@@ -64,6 +64,61 @@ html
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
 					img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
 
+		if mockup
+			header.main-header
+				.main-header__content
+					a.main-header__logo(href="", title="Citizens Advice home")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;" src="assets/images/ca-logo_100px.svg")
+
+					.main-header__links(data-track-zone="top-bar")
+						a.main-header__menu-link.js-toggle-menu(href="")
+							i.icon-menu
+							| Menu
+
+						nav.main-header__top-nav
+							a(href="#") Cymraeg</a>
+							a.hide-offline.main-header__login(href="")
+								i.icon-key
+								| Sign-in
+
+						form.main-header__search.hide-offline(action="")
+							label.screenreader(for="main-header__search__input") Search
+							input#main-header__search__input.main-header__search__input(name="q", placeholder="", type="search")
+							button.main-header__search__submit(title="Search", type="submit")
+								i.icon-search.icon--no-text
+								span.screenreader Search
+			
+			// Mega Menu
+			nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
+				ul.nav-list-primary
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Benefits
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Work
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Debt and money
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Consumer
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Relationships
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Housing
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Law and rights
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Discrimination
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Tax
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Healthcare
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Education
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") More from us
+					li.nav-list-primary-more.js-more-menu(style="display: none;")
+						a(href="#") More
+							i.icon-down
+
 		else
 
 			header.main-header
@@ -102,20 +157,123 @@ html
 				section.print-only
 					h2 This section is print only
 
-		footer.main-footer(data-track-zone="footer", id="footer")
-			.main-footer__content.flex-row.js-equal-height
-				.main-footer__box.main-footer__box--copyright
-					div
-						p
-							img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
-							| Copyright © 2015 Citizens Advice. All rights reserved.
-							br
-							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
-							br
-							| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
-							br
-							| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
-							
-		<!--[if IE 8]></div><![endif]-->
-		script(src="../libs/javascript/advisor.js")
-		script(src="../libs/javascript/core.js")
+		if mockup
+			aside.footer-feedback
+				h2.screenreader Feedback
+				.footer-feedback__content
+					p Is there anything wrong with this page? #[a(href="#") Let us know].
+
+			footer#footer.main-footer(data-track-zone="footer")
+				.main-footer__content.flex-row.js-equal-height
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Advice
+						ul.li--arrow
+							li
+								a(href="#") Benefits
+							li
+								a(href="#") Work
+							li
+								a(href="#") Debt and money
+							li
+								a(href="#") Consumer
+							li
+								a(href="#") Relationships
+							li
+								a(href="#") Housing
+							li
+								a(href="#") Law and rights
+							li
+								a(href="#") Discrimination
+							li
+								a(href="#") Tax
+							li
+								a(href="#") Healthcare
+							li
+								a(href="#") Education
+							li
+								a(href="#") A to Z of advice
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Resources and tools
+						ul.li--arrow
+							li
+								a(href="#") Budgeting tool
+							li
+								a(href="#") Advice fact sheets
+							li
+								a(href="#") Advice online, by phone and in person
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 More from us
+						ul.li--arrow
+							li
+								a(href="#") About us
+							li
+								a(href="#") Annual reports
+							li
+								a(href="#") Contact us
+							li
+								a(href="#") Complaints
+							li
+								a(href="#") Blogs
+							li
+								a(href="#") Campaigns
+							li
+								a(href="#") Media
+							li
+								a(href="#") Policy research
+							li
+								a(href="#") Support us
+							li
+								a(href="#") Volunteering
+							li
+								a(href="#") Jobs
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 About Citizens Advice
+						ul.li--arrow
+							li
+								a(href="#") How we provide advice
+							li
+								a(href="#") The difference we make
+							li
+								a(href="#") Support us
+							li
+								a(href="#") How Citizens Advice works
+							li
+								a(href="#") Accessibility
+							li
+								a(href="#") Disclaimer and copyright
+							li
+								a(href="#") Privacy and cookies
+
+					.main-footer__box.main-footer__box--copyright
+						div
+							p 
+								img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
+								| Copyright © 2015 Citizens Advice. All rights reserved.
+								br
+								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+								br
+								| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+								br
+								| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+		else
+			footer.main-footer(data-track-zone="footer", id="footer")
+				.main-footer__content.flex-row.js-equal-height
+					.main-footer__box.main-footer__box--copyright
+						div
+							p
+								img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
+								| Copyright © 2015 Citizens Advice. All rights reserved.
+								br
+								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+								br
+								| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+								br
+								| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+								
+			<!--[if IE 8]></div><![endif]-->
+			script(src="../libs/javascript/advisor.js")
+			script(src="../libs/javascript/core.js")
