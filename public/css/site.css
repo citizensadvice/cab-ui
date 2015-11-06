@@ -2372,9 +2372,10 @@ span.code {
     margin-bottom: 0;
   }
 }
-.customcol13 .ie8 {
-  width: 31.33333333!important;
+.ie8 .customcol13 {
+  width: 31.33333333% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .customcol13 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -2402,9 +2403,10 @@ span.code {
     margin-bottom: 0;
   }
 }
-.customcol49 .ie8 {
-  width: 42.44444444!important;
+.ie8 .customcol49 {
+  width: 42.44444444% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .customcol49 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -2432,9 +2434,10 @@ span.code {
     margin-bottom: 0;
   }
 }
-.customcol29 .ie8 {
-  width: 20.22222222!important;
+.ie8 .customcol29 {
+  width: 20.22222222% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .customcol29 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6644,8 +6647,13 @@ hr {
     clear: both;
     padding: 0;
     overflow: hidden;
-    margin-bottom: 2%\9 !important;
   }
+}
+.ie8 .row {
+  margin: 0 -2% 2% 0 !important;
+  clear: both !important;
+  padding: 0 !important;
+  overflow: hidden !important;
 }
 .span12 {
   float: left;
@@ -6659,9 +6667,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span12 .ie8 {
-  width: 98!important;
+.ie8 .span12 {
+  width: 98% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span12 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6689,9 +6698,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span11 .ie8 {
-  width: 89.66666667!important;
+.ie8 .span11 {
+  width: 89.66666667% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span11 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6719,9 +6729,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span10 .ie8 {
-  width: 81.33333333!important;
+.ie8 .span10 {
+  width: 81.33333333% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span10 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6749,9 +6760,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span9 .ie8 {
-  width: 73!important;
+.ie8 .span9 {
+  width: 73% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span9 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6779,9 +6791,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span8 .ie8 {
-  width: 64.66666667!important;
+.ie8 .span8 {
+  width: 64.66666667% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span8 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6809,9 +6822,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span7 .ie8 {
-  width: 56.33333333!important;
+.ie8 .span7 {
+  width: 56.33333333% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span7 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6839,9 +6853,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span6 .ie8 {
-  width: 48!important;
+.ie8 .span6 {
+  width: 48% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span6 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6869,9 +6884,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span5 .ie8 {
-  width: 39.66666667!important;
+.ie8 .span5 {
+  width: 39.66666667% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span5 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6899,9 +6915,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span4 .ie8 {
-  width: 31.33333333!important;
+.ie8 .span4 {
+  width: 31.33333333% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span4 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6929,9 +6946,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span3 .ie8 {
-  width: 23!important;
+.ie8 .span3 {
+  width: 23% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span3 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6959,9 +6977,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span2 .ie8 {
-  width: 14.66666667!important;
+.ie8 .span2 {
+  width: 14.66666667% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span2 > *[class*="row"]:last-child {
   margin-bottom: 0;
@@ -6989,9 +7008,10 @@ hr {
     margin-bottom: 0;
   }
 }
-.span1 .ie8 {
-  width: 6.33333333!important;
+.ie8 .span1 {
+  width: 6.33333333% !important;
   margin-right: 2% !important;
+  margin-bottom: 0;
 }
 .span1 > *[class*="row"]:last-child {
   margin-bottom: 0;

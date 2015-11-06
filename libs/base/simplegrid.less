@@ -14,9 +14,12 @@
         clear: both;
         padding: 0;
         overflow: hidden;
-        // Create IE7&8 gutters. Only needed if gutter 
-        // value is in modern units
-        margin-bottom: 2%\9 !important;
+    }
+    .ie8 & {
+        margin: 0 -2% 2% 0 !important;
+        clear: both !important;
+        padding: 0 !important;
+        overflow: hidden !important;
     }
 }
 
@@ -34,11 +37,12 @@
     	margin-right: @gutters;
         margin-bottom: 0;
     }
-    .ie8 {
+    .ie8 & {
         // Create IE8 fallback. Due to lack of calc() support
         // columns use an extra 2% as a gutter
-        width: unit(percentage((@x/@y)) - 2, ~"!important");
+        width: unit(percentage((@x/@y)) - 2, ~"% !important");
         margin-right: 2% !important;
+        margin-bottom: 0;
     }
 
 	// Remove bottom margin from the last nested row, to
