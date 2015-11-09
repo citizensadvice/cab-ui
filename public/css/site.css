@@ -9735,7 +9735,7 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0;
   background-color: #FFF;
   color: #191926;
-  border: solid #3a958c;
+  border: solid #81CEC6;
   border-width: 1px 1px 0px 0.5rem;
 }
 .collapsible--aqua i.revealable__icon,
@@ -9756,12 +9756,12 @@ html[lang="en-SCT"] .main-nav {
   border: none;
   text-decoration: none;
   position: relative;
-  background-color: #81CEC6;
+  background-color: #b8e3df;
   color: #191926;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  border-bottom: 1px solid #3a958c;
+  border-bottom: 1px solid #81CEC6;
 }
 .collapsible--aqua .collapse-toggle h1,
 .revealable--aqua .collapse-toggle h1,
@@ -9827,7 +9827,7 @@ html[lang="en-SCT"] .main-nav {
   cursor: pointer;
   border: none;
   margin-top: 1rem;
-  border-bottom: 1px solid #3a958c;
+  border-bottom: 1px solid #81CEC6;
   text-align: right;
 }
 .collapsible--aqua .collapse-toggle-close:before,
@@ -9849,7 +9849,7 @@ html[lang="en-SCT"] .main-nav {
 .revealable--aqua .collapse-toggle-close:hover,
 .collapsible--aqua__close:hover,
 .revealable--aqua__close:hover {
-  background-color: rgba(129, 206, 198, 0.2);
+  background-color: rgba(184, 227, 223, 0.2);
 }
 .collapsible--aqua .open:after,
 .revealable--aqua .open:after,
@@ -9876,7 +9876,7 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0;
   background-color: #FFF;
   color: #191926;
-  border: solid #78b541;
+  border: solid #b9db9b;
   border-width: 1px 1px 0px 0.5rem;
 }
 .collapsible--green i.revealable__icon,
@@ -9897,12 +9897,12 @@ html[lang="en-SCT"] .main-nav {
   border: none;
   text-decoration: none;
   position: relative;
-  background-color: #b9db9b;
-  color: #537D2D;
+  background-color: #d3e8c1;
+  color: #191926;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  border-bottom: 1px solid #78b541;
+  border-bottom: 1px solid #b9db9b;
 }
 .collapsible--green .collapse-toggle h1,
 .revealable--green .collapse-toggle h1,
@@ -9929,7 +9929,7 @@ html[lang="en-SCT"] .main-nav {
 .collapsible--green__heading h6,
 .revealable--green__heading h6 {
   margin-top: 0;
-  color: #537D2D;
+  color: #191926;
 }
 .collapsible--green .collapse-toggle:after,
 .revealable--green .collapse-toggle:after,
@@ -9964,11 +9964,11 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem -1rem -0.75rem -1rem;
   text-decoration: none;
   position: relative;
-  color: #537D2D;
+  color: #191926;
   cursor: pointer;
   border: none;
   margin-top: 1rem;
-  border-bottom: 1px solid #78b541;
+  border-bottom: 1px solid #b9db9b;
   text-align: right;
 }
 .collapsible--green .collapse-toggle-close:before,
@@ -9990,7 +9990,7 @@ html[lang="en-SCT"] .main-nav {
 .revealable--green .collapse-toggle-close:hover,
 .collapsible--green__close:hover,
 .revealable--green__close:hover {
-  background-color: rgba(185, 219, 155, 0.2);
+  background-color: rgba(211, 232, 193, 0.2);
 }
 .collapsible--green .open:after,
 .revealable--green .open:after,
@@ -10017,7 +10017,7 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0;
   background-color: #FFF;
   color: #191926;
-  border: solid #e13d41;
+  border: solid #DF3034;
   border-width: 1px 1px 0px 0.5rem;
 }
 .collapsible--red i.revealable__icon,
@@ -10039,11 +10039,11 @@ html[lang="en-SCT"] .main-nav {
   text-decoration: none;
   position: relative;
   background-color: #f2acad;
-  color: #DF3034;
+  color: #191926;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  border-bottom: 1px solid #e13d41;
+  border-bottom: 1px solid #DF3034;
 }
 .collapsible--red .collapse-toggle h1,
 .revealable--red .collapse-toggle h1,
@@ -10070,7 +10070,7 @@ html[lang="en-SCT"] .main-nav {
 .collapsible--red__heading h6,
 .revealable--red__heading h6 {
   margin-top: 0;
-  color: #DF3034;
+  color: #191926;
 }
 .collapsible--red .collapse-toggle:after,
 .revealable--red .collapse-toggle:after,
@@ -10105,11 +10105,11 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem -1rem -0.75rem -1rem;
   text-decoration: none;
   position: relative;
-  color: #DF3034;
+  color: #191926;
   cursor: pointer;
   border: none;
   margin-top: 1rem;
-  border-bottom: 1px solid #e13d41;
+  border-bottom: 1px solid #DF3034;
   text-align: right;
 }
 .collapsible--red .collapse-toggle-close:before,
@@ -11188,6 +11188,15 @@ input.tablesort-filter {
     margin-top: 24px;
     margin-top: 1.5rem;
   }
+}
+.side-nav-beta.sibling {
+  border: 0 solid #006278;
+  border-top-width: 8px;
+  border-top-width: 0.5rem;
+  background-color: #f2f2f2;
+}
+.side-nav-beta.sibling .side-nav-beta__sibling a:hover {
+  background-color: #dfdfdf;
 }
 .side-nav-beta ul {
   list-style: none;

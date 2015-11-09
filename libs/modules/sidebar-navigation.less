@@ -25,8 +25,15 @@
 .side-nav-beta {
     .main-content__sidebar;
     .spacing(margin,0,0,@box-spacing,0);
-    //border: 1px solid @gray-5;
-    //.spacing(border-top-width,.5);
+
+    &.sibling {
+        border: 0 solid @inventive-teal;
+        .spacing(border-top-width,.5);
+        background-color: @gray-8;
+        .side-nav-beta__sibling a:hover {
+            background-color: @gray-6;
+        }
+    }
     
     ul {
         list-style: none;

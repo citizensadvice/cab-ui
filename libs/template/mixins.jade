@@ -29,3 +29,20 @@ mixin sidebar(obj, key)
 						else
 							li.side-nav-beta__sibling
 								+link(item.title, item.href, item.text)(class=active)
+
+mixin sidebarSiblings(obj, key)
+	nav.side-nav-beta.sibling
+		ul
+			li.side-nav-beta__heading.-active.-open
+				a
+					span #{section}
+			li
+				ul
+					- each item,index in obj
+						- active = index === key ? "-current": ""
+						if item.section === "true"
+							li.side-nav-beta__sibling
+								+link(item.title, item.href, item.text)(class="section")
+						else
+							li.side-nav-beta__sibling
+								+link(item.title, item.href, item.text)(class=active)
