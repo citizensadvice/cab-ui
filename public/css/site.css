@@ -7445,10 +7445,6 @@ input.main-header__search__input {
   float: left;
   width: 66.66666667%;
 }
-.ie8 .main-content__right {
-  padding-right: 96px;
-  padding-right: 6rem;
-}
 @media (min-width: 600px) {
   .main-content__right {
     padding-right: 32px;
@@ -12812,6 +12808,10 @@ span[id*="overlay_button"] {
 }
 .ie8 .cookie-monster {
   background: #caeaff !important;
+}
+.ie8 .main-content__right {
+  padding-right: 96px;
+  padding-right: 6rem;
 }
 /* Print styles */
 @media print {
