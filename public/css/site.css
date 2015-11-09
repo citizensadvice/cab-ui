@@ -11192,6 +11192,7 @@ input.tablesort-filter {
 .side-nav-beta ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 .side-nav-beta li {
   padding: 0;
@@ -11221,6 +11222,14 @@ input.tablesort-filter {
 }
 .side-nav-beta__sibling:hover {
   background-color: #f2f2f2;
+}
+.side-nav-beta__sibling .section {
+  color: #004B88;
+  font-weight: 800;
+  background-color: #f2f2f2;
+}
+.side-nav-beta__sibling .section:hover {
+  background-color: #f2f8ff;
 }
 .side-nav-beta .-current {
   background-color: #f2f8ff;

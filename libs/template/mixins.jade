@@ -19,8 +19,13 @@ mixin sidebar(obj, key)
 			li.side-nav-beta__heading.-active.-open
 				a
 					span #{section}
-			ul
-				- each item,index in obj
-					- active = index === key ? "-current": ""
-					li.side-nav-beta__sibling
-						+link(item.title, item.href, item.text)(class=active)
+			li
+				ul
+					- each item,index in obj
+						- active = index === key ? "-current": ""
+						if item.section === "true"
+							li.side-nav-beta__sibling
+								+link(item.title, item.href, item.text)(class="section")
+						else
+							li.side-nav-beta__sibling
+								+link(item.title, item.href, item.text)(class=active)

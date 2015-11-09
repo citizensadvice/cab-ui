@@ -15,19 +15,25 @@ block breadcrumbs
 
 block sidebar
 	- var section = "Builders and home improvements"
-	// Set the number at the end to the array position of the active page
 	+sidebar([
 		{title: "Before you get work done on your home"},
-		{title: "Problems with home improvements", href: "#"}],
-		0)
+		{title: "Problems with home improvements"}
+		],0)
+	- var section = "Sibling categories"
+	.callout--related.side-nav-beta
+		p X
+	+sidebar([
+		{title: "Sibling two", href: "#"},
+		{title: "Sibling three", href: "#"},
+		{title: "Sibling four", href: "#"},
+		{title: "Sibling five", href: "#"}
+		])
 
 block section-notice
 	aside.section-notice
 		h2.screenreader Notice
 		.section-notice__content
-			p
-				span.badge NEW
-				| This page is part of #[a(href="#") our new approach to digital advice].
+			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 				
 block content
 	.articleContent
