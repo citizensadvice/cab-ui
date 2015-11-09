@@ -38,6 +38,12 @@ html
 			a.screenreader.screenreader--focusable Skip to content
 			a.screenreader.screenreader--focusable Skip to footer
 
+		if cookiemonster
+			.cookie-monster.hide-no-cookies.hide-no-js.no-print
+				.cookie-monster__content
+					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
+					button.btn.cookie-monster__close(data-action="close", type="button") Close
+
 		if mockup
 			header.main-header
 				.main-header__content
@@ -91,12 +97,6 @@ html
 					li.nav-list-primary-more.js-more-menu(style="display: none;")
 						a(href="#") More
 							i.icon-down
-
-		else if cookiemonster
-			.cookie-monster.hide-no-cookies.hide-no-js.no-print
-				.cookie-monster__content
-					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
-					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
 		else if loginheader
 			aside.section-notice__login
