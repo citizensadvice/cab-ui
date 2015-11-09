@@ -7309,6 +7309,10 @@ input.main-header__search__input {
     width: 100%;
     background: #004B88;
   }
+  .main-header__links a {
+    border: none;
+    color: #FFF;
+  }
   html[lang="en-SCT"] .main-header__links {
     background: #004B88;
   }
@@ -7440,6 +7444,10 @@ input.main-header__search__input {
 .main-content__right {
   float: left;
   width: 66.66666667%;
+}
+.ie8 .main-content__right {
+  padding-right: 96px;
+  padding-right: 6rem;
 }
 @media (min-width: 600px) {
   .main-content__right {
@@ -11624,7 +11632,6 @@ html[lang="en-SCT"] .side-nav > h2 {
   max-width: 1366px;
   margin: auto;
   clear: left;
-  max-width: 1080px;
 }
 .main-footer__box {
   padding: 16px;

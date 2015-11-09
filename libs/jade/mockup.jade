@@ -1,8 +1,8 @@
 block settings
-	- var title = "Mockup for testing"
+	- var title = "Before you get work done on your home"
 	- var sidebar = true
 	- var toolbars = true
-	- var cookiemonster = true
+	//- var cookiemonster = true
 	- var mockup = true
 
 extends ../template/template.jade
@@ -14,11 +14,11 @@ block breadcrumbs
 		{title: "Long form content"}])
 
 block sidebar
-	- var section = "Section title"
+	- var section = "Builders and home improvements"
 	// Set the number at the end to the array position of the active page
 	+sidebar([
-		{title: "Sibling page 1"},
-		{title: "Sibling page 2"}],
+		{title: "Before you get work done on your home"},
+		{title: "Problems with home improvements", href: "#"}],
 		0)
 
 block section-notice
@@ -32,63 +32,275 @@ block section-notice
 block content
 	.articleContent
 		div
-			p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+			p Follow these steps before you get building work, renovations or repairs done on your home. They’ll help you save time, money and stress. They’ll also help you avoid problems with builders, decorators or other contractors, eg plumbers and electricians.
+
 			#overview.steps
 				h3 On this page
 				.flex-row
 					ul.col-md-6
 						li
-							a(href="#step1") First use of &lt;h2&gt; in content
+							a(href="#step1") Step 1: Check if you need permission or approval
 						li
-							a(href="#step2") Second use of &lt;h2&gt; in content
+							a(href="#step2") Step 2: Find good builders or contractors
 						li
-							a(href="#step3") Third use of &lt;h2&gt; in content
-						li
-							a(href="#step4") Fourth use of &lt;h2&gt; in content
+							a(href="#step3") Step 3: Get quotes before you decide who to use
 					ul.col-md-6
 						li
-							a(href="#step5") Fifth use of &lt;h2&gt; in content
+							a(href="#step4") Step 4: Check there’s insurance in place
 						li
-							a(href="#step6") Sixth use of &lt;h2&gt; in content
+							a(href="#step5") Step 5: Get a written contract
 						li
-							a(href="#step7") Seventh use of &lt;h2&gt; in content
-						li
-							a(href="#step8") Eigth use of &lt;h2&gt; in content
+							a(href="#step6") Step 6: Be prepared to deal with problems
+
 			section#step1
-				h2.ref-heading
-					span.ref-heading__heading First use of &lt;h2&gt; in content 
-					span.ref-heading__toggle.ref-heading__toggle--on
-						a.js-toggle-ref(href="#!") Added
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h2 Step 1: Check if you need permission or approval
+				p You may have to get more than one kind of permission or approval before you go ahead with work on your home.
+				p Always check if you need:
+
+				ul
+					li #[a(href="#") building] regulations approval - you may need this even for small improvements, eg replacing windows or doors
+					li #[a(href="#") planning permission] - you usually need this to build something new or make a major change, eg an extension
+
+				.callout
+					p You don’t have to apply for building regulations approval yourself if you #[a(href="#") hire a contractor from a ‘competent person scheme’].
+
+				h3 If you have to get approval or permission
+				p You may need to hire a #[a(href="#") surveyor] or #[a(href="#") architect] to help you apply for building regulations approval or planning permission. If you’d struggle to pay for this, ask the #[a(href="#") Chartered Surveyor&#39;s Voluntary Scheme] for advice about applying.
+
+				h3 If you’re in a conservation area
+				p You must also #[a(href="#") check with your local council] before doing work on your home if it’s in conservation area.
+
+				h3 If you’re a leaseholder
+				p Check your lease if you own the leasehold (not the freehold) on your home. You may have to get permission from the freeholder before work starts. If the lease says you can’t make changes, you can still ask the freeholder for permission. You may have to pay some costs.
+
+				.callout--warning
+					p If you don’t get the permission or approval you need, you could be fined, prosecuted or made to pay to put things right.
+
 			section#step2
-				h2 Second use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h2 Step 2: Find good builders or contractors
+				p Recommendations and references are good ways to find reliable contractors who do a good job.
+				p If you can’t get personal recommendations from people you know, ask contractors for references. It’s best to get:
+
+				ul
+					li 2 or 3 recent examples of similar work they’ve done
+					li contact details for the people they did the work for - it’s best to get in touch because written references aren’t always genuine
+
+				.callout
+					p Avoid contractors who won’t give references - it’s a sign they could be dishonest.
+
+				h3 Do the proper checks
+				p It’s dangerous to use someone who doesn’t know what they’re doing, especially for anything involving gas or electrics.
+				p It’s important to check that you’re using:
+
+				ul
+					li a registered gas engineer for gas work, eg installing a boiler or cooker
+
+					li a #[a(href="#") registered electrician] for electrical work, eg installing new lighting or rewiring
+
+					li someone in a #[a(href="#") competent person scheme] for work that needs building regulations approval (unless you got approval yourself)
+
+				.callout
+					p You could be breaking the law if you don’t do these checks.
+
+				p You should also do the following checks to help you find a contractor you can trust.
+
+				h4 Check for approved contractors
+				p Contractors can sign up for schemes that list them as ‘approved’. This means they’ve agreed to meet professional standards. The scheme may also have checked they’re trustworthy and do a good job - check the scheme’s website to find out how they approve contractors.
+				p These are good places to search for approved contractors:
+
+				ul
+					li TrustMark - check the type of work you need is listed in the contractor’s ‘licensed trades’ (they’ll have passed checks proving that they’re qualified for that trade)
+					li Buy With Confidence for contractors approved by Trading Standards
+					li your local council’s approved trader scheme, if they have one
+
+				h4 Check what a contractor says
+				p It’s good idea to check what a contractor or their website tells you - especially if they’ve knocked on your door or telephoned you to offer their services. For instance, you can:
+
+				ul
+					li ask to see a business card or letterhead, or get full contact details, then ring the business to check it exists and the contractor works for them
+
+					li ask to see proof of qualifications - eg an NVQ in construction for builders or a #[a(href="#") card from the Construction Skills Certification Scheme] (trade associations can tell you about qualifications for particular types of work)
+
+					li search #[a(href="#") trade association] websites to check they’re a member if they say they are
+
+				.callout
+					p Avoid contractors who just give a mobile number. They may be hard to contact if problems come up. It could also be a sign they’re unreliable or dishonest.
+
+				h4 Interview contractors in person
+				p It’s a good idea to speak with contractors in person before you hire them, eg when they come to your home to give a quote.
+				p Trust your instincts and make sure you can communicate with them easily - this will help you sort out any problems that come up later.
+				p Before you meet them, it’s a good idea to write down:
+
+				ul
+					li a clear and detailed description of exactly what you want done
+					li a list of questions to help you get all the information you need to compare and choose between contractors - Trustmark has #[a(href="#") questions you can use as a checklist]
+
+				p When you meet them, write down what they say they’ll do - if they don’t end up doing it, having it in writing can help you hold them to their word or get some of your money back.
+
 			section#step3
-				h2 Third use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h2 Step 3: Get quotes before you decide who to use
+				p A quote is a promise from the contractor to do the work at a fixed price.
+				p It’s a good idea to get at least 3 written quotes before you decide on a contractor. Comparing quotes will help you decide if you’re getting a fair price.
+				p Don’t rely on a verbal quote - get it in writing. After you say yes to a quote, it’s a binding agreement between you and the contractor, whether it’s written down or not. But having it in writing means you can check what you agreed and prove it if there’s a dispute later.
+				p Some contractors charge for quotes - ask about this first.
+
+				.callout
+					p Make sure you get a quote, not an estimate. An estimate is just a rough guess of the price, and you could end up having to pay more.
+
+				p The contractor can’t charge you more than the price on their quote unless:
+
+				ul
+					li you ask for extra work that’s not included in the quote
+					li they let you know they have to do extra work and you agree to pay more for it
+					li they made a genuine mistake when writing down or calculating the price - they have the legal right to charge you what it should have been
+
+				.callout
+					p Avoid contractors who won’t put a quote in writing. It’s a sign they could be unreliable.
+					p Also be cautious if their price is a lot lower than other quotes you get. It could mean they don’t have the right skills or experience, or they’re not being honest.
+
+				h3 What a quote should include
+				p Be very clear about the work you want done - this will help you get the most accurate price and save misunderstandings later.
+				p A quote should include:
+
+				ul
+					li a fixed total price - not a daily rate
+					li a breakdown of all the work to be done and the materials needed
+					li separate costs for each material and part of the work
+					li how long the price is valid for
+					li if the price includes VAT
+					li when the price can go up, eg only if you agree to extra work
+
+				p If you get a daily rate instead of a fixed total price there’s a risk the contractor could string out the work to get more money. Avoid this by getting them to put in writing:
+
+				ul
+					li how many days the work will take
+					li how many hours of work counts as a day
+					li when they need your go-ahead to work more days
+
+				.callout
+					p Before saying yes to a quote, you should check there’s insurance in place and try to get a written contract.
+
+				h4 See a sample quote
+				p You can download a PDF of a #[a(href="#") sample quote].
+
 			section#step4
-				h2 Fourth use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h2 Step 4: Check there’s insurance in place
+				h3 Contractors’ insurance - what to check
+				p Ask to see insurance policies and check they don’t run out before the work will be finished. If it’s insurance they must have, they have to let you see the policy.
+
+				h4 Insurance they must have
+				p Public liability insurance - contractors are breaking the law if they don’t have this. It covers you and them if someone’s hurt or property is damaged (eg your home or your neighbour’s).
+				p Employers’ liability insurance - contractors who work through a company are breaking the law if they don’t have this. It doesn’t matter if it’s their own company or not. It covers you and the company if they’re hurt on the job.
+
+				.callout--warning
+					p If a contractor doesn’t have the right insurance, and things go wrong or someone’s hurt, you could be forced to pay to fix things, or go to court and pay damages and legal fees.
+
+				h4 Other insurance to check for
+				p Other types of insurance are optional, but they’re worth looking for.
+				p Contractors’ all-risk cover - this cover the cost of replacing work that’s destroyed before it’s completed, and before your insurance covers it.
+				p Insurance-backed warranties or guarantees - you can buy one of these as part of the cost of the work, if the contractor offers it. Check exactly what’s covered before you decide to buy one - it should cover the cost of finishing or fixing the work if the contractor does a bad job or goes out of business.
+
+				h3 Your insurance - what to check
+				p If you have home or contents insurance, contact your insurer to check you will be covered during the work. You may have to pay more for your insurance during and after the work.
+				p Your insurer will probably want to know what contractor you’re using and what insurance they have. They might suggest that you take out joint insurance with the contractor.
+
+				.callout
+					p If you don’t have home and contents insurance, it’s worth getting some before the work starts - there’s a bigger risk your home will be damaged or your things stolen while work’s going on.
+
 			section#step5
-				h2 Fifth use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h2 Step 5: Get a written contract
+				p As soon as you give a contractor the go-ahead, you’ve made a contract with them, even if it’s not written down.
+				p But you should always try to get a contract in writing before you give the go-ahead. If the contractor doesn’t do what you agreed, a written contract can help you get what you paid for at least get some of your money back.
+
+				.callout
+					p Avoid contractors who won’t put anything in writing - it’s a sign they could be dishonest.
+
+				p If the contractor gives you a contract, check if covers everything you agreed. If they don’t you can write your own.
+				p Written contracts don’t need to be in legal language - they just need to outline:
+
+				ul
+					li exactly what you’re paying for (they can refer back to the quote for this)
+					li everything you’ve agreed on, eg timings, tidying up and payments
+
+				h3 Timings
+				p Make sure the contract covers:
+
+				ul
+					li start and finish dates
+					li if you’ve agreed on a daily rate, the number of days the work will take and how many working hours are in a day
+					li delays - why they might happen, and what the contractor will do about them
+
+				h3 Tidying up
+				p Make sure the contract covers:
+
+				ul
+					li how and when the contractors will remove rubbish and clear up after themselves
+					li who pays for delivery and collection of any skips
+
+				h3 Materials, equipment and subcontractors
+				p Make sure the contract covers:
+
+				ul
+					li who pays to buy or hire materials and equipment
+					li for things the contractor buys, how they’ll give you receipts and paperwork
+					li if and when they’ll use subcontractors
+
+				h3 Payments
+				p Make sure the contract covers how and when you’ll pay. Aim to:
+
+				ul
+					li pay by card not cash
+					li pay in stages
+					li avoid deposits or upfront payments
+					li get some protection for your money
+
+				.callout
+					p Avoid contractors who only accept cash or want you to pay everything upfront - it’s a sign they could be dishonest or unreliable.
+
+				h4 Paying by card not cash
+				p If you pay by credit or debit card, you may be able to get your money back through your bank if something goes wrong, eg the contractor doesn’t turn up but refuses to pay back your deposit.
+				p If this happens, you can contact your bank and say you want to use the ‘chargeback’ scheme. Many bank staff don’t know about the scheme, so you may need to talk to a manager.
+				p If you pay more than £100 by credit card, it may be easier to tell your bank you want to ‘make a section 75 claim’. It’s another way to get your money back.
+
+				h4 Paying in stages
+				p This is a good idea, particularly if it’s a big job, because it means problems can be put right before you make the final payment. Be clear about the point in the work when payments are due.
+
+				h4 Avoiding deposits
+				p Don’t agree to pay everything up front, in case something goes wrong or the contractor doesn’t turn up.
+				p If they ask for a deposit to pay for materials, offer to buy them yourself instead of paying a deposit - that way, at least you own the materials if something goes wrong.
+				p If the work will take a long time, you may not be able to avoid a deposit. Aim to push it down as much as possible, and don’t agree to more than 25%.
+				p Always get a receipt for a deposit, as well as receipts for any materials it covers.
+
+				h4 Getting protection
+				p You can protect your deposit or staged payments until the work’s complete, eg with a:
+				ul
+					li deposit protection scheme - your money will be stored in a secure account until you and the builder are happy with the work
+					li insurance-backed warranty or guarantee - you can buy one of these from some contractors to cover the cost of finishing or fixing work if they do a bad job or go out of business
+
+				h3 Help writing your own contract
+				p It can help to look at example contracts, or create a contract using a template - eg for:
+
+				ul
+					li home repairs or maintenance - you can #[a(href="#") download a free contract template]
+					li building work - you can #[a(href="#") download an example contract] or #[a(href="#") buy a contract template]
+
+				.callout
+					p You have 14 days to cancel the contract after giving the go-ahead or signing a written contract. This is known as the cooling-off period.
+
+				.callout--yellow
+					h3 Further help
+
+					p Contact the #[a(href="#") Citizens Advice consumer helpline] if you need more help - a trained adviser can give you advice over the phone or by email. Contact the Consumerline if you're in #[a(href="#") Northern Ireland].
+
 			section#step6
-				h2 Sixth use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-			section#step7
-				h2 Seventh use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-			section#step8
-				h2 Eigth use of &lt;h2&gt; in content
-				h3 Example of content
-				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-			section.print-only
-				h2 This section is print only
-				p Should be hidden on screen, but not on print.
+				h2 Step 6: Be prepared to deal with problems
+				p Get the contractor’s full contact details before work starts. If you know how to get in touch, it’s easier to deal with any problems that come up.
+				p As soon as something happens that you’re not happy with:
+
+				ul
+					li ask the builder or contractor to put it right
+					li come to an agreement about how they’ll fix it, and ask them to put it in writing
+
+				.callout--related
+					h3 Next steps
+					p If a contractor does a bad job or doesn’t do what you agreed, you should be entitled to get it fixed or get some money back. Find out what you can do about #[a(href="#") problems with building work, decorating and home repairs].

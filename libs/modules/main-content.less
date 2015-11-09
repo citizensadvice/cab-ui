@@ -46,19 +46,20 @@
         float: left;
         width: @width-span-8;
 
+        .ie8 & {
+            .spacing(padding-right,@box-spacing*6);
+        }
+
         @media ( min-width: @screen-sm-min ) {
-            padding-right: unit(@box-spacing*2*@base-size,px);
-            padding-right: @box-spacing*2;
+            .spacing(padding-right,@box-spacing*2);
         }
 
         @media ( min-width: @screen-md-min ) {
-            padding-right: unit(@box-spacing*3*@base-size,px);
-            padding-right: @box-spacing*3;
+            .spacing(padding-right,@box-spacing*3);
         }
 
         @media ( min-width: @screen-lg-min ) {
-            padding-right: unit(@box-spacing*6*@base-size,px);
-            padding-right: @box-spacing*6;
+            .spacing(padding-right,@box-spacing*6);
         }
 
         @media ( max-width: @screen-xs-max ) {

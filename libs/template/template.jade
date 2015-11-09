@@ -130,7 +130,7 @@ html
 
 			.main-content
 				if sidebar
-					main.main-content__right(id="main", role="main")
+					.main-content__right(id="main", role="main")
 						if title
 							.title
 								h1.title__heading.js-ref
@@ -153,12 +153,12 @@ html
 					h2 This section is print only
 
 		if mockup
-			aside.footer-feedback
+			.footer-feedback
 				h2.screenreader Feedback
 				.footer-feedback__content
 					p Is there anything wrong with this page? #[a(href="#") Let us know].
 
-			footer#footer.main-footer(data-track-zone="footer")
+			#footer.main-footer(data-track-zone="footer")
 				.main-footer__content.flex-row.js-equal-height
 					.main-footer__box.col-md-3.col-sm-6
 						h2 Advice
