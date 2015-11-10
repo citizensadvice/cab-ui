@@ -139,7 +139,8 @@ html
 						if toolbars
 							include toolbar.jade
 							block content
-							include sharebar.jade
+							if sharebar
+								include sharebar.jade
 						else
 							block content
 

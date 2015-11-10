@@ -1,5 +1,5 @@
 block settings
-	- var title = "Before you get work done on your home"
+	- var title = "Before you get building work done"
 	- var sidebar = true
 	- var toolbars = true
 	//- var cookiemonster = true
@@ -14,13 +14,15 @@ block breadcrumbs
 		{title: "Long form content"}])
 
 block sidebar
-	- var section = "Builders and home improvements"
+	- var section = "Home improvements"
 	+sidebar([
-		{title: "Before you get work done on your home"},
-		{title: "Problems with home improvements"}
+		{title: "Before you get building work done"},
+		{title: "Problem with building work, decorating or home improvements"},
+		{title: "Cancelling building or decorating work"},
+		{title: "Building organisations"}
 		],0)
-	- var section = "Sibling categories"
-	+sidebarSiblings([
+	//- var section = "Sibling categories"
+	//+sidebarSiblings([
 		{title: "Sibling two", href: "#"},
 		{title: "Sibling three", href: "#"},
 		{title: "Sibling four", href: "#"},
