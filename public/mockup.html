@@ -28,6 +28,12 @@
   </head>
   <body><!--[if IE 8]><div class="ie8"><![endif]-->
     <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <div class="cookie-monster hide-no-cookies hide-no-js no-print">
+      <div class="cookie-monster__content">
+        <p>This site uses cookies. Find out more about <a href="#">our use of cookies</a>.</p>
+        <button data-action="close" type="button" class="btn cookie-monster__close">Close</button>
+      </div>
+    </div>
     <header class="main-header">
       <div class="main-header__content"><a href="" title="Citizens Advice home" class="main-header__logo"><img alt="Citizens Advice" onerror="this.onerror=null;this.src=&amp;#39;/Static/images/logos/ca-logo_100px.svg.png&amp;#39;;" src="assets/images/ca-logo_100px.svg"></a>
         <div data-track-zone="top-bar" class="main-header__links"><a href="" class="main-header__menu-link js-toggle-menu"><i class="icon-menu"></i>Menu</a>
@@ -319,6 +325,51 @@
               </section>
             </div>
           </div>
+          <div id="simpleModal" class="modal">
+            <div class="extent-country-select">
+              <form>
+                <h2>Advice can vary depending on where you live
+                  <fieldset>
+                    <label for="exampleInputFile">Where do you live?</label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-GB" checked>England
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-SCT">Scotland
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Wales
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Cmyru
+                    </label>
+                    <label class="radio radio--outline">
+                      <input type="radio" name="radio" value="?lang=cy">Northern Ireland
+                    </label>
+                  </fieldset>
+                  <button id="closeSimple" type="submit" class="btn btn-primary right-button-icon">Continue</button>
+                </h2>
+              </form>
+            </div>
+          </div>
+          <script>
+            $(document).ready(function(){
+            	$("#showSimpleModal").click(function() {
+            		$("div#simpleModal").addClass("show");
+            		return false;
+            	});
+            	$("#closeSimple").click(function() {
+            		$("div#simpleModal").removeClass("show");
+            		return false;
+            	});
+            });
+            //close modal when clicking the esc keyboard button
+            $(document).keyup(function(event){
+            	if(event.which=='27'){
+            		$("div#simpleModal").removeClass('show');
+            	}
+            });
+          </script>
         </div>
         <nav class="side-nav-beta">
           <ul>
