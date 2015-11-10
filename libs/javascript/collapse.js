@@ -20,6 +20,7 @@ $(document).ready(function($) {
     $('.collapse').find('.collapse-toggle-close').click(function(){
         $(this).parent().slideToggle();
         $(this).parent().prev().toggleClass("open");
+        $(this).goTo();
         $(this).parent().prev().goTo();
     });
 });
