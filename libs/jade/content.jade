@@ -126,3 +126,44 @@ block content
                 p If you do, they’ll send you a PIP claim form. This form is where you tell them how your condition affects you. If you’ve waited more than 2 weeks, contact the PIP claims line and ask them for an update.
                 p While you wait for the PIP2 form, you should think about #[a(href="#") how to fill in the PIP claim form] and if you need to organise any #[a(href="#") supporting evidence] to support your claim.
                 p If you don’t meet the basic eligibility conditions, you’ll be sent a decision letter to say why you’ve been refused. If you think the decision is wrong, you can #[a(href="#") challenge the DWP’s decision].
+                
+    #simpleModal.modal
+            .extent-country-select
+                    form
+                        h2 Advice can vary depending on where you live
+                            fieldset
+                                label(for="exampleInputFile") Where do you live?
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-GB", checked)
+                                    | England
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-SCT")
+                                    | Scotland
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-WLS")
+                                    | Wales
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-WLS")
+                                    | Cmyru
+                                label.radio.radio--outline
+                                    input(type="radio", name="radio", value="?lang=cy")
+                                    | Northern Ireland
+                            button#closeSimple.btn.btn-primary.right-button-icon(type="submit") Continue
+
+    script.
+        $(document).ready(function(){
+            $("#showSimpleModal").click(function() {
+                $("div#simpleModal").addClass("show");
+                return false;
+            });
+            $("#closeSimple").click(function() {
+                $("div#simpleModal").removeClass("show");
+                return false;
+            });
+        });
+        //close modal when clicking the esc keyboard button
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $("div#simpleModal").removeClass('show');
+            }
+        });

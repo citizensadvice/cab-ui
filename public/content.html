@@ -157,6 +157,51 @@
               </div>
             </div>
           </div>
+          <div id="simpleModal" class="modal">
+            <div class="extent-country-select">
+              <form>
+                <h2>Advice can vary depending on where you live
+                  <fieldset>
+                    <label for="exampleInputFile">Where do you live?</label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-GB" checked>England
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-SCT">Scotland
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Wales
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Cmyru
+                    </label>
+                    <label class="radio radio--outline">
+                      <input type="radio" name="radio" value="?lang=cy">Northern Ireland
+                    </label>
+                  </fieldset>
+                  <button id="closeSimple" type="submit" class="btn btn-primary right-button-icon">Continue</button>
+                </h2>
+              </form>
+            </div>
+          </div>
+          <script>
+            $(document).ready(function(){
+                $("#showSimpleModal").click(function() {
+                    $("div#simpleModal").addClass("show");
+                    return false;
+                });
+                $("#closeSimple").click(function() {
+                    $("div#simpleModal").removeClass("show");
+                    return false;
+                });
+            });
+            //close modal when clicking the esc keyboard button
+            $(document).keyup(function(event){
+                if(event.which=='27'){
+                    $("div#simpleModal").removeClass('show');
+                }
+            });
+          </script>
         </div>
         <nav class="side-nav-beta">
           <ul>
