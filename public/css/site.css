@@ -12770,7 +12770,6 @@ span[id*="overlay_button"] {
 		    content: "\f063";
 	    }
 	}*/
-  border-width: 1px;
   border-left-width: 8px;
   border-left-width: 0.5rem;
 }
@@ -12805,8 +12804,28 @@ span[id*="overlay_button"] {
 .callout--adviser > *:last-child {
   margin-bottom: 0;
 }
-.callout--adviser .callout__link:last-child {
+.callout--adviser.callout--icon {
+  border-width: 1px;
+  border-left-width: 8px;
+  border-left-width: 0.5rem;
+}
+.callout--adviser.callout--icon .callout__link:last-child {
   border: none;
+}
+.callout--adviser.callout--icon:before {
+  font-family: 'FontAwesome';
+  font-size: .85rem;
+  font-weight: 300;
+  content: "\f007\00a0\00a0\00a0 Adviser only content";
+  line-height: 1em;
+  display: block;
+  margin: -12px -16px 12px -16px;
+  margin: -0.75rem -1rem 0.75rem -1rem;
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+}
+.callout--adviser.callout--icon:before {
+  color: #FFF;
 }
 .adviser-nav .-current {
   background-color: #b5d8e0 !important;

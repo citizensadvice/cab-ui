@@ -23,9 +23,15 @@ span[id*="overlay_button"] {
         @text-color,
         @callout-border: @inventive-teal-light
     ); 
-    .callout--border; 
     .callout--border--left;
+    &.callout--icon {
+        .callout--icon("\f007\00a0\00a0\00a0 Adviser only content");
+    &:before {
+        color: @white;
+    }
+    }
 }
+
 
 .adviser-nav {
     .side-nav-beta__sibling {
