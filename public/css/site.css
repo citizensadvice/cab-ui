@@ -8638,7 +8638,7 @@ html[lang="en-SCT"] .main-nav {
 .callout--warning > h3,
 .dap-panel--crucial > h3,
 .highlight--error > h3 {
-  color: #DF3034;
+  color: #191926;
   font-size: 1.3rem;
 }
 .callout--warning a,
@@ -10011,6 +10011,10 @@ html[lang="en-SCT"] .main-nav {
 .collapsible--green .revealable__content[aria-hidden=true],
 .revealable--green .revealable__content[aria-hidden=true] {
   display: none;
+}
+.collapsible--green h2,
+.revealable--green h2 {
+  color: green;
 }
 .collapsible--red,
 .revealable--red {
@@ -12728,7 +12732,7 @@ span[id*="overlay_button"] {
   margin: 0.75rem 0rem;
   background-color: #c7e2e7;
   color: #191926;
-  border: 0px #6db3c1 solid;
+  border: 0px #007792 solid;
   display: block;
   /*.callout__link {
 	 	cursor: pointer;
@@ -12772,16 +12776,16 @@ span[id*="overlay_button"] {
 }
 .callout--adviser:before {
   color: #191926;
-  background-color: #6db3c1;
+  background-color: #007792;
 }
 .callout--adviser > h1,
 .callout--adviser > h2,
 .callout--adviser > h3 {
-  color: #b8e3df;
+  color: #191926;
   font-size: 1.3rem;
 }
 .callout--adviser a {
-  border-bottom-color: #6db3c1;
+  border-bottom-color: #007792;
 }
 .callout--adviser > *:first-child {
   padding-top: 0;
@@ -13023,4 +13027,3 @@ span[id*="overlay_button"] {
     padding-left: 1em;
   }
 }
-/*# sourceMappingURL=site.css.map */
