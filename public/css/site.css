@@ -3037,6 +3037,29 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
+.tools--sidebar {
+  list-style: none;
+  padding: 0;
+}
+.tools--sidebar li {
+  margin: 0 0 1px 0;
+}
+.tools--sidebar a {
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  display: block;
+  border: none;
+}
+.tools--sidebar a:hover {
+  background-color: #f2f2f2;
+}
+.tools--sidebar .visited {
+  background-color: #dfdfdf;
+}
+.tools--sidebar .active {
+  background-color: #f2f8ff;
+  font-weight: 700;
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS
@@ -13046,3 +13069,4 @@ span[id*="overlay_button"] {
     padding-left: 1em;
   }
 }
+/*# sourceMappingURL=site.css.map */

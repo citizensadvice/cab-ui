@@ -1,0 +1,60 @@
+block settings
+    - var title = "Budgeting Tool"
+    - var sidebar = true
+    - var toolbars = true
+    //- var cookiemonster = true
+    - var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "index.html"}, 
+        {title: "Templates", href: "index.html#templates"},
+        {title: "Budgeting Tool"}])
+
+block sidebar
+    - var section = "Nav"
+    +sidebar([
+        {title: "Budgeting Tool"}
+        ],0)
+
+block section-notice
+    aside.section-notice
+        h2.screenreader Notice
+        .section-notice__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+                
+block content
+    .articleContent
+        .row
+            .span8
+                h2 Benefits
+                fieldset
+                    label(for="addbenefit") Benefits
+                    .dropdown
+                        select#exampleSelect1
+                            option Add benefits
+                    button.btn.btn-primary(type="button") Add
+
+                fieldset
+                    label(for="income") Income support
+                    .field-group--dropdown
+                        input#income(placeholder="£", type="number")
+                        .dropdown
+                            select#exampleSelect1
+                                option Weekly
+                                option Monthly
+                                option Yearly
+                button.btn.btn-primary-light.left-button-icon(type="button") Income
+                button.btn.btn-primary.right-button-icon(type="button") Household
+            .span4
+                ul.tools--sidebar
+                    li.visited 
+                        a(href="#") Start
+                    li.visited
+                        a(href="#") 1. Income
+                    li.active
+                        a(href="#") 2. Benefits
+                    li 
+                        a(href="#") 3. Household

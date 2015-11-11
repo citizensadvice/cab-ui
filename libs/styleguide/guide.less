@@ -403,3 +403,28 @@ div.tooltip:before {
         }
     }
 }
+
+.tools {
+    &--sidebar {
+        list-style: none;
+        padding: 0;
+        li {
+            margin: 0 0 1px 0;
+        }
+        a {
+            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+            display: block;
+            border: none;
+            &:hover {
+                background-color: @gray-8;
+            }
+        }
+        .visited {
+            background-color: @gray-6;
+        }
+        .active {
+            background-color: @heritage-blue-lightest;
+            font-weight: @font-weight-bolder;
+        }
+    }
+}
