@@ -3612,7 +3612,7 @@ input[type=button]:focus {
   cursor: pointer;
   border-radius: 2px;
   background-color: #FFF;
-  border: 1px solid #caeaff;
+  border: 1px solid #FFF;
   color: #004B88;
   font-weight: bold;
   padding: 12px 16px;
@@ -3623,7 +3623,7 @@ input[type=button]:focus {
 .btn-primary-cancel:hover,
 .btn-primary-cancel:focus,
 .btn-primary-cancel:active {
-  border: 1px solid #caeaff;
+  border: 1px solid #f2f8ff;
   background-color: #f2f8ff;
   outline: 0;
 }
