@@ -18,7 +18,7 @@
         height: 2em;
         text-align: center;
         border: 2px solid @color;
-        .round;
+        .round(@round-colour: @color;);
         .vertical-align(absolute);
         & when (@border = no-border) {
             border: none;

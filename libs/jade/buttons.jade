@@ -29,6 +29,30 @@ block content
 						| &lt;button type="submit" class="btn btn-primary tick-button-icon"&gt;Submit&lt;/button&gt;
 						| &lt;button type="button" class="btn btn-primary search-button-icon"&gt;Search&lt;/button&gt;
 
+				// Testing back button
+				.example-box-plain
+					label(for="buttonDescription") Buttons (directions alternative)
+					button.btn.btn-primary-cancel.back-button-icon(type="button") Back
+					button.btn.btn-primary-cancel.left-cancel-button-icon(type="button") Cancel
+					// Recommending we use the lighter back button to differentiate between purposes
+				pre
+					code.language-html
+						| &lt;label for="buttonDescription"&gt;Buttons (directions)&lt;/label&gt;
+						| &lt;button type="button" class="btn btn-primary-cancel back-button-icon"&gt;Back&lt;/button&gt;
+						| &lt;button type="button" class="btn btn-primary-cancel left-cancel-button-icon"&gt;Cancel&lt;/button&gt;
+
+				// Cmobining back button
+				.example-box-plain
+					label(for="buttonDescription") Buttons combined (directions alternative)
+					button.btn.btn-primary-cancel.back-button-icon(type="button") Back
+					button.btn.btn-primary.right-button-icon(type="button") Continue
+					// Recommending we use the lighter back button to differentiate between purposes
+				pre
+					code.language-html
+						| &lt;label for="buttonDescription"&gt;Buttons (directions)&lt;/label&gt;
+						| &lt;button type="button" class="btn btn-primary-cancel back-button-icon"&gt;Back&lt;/button&gt;
+						| &lt;button type="button" class="btn btn-primary right-button-icon"&gt;Continue&lt;/button&gt;
+
 				.example-box-plain
 					label(for="buttonDescription") Buttons (actions)
 					button.btn.btn-secondary.email-button-icon(type="button") Email
