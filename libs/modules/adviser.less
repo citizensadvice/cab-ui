@@ -17,7 +17,8 @@ span[id*="overlay_button"] {
     }
 }
 
-.callout--adviser {
+.callout--adviser,
+.dap-panel--adviser {
     .callout( 
         @inventive-teal-lightest,
         @text-color,
@@ -25,7 +26,7 @@ span[id*="overlay_button"] {
     ); 
     .callout--border--left;
     &.callout--icon {
-        .callout--icon("\f007\00a0\00a0\00a0 Adviser only content");
+        .callout--icon("Adviser only content");
     &:before {
         color: @white;
     }
