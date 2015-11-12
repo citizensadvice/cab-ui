@@ -2320,10 +2320,6 @@ ul li {
   color: #333;
   padding: 16px;
   padding: 1rem;
-  margin: 16px 48px;
-  margin: 1rem 3rem;
-  font-family: monaco,monospace;
-  line-height: 1.7em;
   background-color: #f8f8f8;
   border: 1px solid #dfe1e3;
   border-radius: 2px;
@@ -4358,8 +4354,8 @@ input[class*="dob-"] {
   border-radius: 0 2px 2px 0;
   cursor: pointer;
   border-radius: 2px;
-  background-color: #b8e3df;
-  border: 1px solid #b8e3df;
+  background-color: #81CEC6;
+  border: 1px solid #81CEC6;
   color: #004B88;
   font-weight: bold;
   padding: 12px 16px;
@@ -4371,8 +4367,8 @@ input[class*="dob-"] {
 .field-group--dropdown .dropdown:hover,
 .field-group--dropdown .dropdown:focus,
 .field-group--dropdown .dropdown:active {
-  border: 1px solid #81CEC6;
-  background-color: #81CEC6;
+  border: 1px solid #5cc0b5;
+  background-color: #5cc0b5;
   outline: 0;
 }
 .field-group--dropdown .dropdown:focus {
@@ -6748,7 +6744,6 @@ hr {
     margin: 0 -2rem 2rem 0;
     clear: both;
     padding: 0;
-    overflow: hidden;
   }
 }
 .ie8 .row {

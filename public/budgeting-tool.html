@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="keywords">
     <meta name="description">
-    <title>Citizens Advice style guide 
+    <title>Citizens Advice style guide - Budgeting Tool
     </title>
     <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
@@ -70,18 +70,18 @@
       </aside>
       <div class="main-content">
         <div class="title">
-          <h1 class="title__heading js-ref"><span class="title__title"></span></h1>
+          <h1 class="title__heading js-ref"><span class="title__title">Budgeting Tool</span></h1>
         </div>
         <div class="articleContent">
           <div class="row">
             <div class="span8">
               <h2>Benefits</h2>
-              <fieldset>
-                <label for="addbenefit">Benefits</label>
+              <fieldset class="example-box">
+                <label for="addbenefit">Add a benefit</label>
                 <div class="dropdown">
                   <select id="exampleSelect1">
-                    <option>Add benefits</option>
-                    <option>Add benefits longer</option>
+                    <option>Benefit one</option>
+                    <option>Benefit two</option>
                   </select>
                 </div>
                 <button type="button" class="btn btn-primary">Add</button>
@@ -99,7 +99,33 @@
                   </div>
                 </div>
               </fieldset>
-              <button type="button" class="btn btn-primary-light left-button-icon">Income</button>
+              <fieldset>
+                <label for="income">Income support</label>
+                <div class="field-group--dropdown">
+                  <input id="income" placeholder="£" type="number">
+                  <div class="dropdown">
+                    <select id="exampleSelect1">
+                      <option>Weekly</option>
+                      <option>Monthly</option>
+                      <option>Yearly</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <label for="income">Income support</label>
+                <div class="field-group--dropdown">
+                  <input id="income" placeholder="£" type="number">
+                  <div class="dropdown">
+                    <select id="exampleSelect1">
+                      <option>Weekly</option>
+                      <option>Monthly</option>
+                      <option>Yearly</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <button type="button" class="btn btn-primary-cancel back-button-icon">Income</button>
               <button type="button" class="btn btn-primary right-button-icon">Household</button>
             </div>
             <div class="span4">
