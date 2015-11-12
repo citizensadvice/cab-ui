@@ -12852,6 +12852,7 @@ span[id*="overlay_button"] {
 		    content: "\f063";
 	    }
 	}*/
+  border-width: 1px;
   border-left-width: 8px;
   border-left-width: 0.5rem;
 }
@@ -12900,18 +12901,12 @@ span[id*="overlay_button"] {
 .dap-panel--adviser > *:last-child {
   margin-bottom: 0;
 }
-.callout--adviser.callout--icon,
-.dap-panel--adviser.callout--icon {
-  border-width: 1px;
-  border-left-width: 8px;
-  border-left-width: 0.5rem;
-}
-.callout--adviser.callout--icon .callout__link:last-child,
-.dap-panel--adviser.callout--icon .callout__link:last-child {
+.callout--adviser .callout__link:last-child,
+.dap-panel--adviser .callout__link:last-child {
   border: none;
 }
-.callout--adviser.callout--icon:before,
-.dap-panel--adviser.callout--icon:before {
+.callout--adviser:before,
+.dap-panel--adviser:before {
   font-family: 'FontAwesome';
   font-size: .85rem;
   font-weight: 300;
@@ -12923,8 +12918,8 @@ span[id*="overlay_button"] {
   padding: 12px 16px;
   padding: 0.75rem 1rem;
 }
-.callout--adviser.callout--icon:before,
-.dap-panel--adviser.callout--icon:before {
+.callout--adviser:before,
+.dap-panel--adviser:before {
   color: #FFF;
 }
 .adviser-nav .-current {
@@ -13146,3 +13141,4 @@ span[id*="overlay_button"] {
     padding-left: 1em;
   }
 }
+/*# sourceMappingURL=site.css.map */
