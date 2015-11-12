@@ -20,19 +20,28 @@
         margin-bottom: unit(@box-spacing-vertical*1.25*@base-size,px);
         margin-bottom: @box-spacing-vertical*1.25;
     }
-    ul, ol {
-        margin: 0;
-        //padding: 0 1rem;
-        padding: 0.25rem 2rem;
-        //list-style: none;
-        li {
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-            &:first-child {
-                margin-top: .5rem;
+    .columns {
+            @media (min-width:@screen-md-min) {
+                column-count: 2;
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+            -ms-column-count: 2;
+             -o-column-count: 2;
+                column-gap: 1rem;
+        -webkit-column-gap: 1rem;
+           -moz-column-gap: 1rem;
+            -ms-column-gap: 1rem;
+             -o-column-gap: 1rem;
+                columns: 2;
             }
-            &:last-child {
-                margin-bottom: 0;
+        ul, ol {
+            margin: 0;
+            .spacing(padding,0.25rem,1rem);
+            //list-style: none;
+            li {
+                font-size: 0.95rem;
+                .spacing(margin-bottom,1rem);
+                display: inline-block;
             }
         }
     }

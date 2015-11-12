@@ -4205,6 +4205,7 @@ input[type="file"]::before {
   padding-right: 3.5em;
   padding-right: 0;
   background-color: #FFF;
+  display: inline-block;
 }
 .dropdown:after {
   right: 0.5em;
@@ -4240,6 +4241,7 @@ input[type="file"]::before {
   border: none;
   cursor: pointer;
   -webkit-appearance: none;
+  padding-right: 2em;
 }
 .checkbox,
 .radio {
@@ -10444,23 +10446,33 @@ input.tablesort-filter {
   margin-bottom: 15px;
   margin-bottom: 0.9375rem;
 }
-.steps ul,
-.steps ol {
+@media (min-width: 840px) {
+  .steps .columns {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    -ms-column-gap: 1rem;
+    -o-column-gap: 1rem;
+    columns: 2;
+  }
+}
+.steps .columns ul,
+.steps .columns ol {
   margin: 0;
-  padding: 0.25rem 2rem;
+  padding: 4px 16px;
+  padding: 0.25rem 1rem;
 }
-.steps ul li,
-.steps ol li {
+.steps .columns ul li,
+.steps .columns ol li {
   font-size: 0.95rem;
+  margin-bottom: 16px;
   margin-bottom: 1rem;
-}
-.steps ul li:first-child,
-.steps ol li:first-child {
-  margin-top: .5rem;
-}
-.steps ul li:last-child,
-.steps ol li:last-child {
-  margin-bottom: 0;
+  display: inline-block;
 }
 .steps a {
   border-width: 0;

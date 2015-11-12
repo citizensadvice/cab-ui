@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="keywords">
     <meta name="description">
-    <title>Citizens Advice style guide - Budgeting Tool
+    <title>Citizens Advice style guide 
     </title>
     <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
@@ -69,64 +69,49 @@
         </div>
       </aside>
       <div class="main-content">
-        <div id="main" role="main" class="main-content__right">
-          <div class="title">
-            <h1 class="title__heading js-ref"><span class="title__title">Budgeting Tool</span></h1>
-          </div>
-          <div class="title__subheading">This advice is for 
-            <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a>
-          </div>
-          <div class="articleContent">
-            <div class="row">
-              <div class="span8">
-                <h2>Benefits</h2>
-                <fieldset>
-                  <label for="addbenefit">Benefits</label>
+        <div class="title">
+          <h1 class="title__heading js-ref"><span class="title__title"></span></h1>
+        </div>
+        <div class="articleContent">
+          <div class="row">
+            <div class="span8">
+              <h2>Benefits</h2>
+              <fieldset>
+                <label for="addbenefit">Benefits</label>
+                <div class="dropdown">
+                  <select id="exampleSelect1">
+                    <option>Add benefits</option>
+                    <option>Add benefits longer</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary">Add</button>
+              </fieldset>
+              <fieldset>
+                <label for="income">Income support</label>
+                <div class="field-group--dropdown">
+                  <input id="income" placeholder="£" type="number">
                   <div class="dropdown">
                     <select id="exampleSelect1">
-                      <option>Add benefits</option>
+                      <option>Weekly</option>
+                      <option>Monthly</option>
+                      <option>Yearly</option>
                     </select>
                   </div>
-                  <button type="button" class="btn btn-primary">Add</button>
-                </fieldset>
-                <fieldset>
-                  <label for="income">Income support</label>
-                  <div class="field-group--dropdown">
-                    <input id="income" placeholder="£" type="number">
-                    <div class="dropdown">
-                      <select id="exampleSelect1">
-                        <option>Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
-                      </select>
-                    </div>
-                  </div>
-                </fieldset>
-                <button type="button" class="btn btn-primary-light left-button-icon">Income</button>
-                <button type="button" class="btn btn-primary right-button-icon">Household</button>
-              </div>
-              <div class="span4">
-                <ul class="tools--sidebar">
-                  <li class="visited"> <a href="#">Start</a></li>
-                  <li class="visited"><a href="#">1. Income</a></li>
-                  <li class="active"><a href="#">2. Benefits</a></li>
-                  <li> <a href="#">3. Household</a></li>
-                </ul>
-              </div>
+                </div>
+              </fieldset>
+              <button type="button" class="btn btn-primary-light left-button-icon">Income</button>
+              <button type="button" class="btn btn-primary right-button-icon">Household</button>
+            </div>
+            <div class="span4">
+              <ul class="tools--sidebar">
+                <li class="visited"> <a href="#">Start</a></li>
+                <li class="visited"><a href="#">1. Income</a></li>
+                <li class="active"><a href="#">2. Benefits</a></li>
+                <li> <a href="#">3. Household</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        <nav class="side-nav-beta">
-          <ul>
-            <li class="side-nav-beta__heading -active -open"><a><span>Nav</span></a></li>
-            <li>
-              <ul>
-                <li class="side-nav-beta__sibling"><a href="#" title="Budgeting Tool" class="-current">Budgeting Tool</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
         <div class="print-only">
           <h2>This section is print only</h2>
         </div>
