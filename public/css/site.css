@@ -4205,6 +4205,7 @@ textarea.form__field {
   padding-right: 0;
   background-color: #FFF;
   display: inline-block;
+  width: 100%;
 }
 .dropdown:after {
   right: 0.5em;
@@ -4252,6 +4253,18 @@ input[class*="dob-"] {
   display: inline-block;
   padding-right: 0;
 }
+/*.date {
+    display: table;
+}
+.form-group-date {
+    width: 31%;
+    display: table-cell;
+    float: left;
+    margin-right: 3.5%;
+    &:last-child {
+        margin: 0;
+    }
+}*/
 .form-group-date {
   width: 5rem;
   display: inline-block;
@@ -4332,6 +4345,7 @@ input[class*="dob-"] {
   border-radius: 0 2px 2px 0;
   background-color: #f2f2f2;
   padding: 0;
+  width: auto;
 }
 .field-group--dropdown input:first-of-type {
   border-radius: 2px 0 0 2px;

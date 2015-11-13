@@ -283,6 +283,7 @@ textarea.form__field {
     padding-right: 0;
     background-color: @white;
     display: inline-block;
+    width: 100%;
     &:after {
         pointer-events:none;
     }
@@ -306,6 +307,18 @@ input[class*="dob-"] {
     padding-right: 0;
 }
 
+/*.date {
+    display: table;
+}
+.form-group-date {
+    width: 31%;
+    display: table-cell;
+    float: left;
+    margin-right: 3.5%;
+    &:last-child {
+        margin: 0;
+    }
+}*/
 .form-group-date {
     width: 5rem;
     display: inline-block;
@@ -392,6 +405,7 @@ input[class*="dob-"] {
             //.btn-primary;
             background-color: @gray-8;
             padding: 0;
+            width: auto;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;
