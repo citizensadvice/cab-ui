@@ -337,37 +337,31 @@ input[class*="dob-"] {
         margin-right: 0;
         border-radius: 0;
     }
+    input {
+        border-radius: 0;
+        border-right: 0;
+        width: 100%;
+    }
+    *:first-child {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    *:last-child {
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+    }
 
     &--buttons {
-        input {
-            display: table-cell;
-            border-radius: 0;
-            border-right: 0;
-            width: 100%;
-        }
-        button {
-            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
-        }
-        input:first-of-type {
-            border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-        *:last-child {
-            border-radius: 0 @form-border-radius @form-border-radius 0;
-        }
     }
-    &--radio {
-        input[type="number"] {
-            border-radius: 0;
-            border-right: 0;
-            width: 100%;
-        }
+    &--toggle {
         label {
             .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
             text-align: center;
-            input {
+            input[type="radio"],
+            input[type="checkbox"] {
+                width: auto;
                 margin-right: .25em;
             }
-            input:before {
+            input[type="radio"]:before,
+            input[type="checkbox"]:before {
                 border-radius: 0;
                 border-width: 1px 0;
             }
@@ -375,34 +369,27 @@ input[class*="dob-"] {
                 border-radius: 0 @form-border-radius @form-border-radius 0;
                 border-right-width: 1px;
             }
+            &:first-child {
+                border-radius: @form-border-radius 0 0 @form-border-radius;
+            }
+            &:last-child {
+                border-radius: 0 @form-border-radius @form-border-radius 0;
+            }
         }
         button {
             .spacing(padding,@box-spacing-vertical,0);
         }
-        input:first-of-type {
-            border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-        *:last-child {
-            border-radius: 0 @form-border-radius @form-border-radius 0;
-        }
     }
     &--dropdown {
-        input {
-            border-radius: 0;
-            border-right: 0;
-            width: 100%;
-        }
         .dropdown {
             display: table-cell;
             border-radius: 0 @form-border-radius @form-border-radius 0;
-            .btn-primary;
+            //.btn-primary;
+            background-color: @gray-8;
             padding: 0;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-        *:last-child {
-            border-radius: 0 @form-border-radius @form-border-radius 0;
         }
     }
 }

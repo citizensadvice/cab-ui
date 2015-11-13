@@ -4267,90 +4267,54 @@ input[class*="dob-"] {
   margin-right: 0;
   border-radius: 0;
 }
-.field-group--buttons input {
-  display: table-cell;
+.field-group input {
   border-radius: 0;
   border-right: 0;
   width: 100%;
 }
-.field-group--buttons button {
-  padding: 12px 16px;
-  padding: 0.75rem 1rem;
-}
-.field-group--buttons input:first-of-type {
+.field-group *:first-child {
   border-radius: 2px 0 0 2px;
 }
-.field-group--buttons *:last-child {
+.field-group *:last-child {
   border-radius: 0 2px 2px 0;
 }
-.field-group--radio input[type="number"] {
-  border-radius: 0;
-  border-right: 0;
-  width: 100%;
-}
-.field-group--radio label {
+.field-group--toggle label {
   padding: 12px 16px;
   padding: 0.75rem 1rem;
   text-align: center;
 }
-.field-group--radio label input {
+.field-group--toggle label input[type="radio"],
+.field-group--toggle label input[type="checkbox"] {
+  width: auto;
   margin-right: .25em;
 }
-.field-group--radio label input:before {
+.field-group--toggle label input[type="radio"]:before,
+.field-group--toggle label input[type="checkbox"]:before {
   border-radius: 0;
   border-width: 1px 0;
 }
-.field-group--radio label:last-child input:before {
+.field-group--toggle label:last-child input:before {
   border-radius: 0 2px 2px 0;
   border-right-width: 1px;
 }
-.field-group--radio button {
-  padding: 12px 0px;
-  padding: 0.75rem 0rem;
-}
-.field-group--radio input:first-of-type {
+.field-group--toggle label:first-child {
   border-radius: 2px 0 0 2px;
 }
-.field-group--radio *:last-child {
+.field-group--toggle label:last-child {
   border-radius: 0 2px 2px 0;
 }
-.field-group--dropdown input {
-  border-radius: 0;
-  border-right: 0;
-  width: 100%;
+.field-group--toggle button {
+  padding: 12px 0px;
+  padding: 0.75rem 0rem;
 }
 .field-group--dropdown .dropdown {
   display: table-cell;
   border-radius: 0 2px 2px 0;
-  cursor: pointer;
-  border-radius: 2px;
-  background-color: #81CEC6;
-  border: 1px solid #81CEC6;
-  color: #004B88;
-  font-weight: bold;
-  padding: 12px 16px;
-  padding: 0.75rem 1rem;
-  margin: 8px 8px 8px 0px;
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  background-color: #f2f2f2;
   padding: 0;
-}
-.field-group--dropdown .dropdown:hover,
-.field-group--dropdown .dropdown:focus,
-.field-group--dropdown .dropdown:active {
-  border: 1px solid #5cc0b5;
-  background-color: #5cc0b5;
-  outline: 0;
-}
-.field-group--dropdown .dropdown:focus {
-  -webkit-box-shadow: 0px 0px 0px 2px #FCBB69;
-  -moz-box-shadow: 0px 0px 0px 2px #FCBB69;
-  box-shadow: 0px 0px 0px 2px #FCBB69;
 }
 .field-group--dropdown input:first-of-type {
   border-radius: 2px 0 0 2px;
-}
-.field-group--dropdown *:last-child {
-  border-radius: 0 2px 2px 0;
 }
 .custom-dropdown {
   display: inline-block;

@@ -78,6 +78,7 @@
                   <label for="field">Field group with buttons</label>
                   <div class="field-group field-group--buttons">
                     <input id="field" placeholder="£" type="number">
+                    <div style="display:table-cell;"></div>
                     <button class="btn">Week</button>
                     <button class="btn">Month</button>
                     <button class="btn">Year</button>
@@ -88,6 +89,7 @@
 	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
 	&lt;div class="field-group field-group--buttons"&gt;
 		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;div style="display:table-cell;"&gt;&lt;/div&gt;
 		&lt;button class="btn"&gt;Week&lt;/button&gt;
 		&lt;button class="btn"&gt;Month&lt;/button&gt;
 		&lt;button class="btn"&gt;Year&lt;/button&gt;
@@ -96,7 +98,7 @@
               <div class="example-box-plain">
                 <fieldset>
                   <label for="field">Field group with radio buttons</label>
-                  <div class="field-group field-group--radio">
+                  <div class="field-group field-group--toggle">
                     <input id="field" placeholder="£" type="number">
                     <label class="radio radio--inline">
                       <input checked name="radio-inline" type="radio" value="option1">Week
@@ -109,10 +111,25 @@
                     </label>
                   </div>
                 </fieldset>
+                <fieldset>
+                  <label for="field">Field group with checkbox buttons</label>
+                  <div class="field-group field-group--toggle">
+                    <input id="field" placeholder="£" type="number">
+                    <label class="checkbox checkbox--inline">
+                      <input checked name="checkbox-inline" type="checkbox" value="option1">Week
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                      <input name="checkbox-inline" type="checkbox" value="option2">Month
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                      <input name="checkbox-inline" type="checkbox" value="option3">Year
+                    </label>
+                  </div>
+                </fieldset>
               </div>
               <pre><code class="language-html">&lt;fieldset&gt;
 	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
-	&lt;div class="field-group field-group--radio"&gt;
+	&lt;div class="field-group field-group--toggle"&gt;
 		&lt;input id="field" placeholder="£" type="number"&gt;
 		&lt;label class="radio radio--inline"&gt;
 			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
@@ -122,6 +139,21 @@
 		&lt;/label&gt;
 		&lt;label class="radio radio--inline"&gt;
 			&lt;input name="radio-inline" type="radio" value="option3"&gt;Year
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with checkbox buttons&lt;/label&gt;
+	&lt;div class="field-group field-group--toggle"&gt;
+		&lt;input id="field" placeholder="£" type="number"&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input checked="" name="checkbox-inline" type="checkbox" value="option1"&gt;Week
+		&lt;/label&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input name="checkbox-inline" type="checkbox" value="option2"&gt;Month
+		&lt;/label&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input name="checkbox-inline" type="checkbox" value="option3"&gt;Year
 		&lt;/label&gt;
 	&lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>

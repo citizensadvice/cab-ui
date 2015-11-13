@@ -48,6 +48,7 @@ block content
 						label(for="field") Field group with buttons
 						.field-group.field-group--buttons
 							input#field(placeholder="£", type="number")
+							div(style="display:table-cell;")
 							button.btn Week
 							button.btn Month
 							button.btn Year
@@ -57,6 +58,7 @@ block content
 						| 	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
 						| 	&lt;div class="field-group field-group--buttons"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
+						|		&lt;div style="display:table-cell;"&gt;&lt;/div&gt;
 						| 		&lt;button class="btn"&gt;Week&lt;/button&gt;
 						| 		&lt;button class="btn"&gt;Month&lt;/button&gt;
 						| 		&lt;button class="btn"&gt;Year&lt;/button&gt;
@@ -66,7 +68,7 @@ block content
 				.example-box-plain
 					fieldset
 						label(for="field") Field group with radio buttons
-						.field-group.field-group--radio
+						.field-group.field-group--toggle
 							input#field(placeholder="£", type="number")
 							label.radio.radio--inline
 								input(checked name="radio-inline", type="radio", value="option1")
@@ -77,11 +79,25 @@ block content
 							label.radio.radio--inline
 								input(name="radio-inline", type="radio", value="option3")
 								| Year
+
+					fieldset
+						label(for="field") Field group with checkbox buttons
+						.field-group.field-group--toggle
+							input#field(placeholder="£", type="number")
+							label.checkbox.checkbox--inline
+								input(checked name="checkbox-inline", type="checkbox", value="option1")
+								| Week
+							label.checkbox.checkbox--inline
+								input(name="checkbox-inline", type="checkbox", value="option2")
+								| Month
+							label.checkbox.checkbox--inline
+								input(name="checkbox-inline", type="checkbox", value="option3")
+								| Year
 				pre
 					code.language-html
 						| &lt;fieldset&gt;
 						| 	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
-						| 	&lt;div class="field-group field-group--radio"&gt;
+						| 	&lt;div class="field-group field-group--toggle"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
 						| 		&lt;label class="radio radio--inline"&gt;
 						| 			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
@@ -91,6 +107,21 @@ block content
 						| 		&lt;/label&gt;
 						| 		&lt;label class="radio radio--inline"&gt;
 						| 			&lt;input name="radio-inline" type="radio" value="option3"&gt;Year
+						| 		&lt;/label&gt;
+						| 	&lt;/div&gt;
+						| &lt;/fieldset&gt;
+						| &lt;fieldset&gt;
+						| 	&lt;label for="field"&gt;Field group with checkbox buttons&lt;/label&gt;
+						| 	&lt;div class="field-group field-group--toggle"&gt;
+						| 		&lt;input id="field" placeholder="£" type="number"&gt;
+						| 		&lt;label class="checkbox checkbox--inline"&gt;
+						| 			&lt;input checked="" name="checkbox-inline" type="checkbox" value="option1"&gt;Week
+						| 		&lt;/label&gt;
+						| 		&lt;label class="checkbox checkbox--inline"&gt;
+						| 			&lt;input name="checkbox-inline" type="checkbox" value="option2"&gt;Month
+						| 		&lt;/label&gt;
+						| 		&lt;label class="checkbox checkbox--inline"&gt;
+						| 			&lt;input name="checkbox-inline" type="checkbox" value="option3"&gt;Year
 						| 		&lt;/label&gt;
 						| 	&lt;/div&gt;
 						| &lt;/fieldset&gt;
