@@ -125,6 +125,20 @@ ol li, ul li {
         .spacing(padding,0,@box-spacing/2);
     }
 }
+.example-box-full {
+    color: #333;
+    .spacing(padding,@box-spacing);
+    font-family: monaco,monospace;
+    line-height: 1.7em;
+    background-color: #f8f8f8;
+    border: 1px solid #dfe1e3;
+    border-radius: 2px;
+    overflow: hidden;
+    code {
+        color: @gray-4;
+        .spacing(padding,0,@box-spacing/2);
+    }
+}
 .example-box-plain {
     color: #333;
     padding: 20px;

@@ -15,6 +15,9 @@
         padding: 0;
         //overflow: hidden;
     }
+    @media (min-width:@breakpoint-sm) and (max-width:@breakpoint-md) {
+        margin: 0 -@gutters*.5 @gutters*.5 0;
+    }
     .ie8 & {
         margin: 0 -2% 2% 0 !important;
         clear: both !important;
@@ -32,11 +35,18 @@
     margin-bottom: @gutters;
 
     @media (min-width:@breakpoint-sm) {
-    	// Create calc grid for modern browsers
-    	width: calc(percentage((@x/@y)) ~"-"@gutters);
-    	margin-right: @gutters;
+        // Create calc grid for modern browsers
+        width: calc(percentage((@x/@y)) ~"-"@gutters);
+        margin-right: @gutters;
         margin-bottom: 0;
     }
+
+    @media (min-width:@breakpoint-sm) and (max-width:@breakpoint-md) {
+        // Create calc grid for modern browsers
+        width: calc(percentage((@x/@y)) ~"-"@gutters*.5);
+        margin-right: @gutters*.5;
+    }
+
     .ie8 & {
         // Create IE8 fallback. Due to lack of calc() support
         // columns use an extra 2% as a gutter
