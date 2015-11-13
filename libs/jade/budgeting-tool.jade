@@ -1,5 +1,5 @@
 block settings
-    - var title = "Budgeting Tool"
+    //- var title = "Budgeting Tool"
     //- var sidebar = true
     //- var toolbars = true
     //- var cookiemonster = true
@@ -28,7 +28,7 @@ block section-notice
 block content
     .articleContent
         .main-content__right
-            h2(style="margin-top: 0;") Benefits
+            h2(style="margin-top: 0;") 2. Benefits
 
             fieldset
                 label(for="income") Income support
@@ -75,19 +75,23 @@ block content
                                 option Statutory Maternity Pay
                                 option Carer's Allowance
                     .function
-                        button.btn.btn-success(type="button")
-                            .fa.fa-plus
+                        button.btn.btn-success.plus-button-icon(type="button") Add
 
             button.btn.btn-primary-light.left-button-icon(type="button") Income
             button.btn.btn-primary.right-button-icon(type="button") Household
 
-        .side-nav-beta
-            ul.tools--sidebar
-                li.visited 
-                    a(href="#") Start
-                li.visited
-                    a(href="#") 1. Income
-                li.active
-                    a(href="#") 2. Benefits
-                li 
-                    a(href="#") 3. Household
+        nav.side-nav-beta.tools
+            ul
+                li.side-nav-beta__heading.-active.-open
+                    a
+                        span Budgeting tool
+                li
+                    ul
+                        li.side-nav-beta__sibling.-visited
+                            a(href="#") Start
+                        li.side-nav-beta__sibling.-visited
+                            a(href="#") 1. Income
+                        li.side-nav-beta__sibling.-current
+                            a(href="#") 2. Benefits
+                        li.side-nav-beta__sibling
+                            a(href="#") 3. Household

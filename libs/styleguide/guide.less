@@ -416,30 +416,8 @@ div.tooltip:before {
 }
 
 .tools {
-    &--sidebar {
-        list-style: none;
-        padding: 0;
-        li {
-            margin: 0 0 1px 0;
-        }
-        a {
-            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
-            display: block;
-            border: none;
-            &:hover {
-                //background-color: darken(@heritage-blue-lightest, 2%);
-            }
-        }
-        .visited {
-            background-color: @heritage-blue-lightest;
-        }
-        .active {
-            background-color: @heritage-blue;
-            font-weight: @font-weight-bolder;
-            a {
-                color: @white;
-            }
-        }
+    .-visited {
+        font-weight: @font-weight-bolder;
     }
 }
 .group {

@@ -3067,28 +3067,8 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
-.tools--sidebar {
-  list-style: none;
-  padding: 0;
-}
-.tools--sidebar li {
-  margin: 0 0 1px 0;
-}
-.tools--sidebar a {
-  padding: 12px 16px;
-  padding: 0.75rem 1rem;
-  display: block;
-  border: none;
-}
-.tools--sidebar .visited {
-  background-color: #f2f8ff;
-}
-.tools--sidebar .active {
-  background-color: #004B88;
+.tools .-visited {
   font-weight: 700;
-}
-.tools--sidebar .active a {
-  color: #FFF;
 }
 .group {
   display: table;
@@ -4153,9 +4133,10 @@ textarea.form__field {
   -webkit-user-select: none;
   cursor: pointer;
   border-radius: 2px;
+  border: 1px solid #dfdfdf;
   z-index: -1;
   background-color: #f2f2f2;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .radio input:hover:before,
 .checkbox input:hover:before {
@@ -9328,7 +9309,7 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0rem;
   background-color: #f2f2f2;
   color: #191926;
-  border: 0px #b3b3b3 solid;
+  border: 0px #dfdfdf solid;
   display: block;
   /*.callout__link {
 	 	cursor: pointer;
@@ -9366,11 +9347,12 @@ html[lang="en-SCT"] .main-nav {
 		    content: "\f063";
 	    }
 	}*/
+  border-width: 1px;
   border-radius: 2px;
 }
 .well:before {
   color: #191926;
-  background-color: #b3b3b3;
+  background-color: #dfdfdf;
 }
 .well > h1,
 .well > h2,
@@ -9379,7 +9361,7 @@ html[lang="en-SCT"] .main-nav {
   font-size: 1.3rem;
 }
 .well a {
-  border-bottom-color: #b3b3b3;
+  border-bottom-color: #dfdfdf;
 }
 .well > *:first-child {
   padding-top: 0;
@@ -9398,6 +9380,9 @@ html[lang="en-SCT"] .main-nav {
 }
 .well > *:last-child {
   margin-bottom: 0;
+}
+.well .callout__link:last-child {
+  border: none;
 }
 /************************************************************************
  * Side panels - extending to style the panels that will run down the left-hand menu.
