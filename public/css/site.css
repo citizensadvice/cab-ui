@@ -9214,9 +9214,9 @@ html[lang="en-SCT"] .main-nav {
   padding: 0.75rem 1rem;
   margin: 12px 0px;
   margin: 0.75rem 0rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #f2f2f2;
   color: #191926;
-  border: 0px rgba(0, 0, 0, 0.05) solid;
+  border: 0px #b3b3b3 solid;
   display: block;
   /*.callout__link {
 	 	cursor: pointer;
@@ -9258,7 +9258,7 @@ html[lang="en-SCT"] .main-nav {
 }
 .well:before {
   color: #191926;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #b3b3b3;
 }
 .well > h1,
 .well > h2,
@@ -9267,7 +9267,7 @@ html[lang="en-SCT"] .main-nav {
   font-size: 1.3rem;
 }
 .well a {
-  border-bottom-color: rgba(0, 0, 0, 0.05);
+  border-bottom-color: #b3b3b3;
 }
 .well > *:first-child {
   padding-top: 0;
