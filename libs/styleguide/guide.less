@@ -413,15 +413,32 @@ div.tooltip:before {
             display: block;
             border: none;
             &:hover {
-                background-color: @gray-8;
+                //background-color: darken(@heritage-blue-lightest, 2%);
             }
         }
         .visited {
-            background-color: @gray-6;
+            background-color: @heritage-blue-lightest;
         }
         .active {
-            background-color: @heritage-blue-lightest;
+            background-color: @heritage-blue;
             font-weight: @font-weight-bolder;
+            a {
+                color: @white;
+            }
+        }
+    }
+}
+.group {
+    display: table;
+    .field {
+        display: table-cell;
+        width: 100%;
+        .spacing(padding-right,1);
+    }
+    .function {
+        display: table-cell;
+        button {
+            margin-right: 0;
         }
     }
 }

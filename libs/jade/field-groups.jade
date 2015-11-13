@@ -46,7 +46,7 @@ block content
 				.example-box-plain
 					fieldset
 						label(for="field") Field group with buttons
-						.field-group--buttons
+						.field-group.field-group--buttons
 							input#field(placeholder="£", type="number")
 							button.btn Week
 							button.btn Month
@@ -55,7 +55,7 @@ block content
 					code.language-html
 						| &lt;fieldset&gt;
 						| 	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
-						| 	&lt;div class="field-group"&gt;
+						| 	&lt;div class="field-group field-group--buttons"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
 						| 		&lt;button class="btn"&gt;Week&lt;/button&gt;
 						| 		&lt;button class="btn"&gt;Month&lt;/button&gt;
@@ -66,7 +66,7 @@ block content
 				.example-box-plain
 					fieldset
 						label(for="field") Field group with radio buttons
-						.field-group--radio
+						.field-group.field-group--radio
 							input#field(placeholder="£", type="number")
 							label.radio.radio--inline
 								input(checked name="radio-inline", type="radio", value="option1")
@@ -81,7 +81,7 @@ block content
 					code.language-html
 						| &lt;fieldset&gt;
 						| 	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
-						| 	&lt;div class="field-group--radio"&gt;
+						| 	&lt;div class="field-group field-group--radio"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
 						| 		&lt;label class="radio radio--inline"&gt;
 						| 			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
@@ -98,7 +98,7 @@ block content
 				.example-box-plain
 					fieldset
 						label(for="field") Field group with dropdown
-						.field-group--dropdown
+						.field-group.field-group--dropdown
 							input#field(placeholder="£", type="number")
 							.dropdown
 								select#exampleSelect1
@@ -109,7 +109,7 @@ block content
 					code.language-html
 						| &lt;fieldset&gt;
 						| 	&lt;label for="field"&gt;Field group with dropdown&lt;/label&gt;
-						| 	&lt;div class="field-group--dropdown"&gt;
+						| 	&lt;div class="field-group field-group--dropdown"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
 						| 		&lt;div class="dropdown"&gt;
 						| 			&lt;select id="exampleSelect1"&gt;

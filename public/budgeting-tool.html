@@ -73,69 +73,86 @@
           <h1 class="title__heading js-ref"><span class="title__title">Budgeting Tool</span></h1>
         </div>
         <div class="articleContent">
-          <div class="row">
-            <div class="span8">
-              <h2>Benefits</h2>
-              <fieldset class="example-box">
-                <label for="addbenefit">Add a benefit</label>
-                <div class="dropdown">
-                  <select id="exampleSelect1">
-                    <option>Benefit one</option>
-                    <option>Benefit two</option>
-                  </select>
+          <div class="main-content__right">
+            <h2 style="margin-top: 0;">Benefits</h2>
+            <fieldset>
+              <label for="income">Income support</label>
+              <div class="group">
+                <div class="field">
+                  <div class="field-group field-group--dropdown">
+                    <input id="income" placeholder="£" type="number">
+                    <div class="dropdown">
+                      <select id="exampleSelect1">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-                <button type="button" class="btn btn-primary">Add</button>
-              </fieldset>
-              <fieldset>
-                <label for="income">Income support</label>
-                <div class="field-group--dropdown">
-                  <input id="income" placeholder="£" type="number">
-                  <div class="dropdown">
+                <div class="function">
+                  <button type="button" class="btn btn-warning">
+                    <div class="fa fa-trash"></div>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <label for="income">Tax credit</label>
+              <div class="group">
+                <div class="field">
+                  <div class="field-group field-group--dropdown">
+                    <input id="income" placeholder="£" type="number">
+                    <div class="dropdown">
+                      <select id="exampleSelect1">
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="function">
+                  <button type="button" class="btn btn-warning">
+                    <div class="fa fa-trash"></div>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="well">
+              <label for="addbenefit">Add another benefit</label>
+              <div class="group">
+                <div class="field">
+                  <div style="width:100%;" class="dropdown">
                     <select id="exampleSelect1">
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                      <option>Yearly</option>
+                      <option>Housing benefit</option>
+                      <option>Child benefit</option>
+                      <option>Disability Living Allowance</option>
+                      <option>Incapacity Benefit</option>
+                      <option>Jobseeker's Allowance</option>
+                      <option>Council Tax Benefit</option>
+                      <option>Statutory Maternity Pay</option>
+                      <option>Carer's Allowance</option>
                     </select>
                   </div>
                 </div>
-              </fieldset>
-              <fieldset>
-                <label for="income">Income support</label>
-                <div class="field-group--dropdown">
-                  <input id="income" placeholder="£" type="number">
-                  <div class="dropdown">
-                    <select id="exampleSelect1">
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                      <option>Yearly</option>
-                    </select>
-                  </div>
+                <div class="function">
+                  <button type="button" class="btn btn-secondary">
+                    <div class="fa fa-plus"></div>
+                  </button>
                 </div>
-              </fieldset>
-              <fieldset>
-                <label for="income">Income support</label>
-                <div class="field-group--dropdown">
-                  <input id="income" placeholder="£" type="number">
-                  <div class="dropdown">
-                    <select id="exampleSelect1">
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                      <option>Yearly</option>
-                    </select>
-                  </div>
-                </div>
-              </fieldset>
-              <button type="button" class="btn btn-primary-cancel back-button-icon">Income</button>
-              <button type="button" class="btn btn-primary right-button-icon">Household</button>
-            </div>
-            <div class="span4">
-              <ul class="tools--sidebar">
-                <li class="visited"> <a href="#">Start</a></li>
-                <li class="visited"><a href="#">1. Income</a></li>
-                <li class="active"><a href="#">2. Benefits</a></li>
-                <li> <a href="#">3. Household</a></li>
-              </ul>
-            </div>
+              </div>
+            </fieldset>
+            <button type="button" class="btn btn-primary-cancel back-button-icon">Income</button>
+            <button type="button" class="btn btn-primary right-button-icon">Household</button>
+          </div>
+          <div class="side-nav-beta">
+            <ul class="tools--sidebar">
+              <li class="visited"> <a href="#">Start</a></li>
+              <li class="visited"><a href="#">1. Income</a></li>
+              <li class="active"><a href="#">2. Benefits</a></li>
+              <li> <a href="#">3. Household</a></li>
+            </ul>
           </div>
         </div>
         <div class="print-only">

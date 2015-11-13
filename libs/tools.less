@@ -1,12 +1,12 @@
-	/* Vendor files */
-	@import "vendors/normalize";
-	//@import "vendors/font-awesome/less/font-awesome";
+/* Vendor files */
+@import "vendors/normalize";
+//@import "vendors/font-awesome/less/font-awesome";
 
-	/* Override files */
-	//@import "styleguide/guide";
+/* Override files */
+//@import "styleguide/guide";
 
-	/* Base files */
-	@import "base/colors";
+/* Base files */
+@import "base/colors";
 .cabtool {
 	@import "base/variables";
 	@import "base/global";
@@ -19,7 +19,7 @@
 	@import "base/type";
 	@import "base/utility";
 	@import "base/helpers";
-	//@import "base/simplegrid";
+	@import "base/simplegrid";
 
 	/* Mixin files */
 	@import "mixins/buttons";
@@ -88,10 +88,10 @@
 	@import "modules/adviser";
 	*/
 	@import "modules/callout";
-}
 
-/* IE styles */
-@import "base/ie";
+	/* IE styles */
+	@import "base/ie";
+}
 
 /* Print styles
 @media print {

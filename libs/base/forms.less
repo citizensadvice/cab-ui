@@ -146,6 +146,7 @@ textarea {
 
 input[type="email"],
 input[type="password"],
+input[type="number"],
 input[type="text"],
 input[id*="dob-"],
 input[class*="dob-"],
@@ -195,40 +196,6 @@ textarea.form__field {
     height: auto;
 }
 
-/* Overrides 'Choose file' button
-input[type="file"]::-webkit-file-upload-button {
-    visibility: hidden;
-}
-input[type="file"]::before {
-    content: 'Choose';
-    display: inline-block;
-    overflow: hidden;
-    outline: none;
-    -webkit-user-select: none;
-    cursor: pointer;
-    border-radius: @form-border-radius;
-    background-color: @green-light;
-    border: 1px solid @green;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-}
-*/
-
-/*
-.radio,
-.checkbox {
-    //background-color: @gray-8;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-    cursor: pointer;
-    border: 1px solid @gray-6;
-    border-radius: @form-border-radius;
-    &:hover {
-        border-color: @gray-4;
-    }
-}
-*/
-
 .radio,
 .checkbox {
     .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
@@ -245,13 +212,13 @@ input[type="file"]::before {
             outline: none;
             width: 100%;
             height: 100%;
-            top: -1px;
+            top: 0;
             left: 0;
             position: absolute;
             -webkit-user-select: none;
             cursor: pointer;
             border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
+            //border: 1px solid @gray-6;
             z-index: -1;
             background-color: @gray-8;
             box-sizing: content-box;
@@ -359,26 +326,26 @@ input[class*="dob-"] {
 }
 
 .field-group {
+    display: table;
+    white-space: nowrap;
+    width: 100%;
+    label,
+    input,
+    button {
+        display: table-cell;
+        width: auto;
+        margin-right: 0;
+        border-radius: 0;
+    }
+
     &--buttons {
-        display: table;
-        white-space: nowrap;
-        width: 100%;
-        table-layout: fixed;
-        label,
-        input,
-        button {
-            display: inline-block;
-            width: auto;
-            margin-right: 0;
-            border-radius: 0;
-        }
         input {
+            display: table-cell;
             border-radius: 0;
             border-right: 0;
-            //width: 25%;
+            width: 100%;
         }
         button {
-            //width: 25%;
             .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
         }
         input:first-of-type {
@@ -389,24 +356,12 @@ input[class*="dob-"] {
         }
     }
     &--radio {
-        display: inline-table;
-        white-space: nowrap;
-        width: 100%;
-        label,
-        input,
-        button {
-            display: inline-block;
-            width: auto;
-            margin-right: 0;
-            border-radius: 0;
-        }
         input[type="number"] {
             border-radius: 0;
             border-right: 0;
-            //width: 25%;
+            width: 100%;
         }
         label {
-            //width: 25%;
             .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
             text-align: center;
             input {
@@ -422,7 +377,6 @@ input[class*="dob-"] {
             }
         }
         button {
-            width: 25%;
             .spacing(padding,@box-spacing-vertical,0);
         }
         input:first-of-type {
@@ -433,17 +387,13 @@ input[class*="dob-"] {
         }
     }
     &--dropdown {
-        display: inline-table;
-        white-space: nowrap;
-        width: 100%;
         input {
             border-radius: 0;
             border-right: 0;
-            width: 65%;
+            width: 100%;
         }
         .dropdown {
-            width: 35%;
-            display: inline-block;
+            display: table-cell;
             border-radius: 0 @form-border-radius @form-border-radius 0;
             .btn-primary;
             padding: 0;
@@ -456,386 +406,6 @@ input[class*="dob-"] {
         }
     }
 }
-
-/*
- * Grouping .form styles with the magic of LESS
- *
- 
-.form {
-    margin: 1em 0;
-    &__row, &__group {
-        display: block; // This can be added to labels
-        margin-bottom: 1em;
-    }
-
-    &__button-row {
-        // For big submit buttons
-        margin-top: 1em;
-        width: 100%;
-    }
-
-    &--table {
-        display: table;
-        width: 100%;
-
-        & > &__row {
-            display: table-row;
-
-            & > &__label, & > label {
-                display: table-cell;
-                white-space: nowrap;
-                padding: 0 1em 1em 0;
-            }
-
-            & > &__control {
-                display: table-cell;
-                width: 100%;
-                padding-bottom: 1em;
-            }
-        }
-
-        @media (max-width: @screen-xs-max) {
-            display: block;
-
-            & > &__row {
-                display: block;
-
-                & > &__label, & > label {
-                    display: block;
-                    white-space: normal;
-                    padding: 0;
-                }
-
-                & > &__control {
-                    display: block;
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    &__radio-list {
-        border: none;
-        margin: 1em 0 0 0;
-        padding: 0;
-
-        & > legend {
-            font-size: 1em;
-        }
-    }
-
-    &__radio-item {
-        display: block;
-    }
-
-    &__radio,
-    &__checkbox {
-        position: relative;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        label {
-            // Ensure the input doesn't jump when there is no text
-            min-height: 25px;
-            padding-left: 25px;
-            margin-bottom: 0;
-            font-weight: normal;
-            cursor: pointer;
-        }
-    }
-    &__radio input[type="radio"],
-    &__radio-inline input[type="radio"],
-    &__checkbox input[type="checkbox"],
-    &__checkbox-inline input[type="checkbox"] {
-        position: absolute;
-        margin-left: -(25px);
-        margin-top: 6px \9;
-    }
-
-    // Radios and checkboxes on same line.
-    // See also the &__*-inline--boxed styles above for a variation.
-    &__radio-inline,
-    &__checkbox-inline {
-        display: inline-block;
-        padding-left: 25px;
-        padding-right: 10px;
-        margin-bottom: 0;
-        vertical-align: middle;
-        font-weight: normal;
-        cursor: pointer;
-    }
-    &__radio-inline + &__radio-inline,
-    &__checkbox-inline + &__checkbox-inline {
-        margin-top: 0;
-        margin-left: 10px; // space out consecutive inline controls
-    }
-
-    &__radio,
-    &__checkbox {
-        position: relative;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        label {
-            // Ensure the input doesn't jump when there is no text
-            min-height: 25px;
-            padding-left: 25px;
-            margin-bottom: 0;
-            font-weight: normal;
-            cursor: pointer;
-        }
-    }
-    &__radio input[type="radio"],
-    &__radio-inline input[type="radio"],
-    &__checkbox input[type="checkbox"],
-    &__checkbox-inline input[type="checkbox"] {
-        position: absolute;
-        margin-left: -(25px);
-        margin-top: 6px \9;
-    }
-
-    // Radios and checkboxes on same line.
-    // See also the &__*-inline--boxed styles above for a variation.
-    &__radio-inline,
-    &__checkbox-inline {
-        display: inline-block;
-        padding-left: 25px;
-        padding-right: 10px;
-        margin-bottom: 0;
-        vertical-align: middle;
-        font-weight: normal;
-        cursor: pointer;
-    }
-    &__radio-inline + &__radio-inline,
-    &__checkbox-inline + &__checkbox-inline {
-        margin-top: 0;
-        margin-left: 10px; // space out consecutive inline controls
-    }
-
-    // BOXED RADIOS AND CHECKBOXES.
-    // Put the control and the label inside a full-width coloured box.
-    &__radio--boxed,
-    &__checkbox--boxed,
-    &__radio-inline--boxed,
-    &__checkbox-inline--boxed {
-        background: none repeat scroll 0 0 #fff;
-        border: 1px solid transparent;
-
-        &:not(.is-disabled):hover {
-            background: none repeat scroll 0 0 #eff3f3;
-            border-color: #ccc;
-        }
-
-        > label {
-            padding-left: (15px + 25px);
-            width: 100%;
-        }
-
-        &.is-selected {
-            background: none repeat scroll 0 0 #b8e3df;
-
-            &:hover {
-                border-color: transparent;
-                background: none repeat scroll 0 0 #b8e3df;
-            }
-        }
-    }
-    &__radio--boxed,
-    &__checkbox--boxed {
-        width: 100%;
-
-        > &__radio__desc,
-        > &__checkbox__desc {
-            padding-left: (15px + 25px);
-            padding-top: 0;
-            margin-top: -(10px);
-        }
-    }
-
-    &__radio-inline--boxed,
-    &__checkbox-inline--boxed {
-        padding-top: 5px;
-        padding-left: (10px + 25px);
-        padding-bottom: 5px;
-    }
-
-    // We don't want spaces between .*--boxed and .box.js-revealable's following
-    // them. Just adding negative top margin looks odd when it's revealed.
-    // So, we're trying this:
-    &__radio--boxed + .box.js-revealable,
-    &__checkbox--boxed + .box.js-revealable {
-        position:      relative;
-        top:           -(10px);
-        margin-bottom: -(10px);
-    }
-
-    // These classes are used on elements with <label> descendants
-    &__radio,
-    &__checkbox {
-        cursor: pointer;
-        &.is-disabled {
-            cursor: not-allowed;
-            color: #999;
-            label {
-                cursor: not-allowed;
-            }
-        }
-        // These classes are used directly on <label>s
-        &-inline {
-            &.is-disabled {
-                color: #999;
-                cursor: not-allowed;
-            }
-        }
-    }
-    
-    &__help {
-        color: #666;
-        margin-bottom: 5px;
-    }
-
-    // For 'required' or 'optional' hints.
-    &__hint {
-        color: #999;
-        display: inline-block;
-        font-weight: 400;
-        margin-left: 2px;
-
-        // Hasty fix; don't want to show 'required' markers on Pension Credit
-        // Checker, ESA Quick Checker, etc.
-        .panel & {
-            display: none;
-        }
-    }
-
-    &__error {
-        color: #c02f43;
-        display: block;
-        font-weight: 400;
-        margin-top: 5px;
-    }
-
-
-    &__field--static {
-        max-width: 100%;
-        margin-bottom: 5px;
-        display: block;
-    }
-
-    &--inline-group {
-        .form__group {
-            display: inline-block;
-        }
-
-        @media (max-width: @screen-sm-min) {
-            display: table;
-            margin-bottom: (1em / 2);
-
-            .form__group {
-                display: table-cell;
-                margin-bottom: 0;
-                vertical-align: middle;
-            }
-
-            .form__label {
-                .screenreader;
-            }
-
-            .form__hint {
-                display: none;
-            }
-
-            .form__field {
-                display: inline-block;
-                width: auto;
-                vertical-align: middle;
-                margin-right: 0;
-            }
-
-            .button {
-                display: table-cell;
-                padding: 1px 3px 2px 1px;
-
-                .fa-stack {
-                    margin-left: 0;
-                }
-            }
-
-            .button__label {
-                .screenreader;
-            }
-        }
-    }
-    // Small fields for day, month and year.
-    &__field--day,
-    &__field--month {
-        width: 4em;
-    }
-    &__field--year {
-        width: 4.5em;
-    }
-
-    // Small field for time.
-    &__field--time {
-        width: 6em;
-    }
-}
-*/
-
-// Variations of the above styles when they appear within different boxes.
-/*
-.box--1 {
-    .form__radio--boxed,
-    .form__checkbox--boxed,
-    .form__radio-inline--boxed,
-    .form__checkbox-inline--boxed {
-        // Standard style by default.
-
-        &.is-selected {
-            background: none repeat scroll 0 0 #fff;
-            // Don't add a border or it'll look odd if immediately followed by
-            // a .box--2 revealable. (eg ESA form distance questions.)
-        }
-    }
-}
-
-.box--2 {
-    .form__radio--boxed,
-    .form__checkbox--boxed,
-    .form__radio-inline--boxed,
-    .form__checkbox-inline--boxed {
-        background: #eee;
-
-        &:hover {
-            border-color: #ccc;
-        }
-
-        &.is-selected {
-            border-color: #ccc;
-            background: #ccc;
-        }
-    }
-}
-
-.panel--a {
-    .form__radio--boxed,
-    .form__checkbox--boxed,
-    .form__radio-inline--boxed,
-    .form__checkbox-inline--boxed {
-        background: #eee;
-
-        &:hover {
-            background: #ccc;
-        }
-
-        &.is-selected {
-            border-color: #ccc;
-        }
-    }
-}
-*/
 
 // Custom dropdown icons
 .select--custom-icon() {
@@ -955,15 +525,3 @@ input.custom-dropdown__button {
         }
     }
 }
-/*
-.checkbox-radio-inner {
-    input[type="radio"],
-    input[type="checkbox"] {
-        position: absolute;
-    }
-    label {
-        display: inline-block;
-        margin-left: 1em;
-    }
-}
-*/

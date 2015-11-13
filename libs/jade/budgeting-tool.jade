@@ -27,56 +27,67 @@ block section-notice
                 
 block content
     .articleContent
-        .row
-            .span8
-                h2 Benefits
-                fieldset.example-box
-                    label(for="addbenefit") Add a benefit
-                    .dropdown
-                        select#exampleSelect1
-                            option Benefit one
-                            option Benefit two
-                    button.btn.btn-primary(type="button") Add
+        .main-content__right
+            h2(style="margin-top: 0;") Benefits
 
-                fieldset
-                    label(for="income") Income support
-                    .field-group--dropdown
-                        input#income(placeholder="£", type="number")
-                        .dropdown
+            fieldset
+                label(for="income") Income support
+                .group
+                    .field
+                        .field-group.field-group--dropdown
+                            input#income(placeholder="£", type="number")
+                            .dropdown
+                                select#exampleSelect1
+                                    option Weekly
+                                    option Monthly
+                                    option Yearly
+                    .function
+                        button.btn.btn-warning(type="button")
+                            .fa.fa-trash
+
+            fieldset
+                label(for="income") Tax credit
+                .group
+                    .field
+                        .field-group.field-group--dropdown
+                            input#income(placeholder="£", type="number")
+                            .dropdown
+                                select#exampleSelect1
+                                    option Weekly
+                                    option Monthly
+                                    option Yearly
+                    .function
+                        button.btn.btn-warning(type="button")
+                            .fa.fa-trash
+
+            fieldset.well
+                label(for="addbenefit") Add another benefit
+                .group
+                    .field
+                        .dropdown(style="width:100%;")
                             select#exampleSelect1
-                                option Weekly
-                                option Monthly
-                                option Yearly
+                                option Housing benefit
+                                option Child benefit
+                                option Disability Living Allowance
+                                option Incapacity Benefit
+                                option Jobseeker's Allowance
+                                option Council Tax Benefit
+                                option Statutory Maternity Pay
+                                option Carer's Allowance
+                    .function
+                        button.btn.btn-secondary(type="button")
+                            .fa.fa-plus
 
-                fieldset
-                    label(for="income") Income support
-                    .field-group--dropdown
-                        input#income(placeholder="£", type="number")
-                        .dropdown
-                            select#exampleSelect1
-                                option Weekly
-                                option Monthly
-                                option Yearly
+            button.btn.btn-primary-cancel.back-button-icon(type="button") Income
+            button.btn.btn-primary.right-button-icon(type="button") Household
 
-                fieldset
-                    label(for="income") Income support
-                    .field-group--dropdown
-                        input#income(placeholder="£", type="number")
-                        .dropdown
-                            select#exampleSelect1
-                                option Weekly
-                                option Monthly
-                                option Yearly
-
-                button.btn.btn-primary-cancel.back-button-icon(type="button") Income
-                button.btn.btn-primary.right-button-icon(type="button") Household
-            .span4
-                ul.tools--sidebar
-                    li.visited 
-                        a(href="#") Start
-                    li.visited
-                        a(href="#") 1. Income
-                    li.active
-                        a(href="#") 2. Benefits
-                    li 
-                        a(href="#") 3. Household
+        .side-nav-beta
+            ul.tools--sidebar
+                li.visited 
+                    a(href="#") Start
+                li.visited
+                    a(href="#") 1. Income
+                li.active
+                    a(href="#") 2. Benefits
+                li 
+                    a(href="#") 3. Household
