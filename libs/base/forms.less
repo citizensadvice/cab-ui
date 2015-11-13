@@ -364,6 +364,11 @@ input[class*="dob-"] {
             input[type="checkbox"]:before {
                 border-radius: 0;
                 border-width: 1px 0;
+                border-color: @gray-6;
+            }
+            input[type="radio"]:checked:before,
+            input[type="checkbox"]:checked:before {
+                border-color: @gray-6;
             }
             &:last-child input:before {
                 border-radius: 0 @form-border-radius @form-border-radius 0;

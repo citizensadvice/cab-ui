@@ -4307,6 +4307,11 @@ input[class*="dob-"] {
 .field-group--toggle label input[type="checkbox"]:before {
   border-radius: 0;
   border-width: 1px 0;
+  border-color: #dfdfdf;
+}
+.field-group--toggle label input[type="radio"]:checked:before,
+.field-group--toggle label input[type="checkbox"]:checked:before {
+  border-color: #dfdfdf;
 }
 .field-group--toggle label:last-child input:before {
   border-radius: 0 2px 2px 0;
