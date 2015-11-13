@@ -6377,6 +6377,7 @@ hr {
     margin: 0 -2rem 2rem 0;
     clear: both;
     padding: 0;
+    overflow: hidden;
   }
 }
 @media (min-width: 600px) and (max-width: 840px) {
@@ -12937,3 +12938,4 @@ span[id*="overlay_button"] {
     padding-left: 1em;
   }
 }
+/*# sourceMappingURL=site.css.map */

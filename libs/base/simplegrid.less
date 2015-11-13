@@ -4,8 +4,8 @@
  */
 
 // Define grid parameters
-@columns:	12;
-@gutters:	@box-spacing*2;
+@columns:   12;
+@gutters:   @box-spacing*2;
 
 .row {
     margin-bottom: 0;
@@ -13,7 +13,7 @@
         margin: 0 -@gutters @gutters 0;
         clear: both;
         padding: 0;
-        //overflow: hidden;
+        overflow: hidden;
     }
     @media (min-width:@breakpoint-sm) and (max-width:@breakpoint-md) {
         margin: 0 -@gutters*.5 @gutters*.5 0;
@@ -30,7 +30,7 @@
 // Mixin allows you to make any element a fraction width,
 // for example .col(3/5); will make an element width 60%
 .col(@x;@y;) {
-	float: left;
+    float: left;
     width: @full-page-width;
     margin-bottom: @gutters;
 
@@ -55,8 +55,8 @@
         margin-bottom: 0 !important;
     }
 
-	// Remove bottom margin from the last nested row, to
-	// keep vertical spacing consistent
+    // Remove bottom margin from the last nested row, to
+    // keep vertical spacing consistent
     & > *[class*="row"]:last-child {
         margin-bottom: 0;
     }
@@ -75,13 +75,12 @@
 
 // Create loop that iterate through the columns
 .grid-loop (@i) when (@i > 0) {
-	// Rename this to change column class names
-	.span@{i} {
-		.col(@i,@columns);
-	}
-	.grid-loop(@i - 1);
+    // Rename this to change column class names
+    .span@{i} {
+        .col(@i,@columns);
+    }
+    .grid-loop(@i - 1);
 }
 
 // Create a class for each column
 .grid-loop(@columns);
-
