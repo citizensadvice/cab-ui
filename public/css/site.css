@@ -3085,6 +3085,7 @@ div.tooltip:before {
 }
 .tools--sidebar .active {
   background-color: #004B88;
+.tools .-visited {
   font-weight: 700;
 }
 .tools--sidebar .active a {
@@ -4153,9 +4154,11 @@ textarea.form__field {
   -webkit-user-select: none;
   cursor: pointer;
   border-radius: 2px;
+  border: 1px solid #dfdfdf;
   z-index: -1;
   background-color: #f2f2f2;
   box-sizing: content-box;
+  box-sizing: border-box;
 }
 .radio input:hover:before,
 .checkbox input:hover:before {
@@ -4224,6 +4227,7 @@ textarea.form__field {
   padding-right: 0;
   background-color: #FFF;
   display: inline-block;
+  width: 100%;
 }
 .dropdown:after {
   right: 0.5em;
@@ -4271,6 +4275,18 @@ input[class*="dob-"] {
   display: inline-block;
   padding-right: 0;
 }
+/*.date {
+    display: table;
+}
+.form-group-date {
+    width: 31%;
+    display: table-cell;
+    float: left;
+    margin-right: 3.5%;
+    &:last-child {
+        margin: 0;
+    }
+}*/
 .form-group-date {
   width: 5rem;
   display: inline-block;
@@ -4326,6 +4342,11 @@ input[class*="dob-"] {
 .field-group--toggle label input[type="checkbox"]:before {
   border-radius: 0;
   border-width: 1px 0;
+  border-color: #dfdfdf;
+}
+.field-group--toggle label input[type="radio"]:checked:before,
+.field-group--toggle label input[type="checkbox"]:checked:before {
+  border-color: #dfdfdf;
 }
 .field-group--toggle label:last-child input:before {
   border-radius: 0 2px 2px 0;
@@ -4346,6 +4367,7 @@ input[class*="dob-"] {
   border-radius: 0 2px 2px 0;
   background-color: #f2f2f2;
   padding: 0;
+  width: auto;
 }
 .field-group--dropdown input:first-of-type {
   border-radius: 2px 0 0 2px;
@@ -9329,6 +9351,7 @@ html[lang="en-SCT"] .main-nav {
   background-color: #f2f2f2;
   color: #191926;
   border: 0px #b3b3b3 solid;
+  border: 0px #dfdfdf solid;
   display: block;
   /*.callout__link {
 	 	cursor: pointer;
@@ -9366,11 +9389,13 @@ html[lang="en-SCT"] .main-nav {
 		    content: "\f063";
 	    }
 	}*/
+  border-width: 1px;
   border-radius: 2px;
 }
 .well:before {
   color: #191926;
   background-color: #b3b3b3;
+  background-color: #dfdfdf;
 }
 .well > h1,
 .well > h2,
@@ -9380,6 +9405,7 @@ html[lang="en-SCT"] .main-nav {
 }
 .well a {
   border-bottom-color: #b3b3b3;
+  border-bottom-color: #dfdfdf;
 }
 .well > *:first-child {
   padding-top: 0;
@@ -9398,6 +9424,9 @@ html[lang="en-SCT"] .main-nav {
 }
 .well > *:last-child {
   margin-bottom: 0;
+}
+.well .callout__link:last-child {
+  border: none;
 }
 /************************************************************************
  * Side panels - extending to style the panels that will run down the left-hand menu.

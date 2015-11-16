@@ -219,9 +219,11 @@ textarea.form__field {
             cursor: pointer;
             border-radius: @form-border-radius;
             //border: 1px solid @gray-6;
+            border: 1px solid @gray-6;
             z-index: -1;
             background-color: @gray-8;
             box-sizing: content-box;
+            box-sizing: border-box;
         }
         &:hover:before {
             border-color: @gray-5;
@@ -283,6 +285,7 @@ textarea.form__field {
     padding-right: 0;
     background-color: @white;
     display: inline-block;
+    width: 100%;
     &:after {
         pointer-events:none;
     }
@@ -306,6 +309,18 @@ input[class*="dob-"] {
     padding-right: 0;
 }
 
+/*.date {
+    display: table;
+}
+.form-group-date {
+    width: 31%;
+    display: table-cell;
+    float: left;
+    margin-right: 3.5%;
+    &:last-child {
+        margin: 0;
+    }
+}*/
 .form-group-date {
     width: 5rem;
     display: inline-block;
@@ -364,6 +379,11 @@ input[class*="dob-"] {
             input[type="checkbox"]:before {
                 border-radius: 0;
                 border-width: 1px 0;
+                border-color: @gray-6;
+            }
+            input[type="radio"]:checked:before,
+            input[type="checkbox"]:checked:before {
+                border-color: @gray-6;
             }
             &:last-child input:before {
                 border-radius: 0 @form-border-radius @form-border-radius 0;
@@ -387,6 +407,7 @@ input[class*="dob-"] {
             //.btn-primary;
             background-color: @gray-8;
             padding: 0;
+            width: auto;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;

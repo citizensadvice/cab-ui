@@ -48,20 +48,24 @@ block content
 						label(for="field") Field group with buttons
 						.field-group.field-group--buttons
 							input#field(placeholder="£", type="number")
+							// This annoyingly needs to be in to stop the button taking a new line
 							div(style="display:table-cell;")
 							button.btn Week
 							button.btn Month
 							button.btn Year
+							button.btn Button
 				pre
 					code.language-html
 						| &lt;fieldset&gt;
 						| 	&lt;label for="field"&gt;Field group with buttons&lt;/label&gt;
 						| 	&lt;div class="field-group field-group--buttons"&gt;
 						| 		&lt;input id="field" placeholder="£" type="number"&gt;
+						|		&lt;!-- This annoyingly needs to be in to stop the button taking a new line--&gt;
 						|		&lt;div style="display:table-cell;"&gt;&lt;/div&gt;
 						| 		&lt;button class="btn"&gt;Week&lt;/button&gt;
 						| 		&lt;button class="btn"&gt;Month&lt;/button&gt;
 						| 		&lt;button class="btn"&gt;Year&lt;/button&gt;
+						| 		&lt;button class="btn"&gt;Button&lt;/button&gt;
 						| 	&lt;/div&gt;
 						| &lt;/fieldset&gt;
 

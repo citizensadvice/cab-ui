@@ -7,6 +7,7 @@
     <meta name="keywords">
     <meta name="description">
     <title>Citizens Advice style guide - Budgeting Tool
+    <title>Citizens Advice style guide 
     </title>
     <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
@@ -71,10 +72,12 @@
       <div class="main-content">
         <div class="title">
           <h1 class="title__heading js-ref"><span class="title__title">Budgeting Tool</span></h1>
+          <h1 class="title__heading js-ref"><span class="title__title"></span></h1>
         </div>
         <div class="articleContent">
           <div class="main-content__right">
             <h2 style="margin-top: 0;">Benefits</h2>
+            <h2 style="margin-top: 0;">2. Benefits</h2>
             <fieldset>
               <label for="income">Income support</label>
               <div class="group">
@@ -137,23 +140,26 @@
                   </div>
                 </div>
                 <div class="function">
-                  <button type="button" class="btn btn-success">
-                    <div class="fa fa-plus"></div>
-                  </button>
+                  <button type="button" class="btn btn-success plus-button-icon">Add</button>
                 </div>
               </div>
             </fieldset>
             <button type="button" class="btn btn-primary-light left-button-icon">Income</button>
             <button type="button" class="btn btn-primary right-button-icon">Household</button>
           </div>
-          <div class="side-nav-beta">
-            <ul class="tools--sidebar">
-              <li class="visited"> <a href="#">Start</a></li>
-              <li class="visited"><a href="#">1. Income</a></li>
-              <li class="active"><a href="#">2. Benefits</a></li>
-              <li> <a href="#">3. Household</a></li>
+          <nav class="side-nav-beta tools">
+            <ul>
+              <li class="side-nav-beta__heading -active -open"><a><span>Budgeting tool</span></a></li>
+              <li>
+                <ul>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">Start</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">1. Income</a></li>
+                  <li class="side-nav-beta__sibling -current"><a href="#">2. Benefits</a></li>
+                  <li class="side-nav-beta__sibling"><a href="#">3. Household</a></li>
+                </ul>
+              </li>
             </ul>
-          </div>
+          </nav>
         </div>
         <div class="print-only">
           <h2>This section is print only</h2>
