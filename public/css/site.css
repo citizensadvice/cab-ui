@@ -4124,7 +4124,7 @@ textarea.form__field {
   border: 1px solid #dfdfdf;
   z-index: -1;
   background-color: #f2f2f2;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 .radio input:hover:before,
 .checkbox input:hover:before {
@@ -9427,6 +9427,89 @@ html[lang="en-SCT"] .main-nav {
   margin-bottom: 0;
 }
 .well .callout__link:last-child {
+  border: none;
+}
+.well--outline {
+  padding: .75em 1em;
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  margin: 12px 0px;
+  margin: 0.75rem 0rem;
+  background-color: #FFF;
+  color: #191926;
+  border: 0px #004B88 solid;
+  display: block;
+  /*.callout__link {
+	 	cursor: pointer;
+	 	display: block;
+	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+	    border: none;
+	    background-color: darken(spin(@callout-background, 15), 5%);
+	    color: @callout-text;
+	    border-bottom: 1px solid @callout-border;
+	    text-decoration: none;
+	    position: relative;
+		&:after {
+			box-sizing: border-box;
+		    font-family: 'FontAwesome';
+		    content: "\f054";
+		    color: @callout-text;
+		    background-color: darken(spin(@callout-background, 15), 10%);
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
+		    width: 3em;
+		    text-align: center;
+		}
+	    &:hover {
+	    	background-color: darken(spin(@callout-background, 15), 10%);
+	    	color: @callout-text;
+	    	&:after {
+	    		background-color: darken(spin(@callout-background, 15), 20%);
+	    	}
+	    }
+	    &--anchor:after {
+		    content: "\f063";
+	    }
+	}*/
+  border-width: 1px;
+  border-radius: 2px;
+}
+.well--outline:before {
+  color: #191926;
+  background-color: #004B88;
+}
+.well--outline > h1,
+.well--outline > h2,
+.well--outline > h3 {
+  color: #191926;
+  font-size: 1.3rem;
+}
+.well--outline a {
+  border-bottom-color: #004B88;
+}
+.well--outline > *:first-child {
+  padding-top: 0;
+}
+.well--outline h1:first-child,
+.well--outline h2:first-child,
+.well--outline h3:first-child,
+.well--outline h4:first-child,
+.well--outline h5:first-child,
+.well--outline h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.well--outline li:first-child {
+  padding-top: 0;
+}
+.well--outline > *:last-child {
+  margin-bottom: 0;
+}
+.well--outline .callout__link:last-child {
   border: none;
 }
 /************************************************************************
