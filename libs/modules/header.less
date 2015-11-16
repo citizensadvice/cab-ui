@@ -44,11 +44,19 @@
     max-width: calc(300px); // For modern browsers
 
     @media ( max-width: @screen-xs-max ) {
+        display: none;
+    }
+
+    &.wide {
+        display: none;
+        border: none;
         float: none;
-        text-align: center;
-        display: block;
-        margin-top: .5em;
-        max-width: none;
+        max-width: 90%;
+        @media ( max-width: @screen-xs-max ) {
+            display: block;
+            text-align: center;
+            .spacing(margin-top,.5);
+        }
     }
 }
 

@@ -7065,11 +7065,21 @@ z-index: 5001; /* any number + 1 */
 }
 @media (max-width: 599px) {
   .main-header__logo {
-    float: none;
-    text-align: center;
+    display: none;
+  }
+}
+.main-header__logo.wide {
+  display: none;
+  border: none;
+  float: none;
+  max-width: 90%;
+}
+@media (max-width: 599px) {
+  .main-header__logo.wide {
     display: block;
-    margin-top: .5em;
-    max-width: none;
+    text-align: center;
+    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 }
 .main-header__menu-link {
@@ -12791,10 +12801,13 @@ span[id*="overlay_button"] {
   .print-only {
     display: block !important;
   }
-  .print-only.logo {
+  .main-header__logo.wide {
     display: block;
     margin-bottom: 16px;
     margin-bottom: 1rem;
+  }
+  .title__subheading {
+    display: none;
   }
   a {
     border: none;
