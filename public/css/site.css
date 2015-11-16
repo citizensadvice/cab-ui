@@ -3067,6 +3067,7 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
+<<<<<<< HEAD
 .tools--sidebar {
   list-style: none;
   padding: 0;
@@ -3085,11 +3086,10 @@ div.tooltip:before {
 }
 .tools--sidebar .active {
   background-color: #004B88;
+=======
+>>>>>>> 231f4151399e359050c9fecf1f4c650daf30085e
 .tools .-visited {
   font-weight: 700;
-}
-.tools--sidebar .active a {
-  color: #FFF;
 }
 .group {
   display: table;
@@ -4157,7 +4157,10 @@ textarea.form__field {
   border: 1px solid #dfdfdf;
   z-index: -1;
   background-color: #f2f2f2;
+<<<<<<< HEAD
   box-sizing: content-box;
+=======
+>>>>>>> 231f4151399e359050c9fecf1f4c650daf30085e
   box-sizing: border-box;
 }
 .radio input:hover:before,
@@ -9350,7 +9353,10 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0rem;
   background-color: #f2f2f2;
   color: #191926;
+<<<<<<< HEAD
   border: 0px #b3b3b3 solid;
+=======
+>>>>>>> 231f4151399e359050c9fecf1f4c650daf30085e
   border: 0px #dfdfdf solid;
   display: block;
   /*.callout__link {
@@ -9394,7 +9400,10 @@ html[lang="en-SCT"] .main-nav {
 }
 .well:before {
   color: #191926;
+<<<<<<< HEAD
   background-color: #b3b3b3;
+=======
+>>>>>>> 231f4151399e359050c9fecf1f4c650daf30085e
   background-color: #dfdfdf;
 }
 .well > h1,
@@ -9404,7 +9413,10 @@ html[lang="en-SCT"] .main-nav {
   font-size: 1.3rem;
 }
 .well a {
+<<<<<<< HEAD
   border-bottom-color: #b3b3b3;
+=======
+>>>>>>> 231f4151399e359050c9fecf1f4c650daf30085e
   border-bottom-color: #dfdfdf;
 }
 .well > *:first-child {
