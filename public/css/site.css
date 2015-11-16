@@ -7072,7 +7072,9 @@ z-index: 5001; /* any number + 1 */
   display: none;
   border: none;
   float: none;
-  max-width: 90%;
+  max-width: 100%;
+  padding: 0px 16px;
+  padding: 0rem 1rem;
 }
 @media (max-width: 599px) {
   .main-header__logo.wide {
