@@ -4136,7 +4136,7 @@ textarea.form__field {
   border: 1px solid #dfdfdf;
   z-index: -1;
   background-color: #f2f2f2;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 .radio input:hover:before,
 .checkbox input:hover:before {
