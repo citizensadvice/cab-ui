@@ -52,11 +52,16 @@
         border: none;
         float: none;
         max-width: 100%;
-        .spacing(padding,0,1);
+        background-color: @heritage-blue;
+        img {
+            max-width: 70%;
+            .spacing(padding,.5,0);
+        }
         @media ( max-width: @screen-xs-max ) {
             display: block;
             text-align: center;
-            .spacing(margin-top,.5);
+            margin: 0;
+            .spacing(padding-top,.5);
         }
     }
 }

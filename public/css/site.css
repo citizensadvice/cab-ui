@@ -7073,15 +7073,20 @@ z-index: 5001; /* any number + 1 */
   border: none;
   float: none;
   max-width: 100%;
-  padding: 0px 16px;
-  padding: 0rem 1rem;
+  background-color: #004B88;
+}
+.main-header__logo.wide img {
+  max-width: 70%;
+  padding: 8px 0px;
+  padding: 0.5rem 0rem;
 }
 @media (max-width: 599px) {
   .main-header__logo.wide {
     display: block;
     text-align: center;
-    margin-top: 8px;
-    margin-top: 0.5rem;
+    margin: 0;
+    padding-top: 8px;
+    padding-top: 0.5rem;
   }
 }
 .main-header__menu-link {
@@ -12885,11 +12890,6 @@ span[id*="overlay_button"] {
   }
   .print-only {
     display: block !important;
-  }
-  .main-header__logo.wide {
-    display: block;
-    margin-bottom: 16px;
-    margin-bottom: 1rem;
   }
   .title__subheading {
     display: none;
