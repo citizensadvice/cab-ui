@@ -32,37 +32,29 @@ block content
 
             fieldset
                 label(for="income") Income support
-                .group
-                    .field
-                        .field-group.field-group--dropdown
-                            input#income(placeholder="£", type="number")
-                            .dropdown
-                                select#exampleSelect1
-                                    option Weekly
-                                    option Monthly
-                                    option Yearly
-                    .function
-                        button.btn.btn-primary-cancel(type="button")
-                            .fa.fa-trash
+                    a(href="#", style="color:red;border-color:currentColor;float:right;") Remove
+                .field-group.field-group--dropdown
+                    input#income(placeholder="£", type="number")
+                    .dropdown
+                        select#exampleSelect1
+                            option Weekly
+                            option Monthly
+                            option Yearly
 
             fieldset
                 label(for="income") Tax credit
-                .group
-                    .field
-                        .field-group.field-group--dropdown
-                            input#income(placeholder="£", type="number")
-                            .dropdown
-                                select#exampleSelect1
-                                    option Weekly
-                                    option Monthly
-                                    option Yearly
-                    .function
-                        button.btn.btn-primary-cancel(type="button")
-                            .fa.fa-trash
+                    a(href="#", style="color:red;border-color:currentColor;float:right;") Remove
+                .field-group.field-group--dropdown
+                    input#income(placeholder="£", type="number")
+                    .dropdown
+                        select#exampleSelect1
+                            option Weekly
+                            option Monthly
+                            option Yearly
 
-            fieldset.well
+            fieldset
                 label(for="addbenefit") Add another benefit
-                .group
+                .group.well
                     .field
                         .dropdown(style="width:100%;")
                             select#exampleSelect1
