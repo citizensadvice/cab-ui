@@ -411,6 +411,22 @@ input[class*="dob-"] {
             border-radius: @form-border-radius 0 0 @form-border-radius;
         }
     }
+    .field {
+        display: table-cell;
+        width: 100%;
+        .spacing(padding-right,1);
+        input,
+        .dropdown {
+            border-radius: @form-border-radius;
+        }
+    }
+    .function {
+        display: table-cell;
+        button {
+            margin-right: 0;
+            border-radius: @form-border-radius;
+        }
+    }
 }
 
 // Custom dropdown icons

@@ -32,7 +32,7 @@ block content
 
             fieldset
                 label(for="income") Income support
-                    a(href="#", style="color:red;border-color:currentColor;float:right;") Remove
+                    a.remove(href="#") Remove
                 .field-group.field-group--dropdown
                     input#income(placeholder="£", type="number")
                     .dropdown
@@ -43,7 +43,7 @@ block content
 
             fieldset
                 label(for="income") Tax credit
-                    a(href="#", style="color:red;border-color:currentColor;float:right;") Remove
+                    a.remove(href="#") Remove
                 .field-group.field-group--dropdown
                     input#income(placeholder="£", type="number")
                     .dropdown
@@ -54,7 +54,7 @@ block content
 
             fieldset
                 label(for="addbenefit") Add another benefit
-                .group.well
+                .field-group.well
                     .field
                         .dropdown(style="width:100%;")
                             select#exampleSelect1

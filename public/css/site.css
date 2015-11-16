@@ -3067,23 +3067,11 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
-.tools .-visited {
+.remove {
+  float: right;
+}
+.-visited {
   font-weight: 700;
-}
-.group {
-  display: table;
-}
-.group .field {
-  display: table-cell;
-  width: 100%;
-  padding-right: 16px;
-  padding-right: 1rem;
-}
-.group .function {
-  display: table-cell;
-}
-.group .function button {
-  margin-right: 0;
 }
 /* Base files */
 /**
@@ -4349,6 +4337,23 @@ input[class*="dob-"] {
 }
 .field-group--dropdown input:first-of-type {
   border-radius: 2px 0 0 2px;
+}
+.field-group .field {
+  display: table-cell;
+  width: 100%;
+  padding-right: 16px;
+  padding-right: 1rem;
+}
+.field-group .field input,
+.field-group .field .dropdown {
+  border-radius: 2px;
+}
+.field-group .function {
+  display: table-cell;
+}
+.field-group .function button {
+  margin-right: 0;
+  border-radius: 2px;
 }
 .custom-dropdown {
   display: inline-block;
@@ -6309,6 +6314,15 @@ hr {
  */
 .u-invisible {
   visibility: hidden;
+}
+a.remove {
+  color: #DF3034;
+  border-color: currentColor;
+  font-weight: 400;
+}
+a.remove:hover {
+  color: #DF3034;
+  border-color: currentColor;
 }
 /**
  * HELPERS
@@ -10617,6 +10631,11 @@ input.tablesort-filter {
 .section-notice__adviser .badge {
   background-color: #006278;
   color: #FFF;
+}
+@media (max-width: 599px) {
+  .section-notice {
+    display: none;
+  }
 }
 @media (max-width: 1148px) and (min-width: 600px) {
   .js .section-notice__content {

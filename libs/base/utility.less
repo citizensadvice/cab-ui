@@ -138,3 +138,14 @@
     visibility: hidden;
 }
 
+// Remove/delete (red) links
+a.remove {
+    color: @red;
+    border-color: currentColor;
+    //float: right;
+    font-weight: @font-weight-base;
+    &:hover {
+        color: @red;
+        border-color: currentColor;
+    }
+}
