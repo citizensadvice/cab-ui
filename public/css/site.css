@@ -7879,13 +7879,10 @@ html[lang="en-SCT"] .main-nav {
   color: #FFF;
   text-decoration: none;
   line-height: 25px;
+  border: none;
 }
 .nav-list-primary-more > a > i {
   margin-left: 10px;
-}
-.nav-list-primary-more:hover,
-.nav-list-primary-more.active {
-  background-color: #003A6A;
 }
 .nav-list-primary-more:hover > a,
 .nav-list-primary-more.active > a {
