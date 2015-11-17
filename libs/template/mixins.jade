@@ -23,12 +23,8 @@ mixin sidebar(obj, key)
 				ul
 					- each item,index in obj
 						- active = index === key ? "-current": ""
-						if item.section === "true"
-							li.side-nav-beta__sibling
-								+link(item.title, item.href, item.text)(class="section")
-						else
-							li.side-nav-beta__sibling
-								+link(item.title, item.href, item.text)(class=active)
+						li.side-nav-beta__sibling
+							+link(item.title, item.href, item.text)(class=active item.)
 
 mixin sidebarSiblings(obj, key)
 	nav.side-nav-beta.sibling
@@ -40,9 +36,5 @@ mixin sidebarSiblings(obj, key)
 				ul
 					- each item,index in obj
 						- active = index === key ? "-current": ""
-						if item.section === "true"
-							li.side-nav-beta__sibling
-								+link(item.title, item.href, item.text)(class="section")
-						else
-							li.side-nav-beta__sibling
-								+link(item.title, item.href, item.text)(class=active)
+						li.side-nav-beta__sibling
+							+link(item.title, item.href, item.text)(class=active)
