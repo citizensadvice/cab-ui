@@ -95,6 +95,10 @@
         border: 0;
         margin: 0;
         .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            color: @revealable-heading;
+        }
     }
     .revealable__content {
         &[aria-hidden=true] {

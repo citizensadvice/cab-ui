@@ -9732,6 +9732,33 @@ html[lang="en-SCT"] .main-nav {
   padding: 12px 16px;
   padding: 0.75rem 1rem;
 }
+.collapsible .collapse-content h1,
+.revealable .collapse-content h1,
+.collapsible__content h1,
+.revealable__content h1,
+.collapsible .collapse-content h2,
+.revealable .collapse-content h2,
+.collapsible__content h2,
+.revealable__content h2,
+.collapsible .collapse-content h3,
+.revealable .collapse-content h3,
+.collapsible__content h3,
+.revealable__content h3,
+.collapsible .collapse-content h4,
+.revealable .collapse-content h4,
+.collapsible__content h4,
+.revealable__content h4,
+.collapsible .collapse-content h5,
+.revealable .collapse-content h5,
+.collapsible__content h5,
+.revealable__content h5,
+.collapsible .collapse-content h6,
+.revealable .collapse-content h6,
+.collapsible__content h6,
+.revealable__content h6 {
+  margin-top: 0;
+  color: #191926;
+}
 .collapsible .revealable__content[aria-hidden=true],
 .revealable .revealable__content[aria-hidden=true] {
   display: none;
@@ -9873,6 +9900,33 @@ html[lang="en-SCT"] .main-nav {
   padding: 12px 16px;
   padding: 0.75rem 1rem;
 }
+.collapsible--aqua .collapse-content h1,
+.revealable--aqua .collapse-content h1,
+.collapsible--aqua__content h1,
+.revealable--aqua__content h1,
+.collapsible--aqua .collapse-content h2,
+.revealable--aqua .collapse-content h2,
+.collapsible--aqua__content h2,
+.revealable--aqua__content h2,
+.collapsible--aqua .collapse-content h3,
+.revealable--aqua .collapse-content h3,
+.collapsible--aqua__content h3,
+.revealable--aqua__content h3,
+.collapsible--aqua .collapse-content h4,
+.revealable--aqua .collapse-content h4,
+.collapsible--aqua__content h4,
+.revealable--aqua__content h4,
+.collapsible--aqua .collapse-content h5,
+.revealable--aqua .collapse-content h5,
+.collapsible--aqua__content h5,
+.revealable--aqua__content h5,
+.collapsible--aqua .collapse-content h6,
+.revealable--aqua .collapse-content h6,
+.collapsible--aqua__content h6,
+.revealable--aqua__content h6 {
+  margin-top: 0;
+  color: #191926;
+}
 .collapsible--aqua .revealable__content[aria-hidden=true],
 .revealable--aqua .revealable__content[aria-hidden=true] {
   display: none;
@@ -10013,6 +10067,33 @@ html[lang="en-SCT"] .main-nav {
   margin: 0;
   padding: 12px 16px;
   padding: 0.75rem 1rem;
+}
+.collapsible--green .collapse-content h1,
+.revealable--green .collapse-content h1,
+.collapsible--green__content h1,
+.revealable--green__content h1,
+.collapsible--green .collapse-content h2,
+.revealable--green .collapse-content h2,
+.collapsible--green__content h2,
+.revealable--green__content h2,
+.collapsible--green .collapse-content h3,
+.revealable--green .collapse-content h3,
+.collapsible--green__content h3,
+.revealable--green__content h3,
+.collapsible--green .collapse-content h4,
+.revealable--green .collapse-content h4,
+.collapsible--green__content h4,
+.revealable--green__content h4,
+.collapsible--green .collapse-content h5,
+.revealable--green .collapse-content h5,
+.collapsible--green__content h5,
+.revealable--green__content h5,
+.collapsible--green .collapse-content h6,
+.revealable--green .collapse-content h6,
+.collapsible--green__content h6,
+.revealable--green__content h6 {
+  margin-top: 0;
+  color: #191926;
 }
 .collapsible--green .revealable__content[aria-hidden=true],
 .revealable--green .revealable__content[aria-hidden=true] {
@@ -10158,6 +10239,33 @@ html[lang="en-SCT"] .main-nav {
   margin: 0;
   padding: 12px 16px;
   padding: 0.75rem 1rem;
+}
+.collapsible--red .collapse-content h1,
+.revealable--red .collapse-content h1,
+.collapsible--red__content h1,
+.revealable--red__content h1,
+.collapsible--red .collapse-content h2,
+.revealable--red .collapse-content h2,
+.collapsible--red__content h2,
+.revealable--red__content h2,
+.collapsible--red .collapse-content h3,
+.revealable--red .collapse-content h3,
+.collapsible--red__content h3,
+.revealable--red__content h3,
+.collapsible--red .collapse-content h4,
+.revealable--red .collapse-content h4,
+.collapsible--red__content h4,
+.revealable--red__content h4,
+.collapsible--red .collapse-content h5,
+.revealable--red .collapse-content h5,
+.collapsible--red__content h5,
+.revealable--red__content h5,
+.collapsible--red .collapse-content h6,
+.revealable--red .collapse-content h6,
+.collapsible--red__content h6,
+.revealable--red__content h6 {
+  margin-top: 0;
+  color: #191926;
 }
 .collapsible--red .revealable__content[aria-hidden=true],
 .revealable--red .revealable__content[aria-hidden=true] {
