@@ -4119,6 +4119,7 @@ textarea.form__field {
   margin-right: 8px;
   margin-right: 0.5rem;
   z-index: 1;
+  background-color: #f2f2f2;
 }
 .radio input:before,
 .checkbox input:before {
@@ -4241,6 +4242,7 @@ textarea.form__field {
   border: none;
   cursor: pointer;
   -webkit-appearance: none;
+  -moz-appearance: window;
   padding-right: 2em;
 }
 .checkbox,
