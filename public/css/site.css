@@ -2979,34 +2979,23 @@ span[id*="overlay_button"] {
 .inline--button {
   float: right;
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
   margin-right: -1em;
 }
 .inline--button:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f06e";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  border: none;
-  line-height: 2em;
-  width: 1em;
+  top: 52%;
 }
 .inline--button:after {
   background-color: #b9b9a4;
@@ -4202,37 +4191,26 @@ textarea.form__field {
   border-radius: 2px;
   border: 1px solid #dfdfdf;
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
   padding-right: 0;
   background-color: #FFF;
   display: inline-block;
   width: 100%;
 }
 .dropdown:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\F0D7";
   color: #000;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #000;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  border: none;
-  line-height: 2em;
-  width: 1em;
+  top: 52%;
 }
 .dropdown:after {
   pointer-events: none;
@@ -4942,543 +4920,383 @@ input.custom-dropdown__button {
 }
 .tick-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .tick-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f00c";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .right-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .right-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f054";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .left-button-icon {
   position: relative;
-  padding-left: 3.5em;
+  padding-left: 2.5em;
+  text-transform: uppercase;
 }
 .left-button-icon:after {
-  left: 0.5em;
+  left: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f053";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .back-button-icon {
   position: relative;
-  padding-left: 3.5em;
+  padding-left: 2.5em;
+  text-transform: uppercase;
 }
 .back-button-icon:after {
-  left: 0.5em;
+  left: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f053";
   color: #229cff;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #229cff;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .left-cancel-button-icon {
   position: relative;
-  padding-left: 3.5em;
+  padding-left: 2.5em;
+  text-transform: uppercase;
 }
 .left-cancel-button-icon:after {
-  left: 0.5em;
+  left: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f00d";
   color: #229cff;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #229cff;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .down-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .down-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f078";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .up-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .up-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f077";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .exclamation-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .exclamation-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\0021";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .search-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .search-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f002";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .plus-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .plus-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f067";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .minus-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .minus-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f068";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .email-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .email-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f003";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .print-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .print-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f02f";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .restart-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .restart-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f01e";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .save-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .save-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f019";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .retrieve-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .retrieve-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f093";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .copy-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .copy-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f0c5";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .clear-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .clear-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f014";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .help-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .help-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f128";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .close-button-icon {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
 }
 .close-button-icon:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f00d";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 .a-social-,
 .a-social-facebook:before,
@@ -12250,31 +12068,23 @@ li.ref-dialog__list-item--highlight {
 }
 .cookie-monster__close {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
   float: right;
 }
 .cookie-monster__close:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f00d";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  top: 52%;
 }
 @media screen and (max-width: 599px) {
   .cookie-monster {
@@ -12709,7 +12519,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 }
 .overlay__main .reference__list li button {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -12722,30 +12533,18 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   padding: 1rem;
 }
 .overlay__main .reference__list li button:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f014";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  border: none;
-  line-height: 2em;
-  width: 1em;
+  top: 52%;
 }
 .overlay__main .reference__list li button:hover ~ p {
   background-color: #fae1e1;
@@ -12758,7 +12557,8 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 }
 .overlay__main .reference__list li.removed button {
   position: relative;
-  padding-right: 3.5em;
+  padding-right: 2.5em;
+  text-transform: uppercase;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -12771,30 +12571,18 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
   padding: 1rem;
 }
 .overlay__main .reference__list li.removed button:after {
-  right: 0.5em;
+  right: 1em;
   font-family: 'Helvetica', 'FontAwesome';
   font-weight: 300;
   content: "\f0e2";
   color: #FFF;
-  line-height: 1.9em;
-  width: 2em;
-  height: 2em;
   text-align: center;
-  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-  -webkit-border-radius: 50%;
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 50%;
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 50%;
-  border: 2px solid #FFF;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  border: none;
-  line-height: 2em;
-  width: 1em;
+  top: 52%;
 }
 .overlay__main .reference__list li.removed button:hover ~ p {
   background-color: #f2f2f2;
