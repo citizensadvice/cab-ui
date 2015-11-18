@@ -2980,7 +2980,6 @@ span[id*="overlay_button"] {
   float: right;
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
   margin-right: -1em;
 }
 .inline--button:after {
@@ -4104,7 +4103,7 @@ textarea.form__field {
   cursor: pointer;
   border-radius: 2px;
   position: relative;
-  display: block;
+  display: inline-block;
   margin-right: 8px;
   margin-right: 0.5rem;
   z-index: 1;
@@ -4159,11 +4158,16 @@ textarea.form__field {
 .checkbox--block {
   clear: left;
   float: left;
+  display: table;
+}
+.radio--block input,
+.checkbox--block input {
+  display: table-cell;
 }
 .radio--block p,
 .checkbox--block p {
   display: block;
-  float: right;
+  display: table-cell;
   margin: 0;
 }
 .radio--block p span,
@@ -4192,7 +4196,6 @@ textarea.form__field {
   border: 1px solid #dfdfdf;
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
   padding-right: 0;
   background-color: #FFF;
   display: inline-block;
@@ -4222,10 +4225,6 @@ textarea.form__field {
   -webkit-appearance: none;
   -moz-appearance: window;
   padding-right: 2em;
-}
-.checkbox,
-.radio {
-  display: inline-block;
 }
 input[id*="dob-"],
 input[class*="dob-"] {
@@ -4921,7 +4920,6 @@ input.custom-dropdown__button {
 .tick-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .tick-button-icon:after {
   right: 1em;
@@ -4940,7 +4938,6 @@ input.custom-dropdown__button {
 .right-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .right-button-icon:after {
   right: 1em;
@@ -4959,7 +4956,6 @@ input.custom-dropdown__button {
 .left-button-icon {
   position: relative;
   padding-left: 2.5em;
-  text-transform: uppercase;
 }
 .left-button-icon:after {
   left: 1em;
@@ -4978,7 +4974,6 @@ input.custom-dropdown__button {
 .back-button-icon {
   position: relative;
   padding-left: 2.5em;
-  text-transform: uppercase;
 }
 .back-button-icon:after {
   left: 1em;
@@ -4997,7 +4992,6 @@ input.custom-dropdown__button {
 .left-cancel-button-icon {
   position: relative;
   padding-left: 2.5em;
-  text-transform: uppercase;
 }
 .left-cancel-button-icon:after {
   left: 1em;
@@ -5016,7 +5010,6 @@ input.custom-dropdown__button {
 .down-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .down-button-icon:after {
   right: 1em;
@@ -5035,7 +5028,6 @@ input.custom-dropdown__button {
 .up-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .up-button-icon:after {
   right: 1em;
@@ -5054,7 +5046,6 @@ input.custom-dropdown__button {
 .exclamation-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .exclamation-button-icon:after {
   right: 1em;
@@ -5073,7 +5064,6 @@ input.custom-dropdown__button {
 .search-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .search-button-icon:after {
   right: 1em;
@@ -5092,7 +5082,6 @@ input.custom-dropdown__button {
 .plus-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .plus-button-icon:after {
   right: 1em;
@@ -5111,7 +5100,6 @@ input.custom-dropdown__button {
 .minus-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .minus-button-icon:after {
   right: 1em;
@@ -5130,7 +5118,6 @@ input.custom-dropdown__button {
 .email-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .email-button-icon:after {
   right: 1em;
@@ -5149,7 +5136,6 @@ input.custom-dropdown__button {
 .print-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .print-button-icon:after {
   right: 1em;
@@ -5168,7 +5154,6 @@ input.custom-dropdown__button {
 .restart-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .restart-button-icon:after {
   right: 1em;
@@ -5187,7 +5172,6 @@ input.custom-dropdown__button {
 .save-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .save-button-icon:after {
   right: 1em;
@@ -5206,7 +5190,6 @@ input.custom-dropdown__button {
 .retrieve-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .retrieve-button-icon:after {
   right: 1em;
@@ -5225,7 +5208,6 @@ input.custom-dropdown__button {
 .copy-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .copy-button-icon:after {
   right: 1em;
@@ -5244,7 +5226,6 @@ input.custom-dropdown__button {
 .clear-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .clear-button-icon:after {
   right: 1em;
@@ -5263,7 +5244,6 @@ input.custom-dropdown__button {
 .help-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .help-button-icon:after {
   right: 1em;
@@ -5282,7 +5262,6 @@ input.custom-dropdown__button {
 .close-button-icon {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
 }
 .close-button-icon:after {
   right: 1em;
@@ -12069,7 +12048,6 @@ li.ref-dialog__list-item--highlight {
 .cookie-monster__close {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
   float: right;
 }
 .cookie-monster__close:after {
@@ -12520,7 +12498,6 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 .overlay__main .reference__list li button {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -12558,7 +12535,6 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 .overlay__main .reference__list li.removed button {
   position: relative;
   padding-right: 2.5em;
-  text-transform: uppercase;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -12974,4 +12950,3 @@ span[id*="overlay_button"] {
     padding-left: 1em;
   }
 }
-/*# sourceMappingURL=site.css.map */

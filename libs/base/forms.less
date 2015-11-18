@@ -214,7 +214,7 @@ textarea.form__field {
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
-    display: block;
+    display: inline-block;
     .spacing(margin-right,@box-spacing-horizontal/2);
     z-index: 1;
     background-color: @gray-8;
@@ -265,9 +265,14 @@ textarea.form__field {
     &--block {
         clear: left;
         float: left;
+        display: table;
+        input {
+            display: table-cell;
+        }
         p {
            display: block;
-           float: right;
+           //float: right;
+           display: table-cell;
            margin: 0; 
             span {
                 font-weight: @font-weight-bolder;
@@ -308,10 +313,6 @@ textarea.form__field {
         -moz-appearance: window;
         padding-right: 2em;
     }
-}
-
-.checkbox, .radio {
-    display: inline-block;
 }
 
 input[id*="dob-"],
