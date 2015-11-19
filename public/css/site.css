@@ -3345,6 +3345,9 @@ tr > th {
 tr > th:last-child {
   border-right: 0;
 }
+tr:hover {
+  background-color: #f2f2f2;
+}
 td > *:first-child {
   padding-top: 0;
 }

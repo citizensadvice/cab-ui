@@ -25,15 +25,245 @@
     <script src="../libs/javascript/collapse.js"></script>
     <script src="../libs/vendors/prism/prism.js"></script>
     <script src="../libs/javascript/smooth.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../libs/javascript/vendor/highcharts/highcharts.js"></script>
+    <script src="../libs/javascript/vendor/highcharts/modules/exporting.js"></script>
+    <script>
+      // PIE CHART
+      $(function () {
+      	var chart = new Highcharts.Chart({
+      		chart: {
+      			type: 'pie',
+      			renderTo: 'mobile-chart'
+      		},
+      		title: {
+      			text: 'Spending'
+      		},
+      		tooltip: {
+      			valuePrefix: '£'
+      		},
+      		plotOptions: {
+      			pie: {
+      				allowPointSelect: true,
+      				cursor: 'pointer',
+      				dataLabels: {
+      					enabled: true
+      				},
+      				showInLegend: false
+      			}
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		series: [{
+      			name: 'Spending',
+      			colorByPoint: true,
+      			data: [{
+      				name: 'Bills',
+      				y: 6
+      			}, {
+      				name: 'Household',
+      				y: 11
+      			}, {
+      				name: 'Leisure',
+      				y: 10
+      			}, {
+      				name: 'Travel',
+      				y: 4
+      			}, {
+      				name: 'Car',
+      				y: 7
+      			}, {
+      				name: 'Child',
+      				y: 7
+      			}, {
+      				name: 'Family',
+      				y: 3
+      			}, {
+      				name: 'Debt',
+      				y: 14
+      			}, {
+      				name: 'Savings',
+      				y: 1
+      			}]
+      		}]
+      	});
+      });
+      
+      // DESKTOP CHART
+      $(function () {
+      
+      	var colors = Highcharts.getOptions().colors,
+      		categories = ['Bills', 'Household', 'Leisure', 'Travel', 'Car', 'Child', 'Family', 'Debt', 'Savings'],
+      		data = [{
+      			y: 6,
+      			color: colors[0],
+      			drilldown: {
+      				name: 'Bills',
+      				categories: ['Rent or mortgage', 'Council Tax / Rates', 'Buildings and contents insurance', 'Gas and electricity', 'Water', 'TV licence'],
+      				data: [1, 1, 1, 1, 1, 1],
+      				color: colors[0]
+      			}
+      		}, {
+      			y: 11,
+      			color: colors[1],
+      			drilldown: {
+      				name: 'Household',
+      				categories: ['Grocery shopping (include food, drinks, toiletries and cleaning supplies etc)', 'Work lunches and coffees, teas etc', 'Cigarettes and tobacco', 'Alcohol (bought from an off-licence or shop but not from the pub, bar or restaurant)', 'Clothing and footwear', 'Repairs and house maintenance', 'Hire purchases or conditional sale items (eg a sofa or TV paid in monthly instalments)', 'Haircuts', 'Laundrette', 'Medicines (including prescription charges)', 'Dentistry', 'Insurance (life or home, but not travel)'],
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      				color: colors[1]
+      			}
+      		}, {
+      			y: 10,
+      			color: colors[2],
+      			drilldown: {
+      				name: 'Leisure',
+      				categories: ['Meals and drinks out', 'Memberships (eg gym or cinema membership)', 'Magazines and newspapers', 'Books or music (in any format)', 'Website subscriptions (eg news, dating or music/video streaming websites)', 'Season tickets', 'Cinema or theatre tickets', 'Holiday (include cost of travel, accommodation, expenses while you’re there and travel insurance) ', 'Cigarettes or other tobacco', 'Lottery and pools'],
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      				color: colors[2]
+      			}
+      		}, {
+      			y: 4,
+      			color: colors[3],
+      			drilldown: {
+      				name: 'Travel',
+      				categories: ['Public transport (including season tickets', 'Taxis', 'Bicycle (including running costs such as repair or rental', 'Car rental (including petrol'],
+      				data: [1, 1, 1, 1],
+      				color: colors[3]
+      			}
+      		}, {
+      			y: 7,
+      			color: colors[4],
+      			drilldown: {
+      				name: 'Car',
+      				categories: ['Car insurance', 'Road tax', 'Fuel', 'MOT', 'Car maintenance', 'Breakdown or recovery', 'Parking/congestion charges'],
+      				data: [1, 1, 1, 1, 1, 1, 1],
+      				color: colors[4]
+      			}
+      		}, {
+      			y: 7,
+      			color: colors[5],
+      			drilldown: {
+      				name: 'Child',
+      				categories: ['Childcare', 'Child support/maintenance', 'Tuition fees', 'School uniform', 'School meals', 'Pocket money and school trips', 'Nappies and baby items (if you haven’t already included in groceries)'],
+      				data: [1 ,1 ,1 ,1 ,1 ,1 ,1],
+      				color: colors[5]
+      			}
+      		}, {
+      			y: 3,
+      			color: colors[6],
+      			drilldown: {
+      				name: 'Family',
+      				categories: ['Adult care (eg care home costs for an elderly relative)', 'Christmas and birthday presents', 'Pet-related expenses (eg vet bills, pet food and insurance)'],
+      				data: [1, 1, 1],
+      				color: colors[6]
+      			}
+      		}, {
+      			y: 14,
+      			color: colors[7],
+      			drilldown: {
+      				name: 'Debt',
+      				categories: ['Mortgage, rent or any loans secured against your home', 'Council Tax', 'Credit card, store card debts or payday loans', 'Bank or building society loans', 'Personal loans', 'Catalogue, home credit or in-store credit debts', 'Overdrafts' , 'Money borrowed from friends or family', 'Income Tax, National Insurance and VAT', 'Gas and electricity bills', 'Child maintenance', 'TV licence', 'Hire purchase agreements', 'Court fines'],
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      				color: colors[7]
+      			}
+      		}, {
+      			y: 1,
+      			color: colors[8],
+      			drilldown: {
+      				name: 'Savings',
+      				categories: ['Savings'],
+      				data: [1],
+      				color: colors[8]
+      			}
+      		}],
+      		sectionData = [],
+      		spendingData = [],
+      		i,
+      		j,
+      		dataLen = data.length,
+      		drillDataLen,
+      		brightness;
+      
+      	// Build the data arrays
+      	for (i = 0; i < dataLen; i += 1) {
+      
+      		// add browser data
+      		sectionData.push({
+      			name: categories[i],
+      			y: data[i].y,
+      			color: data[i].color
+      		});
+      
+      		// add version data
+      		drillDataLen = data[i].drilldown.data.length;
+      		for (j = 0; j < drillDataLen; j += 1) {
+      			brightness = 0.2 - (j / drillDataLen) / 5;
+      			spendingData.push({
+      				name: data[i].drilldown.categories[j],
+      				y: data[i].drilldown.data[j],
+      				color: Highcharts.Color(data[i].color).brighten(brightness).get()
+      			});
+      		}
+      	}
+      
+      	// Create the chart
+      	var chart = new Highcharts.Chart({
+      		chart: {
+      			type: 'pie',
+      			renderTo: 'desktop-chart'
+      		},
+      		title: {
+      			text: 'Spending'
+      		},
+      		plotOptions: {
+      			pie: {
+      				shadow: false,
+      				center: ['50%', '50%'],
+      				cursor: 'pointer',
+      				dataLabels: {
+      					enabled: true
+      				}
+      			}
+      		},
+      		tooltip: {
+      			valuePrefix: '£'
+      		},
+      		series: [{
+      			name: 'Spending',
+      			data: sectionData,
+      			size: '50%',
+      			dataLabels: {
+      				formatter: function () {
+      					return this.y > 5 ? this.point.name : null;
+      				},
+      				color: '#ffffff',
+      				distance: -30
+      			}
+      		}, {
+      			name: 'Versions',
+      			data: spendingData,
+      			size: '80%',
+      			innerSize: '50%',
+      			dataLabels: {
+      				formatter: function () {
+      					// display only if larger than 1
+      					return this.y > 10 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
+      				}
+      			}
+      		}]
+      	});
+      });
+    </script>
+    <style>
+      .highcharts-button {
+      	display: none;
+      }
+      		
+    </style>
   </head>
   <body><!--[if IE 8]><div class="ie8"><![endif]-->
     <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
-    <div class="cookie-monster hide-no-cookies hide-no-js no-print">
-      <div class="cookie-monster__content">
-        <p>This site uses cookies. Find out more about <a href="#">our use of cookies</a>.</p>
-        <button data-action="close" type="button" class="btn cookie-monster__close">Close</button>
-      </div>
-    </div>
     <header class="main-header">
       <div class="main-header__content"><a href="" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" src="assets/images/ca-logo_100px.svg"></a><a href="" title="Citizens Advice home" class="main-header__logo no-print wide"><img alt="Citizens Advice" src="assets/images/ca-logo-hz-white-280px.svg"></a><a href="" title="Citizens Advice home" class="main-header__logo print-only"><img alt="Citizens Advice" src="assets/images/ca-logo-hz-280px.svg"></a>
         <div data-track-zone="top-bar" class="main-header__links"><a href="" class="main-header__menu-link js-toggle-menu"><i class="icon-menu"></i>Menu</a>
@@ -88,6 +318,8 @@
               <p> Total monthly income: <strong>incomeTotal</strong><br>Total spending: <strong>spendingTotal</strong></p>
               <h3>You are spending [OverAmount] more than your income</h3>
               <h3>You are spending [UnderAmount] less than your income</h3>
+              <div id="desktop-chart" style="min-width: 310px; margin: 0 auto;"></div>
+              <div id="mobile-chart" style="min-width: 310px; margin: 0 auto;"></div>
               <div class="collapse collapsible">
                 <div class="collapse-toggle">See a detailed breakdown of your income and spending</div>
                 <div class="collapse-content">
@@ -99,16 +331,16 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£100.00</td>
+                        <td>Benefits</td>
+                        <td class="amount">£250.00</td>
                       </tr>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£150.00</td>
+                        <td>Income</td>
+                        <td class="amount">£1500.00</td>
                       </tr>
                       <tr class="total">
                         <td>Total</td>
-                        <td class="amount">£250.00</td>
+                        <td class="amount">£1750.00</td>
                       </tr>
                     </tbody>
                   </table>
@@ -120,33 +352,29 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£30.00</td>
+                        <td>Health, eg medicines/treatments</td>
+                        <td class="amount">£70.50</td>
                       </tr>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£30.00</td>
+                        <td>Savings/investments</td>
+                        <td class="amount">£60.00</td>
                       </tr>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£30.00</td>
+                        <td>Life insurance</td>
+                        <td class="amount">£20.00</td>
                       </tr>
                       <tr>
-                        <td>Item</td>
-                        <td class="amount">£30.00</td>
-                      </tr>
-                      <tr>
-                        <td>Item</td>
-                        <td class="amount">£30.00</td>
+                        <td>Health insurance</td>
+                        <td class="amount">£15.00</td>
                       </tr>
                       <tr class="total">
                         <td>Total</td>
-                        <td class="amount">£150.00</td>
+                        <td class="amount">£165.50</td>
                       </tr>
                     </tbody>
                   </table><a class="collapse-toggle-close">Close</a>
                 </div>
-              </div><a>Download your full budget sheet to save or print [PDF format]</a>
+              </div><a class="a-pdf-doc">Download your full budget sheet to save or print</a>
               <H3>Next steps</H3>
               <div class="callout--alert">
                 <h3>Your income isn’t covering your costs</h3>
@@ -177,31 +405,30 @@
                 </ul>
               </div>
               <H3>Dealing with debts</H3>
-              <p>Whatever the results of your budget, there are things you can do to sort out your debts. </p>
-              <p>Your budget will help you to find the right debt solution for your circumstances. There are a number of options available to you depending on how much (if any) spare income you have each month. You can read <a href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/">options for getting out of debt</a>. Or get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a>. </p>
+              <p>If you have debts your budget can be used to help find the right debt solution for your circumstances. The options available to you depend on how much (if any) spare income you have each month. You can see our content on <a href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/">getting out of debt</a>, or get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a>. </p>
               <H3>Tips for keeping on top of your budget</H3>
-              <p>Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone</p>
+              <p>Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone.</p>
               <ul>
-                <li>sign up for text balance alerts from your bank - this can help you keep on top of your bank balance</li>
-                <li>sign up for online banking - it can be quicker and easier to check your bank balance</li>
+                <li>Sign up for text balance alerts from your bank - this can help you keep on top of your bank balance.</li>
+                <li>Sign up for online banking - it can be quicker and easier to check your bank balance.</li>
               </ul>
-              <H3>Guidance sessions on budgeting and managing money</H3>
-              <p>Some local Citizen Advice also run free, practical guidance sessions on budgeting and managing money. These cover things like how to reduce your costs, how to budget, how to set up and use bank accounts, how to set up standing orders and payments by direct debit etc. If you’re interested, ask your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a> whether they offer these services (often referred to as ‘financial capability’).</p>
+              <p>Some local Citizens Advice offices also run free sessions on budgeting and managing your money. They cover things like:</p>
+              <ul>
+                <li>how to reduce your costs</li>
+                <li>how to budget</li>
+                <li>how to set up and use a bank account</li>
+                <li>how to set up standing orders and direct debits </li>
+              </ul>
+              <p>Ask <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a> whether they offer these services.</p>
             </div>
           </div>
         </div>
         <nav class="side-nav-beta">
           <ul>
-            <li class="side-nav-beta__heading -active -open"><a><span>Home improvements</span></a></li>
+            <li class="side-nav-beta__heading -active -open"><a><span>Sidebar</span></a></li>
             <li>
               <ul>
-                <li class="side-nav-beta__sibling"><a href="#" title="Before you get building work done" class="-current" item.="item.">Before you get building work done</a>
-                </li>
-                <li class="side-nav-beta__sibling"><a href="#" title="Problem with building work, decorating or home improvements" item.="item.">Problem with building work, decorating or home improvements</a>
-                </li>
-                <li class="side-nav-beta__sibling"><a href="#" title="Cancelling building or decorating work" item.="item.">Cancelling building or decorating work</a>
-                </li>
-                <li class="side-nav-beta__sibling"><a href="#" title="Building organisations" item.="item.">Building organisations</a>
+                <li class="side-nav-beta__sibling"><a href="#" title="Link" class="-current" item.="item.">Link</a>
                 </li>
               </ul>
             </li>
