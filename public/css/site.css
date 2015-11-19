@@ -3066,7 +3066,7 @@ table.budget {
 }
 table.budget .total {
   font-weight: 700;
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }
 table.budget .amount {
   width: 30%;
