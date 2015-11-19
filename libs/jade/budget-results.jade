@@ -1,0 +1,135 @@
+block settings
+	- var title = "Budgeting tool"
+	- var sidebar = true
+	- var toolbars = true
+	- var cookiemonster = true
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Budgeting tool"}])
+
+block sidebar
+	- var section = "Home improvements"
+	+sidebar([
+		{title: "Before you get building work done"},
+		{title: "Problem with building work, decorating or home improvements"},
+		{title: "Cancelling building or decorating work"},
+		{title: "Building organisations"}
+		],0)
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+				
+block content
+	.articleContent
+		div
+			H2 Results
+
+			p 
+				| Total monthly income: #[strong incomeTotal]
+				br
+				| Total spending: #[strong spendingTotal]
+
+			h3 You are spending [OverAmount] more than your income
+			h3 You are spending [UnderAmount] less than your income
+
+			.collapse.collapsible
+				.collapse-toggle See a detailed breakdown of your income and spending
+				.collapse-content
+					table.budget
+						thead
+							tr
+								th(scope="col", colspan="2") Income
+						tbody
+							tr
+								td Item
+								td.amount £100.00
+							tr
+								td Item
+								td.amount £150.00
+							tr.total
+								td Total
+								td.amount £250.00
+
+					table.budget
+						thead
+							tr
+								th(scope="col", colspan="2") Spending
+						tbody
+							tr
+								td Item
+								td.amount £30.00
+							tr
+								td Item
+								td.amount £30.00
+							tr
+								td Item
+								td.amount £30.00
+							tr
+								td Item
+								td.amount £30.00
+							tr
+								td Item
+								td.amount £30.00
+							tr.total
+								td Total
+								td.amount £150.00
+
+					a.collapse-toggle-close Close
+
+			a Download your full budget sheet to save or print [PDF format]
+
+			H3 Next steps
+
+			.callout--alert
+				h3 Your income isn’t covering your costs
+
+				p As your income isn’t covering your living costs:
+				ul
+					li see if there’s any way you can #[a cut your costs/reduce your spending]
+					li see if you can #[a get help towards your living costs]
+					li make sure you’re #[a prioritising the right bills] - this means that if getting into debt short-term is unavoidable, you can at least keep paying the most important bills and avoid some of the worst dangers of getting in debt
+					li if you’re really struggling with your money and are in lots of debt, you can get help from your #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice]
+
+			.callout--confirmation
+				h3 You’ve got some money left each month
+
+				p As you’ve got some money spare each month you could consider:
+				ul
+					li #[a(href="https://www.citizensadvice.org.uk/debt-and-money/savings/") saving some money]
+					li increasing your repayments, if you’re repaying debts
+
+			.callout--alert
+				h3 Your living costs 
+
+				p The amounts you put in for the following areas look a bit high. There might be good reasons for this, but it might be worth checking if you can cut your costs in these areas:
+				ul
+					li Gas and electricity - short para of advice and LINK
+					li Phone/TV/broadband - short para of advice and LINK 
+					li Food - short para of advice and LINK 
+					li Insurance - short para of advice and LINK 
+
+			H3 Dealing with debts
+
+			p Whatever the results of your budget, there are things you can do to sort out your debts. 
+
+			p Your budget will help you to find the right debt solution for your circumstances. There are a number of options available to you depending on how much (if any) spare income you have each month. You can read #[a(href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/") options for getting out of debt]. Or get help from your #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice]. 
+
+			H3 Tips for keeping on top of your budget
+
+			p Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone
+			ul
+				li sign up for text balance alerts from your bank - this can help you keep on top of your bank balance
+				li sign up for online banking - it can be quicker and easier to check your bank balance
+
+			H3 Guidance sessions on budgeting and managing money
+
+			p Some local Citizen Advice also run free, practical guidance sessions on budgeting and managing money. These cover things like how to reduce your costs, how to budget, how to set up and use bank accounts, how to set up standing orders and payments by direct debit etc. If you’re interested, ask your #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice] whether they offer these services (often referred to as ‘financial capability’).
