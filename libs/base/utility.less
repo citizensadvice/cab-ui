@@ -149,3 +149,14 @@ a.remove {
         border-color: currentColor;
     }
 }
+
+.hide-mobile {
+    @media (max-width:@screen-sm-max) {
+        display: none;
+    }
+}
+.show-mobile {
+    @media (min-width:@screen-sm-min) {
+        display: none;
+    }
+}

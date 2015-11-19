@@ -6151,6 +6151,16 @@ a.remove:hover {
   color: #DF3034;
   border-color: currentColor;
 }
+@media (max-width: 839px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .show-mobile {
+    display: none;
+  }
+}
 /**
  * HELPERS
  * JS hints, screenreader and clearfixes
