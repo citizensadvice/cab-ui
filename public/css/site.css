@@ -6156,7 +6156,7 @@ a.remove:hover {
     display: none;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 840px) {
   .show-mobile {
     display: none;
   }
