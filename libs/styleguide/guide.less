@@ -431,4 +431,33 @@ table.budget {
         width: 30%;
         text-align: right;
     }
+    .table-collapse {
+        background: none;
+        display: none;
+        &--toggle {
+            cursor: pointer;
+            & td:first-of-type:before {
+                content: "\f055\00a0\00a0";
+                font-weight: @font-weight-bolder;
+                font-family: FontAwesome, icomoon;
+            }
+            &.active td:first-of-type:before {
+                content: "\f056\00a0\00a0";
+                font-weight: @font-weight-bolder;
+                font-family: FontAwesome, icomoon;
+            }
+        }
+        & > td {
+            padding: 0;
+            & > table {
+                margin: 0;
+            }
+        }
+        &:hover {
+            background: none;
+        }
+        table tr td:first-of-type {
+            padding-left: 1.5em;
+        }
+    }
 }

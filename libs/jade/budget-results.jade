@@ -35,7 +35,8 @@ block script
 			var chart = new Highcharts.Chart({
 				chart: {
 					type: 'pie',
-					renderTo: 'mobile-chart'
+					renderTo: 'mobile-chart',
+					backgroundColor:'#f2f2f2'
 				},
 				title: {
 					text: 'Spending'
@@ -212,7 +213,8 @@ block script
 			var chart = new Highcharts.Chart({
 				chart: {
 					type: 'pie',
-					renderTo: 'desktop-chart'
+					renderTo: 'desktop-chart',
+					backgroundColor:'#f2f2f2'
 				},
 				title: {
 					text: 'Spending'
@@ -255,6 +257,13 @@ block script
 				}]
 			});
 		});
+
+		$(document).ready(function($) {
+			$('.table-collapse--toggle').click(function(){
+				$(this).toggleClass("active");
+				$(this).next().toggle();
+			});
+		});
 	style.
 		.highcharts-button {
 			display: none;
@@ -263,7 +272,7 @@ block script
 block content
 	.articleContent
 		div
-			H2 Results
+			h2 Results
 
 			p 
 				| Total monthly income: #[strong incomeTotal]
@@ -273,53 +282,11 @@ block content
 			h3 You are spending [OverAmount] more than your income
 			h3 You are spending [UnderAmount] less than your income
 
-			div#desktop-chart.hide-mobile(style="min-width: 310px; margin: 0 auto;")
-			div#mobile-chart.show-mobile(style="min-width: 310px; margin: 0 auto;")
-
-			.collapse.collapsible
-				.collapse-toggle See a detailed breakdown of your income and spending
-				.collapse-content
-					table.budget
-						thead
-							tr
-								th(scope="col", colspan="2") Income
-						tbody
-							tr
-								td Benefits
-								td.amount £250.00
-							tr
-								td Income
-								td.amount £1500.00
-							tr.total
-								td Total
-								td.amount £1750.00
-
-					table.budget
-						thead
-							tr
-								th(scope="col", colspan="2") Spending
-						tbody
-							tr
-								td Health, eg medicines/treatments
-								td.amount £70.50
-							tr
-								td Savings/investments
-								td.amount £60.00
-							tr
-								td Life insurance
-								td.amount £20.00
-							tr
-								td Health insurance
-								td.amount £15.00
-							tr.total
-								td Total
-								td.amount £165.50
-
-					a.collapse-toggle-close Close
-
-			a.a-pdf-doc Download your full budget sheet to save or print
-
-			H3 Next steps
+			ul
+				li 
+					a.a-pdf-doc Download your full budget sheet to save or print
+				li 
+					a(href="#detailed") See a detailed breakdown of your income and spending
 
 			.callout--alert
 				h3 Your income isn’t covering your costs
@@ -349,11 +316,11 @@ block content
 					li Food - short para of advice and LINK 
 					li Insurance - short para of advice and LINK 
 
-			H3 Dealing with debts
+			h3 Dealing with debts
 
 			p If you have debts your budget can be used to help find the right debt solution for your circumstances. The options available to you depend on how much (if any) spare income you have each month. You can see our content on #[a(href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/") getting out of debt], or get help from your #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice]. 
 
-			H3 Tips for keeping on top of your budget
+			h3 Tips for keeping on top of your budget
 
 			p Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone.
 			ul
@@ -368,3 +335,140 @@ block content
 				li how to set up standing orders and direct debits 
 
 			p Ask #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice] whether they offer these services.
+
+			h2#detailed Detailed breakdown
+
+			table.budget
+				thead
+					tr
+						th(scope="col", colspan="2") Income
+				tbody
+					tr
+						td Wages
+						td.amount £50.00
+					tr
+						td Lodger(s)
+						td.amount £50.00
+					tr
+						td Pension
+						td.amount £50.00
+					tr.table-collapse--toggle
+						td Child Support
+						td.amount £50.00
+					tr.table-collapse
+						td(colspan="2")
+							table.budget
+								tbody
+									tr
+										td Child maintenance or support
+										td.amount £0.00
+									tr
+										td Child Benefit
+										td.amount £0.00
+									tr
+										td Child Tax Credit
+										td.amount £0.00
+									tr
+										td Guardian’s Allowance
+										td.amount £0.00
+					tr.table-collapse--toggle
+						td Benefits
+						td.amount £50.00
+					tr.table-collapse
+						td(colspan="2")
+							table.budget
+								tbody
+									tr
+										td Attendance Allowance
+										td.amount £0.00
+									tr
+										td Bereavement Allowance
+										td.amount £0.00
+									tr
+										td Bereavement payment (lump-sum)
+										td.amount £0.00
+									tr
+										td Carer’s Allowance
+										td.amount £0.00
+									tr
+										td Disability Living Allowance
+										td.amount £0.00
+									tr
+										td Employment and Support Allowance
+										td.amount £0.00
+									tr
+										td Housing Benefit
+										td.amount £0.00
+									tr
+										td Incapacity Benefit
+										td.amount £0.00
+									tr
+										td Income Support
+										td.amount £0.00
+									tr
+										td Industrial Injuries Benefit
+										td.amount £0.00
+									tr
+										td Jobseeker’s Allowance
+										td.amount £0.00
+									tr
+										td Maternity Allowance
+										td.amount £0.00
+									tr
+										td Pension Credit
+										td.amount £0.00
+									tr
+										td Personal Independence Payment
+										td.amount £0.00
+									tr
+										td Severe Disablement Allowance
+										td.amount £0.00
+									tr
+										td Universal Credit
+										td.amount £0.00
+									tr
+										td War Widow’s (or Widower’s) Pension
+										td.amount £0.00
+									tr
+										td Widowed Parent’s Allowance
+										td.amount £0.00
+									tr
+										td Widow’s Pension
+										td.amount £0.00
+									tr
+										td Winter Fuel Payment and Christmas Bonus
+										td.amount £0.00
+									tr
+										td Working Tax Credit
+										td.amount £0.00
+									tr
+										td Young Person’s Bridging Allowance
+										td.amount £0.00
+					tr.total
+						td Total
+						td.amount £250.00
+
+			table.budget
+				thead
+					tr
+						th(scope="col", colspan="2") Spending
+				tbody
+					tr
+						td Health, eg medicines/treatments
+						td.amount £70.50
+					tr
+						td Savings/investments
+						td.amount £60.00
+					tr
+						td Life insurance
+						td.amount £20.00
+					tr
+						td Health insurance
+						td.amount £15.00
+					tr.total
+						td Total
+						td.amount £165.50
+			
+			.well
+				div#desktop-chart.hide-mobile(style="min-width: 310px; margin: 0 auto;")
+				div#mobile-chart.show-mobile(style="min-width: 310px; margin: 0 auto;")

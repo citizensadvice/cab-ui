@@ -3072,6 +3072,35 @@ table.budget .amount {
   width: 30%;
   text-align: right;
 }
+table.budget .table-collapse {
+  background: none;
+  display: none;
+}
+table.budget .table-collapse--toggle {
+  cursor: pointer;
+}
+table.budget .table-collapse--toggle td:first-of-type:before {
+  content: "\f055\00a0\00a0";
+  font-weight: 700;
+  font-family: FontAwesome, icomoon;
+}
+table.budget .table-collapse--toggle.active td:first-of-type:before {
+  content: "\f056\00a0\00a0";
+  font-weight: 700;
+  font-family: FontAwesome, icomoon;
+}
+table.budget .table-collapse > td {
+  padding: 0;
+}
+table.budget .table-collapse > td > table {
+  margin: 0;
+}
+table.budget .table-collapse:hover {
+  background: none;
+}
+table.budget .table-collapse table tr td:first-of-type {
+  padding-left: 1.5em;
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS
