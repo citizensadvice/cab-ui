@@ -9,7 +9,5 @@ public/css/tools.css
 public/css/chat-styles.css
 
 # Other files
-.DS_Store
-README.htmlREADME.html*.DS_Store
 *.DS_Store
 README.html
