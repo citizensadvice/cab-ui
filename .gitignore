@@ -10,4 +10,5 @@ public/css/chat-styles.css
 
 # Other files
 .DS_Store
-README.htmlREADME.html
+README.htmlREADME.html*.DS_Store
+README.html
