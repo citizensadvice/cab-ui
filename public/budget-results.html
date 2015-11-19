@@ -29,12 +29,62 @@
     <script src="../libs/javascript/vendor/highcharts/highcharts.js"></script>
     <script src="../libs/javascript/vendor/highcharts/modules/exporting.js"></script>
     <script>
-      // PIE CHART
+      // INCOME CHART
       $(function () {
       	var chart = new Highcharts.Chart({
       		chart: {
       			type: 'pie',
-      			renderTo: 'mobile-chart',
+      			renderTo: 'income-chart',
+      			backgroundColor:'#f2f2f2'
+      		},
+      		title: {
+      			text: 'Income'
+      		},
+      		tooltip: {
+      			valuePrefix: '£'
+      		},
+      		plotOptions: {
+      			pie: {
+      				allowPointSelect: false,
+      				cursor: 'pointer',
+      				dataLabels: {
+      					enabled: true
+      				},
+      				showInLegend: false
+      			}
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		series: [{
+      			name: 'Income',
+      			colorByPoint: true,
+      			data: [{
+      				name: 'Wages',
+      				y: 50
+      			}, {
+      				name: 'Lodger(s)',
+      				y: 50
+      			}, {
+      				name: 'Pension',
+      				y: 50
+      			}, {
+      				name: 'Child Support',
+      				y: 50
+      			}, {
+      				name: 'Benefits',
+      				y: 50
+      			}]
+      		}]
+      	});
+      });
+      
+      // MOBILE CHART
+      $(function () {
+      	var chart = new Highcharts.Chart({
+      		chart: {
+      			type: 'pie',
+      			renderTo: 'mobile-spending-chart',
       			backgroundColor:'#f2f2f2'
       		},
       		title: {
@@ -212,7 +262,7 @@
       	var chart = new Highcharts.Chart({
       		chart: {
       			type: 'pie',
-      			renderTo: 'desktop-chart',
+      			renderTo: 'desktop-spending-chart',
       			backgroundColor:'#f2f2f2'
       		},
       		title: {
@@ -234,7 +284,7 @@
       		series: [{
       			name: 'Spending',
       			data: sectionData,
-      			size: '50%',
+      			size: '70%',
       			dataLabels: {
       				formatter: function () {
       					return this.y > 5 ? this.point.name : null;
@@ -243,14 +293,14 @@
       				distance: -30
       			}
       		}, {
-      			name: 'Versions',
+      			name: 'Spending',
       			data: spendingData,
       			size: '80%',
-      			innerSize: '50%',
+      			innerSize: '70%',
       			dataLabels: {
       				formatter: function () {
       					// display only if larger than 1
-      					return this.y > 10 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
+      					return this.y > 25 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
       				}
       			}
       		}]
@@ -314,608 +364,616 @@
         </div>
       </aside>
       <div class="main-content">
-        <div id="main" role="main" class="main-content__right">
-          <div class="title">
-            <h1 class="title__heading js-ref"><span class="title__title">Budgeting tool</span></h1>
-          </div>
-          <div class="title__subheading">This advice is for 
-            <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a>
-          </div>
-          <div class="articleContent">
-            <div>
-              <h2>Results</h2>
-              <p> Total monthly income: <strong>incomeTotal</strong><br>Total spending: <strong>spendingTotal</strong></p>
-              <h3>You are spending [OverAmount] more than your income</h3>
-              <h3>You are spending [UnderAmount] less than your income</h3>
+        <div class="title">
+          <h1 class="title__heading js-ref"><span class="title__title">Budgeting tool</span></h1>
+        </div>
+        <div class="articleContent">
+          <div class="main-content__right">
+            <h2>Results</h2>
+            <p> Total monthly income: <strong>incomeTotal</strong><br>Total spending: <strong>spendingTotal</strong></p>
+            <h3>You are spending [OverAmount] more than your income</h3>
+            <h3>You are spending [UnderAmount] less than your income</h3>
+            <ul>
+              <li> <a class="a-pdf-doc">Download your full budget sheet to save or print</a></li>
+              <li> <a href="#detailed">See a detailed breakdown of your income and spending</a></li>
+            </ul>
+            <div class="callout--alert">
+              <h3>Your income isn’t covering your costs</h3>
+              <p>As your income isn’t covering your living costs:</p>
               <ul>
-                <li> <a class="a-pdf-doc">Download your full budget sheet to save or print</a></li>
-                <li> <a href="#detailed">See a detailed breakdown of your income and spending</a></li>
+                <li>see if there’s any way you can <a>cut your costs/reduce your spending</a></li>
+                <li>see if you can <a>get help towards your living costs</a></li>
+                <li>make sure you’re <a>prioritising the right bills</a> - this means that if getting into debt short-term is unavoidable, you can at least keep paying the most important bills and avoid some of the worst dangers of getting in debt</li>
+                <li>if you’re really struggling with your money and are in lots of debt, you can get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a></li>
               </ul>
-              <div class="callout--alert">
-                <h3>Your income isn’t covering your costs</h3>
-                <p>As your income isn’t covering your living costs:</p>
-                <ul>
-                  <li>see if there’s any way you can <a>cut your costs/reduce your spending</a></li>
-                  <li>see if you can <a>get help towards your living costs</a></li>
-                  <li>make sure you’re <a>prioritising the right bills</a> - this means that if getting into debt short-term is unavoidable, you can at least keep paying the most important bills and avoid some of the worst dangers of getting in debt</li>
-                  <li>if you’re really struggling with your money and are in lots of debt, you can get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a></li>
-                </ul>
-              </div>
-              <div class="callout--confirmation">
-                <h3>You’ve got some money left each month</h3>
-                <p>As you’ve got some money spare each month you could consider:</p>
-                <ul>
-                  <li><a href="https://www.citizensadvice.org.uk/debt-and-money/savings/">saving some money</a></li>
-                  <li>increasing your repayments, if you’re repaying debts</li>
-                </ul>
-              </div>
-              <div class="callout--alert">
-                <h3>Your living costs </h3>
-                <p>The amounts you put in for the following areas look a bit high. There might be good reasons for this, but it might be worth checking if you can cut your costs in these areas:</p>
-                <ul>
-                  <li>Gas and electricity - short para of advice and LINK</li>
-                  <li>Phone/TV/broadband - short para of advice and LINK </li>
-                  <li>Food - short para of advice and LINK </li>
-                  <li>Insurance - short para of advice and LINK </li>
-                </ul>
-              </div>
-              <h3>Dealing with debts</h3>
-              <p>If you have debts your budget can be used to help find the right debt solution for your circumstances. The options available to you depend on how much (if any) spare income you have each month. You can see our content on <a href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/">getting out of debt</a>, or get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a>. </p>
-              <h3>Tips for keeping on top of your budget</h3>
-              <p>Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone.</p>
+            </div>
+            <div class="callout--confirmation">
+              <h3>You’ve got some money left each month</h3>
+              <p>As you’ve got some money spare each month you could consider:</p>
               <ul>
-                <li>Sign up for text balance alerts from your bank - this can help you keep on top of your bank balance.</li>
-                <li>Sign up for online banking - it can be quicker and easier to check your bank balance.</li>
+                <li><a href="https://www.citizensadvice.org.uk/debt-and-money/savings/">saving some money</a></li>
+                <li>increasing your repayments, if you’re repaying debts</li>
               </ul>
-              <p>Some local Citizens Advice offices also run free sessions on budgeting and managing your money. They cover things like:</p>
+            </div>
+            <div class="callout--alert">
+              <h3>Your living costs </h3>
+              <p>The amounts you put in for the following areas look a bit high. There might be good reasons for this, but it might be worth checking if you can cut your costs in these areas:</p>
               <ul>
-                <li>how to reduce your costs</li>
-                <li>how to budget</li>
-                <li>how to set up and use a bank account</li>
-                <li>how to set up standing orders and direct debits </li>
+                <li>Gas and electricity - short para of advice and LINK</li>
+                <li>Phone/TV/broadband - short para of advice and LINK </li>
+                <li>Food - short para of advice and LINK </li>
+                <li>Insurance - short para of advice and LINK </li>
               </ul>
-              <p>Ask <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a> whether they offer these services.</p>
-              <h2 id="detailed">Detailed breakdown</h2>
-              <table class="budget">
-                <thead>
-                  <tr>
-                    <th scope="col" colspan="2">Income</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Wages</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr>
-                    <td>Lodger(s)</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr>
-                    <td>Pension</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Child Support</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Child maintenance or support</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Child Benefit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Child Tax Credit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Guardian’s Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Benefits</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Attendance Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Bereavement Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Bereavement payment (lump-sum)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Carer’s Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Disability Living Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Employment and Support Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Housing Benefit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Incapacity Benefit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Income Support</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Industrial Injuries Benefit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Jobseeker’s Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Maternity Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Pension Credit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Personal Independence Payment</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Severe Disablement Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Universal Credit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>War Widow’s (or Widower’s) Pension</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Widowed Parent’s Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Widow’s Pension</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Winter Fuel Payment and Christmas Bonus</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Working Tax Credit</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Young Person’s Bridging Allowance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="total">
-                    <td>Total</td>
-                    <td class="amount">£250.00</td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="budget">
-                <thead>
-                  <tr>
-                    <th scope="col" colspan="2">Spending</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="table-collapse--toggle">
-                    <td>Bills</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Rent or mortgage</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Council Tax / Rates</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Buildings and contents insurance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Gas and electricity</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Water</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>TV licence</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Household</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Grocery shopping (include food, drinks, toiletries and cleaning supplies etc)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Work lunches and coffees, teas etc</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Cigarettes and tobacco</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Alcohol (bought from an off-licence or shop but not from the pub, bar or restaurant)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Clothing and footwear</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Repairs and house maintenance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Hire purchases or conditional sale items (eg a sofa or TV paid in monthly instalments)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Haircuts</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Laundrette</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Medicines (including prescription charges)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Dentistry</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Insurance (life or home, but not travel)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Leisure</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Meals and drinks out</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Memberships (eg gym or cinema membership)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Magazines and newspapers</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Books or music (in any format)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Website subscriptions (eg news, dating or music/video streaming websites)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Season tickets</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Cinema or theatre tickets</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Holiday (include cost of travel, accommodation, expenses while you’re there and travel insurance) </td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Cigarettes or other tobacco</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Lottery and pools</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Travel</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Public transport (including season tickets)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Taxis </td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Bicycle (including running costs such as repair or rental)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Car rental (including petrol)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Car hire as purchase payment</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Car</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Car insurance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Road tax</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Fuel</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>MOT</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Car maintenance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Breakdown or recovery</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Parking/congestion charges</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Child</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Childcare</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Child support/maintenance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Tuition fees</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>School uniform</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>School meals </td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Pocket money and school trips</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Nappies and baby items (if you haven’t already included in groceries)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Family</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Adult care (eg care home costs for an elderly relative)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Christmas and birthday presents</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Pet-related expenses (eg vet bills, pet food and insurance)</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>Debt</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <td colspan="2">
-                      <table class="budget">
-                        <tbody>
-                          <tr>
-                            <td>Mortgage, rent or any loans secured against your home</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Council Tax</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Credit card, store card debts or payday loans</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Bank or building society loans</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Personal loans</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Catalogue, home credit or in-store credit debts</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Overdrafts </td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Money borrowed from friends or family</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Income Tax, National Insurance and VAT</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Gas and electricity bills</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Child maintenance</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>TV licence</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Hire purchase agreements</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Court fines</td>
-                            <td class="amount">£0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Savings</td>
-                    <td class="amount">£50.00</td>
-                  </tr>
-                  <tr class="total">
-                    <td>Total</td>
-                    <td class="amount">£450.00</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="well">
-                <div id="desktop-chart" style="min-width: 310px; margin: 0 auto;" class="hide-mobile"></div>
-                <div id="mobile-chart" style="min-width: 310px; margin: 0 auto;" class="show-mobile"></div>
-              </div>
+            </div>
+            <h3>Dealing with debts</h3>
+            <p>If you have debts your budget can be used to help find the right debt solution for your circumstances. The options available to you depend on how much (if any) spare income you have each month. You can see our content on <a href="https://www.citizensadvice.org.uk/debt-and-money/help-with-debt/options-for-getting-out-of-debt/checking-your-options-for-getting-out-of-debt/">getting out of debt</a>, or get help from your <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a>. </p>
+            <h3>Tips for keeping on top of your budget</h3>
+            <p>Keep a spending diary for a month to keep track of exactly what you spend. You could keep receipts and write down everything you spend your money on or use a spending diary app on your mobile phone.</p>
+            <ul>
+              <li>Sign up for text balance alerts from your bank - this can help you keep on top of your bank balance.</li>
+              <li>Sign up for online banking - it can be quicker and easier to check your bank balance.</li>
+            </ul>
+            <p>Some local Citizens Advice offices also run free sessions on budgeting and managing your money. They cover things like:</p>
+            <ul>
+              <li>how to reduce your costs</li>
+              <li>how to budget</li>
+              <li>how to set up and use a bank account</li>
+              <li>how to set up standing orders and direct debits </li>
+            </ul>
+            <p>Ask <a href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/">local Citizens Advice</a> whether they offer these services.</p>
+            <h2 id="detailed">Income breakdown</h2>
+            <table class="budget">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">Income</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Wages</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr>
+                  <td>Lodger(s)</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr>
+                  <td>Pension</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Child Support</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Child maintenance or support</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Child Benefit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Child Tax Credit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Guardian’s Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Benefits</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Attendance Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Bereavement Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Bereavement payment (lump-sum)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Carer’s Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Disability Living Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Employment and Support Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Housing Benefit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Incapacity Benefit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Income Support</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Industrial Injuries Benefit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Jobseeker’s Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Maternity Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Pension Credit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Personal Independence Payment</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Severe Disablement Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Universal Credit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>War Widow’s (or Widower’s) Pension</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Widowed Parent’s Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Widow’s Pension</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Winter Fuel Payment and Christmas Bonus</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Working Tax Credit</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Young Person’s Bridging Allowance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="total">
+                  <td>Total</td>
+                  <td class="amount">£250.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="well">
+              <div id="income-chart" style="min-width: 310px; margin: 0 auto;"></div>
+            </div>
+            <h2>Spending breakdown</h2>
+            <table class="budget">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">Spending</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-collapse--toggle">
+                  <td>Bills</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Rent or mortgage</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Council Tax / Rates</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Buildings and contents insurance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Gas and electricity</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Water</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>TV licence</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Household</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Grocery shopping (include food, drinks, toiletries and cleaning supplies etc)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Work lunches and coffees, teas etc</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Cigarettes and tobacco</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Alcohol (bought from an off-licence or shop but not from the pub, bar or restaurant)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Clothing and footwear</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Repairs and house maintenance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Hire purchases or conditional sale items (eg a sofa or TV paid in monthly instalments)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Haircuts</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Laundrette</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Medicines (including prescription charges)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Dentistry</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Insurance (life or home, but not travel)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Leisure</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Meals and drinks out</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Memberships (eg gym or cinema membership)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Magazines and newspapers</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Books or music (in any format)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Website subscriptions (eg news, dating or music/video streaming websites)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Season tickets</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Cinema or theatre tickets</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Holiday (include cost of travel, accommodation, expenses while you’re there and travel insurance) </td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Cigarettes or other tobacco</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Lottery and pools</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Travel</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Public transport (including season tickets)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Taxis </td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Bicycle (including running costs such as repair or rental)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Car rental (including petrol)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Car hire as purchase payment</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Car</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Car insurance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Road tax</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>MOT</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Car maintenance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Breakdown or recovery</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Parking/congestion charges</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Child</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Childcare</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Child support/maintenance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Tuition fees</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>School uniform</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>School meals </td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Pocket money and school trips</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Nappies and baby items (if you haven’t already included in groceries)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Family</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Adult care (eg care home costs for an elderly relative)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Christmas and birthday presents</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Pet-related expenses (eg vet bills, pet food and insurance)</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr class="table-collapse--toggle">
+                  <td>Debt</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="table-collapse">
+                  <td colspan="2">
+                    <table class="budget">
+                      <tbody>
+                        <tr>
+                          <td>Mortgage, rent or any loans secured against your home</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Council Tax</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Credit card, store card debts or payday loans</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Bank or building society loans</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Personal loans</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Catalogue, home credit or in-store credit debts</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Overdrafts </td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Money borrowed from friends or family</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Income Tax, National Insurance and VAT</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Gas and electricity bills</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Child maintenance</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>TV licence</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Hire purchase agreements</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Court fines</td>
+                          <td class="amount">£0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Savings</td>
+                  <td class="amount">£50.00</td>
+                </tr>
+                <tr class="total">
+                  <td>Total</td>
+                  <td class="amount">£450.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="well">
+              <div id="desktop-spending-chart" style="min-width: 310px; margin: 0 auto;" class="hide-mobile"></div>
+              <div id="mobile-spending-chart" style="min-width: 310px; margin: 0 auto;" class="show-mobile"></div>
             </div>
           </div>
+          <nav class="side-nav-beta tools">
+            <ul>
+              <li class="side-nav-beta__heading -active -open"><a><span>Budgeting tool</span></a></li>
+              <li>
+                <ul>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">Start</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">Income</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">1. Bills</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">2. Household</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">3. Leisure</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">4. Travel</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">5. Car</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">6. Child</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">7. Family</a></li>
+                  <li class="side-nav-beta__sibling -visited"><a href="#">8. Debt</a></li>
+                  <li class="side-nav-beta__sibling -current"><a href="#">Results</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="side-nav-beta">
-          <ul>
-            <li class="side-nav-beta__heading -active -open"><a><span>Sidebar</span></a></li>
-            <li>
-              <ul>
-                <li class="side-nav-beta__sibling"><a href="#" title="Link" class="-current" item.="item.">Link</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
         <div class="print-only">
           <h2>This section is print only</h2>
         </div>

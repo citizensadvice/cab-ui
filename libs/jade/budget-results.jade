@@ -1,7 +1,7 @@
 block settings
 	- var title = "Budgeting tool"
-	- var sidebar = true
-	- var toolbars = true
+	//- var sidebar = true
+	//- var toolbars = true
 	//- var cookiemonster = true
 	- var mockup = true
 
@@ -13,7 +13,7 @@ block breadcrumbs
 		{title: "Templates", href: "index.html#templates"},
 		{title: "Budgeting tool"}])
 
-block sidebar
+//block sidebar
 	- var section = "Sidebar"
 	+sidebar([
 		{title: "Link"}
@@ -30,12 +30,62 @@ block script
 	script(src="../libs/javascript/vendor/highcharts/highcharts.js")
 	script(src="../libs/javascript/vendor/highcharts/modules/exporting.js")
 	script.
-		// PIE CHART
+		// INCOME CHART
 		$(function () {
 			var chart = new Highcharts.Chart({
 				chart: {
 					type: 'pie',
-					renderTo: 'mobile-chart',
+					renderTo: 'income-chart',
+					backgroundColor:'#f2f2f2'
+				},
+				title: {
+					text: 'Income'
+				},
+				tooltip: {
+					valuePrefix: '£'
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: false,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: true
+						},
+						showInLegend: false
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: 'Income',
+					colorByPoint: true,
+					data: [{
+						name: 'Wages',
+						y: 50
+					}, {
+						name: 'Lodger(s)',
+						y: 50
+					}, {
+						name: 'Pension',
+						y: 50
+					}, {
+						name: 'Child Support',
+						y: 50
+					}, {
+						name: 'Benefits',
+						y: 50
+					}]
+				}]
+			});
+		});
+
+		// MOBILE CHART
+		$(function () {
+			var chart = new Highcharts.Chart({
+				chart: {
+					type: 'pie',
+					renderTo: 'mobile-spending-chart',
 					backgroundColor:'#f2f2f2'
 				},
 				title: {
@@ -213,7 +263,7 @@ block script
 			var chart = new Highcharts.Chart({
 				chart: {
 					type: 'pie',
-					renderTo: 'desktop-chart',
+					renderTo: 'desktop-spending-chart',
 					backgroundColor:'#f2f2f2'
 				},
 				title: {
@@ -235,7 +285,7 @@ block script
 				series: [{
 					name: 'Spending',
 					data: sectionData,
-					size: '50%',
+					size: '70%',
 					dataLabels: {
 						formatter: function () {
 							return this.y > 5 ? this.point.name : null;
@@ -244,14 +294,14 @@ block script
 						distance: -30
 					}
 				}, {
-					name: 'Versions',
+					name: 'Spending',
 					data: spendingData,
 					size: '80%',
-					innerSize: '50%',
+					innerSize: '70%',
 					dataLabels: {
 						formatter: function () {
 							// display only if larger than 1
-							return this.y > 10 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
+							return this.y > 25 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
 						}
 					}
 				}]
@@ -271,7 +321,7 @@ block script
 				
 block content
 	.articleContent
-		div
+		.main-content__right
 			h2 Results
 
 			p 
@@ -336,7 +386,7 @@ block content
 
 			p Ask #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice] whether they offer these services.
 
-			h2#detailed Detailed breakdown
+			h2#detailed Income breakdown
 
 			table.budget
 				thead
@@ -447,6 +497,11 @@ block content
 					tr.total
 						td Total
 						td.amount £250.00
+
+			.well
+				div#income-chart(style="min-width: 310px; margin: 0 auto;")
+
+			h2 Spending breakdown
 
 			table.budget
 				thead
@@ -709,5 +764,35 @@ block content
 						td.amount £450.00
 			
 			.well
-				div#desktop-chart.hide-mobile(style="min-width: 310px; margin: 0 auto;")
-				div#mobile-chart.show-mobile(style="min-width: 310px; margin: 0 auto;")
+				div#desktop-spending-chart.hide-mobile(style="min-width: 310px; margin: 0 auto;")
+				div#mobile-spending-chart.show-mobile(style="min-width: 310px; margin: 0 auto;")
+
+		nav.side-nav-beta.tools
+			ul
+				li.side-nav-beta__heading.-active.-open
+					a
+						span Budgeting tool
+				li
+					ul
+						li.side-nav-beta__sibling.-visited
+							a(href="#") Start
+						li.side-nav-beta__sibling.-visited
+							a(href="#") Income
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 1. Bills
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 2. Household
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 3. Leisure
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 4. Travel
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 5. Car
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 6. Child
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 7. Family
+						li.side-nav-beta__sibling.-visited
+							a(href="#") 8. Debt
+						li.side-nav-beta__sibling.-current
+							a(href="#") Results
