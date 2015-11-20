@@ -3055,54 +3055,6 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
-.remove {
-  float: right;
-}
-.-visited {
-  font-weight: 700;
-}
-table.budget {
-  width: 100%;
-}
-table.budget .total {
-  font-weight: 700;
-  background-color: #eeeeee;
-}
-table.budget .amount {
-  width: 30%;
-  text-align: right;
-}
-table.budget .table-collapse {
-  background: none;
-  display: none;
-}
-table.budget .table-collapse--toggle {
-  cursor: pointer;
-}
-table.budget .table-collapse--toggle td:first-of-type:before {
-  content: "\f055\00a0\00a0";
-  font-weight: 700;
-  font-family: FontAwesome, icomoon;
-  color: #606060;
-}
-table.budget .table-collapse--toggle.active td:first-of-type:before {
-  content: "\f056\00a0\00a0";
-  font-weight: 700;
-  font-family: FontAwesome, icomoon;
-  color: #606060;
-}
-table.budget .table-collapse > td {
-  padding: 0;
-}
-table.budget .table-collapse > td > table {
-  margin: 0;
-}
-table.budget .table-collapse:hover {
-  background: none;
-}
-table.budget .table-collapse table tr td:first-of-type {
-  padding-left: 1.5em;
-}
 /* Base files */
 /**
  * COLOR DEFINITIONS
@@ -3351,6 +3303,17 @@ table {
   margin: 0.75rem 0rem;
   border-collapse: collapse;
 }
+table.full-width {
+  width: 100%;
+}
+table .total {
+  font-weight: 700;
+  background-color: #eeeeee;
+}
+table .amount {
+  width: 30%;
+  text-align: right;
+}
 td,
 th {
   padding: 0.66666667em;
@@ -3564,6 +3527,37 @@ table.simple-table td {
 }
 .table-scroll > table {
   margin: 0;
+}
+.table-collapse {
+  background: none;
+  display: none;
+}
+.table-collapse--toggle {
+  cursor: pointer;
+}
+.table-collapse--toggle td:first-of-type:before {
+  content: "\f055\00a0\00a0";
+  font-weight: 700;
+  font-family: FontAwesome, icomoon;
+  color: #606060;
+}
+.table-collapse--toggle.active td:first-of-type:before {
+  content: "\f056\00a0\00a0";
+  font-weight: 700;
+  font-family: FontAwesome, icomoon;
+  color: #606060;
+}
+.table-collapse > td {
+  padding: 0;
+}
+.table-collapse > td > table {
+  margin: 0;
+}
+.table-collapse:hover {
+  background: none;
+}
+.table-collapse table tr td:first-of-type {
+  padding-left: 1.5em;
 }
 .btn,
 .button,
@@ -11194,6 +11188,9 @@ input.tablesort-filter {
 }
 .side-nav-beta.sibling .side-nav-beta__sibling a:hover {
   background-color: #dfdfdf;
+}
+.side-nav-beta .-visited {
+  font-weight: 700;
 }
 .side-nav-beta ul {
   list-style: none;

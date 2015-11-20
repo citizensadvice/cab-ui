@@ -26,7 +26,6 @@ block section-notice
 			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
 block script
-	//script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 	script(src="../libs/javascript/vendor/highcharts/highcharts.js")
 	script(src="../libs/javascript/vendor/highcharts/modules/exporting.js")
 	script.
@@ -386,17 +385,6 @@ block script
 				}
 			});
 		});
-
-		$(document).ready(function($) {
-			$('.table-collapse--toggle').click(function(){
-				$(this).toggleClass("active");
-				$(this).next().toggle();
-			});
-		});
-	style.
-		.highcharts-button {
-			//display: none;
-		}
 				
 block content
 	.articleContent
@@ -404,12 +392,12 @@ block content
 			h2 Results
 
 			p 
-				| Total monthly income: #[strong incomeTotal]
+				| Total monthly income: #[strong £250.00]
 				br
-				| Total spending: #[strong spendingTotal]
+				| Total spending: #[strong £450.00]
 
-			h3 You are spending [OverAmount] more than your income
-			h3 You are spending [UnderAmount] less than your income
+			h3 You are spending £200 more than your income
+			//h3 You are spending [UnderAmount] less than your income
 
 			.well
 				div#overview-chart(style="min-width: 300px; margin: 0 auto;")
@@ -470,7 +458,7 @@ block content
 
 			h2#detailed Income breakdown
 
-			table.budget
+			table.full-width
 				thead
 					tr
 						th(scope="col", colspan="2") Income
@@ -489,7 +477,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Child maintenance or support
@@ -508,7 +496,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Attendance Allowance
@@ -585,7 +573,7 @@ block content
 
 			h2 Spending breakdown
 
-			table.budget
+			table.full-width
 				thead
 					tr
 						th(scope="col", colspan="2") Spending
@@ -595,7 +583,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Rent or mortgage
@@ -620,7 +608,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Grocery shopping (include food, drinks, toiletries and cleaning supplies etc)
@@ -663,7 +651,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Meals and drinks out
@@ -700,7 +688,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Public transport (including season tickets)
@@ -722,7 +710,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Car insurance
@@ -750,7 +738,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Childcare
@@ -778,7 +766,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Adult care (eg care home costs for an elderly relative)
@@ -794,7 +782,7 @@ block content
 						td.amount £50.00
 					tr.table-collapse
 						td(colspan="2")
-							table.budget
+							table.full-width
 								tbody
 									tr
 										td Mortgage, rent or any loans secured against your home
