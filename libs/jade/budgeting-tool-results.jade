@@ -374,7 +374,7 @@ block script
 					dataLabels: {
 						formatter: function () {
 							// display only if larger than 25
-							return this.y > 25 ? this.point.name + ': £' + this.y : null;
+							return this.y > .5 ? this.point.name + ': £' + this.y : null;
 						}
 					}
 				}],
