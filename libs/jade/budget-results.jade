@@ -26,10 +26,57 @@ block section-notice
 			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
 block script
-	script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+	//script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
 	script(src="../libs/javascript/vendor/highcharts/highcharts.js")
 	script(src="../libs/javascript/vendor/highcharts/modules/exporting.js")
 	script.
+		// OVERVIEW CHART
+		$(function () {
+			var chart = new Highcharts.Chart({
+				colors: ['#004B88', '#FCBB69'],
+				chart: {
+					type: 'column',
+					renderTo: 'overview-chart',
+					backgroundColor:'rgba(255,255,255,0)'
+				},
+				title: {
+					text: null
+				},
+				xAxis: {
+					labels: {
+						enabled: false
+					}
+				},
+				yAxis: {
+					title:
+					{
+						enabled: false
+					}
+				},
+				tooltip: {
+					formatter: function () {
+						return this.series.name + ': <b>£' + this.y + '</b>';
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: 'Income',
+					data: [250]
+				},
+						{
+					name: 'Spending',
+					data: [450]
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
+			});
+		});
+
 		// INCOME CHART
 		$(function () {
 			var chart = new Highcharts.Chart({
@@ -39,10 +86,12 @@ block script
 					backgroundColor:'#f2f2f2'
 				},
 				title: {
-					text: 'Income'
+					text: null
 				},
 				tooltip: {
-					valuePrefix: '£'
+					formatter: function () {
+						return this.point.name + ': <b>£' + this.y + '</b>';
+					}
 				},
 				plotOptions: {
 					pie: {
@@ -75,8 +124,18 @@ block script
 					}, {
 						name: 'Benefits',
 						y: 50
-					}]
-				}]
+					}],
+					dataLabels: {
+						formatter: function () {
+							return this.point.name + ' £' + this.y;
+						}
+					}
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
 			});
 		});
 
@@ -89,10 +148,12 @@ block script
 					backgroundColor:'#f2f2f2'
 				},
 				title: {
-					text: 'Spending'
+					text: null
 				},
 				tooltip: {
-					valuePrefix: '£'
+					formatter: function () {
+						return this.point.name + ': <b>£' + this.y + '</b>';
+					}
 				},
 				plotOptions: {
 					pie: {
@@ -137,8 +198,18 @@ block script
 					}, {
 						name: 'Savings',
 						y: 1
-					}]
-				}]
+					}],
+					dataLabels: {
+						formatter: function () {
+							return this.point.name + ' £' + this.y;
+						}
+					}
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
 			});
 		});
 
@@ -267,7 +338,7 @@ block script
 					backgroundColor:'#f2f2f2'
 				},
 				title: {
-					text: 'Spending'
+					text: null
 				},
 				plotOptions: {
 					pie: {
@@ -280,7 +351,9 @@ block script
 					}
 				},
 				tooltip: {
-					valuePrefix: '£'
+					formatter: function () {
+						return this.point.name + ': <b>£' + this.y + '</b>';
+					}
 				},
 				series: [{
 					name: 'Spending',
@@ -288,6 +361,7 @@ block script
 					size: '70%',
 					dataLabels: {
 						formatter: function () {
+							// display only if larger than 5
 							return this.y > 5 ? this.point.name : null;
 						},
 						color: '#ffffff',
@@ -300,11 +374,16 @@ block script
 					innerSize: '70%',
 					dataLabels: {
 						formatter: function () {
-							// display only if larger than 1
-							return this.y > 25 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
+							// display only if larger than 25
+							return this.y > 25 ? this.point.name + ': £' + this.y : null;
 						}
 					}
-				}]
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
 			});
 		});
 
@@ -316,7 +395,7 @@ block script
 		});
 	style.
 		.highcharts-button {
-			display: none;
+			//display: none;
 		}
 				
 block content
@@ -331,6 +410,9 @@ block content
 
 			h3 You are spending [OverAmount] more than your income
 			h3 You are spending [UnderAmount] less than your income
+
+			.well
+				div#overview-chart(style="min-width: 300px; margin: 0 auto;")
 
 			ul
 				li 

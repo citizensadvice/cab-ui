@@ -3103,6 +3103,14 @@ table.budget .table-collapse:hover {
 table.budget .table-collapse table tr td:first-of-type {
   padding-left: 1.5em;
 }
+@media (min-width: 1080px) {
+  .summary-chart {
+    order: 1;
+  }
+  .summary-info {
+    order: 2;
+  }
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS

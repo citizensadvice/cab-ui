@@ -25,10 +25,57 @@
     <script src="../libs/javascript/collapse.js"></script>
     <script src="../libs/vendors/prism/prism.js"></script>
     <script src="../libs/javascript/smooth.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")-->
     <script src="../libs/javascript/vendor/highcharts/highcharts.js"></script>
     <script src="../libs/javascript/vendor/highcharts/modules/exporting.js"></script>
     <script>
+      // OVERVIEW CHART
+      $(function () {
+      	var chart = new Highcharts.Chart({
+      		colors: ['#004B88', '#FCBB69'],
+      		chart: {
+      			type: 'column',
+      			renderTo: 'overview-chart',
+      			backgroundColor:'rgba(255,255,255,0)'
+      		},
+      		title: {
+      			text: null
+      		},
+      		xAxis: {
+      			labels: {
+      				enabled: false
+      			}
+      		},
+      		yAxis: {
+      			title:
+      			{
+      				enabled: false
+      			}
+      		},
+      		tooltip: {
+      			formatter: function () {
+      				return this.series.name + ': <b>£' + this.y + '</b>';
+      			}
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		series: [{
+      			name: 'Income',
+      			data: [250]
+      		},
+      				{
+      			name: 'Spending',
+      			data: [450]
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
+      	});
+      });
+      
       // INCOME CHART
       $(function () {
       	var chart = new Highcharts.Chart({
@@ -38,10 +85,12 @@
       			backgroundColor:'#f2f2f2'
       		},
       		title: {
-      			text: 'Income'
+      			text: null
       		},
       		tooltip: {
-      			valuePrefix: '£'
+      			formatter: function () {
+      				return this.point.name + ': <b>£' + this.y + '</b>';
+      			}
       		},
       		plotOptions: {
       			pie: {
@@ -74,8 +123,18 @@
       			}, {
       				name: 'Benefits',
       				y: 50
-      			}]
-      		}]
+      			}],
+      			dataLabels: {
+      				formatter: function () {
+      					return this.point.name + ' £' + this.y;
+      				}
+      			}
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
       	});
       });
       
@@ -88,10 +147,12 @@
       			backgroundColor:'#f2f2f2'
       		},
       		title: {
-      			text: 'Spending'
+      			text: null
       		},
       		tooltip: {
-      			valuePrefix: '£'
+      			formatter: function () {
+      				return this.point.name + ': <b>£' + this.y + '</b>';
+      			}
       		},
       		plotOptions: {
       			pie: {
@@ -136,8 +197,18 @@
       			}, {
       				name: 'Savings',
       				y: 1
-      			}]
-      		}]
+      			}],
+      			dataLabels: {
+      				formatter: function () {
+      					return this.point.name + ' £' + this.y;
+      				}
+      			}
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
       	});
       });
       
@@ -266,7 +337,7 @@
       			backgroundColor:'#f2f2f2'
       		},
       		title: {
-      			text: 'Spending'
+      			text: null
       		},
       		plotOptions: {
       			pie: {
@@ -279,7 +350,9 @@
       			}
       		},
       		tooltip: {
-      			valuePrefix: '£'
+      			formatter: function () {
+      				return this.point.name + ': <b>£' + this.y + '</b>';
+      			}
       		},
       		series: [{
       			name: 'Spending',
@@ -287,6 +360,7 @@
       			size: '70%',
       			dataLabels: {
       				formatter: function () {
+      					// display only if larger than 5
       					return this.y > 5 ? this.point.name : null;
       				},
       				color: '#ffffff',
@@ -299,11 +373,16 @@
       			innerSize: '70%',
       			dataLabels: {
       				formatter: function () {
-      					// display only if larger than 1
-      					return this.y > 25 ? '<b>' + this.point.name + ':</b> £' + this.y : null;
+      					// display only if larger than 25
+      					return this.y > 25 ? this.point.name + ': £' + this.y : null;
       				}
       			}
-      		}]
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
       	});
       });
       
@@ -316,7 +395,7 @@
     </script>
     <style>
       .highcharts-button {
-      	display: none;
+      	//display: none;
       }
       		
     </style>
@@ -373,6 +452,9 @@
             <p> Total monthly income: <strong>incomeTotal</strong><br>Total spending: <strong>spendingTotal</strong></p>
             <h3>You are spending [OverAmount] more than your income</h3>
             <h3>You are spending [UnderAmount] less than your income</h3>
+            <div class="well">
+              <div id="overview-chart" style="min-width: 300px; margin: 0 auto;"></div>
+            </div>
             <ul>
               <li> <a class="a-pdf-doc">Download your full budget sheet to save or print</a></li>
               <li> <a href="#detailed">See a detailed breakdown of your income and spending</a></li>
