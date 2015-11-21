@@ -78,6 +78,7 @@
       // INCOME CHART
       $(function () {
       	var chart = new Highcharts.Chart({
+      		colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
       		chart: {
       			type: 'pie',
       			renderTo: 'income-chart',
@@ -140,6 +141,7 @@
       // MOBILE CHART
       $(function () {
       	var chart = new Highcharts.Chart({
+      		colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
       		chart: {
       			type: 'pie',
       			renderTo: 'mobile-spending-chart',
@@ -215,87 +217,107 @@
       $(function () {
       
       	var colors = Highcharts.getOptions().colors,
+      	var //colors = Highcharts.getOptions().colors,
       		categories = ['Bills', 'Household', 'Leisure', 'Travel', 'Car', 'Child', 'Family', 'Debt', 'Savings'],
+      		//colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
       		data = [{
       			y: 6,
       			color: colors[0],
+      			color: '#f8a980',
       			drilldown: {
       				name: 'Bills',
       				categories: ['Rent or mortgage', 'Council Tax / Rates', 'Buildings and contents insurance', 'Gas and electricity', 'Water', 'TV licence'],
       				data: [1, 1, 1, 1, 1, 1],
       				color: colors[0]
+      				data: [1, 1, 1, 1, 1, 1]
       			}
       		}, {
       			y: 11,
       			color: colors[1],
+      			color: '#ffbf47',
       			drilldown: {
       				name: 'Household',
       				categories: ['Grocery shopping (include food, drinks, toiletries and cleaning supplies etc)', 'Work lunches and coffees, teas etc', 'Cigarettes and tobacco', 'Alcohol (bought from an off-licence or shop but not from the pub, bar or restaurant)', 'Clothing and footwear', 'Repairs and house maintenance', 'Hire purchases or conditional sale items (eg a sofa or TV paid in monthly instalments)', 'Haircuts', 'Laundrette', 'Medicines (including prescription charges)', 'Dentistry', 'Insurance (life or home, but not travel)'],
       				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       				color: colors[1]
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
       			}
       		}, {
       			y: 10,
       			color: colors[2],
+      			color: '#b9db9b',
       			drilldown: {
       				name: 'Leisure',
       				categories: ['Meals and drinks out', 'Memberships (eg gym or cinema membership)', 'Magazines and newspapers', 'Books or music (in any format)', 'Website subscriptions (eg news, dating or music/video streaming websites)', 'Season tickets', 'Cinema or theatre tickets', 'Holiday (include cost of travel, accommodation, expenses while you’re there and travel insurance) ', 'Cigarettes or other tobacco', 'Lottery and pools'],
       				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       				color: colors[2]
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
       			}
       		}, {
       			y: 4,
       			color: colors[3],
+      			color: '#a5bddc',
       			drilldown: {
       				name: 'Travel',
       				categories: ['Public transport (including season tickets', 'Taxis', 'Bicycle (including running costs such as repair or rental', 'Car rental (including petrol'],
       				data: [1, 1, 1, 1],
       				color: colors[3]
+      				data: [1, 1, 1, 1]
       			}
       		}, {
       			y: 7,
       			color: colors[4],
+      			color: '#b5afd7',
       			drilldown: {
       				name: 'Car',
       				categories: ['Car insurance', 'Road tax', 'Fuel', 'MOT', 'Car maintenance', 'Breakdown or recovery', 'Parking/congestion charges'],
       				data: [1, 1, 1, 1, 1, 1, 1],
       				color: colors[4]
+      				data: [1, 1, 1, 1, 1, 1, 1]
       			}
       		}, {
       			y: 7,
       			color: colors[5],
+      			color: '#81cec6',
       			drilldown: {
       				name: 'Child',
       				categories: ['Childcare', 'Child support/maintenance', 'Tuition fees', 'School uniform', 'School meals', 'Pocket money and school trips', 'Nappies and baby items (if you haven’t already included in groceries)'],
       				data: [1 ,1 ,1 ,1 ,1 ,1 ,1],
       				color: colors[5]
+      				data: [1 ,1 ,1 ,1 ,1 ,1 ,1]
       			}
       		}, {
       			y: 3,
       			color: colors[6],
+      			color: '#f499be',
       			drilldown: {
       				name: 'Family',
       				categories: ['Adult care (eg care home costs for an elderly relative)', 'Christmas and birthday presents', 'Pet-related expenses (eg vet bills, pet food and insurance)'],
       				data: [1, 1, 1],
       				color: colors[6]
+      				data: [1, 1, 1]
       			}
       		}, {
       			y: 14,
       			color: colors[7],
+      			color: '#e76568',
       			drilldown: {
       				name: 'Debt',
       				categories: ['Mortgage, rent or any loans secured against your home', 'Council Tax', 'Credit card, store card debts or payday loans', 'Bank or building society loans', 'Personal loans', 'Catalogue, home credit or in-store credit debts', 'Overdrafts' , 'Money borrowed from friends or family', 'Income Tax, National Insurance and VAT', 'Gas and electricity bills', 'Child maintenance', 'TV licence', 'Hire purchase agreements', 'Court fines'],
       				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
       				color: colors[7]
+      				data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
       			}
       		}, {
       			y: 1,
       			color: colors[8],
+      			color: '#87c3d0',
       			drilldown: {
       				name: 'Savings',
       				categories: ['Savings'],
       				data: [1],
       				color: colors[8]
+      				data: [1]
       			}
       		}],
       		sectionData = [],
