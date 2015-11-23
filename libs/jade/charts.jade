@@ -9,6 +9,227 @@ block breadcrumbs
 		{title: "Styles", href: "index.html#styles"}, 
 		{title: "Charts"}])
 
+block script
+	script(src="../libs/javascript/vendor/highcharts/highcharts.js")
+	script(src="../libs/javascript/vendor/highcharts/modules/exporting.js")
+	script.
+		// Column chart
+		$(function () {
+			var chart = new Highcharts.Chart({
+				colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+				chart: {
+					type: 'column',
+					renderTo: 'column-chart',
+					backgroundColor:'rgba(255,255,255,0)'
+				},
+				title: {
+					text: 'Column chart'
+				},
+				xAxis: {
+					categories: ['Person 1', 'Person 2']
+				},
+				yAxis: {
+					title:
+					{
+						text: '£ GBP'
+					}
+				},
+				tooltip: {
+					formatter: function () {
+						return this.series.name + ': <b>£' + this.y + '</b>';
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: 'Income',
+					data: [250, 450]
+				},
+						{
+					name: 'Spending',
+					data: [450, 350]
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
+			});
+		});
+
+		// Pie chart
+		$(function () {
+			var chart = new Highcharts.Chart({
+				colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+				chart: {
+					type: 'pie',
+					renderTo: 'pie-chart',
+					backgroundColor:'rgba(255,255,255,0)'
+				},
+				title: {
+					text: 'Pie chart'
+				},
+				tooltip: {
+					formatter: function () {
+						return this.point.name + ': <b>£' + this.y + '</b>';
+					}
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: false,
+						cursor: 'pointer',
+						showInLegend: false
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: 'Income',
+					colorByPoint: true,
+					data: [{
+						name: 'Source 1',
+						y: 140
+					}, {
+						name: 'Source 2',
+						y: 50
+					}, {
+						name: 'Source 3',
+						y: 210
+					}, {
+						name: 'Source 4',
+						y: 95
+					}],
+					dataLabels: {
+						formatter: function () {
+							return this.point.name + ' £' + this.y;
+						}
+					}
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
+			});
+		});
+
 block content
 	.articleContent.row
 		.span8
+			.example-box-plain
+				#column-chart
+			pre
+				code.language-html
+					| &lt;script&gt;
+					|	// Column chart
+					|	$(function () {
+					|		var chart = new Highcharts.Chart({
+					|			colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+					|			chart: {
+					|				type: 'column',
+					|				renderTo: 'column-chart',
+					|				backgroundColor:'rgba(255,255,255,0)'
+					|			},
+					|			title: {
+					|				text: 'Column chart'
+					|			},
+					|			xAxis: {
+					|				categories: ['Person 1', 'Person 2']
+					|			},
+					|			yAxis: {
+					|				title:
+					|				{
+					|					text: '£ GBP'
+					|				}
+					|			},
+					|			tooltip: {
+					|				formatter: function () {
+					|					return this.series.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+					|				}
+					|			},
+					|			credits: {
+					|				enabled: false
+					|			},
+					|			series: [{
+					|				name: 'Income',
+					|				data: [250, 450]
+					|			},
+					|					{
+					|				name: 'Spending',
+					|				data: [450, 350]
+					|			}],
+					|			navigation: {
+					|				buttonOptions: {
+					|					enabled: false
+					|				}
+					|			}
+					|		});
+					|	});
+					| &lt;/script&gt;
+					| &lt;div id="column-chart"&gt;&lt;/div&gt;
+
+			.example-box-plain
+				#pie-chart
+			pre
+				code.language-html
+					| &lt;script&gt;
+					|	// Pie chart
+					|	$(function () {
+					|		var chart = new Highcharts.Chart({
+					|			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+					|			chart: {
+					|				type: 'pie',
+					|				renderTo: 'pie-chart',
+					|				backgroundColor:'rgba(255,255,255,0)'
+					|			},
+					|			title: {
+					|				text: 'Pie chart'
+					|			},
+					|			tooltip: {
+					|				formatter: function () {
+					|					return this.point.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+					|				}
+					|			},
+					|			plotOptions: {
+					|				pie: {
+					|					allowPointSelect: false,
+					|					cursor: 'pointer',
+					|					showInLegend: false
+					|				}
+					|			},
+					|			credits: {
+					|				enabled: false
+					|			},
+					|			series: [{
+					|				name: 'Income',
+					|				colorByPoint: true,
+					|				data: [{
+					|					name: 'Source 1',
+					|					y: 140
+					|				}, {
+					|					name: 'Source 2',
+					|					y: 50
+					|				}, {
+					|					name: 'Source 3',
+					|					y: 210
+					|				}, {
+					|					name: 'Source 4',
+					|					y: 95
+					|				}],
+					|				dataLabels: {
+					|					formatter: function () {
+					|						return this.point.name + ' £' + this.y;
+					|					}
+					|				}
+					|			}],
+					|			navigation: {
+					|				buttonOptions: {
+					|					enabled: false
+					|				}
+					|			}
+					|		});
+					|	});
+					| &lt;/script&gt;
+					| &lt;div id="pie-chart"&gt;&lt;/div&gt;

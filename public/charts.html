@@ -25,6 +25,112 @@
     <script src="../libs/javascript/collapse.js"></script>
     <script src="../libs/vendors/prism/prism.js"></script>
     <script src="../libs/javascript/smooth.js"></script>
+    <script src="../libs/javascript/vendor/highcharts/highcharts.js"></script>
+    <script src="../libs/javascript/vendor/highcharts/modules/exporting.js"></script>
+    <script>
+      // Column chart
+      $(function () {
+      	var chart = new Highcharts.Chart({
+      		colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+      		chart: {
+      			type: 'column',
+      			renderTo: 'column-chart',
+      			backgroundColor:'rgba(255,255,255,0)'
+      		},
+      		title: {
+      			text: 'Column chart'
+      		},
+      		xAxis: {
+      			categories: ['Person 1', 'Person 2']
+      		},
+      		yAxis: {
+      			title:
+      			{
+      				text: '£ GBP'
+      			}
+      		},
+      		tooltip: {
+      			formatter: function () {
+      				return this.series.name + ': <b>£' + this.y + '</b>';
+      			}
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		series: [{
+      			name: 'Income',
+      			data: [250, 450]
+      		},
+      				{
+      			name: 'Spending',
+      			data: [450, 350]
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
+      	});
+      });
+      
+      // Pie chart
+      $(function () {
+      	var chart = new Highcharts.Chart({
+      		colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+      		chart: {
+      			type: 'pie',
+      			renderTo: 'pie-chart',
+      			backgroundColor:'rgba(255,255,255,0)'
+      		},
+      		title: {
+      			text: 'Pie chart'
+      		},
+      		tooltip: {
+      			formatter: function () {
+      				return this.point.name + ': <b>£' + this.y + '</b>';
+      			}
+      		},
+      		plotOptions: {
+      			pie: {
+      				allowPointSelect: false,
+      				cursor: 'pointer',
+      				showInLegend: false
+      			}
+      		},
+      		credits: {
+      			enabled: false
+      		},
+      		series: [{
+      			name: 'Income',
+      			colorByPoint: true,
+      			data: [{
+      				name: 'Source 1',
+      				y: 140
+      			}, {
+      				name: 'Source 2',
+      				y: 50
+      			}, {
+      				name: 'Source 3',
+      				y: 210
+      			}, {
+      				name: 'Source 4',
+      				y: 95
+      			}],
+      			dataLabels: {
+      				formatter: function () {
+      					return this.point.name + ' £' + this.y;
+      				}
+      			}
+      		}],
+      		navigation: {
+      			buttonOptions: {
+      				enabled: false
+      			}
+      		}
+      	});
+      });
+      
+    </script>
   </head>
   <body><!--[if IE 8]><div class="ie8"><![endif]-->
     <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
@@ -41,7 +147,120 @@
           <h1 class="title__heading js-ref"><span class="title__title">Charts</span></h1>
         </div>
         <div class="articleContent row">
-          <div class="span8"></div>
+          <div class="span8">
+            <div class="example-box-plain">
+              <div id="column-chart"></div>
+            </div>
+            <pre><code class="language-html">&lt;script&gt;
+	// Column chart
+	$(function () {
+		var chart = new Highcharts.Chart({
+			colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+			chart: {
+				type: 'column',
+				renderTo: 'column-chart',
+				backgroundColor:'rgba(255,255,255,0)'
+			},
+			title: {
+				text: 'Column chart'
+			},
+			xAxis: {
+				categories: ['Person 1', 'Person 2']
+			},
+			yAxis: {
+				title:
+				{
+					text: '£ GBP'
+				}
+			},
+			tooltip: {
+				formatter: function () {
+					return this.series.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+				}
+			},
+			credits: {
+				enabled: false
+			},
+			series: [{
+				name: 'Income',
+				data: [250, 450]
+			},
+					{
+				name: 'Spending',
+				data: [450, 350]
+			}],
+			navigation: {
+				buttonOptions: {
+					enabled: false
+				}
+			}
+		});
+	});
+&lt;/script&gt;
+&lt;div id="column-chart"&gt;&lt;/div&gt;</code></pre>
+            <div class="example-box-plain">
+              <div id="pie-chart"></div>
+            </div>
+            <pre><code class="language-html">&lt;script&gt;
+	// Pie chart
+	$(function () {
+		var chart = new Highcharts.Chart({
+			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+			chart: {
+				type: 'pie',
+				renderTo: 'pie-chart',
+				backgroundColor:'rgba(255,255,255,0)'
+			},
+			title: {
+				text: 'Pie chart'
+			},
+			tooltip: {
+				formatter: function () {
+					return this.point.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+				}
+			},
+			plotOptions: {
+				pie: {
+					allowPointSelect: false,
+					cursor: 'pointer',
+					showInLegend: false
+				}
+			},
+			credits: {
+				enabled: false
+			},
+			series: [{
+				name: 'Income',
+				colorByPoint: true,
+				data: [{
+					name: 'Source 1',
+					y: 140
+				}, {
+					name: 'Source 2',
+					y: 50
+				}, {
+					name: 'Source 3',
+					y: 210
+				}, {
+					name: 'Source 4',
+					y: 95
+				}],
+				dataLabels: {
+					formatter: function () {
+						return this.point.name + ' £' + this.y;
+					}
+				}
+			}],
+			navigation: {
+				buttonOptions: {
+					enabled: false
+				}
+			}
+		});
+	});
+&lt;/script&gt;
+&lt;div id="pie-chart"&gt;&lt;/div&gt;</code></pre>
+          </div>
         </div>
         <div class="print-only">
           <h2>This section is print only</h2>
