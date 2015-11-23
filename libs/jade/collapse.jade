@@ -30,7 +30,7 @@ block content
 					| &lt;/div&gt;
 
 			.example-box-plain
-				.collapse.collapsible--aqua
+				.collapse.collapsible
 					.collapse-toggle Collapses can be grouped
 					.collapse-content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
@@ -41,7 +41,7 @@ block content
 						a.collapse-toggle-close Close
 			pre
 				code.language-html
-					| &lt;div class="collapse collapsible--aqua"&gt;
+					| &lt;div class="collapse collapsible"&gt;
 					| 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
 					| 	&lt;div class="collapse-content"&gt;
 					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
@@ -55,7 +55,7 @@ block content
 					| &lt;/div&gt;
 
 			.example-box-plain
-				.collapse.collapsible--green
+				.collapse.collapsible
 					.collapse-toggle
 						h2 H2 Heading
 						p Heading toggle can also contain formatted html.
@@ -64,7 +64,7 @@ block content
 						a.collapse-toggle-close Close
 			pre
 				code.language-html
-					| &lt;div class="collapse collapsible--green"&gt;
+					| &lt;div class="collapse collapsible"&gt;
 					| 	&lt;div class="collapse-toggle"&gt;
 					| 		&lt;h2&gt;H2 Heading&lt;/h2&gt;
 					| 		&lt;p&gt;Heading toggle can also contain formatted html.&lt;/p&gt;
@@ -75,13 +75,13 @@ block content
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
-			.example-box-plain
+			//.example-box-plain
 				.collapse.collapsible--red
 					.collapse-toggle Unstyled content inside header/toggle
 					.collapse-content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
 						a.collapse-toggle-close Close
-			pre
+			//pre
 				code.language-html
 					| &lt;div class="collapse collapsible--red"&gt;
 					| 	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
@@ -91,8 +91,9 @@ block content
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
+
+			h2 Existing syntax
 			.example-box-plain
-				h2 Old syntax styling
 				section.revealable
 					h3#heading-one.revealable__heading(aria-controls="revealable-1", aria-expanded="true", tabindex="0", title="Expand section") Heading one
 					div#revealable-1.revealable__content(aria-expanded="false", aria-hidden="false")

@@ -58,7 +58,7 @@
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <div class="example-box-plain">
-              <div class="collapse collapsible--aqua">
+              <div class="collapse collapsible">
                 <div class="collapse-toggle">Collapses can be grouped</div>
                 <div class="collapse-content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.</p><a class="collapse-toggle-close">Close</a>
@@ -69,7 +69,7 @@
                 </div>
               </div>
             </div>
-            <pre><code class="language-html">&lt;div class="collapse collapsible--aqua"&gt;
+            <pre><code class="language-html">&lt;div class="collapse collapsible"&gt;
 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
 	&lt;div class="collapse-content"&gt;
 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
@@ -82,7 +82,7 @@
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             <div class="example-box-plain">
-              <div class="collapse collapsible--green">
+              <div class="collapse collapsible">
                 <div class="collapse-toggle">
                   <h2>H2 Heading</h2>
                   <p>Heading toggle can also contain formatted html.</p>
@@ -92,7 +92,7 @@
                 </div>
               </div>
             </div>
-            <pre><code class="language-html">&lt;div class="collapse collapsible--green"&gt;
+            <pre><code class="language-html">&lt;div class="collapse collapsible"&gt;
 	&lt;div class="collapse-toggle"&gt;
 		&lt;h2&gt;H2 Heading&lt;/h2&gt;
 		&lt;p&gt;Heading toggle can also contain formatted html.&lt;/p&gt;
@@ -102,23 +102,27 @@
 		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+            <!--.example-box-plain
+            .collapse.collapsible--red
+            	.collapse-toggle Unstyled content inside header/toggle
+            	.collapse-content
+            		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+            		a.collapse-toggle-close Close
+            -->
+            <!--pre
+            code.language-html
+            	| &lt;div class="collapse collapsible--red"&gt;
+            	| 	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
+            	| 	&lt;div class="collapse-content"&gt;
+            	| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+            	| 		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
+            	| 	&lt;/div&gt;
+            	| &lt;/div&gt;
+            
+            
+            -->
+            <h2>Existing syntax</h2>
             <div class="example-box-plain">
-              <div class="collapse collapsible--red">
-                <div class="collapse-toggle">Unstyled content inside header/toggle</div>
-                <div class="collapse-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.</p><a class="collapse-toggle-close">Close</a>
-                </div>
-              </div>
-            </div>
-            <pre><code class="language-html">&lt;div class="collapse collapsible--red"&gt;
-	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
-	&lt;div class="collapse-content"&gt;
-		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
-		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            <div class="example-box-plain">
-              <h2>Old syntax styling</h2>
               <section class="revealable">
                 <h3 id="heading-one" aria-controls="revealable-1" aria-expanded="true" tabindex="0" title="Expand section" class="revealable__heading">Heading one</h3>
                 <div id="revealable-1" aria-expanded="false" aria-hidden="false" class="revealable__content">
