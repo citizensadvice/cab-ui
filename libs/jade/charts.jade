@@ -6,7 +6,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Styles", href: "index.html#styles"}, 
+		{title: "Modules", href: "index.html#modules"}, 
 		{title: "Charts"}])
 
 block script
@@ -49,6 +49,10 @@ block script
 						{
 					name: 'Spending',
 					data: [450, 350]
+				},
+						{
+					name: 'Saving',
+					data: [150, 75]
 				}],
 				navigation: {
 					buttonOptions: {
@@ -159,6 +163,10 @@ block content
 					|					{
 					|				name: 'Spending',
 					|				data: [450, 350]
+					|			},
+					|			{
+					|				name: 'Saving',
+					|				data: [150, 75]
 					|			}],
 					|			navigation: {
 					|				buttonOptions: {
