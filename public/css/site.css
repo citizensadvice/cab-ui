@@ -2273,6 +2273,141 @@ ul li {
   margin: 0 0 0.5em 0;
 }
 /***************************************************************************
+* Box links
+* Hopefully a fairly logical name
+* Holders for content, where the entire area links to further content
+* Being tested with ./public/pip-content.html
+*/
+.box--links {
+  padding: .75em 1em;
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  margin: 12px 0px;
+  margin: 0.75rem 0rem;
+  background-color: #FFF;
+  color: #191926;
+  border: 0px #A5BDDC solid;
+  display: block;
+  /*.callout__link {
+	 	cursor: pointer;
+	 	display: block;
+	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
+	    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+	    border: none;
+	    background-color: darken(spin(@callout-background, 15), 5%);
+	    color: @callout-text;
+	    border-bottom: 1px solid @callout-border;
+	    text-decoration: none;
+	    position: relative;
+		&:after {
+			box-sizing: border-box;
+		    font-family: 'FontAwesome';
+		    content: "\f054";
+		    color: @callout-text;
+		    background-color: darken(spin(@callout-background, 15), 10%);
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    line-height: 3em;
+		    width: 3em;
+		    text-align: center;
+		}
+	    &:hover {
+	    	background-color: darken(spin(@callout-background, 15), 10%);
+	    	color: @callout-text;
+	    	&:after {
+	    		background-color: darken(spin(@callout-background, 15), 20%);
+	    	}
+	    }
+	    &--anchor:after {
+		    content: "\f063";
+	    }
+	}*/
+  border-width: 1px;
+  margin-top: 1rem;
+}
+.box--links:before {
+  color: #191926;
+  background-color: #A5BDDC;
+}
+.box--links > h1,
+.box--links > h2,
+.box--links > h3 {
+  color: #191926;
+  font-size: 1.3rem;
+}
+.box--links a {
+  border-bottom-color: #A5BDDC;
+}
+.box--links > *:first-child {
+  padding-top: 0;
+}
+.box--links h1:first-child,
+.box--links h2:first-child,
+.box--links h3:first-child,
+.box--links h4:first-child,
+.box--links h5:first-child,
+.box--links h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.box--links li:first-child {
+  padding-top: 0;
+}
+.box--links > *:last-child {
+  margin-bottom: 0;
+}
+.box--links .callout__link:last-child {
+  border: none;
+}
+.box--links .flex-row {
+  padding: 0;
+}
+.box--links h2,
+.box--links h3 {
+  color: #004B88;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
+}
+@media (min-width: 840px) {
+  .box--links .columns {
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-gap: 1rem;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    -ms-column-gap: 1rem;
+    -o-column-gap: 1rem;
+    columns: 2;
+  }
+}
+.box--links .columns ul,
+.box--links .columns ol {
+  margin: 0;
+  padding: 4px 16px;
+  padding: 0.25rem 1rem;
+}
+.box--links .columns ul li,
+.box--links .columns ol li {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.box--links a {
+  border-width: 0;
+}
+.box--links a:hover {
+  border-bottom: 0px #004B88 solid;
+  border-bottom-width: 1px;
+}
+/***************************************************************************
  * Page status
  * Badge
  */

@@ -1,5 +1,5 @@
 block settings
-    - var title = "How to fill in your PIP claim form"
+    - var title = "Q8 Dressing and undressing"
     - var sidebar = true
     - var toolbars = true
     //- var cookiemonster = true
@@ -10,20 +10,31 @@ extends ../template/template.jade
 block breadcrumbs
     +breadcrumbs([
         {title: "Home", href: "index.html"}, 
-        {title: "Templates", href: "index.html#templates"},
-        {title: "Content"}])
+        {title: "Benefits", href: "#"},
+        {title: "Sick or disabled people and carers", href: "#"},
+        {title: "PIP", href: "pip-index.html"},
+        {title: "Help filling in your PIP2 form", href: "pip-contents.html"},
+        {title: "Q8 Dressing and undressing"}
+        ])
 
 block sidebar
-    - var section = "Before you claim PIP"
+    - var section = "Help filling in your PIP2 form"
     +sidebar([
-        {title: "How to fill in your PIP claim form"},
-        {title: "How to claim PIP"},
-        {title: "How to claim PIP if you have a terminal illness"},
-        {title: "How to fill in your claim form"},
-        {title: "Getting evidence to support your PIP claim"},
-        {title: "Preparing for your PIP assessment"},
-        {title: "Changes that affect your PIP"}
-        ],0)
+        {title: "General Advice"},
+        {title: "Q2 About your health conditions or disabilities"},
+        {title: "Q3 Preparing Food"},
+        {title: "Q4 Eating and drinking"},
+        {title: "Q5 Managing treatments"},
+        {title: "Q6 Washing and bathing"},
+        {title: "Q7 Managing toilet needs"},
+        {title: "Q8 Dressing and undressing"},
+        {title: "Q9 Communicating"},
+        {title: "Q10 Reading"},
+        {title: "Q11 Mixing with other people"},
+        {title: "Q12 Making decisions about money"},
+        {title: "Q13 Going out"},
+        {title: "Q14 Moving around"}
+        ],1)
 //    - var section = "Sibling categories"
 //    +sidebar([
 //        ])
@@ -37,94 +48,150 @@ block section-notice
 block content
     .articleContent
         div
-            p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
+            p This question is to assess your ability to put on and take off culturally appropriate, un-adapted clothing that’s suitable for the situation. This includes putting on and taking off socks and shoes.
 
-            p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.
+            p Most people will get dressed and undressed - but if you have any difficulties at all, including if you sometimes don’t get dressed or undressed in the morning or before going to bed, you should probably get some points for this question. You should also get points if it takes you a long time, you couldn’t do it without another person, or without an aid or appliance.
 
-            p You should make sure you’re prepared and have all the relevant information to help you make your claim.
+            h2 Question 8a - tick box 
 
-            p Your first payment for PIP will be backdated to the date you started your claim and cover the length of time it takes the Department for Work and Pensions (DWP) to make its decision. If you're moving from DLA to PIP your PIP payments will start the day after your DLA stops.
+            //.example-box-plain
+            .well--outline
+                label(for="standardfield") Do you use an aid or appliance to dress or undress?
+                <span class="form-hint">Aids or appliances could include shoe horns, modified clothing e.g. front fastening bras, velcro fastenings etc</span>
+                label.radio.radio--inline
+                    input(checked name="radio-inline", type="radio", value="option1")
+                    | Yes
+                label.radio.radio--inline
+                    input(name="radio-inline", type="radio", value="option2")
+                    | No
+                label.radio.radio--inline
+                    input(name="radio-inline", type="radio", value="option3")
+                    | Sometimes
 
-            h2 The claims process
-            p There are 3 stages to your claim:
+            p If possible, try not to answer “sometimes” because either you do or you don’t use an aid or appliance. If you tick '"sometimes" the DWP might think you can manage more than you can. You can explain when you do and don’t use an aid in the extra information text box for question 8. 
 
-            ol
-                li Start your claim by calling the DWP
-                li Wait for them to send you a claim form
-                li Go to a face-to-face assessment - most people have to do this (but you won’t if you’re terminally ill)
-
-            p It can take up to 2 weeks for the DWP to send you a PIP claim form. While you wait, it’s a good idea to think about how you’ll fill in the claim form and if you need any supporting evidence.
-
-            p If you’re waiting a very long time for a decision on your claim, contact your local Citizens Advice in England and Wales or in Scotland. You can complain to the DWP if the delay is unreasonable and may be able to claim compensation if it’s considered unlawful. However, there are no set rules on what counts as unreasonable or unlawful
-
-            h2 Start your claim - fill in a PIP1 form
-
-            p You can start your PIP claim by filling in a PIP1 form. You can do this either:
-
-            ul 
-                li by phone - a DWP adviser will fill in the basic claim form during the call, it should only take 20 minutes
-                li by post - filling in a paper form that the DWP can send you, and posting it back
-
-                p You can’t fill in the PIP1 form online.
-
-            .callout
-                p It’s best to start your claim by phone because it’s quicker and your PIP payments are usually backdated to when you start your claim - either the date you phone or the date the DWP receives your PIP1 form.
-
-                p You can only get the PIP claim forms from the DWP, not online or from Citizens Advice.
-
-            h2 Basic information you need to start your claim
-
-            p You’ll need to have this information when you call the DWP:
+            p If you tick no: do you really not use an aid? You should probably be ticking yes and giving more detail in the extra information if any of the following apply:
 
             ul
-                li your full name, address and phone number
-                li your national insurance number
-                li your bank or building society account details so payments can be made if PIP is awarded
-                li contact details of your GP or other health professionals you deal with
-                li the dates and details of any stays in hospital or residential care
-                li your nationality or immigration status
-                li if you’ve been abroad for more than 4 weeks at a time in the last 3 years (you’ll need the dates and details)
-                li You’ll be asked if you have any conditions relating to your mental health, a learning difficulty or behavioural condition. These questions are asked to check if you need any additional help or support with your claim.
+                li you wear adapted clothing, such as clothes with velcro or clothes with no fastenings
+                li you use an aid some of the time but not always 
 
-            .collapse.collapsible
-                .collapse-toggle I want to apply by phone
-                .collapse-content
-                    p PIP claim line
-                    p Telephone 0800 917 2222
-                    p Textphone 0800 917 7777
-                    p Open Monday to Friday, 8am to 6pm
-                    p Calls are free from landlines and from mobiles.
-                    p It should take about 20 minutes to complete the call. If you’d prefer someone else to call for you that’s fine, but you need to be with them so that you can give permission for them to speak for you.
-                    a.collapse-toggle-close Close
+            h2 Question 8b - tick box  
 
-            .collapse.collapsible
-                .collapse-toggle I want to apply by post
-                .collapse-content
-                    p It’s quicker to apply by phone, but If that isn’t possible you can write to the DWP and ask for a PIP1 form.
-                    p You’ll need to tell them why you (or someone else) can’t do the PIP1 form over the phone.
-                    p Personal Independence Payment New Claims 
-                    p Post Handling Site B 
-                    p Wolverhampton 
-                    p WV99 1AH
+            .well--outline
+                label(for="standardfield") Do you need help from another person to dress or undress?
+                label.radio.radio--inline
+                    input(checked name="radio-inline", type="radio", value="option1")
+                    | Yes
+                label.radio.radio--inline
+                    input(name="radio-inline", type="radio", value="option2")
+                    | No
+                label.radio.radio--inline
+                    input(name="radio-inline", type="radio", value="option3")
+                    | Sometimes
 
-                    a.collapse-toggle-close Close
+                p Again, try not to answer sometimes.
 
-            .callout--adviser.callout--icon
-                h3 Information for advisers
-                p The PIP2 form is sometimes called ‘How your condition affects you’ form
+                p If you tick no: our advice is you should probably be ticking yes if any of the following apply:
                 ul
-                    li DWP guidance: #[a.a-external-link(href="#") Sample PIP1 form]
-                    li DWP guidance: #[a.a-external-link(href="#") Sample PIP2 form]
-                    li DWP guidance: #[a.a-external-link(href="#") Compensation for poor service]
-                p Case law: #[a(href="#") Unlawful delays in processing a PIP claim and the High Court’s decision]
-                p Power of attorney: #[a(href="#") making decisions for someone who lacks mental capacity]
-                p #[a(href="#") Appointees and benefit claims]
+                    li someone reminds you
+                    li someone encourages you
+                    li someone supervises you 
+                    li someone stays with you to make sure you’re safe / not at risk
+
+            h2 Question 8 extra information
+
+            .callout--warning
+                h2 Don’t ignore the extra information box - it’s a really important part of your application. 
+                p It’s your opportunity to tell the DWP how your condition affects you and give them a truer picture against which they’ll decided whether or not you can get PIP.
+                p You can also use this space to explain what help you need - even if you don’t currently get it. For example, because you said you don’t use an aid or someone doesn’t help you. 
+
+            .collapse.collapsible
+                .collapse-toggle I couldn’t get dressed or undressed if I was on my own
+                .collapse-content
+                    p Try to think about how you get dressed and undressed. It might help to imagine getting dressed in a changing room of a shop or someone else’s house.
+
+                    p If someone else helps you to get dressed try to describe what they do and why. Think about how much longer it takes compared to someone who doesn’t have your condition. If you can’t do it in one go, include the times you have to rest. Does it take twice as long or more? 
+
+                    p Explain how you would put on certain items of clothing, and how someone helps you to do it. Be specific about which items you need help with, or if you have to avoid wearing them altogether. For example, do you have to wear clothes you wouldn’t choose to wear but you can’t manage fiddly buttons or shoe laces?
+
+                    p Could you repeatedly get dressed and undressed, for example in a changing rooms in a shop? Think about whether this would make you tired or cause you pain, and whether you would need someone with you to help you if you were going shopping for clothes..
+                    a.collapse-toggle-close Close
+
+
+            .collapse.collapsible
+                .collapse-toggle I have difficulties getting some items of clothing on or off, or fastening them without someone helping me (for example a shirt, jumper, socks, tights, or shoes)
+                .collapse-content
+                    p Explain how you would put on particular items of clothing, and how someone helps you to do it. Be specific about who helps you, what they do to help and which items they help with. There might be some clothes you avoid wearing altogether. For example if you wear trousers with an elasticated waist as you can’t manage a belt, or cardigans rather than jumpers.
+
+                    p Could you repeatedly get dressed and undressed, for example in a changing rooms in a shop? Think about whether this would make you tired or cause you pain, or if you would need someone with you to help if you were shopping for clothes.
+
+                    p Does it take you longer to get dressed and undressed than other people? If you can’t do it in one go include times you have to rest. Think about how much longer it takes you to get dressed and undressed compared to someone who doesn’t have your condition.
+                    a.collapse-toggle-close Close
+
+            .collapse.collapsible
+                .collapse-toggle I sometimes need reminding or encouraging to change my clothes when I go to bed or when I get up
+                .collapse-content
+                    p If you find that you don’t always get undressed when you go to bed, or that you don’t always get dressed in the morning, try to explain why and how often this happens. Try to be specific about what happens if you’re not reminded or encouraged, and who reminds or encourages you. Here are some examples:
+                    .callout--quote
+                        p 'I suffer from depression and I often feel too low to get dressed. It’s seems like a big effort and I find it hard to be motivated to do it unless my dad comes round and says I should. He usually comes round 2 or 3 times a week - unless he comes I don’t usually get dressed.'
+                    .callout--quote
+                        p ‘I have PTSD and usually fall asleep on the sofa in my clothes - the thought of sleeping upstairs makes me really anxious as I need to be able to see the front door. Sometimes my partner comes down to get me to change but she usually won’t as I can get very distressed if I’m woken up in the night’
+                    a.collapse-toggle-close Close
+
+            .collapse.collapsible
+                .collapse-toggle Sometimes I don’t get changed or get dressed when I probably should
+                .collapse-content
+                    p Think about whether you don’t get changed when other people might think it appropriate. Here are some examples:
+                    .callout--quote
+                        p ‘It’s very painful for me to change my clothes. It takes about an hour for the pain in my back to subside afterwards and I have to take painkillers. It’s hard to put myself through it, so if I’m not going out that day I won’t change out of my night clothes.’
+                    .callout--quote
+                        p ‘I have tremors in my hands which is a side effect of my asthma medication. I spill my food and drinks on my clothes probably a couple of times a day. I know I should probably change out of them but I can’t motivate myself until other people notice and say something’
+                    a.collapse-toggle-close Close
+
+            .collapse.collapsible
+                .collapse-toggle I need help to choose appropriate clothes to wear
+                .collapse-content
+                    p Think about why you need some help to choose which clothes to wear. Here are some examples:
+                    .callout--quote
+                        p ‘I’m partially sighted and I need help to pick out clothes as otherwise I can end up with something inside out or back to front.’
+                    .callout--quote
+                        p ‘Due to Michael’s aspergers he doesn’t appreciate what clothes are appropriate. He sees clothes as purely functional and doesn’t see that some things shouldn’t be worn together, or that a t shirt is full of holes.’
+                    .callout--quote
+                        p When I’m feeling manic I can lose my inhibitions and wear some pretty unusual outfits. People have shouted at me in the street. I don’t care at the time but later I feel mortified and it really gets me down’
+                    a.collapse-toggle-close Close
+
+            .collapse.collapsible
+                .collapse-toggle I’ve got undressed in public, or at another inappropriate time
+                .collapse-content
+                    p If you’ve ever got undressed in the street, or at any other time that other people thought was inappropriate, make sure you put this on your form. Try to explain why you think it happened, such an effect of a specific condition. This can be quite common in people who have dementia. 
+                    a.collapse-toggle-close Close
+
+            .collapse.collapsible
+                .collapse-toggle I use aids or appliances to help me get dressed, for example a shoe horn, button fasteners or a front-fastening bra
+                .collapse-content
+                    p Think about what aids and appliances you need to get dressed and undressed. It might help to imagine getting dressed in a changing room of a shop or at a friend’s house instead of your own.
+                    p Try to cover all the aids or appliances you use and why you need them - for example you could need side opening clothing because someone else needs to help you get dressed.
+                    p Think about whether it would take you much longer to get dressed or undressed without an aid or appliance. How much longer would it take?
+                    p Here are some examples:
+                    ul
+                        li a shoe horn
+                        li button fasteners
+                        li front fastening bra
+                        li velcro fastening shoes
+                        li Zip puller
+                        li dressing stick
+                        li sock puller
+                        li sleeve aids
+                        li a leg lifter
+                        li magnetic buttons
+                        li open-back or side-opening clothing
+                        li elastic shoelaces
+                        li a reacher
+                    a.collapse-toggle-close Close
 
             .callout--related
                 h3 Next steps
-                p The DWP will assess whether you meet the basic eligibility conditions.
-                p If you do, they’ll send you a PIP claim form. This form is where you tell them how your condition affects you. If you’ve waited more than 2 weeks, contact the PIP claims line and ask them for an update.
-                p While you wait for the PIP2 form, you should think about #[a(href="#") how to fill in the PIP claim form] and if you need to organise any #[a(href="#") supporting evidence] to support your claim.
                 p If you don’t meet the basic eligibility conditions, you’ll be sent a decision letter to say why you’ve been refused. If you think the decision is wrong, you can #[a(href="#") challenge the DWP’s decision].
                 
     #simpleModal.modal
