@@ -31,7 +31,8 @@
       // Column chart
       $(function () {
       	var chart = new Highcharts.Chart({
-      		colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+      		// Make sure to include this string of brand colours
+      		colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
       		chart: {
       			type: 'column',
       			renderTo: 'column-chart',
@@ -80,6 +81,7 @@
       // Pie chart
       $(function () {
       	var chart = new Highcharts.Chart({
+      		// Make sure to include this string of brand colours
       		colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
       		chart: {
       			type: 'pie',
@@ -152,6 +154,8 @@
         </div>
         <div class="articleContent row">
           <div class="span8">
+            <p>Charts are created using <a href="http://www.highcharts.com/" target="_blank" class="a-external-link">Highcharts</a>, which are very well documented on their website. The examples on this page show colouring and label use.</p>
+            <h2>Column charts</h2>
             <div class="example-box-plain">
               <div id="column-chart"></div>
             </div>
@@ -159,7 +163,8 @@
 	// Column chart
 	$(function () {
 		var chart = new Highcharts.Chart({
-			colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+			// Make sure to include this string of brand colours
+			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 			chart: {
 				type: 'column',
 				renderTo: 'column-chart',
@@ -206,6 +211,7 @@
 	});
 &lt;/script&gt;
 &lt;div id="column-chart"&gt;&lt;/div&gt;</code></pre>
+            <h2>Pie charts</h2>
             <div class="example-box-plain">
               <div id="pie-chart"></div>
             </div>
@@ -213,6 +219,7 @@
 	// Pie chart
 	$(function () {
 		var chart = new Highcharts.Chart({
+			// Make sure to include this string of brand colours
 			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 			chart: {
 				type: 'pie',

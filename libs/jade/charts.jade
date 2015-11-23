@@ -16,7 +16,8 @@ block script
 		// Column chart
 		$(function () {
 			var chart = new Highcharts.Chart({
-				colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+				// Make sure to include this string of brand colours
+				colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 				chart: {
 					type: 'column',
 					renderTo: 'column-chart',
@@ -65,6 +66,7 @@ block script
 		// Pie chart
 		$(function () {
 			var chart = new Highcharts.Chart({
+				// Make sure to include this string of brand colours
 				colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 				chart: {
 					type: 'pie',
@@ -122,6 +124,9 @@ block script
 block content
 	.articleContent.row
 		.span8
+			p Charts are created using #[a.a-external-link(href="http://www.highcharts.com/", target="_blank") Highcharts], which are very well documented on their website. The examples on this page show colouring and label use.
+
+			h2 Column charts
 			.example-box-plain
 				#column-chart
 			pre
@@ -130,7 +135,8 @@ block content
 					|	// Column chart
 					|	$(function () {
 					|		var chart = new Highcharts.Chart({
-					|			colors: ['#004B88', '#FCBB69', '#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+					|			// Make sure to include this string of brand colours
+					|			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 					|			chart: {
 					|				type: 'column',
 					|				renderTo: 'column-chart',
@@ -178,6 +184,7 @@ block content
 					| &lt;/script&gt;
 					| &lt;div id="column-chart"&gt;&lt;/div&gt;
 
+			h2 Pie charts
 			.example-box-plain
 				#pie-chart
 			pre
@@ -186,6 +193,7 @@ block content
 					|	// Pie chart
 					|	$(function () {
 					|		var chart = new Highcharts.Chart({
+					|			// Make sure to include this string of brand colours
 					|			colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
 					|			chart: {
 					|				type: 'pie',
