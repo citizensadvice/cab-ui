@@ -8089,12 +8089,13 @@ html[lang="en-SCT"] .main-nav {
   padding: 6px 16px;
   padding: 0.375rem 1rem;
   max-width: 1080px;
+  overflow: scroll;
 }
 .main-breadcrumb .breadcrumb__extent-link {
   display: none;
 }
 .main-breadcrumb .breadcrumb__item {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 3;
 }
 .main-breadcrumb .breadcrumb__item > i {
