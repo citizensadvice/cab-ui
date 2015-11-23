@@ -2361,11 +2361,10 @@ ul li {
 .example-box-plain fieldset:last-child {
   margin-bottom: 0;
 }
-span.code {
+.code {
   color: #333;
   padding: 5px;
   font-size: 0.875rem;
-  margin: 1em 1em 3em 1em;
   font-family: monaco,monospace;
   line-height: 1.7em;
   background-color: #f8f8f8;
