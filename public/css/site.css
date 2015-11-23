@@ -2537,6 +2537,7 @@ pre[class*="language-"] {
   margin-top: 0;
   border-radius: 0 0 2px 2px;
   font-size: .85rem;
+  max-height: 15rem;
 }
 pre[class*="language-"]:before {
   color: #191926;

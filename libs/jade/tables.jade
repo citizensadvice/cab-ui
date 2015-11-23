@@ -13,7 +13,7 @@ block content
 	.articleContent.row
 		.span8
 			.example-box-plain
-				table(style="width:100%")
+				table.full-width
 					thead
 						tr
 							th(scope="col") th
@@ -28,17 +28,9 @@ block content
 							td td
 							td td
 							td td
-						tr
-							td td
-							td td
-							td td
-						tr
-							td td
-							td td
-							td td
 			pre
 				code.language-html
-					| &lt;table&gt;
+					| &lt;table class="full-width"&gt;
 					| 	&lt;thead&gt;
 					| 		&lt;tr&gt;
 					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
@@ -57,15 +49,105 @@ block content
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 		&lt;/tr&gt;
+					| 	&lt;/tbody&gt;
+					| &lt;/table&gt;
+
+			.example-box-plain
+				table.full-width
+					thead
+						tr
+							th(scope="col", colspan="2") Budget table
+					tbody
+						tr
+							td Label
+							td.amount £00.00
+						tr.total
+							td Total
+							td.amount £00.00
+			pre
+				code.language-html
+					| &lt;table class="full-width"&gt;
+					|	&lt;thead&gt;
+					|		&lt;tr&gt;
+					|			&lt;th scope="col" colspan="2"&gt;Budget table&lt;/th&gt;
+					|		&lt;/tr&gt;
+					|	&lt;/thead&gt;
+					|	&lt;tbody&gt;
+					|		&lt;tr&gt;
+					|			&lt;td&gt;Label&lt;/td&gt;
+					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|		&lt;/tr&gt;
+					|		&lt;tr class="total"&gt;
+					|			&lt;td&gt;Total&lt;/td&gt;
+					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|		&lt;/tr&gt;
+					|	&lt;/tbody&gt;
+					| &lt;/table&gt;
+
+			.example-box-plain
+				table.full-width
+					thead
+						tr
+							th(scope="col") th
+							th(scope="col") th
+					tbody
+						tr.table-collapse--toggle
+							td td
+							td td
+						tr.table-collapse
+							td(colspan="2")
+								table.full-width
+									tbody
+										tr
+											td td
+											td td
+						tr.table-collapse--toggle
+							td td
+							td td
+						tr.table-collapse
+							td(colspan="2")
+								table.full-width
+									tbody
+										tr
+											td td
+											td td
+			pre
+				code.language-html
+					| &lt;table class="full-width"&gt;
+					| 	&lt;thead&gt;
 					| 		&lt;tr&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
+					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
+					| 		&lt;/tr&gt;
+					| 	&lt;/thead&gt;
+					| 	&lt;tbody&gt;
+					| 		&lt;tr class="table-collapse--toggle"&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 		&lt;/tr&gt;
-					| 		&lt;tr&gt;
+					| 		&lt;tr class="table-collapse"&gt;
+					| 			&lt;td colspan="2"&gt;
+					|				&lt;table class="full-width"&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|				&lt;/table&gt;
+					|			&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 		&lt;tr class="table-collapse--toggle"&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 		&lt;tr class="table-collapse"&gt;
+					| 			&lt;td colspan="2"&gt;
+					|				&lt;table class="full-width"&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|				&lt;/table&gt;
+					|			&lt;/td&gt;
 					| 		&lt;/tr&gt;
 					| 	&lt;/tbody&gt;
 					| &lt;/table&gt;

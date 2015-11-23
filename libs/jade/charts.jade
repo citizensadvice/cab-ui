@@ -1,0 +1,14 @@
+block settings
+	- var title = "Charts"
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Styles", href: "index.html#styles"}, 
+		{title: "Charts"}])
+
+block content
+	.articleContent.row
+		.span8

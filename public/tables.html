@@ -43,7 +43,7 @@
         <div class="articleContent row">
           <div class="span8">
             <div class="example-box-plain">
-              <table style="width:100%">
+              <table class="full-width">
                 <thead>
                   <tr>
                     <th scope="col">th</th>
@@ -62,20 +62,10 @@
                     <td>td</td>
                     <td>td</td>
                   </tr>
-                  <tr>
-                    <td>td</td>
-                    <td>td</td>
-                    <td>td</td>
-                  </tr>
-                  <tr>
-                    <td>td</td>
-                    <td>td</td>
-                    <td>td</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
-            <pre><code class="language-html">&lt;table&gt;
+            <pre><code class="language-html">&lt;table class="full-width"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th scope="col"&gt;th&lt;/th&gt;
@@ -94,15 +84,123 @@
 			&lt;td&gt;td&lt;/td&gt;
 			&lt;td&gt;td&lt;/td&gt;
 		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <div class="example-box-plain">
+              <table class="full-width">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">Budget table</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Label</td>
+                    <td class="amount">£00.00</td>
+                  </tr>
+                  <tr class="total">
+                    <td>Total</td>
+                    <td class="amount">£00.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre><code class="language-html">&lt;table class="full-width"&gt;
+	&lt;thead&gt;
 		&lt;tr&gt;
-			&lt;td&gt;td&lt;/td&gt;
+			&lt;th scope="col" colspan="2"&gt;Budget table&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Label&lt;/td&gt;
+			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="total"&gt;
+			&lt;td&gt;Total&lt;/td&gt;
+			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <div class="example-box-plain">
+              <table class="full-width">
+                <thead>
+                  <tr>
+                    <th scope="col">th</th>
+                    <th scope="col">th</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-collapse--toggle">
+                    <td>td</td>
+                    <td>td</td>
+                  </tr>
+                  <tr class="table-collapse">
+                    <td colspan="2">
+                      <table class="full-width">
+                        <tbody>
+                          <tr>
+                            <td>td</td>
+                            <td>td</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="table-collapse--toggle">
+                    <td>td</td>
+                    <td>td</td>
+                  </tr>
+                  <tr class="table-collapse">
+                    <td colspan="2">
+                      <table class="full-width">
+                        <tbody>
+                          <tr>
+                            <td>td</td>
+                            <td>td</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pre><code class="language-html">&lt;table class="full-width"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope="col"&gt;th&lt;/th&gt;
+			&lt;th scope="col"&gt;th&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr class="table-collapse--toggle"&gt;
 			&lt;td&gt;td&lt;/td&gt;
 			&lt;td&gt;td&lt;/td&gt;
 		&lt;/tr&gt;
-		&lt;tr&gt;
+		&lt;tr class="table-collapse"&gt;
+			&lt;td colspan="2"&gt;
+				&lt;table class="full-width"&gt;
+					&lt;tr&gt;
+						&lt;td&gt;td&lt;/td&gt;
+						&lt;td&gt;td&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="table-collapse--toggle"&gt;
 			&lt;td&gt;td&lt;/td&gt;
 			&lt;td&gt;td&lt;/td&gt;
-			&lt;td&gt;td&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="table-collapse"&gt;
+			&lt;td colspan="2"&gt;
+				&lt;table class="full-width"&gt;
+					&lt;tr&gt;
+						&lt;td&gt;td&lt;/td&gt;
+						&lt;td&gt;td&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/td&gt;
 		&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
