@@ -1,6 +1,7 @@
 block settings
 	- var title = "Cookie Monster"
 	- var cookiemonster = true
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -11,16 +12,22 @@ block breadcrumbs
 		{title: "Cookie Monster"}])
 
 block sidebar
-	- var section = "Section title"
-	// Set the number at the end to the array position of the active page
+	- var section = "Modules"
 	+sidebar([
-		{title: "Sibling page 1"},
-		{title: "Sibling page 2"}],
-		0)
+		{href: "callout.html", title: "Callout"},
+		{href: "collapse.html", title: "Collapse"},
+		{href: "charts.html", title: "Charts"},
+		{href: "section-notice.html", title: "Section Notices"},
+		{href: "toolbar.html", title: "Content toolbar"},
+		{href: "cookie-monster.html", title: "Cookie Monster"},
+		{href: "extent.html", title: "Extent Switcher"},
+		{href: "overlay.html", title: "Modal/Overlay"},
+		{href: "reference.html", title: "Reference tool"}
+	],5)
 
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			p Cookie monster appears attached to the bottom of the screen.
 			.example-box-plain
 				.cookie-monster.hide-no-cookies.hide-no-js.no-print(style="position:relative;z-index:0;")

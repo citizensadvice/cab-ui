@@ -3227,6 +3227,34 @@ div.tooltip:before {
   padding: 1.125rem 1rem;
   display: block;
 }
+.styleguide--footer {
+  padding: 16px;
+  padding: 1rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.styleguide--footer > h2 {
+  color: #004B88;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.styleguide--footer > ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0px 0px 0px;
+  margin: 1rem 0rem 0rem 0rem;
+}
+.styleguide--footer > ul.li--arrow {
+  list-style-image: none;
+}
+.styleguide--footer p {
+  font-size: 0.875rem;
+}
+.styleguide--footer img {
+  float: left;
+  margin-right: 32px;
+  margin-right: 2rem;
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS
