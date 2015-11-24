@@ -171,17 +171,18 @@
         </div>
       </nav>
       <div class="main-content">
-        <div class="title">
-          <h1 class="title__heading js-ref"><span class="title__title">Charts</span></h1>
-        </div>
-        <div class="articleContent row">
-          <div class="span8">
-            <p>Charts are created using <a href="http://www.highcharts.com/" target="_blank" class="a-external-link">Highcharts</a>, which are very well documented on their website. The examples on this page show colouring and label use.</p>
-            <h2>Column charts</h2>
-            <div class="example-box-plain">
-              <div id="column-chart"></div>
-            </div>
-            <pre><code class="language-html">&lt;script&gt;
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Charts</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <p>Charts are created using <a href="http://www.highcharts.com/" target="_blank" class="a-external-link">Highcharts</a>, which are very well documented on their website. The examples on this page show colouring and label use.</p>
+              <h2>Column charts</h2>
+              <div class="example-box-plain">
+                <div id="column-chart"></div>
+              </div>
+              <pre><code class="language-html">&lt;script&gt;
 	$(function () {
 		var chart = new Highcharts.Chart({
 			// Make sure to include this string of brand colours
@@ -232,11 +233,11 @@
 	});
 &lt;/script&gt;
 &lt;div id="column-chart"&gt;&lt;/div&gt;</code></pre>
-            <h2>Pie charts</h2>
-            <div class="example-box-plain">
-              <div id="pie-chart"></div>
-            </div>
-            <pre><code class="language-html">&lt;script&gt;
+              <h2>Pie charts</h2>
+              <div class="example-box-plain">
+                <div id="pie-chart"></div>
+              </div>
+              <pre><code class="language-html">&lt;script&gt;
 	$(function () {
 		var chart = new Highcharts.Chart({
 			// Make sure to include this string of brand colours
@@ -310,8 +311,36 @@
 	});
 &lt;/script&gt;
 &lt;div id="pie-chart"&gt;&lt;/div&gt;</code></pre>
+            </div>
           </div>
         </div>
+        <nav class="side-nav-beta">
+          <ul>
+            <li class="side-nav-beta__heading -active -open"><a><span>Modules</span></a></li>
+            <li>
+              <ul>
+                <li class="side-nav-beta__sibling"><a href="callout.html" title="Callout" item.="item.">Callout</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="collapse.html" title="Collapse" item.="item.">Collapse</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="charts.html" title="Charts" class="-current" item.="item.">Charts</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="section-notice.html" title="Section Notices" item.="item.">Section Notices</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="toolbar.html" title="Content toolbar" item.="item.">Content toolbar</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="cookie-monster.html" title="Cookie Monster" item.="item.">Cookie Monster</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="extent.html" title="Extent Switcher" item.="item.">Extent Switcher</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="overlay.html" title="Modal/Overlay" item.="item.">Modal/Overlay</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="reference.html" title="Reference tool" item.="item.">Reference tool</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
         <div class="print-only">
           <h2>This section is print only</h2>
         </div>
