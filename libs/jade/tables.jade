@@ -1,5 +1,6 @@
 block settings
 	- var title = "Tables"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,9 +10,21 @@ block breadcrumbs
 		{title: "Styles", href: "index.html#styles"}, 
 		{title: "Tables"}])
 
+block sidebar
+	- var section = "Styles"
+	+sidebar([
+		{title: "Typography", href: "typography.html"},
+		{title: "Colours", href: "colours.html"},
+		{title: "Tables", href: "tables.html"},
+		{title: "Buttons", href: "buttons.html"},
+		{title: "Fields", href: "fields.html"},
+		{title: "Field groups", href: "field-groups.html"},
+		{title: "Grid", href: "new-grid.html"}
+		],2)
+
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			h2 Basic table
 			.example-box-plain
 				table

@@ -44,36 +44,37 @@
         </div>
       </nav>
       <div class="main-content">
-        <div class="title">
-          <h1 class="title__heading js-ref"><span class="title__title">Tables</span></h1>
-        </div>
-        <div class="articleContent row">
-          <div class="span8">
-            <h2>Basic table</h2>
-            <div class="example-box-plain">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Column heading</th>
-                    <th scope="col">Column heading</th>
-                    <th scope="col">Column heading</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                  </tr>
-                  <tr>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <pre><code class="language-html">&lt;table&gt;
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Tables</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <h2>Basic table</h2>
+              <div class="example-box-plain">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Column heading</th>
+                      <th scope="col">Column heading</th>
+                      <th scope="col">Column heading</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Table cell</td>
+                      <td>Table cell</td>
+                      <td>Table cell</td>
+                    </tr>
+                    <tr>
+                      <td>Table cell</td>
+                      <td>Table cell</td>
+                      <td>Table cell</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre><code class="language-html">&lt;table&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
@@ -94,28 +95,28 @@
 		&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-            <h2>Table with values</h2>
-            <p>This table is used for situations where you need a right aligned value, or a total along the bottom. Both of these are achieved by simply adding <code class="code">.amount</code> to a cell, or <code class="code">.total</code> to a row.</p>
-            <div class="example-box-plain">
-              <table class="full-width">
-                <thead>
-                  <tr>
-                    <th scope="col" colspan="2">Budget table</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Label</td>
-                    <td class="amount">£00.00</td>
-                  </tr>
-                  <tr class="total">
-                    <td>Total</td>
-                    <td class="amount">£00.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <pre><code class="language-html">&lt;table class="full-width"&gt;
+              <h2>Table with values</h2>
+              <p>This table is used for situations where you need a right aligned value, or a total along the bottom. Both of these are achieved by simply adding <code class="code">.amount</code> to a cell, or <code class="code">.total</code> to a row.</p>
+              <div class="example-box-plain">
+                <table class="full-width">
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2">Budget table</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Label</td>
+                      <td class="amount">£00.00</td>
+                    </tr>
+                    <tr class="total">
+                      <td>Total</td>
+                      <td class="amount">£00.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre><code class="language-html">&lt;table class="full-width"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th scope="col" colspan="2"&gt;Budget table&lt;/th&gt;
@@ -132,65 +133,65 @@
 		&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-            <h2>Collapsible table</h2>
-            <p>Tables can include collapsible rows by simply adding the correct classes and embedding a table within a cell.</p>
-            <div class="example-box-plain">
-              <table style="table-layout: fixed;" class="full-width">
-                <thead>
-                  <tr>
-                    <th scope="col">th</th>
-                    <th scope="col">th</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="table-collapse--toggle">
-                    <td>td</td>
-                    <td>td</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <!-- colspan is important to make the embedded table full width-->
-                    <td colspan="2">
-                      <!-- .full-width class is important to make the embedded table full width-->
-                      <table style="table-layout: fixed;" class="full-width">
-                        <tbody>
-                          <tr>
-                            <td>td</td>
-                            <td>td</td>
-                          </tr>
-                          <tr>
-                            <td>td</td>
-                            <td>td</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                  <tr class="table-collapse--toggle">
-                    <td>td</td>
-                    <td>td</td>
-                  </tr>
-                  <tr class="table-collapse">
-                    <!-- colspan is important to make the embedded table full width-->
-                    <td colspan="2">
-                      <!-- .full-width class is important to make the embedded table full width-->
-                      <table style="table-layout: fixed;" class="full-width">
-                        <tbody>
-                          <tr>
-                            <td>td</td>
-                            <td>td</td>
-                          </tr>
-                          <tr>
-                            <td>td</td>
-                            <td>td</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <pre><code class="language-html">&lt;table class="full-width"&gt;
+              <h2>Collapsible table</h2>
+              <p>Tables can include collapsible rows by simply adding the correct classes and embedding a table within a cell.</p>
+              <div class="example-box-plain">
+                <table style="table-layout: fixed;" class="full-width">
+                  <thead>
+                    <tr>
+                      <th scope="col">th</th>
+                      <th scope="col">th</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-collapse--toggle">
+                      <td>td</td>
+                      <td>td</td>
+                    </tr>
+                    <tr class="table-collapse">
+                      <!-- colspan is important to make the embedded table full width-->
+                      <td colspan="2">
+                        <!-- .full-width class is important to make the embedded table full width-->
+                        <table style="table-layout: fixed;" class="full-width">
+                          <tbody>
+                            <tr>
+                              <td>td</td>
+                              <td>td</td>
+                            </tr>
+                            <tr>
+                              <td>td</td>
+                              <td>td</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr class="table-collapse--toggle">
+                      <td>td</td>
+                      <td>td</td>
+                    </tr>
+                    <tr class="table-collapse">
+                      <!-- colspan is important to make the embedded table full width-->
+                      <td colspan="2">
+                        <!-- .full-width class is important to make the embedded table full width-->
+                        <table style="table-layout: fixed;" class="full-width">
+                          <tbody>
+                            <tr>
+                              <td>td</td>
+                              <td>td</td>
+                            </tr>
+                            <tr>
+                              <td>td</td>
+                              <td>td</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <pre><code class="language-html">&lt;table class="full-width"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
 			&lt;th scope="col"&gt;th&lt;/th&gt;
@@ -240,8 +241,32 @@
 		&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+            </div>
           </div>
         </div>
+        <nav class="side-nav-beta">
+          <ul>
+            <li class="side-nav-beta__heading -active -open"><a><span>Styles</span></a></li>
+            <li>
+              <ul>
+                <li class="side-nav-beta__sibling"><a href="typography.html" title="Typography" item.="item.">Typography</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="colours.html" title="Colours" item.="item.">Colours</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="tables.html" title="Tables" class="-current" item.="item.">Tables</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="buttons.html" title="Buttons" item.="item.">Buttons</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="fields.html" title="Fields" item.="item.">Fields</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="field-groups.html" title="Field groups" item.="item.">Field groups</a>
+                </li>
+                <li class="side-nav-beta__sibling"><a href="new-grid.html" title="Grid" item.="item.">Grid</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
         <div class="print-only">
           <h2>This section is print only</h2>
         </div>
