@@ -8089,12 +8089,13 @@ html[lang="en-SCT"] .main-nav {
   padding: 6px 16px;
   padding: 0.375rem 1rem;
   max-width: 1080px;
+  overflow: scroll;
 }
 .main-breadcrumb .breadcrumb__extent-link {
   display: none;
 }
 .main-breadcrumb .breadcrumb__item {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 3;
 }
 .main-breadcrumb .breadcrumb__item > i {
@@ -9593,8 +9594,8 @@ html[lang="en-SCT"] .main-nav {
   margin: 0.75rem 0;
   background-color: #FFF;
   color: #191926;
-  border: solid #bfbfbf;
-  border-width: 1px 1px 0px 0.5rem;
+  border: solid #004B88;
+  border-width: 1px 1px 0px 1px;
   /*&--aqua {
         .revealable( 
             @aqua-light,
@@ -9640,12 +9641,12 @@ html[lang="en-SCT"] .main-nav {
   border: none;
   text-decoration: none;
   position: relative;
-  background-color: #FFF;
+  background-color: #FFF, #bfbfbf, #bfbfbf #229cff;
   color: #004B88;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #004B88;
 }
 .collapsible .collapse-toggle h1,
 .revealable .collapse-toggle h1,
@@ -9689,7 +9690,7 @@ html[lang="en-SCT"] .main-nav {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 0;
-  color: #737373;
+  color: #003C64;
 }
 .collapsible .collapse-toggle *:last-child,
 .revealable .collapse-toggle *:last-child,
@@ -9712,7 +9713,7 @@ html[lang="en-SCT"] .main-nav {
   cursor: pointer;
   border: none;
   margin-top: 1rem;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #004B88;
   text-align: right;
 }
 .collapsible .collapse-toggle-close:before,

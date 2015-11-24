@@ -6,16 +6,16 @@
 
 .revealable (
         @revealable-background: @heritage-blue-lighter;
-        @revealable-heading: @text-color;
-        @revealable-border: @heritage-blue-light;
-        @revealable-icon: darken(@revealable-border, 30%);
+        @revealable-heading: @heritage-blue;
+        @revealable-border: @heritage-blue;
+        @revealable-icon: @blue;
     ) {
 
     margin: @box-spacing-vertical 0;
     background-color: @white;
     color: @text-color;
     border: solid @revealable-border;
-    border-width: 1px 1px 0px @box-spacing/2;
+    border-width: 1px 1px 0px 1px;
 
     i.revealable__icon,
     i.icon-chevron-up {

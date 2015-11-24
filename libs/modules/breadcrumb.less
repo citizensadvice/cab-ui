@@ -20,6 +20,7 @@
         background-color: transparent;
         .spacing(padding,@box-spacing-vertical/2,@box-spacing-horizontal);
         max-width: @breakpoint-lg;
+        overflow: scroll;
     }
     
     .breadcrumb__extent-link {
@@ -27,7 +28,7 @@
     }
 
     .breadcrumb__item {
-        font-size: @font-size-base;
+        font-size: @font-size-small;
         line-height: (@line-height-small * 2);
         
         &>i {
