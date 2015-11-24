@@ -1,5 +1,6 @@
 block settings
 	- var title = "New grid layout"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -7,8 +8,19 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"}, 
 		{title: "Styles", href: "index.html#styles"},
-		{title: "Grid", href: "index.html#grid"},
 		{title: "New grid layout"}])
+
+block sidebar
+	- var section = "Styles"
+	+sidebar([
+		{title: "Typography", href: "typography.html"},
+		{title: "Colours", href: "colours.html"},
+		{title: "Tables", href: "tables.html"},
+		{title: "Buttons", href: "buttons.html"},
+		{title: "Fields", href: "fields.html"},
+		{title: "Field groups", href: "field-groups.html"},
+		{title: "Grid", href: "new-grid.html"}
+		],6)
 
 block content
 	.articleContent
