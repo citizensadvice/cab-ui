@@ -3192,6 +3192,11 @@ div.tooltip:before {
 }
 .styleguide--header {
   background-color: #004B88;
+  /*position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;*/
   /*.main-breadcrumb__content {
             //.vertical-align(absolute);
             display: inline-block;
@@ -3222,7 +3227,7 @@ div.tooltip:before {
   margin: 0 auto;
 }
 .styleguide--header--content img {
-  width: 260px;
+  width: 220px;
   padding: 18px 16px;
   padding: 1.125rem 1rem;
   display: block;

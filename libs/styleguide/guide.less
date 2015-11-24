@@ -475,14 +475,23 @@ div.tooltip:before {
 .styleguide {
     &--header {
         background-color: @heritage-blue;
+        /*position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;*/
         &--content {
             max-width: @breakpoint-lg;
             margin: 0 auto;
             img {
-                width: 260px;
+                width: 220px;
                 .spacing(padding,@box-spacing-vertical*1.5,@box-spacing-horizontal);
                 display: block;
             }
+        }
+        .mockup &--content img {
+            //width: 200px;
+            //.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
         }
         /*.main-breadcrumb__content {
             //.vertical-align(absolute);
