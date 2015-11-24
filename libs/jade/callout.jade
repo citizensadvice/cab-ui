@@ -1,5 +1,6 @@
 block settings
 	- var title = "Callouts"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,9 +10,23 @@ block breadcrumbs
 		{title: "Modules", href: "index.html#modules"}, 
 		{title: "Callouts"}])
 
+block sidebar
+	- var section = "Modules"
+	+sidebar([
+		{href: "callout.html", title: "Callout"},
+		{href: "collapse.html", title: "Collapse"},
+		{href: "charts.html", title: "Charts"},
+		{href: "section-notice.html", title: "Section Notices"},
+		{href: "toolbar.html", title: "Content toolbar"},
+		{href: "cookie-monster.html", title: "Cookie Monster"},
+		{href: "extent.html", title: "Extent Switcher"},
+		{href: "overlay.html", title: "Modal/Overlay"},
+		{href: "reference.html", title: "Reference tool"}
+	],0)
+
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
 			p It is important to ask:
 			ul
