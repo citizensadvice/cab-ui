@@ -3190,6 +3190,43 @@ div.tooltip:before {
 .section-notice__login__content p a:hover {
   border-bottom: 0.0625rem solid #fba437;
 }
+.styleguide--header {
+  background-color: #004B88;
+  /*.main-breadcrumb__content {
+            //.vertical-align(absolute);
+            display: inline-block;
+            clear: none;
+            margin: 0;
+            padding: 0;
+            color: @white;
+            overflow: scroll;
+            .breadcrumb__extent-link {
+                display: none;
+            }
+            .breadcrumb__item {
+                font-size: @font-size-small;
+                line-height: (@line-height-small * 2);
+                &>i {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @blue-light;
+                }
+                a {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @white;
+                }
+            }
+        }*/
+}
+.styleguide--header--content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.styleguide--header--content img {
+  width: 260px;
+  padding: 18px 16px;
+  padding: 1.125rem 1rem;
+  display: block;
+}
 /* Base files */
 /**
  * COLOR DEFINITIONS

@@ -471,3 +471,42 @@ div.tooltip:before {
         }
     }
 }
+
+.styleguide {
+    &--header {
+        background-color: @heritage-blue;
+        &--content {
+            max-width: @breakpoint-lg;
+            margin: 0 auto;
+            img {
+                width: 260px;
+                .spacing(padding,@box-spacing-vertical*1.5,@box-spacing-horizontal);
+                display: block;
+            }
+        }
+        /*.main-breadcrumb__content {
+            //.vertical-align(absolute);
+            display: inline-block;
+            clear: none;
+            margin: 0;
+            padding: 0;
+            color: @white;
+            overflow: scroll;
+            .breadcrumb__extent-link {
+                display: none;
+            }
+            .breadcrumb__item {
+                font-size: @font-size-small;
+                line-height: (@line-height-small * 2);
+                &>i {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @blue-light;
+                }
+                a {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @white;
+                }
+            }
+        }*/
+    }
+}

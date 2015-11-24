@@ -121,9 +121,12 @@ html
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
 					img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
-		
+
 		else
-			header.main-header
+			header.styleguide--header
+				.styleguide--header--content
+					img(src="assets/images/ca-logo-hz-white-280px.svg")
+			//header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
