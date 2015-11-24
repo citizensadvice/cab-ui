@@ -1,5 +1,6 @@
 block settings
 	- var title = "Typography"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,9 +10,21 @@ block breadcrumbs
 		{title: "Styles", href: "index.html#styles"}, 
 		{title: "Typography"}])
 
+block sidebar
+	- var section = "Styles"
+	+sidebar([
+		{title: "Typography", href: "typography.html"},
+		{title: "Colours", href: "colours.html"},
+		{title: "Tables", href: "tables.html"},
+		{title: "Buttons", href: "buttons.html"},
+		{title: "Fields", href: "fields.html"},
+		{title: "Field groups", href: "field-groups.html"},
+		{title: "Grid", href: "new-grid.html"}
+		],0)
+
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			p The font used is #[a(href="http://www.google.com/fonts/specimen/Open+Sans") Open Sans] a sans font chosen for legibility and consistency in online and offline applications. The font comes in various weights, but by default we will be using four of these.
 			p When calling in the font weights or any of the typographic styles, be sure to use the variable rather than the font weight directly.
 			p(style="font-weight: 400;") Open Sans 400 
