@@ -1,0 +1,21 @@
+{
+  "name": "cab-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Styles and scripts for the CAB website ui",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "build-watch": "gulp watch"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "cssnano": "^3.3.2",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.5",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "pixrem": "^3.0.0",
+    "postcss-cachebuster": "^0.1.2"
+  }
+}
