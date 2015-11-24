@@ -1,5 +1,6 @@
 block settings
 	- var title = "Collapse"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,10 +10,23 @@ block breadcrumbs
 		{title: "Modules", href: "index.html#modules"}, 
 		{title: "Collapse"}])
 
-block content
-	.articleContent.row
-		.span8
+block sidebar
+	- var section = "Modules"
+	+sidebar([
+		{href: "callout.html", title: "Callout"},
+		{href: "collapse.html", title: "Collapse"},
+		{href: "charts.html", title: "Charts"},
+		{href: "section-notice.html", title: "Section Notices"},
+		{href: "toolbar.html", title: "Content toolbar"},
+		{href: "cookie-monster.html", title: "Cookie Monster"},
+		{href: "extent.html", title: "Extent Switcher"},
+		{href: "overlay.html", title: "Modal/Overlay"},
+		{href: "reference.html", title: "Reference tool"}
+	],1)
 
+block content
+	.articleContent
+		div
 			.example-box-plain
 				.collapse.collapsible
 					.collapse-toggle Unstyled content inside header/toggle
