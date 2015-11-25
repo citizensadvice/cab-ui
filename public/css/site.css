@@ -6190,12 +6190,13 @@ small {
 a {
   color: #253460;
   text-decoration: none;
-  border-bottom: 1px solid #a7b5dd;
+  border-bottom: 1px solid #8296cf;
 }
 a:hover,
 a:focus {
   color: #253460;
   text-decoration: none;
+  border-bottom: 1px solid #253460;
 }
 a:active {
   color: #004B88;
