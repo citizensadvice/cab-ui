@@ -13,18 +13,7 @@ block breadcrumbs
 		{title: "Reference tool"}])
 
 block sidebar
-	- var section = "Modules"
-	+sidebar([
-		{href: "callout.html", title: "Callout"},
-		{href: "collapse.html", title: "Collapse"},
-		{href: "charts.html", title: "Charts"},
-		{href: "section-notice.html", title: "Section Notices"},
-		{href: "toolbar.html", title: "Content toolbar"},
-		{href: "cookie-monster.html", title: "Cookie Monster"},
-		{href: "extent.html", title: "Extent Switcher"},
-		{href: "overlay.html", title: "Modal/Overlay"},
-		{href: "reference.html", title: "Reference tool"}
-	],7)
+	include ../template/sidebar-modules.jade
 
 block content
 	.overlay
