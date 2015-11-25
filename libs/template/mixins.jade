@@ -24,7 +24,6 @@ mixin sidebar(obj, key)
 					- each item,index in obj
 						- active = index === key ? "-current": ""
 						li.side-nav-beta__sibling
-							+link(item.title, item.href, item.text)(class=active item.)
 							+link(item.title, item.href, item.text)(class=active)
 
 mixin sidebarSiblings(obj, key)

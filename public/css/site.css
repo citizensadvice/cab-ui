@@ -9601,6 +9601,9 @@ html[lang="en-SCT"] .main-nav {
 .well--outline .callout__link:last-child {
   border: none;
 }
+.well--outline h2 {
+  color: #004B88;
+}
 /************************************************************************
  * Side panels - extending to style the panels that will run down the left-hand menu.
  */

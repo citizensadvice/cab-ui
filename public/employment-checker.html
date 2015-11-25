@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <title>Citizens Advice style guide - Employment checker tool
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="/static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../libs/vendors/prism/prism.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://www.citizensadvice.org.uk/static/layout/favicon.ico" rel="shortcut icon">
+    <link href="https://www.citizensadvice.org.uk/static/images/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Javascript-->
+    <script src="../libs/javascript/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../libs/javascript/beta-dap-accordion.js"></script>
+    <script src="../libs/javascript/collapse.js"></script>
+    <script src="../libs/vendors/prism/prism.js"></script>
+    <script src="../libs/javascript/smooth.js"></script>
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+      });
+      
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <!--header.styleguide--header.mockup
+    .styleguide--header--content
+    	a(href="index.html")
+    		img(src="assets/images/ca-logo-hz-white-280px.svg")
+    -->
+    <header class="main-header">
+      <div class="main-header__content"><a href="index.html" title="Citizens Advice home" class="main-header__logo no-print"><img alt="Citizens Advice" src="assets/images/ca-logo_100px.svg"></a><a href="index.html" title="Citizens Advice home" class="main-header__logo no-print wide"><img alt="Citizens Advice" src="assets/images/ca-logo-hz-white-280px.svg"></a><a href="index.html" title="Citizens Advice home" class="main-header__logo print-only"><img alt="Citizens Advice" src="assets/images/ca-logo-hz-280px.svg"></a>
+        <div data-track-zone="top-bar" class="main-header__links"><a href="" class="main-header__menu-link js-toggle-menu"><i class="icon-menu"></i>Menu</a>
+          <nav class="main-header__top-nav"><a href="#">Cymraeg</a></a><a href="" class="hide-offline main-header__login"><i class="icon-key"></i>Sign-in</a></nav>
+          <form action="" class="main-header__search hide-offline">
+            <label for="main-header__search__input" class="screenreader">Search</label>
+            <input id="main-header__search__input" name="q" placeholder="" type="search" class="main-header__search__input">
+            <button title="Search" type="submit" class="main-header__search__submit"><i class="icon-search icon--no-text"></i><span class="screenreader">Search</span></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav data-track-zone="main-nav" style="overflow: visible;" class="main-nav">
+      <ul class="nav-list-primary">
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Benefits</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Work</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Debt and money</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Consumer</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Relationships</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Housing</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Law and rights</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Discrimination</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Tax</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Healthcare</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Education</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">More from us</a></li>
+        <li style="display: none;" class="nav-list-primary-more js-more-menu"><a href="#">More<i class="icon-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#templates" title="Templates">Templates</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Content</span>
+        </div>
+      </nav>
+      <aside class="section-notice">
+        <h2 class="screenreader">Notice</h2>
+        <div class="section-notice__content">
+          <p><span class="badge">NEW</span> This page is part of <a href="#">our new approach to digital advice</a>.</p>
+        </div>
+      </aside>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Employment checker tool</span></h1>
+          </div>
+          <div class="title__subheading">This advice is for 
+            <button id="showSimpleModal" type="button" class="btn btn-primary-outline btn-small">England</button><a href="javascript:emailCurrentPage()" data-track="Email page" class="a-social-email">Email</a><a href="javascript:window.print();" data-track="Print" class="a-social-print">Print</a>
+          </div>
+          <div class="articleContent">
+            <div>
+              <h2>Start</h2>
+              <div class="well--outline">
+                <h2>Check your employment status</h2>
+                <p>Answer some simple questions to get an idea of what your employment status is.</p>
+                <button type="button" class="btn btn-primary right-button-icon">Start</button>
+              </div>
+              <h2>Question 1</h2>
+              <div class="well--outline">
+                <fieldset>
+                  <label for="standardField">Could your employer prevent you from taking time off within short notice?</label><span class="form-hint">For example, if you had another job</span>
+                  <label class="radio radio--inline">
+                    <input checked name="radio-inline" type="radio" value="option1">Yes, they could stop me
+                  </label>
+                  <label class="radio radio--inline">
+                    <input name="radio-inline" type="radio" value="option2">No, I’m free to work when I want, as long as the work is done
+                  </label>
+                </fieldset>
+                <button type="button" class="btn btn-primary right-button-icon">Next</button>
+              </div>
+              <h2>Question 2</h2>
+              <div class="well--outline">
+                <fieldset>
+                  <label for="standardField">Could you send someone in your place to do your work instead of you?</label>
+                  <label class="radio radio--inline">
+                    <input checked name="radio-inline" type="radio" value="option1">Yes
+                  </label>
+                  <label class="radio radio--inline">
+                    <input name="radio-inline" type="radio" value="option2">No
+                  </label>
+                </fieldset>
+                <button type="button" class="btn btn-primary right-button-icon">Next</button>
+              </div>
+              <h2>Question 3</h2>
+              <div class="well--outline">
+                <fieldset>
+                  <label for="standardField">Could your employer tell you at short notice not to come to work because they don’t have work for you?</label>
+                  <label class="radio radio--inline">
+                    <input checked name="radio-inline" type="radio" value="option1">Yes
+                  </label>
+                  <label class="radio radio--inline">
+                    <input name="radio-inline" type="radio" value="option2">No
+                  </label>
+                </fieldset>
+                <button type="button" class="btn btn-primary right-button-icon">Next</button>
+              </div>
+              <h2>Outcome 1 SE</h2>
+              <div class="well--outline">
+                <h2>Your result</h2>
+                <div class="callout">
+                  <h3>From what you’ve told us, it looks like you’re self employed.</h3>
+                  <p>This is mainly because you can send someone else in to carry out your work.</p>
+                </div>
+                <p>However, your situation might be more complicated and will depend on what your contract says. It’s worth getting advice from your local Citizens Advice.</p>
+                <button type="reset" class="btn btn-secondary restart-button-icon">Restart</button>
+              </div>
+              <h2>Outcome 2 SE (maybe)</h2>
+              <div class="well--outline">
+                <h2>Your result</h2>
+                <div class="callout">
+                  <h3>From what you’ve told us, there’s a chance that you could be self employed</h3>
+                  <p>Your situation will depend on what your contract says though.</p>
+                </div>
+                <p>It’s worth getting advice from your local Citizens Advice to find out exactly what your rights are.</p>
+                <button type="reset" class="btn btn-secondary restart-button-icon">Restart</button>
+              </div>
+              <h2>Outcome 3 WOR</h2>
+              <div class="well--outline">
+                <h2>Your result</h2>
+                <div class="callout">
+                  <h3>From what you’ve told us, it looks like you’re a ‘worker’.</h3>
+                  <p>This means you’ll have certain employment rights.</p>
+                </div>
+                <p>You might also be an employee. It’s worth getting advice from your local Citizens Advice to find out exactly what your rights are.</p>
+                <button type="reset" class="btn btn-secondary restart-button-icon">Restart</button>
+              </div>
+              <h2>Outcome 4 EM</h2>
+              <div class="well--outline">
+                <h2>Your result</h2>
+                <div class="callout">
+                  <h3>From what you’ve told us, it looks like you’re an employee.</h3>
+                  <p>This is mainly because you can’t send someone else in to carry out your work.</p>
+                </div>
+                <p>However, your situation might be more complicated. It’s worth getting advice from your local Citizens Advice.</p>
+                <button type="reset" class="btn btn-secondary restart-button-icon">Restart</button>
+              </div>
+            </div>
+          </div>
+          <div id="simpleModal" class="modal">
+            <div class="extent-country-select">
+              <form>
+                <h2>Advice can vary depending on where you live
+                  <fieldset>
+                    <label for="exampleInputFile">Where do you live?</label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-GB" checked>England
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-SCT">Scotland
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Wales
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="radio" value="?lang=en-WLS">Cmyru
+                    </label>
+                    <label class="radio radio--outline">
+                      <input type="radio" name="radio" value="?lang=cy">Northern Ireland
+                    </label>
+                  </fieldset>
+                  <button id="closeSimple" type="submit" class="btn btn-primary right-button-icon">Continue</button>
+                </h2>
+              </form>
+            </div>
+          </div>
+          <script>
+            $(document).ready(function(){
+                $("#showSimpleModal").click(function() {
+                    $("div#simpleModal").addClass("show");
+                    return false;
+                });
+                $("#closeSimple").click(function() {
+                    $("div#simpleModal").removeClass("show");
+                    return false;
+                });
+            });
+            //close modal when clicking the esc keyboard button
+            $(document).keyup(function(event){
+                if(event.which=='27'){
+                    $("div#simpleModal").removeClass('show');
+                }
+            });
+          </script>
+        </div>
+        <!--+sidebar([])
+        -->
+        <nav class="side-nav-beta">
+          <ul>
+            <li class="side-nav-beta__heading -active -open"><a><span>Employment checker tool</span></a></li>
+            <li>
+              <ul>
+                <li class="side-nav-beta__sibling"><a href="#" title="Employment checker tool" class="-current">Employment checker tool</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-feedback">
+      <h2 class="screenreader">Feedback</h2>
+      <div class="footer-feedback__content">
+        <p>Is there anything wrong with this page? <a href="#">Let us know</a>.</p>
+      </div>
+    </div>
+    <div id="footer" data-track-zone="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Debt and money</a></li>
+            <li><a href="#">Consumer</a></li>
+            <li><a href="#">Relationships</a></li>
+            <li><a href="#">Housing</a></li>
+            <li><a href="#">Law and rights</a></li>
+            <li><a href="#">Discrimination</a></li>
+            <li><a href="#">Tax</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">A to Z of advice</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Resources and tools</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Budgeting tool</a></li>
+            <li><a href="#">Advice fact sheets</a></li>
+            <li><a href="#">Advice online, by phone and in person</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>More from us</h2>
+          <ul class="li--arrow">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Annual reports</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Campaigns</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Policy research</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">Volunteering</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>About Citizens Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">How we provide advice</a></li>
+            <li><a href="#">The difference we make</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">How Citizens Advice works</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer and copyright</a></li>
+            <li><a href="#">Privacy and cookies</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p> <img alt="" height="100" src="assets/images/ca-logo_100px.svg" width="100">Copyright © 2015 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
+        </div>
+      </div>
+    </div><!--[if IE 8]></div><![endif]-->
+    <script src="../libs/javascript/advisor.js"></script>
+    <script src="../libs/javascript/core.js"></script>
+  </body>
+</html>
