@@ -32,6 +32,11 @@ html
 		script(src="../libs/javascript/collapse.js")
 		script(src="../libs/vendors/prism/prism.js")
 		script(src="../libs/javascript/smooth.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+			});
 
 		block script
 

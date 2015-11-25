@@ -25,6 +25,13 @@
     <script src="../libs/javascript/collapse.js"></script>
     <script src="../libs/vendors/prism/prism.js"></script>
     <script src="../libs/javascript/smooth.js"></script>
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+      });
+      
+    </script>
     <script src="../libs/javascript/vendor/highcharts/highcharts.js"></script>
     <script src="../libs/javascript/vendor/highcharts/modules/exporting.js"></script>
     <script>

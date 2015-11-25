@@ -6,7 +6,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="keywords">
     <meta name="description">
-    <title>Citizens Advice style guide 
+    <title>Citizens Advice style guide - Cards
     </title>
     <!-- Mobile Specific Metas-->
     <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
@@ -25,13 +25,6 @@
     <script src="../libs/javascript/collapse.js"></script>
     <script src="../libs/vendors/prism/prism.js"></script>
     <script src="../libs/javascript/smooth.js"></script>
-    <script>
-      var filename = document.location.pathname.match(/[^\/]+$/)[0];
-      $(document).ready(function() {
-      	$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
-      });
-      
-    </script>
   </head>
   <body><!--[if IE 8]><div class="ie8"><![endif]-->
     <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
@@ -47,73 +40,37 @@
     -->
     <div class="main-container">
       <nav class="main-breadcrumb">
-        <div class="main-breadcrumb__content"><span class="breadcrumb__item">Home</span>
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="index.html#modules" title="Modules">Modules</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Cards</span>
         </div>
       </nav>
       <div class="main-content">
-        <div class="title">
-          <h1 class="title__heading js-ref"><span class="title__title"></span></h1>
-        </div>
-        <div class="articleContent">
-          <div class="row">
-            <div class="span8">
-              <p class="u-lede">This is a guide to demonstrate elements such as layout, typography, forms, buttons and icons.</p>
-            </div>
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Cards</span></h1>
           </div>
-          <div class="row">
-            <div class="span12">
-              <h2 id="principles">Design principles</h2>
+          <div class="articleContent">
+            <div>
+              <p class="p-lede">Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.</p>
+              <p>It is important to ask:</p>
               <ul>
-                <li><a href="principles.html">Design principles</a></li>
+                <li>is the callout neccessary, too many, misused or unneccessary callouts weaken their value</li>
+                <li>which style of callout is relevant, is the information 'useful', 'important' or 'recommending'</li>
               </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span4">
-              <h2 id="styles">Styles</h2>
-              <ul>
-                <li><a href="typography.html">Typography</a></li>
-                <li><a href="colours.html">Colours</a></li>
-                <li><a href="tables.html">Tables</a></li>
-                <li><a href="new-grid.html">New grid layout</a></li>
-                <li>
-                  <h4 id="forms">Forms</h4>
-                  <ul>
-                    <li><a href="buttons.html">Buttons</a></li>
-                    <li><a href="fields.html">Fields</a></li>
-                    <li><a href="field-groups.html">Field groups</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="span4">
-              <h2 id="modules">Modules</h2>
-              <ul>
-                <li><a href="callout.html">Callout</a></li>
-                <li><a href="collapse.html">Collapse</a></li>
-                <li><a href="charts.html">Charts</a></li>
-                <li><a href="section-notice.html">Section Notices</a></li>
-                <li><a href="toolbar.html">Content toolbar</a></li>
-                <li><a href="cookie-monster.html">Cookie Monster</a></li>
-                <li> 
-                  <h4 id="modals">Modals</h4>
-                  <ul>
-                    <li><a href="extent.html">Extent Switcher</a></li>
-                    <li><a href="overlay.html">Modal/Overlay</a></li>
-                    <li><a href="reference.html">Reference tool</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="span4">
-              <h2 id="templates">Templates</h2>
-              <ul>
-                <li><a href="content.html">Content example</a></li>
-                <li><a href="long-form.html">Long form content example</a></li>
-                <!--li-->
-                <!--	a(href="advisor.html") Advisor content-->
-                <li><a href="section-index.html">Section index</a></li>
-              </ul>
+              <p>Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using <code>h2</code> or <code>h3</code> tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.</p>
+              <h2>Callout styles</h2>
+              <h2>Brand callout styles</h2>
+              <p>Below are examples of callout styles utilising the brand colour palette.</p>
+              <p>These should not be used as part of the advice content. They can be used after the advice content to help the client on their journey to the next step or to ask for support on a campaign related to the advice.</p>
+              <div class="example-box-plain">
+                <div class="callout--heritage">
+                  <h3>Callout heritage</h3>
+                  <p>Lorem ipsum.</p>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="callout--heritage"&gt;
+	&lt;h3&gt;Callout heritage&lt;/h3&gt;
+	&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
             </div>
           </div>
         </div>
