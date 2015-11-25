@@ -2,7 +2,7 @@
   "name": "cab-ui",
   "version": "1.0.0",
   "private": true,
-  "description": "Styles and scripts for the CAB website ui",
+  "description": "Design elements to be used across all Citizens Advice products",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
