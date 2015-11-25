@@ -10,12 +10,17 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
+    "autoprefixer": "^6.1.1",
     "cssnano": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
     "pixrem": "^3.0.0",
-    "postcss-cachebuster": "^0.1.2"
+    "postcss-assets": "^2.1.4",
+    "postcss-cachebuster": "^0.1.2",
+    "postcss-color-rgba-fallback": "^2.0.0",
+    "postcss-copy-assets": "^0.3.0",
+    "postcss-opacity": "^3.0.0"
   }
 }

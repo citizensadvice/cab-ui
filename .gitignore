@@ -8,6 +8,9 @@ config.codekit
 public/css/tools.css
 public/css/chat-styles.css
 
+# Node
+node_modules
+
 # Other files
 *.DS_Store
 README.html
