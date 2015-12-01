@@ -167,6 +167,27 @@ ol li, ul li {
         font-size: (@font-size-base * 0.8);
     }
 }
+/***************************************************************************
+* Figure
+* Semantically marked up approach to handing images/charts and captions
+*/
+
+figure {
+    display: block;
+    background-color: @white;
+    border: 1px solid @blue-light;
+    border-radius: @form-border-radius;
+    .spacing(padding,1);
+    .spacing(margin,0) !important; // Added important as it's being overwritten in the normalize 
+    img {
+        border: 0px solid @white;
+        border-radius: @form-border-radius;
+    }
+}
+figcaption {
+    display: block;
+    .spacing(padding,.5,0,0,0);
+}
 
 // For code
 .example-box {

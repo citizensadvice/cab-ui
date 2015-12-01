@@ -2451,6 +2451,29 @@ ul li {
     font-size: 0.8rem;
   }
 }
+/***************************************************************************
+* Figure
+* Semantically marked up approach to handing images/charts and captions
+*/
+figure {
+  display: block;
+  background-color: #FFF;
+  border: 1px solid #A5BDDC;
+  border-radius: 2px;
+  padding: 16px;
+  padding: 1rem;
+  margin: 0px !important;
+  margin: 0rem !important;
+}
+figure img {
+  border: 0px solid #FFF;
+  border-radius: 2px;
+}
+figcaption {
+  display: block;
+  padding: 8px 0px 0px 0px;
+  padding: 0.5rem 0rem 0rem 0rem;
+}
 .example-box {
   color: #333;
   padding: 16px;
