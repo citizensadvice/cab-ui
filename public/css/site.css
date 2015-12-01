@@ -10468,6 +10468,66 @@ input.tablesort-filter {
   }
 }
 /**
+ * SECTION NOTICE DEVELOPMENT
+ *
+ * Amending the pattern for changed content.
+ * 
+ */
+.section-notice--dev__content {
+  max-width: 1080px;
+  margin: auto;
+  clear: left;
+  padding: 16px 0px 0px 16px;
+  padding: 1rem 0rem 0rem 1rem;
+  overflow: hidden;
+  border-bottom: #eeeeee 1px solid;
+}
+.section-notice--dev__content .badge {
+  background-color: #b9db9b;
+  color: #191926;
+  margin-right: 16px;
+  margin-right: 1rem;
+}
+.section-notice--dev__adviser .badge {
+  background-color: #006278;
+  color: #FFF;
+}
+.section-notice--dev__changing {
+  max-width: 1080px;
+  margin: auto;
+  clear: left;
+  padding: 16px 0px 0px 16px;
+  padding: 1rem 0rem 0rem 1rem;
+  overflow: hidden;
+  border-bottom: #eeeeee 1px solid;
+}
+.section-notice--dev__changing .badge {
+  background-color: #FCBB69;
+  color: #191926;
+  margin-right: 16px;
+  margin-right: 1rem;
+}
+@media (max-width: 599px) {
+  .section-notice--dev {
+    display: none;
+  }
+}
+@media (max-width: 1148px) and (min-width: 600px) {
+  .js .section-notice__content {
+    padding-right: 56px;
+    padding-right: 3.5rem;
+  }
+}
+@media (max-width: 839px) {
+  .section-notice__content {
+    padding: 16px 16px 0px 16px;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  .section-notice__content p {
+    font-size: 0.875rem;
+  }
+}
+/**
  * DECISION TREE
  *
  * Usage unknown.
