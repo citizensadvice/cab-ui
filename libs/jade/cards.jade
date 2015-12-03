@@ -1,0 +1,39 @@
+block settings
+	- var title = "Cards"
+	- var sidebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Modules", href: "index.html#modules"}, 
+		{title: "Cards"}])
+
+block sidebar
+	include ../template/sidebar-modules.jade
+
+block content
+	.articleContent
+		div
+			p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
+			p It is important to ask:
+			ul
+				li is the callout neccessary, too many, misused or unneccessary callouts weaken their value
+				li which style of callout is relevant, is the information 'useful', 'important' or 'recommending'
+			p Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using #[code h2] or #[code h3] tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.
+			h2 Callout styles
+
+			.example-box-plain
+				.callout
+					h3 Callout unstyled
+					p This callout does not require an Aria tag but should be labeled with a clear heading.
+					p This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.
+					//a.callout__link Callout link
+			pre
+				code.language-html
+					| &lt;div class="callout"&gt;
+					| 	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+					| 	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+					| 	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+					| &lt;/div&gt;
