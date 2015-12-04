@@ -2731,6 +2731,47 @@ pre[class*="language-"] .callout__link:last-child {
   border: none;
 }
 /***************************************************************************
+* Cards
+* Boxes for captions, links, callouts, not related to content
+*/
+.cards {
+  border: 0.0625rem solid #eeeeee;
+  border-radius: .25rem;
+  margin-bottom: .75rem;
+  box-shadow: 0 2px 0 0 #eeeeee, 0 1px 3px 0 #eeeeee;
+}
+.cards .card-banner-top {
+  border-radius: 2px 2px 0 0;
+}
+.cards .card-banner-top :first-child {
+  padding: 1rem 0 1rem 1rem;
+  margin: 0;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.cards .card-image-top img {
+  border-radius: 2px 2px 0 0;
+}
+.cards .card-image-left img {
+  border-radius: 2px 0 0 2px;
+  margin: 0 0 -0.5rem 0;
+}
+.cards .card-text-left {
+  padding: 1rem 1rem 1rem 0;
+}
+.cards .card-text-left :first-child {
+  padding-top: 0rem;
+  margin-top: 0rem;
+}
+.cards .card-text {
+  padding: 1rem;
+}
+.cards .card-text :first-child {
+  padding-top: 0rem;
+  margin-top: 0rem;
+}
+/***************************************************************************
  * Colours
  * Swatches
  */

@@ -57,20 +57,103 @@
           </div>
           <div class="articleContent">
             <div>
-              <p class="p-lede">Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.</p>
-              <p>It is important to ask:</p>
-              <ul>
-                <li>is the callout neccessary, too many, misused or unneccessary callouts weaken their value</li>
-                <li>which style of callout is relevant, is the information 'useful', 'important' or 'recommending'</li>
-              </ul>
-              <p>Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using <code>h2</code> or <code>h3</code> tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.</p>
-              <h2>Callout styles</h2>
+              <p>Cards are flexible content containers, for adding snippets of text and images.</p>
+              <h2>Card uses</h2>
               <div class="example-box-plain">
-                <div class="callout">
-                  <h3>Callout unstyled</h3>
-                  <p>This callout does not require an Aria tag but should be labeled with a clear heading.</p>
-                  <p>This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.</p>
-                  <!--a.callout__link Callout link-->
+                <label>Basic card</label>
+                <div class="cards">
+                  <div class="card-img-top"><img src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"></div>
+                  <div class="card-text">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="callout"&gt;
+	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              <div class="example-box-plain">
+                <label>Landscape card</label>
+                <div class="cards">
+                  <div style="margin:0;" class="row">
+                    <!--.card-banner-top(style="color:#fff; background-color:#004b88;")p Header
+                    -->
+                    <div class="span6">
+                      <div class="card-image-left"><img src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"></div>
+                    </div>
+                    <div class="span6">
+                      <div class="card-text-left">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="callout"&gt;
+	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              <div class="example-box-plain">
+                <label>Extending </label>
+                <div class="row">
+                  <div class="span6">
+                    <div class="cards">
+                      <div style="color:#fff; background-color:#004b88;" class="card-banner-top">
+                        <p>Header</p>
+                      </div>
+                      <div class="card-image-top"><img src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"></div>
+                      <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span6">
+                    <div class="cards">
+                      <div class="card-image-top"><img src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"></div>
+                      <div class="card-text">
+                        <h3>Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                        <button type="button" class="btn btn-primary right-button-icon">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="callout"&gt;
+	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              <div class="example-box-plain">
+                <label>Branding </label>
+                <div class="row">
+                  <div class="span6">
+                    <div style="color:#fff; background-color:#006278;" class="cards">
+                      <div style="background-color:#006278;" class="card-banner-top">
+                        <p style="color:#fff;">Campaigns</p>
+                      </div>
+                      <div class="card-image-top"><img src="assets/images/mother_with_children.jpg" alt="Mother with two daughters"></div>
+                      <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                        <button type="button" class="btn btn-primary right-button-icon">Continue</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="span6">
+                    <div style="color:#fff; background-color:#32457E;" class="cards">
+                      <div class="card-banner-top">
+                        <p style="color:#fff;">Policy</p>
+                      </div>
+                      <div class="card-image-top"><img src="assets/images/laptop-branding.png" alt="Laptop"></div>
+                      <div class="card-text">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                        <button type="button" style="background-color:#FFBF47; border-color:#FFBF47;" class="btn btn-primary right-button-icon">Continue</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <pre><code class="language-html">&lt;div class="callout"&gt;

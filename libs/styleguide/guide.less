@@ -271,6 +271,52 @@ pre[class*="language-"] {
     font-size: .85rem;
     max-height: 15rem;
 }
+/***************************************************************************
+* Cards
+* Boxes for captions, links, callouts, not related to content
+*/
+.cards {
+    border: .0625rem solid @gray-7;
+    border-radius: .25rem;
+    margin-bottom: .75rem;
+    box-shadow: 0 2px 0 0 @gray-7,0 1px 3px 0 @gray-7;
+    .card-banner-top {
+        border-radius: @form-border-radius @form-border-radius 0 0;
+        :first-child {
+            padding: 1rem 0 1rem 1rem;
+            margin: 0;
+            border-radius: @form-border-radius;
+            font-weight: @font-weight-bolder;
+            font-size: @font-size-medium;
+        }
+    }
+    .card-image-top {
+        img {
+            border-radius: @form-border-radius @form-border-radius 0 0;
+        }
+    }
+    .card-image-left {
+        img {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+            margin: 0 0 -.5rem 0;
+        }
+    }
+    .card-text-left {
+        padding: 1rem 1rem 1rem 0;
+        :first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+    .card-text {
+        padding: 1rem;
+        :first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+}
+
 
 /***************************************************************************
  * Colours

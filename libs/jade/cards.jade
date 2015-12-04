@@ -16,20 +16,99 @@ block sidebar
 block content
 	.articleContent
 		div
-			p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
-			p It is important to ask:
-			ul
-				li is the callout neccessary, too many, misused or unneccessary callouts weaken their value
-				li which style of callout is relevant, is the information 'useful', 'important' or 'recommending'
-			p Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using #[code h2] or #[code h3] tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.
-			h2 Callout styles
+			p Cards are flexible content containers, for adding snippets of text and images.
+			h2 Card uses
 
 			.example-box-plain
-				.callout
-					h3 Callout unstyled
-					p This callout does not require an Aria tag but should be labeled with a clear heading.
-					p This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.
-					//a.callout__link Callout link
+				label Basic card
+				.cards
+					.card-img-top
+						img(src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
+					.card-text
+						h3 Title
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+			pre
+				code.language-html
+					| &lt;div class="callout"&gt;
+					| 	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+					| 	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+					| 	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+					| &lt;/div&gt;
+
+
+			.example-box-plain
+				label Landscape card
+				.cards
+					.row(style="margin:0;")
+						//.card-banner-top(style="color:#fff; background-color:#004b88;")
+							p Header
+						.span6
+							.card-image-left
+								img(src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
+						.span6
+							.card-text-left
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+			pre
+				code.language-html
+					| &lt;div class="callout"&gt;
+					| 	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+					| 	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+					| 	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+					| &lt;/div&gt;
+
+
+			.example-box-plain
+				label Extending 
+				.row
+					.span6
+						.cards
+							.card-banner-top(style="color:#fff; background-color:#004b88;")
+								p Header
+							.card-image-top
+								img(src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
+							.card-text
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+					.span6
+						.cards
+							.card-image-top
+								img(src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
+							.card-text
+								h3 Title
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+								button.btn.btn-primary.right-button-icon(type="button") Continue
+
+			pre
+				code.language-html
+					| &lt;div class="callout"&gt;
+					| 	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
+					| 	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
+					| 	&lt;p&gt;This style is used for any neutral callouts, where the information needs to be seperated from the content. It should also be used for examples.&lt;/p&gt;
+					| &lt;/div&gt;
+
+
+			.example-box-plain
+				label Branding 
+				.row
+					.span6
+						.cards(style="color:#fff; background-color:#006278;")
+							.card-banner-top(style="background-color:#006278;")
+								p(style="color:#fff;") Campaigns
+							.card-image-top
+								img(src="assets/images/mother_with_children.jpg" alt="Mother with two daughters")
+							.card-text
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+								button.btn.btn-primary.right-button-icon(type="button") Continue
+
+					.span6
+						.cards(style="color:#fff; background-color:#32457E;")
+							.card-banner-top
+								p(style="color:#fff;") Policy
+							.card-image-top
+								img(src="assets/images/laptop-branding.png" alt="Laptop")
+							.card-text
+								p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+								button.btn.btn-primary.right-button-icon(type="button" style="background-color:#FFBF47; border-color:#FFBF47;") Continue
+
 			pre
 				code.language-html
 					| &lt;div class="callout"&gt;
