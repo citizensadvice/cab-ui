@@ -1,0 +1,116 @@
+block settings
+	- var title = "New grid layout - Examples"
+	- var sidebar = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"}, 
+		{title: "Styles", href: "index.html#styles"},
+		{title: "New grid layout - Examples"}])
+
+block content
+	.articleContent
+		.row
+			.span12
+				h3 Full Width
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span6
+				h3 Half Width
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span6
+				h3 Half Width
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span4
+				h3 Thirds
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span4
+				h3 Thirds
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span4
+				h3 Thirds
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span3
+				h3 Quarters
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span3
+				h3 Quarters
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span3
+				h3 Quarters
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span3
+				h3 Quarters
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+			.span1
+				h3 Twelfth
+				p Lorem ipsum.
+		.row
+			.span8
+				h3 Two Thirds (content first)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span4
+				h3 One Third (content first)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span4
+				h3 One Third (navigation first)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span8
+				h3 Two Thirds (navigation first)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.span3
+				h3 One Quarter
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.span9
+				h3 Three Quarters
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		.row
+			.customcol49
+				h3 Flexible (defined with mixin in LESS) 4/9
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.customcol13
+				h3 Flexible (defined with mixin in LESS) 3/9
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.customcol29
+				h3 Flexible (defined with mixin in LESS) 2/9
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
