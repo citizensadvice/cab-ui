@@ -1,6 +1,9 @@
 # The built files
 public
 
+# The gh-pages cache directory
+.publish
+
 # Node
 node_modules
 
