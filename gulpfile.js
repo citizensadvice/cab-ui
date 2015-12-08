@@ -2,6 +2,7 @@
  *	@fileoverview
  *	Runs the gulp build tasks
  */
+'use strict';
 
 // Node modules
 var URL = require('url');
@@ -10,7 +11,7 @@ var URL = require('url');
 var gulp = require( 'gulp' );
 var del = require('del');
 var deploy = require('gulp-gh-pages');
-var jade = require('gulp-jade');
+var jade = require('gulp-jade');ß
 var less = require( 'gulp-less' );
 var sourcemaps = require('gulp-sourcemaps');
 
