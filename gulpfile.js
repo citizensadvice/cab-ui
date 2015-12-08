@@ -63,6 +63,10 @@ gulp.task( 'less', ['clean-less'], function() {
 		.pipe( gulp.dest(targetPath) ); // Write the less
 });
 
+gulp.task( 'watch-less', ['clean-jade'], function() {
+	gulp.watch('libs/*.less', ['less']);
+} );
+
 // ------- Jade tasks --------
 
 gulp.task( 'clean-jade', function() {
@@ -78,9 +82,20 @@ gulp.task( 'jade', ['clean-jade'], function() {
     	.pipe( gulp.dest('public') );
 } );
 
+gulp.task( 'jade', ['clean-jade'], function() {
+
+	return gulp.src('libs/jade/*.jade')
+    	.pipe( jade( { pretty: true }) )
+    	.pipe( gulp.dest('public') );
+} );
+
+gulp.task( 'watch-jade', ['clean-jade'], function() {
+	gulp.watch('libs/**/*.jade', ['jade']);
+} );
+
 // ------- gh-pages tasks --------
 
-gulp.task( 'gh-pages', ['production','less'], function() {
+gulp.task( 'gh-pages', ['production'], function() {
 
 	return gulp.src('public/**')
     	.pipe( deploy() );
@@ -115,12 +130,13 @@ gulp.task( 'clean', function() {
 // Clean all the things
 gulp.task( 'clean', [ 'clean-jade', 'clean-less'] );
 
-// Watch everything in the static-src folder and rerun default if it changes
-gulp.task('watch-less', function () {
-    gulp.watch('libs/**', ['default']);
-});
+// Watch all the things
+gulp.task( 'watch', ['default', 'watch-less', 'watch-jade'] );
 
-gulp.task('default', ['less','jade']);
-gulp.task('build', ['production','default'] );
-gulp.task('watch', ['default', 'watch-less']);
+// Single build
+gulp.task( 'default', ['less','jade'] );
+
+// Production build - also minifies the JS
+gulp.task( 'build', ['production', 'default'] );
+
 
