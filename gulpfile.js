@@ -78,25 +78,6 @@ gulp.task( 'jade', ['clean-jade'], function() {
     	.pipe( gulp.dest('public') );
 } );
 
-// ------- JavaScript tasks --------
-
-gulp.task( 'clean-js', function() {
-	return del([
-	    'public/js/**'
-	]);
-} );
-
-gulp.task( 'js', ['clean-js'], function() {
-
-	var jsSources = [
-		'libs/javascript/**',
-		'libs/vendors/prism/prism.js'
-	];
-
-	return gulp.src(jsSources)
-    	.pipe( gulp.dest('public/js') );
-} );
-
 // ------- gh-pages tasks --------
 
 gulp.task( 'gh-pages', ['production','less'], function() {
@@ -132,15 +113,14 @@ gulp.task( 'clean', function() {
 // ------- Task groups --------
 
 // Clean all the things
-gulp.task( 'clean', [ 'clean-js', 'clean-jade', 'clean-less'] );
+gulp.task( 'clean', [ 'clean-jade', 'clean-less'] );
 
 // Watch everything in the static-src folder and rerun default if it changes
 gulp.task('watch-less', function () {
     gulp.watch('libs/**', ['default']);
 });
 
-gulp.task('default', ['less','jade','js']);
-// These tasks are actually run in parallel, but as production will be called and run first
-gulp.task('build', ['production','less','jade','js'] );
+gulp.task('default', ['less','jade']);
+gulp.task('build', ['production','default'] );
 gulp.task('watch', ['default', 'watch-less']);
 
