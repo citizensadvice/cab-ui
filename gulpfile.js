@@ -10,6 +10,7 @@ var URL = require('url');
 var gulp = require( 'gulp' );
 var del = require('del');
 var deploy = require('gulp-gh-pages');
+var jade = require('gulp-jade');
 var less = require( 'gulp-less' );
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -36,21 +37,25 @@ var productionBuild = false;
 
 var targetPath = 'public/css';
 
-// ------- Define tasks ---------
+// ------- Less tasks --------
 
 // This task just sets a flag to say we are in production mode
 gulp.task( 'production', function() {
+	// This is a bit of a hack as this is task is technically carried out
+	// in parallel to other tasks and order is not guarenteed,
+	// however as long as it is specified
+	// first it should first.
 	productionBuild = true;
 } );
 
 // Clean the built directory
-gulp.task( 'clean', function() {
+gulp.task( 'clean-less', function() {
 	return del([
 	    'public/css/**'
-	  ]);
+	]);
 } );
 
-gulp.task( 'less', ['clean'], function() {
+gulp.task( 'less', ['clean-less'], function() {
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','ie >= 8'] }), 
 		rgbaFallback,
@@ -72,7 +77,38 @@ gulp.task( 'less', ['clean'], function() {
 		.pipe( gulp.dest(targetPath) ); // Write the less
 });
 
-gulp.task( 'gh-pages', ['less'], function() {
+// ------- Jade tasks --------
+
+gulp.task( 'clean-jade', function() {
+	return del([
+	    'public/*.html'
+	]);
+} );
+
+gulp.task( 'jade', ['clean-jade'], function() {
+
+	return gulp.src('libs/jade/*.jade')
+    	.pipe( jade( { pretty: true }) )
+    	.pipe( gulp.dest('public') );
+} );
+
+// ------- JavaScript tasks --------
+
+gulp.task( 'clean-js', function() {
+	return del([
+	    'public/js/**'
+	]);
+} );
+
+gulp.task( 'js', ['clean-js'], function() {
+
+	return gulp.src('libs/javascript/**')
+    	.pipe( gulp.dest('public/js') );
+} );
+
+// ------- gh-pages tasks --------
+
+gulp.task( 'gh-pages', ['production','less'], function() {
 
 	return gulp.src('public/**')
     	.pipe( deploy() );
