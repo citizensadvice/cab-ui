@@ -64,7 +64,7 @@ gulp.task( 'less', ['clean-less'], function() {
 });
 
 gulp.task( 'watch-less', ['clean-jade'], function() {
-	gulp.watch('libs/*.less', ['less']);
+	gulp.watch('libs/**/*.less', ['less']);
 } );
 
 // ------- Jade tasks --------
