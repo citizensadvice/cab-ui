@@ -29,24 +29,7 @@ var autoprefixer = require('autoprefixer');
 // Copy referenced assets to a folder
 var copyAssets = require('postcss-copy-assets');
 
-
-// ------- Constants ---------
-
-// Flag to tell us this is a production build
-var productionBuild = false;
-
-var targetPath = 'public/css';
-
 // ------- Less tasks --------
-
-// This task just sets a flag to say we are in production mode
-gulp.task( 'production', function() {
-	// This is a bit of a hack as this is task is technically carried out
-	// in parallel to other tasks and order is not guarenteed,
-	// however as long as it is specified
-	// first it should first.
-	productionBuild = true;
-} );
 
 // Clean the built directory
 gulp.task( 'clean-less', function() {
@@ -56,6 +39,7 @@ gulp.task( 'clean-less', function() {
 } );
 
 gulp.task( 'less', ['clean-less'], function() {
+	
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','ie >= 8'] }), 
 		rgbaFallback,
@@ -69,7 +53,9 @@ gulp.task( 'less', ['clean-less'], function() {
 		postCssPlugins.push(cssnano);
 	}
 
-    return gulp.src(['libs/*.less'])
+	var targetPath = 'public/css';
+
+    return gulp.src(['libs/*.less','libs/vendors/prism/prism.css'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe( less() ) // Transform to less
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
@@ -102,7 +88,12 @@ gulp.task( 'clean-js', function() {
 
 gulp.task( 'js', ['clean-js'], function() {
 
-	return gulp.src('libs/javascript/**')
+	var jsSources = [
+		'libs/javascript/**',
+		'libs/vendors/prism/prism.js'
+	];
+
+	return gulp.src(jsSources)
     	.pipe( gulp.dest('public/js') );
 } );
 
@@ -115,16 +106,41 @@ gulp.task( 'gh-pages', ['production','less'], function() {
 
 } );
 
+// ------- Global tasks --------
 
+// Flag to tell us this is a production build
+var productionBuild = false;
 
+gulp.task( 'production', function() {
+	// This task just sets a flag to say we are in production mode
+	// This is a bit of a hack as this is task is technically carried out
+	// in parallel to other tasks and order is not guarenteed,
+	// however as long as it is specified
+	// first it should first.
+	productionBuild = true;
+} );
+
+gulp.task( 'clean', function() {
+	// This task just sets a flag to say we are in production mode
+	// This is a bit of a hack as this is task is technically carried out
+	// in parallel to other tasks and order is not guarenteed,
+	// however as long as it is specified
+	// first it should first.
+	productionBuild = true;
+} );
+
+// ------- Task groups --------
+
+// Clean all the things
+gulp.task( 'clean', [ 'clean-js', 'clean-jade', 'clean-less'] );
 
 // Watch everything in the static-src folder and rerun default if it changes
 gulp.task('watch-less', function () {
     gulp.watch('libs/**', ['default']);
 });
 
-gulp.task('default', ['less']);
+gulp.task('default', ['less','jade','js']);
 // These tasks are actually run in parallel, but as production will be called and run first
-gulp.task('build', ['production','less'] );
+gulp.task('build', ['production','less','jade','js'] );
 gulp.task('watch', ['default', 'watch-less']);
 
