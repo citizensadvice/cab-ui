@@ -5,8 +5,8 @@
   "description": "Design elements to be used across all Citizens Advice products",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "build-watch": "gulp watch"
+    "build": "gulp build",
+    "server": "http-server public"
   },
   "license": "UNLICENSED",
   "devDependencies": {
@@ -19,6 +19,7 @@
     "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.0.1",
     "gulp-sourcemaps": "^1.6.0",
+    "http-server": "^0.8.5",
     "pixrem": "^3.0.0",
     "postcss-color-rgba-fallback": "^2.0.0",
     "postcss-copy-assets": "^0.3.0",
