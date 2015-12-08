@@ -118,7 +118,7 @@ gulp.task( 'watch-jade', function() {
 
 // ------- gh-pages tasks --------
 
-gulp.task( 'gh-pages', ['production'], function() {
+gulp.task( 'gh-pages', ['build'], function() {
 
 	return gulp.src('public/**')
     	.pipe( deploy() );
