@@ -1,5 +1,6 @@
 block settings
 	- var title = "Colours"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,307 +10,315 @@ block breadcrumbs
 		{title: "Styles", href: "index.html#styles"}, 
 		{title: "Colours"}])
 
+block sidebar
+	include ../template/sidebar-styles.jade
+
 block content
-	.articleContent.row
-		.span12
+	.articleContent
+		div
 			.row
-				.span8
+				.span12
 					h3 Colour contrast
 					p The colour contrast ratio for text and interactive elements should be at least 4.5:1 #[a(href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html") as recommended by the W3C].
 					h3 Brand
 					p Colours as defined in the #[a(href="#") Brand Guidelines]. To be used in pairs as described below. These colours are not to be used for marketing communications such as campaigns, reporting and policy.
 			.row
-				.span3.swatch.swatch--brand--heritage-blue
+				.span4.swatch.swatch--brand--heritage-blue
 					p Heritage Blue
 						br
 						| @heritage-blue
 						br
 						| #004B88
-				.span3.swatch.swatch--brand--heritage-yellow
+				.span4.swatch.swatch--brand--heritage-yellow
 					p Heritage Yellow
 						br
 						| @heritage-yellow
 						br
-						#FCBB69
-				.span3.swatch.swatch--brand--responsible-purple
+						| #FCBB69
+			.row
+				.span4.swatch.swatch--brand--responsible-purple
 					p Responsible Purple
 						br
 						| @responsible-purple
 						br
 						| #57486B
-				.span3.swatch.swatch--brand--responsible-aqua
+				.span4.swatch.swatch--brand--responsible-aqua
 					p Responsible Aqua
 						br
 						| @responsible-aqua
 						br
 						| #90CE9C
 			.row
-				.span3.swatch.swatch--brand--inventive-teal
+				.span4.swatch.swatch--brand--inventive-teal
 					p Inventive Teal
 						br
 						| @inventive-teal
 						br
 						| #006278
-				.span3.swatch.swatch--brand--inventive-pink
+				.span4.swatch.swatch--brand--inventive-pink
 					p Inventive Pink
 						br
 						| @inventive-pink
 						br
 						| #FBC0AD
-				.span3.swatch.swatch--brand--generous-green
+			.row
+				.span4.swatch.swatch--brand--generous-green
 					p Generous Green
 						br
 						| @generous-green
 						br
 						| #00553F
-				.span3.swatch.swatch--brand--generous-mauve
+				.span4.swatch.swatch--brand--generous-mauve
 					p Generous Mauve
 						br
 						| @generous-mauve
 						br
 						| #B5AFD7
 			.row
-				.span8
+				.span12
 					h3 Brand tints
 					p There are also variations of some of these swatches in lighter tints.
 			.row
-				.span3.swatch.swatch--beta--heritage-blue-lighter
+				.span4.swatch.swatch--beta--heritage-blue-lighter
 					p Heritage Blue Lighter
 						br
 						| @heritage-blue-lighter
 						br
 						| #A2D5FF
-				.span3.swatch.swatch--beta--heritage-blue-lightest
+				.span4.swatch.swatch--beta--heritage-blue-lightest
 					p Heritage Blue Lightest
 						br
 						| @heritage-blue-lightest
 						br
 						| #F2F8FF
-				.span3.swatch.swatch--beta--heritage-yellow-lighter
+				.span4.swatch.swatch--beta--heritage-yellow-lighter
 					p Heritage Yellow Lighter
 						br
 						| @heritage-yellow-lighter
 						br
 						| #FEE4C3
-				.span3.swatch.swatch--beta--heritage-yellow-darker
+			.row
+				.span4.swatch.swatch--beta--heritage-yellow-darker
 					p Heritage Yellow Darker
 						br
 						| @heritage-yellow-darker
 						br
 						| #FBA437
 			.row
-				.span8
+				.span12
 					h3 Extended palette
 					p Colours for extending the brand colours into content to make actionable indication.
 			.row
-				.span3.swatch.swatch--beta--red
+				.span4.swatch.swatch--beta--red
 					p Red
 						br
 						| @red
 						br
 						| #DF3034
-				.span3.swatch.swatch--beta--pink
+				.span4.swatch.swatch--beta--pink
 					p Pink
 						br
 						| @pink
 						br
 						| #F499BE
-				.span3.swatch.swatch--beta--orange
+				.span4.swatch.swatch--beta--orange
 					p Orange
 						br
 						| @orange
 						br
 						| #F47738
-				.span3.swatch.swatch--beta--yellow
+			.row
+				.span4.swatch.swatch--beta--yellow
 					p Yellow
 						br
 						| @yellow
 						br
 						| #FFBF47
-			.row
-				.span3.swatch.swatch--beta--green
+				.span4.swatch.swatch--beta--green
 					p Green
 						br
 						| @green
 						br
 						| #537D2D
-				.span3.swatch.swatch--beta--blue
+				.span4.swatch.swatch--beta--blue
 					p Blue
 						br
 						| @blue
 						br
 						| #003C64
-				.span3.swatch.swatch--beta--aqua
+			.row
+				.span4.swatch.swatch--beta--aqua
 					p Aqua
 						br
 						| @aqua
 						br
 						| #81CEC6
 			.row
-				.span8
+				.span12
 					h3 Extended palette tints
 					p There are also variations of some of these swatches in lighter tints.
 			.row
-				.span3.swatch.swatch--beta--red-light
+				.span4.swatch.swatch--beta--red-light
 					p Red Light
 						br
 						| @red-light
 						br
 						| #E76568
-				.span3.swatch.swatch--beta--red-lighter
+				.span4.swatch.swatch--beta--red-lighter
 					p Red Lighter
 						br
 						| @red-lighter
 						br
 						| #F2ACAD
-				.span3.swatch.swatch--beta--orange-light
+				.span4.swatch.swatch--beta--orange-light
 					p Orange Light
 						br
 						| @orange-light
 						br
 						| #F8A980
-				.span3.swatch.swatch--beta--orange-lighter
+			.row
+				.span4.swatch.swatch--beta--orange-lighter
 					p Orange Lighter
 						br
 						| @orange-lighter
 						br
 						| #FBCAB1
-			.row
-				.span3.swatch.swatch--beta--green-light
+				.span4.swatch.swatch--beta--green-light
 					p Green Light
 						br
 						| @green-light
 						br
 						| #B9DB9B
-				.span3.swatch.swatch--beta--green-lighter
+				.span4.swatch.swatch--beta--green-lighter
 					p Green Lighter
 						br
 						| @green-lighter
 						br
 						| #D3E8C1
-				.span3.swatch.swatch--beta--blue-light
+			.row
+				.span4.swatch.swatch--beta--blue-light
 					p Blue Light
 						br
 						| @blue-light
 						br
 						| #A5BDDC
-				.span3.swatch.swatch--beta--blue-lighter
+				.span4.swatch.swatch--beta--blue-lighter
 					p Blue Lighter
 						br
 						| @blue-lighter
 						br
 						| #CAEAFF
-			.row
-				.span3.swatch.swatch--beta--blue-darker
+				.span4.swatch.swatch--beta--blue-darker
 					p Blue Darker
 						br
 						| @blue-darker
 						br
 						| #002D4A
-				.span3.swatch.swatch--beta--aqua-light
+			.row
+				.span4.swatch.swatch--beta--aqua-light
 					p Aqua Light
 						br
 						| @aqua-light
 						br
 						| #B8E3DF
-				.span3.swatch.swatch--beta--yellow-light
+				.span4.swatch.swatch--beta--yellow-light
 					p Yellow Light
 						br
 						| @yellow-light
 						br
 						| #FFEBC6
-				.span3.swatch.swatch--beta--purple-dark
+				.span4.swatch.swatch--beta--purple-dark
 					p Purple Dark
 						br
 						| @purple-dark
 						br
 						| #53388D
 			.row
-				.span8
+				.span12
 					h3 Monochrome palette
 					p Range for text primarily but also for neutral colouring.
 			.row
-				.span3.swatch.swatch--mono--gray0
+				.span4.swatch.swatch--mono--gray0
 					p Gray 0
 						br
 						| @gray-0
 						br
 						| #202020
-				.span3.swatch.swatch--mono--gray1
+				.span4.swatch.swatch--mono--gray1
 					p Gray 1
 						br
 						| @gray-1
 						br
 						| #404040
-				.span3.swatch.swatch--mono--gray2
+				.span4.swatch.swatch--mono--gray2
 					p Gray 2
 						br
 						| @gray-2
 						br
 						| #606060
-				.span3.swatch.swatch--mono--gray3
+			.row
+				.span4.swatch.swatch--mono--gray3
 					p Gray 3
 						br
 						| @gray-3
 						br
 						| #808080
-			.row
-				.span3.swatch.swatch--mono--gray4
+				.span4.swatch.swatch--mono--gray4
 					p Gray 4
 						br
 						| @gray-4
 						br
 						| #9F9F9F
-				.span3.swatch.swatch--mono--gray5
+				.span4.swatch.swatch--mono--gray5
 					p Gray 5
 						br
 						| @gray-5
 						br
 						| #BFBFBF
-				.span3.swatch.swatch--mono--gray6
+			.row
+				.span4.swatch.swatch--mono--gray6
 					p Gray 6
 						br
 						| @gray-6
 						br
 						| #DFDFDF
-				.span3.swatch.swatch--mono--gray7
+				.span4.swatch.swatch--mono--gray7
 					p Gray 7
 						br
 						| @gray-7
 						br
 						| #EEEEEE
-			.row
-				.span3.swatch.swatch--mono--gray8
+				.span4.swatch.swatch--mono--gray8
 					p Gray 8
 						br
 						| @gray-8
 						br
 						| #F2F2F2
 			.row
-				.span8
+				.span12
 					h3 Adviser colour palette
 					p Range of colours used for adviser only content.
 			.row
-				.span3.swatch.swatch--adviser--inventive-teal-light
+				.span4.swatch.swatch--adviser--inventive-teal-light
 					p Inventive Teal Light
 						br
 						| @inventive-teal-light
 						br
 						| #007792
-				.span3.swatch.swatch--adviser--inventive-teal-lighter
+				.span4.swatch.swatch--adviser--inventive-teal-lighter
 					p Inventive Teal Lighter
 						br
 						| @inventive-teal-lighter
 						br
 						| #87C3D0
 			.row
-				.span3.swatch.swatch--adviser-blue-gray
+				.span4.swatch.swatch--adviser-blue-gray
 					p Adviser Blue Gray
 						br
 						| @adviser-blue-gray
 						br
 						| #ACAA9B
-				.span3.swatch.swatch--adviser-stone
+				.span4.swatch.swatch--adviser-stone
 					p Adviser Stone
 						br
 						| @adviser-stone

@@ -1,0 +1,154 @@
+block settings
+    - var title = "Employment checker tool"
+    - var sidebar = true
+    - var toolbars = true
+    //- var cookiemonster = true
+    - var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "index.html"}, 
+        {title: "Templates", href: "index.html#templates"},
+        {title: "Content"}])
+
+block sidebar
+    //- var section = "Help with your ESA claim"
+    //+sidebar([
+        ])
+    - var section = "Employment checker tool"
+    +sidebar([
+        {title: "Employment checker tool"}
+        ],0)
+
+block section-notice
+    aside.section-notice
+        h2.screenreader Notice
+        .section-notice__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+                
+block content
+    .articleContent
+        div
+
+            h2 Start
+            .well--outline
+                h2 Check your employment status
+                p Answer some simple questions to get an idea of what your employment status is.
+                button.btn.btn-primary.right-button-icon(type="button") Start
+
+            h2 Question 1
+            .well--outline
+                fieldset
+                    label(for="standardField") Could your employer prevent you from taking time off within short notice?
+                    span.form-hint For example, if you had another job
+                    label.radio.radio--inline
+                        input(checked name="radio-inline", type="radio", value="option1")
+                        | Yes, they could stop me
+                    label.radio.radio--inline
+                        input(name="radio-inline", type="radio", value="option2")
+                        | No, I’m free to work when I want, as long as the work is done
+                button.btn.btn-primary.right-button-icon(type="button") Next
+
+            h2 Question 2
+            .well--outline
+                fieldset
+                    label(for="standardField") Could you send someone in your place to do your work instead of you?
+                    label.radio.radio--inline
+                        input(checked name="radio-inline", type="radio", value="option1")
+                        | Yes
+                    label.radio.radio--inline
+                        input(name="radio-inline", type="radio", value="option2")
+                        | No
+                button.btn.btn-primary.right-button-icon(type="button") Next
+
+            h2 Question 3
+            .well--outline
+                fieldset
+                    label(for="standardField") Could your employer tell you at short notice not to come to work because they don’t have work for you?
+                    label.radio.radio--inline
+                        input(checked name="radio-inline", type="radio", value="option1")
+                        | Yes
+                    label.radio.radio--inline
+                        input(name="radio-inline", type="radio", value="option2")
+                        | No
+                button.btn.btn-primary.right-button-icon(type="button") Next
+
+            h2 Outcome 1 SE
+            .well--outline
+                h2 Your result
+                .callout
+                    h3 From what you’ve told us, it looks like you’re self employed.
+                    p This is mainly because you can send someone else in to carry out your work.
+                p However, your situation might be more complicated and will depend on what your contract says. It’s worth getting advice from your local Citizens Advice.
+                button.btn.btn-secondary.restart-button-icon(type="reset") Restart
+
+            h2 Outcome 2 SE (maybe)
+            .well--outline
+                h2 Your result
+                .callout
+                    h3 From what you’ve told us, there’s a chance that you could be self employed
+                    p Your situation will depend on what your contract says though.
+                p It’s worth getting advice from your local Citizens Advice to find out exactly what your rights are.
+                button.btn.btn-secondary.restart-button-icon(type="reset") Restart
+
+            h2 Outcome 3 WOR
+            .well--outline
+                h2 Your result
+                .callout
+                    h3 From what you’ve told us, it looks like you’re a ‘worker’.
+                    p This means you’ll have certain employment rights.
+                p You might also be an employee. It’s worth getting advice from your local Citizens Advice to find out exactly what your rights are.
+                button.btn.btn-secondary.restart-button-icon(type="reset") Restart
+
+            h2 Outcome 4 EM
+            .well--outline
+                h2 Your result
+                .callout
+                    h3 From what you’ve told us, it looks like you’re an employee.
+                    p This is mainly because you can’t send someone else in to carry out your work.
+                p However, your situation might be more complicated. It’s worth getting advice from your local Citizens Advice.
+                button.btn.btn-secondary.restart-button-icon(type="reset") Restart
+
+                
+    #simpleModal.modal
+            .extent-country-select
+                    form
+                        h2 Advice can vary depending on where you live
+                            fieldset
+                                label(for="exampleInputFile") Where do you live?
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-GB", checked)
+                                    | England
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-SCT")
+                                    | Scotland
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-WLS")
+                                    | Wales
+                                label.radio
+                                    input(type="radio", name="radio", value="?lang=en-WLS")
+                                    | Cmyru
+                                label.radio.radio--outline
+                                    input(type="radio", name="radio", value="?lang=cy")
+                                    | Northern Ireland
+                            button#closeSimple.btn.btn-primary.right-button-icon(type="submit") Continue
+
+    script.
+        $(document).ready(function(){
+            $("#showSimpleModal").click(function() {
+                $("div#simpleModal").addClass("show");
+                return false;
+            });
+            $("#closeSimple").click(function() {
+                $("div#simpleModal").removeClass("show");
+                return false;
+            });
+        });
+        //close modal when clicking the esc keyboard button
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $("div#simpleModal").removeClass('show');
+            }
+        });

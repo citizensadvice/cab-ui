@@ -53,3 +53,64 @@
         }
     }
 }
+
+/**
+ * SECTION NOTICE DEVELOPMENT
+ *
+ * Amending the pattern for changed content.
+ * 
+ */
+
+.section-notice--dev {
+    &__content {
+        .limit-width;
+        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        overflow: hidden;
+        border-bottom: @gray-7 1px solid;
+        .badge {
+            background-color: @green-light;
+            color: @text-color;
+            margin-right: unit(@box-spacing-horizontal*@base-size,px);
+            margin-right: @box-spacing-horizontal;
+        }
+    }
+    &__adviser {
+        .badge {
+            background-color: @inventive-teal;
+            color: @white;
+        }
+    }
+    &__changing {
+        .limit-width;
+        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        overflow: hidden;
+        border-bottom: @gray-7 1px solid;
+        .badge {
+            background-color: @heritage-yellow;
+            color: @text-color;
+            margin-right: unit(@box-spacing-horizontal*@base-size,px);
+            margin-right: @box-spacing-horizontal;
+        }
+    }
+    @media( max-width: @screen-xs-max ) {
+        display: none;
+    }
+}
+
+@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .section-notice__content {
+        padding-right: unit(@box-spacing-horizontal*3.5*@base-size,px);
+        padding-right: @box-spacing-horizontal*3.5;
+    }
+}
+
+@media (max-width: @screen-sm-max ) {
+     .section-notice__content {
+        .spacing(padding,@box-spacing-horizontal,@box-spacing-horizontal,0,@box-spacing-horizontal);
+
+        p {
+            font-size: @font-size-small;
+        }
+    }
+}
+

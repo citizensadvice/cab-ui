@@ -13,12 +13,7 @@ block breadcrumbs
 		{title: "Extent switcher"}])
 
 block sidebar
-	- var section = "Section title"
-	// Set the number at the end to the array position of the active page
-	+sidebar([
-		{title: "Sibling page 1"},
-		{title: "Sibling page 2"}],
-		0)
+	include ../template/sidebar-modules.jade
 
 block content
 	#simpleModal.modal

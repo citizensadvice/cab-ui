@@ -1,5 +1,6 @@
 block settings
 	- var title = "Callouts"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,9 +10,12 @@ block breadcrumbs
 		{title: "Modules", href: "index.html#modules"}, 
 		{title: "Callouts"}])
 
+block sidebar
+	include ../template/sidebar-modules.jade
+
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			p.p-lede Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
 			p It is important to ask:
 			ul

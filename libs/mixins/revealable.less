@@ -6,15 +6,16 @@
 
 .revealable (
         @revealable-background: @heritage-blue-lighter;
-        @revealable-heading: @text-color;
-        @revealable-border: @heritage-blue-light
+        @revealable-heading: @heritage-blue;
+        @revealable-border: @heritage-blue;
+        @revealable-icon: @blue;
     ) {
 
     margin: @box-spacing-vertical 0;
     background-color: @white;
     color: @text-color;
     border: solid @revealable-border;
-    border-width: 1px 1px 0px @box-spacing/2;
+    border-width: 1px 1px 0px 1px;
 
     i.revealable__icon,
     i.icon-chevron-up {
@@ -48,6 +49,7 @@
             .spacing(padding,0,@box-spacing-horizontal*1.25);
             .vertical-align(absolute);
             right: 0;
+            color: @revealable-icon;
         }
         *:last-child {
             margin-bottom: 0;
@@ -58,7 +60,7 @@
     &__close {
         cursor: pointer;
         display: block;
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal*3.5,@box-spacing-vertical,@box-spacing-horizontal);
+        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal*3,@box-spacing-vertical,@box-spacing-horizontal);
         .spacing(margin,@box-spacing-vertical,-@box-spacing-horizontal,-@box-spacing-vertical,-@box-spacing-horizontal);
         text-decoration: none;
         position: relative;
@@ -80,7 +82,8 @@
             content: "\f068";
         }
         &:hover {
-            background-color: fade(@revealable-background, 20%);
+            //background-color: fade(@revealable-background, 20%);
+            color: @revealable-heading;
         }
     }
 

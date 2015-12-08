@@ -1,5 +1,6 @@
 block settings
 	- var title = "New grid layout"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -7,15 +8,17 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"}, 
 		{title: "Styles", href: "index.html#styles"},
-		{title: "Grid", href: "index.html#grid"},
 		{title: "New grid layout"}])
+
+block sidebar
+	include ../template/sidebar-styles.jade
 
 block content
 	.articleContent
 		.row
 			.span12
 				p The default page width is 1080px with a 12-column grid. It is recommended for most content to use the two-thirds (content first) layout. This restricts line length to a more managable size and encourages a better reading pattern, #[a(href="#") improving cognition].
-				p The layout for pages should be 12 columns (full width), 3 or 4 column, other variations can be used if needed.
+				p The layout for pages should be 12 columns (full width), 3 or 4 column, other variations can be used if needed. #[a(href="new-grid-examples.html" target="_blank") Examples of grid using text].
 		.row
 			.span12
 				h3 Full Width

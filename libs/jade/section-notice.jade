@@ -1,5 +1,6 @@
 block settings
 	- var title = "Section Notices"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -8,6 +9,9 @@ block breadcrumbs
 		{title: "Home", href: "index.html"},
 		{title: "Modules", href: "index.html#modules"}, 
 		{title: "Section Notices"}])
+
+block sidebar
+	include ../template/sidebar-modules.jade
 
 block section-notice
 	aside.section-notice
@@ -25,8 +29,8 @@ block section-notice
 				| This page is part of #[a(href="#") adviser only] content.
 
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
 			p Section notices appear between the breadcrumbs and page content.
 
 			.example-box-plain

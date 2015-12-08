@@ -32,6 +32,11 @@ html
 		script(src="../libs/javascript/collapse.js")
 		script(src="../libs/vendors/prism/prism.js")
 		script(src="../libs/javascript/smooth.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+			});
 
 		block script
 
@@ -48,13 +53,17 @@ html
 					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
 		if mockup
+			//header.styleguide--header.mockup
+				.styleguide--header--content
+					a(href="index.html")
+						img(src="assets/images/ca-logo-hz-white-280px.svg")
 			header.main-header
 				.main-header__content
-					a.main-header__logo.no-print(href="", title="Citizens Advice home")
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", src="assets/images/ca-logo_100px.svg")
-					a.main-header__logo.no-print.wide(href="", title="Citizens Advice home")
+					a.main-header__logo.no-print.wide(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", src="assets/images/ca-logo-hz-white-280px.svg")
-					a.main-header__logo.print-only(href="", title="Citizens Advice home")
+					a.main-header__logo.print-only(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", src="assets/images/ca-logo-hz-280px.svg")
 
 					.main-header__links(data-track-zone="top-bar")
@@ -110,6 +119,11 @@ html
 				h2.screenreader Notice
 				.section-notice__content
 					button.btn.btn-small(type="button") #[a(href="adviser.html") Adviser login]
+			header.main-header
+				.main-header__content.main-content
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
+					img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
 
 		else if logoutheader
 			aside.section-notice__login
@@ -121,9 +135,13 @@ html
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
 					img.print-only.logo(src="assets/images/ca-logo-hz-280px.svg")
-		
+
 		else
-			header.main-header
+			header.styleguide--header
+				.styleguide--header--content
+					a(href="index.html")
+						img(src="assets/images/ca-logo-hz-white-280px.svg")
+			//header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="assets/images/ca-logo_100px.svg")
@@ -253,7 +271,7 @@ html
 					.main-footer__box.main-footer__box--copyright
 						div
 							p 
-								img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
+								img(alt="", height="100", src="assets/images/ca-logo_100px.svg", width="100")
 								| Copyright © 2015 Citizens Advice. All rights reserved.
 								br
 								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -264,18 +282,17 @@ html
 
 		else
 			footer.main-footer(data-track-zone="footer", id="footer")
-				.main-footer__content.flex-row.js-equal-height
-					.main-footer__box.main-footer__box--copyright
-						div
-							p
-								img(alt="", height="100", src="assets/images/ca-logo_100px.svg.png", width="100")
-								| Copyright © 2015 Citizens Advice. All rights reserved.
-								br
-								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
-								br
-								| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
-								br
-								| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+				.styleguide--footer
+					div
+						p
+							img(alt="", height="100", src="assets/images/ca-logo_100px.svg", width="100")
+							| Copyright © 2015 Citizens Advice. All rights reserved.
+							br
+							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+							br
+							| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+							br
+							| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
 								
 		<!--[if IE 8]></div><![endif]-->
 		script(src="../libs/javascript/advisor.js")

@@ -255,3 +255,27 @@ li > ol {
         }
     }
 }
+
+// Lists for checklist style
+.tick ul {
+    .spacing(padding,0,0,0,2);
+    list-style:none;
+
+    & > li:before {    
+        .spacing(margin,0,.25,0,-.5);
+        font-family: 'FontAwesome';
+        content: '\f00c';
+    }
+}
+
+
+.cross ul {
+    .spacing(padding,0,0,0,2);
+    list-style:none;
+
+    & > li:before {    
+            .spacing(margin,0,.25,0,-.5);
+            font-family: 'FontAwesome';
+            content: '\f00d';
+    }
+}

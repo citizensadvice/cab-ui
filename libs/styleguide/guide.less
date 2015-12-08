@@ -70,6 +70,62 @@ ol li, ul li {
     margin:             0 0 (@paragraph-margin-bottom / 2) 0;
 }
 /***************************************************************************
+* Box links
+* Hopefully a fairly logical name
+* Holders for content, where the entire area links to further content
+* Being tested with ./public/pip-content.html
+*/
+
+.box--links {
+    .callout( @callout-border: @blue-light, @callout-background: @white );
+    .callout--border;
+    //.callout--border--top;
+    margin-top: 1rem;
+    .flex-row {
+        padding: 0;
+    }
+    h2, h3 {
+        color: @heritage-blue;
+        font-weight: @font-weight-bolder;
+        font-size: 1.1rem;
+        margin-bottom: unit(@box-spacing-vertical*1.25*@base-size,px);
+        margin-bottom: @box-spacing-vertical*1.25;
+    }
+    .columns {
+            @media (min-width:@screen-md-min) {
+                column-count: 2;
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+            -ms-column-count: 2;
+             -o-column-count: 2;
+                column-gap: 1rem;
+        -webkit-column-gap: 1rem;
+           -moz-column-gap: 1rem;
+            -ms-column-gap: 1rem;
+             -o-column-gap: 1rem;
+                columns: 2;
+            }
+        ul, ol {
+            margin: 0;
+            .spacing(padding,0.25rem,1rem);
+            //list-style: none;
+            li {
+                font-size: 0.95rem;
+                .spacing(margin-bottom,1rem);
+                display: inline-block;
+            }
+        }
+    }
+    a {
+        border-width: 0;
+        &:hover {
+            border-bottom: 0px @heritage-blue solid;
+            border-bottom-width: 1px;
+        }
+    }
+}
+
+/***************************************************************************
  * Page status
  * Badge
  */
@@ -110,6 +166,27 @@ ol li, ul li {
     .breadcrumb p {
         font-size: (@font-size-base * 0.8);
     }
+}
+/***************************************************************************
+* Figure
+* Semantically marked up approach to handing images/charts and captions
+*/
+
+figure {
+    display: block;
+    background-color: @heritage-blue-lightest;
+    border: 1px solid @blue-light;
+    border-radius: @form-border-radius;
+    .spacing(padding,1);
+    .spacing(margin,0) !important; // Added important as it's being overwritten in the normalize 
+    img {
+        border: 0px solid @white;
+        border-radius: @form-border-radius;
+    }
+}
+figcaption {
+    display: block;
+    .spacing(padding,.5,0,0,0);
 }
 
 // For code
@@ -156,11 +233,11 @@ ol li, ul li {
         margin-bottom: 0;
     }
 }
-span.code {
+.code {
     color: #333;
     padding: 5px;
     font-size: @font-size-small;
-    margin: 1em 1em 3em 1em;
+    //margin: 1em 1em 3em 1em;
     font-family: monaco,monospace;
     line-height: 1.7em;
     background-color: #f8f8f8;
@@ -192,7 +269,54 @@ pre[class*="language-"] {
     margin-top: 0;
     border-radius: 0 0 @form-border-radius @form-border-radius;
     font-size: .85rem;
+    max-height: 15rem;
 }
+/***************************************************************************
+* Cards
+* Boxes for captions, links, callouts, not related to content
+*/
+.cards {
+    border: .0625rem solid @gray-7;
+    border-radius: .25rem;
+    margin-bottom: .75rem;
+    box-shadow: 0 2px 0 0 @gray-7,0 1px 3px 0 @gray-7;
+    .card-banner-top {
+        border-radius: @form-border-radius @form-border-radius 0 0;
+        :first-child {
+            padding: 1rem 0 1rem 1rem;
+            margin: 0;
+            border-radius: @form-border-radius;
+            font-weight: @font-weight-bolder;
+            font-size: @font-size-medium;
+        }
+    }
+    .card-image-top {
+        img {
+            border-radius: @form-border-radius @form-border-radius 0 0;
+        }
+    }
+    .card-image-left {
+        img {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+            margin: 0 0 -.5rem 0;
+        }
+    }
+    .card-text-left {
+        padding: 1rem 1rem 1rem 0;
+        :first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+    .card-text {
+        padding: 1rem;
+        :first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+}
+
 
 /***************************************************************************
  * Colours
@@ -412,5 +536,59 @@ div.tooltip:before {
                 border-bottom: 0.0625rem solid @heritage-yellow-darker;        
             }
         }
+    }
+}
+
+.styleguide {
+    &--header {
+        background-color: @heritage-blue;
+        /*position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;*/
+        &--content {
+            max-width: @breakpoint-lg;
+            margin: 0 auto;
+            img {
+                width: 220px;
+                .spacing(padding,@box-spacing-vertical*1.5,@box-spacing-horizontal);
+                display: block;
+            }
+        }
+        .mockup &--content img {
+            //width: 200px;
+            //.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+        }
+        /*.main-breadcrumb__content {
+            //.vertical-align(absolute);
+            display: inline-block;
+            clear: none;
+            margin: 0;
+            padding: 0;
+            color: @white;
+            overflow: scroll;
+            .breadcrumb__extent-link {
+                display: none;
+            }
+            .breadcrumb__item {
+                font-size: @font-size-small;
+                line-height: (@line-height-small * 2);
+                &>i {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @blue-light;
+                }
+                a {
+                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    color: @white;
+                }
+            }
+        }*/
+    }
+    &--footer {
+        .main-footer__box;
+        .main-footer__box--copyright;
+        max-width: @breakpoint-lg;
+        margin: 0 auto;
     }
 }

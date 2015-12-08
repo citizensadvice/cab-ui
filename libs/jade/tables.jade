@@ -1,5 +1,6 @@
 block settings
 	- var title = "Tables"
+	- var sidebar = true
 
 extends ../template/template.jade
 
@@ -9,63 +10,175 @@ block breadcrumbs
 		{title: "Styles", href: "index.html#styles"}, 
 		{title: "Tables"}])
 
+block sidebar
+	include ../template/sidebar-styles.jade
+
 block content
-	.articleContent.row
-		.span8
+	.articleContent
+		div
+			h2 Basic table
 			.example-box-plain
-				table(style="width:100%")
+				table
 					thead
 						tr
-							th(scope="col") th
-							th(scope="col") th
-							th(scope="col") th
+							th(scope="col") Column heading
+							th(scope="col") Column heading
+							th(scope="col") Column heading
 					tbody
 						tr
-							td td
-							td td
-							td td
+							td Table cell
+							td Table cell
+							td Table cell
 						tr
-							td td
-							td td
-							td td
-						tr
-							td td
-							td td
-							td td
-						tr
-							td td
-							td td
-							td td
+							td Table cell
+							td Table cell
+							td Table cell
 			pre
 				code.language-html
 					| &lt;table&gt;
 					| 	&lt;thead&gt;
 					| 		&lt;tr&gt;
-					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 		&lt;/tr&gt;
+					| 	&lt;/thead&gt;
+					| 	&lt;tbody&gt;
+					| 		&lt;tr&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 		&lt;tr&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 	&lt;/tbody&gt;
+					| &lt;/table&gt;
+
+			h2 Table with values
+			p This table is used for situations where you need a right aligned value, or a total along the bottom. Both of these are achieved by simply adding #[code.code .amount] to a cell, or #[code.code .total] to a row.
+			.example-box-plain
+				table.full-width
+					thead
+						tr
+							th(scope="col", colspan="2") Budget table
+					tbody
+						tr
+							td Label
+							td.amount £00.00
+						tr.total
+							td Total
+							td.amount £00.00
+			pre
+				code.language-html
+					| &lt;table class="full-width"&gt;
+					|	&lt;thead&gt;
+					|		&lt;tr&gt;
+					|			&lt;th scope="col" colspan="2"&gt;Budget table&lt;/th&gt;
+					|		&lt;/tr&gt;
+					|	&lt;/thead&gt;
+					|	&lt;tbody&gt;
+					|		&lt;tr&gt;
+					|			&lt;td&gt;Label&lt;/td&gt;
+					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|		&lt;/tr&gt;
+					|		&lt;tr class="total"&gt;
+					|			&lt;td&gt;Total&lt;/td&gt;
+					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|		&lt;/tr&gt;
+					|	&lt;/tbody&gt;
+					| &lt;/table&gt;
+
+			h2 Collapsible table
+			p Tables can include collapsible rows by simply adding the correct classes and embedding a table within a cell.
+			.example-box-plain
+				table.full-width(style="table-layout: fixed;")
+					thead
+						tr
+							th(scope="col") th
+							th(scope="col") th
+					tbody
+						tr.table-collapse--toggle
+							td td
+							td td
+						tr.table-collapse
+							// colspan is important to make the embedded table full width
+							td(colspan="2")
+								// .full-width class is important to make the embedded table full width
+								table.full-width(style="table-layout: fixed;")
+									tbody
+										tr
+											td td
+											td td
+										tr
+											td td
+											td td
+						tr.table-collapse--toggle
+							td td
+							td td
+						tr.table-collapse
+							// colspan is important to make the embedded table full width
+							td(colspan="2")
+								// .full-width class is important to make the embedded table full width
+								table.full-width(style="table-layout: fixed;")
+									tbody
+										tr
+											td td
+											td td
+										tr
+											td td
+											td td
+			pre
+				code.language-html
+					| &lt;table class="full-width"&gt;
+					| 	&lt;thead&gt;
+					| 		&lt;tr&gt;
 					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
 					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
 					| 		&lt;/tr&gt;
 					| 	&lt;/thead&gt;
 					| 	&lt;tbody&gt;
-					| 		&lt;tr&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
-					| 		&lt;/tr&gt;
-					| 		&lt;tr&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
+					| 		&lt;tr class="table-collapse--toggle"&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 		&lt;/tr&gt;
-					| 		&lt;tr&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
+					| 		&lt;tr class="table-collapse"&gt;
+					|			&lt;!-- colspan is important to make the embedded table full width --&gt;
+					| 			&lt;td colspan="2"&gt;
+					|				&lt;!-- .full-width class is important to make the embedded table full width --&gt;
+					|				&lt;table class="full-width"&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|				&lt;/table&gt;
+					|			&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 		&lt;tr class="table-collapse--toggle"&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 			&lt;td&gt;td&lt;/td&gt;
 					| 		&lt;/tr&gt;
-					| 		&lt;tr&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
-					| 			&lt;td&gt;td&lt;/td&gt;
+					| 		&lt;tr class="table-collapse"&gt;
+					|			&lt;!-- colspan is important to make the embedded table full width --&gt;
+					| 			&lt;td colspan="2"&gt;
+					|				&lt;!-- .full-width class is important to make the embedded table full width --&gt;
+					|				&lt;table class="full-width"&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|					&lt;tr&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|						&lt;td&gt;td&lt;/td&gt;
+					|					&lt;/tr&gt;
+					|				&lt;/table&gt;
+					|			&lt;/td&gt;
 					| 		&lt;/tr&gt;
 					| 	&lt;/tbody&gt;
 					| &lt;/table&gt;
