@@ -7,12 +7,16 @@
 // Node modules
 var URL = require('url');
 
+var prettyHrtime = require('pretty-hrtime');
+
 // Gulp modules
-var gulp = require( 'gulp' );
 var del = require('del');
 var deploy = require('gulp-gh-pages');
-var jade = require('gulp-jade');ß
+var gulp = require( 'gulp' );
+var gutil = require('gulp-util');
+var jade = require('gulp-jade');
 var less = require( 'gulp-less' );
+var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 
 // Post CSS plugins
@@ -39,7 +43,7 @@ gulp.task( 'clean-less', function() {
 	]);
 } );
 
-gulp.task( 'less', ['clean-less'], function() {
+gulp.task( 'less', function() {
 	
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','ie >= 8'] }), 
@@ -64,8 +68,8 @@ gulp.task( 'less', ['clean-less'], function() {
 		.pipe( gulp.dest(targetPath) ); // Write the less
 });
 
-gulp.task( 'watch-less', ['clean-jade'], function() {
-	gulp.watch('libs/**/*.less', ['less']);
+gulp.task( 'watch-less', function() {
+	gulp.watch( 'libs/**/*.less', ['less'] );
 } );
 
 // ------- Jade tasks --------
@@ -76,22 +80,40 @@ gulp.task( 'clean-jade', function() {
 	]);
 } );
 
-gulp.task( 'jade', ['clean-jade'], function() {
+gulp.task( 'jade', function() {
 
 	return gulp.src('libs/jade/*.jade')
     	.pipe( jade( { pretty: true }) )
     	.pipe( gulp.dest('public') );
 } );
 
-gulp.task( 'jade', ['clean-jade'], function() {
+gulp.task( 'watch-jade', function() {
+	
+	// This just rebuilds the affects file - cheap
+	gulp.watch('libs/jade/*.jade', function(event) {
 
-	return gulp.src('libs/jade/*.jade')
-    	.pipe( jade( { pretty: true }) )
-    	.pipe( gulp.dest('public') );
-} );
+		// This is mostly a hack to make it look like proper task in the console
+		var start = process.hrtime();
+		gutil.log('Starting', "'" + gutil.colors.cyan('jade') + '"...');
 
-gulp.task( 'watch-jade', ['clean-jade'], function() {
-	gulp.watch('libs/**/*.jade', ['jade']);
+		gulp.src(event.path)
+			.pipe( jade( { pretty: true } ) )
+	        .pipe( gulp.dest('public') )
+	        	.on( 'finish', function() {
+	        		var end = process.hrtime(start);
+	        		gutil.log(
+	        			'Finished', 
+	        			"'" + gutil.colors.cyan('jade') + '"', 
+	        			'after', 
+	        			gutil.colors.magenta(prettyHrtime(end))
+	        		);
+	        	} );
+
+	});
+
+	// This will rebuild all of jade - expensive
+	gulp.watch('libs/template/*.jade', ['jade']);
+		
 } );
 
 // ------- gh-pages tasks --------
@@ -138,6 +160,6 @@ gulp.task( 'watch', ['default', 'watch-less', 'watch-jade'] );
 gulp.task( 'default', ['less','jade'] );
 
 // Production build - also minifies the JS
-gulp.task( 'build', ['production', 'default'] );
+gulp.task( 'build', ['production', 'clean', 'default'] );
 
 
