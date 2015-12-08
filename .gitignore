@@ -1,12 +1,5 @@
-# CodeKit config
-config.codekit
-
-# Annoying CSS and .map files that shouldn't be there
-/css/
-/libs/css/
-*.map
-public/css/tools.css
-public/css/chat-styles.css
+# The built files
+public
 
 # Node
 node_modules

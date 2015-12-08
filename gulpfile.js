@@ -3,7 +3,13 @@
  *	Runs the gulp build tasks
  */
 
+// Node modules
+var URL = require('url');
+
+// Gulp modules
 var gulp = require( 'gulp' );
+var del = require('del');
+var deploy = require('gulp-gh-pages');
 var less = require( 'gulp-less' );
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -21,24 +27,36 @@ var opacity = require('postcss-opacity');
 var autoprefixer = require('autoprefixer');
 // Copy referenced assets to a folder
 var copyAssets = require('postcss-copy-assets');
-// Add version to the asset based on the updated date.  This allows us to use far future caching on the asset
-var cachebuster = require('postcss-cachebuster');
 
+
+// ------- Constants ---------
+
+// Flag to tell us this is a production build
 var productionBuild = false;
 
+var targetPath = 'public/css';
+
+// ------- Define tasks ---------
+
+// This task just sets a flag to say we are in production mode
 gulp.task( 'production', function() {
-	// This task just sets a flag to say we are in production mode
 	productionBuild = true;
 } );
 
-gulp.task( 'less', function() {
+// Clean the built directory
+gulp.task( 'clean', function() {
+	return del([
+	    'public/css/**'
+	  ]);
+} );
+
+gulp.task( 'less', ['clean'], function() {
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','ie >= 8'] }), 
 		rgbaFallback,
 		opacity,
 		pixrem, 
-		copyAssets, 
-		cachebuster
+		copyAssets
 	];
 
 	// Only include cssnano on a production build as it takes ages
@@ -46,13 +64,23 @@ gulp.task( 'less', function() {
 		postCssPlugins.push(cssnano);
 	}
 
-    return gulp.src('libs/*.less')
+    return gulp.src(['libs/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe( less() ) // Transform to less
-		.pipe( postcss( postCssPlugins, { to: 'public/css/assets' } ) ) // Postcss (the "to" is for copyAssets)
+		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
-		.pipe( gulp.dest( 'public/css') ); // Write the less
+		.pipe( gulp.dest(targetPath) ); // Write the less
 });
+
+gulp.task( 'gh-pages', ['less'], function() {
+
+	return gulp.src('public/**')
+    	.pipe( deploy() );
+
+} );
+
+
+
 
 // Watch everything in the static-src folder and rerun default if it changes
 gulp.task('watch-less', function () {
