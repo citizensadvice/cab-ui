@@ -16,7 +16,6 @@ var gulp = require( 'gulp' );
 var gutil = require('gulp-util');
 var jade = require('gulp-jade');
 var less = require( 'gulp-less' );
-var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 
 // Post CSS plugins
