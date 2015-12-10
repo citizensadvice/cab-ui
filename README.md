@@ -76,6 +76,13 @@ Running the gulp gh-pages task will publish this guide to the gh-pages branch wh
 
 If you want to run the style-guide locally on a web server then `npm run server` will start a website on localhost:8080 serving the contents of public folder.  Alternatively you can install [http-server](https://www.npmjs.com/package/http-server) globally (`npm install http-server -g`) and start a server for any directory by running `http-server`.
 
+## Browser testing
+
+The easiest way to do browser testing is with [Browser Sync](http://www.browsersync.io/).
+
+1. Install Browser Sync `npm install -g browser-sync`
+2. Run Browser Sync, watching HTML and CSS files `browser-sync start --server --files="*.html, css/*.css"`
+
 ### Less
 
 The CSS is written in [Less](http://lesscss.org/).  The build process transforms the Less into a single CSS file.
