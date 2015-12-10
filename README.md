@@ -68,6 +68,19 @@ The build process uses [Gulp](http://gulpjs.com/).
   * To clean the public directory run `gulp clean`
   * To publish to gh-pages run `gulp gh-pages`.  This will run the full build process and publish directly to the gh-pages branch.
 
+### Less
+
+The CSS is written in [Less](http://lesscss.org/).  The build process transforms the Less into a single CSS file.
+
+The process also uses [PostCSS](https://github.com/postcss/postcss) plugins to make writing the CSS easier.  Plugins used are:
+
+* [autoprefixer](https://github.com/postcss/autoprefixer) - Automatically add css prefixes for older browsers
+* [https://github.com/postcss/postcss-color-rgba-fallback](postcss-color-rgba-fallback) - Add a hex colour fallback for rgba for IE8
+* [postcss-opacity](https://github.com/iamvdo/postcss-opacity) - Add a filter fallback for opacity for IE8
+* [pixrem](https://github.com/robwierzbowski/node-pixrem) - Add pixel fallback for rem units for IE8
+* [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets) - Copy and rebase image and 
+* [cssnano](http://cssnano.co/) - Minify the CSS
+
 ## Generating the style-guide
 
 The build process generates the style-guide in the public folder.
@@ -82,19 +95,6 @@ The easiest way to do browser testing is with [Browser Sync](http://www.browsers
 
 1. Install Browser Sync `npm install -g browser-sync`
 2. Run Browser Sync, watching HTML and CSS files `browser-sync start --server --files="*.html, css/*.css"`
-
-### Less
-
-The CSS is written in [Less](http://lesscss.org/).  The build process transforms the Less into a single CSS file.
-
-The process also uses [PostCSS](https://github.com/postcss/postcss) plugins to make writing the CSS easier.  Plugins used are:
-
-* [autoprefixer](https://github.com/postcss/autoprefixer) - Automatically add css prefixes for older browsers
-* [https://github.com/postcss/postcss-color-rgba-fallback](postcss-color-rgba-fallback) - Add a hex colour fallback for rgba for IE8
-* [postcss-opacity](https://github.com/iamvdo/postcss-opacity) - Add a filter fallback for opacity for IE8
-* [pixrem](https://github.com/robwierzbowski/node-pixrem) - Add pixel fallback for rem units for IE8
-* [postcss-copy-assets](https://github.com/shutterstock/postcss-copy-assets) - Copy and rebase image and 
-* [cssnano](http://cssnano.co/) - Minify the CSS
 
 
 ## The big LESS clean up
