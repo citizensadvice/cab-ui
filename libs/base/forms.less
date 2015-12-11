@@ -15,12 +15,12 @@
 form {
     .invalid {
         color: @red;
-        .spacing(padding-top,@box-spacing/4);
+        padding-top: @box-spacing/4;
         clear: both;
     }
     .valid {
         color: @green;
-        .spacing(padding-top,@box-spacing/4);
+        padding-top: @box-spacing/4;
         clear: both;
     }
     small {
@@ -33,7 +33,7 @@ fieldset,
     padding: 0;
     margin: 0;
     border: 0;
-    .spacing(margin-bottom,@box-spacing);
+    margin-bottom: @box-spacing;
 }
 
 legend {
@@ -45,19 +45,19 @@ label,
     display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
     //margin-bottom: 5px;
-    .spacing(margin-bottom,@box-spacing*.5);
+    margin-bottom: @box-spacing*.5;
     font-weight: @font-weight-bolder;
     .form__label--inline {
         display: inline-block;
     }
 }
-.radio, .checkbox, .radio--inline, .checkbox--inline { 
+.radio, .checkbox, .radio--inline, .checkbox--inline {
     font-weight: @font-weight-bold;
     input {
-        .spacing(margin-right,@box-spacing/2);
+        margin-right: @box-spacing/2;
     }
 }
-    
+
 .form__label--hidden {
     .screenreader;
 }
@@ -65,8 +65,8 @@ label,
 span.form-hint {
     display: block;
     color: @gray-3;
-    .spacing(margin-bottom,@box-spacing*.5);
-    .spacing(margin-top,-@box-spacing*.5);
+    margin-bottom: @box-spacing*.5;
+    margin-top: -@box-spacing*.5;
     font-weight: @font-weight-base;
 }
 
@@ -76,7 +76,7 @@ input[type=password],
 input[type=email],
 input[type=number],
 input[type=search] {
-    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     -webkit-appearance: none;
     width: 100%;
     border-radius: 0;
@@ -140,7 +140,7 @@ select {
 }
 
 textarea {
-    .spacing(height,@box-spacing*8);
+    height: @box-spacing*8;
     resize: vertical;
 }
 
@@ -153,7 +153,7 @@ input[class*="dob-"],
 textarea,
 select {
     width: 100%;
-    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
 //      border-color: @red;
@@ -210,12 +210,12 @@ textarea.form__field {
 
 .radio,
 .checkbox {
-    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+    padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
     position: relative;
     display: inline-block;
-    .spacing(margin-right,@box-spacing-horizontal/2);
+    margin-right: @box-spacing-horizontal/2;
     z-index: 1;
     background-color: @gray-8;
     input {
@@ -273,7 +273,7 @@ textarea.form__field {
            display: block;
            //float: right;
            display: table-cell;
-           margin: 0; 
+           margin: 0;
             span {
                 font-weight: @font-weight-bolder;
             }
@@ -283,13 +283,13 @@ textarea.form__field {
 
 .multi-select {
     padding: 0;
-    .spacing(height,@box-spacing*5.5);
+    height: @box-spacing*5.5;
     option {
-        .spacing(padding,@box-spacing-vertical/2,@box-spacing-horizontal/2);
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
         -webkit-appearance: none;
     }
     @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+        padding: @box-spacing-vertical @box-spacing-horizontal;
         height: auto !important;
     }
 }
@@ -338,7 +338,7 @@ input[class*="dob-"] {
     width: 5rem;
     display: inline-block;
     float: left;
-    .spacing(margin-right,@box-spacing-horizontal/2);
+    margin-right: @box-spacing-horizontal/2;
     &:last-child {
         margin: 0;
     }
@@ -381,7 +381,7 @@ input[class*="dob-"] {
     }
     &--toggle {
         label {
-            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+            padding: @box-spacing-vertical @box-spacing-horizontal;
             text-align: center;
             input[type="radio"],
             input[type="checkbox"] {
@@ -410,7 +410,7 @@ input[class*="dob-"] {
             }
         }
         button {
-            .spacing(padding,@box-spacing-vertical,0);
+            padding: @box-spacing-vertical 0;
         }
     }
     &--dropdown {
@@ -429,7 +429,7 @@ input[class*="dob-"] {
     .field {
         display: table-cell;
         width: 100%;
-        .spacing(padding-right,1);
+        padding-right: 1;
         input,
         .dropdown {
             border-radius: @form-border-radius;
@@ -456,7 +456,7 @@ input[class*="dob-"] {
         -moz-appearance: none;
         border: 0; //If you want a border set it on the parent
         background: transparent;
-        .spacing(padding,@box-spacing-vertical);
+        padding: @box-spacing-vertical;
 
         // We need to push the pointer off the side so it is hidden in the overflow
         // In webkit / blink there is no pointer to move
@@ -498,7 +498,7 @@ input[class*="dob-"] {
         color: white;
         padding: 0 .75em;
         font-size: 1.3em;
-        pointer-events: none; 
+        pointer-events: none;
         &:before {
             padding: 0;
         }
@@ -541,7 +541,7 @@ input.custom-dropdown__button {
         display: table-cell;
         width: 100%;
         padding-right: .5em;
-       
+
         & > input {
              width: 100%;
         }
@@ -565,9 +565,9 @@ input.custom-dropdown__button {
 
 /*.search-icon {
     background-image: url("assets/images/search.svg");
-    .spacing(padding-right,3);
+    padding-right: 3;
     background-repeat: no-repeat;
     background-position: center right .6rem;
-    .spacing(-webkit-background-size,1.4);
-   .spacing(background-size,1.4);
+    -webkit-background-size: 1.4;
+   background-size: 1.4;
 }*/

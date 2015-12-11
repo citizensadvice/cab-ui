@@ -73,7 +73,7 @@ li > ol {
 /**
  * Tabs
  */
-  
+
 .tabContainer {
     background: @gray-7;
     overflow: hidden;
@@ -96,7 +96,7 @@ li > ol {
         margin-bottom: 0;
 
         a {
-            .spacing(padding,@box-spacing,@box-spacing*.6);
+            padding: @box-spacing @box-spacing*.6;
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -136,7 +136,7 @@ li > ol {
         vertical-align: top;
 
         a {
-            .spacing(padding,@box-spacing,@box-spacing*.6);
+            padding: @box-spacing @box-spacing*.6;
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -171,7 +171,7 @@ li > ol {
         width: 25%;
         margin-bottom: 0;
         a {
-            .spacing(padding,@box-spacing,@box-spacing*.6);
+            padding: @box-spacing @box-spacing*.6;
             display: inline-block;
             text-align: center;
             width: 100%;
@@ -220,7 +220,7 @@ li > ol {
 
 // Pagination
 .pagination ul {
-    .spacing(margin,@box-spacing,0);
+    margin: @box-spacing 0;
     padding: 0;
     overflow: hidden;
     & > li {
@@ -245,7 +245,7 @@ li > ol {
             }
         }
         &.pagination--dot {
-            .spacing(padding,.2,.7);
+            padding: .2 .7;
             margin-right: .3em;
             margin-left: -.2em;
             font-weight: 600;
@@ -258,11 +258,11 @@ li > ol {
 
 // Lists for checklist style
 .tick ul {
-    .spacing(padding,0,0,0,2);
+    padding: 0 0 0 2;
     list-style:none;
 
-    & > li:before {    
-        .spacing(margin,0,.25,0,-.5);
+    & > li:before {
+        margin: 0 .25 0 -.5;
         font-family: 'FontAwesome';
         content: '\f00c';
     }
@@ -270,11 +270,11 @@ li > ol {
 
 
 .cross ul {
-    .spacing(padding,0,0,0,2);
+    padding: 0 0 0 2;
     list-style:none;
 
-    & > li:before {    
-            .spacing(margin,0,.25,0,-.5);
+    & > li:before {
+            margin: 0 .25 0 -.5;
             font-family: 'FontAwesome';
             content: '\f00d';
     }

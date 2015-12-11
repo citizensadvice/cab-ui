@@ -4,7 +4,7 @@
 
 // Default Table
 table {
-    .spacing(margin,@box-spacing-vertical,0);
+    margin: @box-spacing-vertical 0;
     border-collapse: collapse;
     //table-layout: fixed;
     &.full-width {
@@ -20,7 +20,7 @@ table {
     }
 }
 
-td, 
+td,
 th {
     padding: 1em*(2/3);
     padding: @box-spacing*(2/3);
@@ -67,7 +67,7 @@ th {
     color: @heritage-blue;
     font-weight: @font-weight-bolder;
 }
-    
+
 // Sortable Table
 .tablesorter {
     th {
@@ -75,7 +75,7 @@ th {
         background: @heritage-blue url('assets/images/sortable-default.png') no-repeat 99%;
         &:hover {
             background-color: @blue;
-        }   
+        }
     }
 
     .tablesorter-headerDesc{
@@ -103,8 +103,8 @@ th {
         white-space: nowrap;
         font-weight: bold;
         color: @black;
-        .spacing(padding,@box-spacing-vertical*.4,@box-spacing-horizontal,@box-spacing-vertical*.4,0);
-        
+        padding: @box-spacing-vertical*.4 @box-spacing-horizontal @box-spacing-vertical*.4 0;
+
         // Reset the colours changed for the standard tables
         // Pity we can't use :not for the selector above
         a {
@@ -117,14 +117,14 @@ th {
     }
 
     tr:first-child {
-        td, 
+        td,
         th {
             padding-top: 0;
         }
     }
 
     tr:last-child {
-        td, 
+        td,
         th {
             padding-bottom: 0;
         }
@@ -173,23 +173,23 @@ th {
 .blindtable tr td:first-child {
     width: 10%;
 }
-    
+
 /*Fifty Fifty Table */
-  
+
 .fiftyfiftytable tr td {
     width: 50%;
 }
-      
+
 
 /*Simple Table*/
-table.simple-table, 
-table.simple-table tr, 
-table.simple-table th, 
+table.simple-table,
+table.simple-table tr,
+table.simple-table th,
 table.simple-table td {
     color: @gray-0;
     vertical-align: middle;
 }
-table.simple-table tr, 
+table.simple-table tr,
 table.simple-table td {
     border: 0;
 }
@@ -197,9 +197,9 @@ table.simple-table th {
     background-color: @white;
     font-weight: bold;
 }
-table.simple-table th, 
+table.simple-table th,
 table.simple-table td {
-    .spacing(padding,0,@box-spacing-horizontal/2);
+    padding: 0 @box-spacing-horizontal/2;
 }
 
 
@@ -221,7 +221,7 @@ table.simple-table td {
     }
 }
 @media screen and ( max-width: @screen-md-min ) {
-    table.contactus thead, 
+    table.contactus thead,
     table.contactus thead th {
         display: none;
     }
@@ -235,8 +235,8 @@ table.simple-table td {
     table.contactus tr:nth-child(even) {
         background-color: @gray-7;
     }
-    table.contactus tr td, 
-    table.contactus tr td:before, 
+    table.contactus tr td,
+    table.contactus tr td:before,
     table.contactus tr {
         display: inline-block;
     }
@@ -266,7 +266,7 @@ table.simple-table td {
 // this is automatically added by the htmlrewriter
 .table-scroll {
     overflow-x: auto;
-    .spacing(margin,@box-spacing-vertical,0);
+    margin: @box-spacing-vertical 0;
     & > table {
         margin: 0;
     }

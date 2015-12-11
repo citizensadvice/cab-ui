@@ -9,35 +9,35 @@ button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
-    .btn(); 
+    .btn();
 }
 
 .btn-primary-light {
     .btn(
         @btn-background: @aqua-light,
         @btn-background-hover: @aqua
-    ); 
+    );
 }
 
 .btn-primary-cancel {
-    .btn( 
+    .btn(
         @btn-text:@heritage-blue,
         @btn-background:@white,
         @btn-background-hover:@heritage-blue-lightest
-    ); 
+    );
 }
 
 .btn-secondary {
     .btn (
     @white,
-    @heritage-blue, 
+    @heritage-blue,
     darken(@heritage-blue, 5%)
     );
 }
 
 .btn-right {
     float: right;
-    .spacing(margin,@box-spacing-vertical*.5,0,@box-spacing-vertical*.5,@box-spacing-horizontal*.5);
+    margin: @box-spacing-vertical*.5 0 @box-spacing-vertical*.5 @box-spacing-horizontal*.5;
 }
 
 .btn-disabled,
@@ -64,7 +64,7 @@ input[type=button] {
     @green,
     @green-dark
     );
-}    
+}
 
 
 // Old button styles
@@ -125,38 +125,38 @@ button:disabled {
 
 .btn-small,
 .btn-primary-outline {
-    .btn-small( 
+    .btn-small(
         @heritage-blue,
         @heritage-blue-light,
         @white,
-        @blue-lighter 
-    ); 
+        @blue-lighter
+    );
 }
 
 .btn-small--green {
-    .btn-small( 
-        @gray-2, 
+    .btn-small(
+        @gray-2,
         @aqua,
         @white,
-        @aqua-light 
-    ); 
+        @aqua-light
+    );
 }
 
 .btn-small--red {
-    .btn-small( 
-        @text-color, 
+    .btn-small(
+        @text-color,
         @red,
         @white,
-        @red-lighter 
-    ); 
+        @red-lighter
+    );
 }
 
-// Multiple buttons in a set 
+// Multiple buttons in a set
 
 .btn-group {
     display: inline-table;
     white-space: nowrap;
-    .spacing(margin,@box-spacing-vertical*.5,@box-spacing-horizontal*.5,@box-spacing-vertical*.5,0);
+    margin: @box-spacing-vertical*.5 @box-spacing-horizontal*.5 @box-spacing-vertical*.5 0;
     .btn {
         border-radius: 0;
         margin: 0;
