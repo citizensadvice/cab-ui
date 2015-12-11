@@ -26,7 +26,7 @@
     &__heading {
         cursor: pointer;
         display: block;
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal*3.5,@box-spacing-vertical,@box-spacing-horizontal);
+        padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
         margin: 0;
         border: none;
         background-color: @revealable-background;
@@ -38,7 +38,7 @@
         font-weight: @font-weight-bold;
         line-height: @line-height-small;
         border-bottom: 1px solid @revealable-border;
-        h1, h2, h3, h4, h5, h6 {
+        h1  h2, h3, h4, h5, h6 {
             margin-top: 0;
             color: @revealable-heading;
         }
@@ -46,7 +46,7 @@
             box-sizing: border-box;
             font-family: 'FontAwesome';
             content: "\f067";
-            .spacing(padding,0,@box-spacing-horizontal*1.25);
+            padding: 0 @box-spacing-horizontal*1.25;
             .vertical-align(absolute);
             right: 0;
             color: @revealable-icon;
@@ -60,8 +60,8 @@
     &__close {
         cursor: pointer;
         display: block;
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal*3,@box-spacing-vertical,@box-spacing-horizontal);
-        .spacing(margin,@box-spacing-vertical,-@box-spacing-horizontal,-@box-spacing-vertical,-@box-spacing-horizontal);
+        padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal;
+        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
         text-decoration: none;
         position: relative;
         color: @revealable-heading;
@@ -73,7 +73,7 @@
         &:before {
             box-sizing: border-box;
             font-family: 'FontAwesome';
-            .spacing(padding,0,@box-spacing-horizontal*1.25);
+            padding: 0 @box-spacing-horizontal*1.25;
             height: 100%;
             position: absolute;
             right: 0;
@@ -97,7 +97,7 @@
         padding: 0;
         border: 0;
         margin: 0;
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+        padding: @box-spacing-vertical @box-spacing-horizontal;
         h1, h2, h3, h4, h5, h6 {
             margin-top: 0;
             color: @revealable-heading;

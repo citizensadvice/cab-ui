@@ -12,8 +12,8 @@
     border: 1px solid @btn-border;
     color: @btn-text;
     font-weight: bold;
-    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
-    .spacing(margin,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,0);
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
     &:hover,
     &:focus,
     &:active {
@@ -33,11 +33,11 @@
     }
 }
 
-.btn-small ( 
-        @btn-small-text: @heritage-blue, 
+.btn-small (
+        @btn-small-text: @heritage-blue,
         @btn-small-border: @heritage-blue-light,
         @btn-small-background: @heritage-blue-lightest,
-        @btn-small-background-hover: @heritage-blue 
+        @btn-small-background-hover: @heritage-blue
     ){
     padding: .3em .5em;
     margin-left: .25rem;

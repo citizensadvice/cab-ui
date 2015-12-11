@@ -5,15 +5,15 @@
  */
 
 // Creates a mixin for making callout styles, including their links
-.callout ( 
+.callout (
 		@callout-background: @gray-6;
-		@callout-headings: @text-color; 
-		@callout-text: @text-color; 
-		@callout-border: darken(@callout-background, 25%) 
+		@callout-headings: @text-color;
+		@callout-text: @text-color;
+		@callout-border: darken(@callout-background, 25%)
 	){
     padding: .75em 1em;
-    .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
-    .spacing(margin,@box-spacing-vertical,0);
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
@@ -23,7 +23,7 @@
     	background-color: @callout-border;
     }
 	> h1, > h2, > h3 {
-		color: @callout-headings; 
+		color: @callout-headings;
 		font-size: @font-size-h3;
 	}
 	a {
@@ -88,7 +88,7 @@
 // Callout icons
 .callout--icon(@icon) {
 		.callout--border;
-		.callout--border--left;  
+		.callout--border--left;
 	    &:before {
 	        font-family: 'FontAwesome';
 	        font-size: .85rem;
@@ -96,9 +96,9 @@
 	        content: @icon;
 	        line-height: 1em;
 	        display: block;
-	        .spacing(margin,-@box-spacing-vertical,-@box-spacing-horizontal,@box-spacing-vertical,-@box-spacing-horizontal);
-	        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
-	    
+	        margin: -@box-spacing-vertical -@box-spacing-horizontal @box-spacing-vertical -@box-spacing-horizontal;
+	        padding: @box-spacing-vertical @box-spacing-horizontal;
+
 	}
 }
 
@@ -110,8 +110,8 @@
 	}
 }
 .callout--border--left ( @callout--border--left--width: @box-spacing/2 ) {
-	.spacing(border-left-width,@callout--border--left--width);
+	border-left-width: @callout--border--left--width;
 }
 .callout--border--top ( @callout--border--top--width: @box-spacing/2 ) {
-	.spacing(border-top-width,@callout--border--top--width);
+	border-top-width: @callout--border--top--width;
 }
