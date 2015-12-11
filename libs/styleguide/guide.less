@@ -28,13 +28,13 @@ body {
     border-color:       #080808;
 }
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-    background-color:   #003a6a;  
-    font-weight:        600;  
+    background-color:   #003a6a;
+    font-weight:        600;
 }
 .navbar-inverse .navbar-nav>li>a {
     color:              #A5BDDC;
-    padding-top:        25px; 
-    padding-bottom:     25px; 
+    padding-top:        25px;
+    padding-bottom:     25px;
 }
 .navbar-nav {
     float: right;
@@ -50,7 +50,7 @@ body {
     margin-top:         (@box-spacing-vertical*2);
     margin-bottom:      unit(@box-spacing-vertical*1.5*@base-size,px);
     margin-bottom:      (@box-spacing-vertical*1.5);
-    .spacing(padding,@paragraph-margin-bottom*2,@paragraph-margin-bottom*2,0,@paragraph-margin-bottom*2)   
+    padding: @paragraph-margin-bottom*2 @paragraph-margin-bottom*2 0 @paragraph-margin-bottom*2;
 }
 ol {
 }
@@ -107,11 +107,11 @@ ol li, ul li {
             }
         ul, ol {
             margin: 0;
-            .spacing(padding,0.25rem,1rem);
+            padding: 0.25rem 1rem;
             //list-style: none;
             li {
                 font-size: 0.95rem;
-                .spacing(margin-bottom,1rem);
+                margin-bottom: 1rem;
                 display: inline-block;
             }
         }
@@ -177,8 +177,8 @@ figure {
     background-color: @heritage-blue-lightest;
     border: 1px solid @blue-light;
     border-radius: @form-border-radius;
-    .spacing(padding,1);
-    .spacing(margin,0) !important; // Added important as it's being overwritten in the normalize 
+    padding: 1;
+    margin: 0 !important; // Added important as it's being overwritten in the normalize
     img {
         border: 0px solid @white;
         border-radius: @form-border-radius;
@@ -186,25 +186,25 @@ figure {
 }
 figcaption {
     display: block;
-    .spacing(padding,.5,0,0,0);
+    padding: .5 0 0 0;
 }
 
 // For code
 .example-box {
     color: #333;
-    .spacing(padding,@box-spacing);
+    padding: @box-spacing;
     background-color: #f8f8f8;
     border: 1px solid #dfe1e3;
     border-radius: @form-border-radius;
     overflow: hidden;
     code {
         color: @gray-4;
-        .spacing(padding,0,@box-spacing/2);
+        padding: 0 @box-spacing/2;
     }
 }
 .example-box-full {
     color: #333;
-    .spacing(padding,@box-spacing);
+    padding: @box-spacing;
     font-family: monaco,monospace;
     line-height: 1.7em;
     background-color: #f8f8f8;
@@ -213,7 +213,7 @@ figcaption {
     overflow: hidden;
     code {
         color: @gray-4;
-        .spacing(padding,0,@box-spacing/2);
+        padding: 0 @box-spacing/2;
     }
 }
 .example-box-plain {
@@ -227,7 +227,7 @@ figcaption {
     overflow: hidden;
     code {
         color: @gray-4;
-        //padding: 0 2em; 
+        //padding: 0 2em;
     }
     fieldset:last-child {
         margin-bottom: 0;
@@ -529,12 +529,12 @@ div.tooltip:before {
     }
     &__content {
         .limit-width;
-        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         p a {
             border-bottom: none;
             &:hover {
-                border-bottom: 0.0625rem solid @heritage-yellow-darker;        
+                border-bottom: 0.0625rem solid @heritage-yellow-darker;
             }
         }
     }
@@ -553,13 +553,13 @@ div.tooltip:before {
             margin: 0 auto;
             img {
                 width: 220px;
-                .spacing(padding,@box-spacing-vertical*1.5,@box-spacing-horizontal);
+                padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
                 display: block;
             }
         }
         .mockup &--content img {
             //width: 200px;
-            //.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+            //padding: @box-spacing-vertical @box-spacing-horizontal;
         }
         /*.main-breadcrumb__content {
             //.vertical-align(absolute);
@@ -576,11 +576,11 @@ div.tooltip:before {
                 font-size: @font-size-small;
                 line-height: (@line-height-small * 2);
                 &>i {
-                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    margin: 0 @box-spacing-horizontal*.5 0 0;
                     color: @blue-light;
                 }
                 a {
-                    .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+                    margin: 0 @box-spacing-horizontal*.5 0 0;
                     color: @white;
                 }
             }
