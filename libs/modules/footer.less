@@ -24,8 +24,8 @@
 }
 
 .main-footer__box {
-    
-    .spacing(padding,@box-spacing-horizontal);
+
+    padding: @box-spacing-horizontal;
 
     & > h2 {
         color:@heritage-blue;
@@ -36,13 +36,13 @@
     & > ul {
         list-style: none;
         padding: 0;
-        .spacing(margin,@box-spacing-horizontal,0,0,0);
+        margin: @box-spacing-horizontal 0 0 0;
 
         // Messy, but makes box reuse a bit easier
         &.li--arrow {
             list-style-image: none;
         }
-        
+
     }
 
 }
@@ -52,7 +52,7 @@
 }
 
 .main-footer__box--copyright {
-    p { 
+    p {
         font-size: @font-size-small;
     }
 

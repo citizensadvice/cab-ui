@@ -30,7 +30,7 @@
 .main-content{
     .limit-width;
     .clearfix;
-    .spacing(padding,0,@box-spacing);
+    padding: 0 @box-spacing;
     margin-top: unit(@box-spacing*2*@base-size,px);
     margin-top: @box-spacing*2;
     margin-bottom: unit(@box-spacing*1.5*@base-size,px);
@@ -47,15 +47,15 @@
         width: @width-span-8;
 
         @media ( min-width: @screen-sm-min ) {
-            .spacing(padding-right,@box-spacing*2);
+            padding-right: @box-spacing*2;
         }
 
         @media ( min-width: @screen-md-min ) {
-            .spacing(padding-right,@box-spacing*3);
+            padding-right: @box-spacing*3;
         }
 
         @media ( min-width: @screen-lg-min ) {
-            .spacing(padding-right,@box-spacing*6);
+            padding-right: @box-spacing*6;
         }
 
         @media ( max-width: @screen-xs-max ) {

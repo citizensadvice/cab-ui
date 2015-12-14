@@ -4,14 +4,14 @@
  * This is the less file for developing the sidebar navigation (dropdown tree structure)
  *
  */
- 
+
 .nav--beta {
 	background-color: red;
 	padding: 0;
 	a {
 		border: none;
 		display: block;
-		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+		padding: @box-spacing-vertical @box-spacing-horizontal;
 	}
 	li {
 		border-bottom: 1px solid white !important;
@@ -24,7 +24,7 @@
 		}
 	}
 	.collapse-toggle {
-		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+		padding: @box-spacing-vertical @box-spacing-horizontal;
 		background-color: @responsible-aqua;
 		position: relative;
 		font-weight: 700;
@@ -32,7 +32,7 @@
 			box-sizing: border-box;
 		    font-family: 'FontAwesome';
 			content: "\f067";
-		    .spacing(padding,0,@box-spacing-horizontal*1.25);
+		    padding: 0 @box-spacing-horizontal*1.25;
 		    height: 100%;
 		    position: absolute;
 		    right: 0;

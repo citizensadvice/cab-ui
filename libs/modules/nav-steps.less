@@ -4,7 +4,7 @@
  * This is the less file for developing the sidebar navigation (steps on this page) for long format content
  *
  */
- 
+
 .steps {
     .callout( @callout-border: @white, @callout-background: @heritage-blue-lightest );
     .callout--border;
@@ -36,11 +36,11 @@
             }
         ul, ol {
             margin: 0;
-            .spacing(padding,0.25rem,1rem);
+            padding: 0.25rem 1rem;
             //list-style: none;
             li {
                 font-size: 0.95rem;
-                .spacing(margin-bottom,1rem);
+                margin-bottom: 1rem;
                 display: inline-block;
             }
         }
@@ -95,7 +95,7 @@
                 text-decoration: none;
                 margin: 0 -@box-spacing;
                 font-size: @font-size-small;
-                .spacing(padding,@box-spacing-vertical/1.5,@box-spacing-horizontal);
+                padding: @box-spacing-vertical/1.5 @box-spacing-horizontal;
             }
         }
     }
@@ -113,7 +113,7 @@
         }
     }
     h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
-        .spacing(padding,@box-spacing,0);
+        padding: @box-spacing 0;
         margin: 0;
         color: @heritage-blue;
     }
@@ -135,8 +135,8 @@
         color: white;
         span {
             background-color: @heritage-blue;
-            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal*3,@box-spacing-vertical,@box-spacing-horizontal*2);
-            text-decoration: none; 
+            padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal*2;
+            text-decoration: none;
             display: block;
             border: none;
             font-size: 14px;
@@ -193,10 +193,10 @@
     li {
         a {
             background-color: @heritage-blue-lightest;
-            .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal,@box-spacing-vertical,@box-spacing-horizontal*2);
+            padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal*2;
             border: 0px;
             border-bottom: 1px solid @white;
-            text-decoration: none; 
+            text-decoration: none;
             display: block;
             font-size: @font-size-small;
         }
@@ -208,7 +208,7 @@
         cursor: pointer;
         background-color: @heritage-blue;
         color: @white;
-        .spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+        padding: @box-spacing-vertical @box-spacing-horizontal;
         font-weight: bold;
         &:active,
         &:visited,

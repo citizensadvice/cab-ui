@@ -102,7 +102,7 @@
 }
 
 .home-page__box--member-supporters:extend(.box all ) {
-    
+
     & > h2 {
         color: @heritage-blue;
     }
@@ -159,11 +159,11 @@
   flex-basis: 0;
   order: 1;
 }
- 
+
 .member-location:after {
   clear: both;
 }
- 
+
 .member-location {
   zoom: 1; /* ie 6/7 */
 }
@@ -175,7 +175,7 @@
         color: white;
         margin: 0;
         font-size: @font-size-medium;
-        .spacing(padding,@box-spacing-horizontal*.7,@box-spacing-horizontal*.5); // This is supposed to be the same height as the main title
+        padding: @box-spacing-horizontal*.7 @box-spacing-horizontal*.5; // This is supposed to be the same height as the main title
     }
 
     & .member_group_label {
@@ -215,7 +215,7 @@
 }
 .member-logo {
     padding-right: 20px;
-    .spacing(margin,@box-spacing 0);
+    margin: @box-spacing 0;
 }
 .member-title {
     display: block;

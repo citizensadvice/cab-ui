@@ -55,13 +55,13 @@
         background-color: @heritage-blue;
         img {
             max-width: 70%;
-            .spacing(padding,.5,0);
+            padding: .5 0;
         }
         @media ( max-width: @screen-xs-max ) {
             display: block;
             text-align: center;
             margin: 0;
-            .spacing(padding-top,.5);
+            padding-top: .5;
         }
     }
 }
@@ -76,7 +76,7 @@
 }
 
 .main-header__top-nav {
-    margin: .5em -.4em .2em 0; 
+    margin: .5em -.4em .2em 0;
     text-align: right;
     max-width: 70%; // For old IE
     max-width: calc( ~"100% - 300px" ); // For modern browsers (~ to stop less auto calculating)
@@ -125,7 +125,7 @@ input.main-header__search__input {
 }
 
 @media ( max-width: @screen-xs-max ) {
-     
+
       .main-header__content {
          padding: 0;
       }
@@ -139,11 +139,11 @@ input.main-header__search__input {
             color: @white;
         }
      }
-     
+
      html[lang="en-SCT"] .main-header__links {
          background: @heritage-blue;
      }
-     
+
      .main-header__top-nav, .main-header__bottom-nav {
          display: none;
      }
@@ -180,4 +180,3 @@ input.main-header__search__input {
         top: 0;
      }
 }
-  

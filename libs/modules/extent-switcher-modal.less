@@ -37,7 +37,7 @@
 .extent-country-select {
   width: @width-span-12;
   background-color: @heritage-blue-lightest;
-  .spacing(padding,@box-spacing-horizontal*1.5);
+  padding: @box-spacing-horizontal*1.5;
   margin-top: unit(@box-spacing*.5*@base-size,px);
   margin-top: @box-spacing*.5;
   h2 {
@@ -62,14 +62,14 @@
   margin: auto;
   overflow: scroll;
 }
-      
+
 
 .popup_content, .extent-overlay {
   z-index: 5001; /* any number + 1 */
   background-color: @heritage-blue-lightest;
   display: block;
   margin: 0px auto;
-  .spacing(padding,@box-spacing-horizontal);
+  padding: @box-spacing-horizontal;
   max-width: 500px;
   //border-top: 10px solid @heritage-blue;
   position: relative;
@@ -95,15 +95,15 @@
     clear: both;
 }
 .extent-overlay .span2{
-    background:@heritage-blue; 
-    color: @white; 
-    display: block; 
+    background:@heritage-blue;
+    color: @white;
+    display: block;
     float:left;
-    font-weight: bold; 
-    height: 60px; 
-    margin: 0 1.5%; 
-    padding: 5px 10px; 
-    width: 17%; 
+    font-weight: bold;
+    height: 60px;
+    margin: 0 1.5%;
+    padding: 5px 10px;
+    width: 17%;
 }
 
 .popup_feedback {
