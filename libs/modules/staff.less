@@ -6,8 +6,8 @@
 
 .staff {
     background-color: @white;
-    .spacing(padding,@box-spacing);
-    .spacing(margin,@box-spacing,0);
+    padding: @box-spacing;
+    margin: @box-spacing 0;
 }
 
 .staff__name {
@@ -21,7 +21,7 @@
 
 .staff__contacts {
     list-style: none;
-    .spacing(margin,@box-spacing,0,0,0);
+    margin: @box-spacing 0 0 0;
     padding: 0;
 
     & > li {

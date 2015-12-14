@@ -2,19 +2,19 @@
  * SECTION NOTICE
  *
  * Callout for the header area of page to indicate new content e.g 'https://www.citizensadvice.org.uk/benefits/universal-credit/'.
- * 
+ *
  */
 
 .section-notice {
     background: @heritage-yellow-lighter;
     &__content {
         .limit-width;
-        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         p a {
             border-bottom: none;
             &:hover {
-                border-bottom: 0.0625rem solid @heritage-yellow-darker;        
+                border-bottom: 0.0625rem solid @heritage-yellow-darker;
             }
         }
         .badge {
@@ -46,7 +46,7 @@
 
 @media (max-width: @screen-sm-max ) {
      .section-notice__content {
-        .spacing(padding,@box-spacing-horizontal,@box-spacing-horizontal,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal @box-spacing-horizontal 0 @box-spacing-horizontal;
 
         p {
             font-size: @font-size-small;
@@ -58,13 +58,13 @@
  * SECTION NOTICE DEVELOPMENT
  *
  * Amending the pattern for changed content.
- * 
+ *
  */
 
 .section-notice--dev {
     &__content {
         .limit-width;
-        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         border-bottom: @gray-7 1px solid;
         .badge {
@@ -82,7 +82,7 @@
     }
     &__changing {
         .limit-width;
-        .spacing(padding,@box-spacing-horizontal,0,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         border-bottom: @gray-7 1px solid;
         .badge {
@@ -106,7 +106,7 @@
 
 @media (max-width: @screen-sm-max ) {
      .section-notice__content {
-        .spacing(padding,@box-spacing-horizontal,@box-spacing-horizontal,0,@box-spacing-horizontal);
+        padding: @box-spacing-horizontal @box-spacing-horizontal 0 @box-spacing-horizontal;
 
         p {
             font-size: @font-size-small;

@@ -63,7 +63,7 @@
 	&__main {
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+		padding: @box-spacing-vertical @box-spacing-horizontal;
 		& >:first-child {
 			margin-top: 0;
 		}
@@ -77,7 +77,7 @@
 				position: relative;
 				margin: 0;
 				p {
-					.spacing(padding,@box-spacing-vertical*.75,@box-spacing-horizontal*.75,@box-spacing-vertical*.75,@box-spacing-horizontal*4);
+					padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75 @box-spacing-vertical*.75 @box-spacing-horizontal*4;
 					margin: 0;
 				}
 				button {
@@ -86,7 +86,7 @@
 					right: unit(@box-spacing-horizontal*.75*@base-size,px);
 					right: @box-spacing-horizontal*.75;
 					margin: 0;
-					.spacing(padding,@box-spacing);
+					padding: @box-spacing;
 					&:hover ~ p {
 						background-color: @red-lightest;
 					}
@@ -103,7 +103,7 @@
 						right: unit(@box-spacing-horizontal*.75*@base-size,px);
 						right: @box-spacing-horizontal*.75;
 						margin: 0;
-						.spacing(padding,@box-spacing);
+						padding: @box-spacing;
 						&:hover ~ p {
 							background-color: @gray-8;
 							a {
@@ -121,22 +121,22 @@
 
 	&__footer {
 		border-top: 1px solid @gray-7;
-		.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal/2);
-		.spacing(margin,0,@box-spacing-horizontal/2);
+		padding: @box-spacing-vertical @box-spacing-horizontal/2;
+		margin: 0 @box-spacing-horizontal/2;
 		-webkit-flex-shrink: 0;
 		-ms-flex-negative: 0;
 		flex-shrink: 0;
 		text-align: right;
 		.btn {
-    		.spacing(margin,@box-spacing-horizontal*.5,0,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5);
+    		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
 		    //font-size: @font-size-small;
 		    &.reference__list {
-				.spacing(padding,@box-spacing-vertical/3,@box-spacing-horizontal/2);
+				padding: @box-spacing-vertical/3 @box-spacing-horizontal/2;
 			    font-weight: 700;
 			}
 		}
 		.btn-group {
-    		.spacing(margin,@box-spacing-horizontal*.5,0,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5);
+    		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
 			.btn {
 				margin: 0;
 				margin-right: 1px;
@@ -144,7 +144,7 @@
 		}
 		.left {
 			float: left;
-    		.spacing(margin,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,@box-spacing-horizontal*.5,0);
+    		margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
 		}
 	}
 }

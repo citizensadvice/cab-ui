@@ -6,7 +6,7 @@
  */
 
 .status {
-    .spacing(padding,@box-spacing*1.5,@box-spacing,@box-spacing*.5,@box-spacing);
+    padding: @box-spacing*1.5 @box-spacing @box-spacing*.5 @box-spacing;
     background-color: @yellow-light;
     color: @gray-1;
     vertical-align: middle;
@@ -19,7 +19,7 @@
     color: @gray-1;
     display: inline-block;
     float: left;
-    .spacing(padding,@box-spacing*.5);
+    padding: @box-spacing*.5;
     margin-right: unit(@box-spacing*.5*@base-size,px);
     margin-right: @box-spacing*.5;
 }

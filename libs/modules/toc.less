@@ -2,8 +2,8 @@
  * TABLE OF CONTENTS
  *
  * Contents list for index page of AdviserNet
- * Ignoring these files for the most part until we reach them to update 
- * 
+ * Ignoring these files for the most part until we reach them to update
+ *
  * Example page: https://www.citizensadvice.org.uk/advisernet/debt-and-money/diagnosing-debt-problems/overview-of-debt-advice/
  */
 
@@ -23,7 +23,7 @@
 
     ul {
         list-style: none;
-        .spacing(margin,@box-spacing*.5,0,0,0);
+        margin: @box-spacing*.5 0 0 0;
         padding-left: unit(@box-spacing-horizontal*2*@base-size,px);
         padding-left: @box-spacing-horizontal*2;
     }
@@ -45,10 +45,10 @@
 /* The paragraph numbers */
 .toc-legacy__num {
     position: absolute; /* Move to the right */
-    right: 0; 
+    right: 0;
     background: @heritage-blue-lightest; /* Hides the dots */
-    padding-left: unit(@box-spacing-horizontal*.5*@base-size,px); 
-    padding-left: @box-spacing-horizontal*.5; 
+    padding-left: unit(@box-spacing-horizontal*.5*@base-size,px);
+    padding-left: @box-spacing-horizontal*.5;
     width: 7em; /* Make sure they are left aligned */
 }
 
@@ -80,10 +80,10 @@
     height: 1.2em;
     width: 1.2em;
     padding: 0;
-    .spacing(margin,@box-spacing-horizontal*.2,0,0,0);
+    margin: @box-spacing-horizontal*.2 0 0 0;
 }
 
 .toc-legacy__mono {
     font-family: "Courier New", monospace;
 }
-      
+

@@ -17,7 +17,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 /* Previous styling for sharing options */
 
 .main-container {
-    // Used to wrap 
+    // Used to wrap
     position: relative;
 }
 
@@ -65,7 +65,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
 
     .share-bar {
         @media (max-width: @screen-xs-max) {
-            .spacing(margin,@box-spacing,0);
+            margin: @box-spacing 0;
         }
     }
 
@@ -74,7 +74,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         // But it avoids doubling up on the classes
         display: block;
         color: @gray-3;
-        .spacing(padding,@box-spacing-horizontal*.8);
+        padding: @box-spacing-horizontal*.8;
         line-height: 1;
         position: relative;
         text-decoration: none;
@@ -83,7 +83,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         @media (max-width: @screen-xs-max) {
             display: inline-block;
             color: @white;
-            .spacing(padding,@box-spacing-horizontal*.6,@box-spacing-horizontal);
+            padding: @box-spacing-horizontal*.6 @box-spacing-horizontal;
             text-align: center;
             margin-bottom: .3em;
             width: 3em;
@@ -167,7 +167,7 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         }
 
         @media (max-width: @screen-xs-max) {
-            background: @facebook-brand-colour; 
+            background: @facebook-brand-colour;
 
             &:hover {
                 background: darken(@facebook-brand-colour,10%);
