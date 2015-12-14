@@ -1,0 +1,116 @@
+block settings
+	- var title = "Brand icons"
+	- var sidebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Branding", href: "index.html#branding"}, 
+		{title: "Brand icons"}])
+
+block sidebar
+	include ../template/sidebar-brand.jade
+
+block content
+	.articleContent
+		div
+			p Brand icons differ from advice icons, they are used illustrate information from and about the Citizens Advice organisation.
+			p They should be used sparingly to maintain importance but are there to support the information and make it easier to identif and attribute.
+
+			.example-box-plain
+				label(style="margin-bottom:1rem;") Icon examples
+				.row(style="font-size:2em;color:#004b88;")
+					.span2
+						.brand-calendar
+					.span2
+						.brand-agenda
+					.span2
+						.brand-blackboard_graph
+					.span2
+						.brand-case
+					.span2
+						.brand-geolocalizator
+					.span2
+						.brand-spread
+
+				.row(style="font-size:2em;color:#004b88;")
+					.span2
+						.brand-graph_descending
+					.span2
+						.brand-graph_rising
+					.span2
+						.brand-graph
+					.span2
+						.brand-pencil_ruler
+					.span2
+						.brand-shopping_cart
+					.span2
+						.brand-accelerator
+
+				.row(style="font-size:2em;color:#004b88;")
+					.span2
+						.brand-ticket
+					.span2
+						.brand-tshirt
+					.span2
+						.brand-website_1
+					.span2
+						.brand-tv_monitor
+					.span2
+						.brand-shopping_cart
+					.span2
+						.brand-todolist_check
+
+			pre
+				code.language-html
+					| &lt;div class="brand-..."&gt;
+
+			.example-box-plain
+				label(style="margin-bottom:1rem;") Icon examples (large)
+				.row(style="font-size:4em;color:#004b88;")
+					.span2
+						.brand-calendar
+					.span2
+						.brand-agenda
+					.span2
+						.brand-blackboard_graph
+					.span2
+						.brand-case
+					.span2
+						.brand-geolocalizator
+					.span2
+						.brand-spread
+
+				.row(style="font-size:4em;color:#004b88;")
+					.span2
+						.brand-graph_descending
+					.span2
+						.brand-graph_rising
+					.span2
+						.brand-graph
+					.span2
+						.brand-pencil_ruler
+					.span2
+						.brand-shopping_cart
+					.span2
+						.brand-accelerator
+
+				.row(style="font-size:4em;color:#004b88;")
+					.span2
+						.brand-ticket
+					.span2
+						.brand-tshirt
+					.span2
+						.brand-website_1
+					.span2
+						.brand-tv_monitor
+					.span2
+						.brand-shopping_cart
+					.span2
+						.brand-todolist_check
+
+			pre
+				code.language-html
+					| &lt;div class="brand-..."&gt;
