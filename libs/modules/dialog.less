@@ -1,7 +1,7 @@
 ﻿/**
- * DIALOG 
+ * DIALOG
  *
- * Modal, used on references pop-up 
+ * Modal, used on references pop-up
  */
 
 /* Reference CSS for dialog */
@@ -68,7 +68,7 @@
 	/* Apply our spacing here rather than margin on the h2
 	to prevent issues with collapsing margins in IE<=9
 	*/
-	.spacing(padding,@box-spacing-horizontal*.5,@box-spacing-horizontal);
+	padding: @box-spacing-horizontal*.5 @box-spacing-horizontal;
 	background: @heritage-blue;
 	position: relative;
 	-webkit-flex-shrink: 0;
@@ -134,16 +134,16 @@
 .dialog__main {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	.spacing(padding,@box-spacing-vertical,@box-spacing-horizontal);
+	padding: @box-spacing-vertical @box-spacing-horizontal;
 	/* This helps make it clearer there the main content can scroll */
 	//box-shadow: @inner-shadow;
 	-webkit-flex-grow: 2;
 	-ms-flex-positive: 2;
-	flex-grow: 2;		
+	flex-grow: 2;
 }
 
 .dialog__footer {
-	.spacing(padding,@box-spacing*.5,@box-spacing-horizontal);
+	padding: @box-spacing*.5 @box-spacing-horizontal;
 	background: @heritage-blue-lightest;
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;

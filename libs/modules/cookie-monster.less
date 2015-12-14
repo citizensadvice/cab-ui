@@ -19,13 +19,13 @@
         .limit-width();
         overflow: hidden;
         position: relative;
-        .spacing(padding,@box-spacing,0);
+        padding: @box-spacing 0;
         @media (min-width:@breakpoint-sm){
             padding: 0;
         }
         p {
             margin: 0;
-            .spacing(padding,0,@box-spacing*7,0,@box-spacing/2);
+            padding: 0 @box-spacing*7 0 @box-spacing/2;
             display: inline-block;
             .vertical-align(absolute);
         }

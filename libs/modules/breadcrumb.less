@@ -2,7 +2,7 @@
  * BREADCRUMB
  *
  * Beta breadcrumb amends.
- * Functional changes to be made in 
+ * Functional changes to be made in
  */
 
 .main-breadcrumb {
@@ -16,13 +16,13 @@
 
     .main-breadcrumb__content {
         .limit-width(@max-page-width);
-        margin: 0 auto;   
+        margin: 0 auto;
         background-color: transparent;
-        .spacing(padding,@box-spacing-vertical/2,@box-spacing-horizontal);
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal;
         max-width: @breakpoint-lg;
-        overflow: scroll;
+        //overflow: scroll;
     }
-    
+
     .breadcrumb__extent-link {
         display: none;
     }
@@ -30,15 +30,15 @@
     .breadcrumb__item {
         font-size: @font-size-small;
         line-height: (@line-height-small * 2);
-        
+
         &>i {
-            .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+            margin: 0 @box-spacing-horizontal*.5 0 0;
             color: @blue-light;
         }
     }
-    
+
     .breadcrumb__item a {
-        .spacing(margin,0,@box-spacing-horizontal*.5,0,0);
+        margin: 0 @box-spacing-horizontal*.5 0 0;
         color: @text-color;
     }
 
@@ -66,7 +66,7 @@
     // IE8 is having difficulty with the wrapping.  This fixes it
         display: inline-block;
     }
-    
+
     > i {
         margin-right: unit(@box-spacing-horizontal*.5*@base-size,px);
         margin-right: @box-spacing-horizontal*.5;
@@ -117,7 +117,7 @@
     margin-top: @box-spacing;
     // Bring things a little closer together in this popup
     p, ul {
-        .spacing(margin,@box-spacing/2,0);
+        margin: @box-spacing/2 0;
     }
 
     li {

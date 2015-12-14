@@ -5,20 +5,20 @@
  *
  */
 
-// Move to mixins 
+// Move to mixins
 
-.index-box ( 
+.index-box (
         @index-box-background: @heritage-blue-lightest,
-        @index-box-text: @text-color, 
+        @index-box-text: @text-color,
     ){
-    .spacing(padding,@box-spacing);
-    .spacing(margin,@box-spacing*.5);
+    padding: @box-spacing;
+    margin: @box-spacing*.5;
     background-color: @index-box-background;
     color: @index-box-text;
     border-top-width: 4px;
     display: block;
     & > h2 {
-        .spacing(margin,0,0,@box-spacing*.7);
+        margin: 0 0 @box-spacing*.7;
         font-size: @font-size-medium;
         color: @heritage-blue;
         a {
@@ -27,7 +27,7 @@
         }
     }
     & > h3 {
-        .spacing(margin,0,0,@box-spacing*.7);
+        margin: 0 0 @box-spacing*.7;
         font-size: @font-size-base;
         color: @text-color;
     }
@@ -36,32 +36,32 @@
 .index-page__box,
 .home-page__box,
 .index-box {
-    .index-box( 
-        @heritage-blue-lightest, 
-        @text-color 
-    ); 
+    .index-box(
+        @heritage-blue-lightest,
+        @text-color
+    );
 }
 .index-page__box--green,
 .index-box__green {
-    .index-box( 
-        @green-lighter, 
-        @text-color 
-    ); 
+    .index-box(
+        @green-lighter,
+        @text-color
+    );
 }
 
 .index-page__box--purple,
 .index-box__purple {
-    .index-box( 
-        lighten(@generous-mauve, 10%), 
-        @text-color 
-    ); 
+    .index-box(
+        lighten(@generous-mauve, 10%),
+        @text-color
+    );
 }
 
 .index-box__info {
-    .index-box( 
-        @heritage-yellow-lighter, 
-        @text-color 
-    ); 
+    .index-box(
+        @heritage-yellow-lighter,
+        @text-color
+    );
 }
 
 
@@ -72,13 +72,13 @@
     border-top-width: 4px;
 
     & > h2 {
-        .spacing(margin,0,0,@box-spacing*.7);
+        margin: 0 0 @box-spacing*.7;
         font-size: @font-size-medium;
         color: @heritage-blue;
     }
 
     & > h3 {
-        .spacing(margin,0,0,@box-spacing*.7);
+        margin: 0 0 @box-spacing*.7;
         font-size: @font-size-base;
         color: @text-color;
     }
@@ -110,13 +110,13 @@
     padding-top: unit(@box-spacing*.5*@base-size,px);
     padding-top: @box-spacing*.5;
     @media screen and (max-width: @screen-xs-max) {
-        .spacing(margin-top,@box-spacing-vertical*1.5);
+        margin-top: @box-spacing-vertical*1.5;
     }
 }
 
 .highlight-adviseronly:extend( .box all ) {
     overflow: hidden; // Allows the div to wrap around floated divs
-    
+
     & > h4 {
         margin-top: 0;
     }
@@ -175,7 +175,7 @@
 
 .box--side {
     padding: 0 1em;
-    
+
     background-color: @green-lighter;
 
     & > h2 {
@@ -188,12 +188,12 @@
 // Box with a border
 
 .box--outline {
-    
+
     border: 2px solid @heritage-blue;
     background: @white;
     margin-bottom: 1.5em;
     padding: 0 1em;
-    
+
     & > h2 {
         font-size: 1.2em;
         padding: 0;
