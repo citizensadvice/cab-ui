@@ -1,0 +1,33 @@
+block settings
+	- var title = "Speech line"
+	- var sidebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Branding", href: "index.html#branding"}, 
+		{title: "Speech line"}])
+
+block sidebar
+	include ../template/sidebar-brand.jade
+
+block content
+	.articleContent
+		div
+			p Speech line is a brand asset that is used to highlight a quote or insight from the page.
+			p General rules for speech line
+			ul
+				li use the same colour text and line
+				li try not to use more than one speech line per page of content.
+
+			.example-box-plain
+				label(style="margin-bottom:1rem;") Speech example
+				.row(style="font-size:2em;color:#004b88;")
+					.span12.speech-lines
+						h3 An example of a quote in a report when the speech line should be used instead of the speech bubble.
+
+			pre
+				code.language-html
+					| &lt;div class="brand-..."&gt;
