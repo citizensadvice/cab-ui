@@ -325,46 +325,28 @@ pre[class*="language-"] {
 */
 .speech-lines {
     border-bottom: .5rem solid @heritage-blue;
-    margin-bottom: .75rem;
+    padding-bottom: .75rem;
+    margin-bottom: 2rem;
     :first-child {
-        font-weight: @font-weight-bolder;
+        font-weight: @font-weight-boldest;
         font-size: @font-size-larger;
     }
-    .card-banner-top {
-        border-radius: @form-border-radius @form-border-radius 0 0;
-        :first-child {
-            padding: 1rem 0 1rem 1rem;
-        }
+    p {
+        font-size: @font-size-small;
+        color: @heritage-blue;
     }
 }
 
-.arrow_box {
-    position: relative;
-    background: #fff;
-    border: 8px solid #004b88;
-}
-.arrow_box:after, .arrow_box:before {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
+.box-speech-line {
+    width: 65px;
+    height: 40px;
+    margin: 4px 0 0 20%;
     position: absolute;
-    pointer-events: none;
-}
-
-.arrow_box:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-top-color: #fff;
-    border-width: 30px;
-    margin-left: -30px;
-}
-.arrow_box:before {
-    border-color: rgba(0, 75, 136, 0);
-    border-top-color: #004b88;
-    border-width: 41px;
-    margin-left: -41px;
+    border: solid 8px @heritage-blue;
+    border-color: transparent transparent @heritage-blue transparent;
+    border-radius: 0px 10px 60px 0px;
+    background-color: white;
+    padding-bottom: 2em;
 }
 
 
