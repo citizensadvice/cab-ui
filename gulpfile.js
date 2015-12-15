@@ -18,6 +18,9 @@ var jade = require('gulp-jade');
 var less = require( 'gulp-less' );
 var sourcemaps = require('gulp-sourcemaps');
 
+// Creates OSX notifications
+var notify = require('gulp-notify');
+
 // Post CSS plugins
 var postcss = require('gulp-postcss');
 // Minify
@@ -43,12 +46,12 @@ gulp.task( 'clean-less', function() {
 } );
 
 gulp.task( 'less', function() {
-	
+
 	var postCssPlugins = [
-		autoprefixer({ browsers: ['> 1%','ie >= 8'] }), 
+		autoprefixer({ browsers: ['> 1%','ie >= 8'] }),
 		rgbaFallback,
 		opacity,
-		pixrem, 
+		pixrem,
 		copyAssets
 	];
 
@@ -61,10 +64,18 @@ gulp.task( 'less', function() {
 
     return gulp.src(['libs/*.less','libs/vendors/prism/prism.css'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
-		.pipe( less() ) // Transform to less
+		.pipe(less().on('error', function(err){
+			gutil.log(err);
+			this.emit('end');
+		}))
+		.on("error", notify.onError(function (error) {
+			return "Message to the notifier: " + error.message;
+		}))
+		//.pipe( less() ) // Transform to less
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
-		.pipe( gulp.dest(targetPath) ); // Write the less
+		.pipe( gulp.dest(targetPath) ) // Write the less
+		.pipe( notify({ message: 'Less successfully compiled' }));
 });
 
 gulp.task( 'watch-less', function() {
@@ -87,7 +98,7 @@ gulp.task( 'jade', function() {
 } );
 
 gulp.task( 'watch-jade', function() {
-	
+
 	// This just rebuilds the affects file - cheap
 	gulp.watch('libs/jade/*.jade', function(event) {
 
@@ -101,9 +112,9 @@ gulp.task( 'watch-jade', function() {
 	        	.on( 'finish', function() {
 	        		var end = process.hrtime(start);
 	        		gutil.log(
-	        			'Finished', 
-	        			"'" + gutil.colors.cyan('jade') + '"', 
-	        			'after', 
+	        			'Finished',
+	        			"'" + gutil.colors.cyan('jade') + '"',
+	        			'after',
 	        			gutil.colors.magenta(prettyHrtime(end))
 	        		);
 	        	} );
@@ -112,7 +123,7 @@ gulp.task( 'watch-jade', function() {
 
 	// This will rebuild all of jade - expensive
 	gulp.watch('libs/template/*.jade', ['jade']);
-		
+
 } );
 
 // ------- gh-pages tasks --------
