@@ -69,7 +69,7 @@ gulp.task( 'less', function() {
 			this.emit('end');
 		}))
 		.on("error", notify.onError(function (error) {
-			return "Message to the notifier: " + error.message;
+			return error.message;
 		}))
 		//.pipe( less() ) // Transform to less
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
