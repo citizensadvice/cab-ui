@@ -1,14 +1,20 @@
 /**
  * ICONS
  *
- * Using Fontawesome
- * Including icons as part of content using classes.
- * Can also be called into the script using <i class="fa fa-ICON-NAME"></i>
- * References: http://fortawesome.github.io/Font-Awesome
  */
 
-.icon-fa () {
-    //font-family: FontAwesome, icomoon;
+@font-face {
+    font-family: 'cab-icons';
+    src:url('fonts/cab-icons.eot?fzb66m');
+    src:url('fonts/cab-icons.eot?fzb66m#iefix') format('embedded-opentype'),
+        url('fonts/cab-icons.ttf?fzb66m') format('truetype'),
+        url('fonts/cab-icons.woff?fzb66m') format('woff'),
+        url('fonts/cab-icons.svg?fzb66m#cab-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
     font-family: 'cab-icons' !important;
     speak: none;
     font-style: normal;
@@ -16,12 +22,14 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Inline icons for use in paragraph and headings
-
-.a- {
-    .icon-fa;
+.inline-icon {
+    .icon;
     padding-left: 0.5em;
     padding-right: 0.25em;
     color: @link-color;
@@ -29,30 +37,30 @@
 }
 .a-external-link:after {
     content: @i-external-link;
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 .a-action:after {
     content: "\f016";
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 .a-word-doc:after {
     content: @i-doc-word;
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 .a-excel-doc:after {
     content: @i-doc-excel;
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 .a-pdf-doc:after {
     content: @i-doc-pdf;
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 .a-file-doc:after {
     content: @i-doc-code;
-    &:extend(.a-);
+    &:extend(.inline-icon);
 }
 
-// Directions
+// Button icons
 .tick-button-icon {
     .btn-icon(@i-tick);
 }
@@ -90,8 +98,6 @@
 .minus-button-icon {
     .btn-icon(@i-minus);
 }
-
-// Actions
 .email-button-icon {
     .btn-icon(@i-email);
 }
@@ -120,9 +126,9 @@
     .btn-icon(@i-cross);
 }
 
-// Social
-.a-social- {
-    .icon-fa;
+// Social icons
+.a-social {
+    .icon;
     display: inline-block;
     padding: 0 0.25em 0 0.65em;
     border-bottom: 0.0625rem solid @white;
@@ -132,31 +138,31 @@
 .a-social-facebook:before {
     content: @i-facebook;
     color: @facebook-brand-colour;
-    &:extend(.a-social-);
+    &:extend(.a-social);
     border: 0;
 }
 .a-social-twitter:before {
     margin-left: -0.65em;
-    content: "\e60d";
+    content: @i-twitter;
     color: @twitter-brand-colour;
-    &:extend(.a-social-);
+    &:extend(.a-social);
     border: 0;
 }
 .a-social-whatsapp:before {
     content: @i-whatsapp;
     color: @whatsapp-brand-colour;
-    &:extend(.a-social-);
+    &:extend(.a-social);
     border: 0;
 }
 .a-social-google-plus:before {
     content: @i-google;
     color: @google-plus-brand-colour;
-    &:extend(.a-social-);
+    &:extend(.a-social);
     border: 0;
 }
 
-.a-social-top- {
-    font-family: 'cab-icons', FontAwesome, icomoon;
+.a-social-top {
+    .icon;
     line-height: 2.5rem;
     display: inline-block;
     padding: 0 0.45em 0 0;
@@ -173,7 +179,7 @@
     &:before {
         content: @i-clock;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
     }
 }
 .info-owner {
@@ -183,7 +189,7 @@
     &:before {
         content: @i-happy;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
     }
 }
 .info-extent {
@@ -192,7 +198,7 @@
     &:before {
         content: @i-target;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
     }
 }
 .a-social-print {
@@ -202,7 +208,7 @@
     &:before {
         content: @i-print;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
         bottom: -0.05em;
     }
 }
@@ -213,7 +219,7 @@
     &:before {
         content: @i-star;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
         bottom: -0.05em;
     }
 }
@@ -224,7 +230,7 @@
     &:before {
         content: @i-email;
         color: @blue-light;
-        &:extend(.a-social-top-);
+        &:extend(.a-social-top);
         bottom: -0.05em;
     }
 }
@@ -320,34 +326,6 @@
 @icon-symbol-checkmark: "\e601";
 */
 
-
-.icon {
-
-    // This class isn't intended to directly do anything
-    // It is extended by the classes below
-
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    // Better Font Rendering
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    padding-right: .2em;
-}
-
-.icon--after {
-    padding-left: .2em;
-}
-
-.icon--no-text {
-    padding-right: 0;
-}
 /*
 .icon-megaphone:before {
     content: @i-megaphone;
