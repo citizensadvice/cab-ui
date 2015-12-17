@@ -156,7 +156,6 @@ select {
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
-//      border-color: @red;
         outline: 2px solid @red;
         background-image: url("assets/images/red-cross.svg");
         padding-right: 2.25em;
@@ -169,7 +168,6 @@ select {
         }
     }
     &:focus:required:valid {
-//      border-color: @green;
         outline: 2px solid @green;
         background-image: url("assets/images/green-tick.svg");
         padding-right: 2.25em;
@@ -182,8 +180,6 @@ select {
         }
     }
     &:focus {
-//        border-color: @heritage-blue-lighter;
-//        outline: none;
         border-width: 1px;
         outline: 2px solid @heritage-blue-lighter;
     }
@@ -296,7 +292,6 @@ textarea.form__field {
 
 .dropdown {
     border-radius: @form-border-radius;
-    border: 1px solid @gray-6;
     .btn-icon("\F0D7",@color:@black);
     padding-right: 0;
     background-color: @white;
@@ -307,7 +302,6 @@ textarea.form__field {
     }
     select {
         background: none;
-        border: none;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: window;
@@ -417,10 +411,17 @@ input[class*="dob-"] {
         .dropdown {
             display: table-cell;
             border-radius: 0 @form-border-radius @form-border-radius 0;
-            //.btn-primary;
             background-color: @gray-8;
             padding: 0;
-            width: auto;
+            border: none;
+            &:after {
+                display: none \9;
+            }
+        }
+        .dropdown,
+        select {
+            width: 150px;
+            padding-right: 0 \9;
         }
         input:first-of-type {
             border-radius: @form-border-radius 0 0 @form-border-radius;
