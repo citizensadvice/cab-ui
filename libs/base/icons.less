@@ -7,10 +7,16 @@
  * References: http://fortawesome.github.io/Font-Awesome
  */
 
-/* FONT AWESOME FONTS */
+@i-external-link:   "\f08e";
+@i-action:          "\f016";
+@i-doc-word:        "\f1c2";
+@i-doc-excel:       "\f1c3";
+@i-doc-pdf:         "\f1c1";
+@i-doc-code:        "\f1c9";
 
 .icon-fa () {
-    font-family: FontAwesome, icomoon;
+    //font-family: FontAwesome, icomoon;
+    font-family: 'cab-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -29,78 +35,61 @@
     font-size: 75%;
 }
 .a-external-link:after {
-    content: "\f08e";
+    content: @i-external-link;
     &:extend(.a-);
 }
 .a-action:after {
-    content: "\f016";
+    content: @i-action;
     &:extend(.a-);
 }
 .a-word-doc:after {
-    content: "\f1c2";
+    content: @i-doc-word;
     &:extend(.a-);
 }
 .a-excel-doc:after {
-    content: "\f1c3";
+    content: @i-doc-excel;
     &:extend(.a-);
 }
 .a-pdf-doc:after {
-    content: "\f1c1";
+    content: @i-doc-pdf;
     &:extend(.a-);
 }
-
 .a-file-doc:after {
-    content: "\f016";
+    content: @i-doc-code;
     &:extend(.a-);
 }
 
-.icon-mixin() {
-    position: absolute;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    left: 0;
-}
-.round(@round-colour: @white;) {
-    -webkit-border-radius: 50%; 
-    -moz-border-radius: 50%;
-    border-radius: 50%; 
-    //border: 2px solid @round-colour;
-}
 // Directions
 .tick-button-icon {
-    .btn-icon("\f00c");
+    .btn-icon("\2713");
 }
 .right-button-icon {
-    .btn-icon("\f054");
+    .btn-icon("\3e");
 }
 .left-button-icon {
-    .btn-icon("\f053", left);
+    .btn-icon("\3c", left);
 }
 .back-button-icon {
-    .btn-icon("\f053", left, @heritage-blue-light);
+    .btn-icon("\3c", left, @heritage-blue-light);
 }
 .left-cancel-button-icon {
-    .btn-icon("\f00d", left, @heritage-blue-light);
+    .btn-icon("\2716", left, @heritage-blue-light);
 }
 .down-button-icon {
-    .btn-icon("\f078");
+    .btn-icon("\2c5");
 }
 .up-button-icon {
-    .btn-icon("\f077");
+    .btn-icon("\2c4");
 }
-
 .back-to-top-icon {
-    .btn-icon("\f077", left, @blue-light);
+    .btn-icon("\2c4", left, @blue-light);
     margin-left: -@box-spacing;
 }
-
-
 .exclamation-button-icon {
     .btn-icon("\f06a");
 }
 .search-button-icon {
-    .btn-icon("\f002");
+    .btn-icon("\e600");
 }
 .plus-button-icon {
     .btn-icon("\f067");
@@ -108,34 +97,36 @@
 .minus-button-icon {
     .btn-icon("\f068");
 }
+
 // Actions
 .email-button-icon {
     .btn-icon("\f003");
 }
 .print-button-icon {
-    .btn-icon("\f02f");
+    .btn-icon("\2399");
 }
 .restart-button-icon {
     .btn-icon("\f01e");
 }
 .save-button-icon {
-    .btn-icon("\f019");
+    .btn-icon("\e610");
 }
 .retrieve-button-icon {
-    .btn-icon("\f093");
+    .btn-icon("\e611");
 }
 .copy-button-icon {
-    .btn-icon("\f0c5");
+    .btn-icon("\e614");
 }
 .clear-button-icon {
-    .btn-icon("\f014");
+    .btn-icon("\238c");
 }
 .help-button-icon {
-    .btn-icon("\f128");
+    .btn-icon("\3f");
 }
 .close-button-icon {
-    .btn-icon("\f00d");
+    .btn-icon("\2716");
 }
+
 // Social
 .a-social- {
     .icon-fa;
@@ -146,18 +137,20 @@
 }
 
 .a-social-facebook:before {
-    content: "\f230";
+    content: "\e60c";
     color: @facebook-brand-colour;
     &:extend(.a-social-);
     border: 0;
 }
 .a-social-twitter:before {
     margin-left: -0.65em;
-    content: "\f081";
+    content: "\e60d";
     color: @twitter-brand-colour;
     &:extend(.a-social-);
     border: 0;
 }
+
+// Needs to be added
 .a-social-whatsapp:before {
     content: "\f232";
     color: @whatsapp-brand-colour;
@@ -165,7 +158,7 @@
     border: 0;
 }
 .a-social-google-plus:before {
-    content: "\f0d4";
+    content: "\e60b";
     color: @google-plus-brand-colour;
     &:extend(.a-social-);
     border: 0;
@@ -246,7 +239,7 @@
 }
 
 
-/* 
+/*
 
     ICOMOON
 
@@ -268,7 +261,7 @@
     # Implementation note
 
     For the icon font you need to set the font, and the icon content.  This leaves with a few choices
-    
+
     1. Use class="icon icon-name", using .icon for the font and .icon-name for the content
        Result is extra HTML markup
     2. Use class="icon-name" and use [class^="icon-"], [class*=" icon-"] for the font selector
@@ -294,7 +287,7 @@
 }
 
 .icon {
-    
+
     // This class isn't intended to directly do anything
     // It is extended by the classes below
 
@@ -393,7 +386,7 @@
 .icon-clock:before {
     content: @icon-symbol-clock;
     font-size: 90%;  // Looks better if the clock doesn't extend above letters
-    &:extend(.icon);    
+    &:extend(.icon);
 }
 
 .icon-key:before {
