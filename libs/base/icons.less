@@ -7,13 +7,6 @@
  * References: http://fortawesome.github.io/Font-Awesome
  */
 
-@i-external-link:   "\f08e";
-@i-action:          "\f016";
-@i-doc-word:        "\f1c2";
-@i-doc-excel:       "\f1c3";
-@i-doc-pdf:         "\f1c1";
-@i-doc-code:        "\f1c9";
-
 .icon-fa () {
     //font-family: FontAwesome, icomoon;
     font-family: 'cab-icons' !important;
@@ -39,7 +32,7 @@
     &:extend(.a-);
 }
 .a-action:after {
-    content: @i-action;
+    content: "\f016";
     &:extend(.a-);
 }
 .a-word-doc:after {
@@ -61,70 +54,70 @@
 
 // Directions
 .tick-button-icon {
-    .btn-icon("\2713");
+    .btn-icon(@i-tick);
 }
 .right-button-icon {
-    .btn-icon("\3e");
+    .btn-icon(@i-right);
 }
 .left-button-icon {
-    .btn-icon("\3c", left);
+    .btn-icon(@i-left, left);
 }
 .back-button-icon {
-    .btn-icon("\3c", left, @heritage-blue-light);
+    .btn-icon(@i-left, left, @heritage-blue-light);
 }
 .left-cancel-button-icon {
-    .btn-icon("\2716", left, @heritage-blue-light);
+    .btn-icon(@i-cross, left, @heritage-blue-light);
 }
 .down-button-icon {
-    .btn-icon("\2c5");
+    .btn-icon(@i-down);
 }
 .up-button-icon {
-    .btn-icon("\2c4");
+    .btn-icon(@i-up);
 }
 .back-to-top-icon {
-    .btn-icon("\2c4", left, @blue-light);
+    .btn-icon(@i-up, left, @blue-light);
     margin-left: -@box-spacing;
 }
 .exclamation-button-icon {
-    .btn-icon("\f06a");
+    .btn-icon(@i-exclamation-circle);
 }
 .search-button-icon {
-    .btn-icon("\e600");
+    .btn-icon(@i-search);
 }
 .plus-button-icon {
-    .btn-icon("\f067");
+    .btn-icon(@i-plus);
 }
 .minus-button-icon {
-    .btn-icon("\f068");
+    .btn-icon(@i-minus);
 }
 
 // Actions
 .email-button-icon {
-    .btn-icon("\f003");
+    .btn-icon(@i-email);
 }
 .print-button-icon {
-    .btn-icon("\2399");
+    .btn-icon(@i-print);
 }
 .restart-button-icon {
-    .btn-icon("\f01e");
+    .btn-icon(@i-redo);
 }
 .save-button-icon {
-    .btn-icon("\e610");
+    .btn-icon(@i-save);
 }
 .retrieve-button-icon {
-    .btn-icon("\e611");
+    .btn-icon(@i-load);
 }
 .copy-button-icon {
-    .btn-icon("\e614");
+    .btn-icon(@i-copy);
 }
 .clear-button-icon {
-    .btn-icon("\238c");
+    .btn-icon(@i-undo);
 }
 .help-button-icon {
-    .btn-icon("\3f");
+    .btn-icon(@i-help);
 }
 .close-button-icon {
-    .btn-icon("\2716");
+    .btn-icon(@i-cross);
 }
 
 // Social
@@ -137,7 +130,7 @@
 }
 
 .a-social-facebook:before {
-    content: "\e60c";
+    content: @i-facebook;
     color: @facebook-brand-colour;
     &:extend(.a-social-);
     border: 0;
@@ -149,23 +142,21 @@
     &:extend(.a-social-);
     border: 0;
 }
-
-// Needs to be added
 .a-social-whatsapp:before {
-    content: "\f232";
+    content: @i-whatsapp;
     color: @whatsapp-brand-colour;
     &:extend(.a-social-);
     border: 0;
 }
 .a-social-google-plus:before {
-    content: "\e60b";
+    content: @i-google;
     color: @google-plus-brand-colour;
     &:extend(.a-social-);
     border: 0;
 }
 
 .a-social-top- {
-    font-family: FontAwesome, icomoon;
+    font-family: 'cab-icons', FontAwesome, icomoon;
     line-height: 2.5rem;
     display: inline-block;
     padding: 0 0.45em 0 0;
@@ -180,7 +171,7 @@
     margin-right: .9em;
     white-space: nowrap;
     &:before {
-        content: @icon-symbol-clock;
+        content: @i-clock;
         color: @blue-light;
         &:extend(.a-social-top-);
     }
@@ -190,7 +181,7 @@
     margin-right: .9em;
     white-space: nowrap;
     &:before {
-        content: @icon-symbol-happy;
+        content: @i-happy;
         color: @blue-light;
         &:extend(.a-social-top-);
     }
@@ -199,7 +190,7 @@
     border-bottom: 0;
     margin-right: .9em;
     &:before {
-        content: @icon-symbol-target;
+        content: @i-target;
         color: @blue-light;
         &:extend(.a-social-top-);
     }
@@ -209,7 +200,7 @@
     margin-right: .9em;
     white-space: nowrap;
     &:before {
-        content: "\f02f";
+        content: @i-print;
         color: @blue-light;
         &:extend(.a-social-top-);
         bottom: -0.05em;
@@ -220,7 +211,7 @@
     margin-right: .9em;
     white-space: nowrap;
     &:before {
-        content: "\f005";
+        content: @i-star;
         color: @blue-light;
         &:extend(.a-social-top-);
         bottom: -0.05em;
@@ -231,7 +222,7 @@
     margin-right: .9em;
     white-space: nowrap;
     &:before {
-        content: "\f003";
+        content: @i-email;
         color: @blue-light;
         &:extend(.a-social-top-);
         bottom: -0.05em;
@@ -273,7 +264,6 @@
 
     I've gone for option 3.  See below for the LESS implementation
 
-*/
 
 @font-face {
     font-family: 'icomoon';
@@ -286,33 +276,6 @@
     font-style: normal;
 }
 
-.icon {
-
-    // This class isn't intended to directly do anything
-    // It is extended by the classes below
-
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    // Better Font Rendering
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    padding-right: .2em;
-}
-
-.icon--after {
-    padding-left: .2em;
-}
-
-.icon--no-text {
-    padding-right: 0;
-}
 
 // These can be used in other modules
 @icon-symbol-megaphone: "\261e";
@@ -355,197 +318,227 @@
 @icon-symbol-chevron-right: "\3e";
 @icon-symbol-restart: "\e602";
 @icon-symbol-checkmark: "\e601";
+*/
 
 
+.icon {
+
+    // This class isn't intended to directly do anything
+    // It is extended by the classes below
+
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    padding-right: .2em;
+}
+
+.icon--after {
+    padding-left: .2em;
+}
+
+.icon--no-text {
+    padding-right: 0;
+}
+/*
 .icon-megaphone:before {
-    content: @icon-symbol-megaphone;
+    content: @i-megaphone;
     &:extend(.icon);
 }
 
 // This one is special, it will be used to perform a JavaScript test to find out if the icons have loaded
 .icon-zws:before {
-    content: @icon-symbol-zws;
+    content: @i-zws;
     &:extend(.icon);
 }
 
 .icon-search:before {
-    content: @icon-symbol-search;
+    content: @i-search;
     &:extend(.icon);
 }
 
 .icon-menu:before {
-    content: @icon-symbol-menu;
+    content: @i-menu;
     &:extend(.icon);
 }
 
 .icon-down:before {
-    content: @icon-symbol-down;
+    content: @i-down;
     &:extend(.icon);
 }
 
 .icon-clock:before {
-    content: @icon-symbol-clock;
+    content: @i-clock;
     font-size: 90%;  // Looks better if the clock doesn't extend above letters
     &:extend(.icon);
 }
 
 .icon-key:before {
-    content: @icon-symbol-key;
+    content: @i-key;
     &:extend(.icon);
 }
 
 .icon-target:before {
-    content: @icon-symbol-target;
+    content: @i-target;
     &:extend(.icon);
 }
 
 .icon-bubble:before {
-    content: @icon-symbol-bubble;
+    content: @i-bubble;
     &:extend(.icon);
 }
 
 .icon-bin:before {
-    content: @icon-symbol-bin;
+    content: @i-bin;
     &:extend(.icon);
 }
 
 .icon-happy:before {
-    content: @icon-symbol-happy;
+    content: @i-happy;
     &:extend(.icon);
 }
 
 .icon-exit:before {
-    content: @icon-symbol-exit;
+    content: @i-exit;
     &:extend(.icon);
 }
 
 .icon-google:before {
-    content: @icon-symbol-google;
+    content: @i-google;
     &:extend(.icon);
 }
 
 .icon-facebook:before {
-    content: @icon-symbol-facebook;
+    content: @i-facebook;
     &:extend(.icon);
 }
 
 .icon-twitter:before {
-    content: @icon-symbol-twitter;
+    content: @i-twitter;
     &:extend(.icon);
 }
 
 .icon-email:before {
-    content: @icon-symbol-email;
+    content: @i-email;
     &:extend(.icon);
 }
 
 .icon-new-window:before {
-    content: @icon-symbol-new-window;
+    content: @i-new-window;
     &:extend(.icon);
 }
 
 .icon-save:before {
-    content: @icon-symbol-save;
+    content: @i-save;
     &:extend(.icon);
 }
 
 .icon-load:before {
-    content: @icon-symbol-load;
+    content: @i-load;
     &:extend(.icon);
 }
 
 .icon-cross:before {
-    content: @icon-symbol-cross;
+    content: @i-cross;
     font-size: 80%; // TODO Make smaller in the font
     &:extend(.icon);
 }
 
 .icon-copy:before {
-    content: @icon-symbol-copy;
+    content: @i-copy;
     &:extend(.icon);
 }
 
 .icon-tick:before {
-    content: @icon-symbol-tick;
+    content: @i-tick;
     &:extend(.icon);
 }
 
 .icon-help:before {
-    content: @icon-symbol-help;
+    content: @i-help;
     &:extend(.icon);
 }
 
 .icon-undo:before {
-    content: @icon-symbol-undo;
+    content: @i-undo;
     &:extend(.icon);
 }
 
 .icon-inbox:before {
-    content: @icon-symbol-inbox;
+    content: @i-inbox;
     &:extend(.icon);
 }
 
 .icon-print:before {
-    content: @icon-symbol-print;
+    content: @i-print;
     &:extend(.icon);
 }
 
 .icon-right:before {
-    content: @icon-symbol-right;
+    content: @i-right;
     &:extend(.icon);
 }
 
 .icon-guillemet-double-right:before {
-    content: @icon-symbol-guillemet-double-right;
+    content: @i-angle-double-right;
     &:extend(.icon);
 }
 
 .icon-guillemet-right:before {
-    content: @icon-symbol-guillemet-right;
+    content: @i-angle-right;
     &:extend(.icon);
 }
 
 .icon-sort:before {
-    content: @icon-symbol-sort;
+    content: @i-sort;
     &:extend(.icon);
 }
 
 .icon-sort-desc:before {
-    content: @icon-symbol-sort-desc;
+    content: @i-sort-desc;
     &:extend(.icon);
 }
 
 .icon-sort-asc:before {
-    content: @icon-symbol-sort-asc;
+    content: @i-sort-asc;
     &:extend(.icon);
 }
 
 .icon-star:before {
-    content: @icon-symbol-star;
+    content: @i-star;
     &:extend(.icon);
 }
 
 .icon-word:before {
-    content: @icon-symbol-word;
+    content: @i-doc-word;
     &:extend(.icon);
 }
 
 .icon-chevron-down:before {
-    content: @icon-symbol-chevron-down;
+    content: @i-down;
     &:extend(.icon);
 }
 
 .icon-chevron-up:before {
-    content: @icon-symbol-chevron-up;
+    content: @i-up;
     &:extend(.icon);
 }
 
 .icon-chevron-left:before {
-    content: @icon-symbol-chevron-left;
+    content: @i-left;
     &:extend(.icon);
 }
 
 .icon-chevron-right:before {
-    content: @icon-symbol-chevron-right;
+    content: @i-right;
     &:extend(.icon);
 }
+*/
