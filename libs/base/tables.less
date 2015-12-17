@@ -279,15 +279,17 @@ table.simple-table td {
     &--toggle {
         cursor: pointer;
         & td:first-of-type:before {
-            content: "\f055\00a0\00a0";
+            content: @i-plus-circle;
             font-weight: @font-weight-bolder;
-            font-family: FontAwesome, icomoon;
+            margin-right: .5rem;
+            font-family: 'cab-icons';
             color: @gray-2;
         }
         &.active td:first-of-type:before {
-            content: "\f056\00a0\00a0";
+            content: @i-minus-circle;
             font-weight: @font-weight-bolder;
-            font-family: FontAwesome, icomoon;
+            margin-right: .5rem;
+            font-family: 'cab-icons';
             color: @gray-2;
         }
     }

@@ -8,8 +8,8 @@
 // Headings
 
 .ref-heading__toggle {
-	max-width: 25%; 
-	text-align: right; 
+	max-width: 25%;
+	text-align: right;
 	display: inline-block;
 	.vertical-align(absolute);
 	right: 0;
@@ -23,40 +23,40 @@
 }
 
 .ref-heading__heading {
-	float: left; 
+	float: left;
 	width: 74%;
 }
 
 .ref-heading__toggle--on {
-	background: none; 
+	background: none;
 	padding-right: 0;
 	a {
 		color: @yellow-dark;
 	    &:after {
-	        content: "\f005";
+	        content: @i-star;
 	        color: @yellow;
-	        &:extend(.a-social-top-);
+	        .icon;
 	        bottom: -0.05em;
 	        margin: 0 0 0 .25em;
 	    }
         &:hover:after {
-        	content: "\f006";
+        	content: @i-star-o;
         }
-	} 
+	}
 }
 
 .ref-heading__toggle--off {
 	a {
 		color: @blue;
 	    &:after {
-	        content: "\f006";
+	        content: @i-star-o;
 	        color: @blue-light;
-	        &:extend(.a-social-top-);
+	        .icon;
 	        bottom: -0.05em;
 	        margin: 0 0 0 .25em;
 	    }
         &:hover:after {
-        	content: "\f005";
+        	content: @i-star;
         }
 	}
 }
@@ -96,8 +96,8 @@ h4 > .ref-heading__toggle {
 
 /* Highlight heading when hovering over a reference */
 .ref-heading {
-	overflow: hidden; 
-	position: relative; 
+	overflow: hidden;
+	position: relative;
 }
 
 // Dialog
@@ -113,16 +113,16 @@ h4 > .ref-heading__toggle {
 }
 
 .ref-dialog__list-item {
-	position: relative; 
+	position: relative;
 	padding-right: unit(@box-spacing-horizontal*2*@base-size,px); // Space for the delete button
 	padding-right: @box-spacing-horizontal*2; // Space for the delete button
 }
 
 .ref-dialog__item-button {
 	position: absolute;
-	right: 0; 
+	right: 0;
 	top: 50%;
-	margin: -.9em 0 0 0; 
+	margin: -.9em 0 0 0;
 	font-size: @font-size-small;
 	padding: .1em .2em;
 	background: none;
