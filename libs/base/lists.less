@@ -11,10 +11,7 @@ ul,
 ol,
 dl {
     margin: 0 0 @paragraph-margin-bottom 0;
-
-    ul,
-    ol,
-    dl {
+    & {
         margin-bottom: 0;
     }
 }
@@ -45,23 +42,23 @@ li > ol {
     margin: 0;
     font-weight: @font-weight-bold;
 
-    li a {
+    a {
         display: block;
         padding: (@paragraph-margin-bottom / 2);
         text-decoration: underline;
 
         &:hover,
         &:focus {
-            color:    @link-hover-color;
+            color: @link-hover-color;
             background-color: @aqua-light;
         }
 
         &:active {
-            color:    @link-active-colour;
+            color: @link-active-colour;
         }
 
         &:visited {
-            color:    @link-visited-color;
+            color: @link-visited-color;
         }
     }
 }
@@ -257,7 +254,7 @@ li > ol {
 }
 
 // Lists for checklist style
-.tick ul {
+.tick {
     padding: 0 0 0 2;
     list-style:none;
 
@@ -269,7 +266,7 @@ li > ol {
 }
 
 
-.cross ul {
+.cross {
     padding: 0 0 0 2;
     list-style:none;
 
