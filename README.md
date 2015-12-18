@@ -108,12 +108,12 @@ Less won't compile mixins by themselves. This means that adding `()` at the end 
 ```less
 // This will compile into the stylesheet
 .icon {
-    font-family: 'cab-icons' !important;
+    font-family: 'cab-icons';
 }
 
 // This won't
 .icon() {
-    font-family: 'cab-icons' !important;
+    font-family: 'cab-icons';
 }
 ```
 
