@@ -292,7 +292,7 @@ textarea.form__field {
 
 .dropdown {
     border-radius: @form-border-radius;
-    .btn-icon("\F0D7",@color:@black);
+    .btn-icon(@i-sort,@color:@black);
     padding-right: 0;
     background-color: @white;
     display: inline-block;
@@ -370,63 +370,6 @@ input[class*="dob-"] {
     *:last-child {
         border-radius: 0 @form-border-radius @form-border-radius 0;
     }
-
-    &--buttons {
-    }
-    &--toggle {
-        label {
-            padding: @box-spacing-vertical @box-spacing-horizontal;
-            text-align: center;
-            input[type="radio"],
-            input[type="checkbox"] {
-                width: auto;
-                margin-right: .25em;
-            }
-            input[type="radio"]:before,
-            input[type="checkbox"]:before {
-                border-radius: 0;
-                border-width: 1px 0;
-                border-color: @gray-6;
-            }
-            input[type="radio"]:checked:before,
-            input[type="checkbox"]:checked:before {
-                border-color: @gray-6;
-            }
-            &:last-child input:before {
-                border-radius: 0 @form-border-radius @form-border-radius 0;
-                border-right-width: 1px;
-            }
-            &:first-child {
-                border-radius: @form-border-radius 0 0 @form-border-radius;
-            }
-            &:last-child {
-                border-radius: 0 @form-border-radius @form-border-radius 0;
-            }
-        }
-        button {
-            padding: @box-spacing-vertical 0;
-        }
-    }
-    &--dropdown {
-        .dropdown {
-            display: table-cell;
-            border-radius: 0 @form-border-radius @form-border-radius 0;
-            background-color: @gray-8;
-            padding: 0;
-            border: none;
-            &:after {
-                display: none \9;
-            }
-        }
-        .dropdown,
-        select {
-            width: 150px;
-            padding-right: 0 \9;
-        }
-        input:first-of-type {
-            border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-    }
     .field {
         display: table-cell;
         width: 100%;
@@ -442,6 +385,62 @@ input[class*="dob-"] {
             margin-right: 0;
             border-radius: @form-border-radius;
         }
+    }
+}
+
+.field-group--toggle {
+    label {
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        text-align: center;
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: .25em;
+        }
+        input[type="radio"]:before,
+        input[type="checkbox"]:before {
+            border-radius: 0;
+            border-width: 1px 0;
+            border-color: @gray-6;
+        }
+        input[type="radio"]:checked:before,
+        input[type="checkbox"]:checked:before {
+            border-color: @gray-6;
+        }
+        &:last-child input:before {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+            border-right-width: 1px;
+        }
+        &:first-child {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+        }
+        &:last-child {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
+    }
+    button {
+        padding: @box-spacing-vertical 0;
+    }
+}
+
+.field-group--dropdown {
+    .dropdown {
+        display: table-cell;
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+        background-color: @gray-8;
+        padding: 0;
+        border: none;
+        &:after {
+            display: none \9;
+        }
+    }
+    .dropdown,
+    select {
+        width: 150px;
+        padding-right: 0 \9;
+    }
+    input:first-of-type {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
     }
 }
 
@@ -504,13 +503,13 @@ input[class*="dob-"] {
             padding: 0;
         }
     }
-    &__select {
-        width: 80%;
-    }
-    &__button {
-        width: 17%;
-        float: right;
-    }
+}
+.custom-dropdown__select {
+    width: 80%;
+}
+.custom-dropdown__button {
+    width: 17%;
+    float: right;
 }
 
 // If pointer events aren't supported hide the custom dropdown

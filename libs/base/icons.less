@@ -14,7 +14,7 @@
     font-style: normal;
 }
 
-.icon {
+.icon() {
     font-family: 'cab-icons' !important;
     speak: none;
     font-style: normal;
@@ -56,6 +56,10 @@
     &:extend(.inline-icon);
 }
 .a-file-doc:after {
+    content: @i-doc;
+    &:extend(.inline-icon);
+}
+.a-code-doc:after {
     content: @i-doc-code;
     &:extend(.inline-icon);
 }
@@ -236,8 +240,46 @@
 }
 
 // Depreciated styles, need to be fixed
+
+// For search box in header
 .icon-search:before {
     content: @i-search;
+    &:extend(.icon);
+}
+
+// For sharebar
+.icon-star:before {
+    content: @i-star;
+    &:extend(.icon);
+}
+
+.icon-word:before {
+    content: @i-doc-word;
+    &:extend(.icon);
+}
+
+.icon-print:before {
+    content: @i-print;
+    &:extend(.icon);
+}
+
+.icon-email:before {
+    content: @i-email;
+    &:extend(.icon);
+}
+
+.icon-google:before {
+    content: @i-google;
+    &:extend(.icon);
+}
+
+.icon-facebook:before {
+    content: @i-facebook;
+    &:extend(.icon);
+}
+
+.icon-twitter:before {
+    content: @i-twitter;
     &:extend(.icon);
 }
 
