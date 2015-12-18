@@ -11,34 +11,18 @@
 		@callout-text: @text-color;
 		@callout-border: darken(@callout-background, 25%)
 	){
-    padding: .75em 1em;
-    padding: @box-spacing-vertical @box-spacing-horizontal;
-    margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
-    display: block;
     &:before {
-    	color: @text-color;
     	background-color: @callout-border;
     }
 	> h1, > h2, > h3 {
 		color: @callout-headings;
-		font-size: @font-size-h3;
 	}
 	a {
 		border-bottom-color: @callout-border;
 	}
-    > *:first-child {
-    	margin-top: 0;
-    	padding-top: 0;
-    }
-    > *:last-child {
-    	margin-bottom: 0;
-    }
-    > p:last-child {
-    	padding-bottom: 0;
-    }
 	/* This was removed due to lack of use
 	.callout__link {
 	 	cursor: pointer;
@@ -76,6 +60,27 @@
 		    content: "\f063";
 	    }
 	}*/
+}
+
+p[class^="callout"],
+div[class^="callout"] {
+    padding: .75em 1em;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical 0;
+    display: block;
+	> h1, > h2, > h3 {
+		font-size: @font-size-h3;
+	}
+    > *:first-child {
+    	margin-top: 0;
+    	padding-top: 0;
+    }
+    > *:last-child {
+    	margin-bottom: 0;
+    }
+    > p:last-child {
+    	padding-bottom: 0;
+    }
 }
 
 // Callout icons

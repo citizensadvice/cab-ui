@@ -7,7 +7,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Modules", href: "index.html#modules"}, 
+		{title: "Modules", href: "index.html#modules"},
 		{title: "Callouts"}])
 
 block sidebar
@@ -58,17 +58,17 @@ block content
 					p Use the Aria tag #[code aria-label="Help"].
 					p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
 					//a.callout__link Callout link
-				.callout--alert.callout--icon
+				.callout--alert--icon
 					h3 Callout alert with icon
 					p The icon is optional and can be including by adding the #[code .callout--icon] class.de aria-label="Help"].
 			pre
 				code.language-html
-					| &lt;div class="callout--alert callout--icon"&gt;
+					| &lt;div class="callout--alert"&gt;
 					| 	&lt;h3&gt;Callout alert&lt;/h3&gt;
 					| 	&lt;p&gt;Use the Aria tag &lt;code&gt;aria-label="Help"&lt;/code&gt;.&lt;/p&gt;
 					| 	&lt;p&gt;This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.&lt;/p&gt;
 					| &lt;/div&gt;
-					| &lt;div class="callout--alert callout--icon"&gt;
+					| &lt;div class="callout--alert--icon"&gt;
 					| 	&lt;h3&gt;Callout alert with icon&lt;/h3&gt;
 					| 	&lt;p&gt;The icon is optional and can be including by adding the &lt;code&gt;.callout--icon&lt;/code&gt; class.&lt;/p&gt;
 					| &lt;/div&gt;
@@ -77,7 +77,7 @@ block content
 				.callout--confirmation
 					h3 Callout confirmation
 					p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
-				.callout--confirmation.callout--icon
+				.callout--confirmation--icon
 					h3 Callout confirmation with icon
 					p The icon is optional and can be including by adding the #[code .callout--icon] class.
 					//a.callout__link Callout link
@@ -87,7 +87,7 @@ block content
 					| 	&lt;h3&gt;Callout confirmation&lt;/h3&gt;
 					| 	&lt;p&gt;This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'&lt;/p&gt;
 					| &lt;/div&gt;
-					| &lt;div class="callout--confirmation callout--icon"&gt;
+					| &lt;div class="callout--confirmation--icon"&gt;
 					| 	&lt;h3&gt;Callout confirmation with icon&lt;/h3&gt;
 					| 	&lt;p&gt;The icon is optional and can be including by adding the &lt;code&gt;.callout--icon&lt;/code&gt; class.&lt;/p&gt;
 					| &lt;/div&gt;

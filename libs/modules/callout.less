@@ -20,14 +20,19 @@
 
 // Green
 .callout--confirmation {
-	.callout(
-		@green-lighter,
-		@green
-	);
-	.callout--border--left;
-    &.callout--icon {
-        .callout--icon("\2713\00a0 Correct");
-    }
+    .callout(
+        @green-lighter,
+        @green
+    );
+    .callout--border--left;
+}
+.callout--confirmation--icon {
+    .callout(
+        @green-lighter,
+        @green
+    );
+    .callout--border--left;
+    .callout--icon("\2713\00a0 Correct");
 }
 
 // Red
@@ -50,13 +55,22 @@
 .callout--alert,
 .dap-panel--important,
 .highlight--warning {
-	.callout(
-		@yellow-light
-	);
-	.callout--border--left;
-    &.callout--icon {
-        .callout--icon("\f06a\00a0 Worth\00a0knowing");
+    .callout(
+        @yellow-light
+    );
+    .callout--border--left;
+    &:before {
+        color: @text-color;
     }
+}
+.callout--alert--icon,
+.dap-panel--important--icon,
+.highlight--warning--icon {
+    .callout(
+        @yellow-light
+    );
+    .callout--border--left;
+    .callout--icon("\f06a\00a0 Worth\00a0knowing");
     &:before {
         color: @text-color;
     }
