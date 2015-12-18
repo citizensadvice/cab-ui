@@ -12,20 +12,20 @@
 
 // Buttons
 
-form {
-    .invalid {
-        color: @red;
-        padding-top: @box-spacing/4;
-        clear: both;
-    }
-    .valid {
-        color: @green;
-        padding-top: @box-spacing/4;
-        clear: both;
-    }
-    small {
-        color: @gray-3;
-    }
+form small {
+    color: @gray-3;
+}
+
+.valid,
+.invalid {
+    padding-top: @box-spacing/4;
+    clear: both;
+}
+.valid {
+    color: @green;
+}
+.invalid {
+    color: @red;
 }
 
 fieldset,
@@ -47,22 +47,16 @@ label,
     //margin-bottom: 5px;
     margin-bottom: @box-spacing*.5;
     font-weight: @font-weight-bolder;
-    .form__label--inline {
-        display: inline-block;
-    }
 }
-.radio, .checkbox, .radio--inline, .checkbox--inline {
-    font-weight: @font-weight-bold;
-    input {
-        margin-right: @box-spacing/2;
-    }
+.form__label--inline {
+    display: inline-block;
 }
 
 .form__label--hidden {
     .screenreader;
 }
 
-span.form-hint {
+.form-hint {
     display: block;
     color: @gray-3;
     margin-bottom: @box-spacing*.5;
@@ -115,10 +109,6 @@ input[type="checkbox"] {
     &[disabled] {
         cursor: not-allowed;
     }
-}
-
-input[type="file"] {
-    display: block;
 }
 
 // Make range inputs behave like textual form controls
@@ -189,8 +179,10 @@ input[type="file"] {
     border: none;
     width: 100%;
     outline: none;
+    display: block;
 }
 
+/* The output tag isn't supported by MS
 output {
     display: block;
     padding-top: 11px;
@@ -198,14 +190,17 @@ output {
     line-height: 1.6;
     color: @black;
 }
+*/
 
-// Reset height for `textarea`s
+// Reset height for textareas
 textarea.form__field {
     height: auto;
 }
 
+/* Radio and checkboxed */
 .radio,
 .checkbox {
+    font-weight: @font-weight-bold;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
@@ -231,6 +226,7 @@ textarea.form__field {
             z-index: -1;
             background-color: @gray-8;
             box-sizing: border-box;
+            margin-right: @box-spacing/2;
         }
         &:hover:before {
             border-color: @gray-5;
@@ -266,10 +262,10 @@ textarea.form__field {
             display: table-cell;
         }
         p {
-           display: block;
-           //float: right;
-           display: table-cell;
-           margin: 0;
+            display: block;
+            //float: right;
+            display: table-cell;
+            margin: 0;
             span {
                 font-weight: @font-weight-bolder;
             }
@@ -277,6 +273,7 @@ textarea.form__field {
     }
 }
 
+// What is this?
 .multi-select {
     padding: 0;
     height: @box-spacing*5.5;
