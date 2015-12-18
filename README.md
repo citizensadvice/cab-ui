@@ -172,7 +172,6 @@ Keep in mind that everytime a mixin is used, its entire contents are compiled in
 .blue-button {
   .mixin(blue);
 }
-
 // Compiles into (22 lines)
 .red-button {
   margin: 0;
