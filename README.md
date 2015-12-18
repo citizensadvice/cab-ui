@@ -129,7 +129,7 @@ This also reduces the size of styles calling the mixin. For example:
   .icon;
 }
 // Compiles into
-icon,
+.icon,
 .search,
 .email {
   font-family: 'cab-icons' !important;
