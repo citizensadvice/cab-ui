@@ -122,7 +122,7 @@ This also reduces the size of styles calling the mixin. For example:
 ```less
 // Without ()
 .icon {
-    font-family: 'cab-icons' !important;
+    font-family: 'cab-icons';
 }
 .search,
 .email {
@@ -132,12 +132,12 @@ This also reduces the size of styles calling the mixin. For example:
 .icon,
 .search,
 .email {
-  font-family: 'cab-icons' !important;
+  font-family: 'cab-icons';
 }
 
 // Whereas with ()
 .icon() {
-    font-family: 'cab-icons' !important;
+    font-family: 'cab-icons';
 }
 .search,
 .email {
@@ -146,7 +146,7 @@ This also reduces the size of styles calling the mixin. For example:
 // Compiles into
 .search,
 .email {
-  font-family: 'cab-icons' !important;
+  font-family: 'cab-icons';
 }
 ```
 
