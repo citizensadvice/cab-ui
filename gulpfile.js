@@ -62,7 +62,7 @@ gulp.task( 'less', function() {
 
 	var targetPath = 'public/css';
 
-    return gulp.src(['libs/*.less','libs/vendors/prism/prism.css'])
+    return gulp.src(['libs/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe(less().on('error', function(err){
 			gutil.log(err);
