@@ -76,8 +76,11 @@ i.icon-chevron-up {
         font-family: 'cab-icons';
         content: "\f067";
         padding: 0 @box-spacing-horizontal*1.25;
-        position: absolute;
+        .vertical-align(absolute);
         right: 0;
+        .ie8 & {
+            top: 12px;
+        }
     }
     > *:first-child {
         margin-top: 0;
