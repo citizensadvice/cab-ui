@@ -27,6 +27,7 @@
     .callout--border--left;
 }
 .callout--confirmation--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
     .callout(
         @green-lighter,
         @green
@@ -66,6 +67,7 @@
 .callout--alert--icon,
 .dap-panel--important--icon,
 .highlight--warning--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
     .callout(
         @yellow-light
     );
