@@ -448,6 +448,10 @@ input[class*="dob-"] {
     select {
         width: auto \9;
     }
+    select,
+    input {
+        height: 3.3rem; // This makes it ~2px taller than everything else, but for some reason fixes the issues in both Windows Chrome and old IE
+    }
 }
 
 // Custom dropdown icons
