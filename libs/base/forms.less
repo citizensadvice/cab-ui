@@ -297,12 +297,19 @@ textarea.form__field {
     &:after {
         pointer-events:none;
     }
+    &:after {
+        display: none \9; // Hides dropdown icon for IE8
+    }
     select {
         background: none;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: window;
         padding-right: 2em;
+    }
+    .dropdown,
+    select {
+        padding-right: 0 \9; // Removes space for dropdown icon on IE8
     }
 }
 
@@ -427,17 +434,16 @@ input[class*="dob-"] {
         background-color: @gray-8;
         padding: 0;
         border: none;
-        &:after {
-            display: none \9;
+        width: auto;
+        .ie8 & {
+            display: block;
         }
-    }
-    .dropdown,
-    select {
-        width: 150px;
-        padding-right: 0 \9;
     }
     input:first-of-type {
         border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    .ie8 & select {
+        width: auto;
     }
 }
 
