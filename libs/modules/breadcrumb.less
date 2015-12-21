@@ -36,10 +36,19 @@
     font-size: @font-size-small;
     line-height: (@line-height-small * 2);
 
-    &>i {
+    & > i {
         margin: 0 @box-spacing-horizontal*.5 0 0;
         color: @blue-light;
     }
+    // Once we've moved away from using i tags in the breadcrumb, replace the above section with the below section
+    /*
+    &:after {
+        .icon;
+        content: @i-angle-right;
+        margin: 0 @box-spacing-horizontal*.5 0 0;
+        color: @blue-light;
+    }
+    */
 }
 
 .breadcrumb__item a {
