@@ -410,9 +410,15 @@ pre[class*="language-"] {
     }
 }
 .intro-panel-content {
-    .main-content;
+    .limit-width;
+    padding: 0 @box-spacing;
+    margin-top: @box-spacing*2;
+    margin-bottom: @box-spacing*1.5;
     position:relative;
     z-index:2;
+    p {
+        margin-right: @box-spacing;
+    }
 }
 
 .intro-panel-1 {
