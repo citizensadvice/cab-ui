@@ -45,8 +45,8 @@ This also reduces the size of styles calling the mixin. For example:
   font-family: 'cab-icons';
 }
 ```
+Whereas with `()`;
 ```less
-// Whereas with ()
 .icon() {
     font-family: 'cab-icons';
 }
@@ -83,7 +83,7 @@ Keep in mind that everytime a mixin is used, its entire contents are compiled in
 .blue-button {
   .mixin(blue);
 }
-// Compiles into (22 lines)
+// Compiles into (325 bytes)
 .red-button {
   margin: 0;
 }
@@ -107,8 +107,8 @@ Keep in mind that everytime a mixin is used, its entire contents are compiled in
   text-decoration: underline;
 }
 ```
+Whereas;
 ```less
-// Whereas
 .mixin(@x) {
   margin: 0;
   .icon {
@@ -128,7 +128,7 @@ Keep in mind that everytime a mixin is used, its entire contents are compiled in
 .blue-button {
   .mixin(blue);
 }
-//Compiles into (19 lines)
+//Compiles into (237 bytes)
 .icon {
   padding: 0;
   margin: 0;
