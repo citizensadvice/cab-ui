@@ -7,7 +7,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Styles", href: "index.html#styles"}, 
+		{title: "Styles", href: "index.html#styles"},
 		{title: "Colours"}])
 
 block sidebar
@@ -324,3 +324,11 @@ block content
 						| @adviser-stone
 						br
 						| #5D7678
+
+	script.
+		var sw = $('.swatch').width();
+		$('.swatch').css({'height':sw+'px'});
+		$(window).resize(function() {
+			var sw = $('.swatch').width();
+			$('.swatch').css({'height':sw+'px'});
+		});
