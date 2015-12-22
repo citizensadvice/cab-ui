@@ -19,7 +19,8 @@ Less won't compile mixins by themselves. This means that adding `()` at the end 
 .icon {
     font-family: 'cab-icons';
 }
-
+```
+```less
 // This won't
 .icon() {
     font-family: 'cab-icons';
@@ -43,7 +44,8 @@ This also reduces the size of styles calling the mixin. For example:
 .email {
   font-family: 'cab-icons';
 }
-
+```
+```less
 // Whereas with ()
 .icon() {
     font-family: 'cab-icons';
@@ -104,7 +106,8 @@ Keep in mind that everytime a mixin is used, its entire contents are compiled in
 .blue-button .icon:hover {
   text-decoration: underline;
 }
-
+```
+```less
 // Whereas
 .mixin(@x) {
   margin: 0;
