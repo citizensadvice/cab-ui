@@ -389,6 +389,22 @@ pre[class*="language-"] {
     );
 }
 
+/***************************************************************************
+* Brand slider
+* Approach to inclusion of brand heading / colours
+* see slider.html
+*/
+.brand-slider (@brand-slider-bg: @heritage-yellow; @brand-slider-text: @heritage-blue;) {
+    background-color: @heritage-yellow;
+    color: @heritage-blue;
+    padding: 1rem 0;
+}
+.brand-slider-1 {
+    .brand-slider (
+        @heritage-yellow,
+        @heritage-blue
+    );
+}
 
 /***************************************************************************
  * Colours
