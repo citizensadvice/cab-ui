@@ -394,13 +394,35 @@ pre[class*="language-"] {
 * Approach to inclusion of brand heading / colours
 * see slider.html
 */
-.brand-slider (@brand-slider-bg: @heritage-yellow; @brand-slider-text: @heritage-blue;) {
-    background-color: @heritage-yellow;
-    color: @heritage-blue;
+.intro-panel (@intro-panel-bg: @heritage-yellow; @intro-panel-text: @heritage-blue;) {
+    background-color: @intro-panel-bg;
+    color: @intro-panel-text;
     padding: 1rem 0;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: "\e600"; 
+      font-family: 'cab-icons';
+      font-size: 20rem;
+      color: lighten(@heritage-yellow, 10%);
+      .vertical-align (absolute);
+      right:10%;
+    }
 }
-.brand-slider-1 {
-    .brand-slider (
+.intro-panel-content {
+    .main-content;
+    position:relative;
+    z-index:2;
+}
+
+.intro-panel-1 {
+    .intro-panel (
+        @heritage-yellow-lighter,
+        @heritage-blue
+    );
+}
+.intro-panel-2 {
+    .intro-panel (
         @heritage-yellow,
         @heritage-blue
     );
