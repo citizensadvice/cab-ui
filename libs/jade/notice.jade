@@ -1,0 +1,34 @@
+block settings
+	- var title = "Notice"
+	- var sidebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Modules", href: "index.html#modules"},
+		{title: "Notice"}])
+
+block sidebar
+	include ../template/sidebar-modules.jade
+
+block content
+	.articleContent
+		div
+			p Notices appear attached to the bottom of the screen and cannot be dismissed.
+			.example-box-plain
+				.notice(style="position:relative;z-index:0;display:block;")
+					.notice__content
+						p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
+			pre
+				code.language-html
+					| &lt;div class="notice"&gt;
+					| 	&lt;div class="notice__content"&gt;
+					| 		&lt;p&gt;We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to &lt;a href="#" class="a-external-link"&gt;Google Chrome&lt;/a&gt;.&lt;/p&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
+
+	.notice(style="display:block;")
+		.notice__content
+			p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].

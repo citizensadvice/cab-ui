@@ -1,0 +1,40 @@
+﻿/**
+ * NOTICE
+ *
+ * Based on cookie monster
+ */
+
+.notice {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: fade(@yellow-light, 95%);
+    z-index: 10000;
+    @media screen and (max-width: @screen-xs-max) {
+        font-size: 14px;
+    }
+    display: none;
+    .ie8 & {
+        display: block;
+    }
+}
+
+.notice__content {
+    position: relative;
+    .limit-width();
+    padding: @box-spacing*.66 0;
+    p {
+        margin: 0;
+        padding: 0 @box-spacing*7 0 @box-spacing/2;
+        display: inline-block;
+        color: @text-color;
+        a {
+            border-color: @text-color;
+            color: @text-color;
+            &:after {
+                color: @text-color;
+            }
+        }
+    }
+}
