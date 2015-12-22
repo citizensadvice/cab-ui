@@ -62,14 +62,14 @@ gulp.task( 'less', function() {
 
 	var targetPath = 'public/css';
 
-    return gulp.src(['libs/*.less','libs/vendors/prism/prism.css'])
+    return gulp.src(['libs/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe(less().on('error', function(err){
 			gutil.log(err);
 			this.emit('end');
 		}))
 		.on("error", notify.onError(function (error) {
-			return "Message to the notifier: " + error.message;
+			return error.message;
 		}))
 		//.pipe( less() ) // Transform to less
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)

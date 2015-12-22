@@ -35,47 +35,48 @@
     margin-top: @box-spacing*2;
     margin-bottom: unit(@box-spacing*1.5*@base-size,px);
     margin-bottom: @box-spacing*1.5;
-    &--full-width {
-        max-width: 60em;
-        @media ( max-width: @screen-sm-max ) {
-            max-width: none;
-            width: auto;
-        }
+}
+
+.main-content--full-width {
+    max-width: 60em;
+    @media ( max-width: @screen-sm-max ) {
+        max-width: none;
+        width: auto;
     }
-    &__right {
-        float: left;
-        width: @width-span-8;
+}
+.main-content__right {
+    float: left;
+    width: @width-span-8;
 
-        @media ( min-width: @screen-sm-min ) {
-            padding-right: @box-spacing*2;
-        }
-
-        @media ( min-width: @screen-md-min ) {
-            padding-right: @box-spacing*3;
-        }
-
-        @media ( min-width: @screen-lg-min ) {
-            padding-right: @box-spacing*6;
-        }
-
-        @media ( max-width: @screen-xs-max ) {
-            float: none;
-            width: auto;
-            padding: 0;
-        }
+    @media ( min-width: @screen-sm-min ) {
+        padding-right: @box-spacing*2;
     }
-    &__sidebar {
-        float: right;
-        width: @width-span-2;
-        overflow: hidden; // Stop margin collapsing issues
-        margin-bottom: unit(@box-spacing*1.5*@base-size,px);
-        margin-bottom: @box-spacing*1.5;
 
-        @media ( max-width: @screen-xs-max ) {
-            float: none;
-            width: auto;
-            margin-top: @box-spacing*1.5;
-        }
+    @media ( min-width: @screen-md-min ) {
+        padding-right: @box-spacing*3;
+    }
+
+    @media ( min-width: @screen-lg-min ) {
+        padding-right: @box-spacing*6;
+    }
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+}
+.main-content__sidebar {
+    float: right;
+    width: @width-span-2;
+    overflow: hidden; // Stop margin collapsing issues
+    margin-bottom: unit(@box-spacing*1.5*@base-size,px);
+    margin-bottom: @box-spacing*1.5;
+
+    @media ( max-width: @screen-xs-max ) {
+        float: none;
+        width: auto;
+        margin-top: @box-spacing*1.5;
     }
 }
 

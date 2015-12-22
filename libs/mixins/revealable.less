@@ -17,100 +17,132 @@
     border: solid @revealable-border;
     border-width: 1px 1px 0px 1px;
 
-    i.revealable__icon,
-    i.icon-chevron-up {
-        display: none;
-    }
-
-    .collapse-toggle, // This needs to be removed eventually
-    &__heading {
-        cursor: pointer;
-        display: block;
-        padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
-        margin: 0;
-        border: none;
+    .collapse-toggle,
+    .revealable__heading {
         background-color: @revealable-background;
-        text-decoration: none;
-        position: relative;
         background-color: @revealable-background;
         color: @revealable-heading;
-        font-size: @font-size-base;
-        font-weight: @font-weight-bold;
-        line-height: @line-height-small;
         border-bottom: 1px solid @revealable-border;
-        h1  h2, h3, h4, h5, h6 {
-            margin-top: 0;
+        h1, h2, h3, h4, h5, h6 {
             color: @revealable-heading;
         }
         &:after {
-            box-sizing: border-box;
-            font-family: 'FontAwesome';
-            content: "\f067";
-            padding: 0 @box-spacing-horizontal*1.25;
-            .vertical-align(absolute);
-            right: 0;
             color: @revealable-icon;
-        }
-        *:last-child {
-            margin-bottom: 0;
         }
     }
 
-    .collapse-toggle-close, // This needs to be removed eventually
-    &__close {
-        cursor: pointer;
-        display: block;
-        padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal;
-        margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
-        text-decoration: none;
-        position: relative;
+    .collapse-toggle-close
+    .revealable__close {
         color: @revealable-heading;
-        cursor: pointer;
-        border: none;
-        margin-top: 1rem;
-        border-bottom: 1px solid @revealable-border;
-        text-align: right;
-        &:before {
-            box-sizing: border-box;
-            font-family: 'FontAwesome';
-            padding: 0 @box-spacing-horizontal*1.25;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            line-height: 3em;
-            content: "\f068";
-        }
         &:hover {
-            //background-color: fade(@revealable-background, 20%);
             color: @revealable-heading;
         }
     }
 
     .open:after, // This needs to be removed eventually
-    &__heading[aria-expanded=true]:after {
+    .revealable__heading[aria-expanded=true]:after {
         content: "\f068";
     }
 
     .collapse-content, // This needs to be removed eventually
-    &__content {
-        padding: 0;
-        border: 0;
-        margin: 0;
-        padding: @box-spacing-vertical @box-spacing-horizontal;
-        h1, h2, h3, h4, h5, h6 {
-            margin-top: 0;
-            color: @revealable-heading;
-        }
-    }
     .revealable__content {
-        &[aria-hidden=true] {
-            display: none;
+        border-bottom: 1px solid @revealable-border;
+        h1, h2, h3, h4, h5, h6 {
+            color: @revealable-heading;
         }
     }
 }
 
-// Finctional CSS for JS
+// Common styles, no need to define these every time we use the mixin
+i.revealable__icon,
+i.icon-chevron-up {
+    display: none;
+}
+
+.collapse-toggle,
+.revealable__heading {
+    padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    line-height: @line-height-small;
+    &:after {
+        box-sizing: border-box;
+        font-family: 'cab-icons';
+        content: "\f067";
+        padding: 0 @box-spacing-horizontal*1.25;
+        .vertical-align(absolute);
+        right: 0;
+        .ie8 & {
+            top: 12px;
+        }
+    }
+    > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.collapse-toggle-close, // This needs to be removed eventually
+.revealable__close {
+    cursor: pointer;
+    display: block;
+    padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    text-align: right;
+    &:before {
+        box-sizing: border-box;
+        font-family: 'cab-icons';
+        padding: 0 @box-spacing-horizontal*1.25;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 3em;
+        content: "\f068";
+    }
+    &:hover,
+    &:focus {
+        border: none;
+    }
+}
+
+.open:after, // This needs to be removed eventually
+.revealable__heading[aria-expanded=true]:after {
+    content: "\f068";
+}
+
+.collapse-content, // This needs to be removed eventually
+.revealable__content {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+.revealable__content {
+    &[aria-hidden=true] {
+        display: none;
+    }
+}
+
+// Functional CSS for JS
 .collapse-toggle {
     cursor: pointer;
 }

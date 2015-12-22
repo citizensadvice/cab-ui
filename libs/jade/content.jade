@@ -9,7 +9,7 @@ extends ../template/template.jade
 
 block breadcrumbs
     +breadcrumbs([
-        {title: "Home", href: "index.html"}, 
+        {title: "Home", href: "index.html"},
         {title: "Templates", href: "index.html#templates"},
         {title: "Content"}])
 
@@ -33,7 +33,7 @@ block section-notice
         h2.screenreader Notice
         .section-notice__content
             p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
-                
+
 block content
     .articleContent
         div
@@ -61,7 +61,7 @@ block content
 
             p You can start your PIP claim by filling in a PIP1 form. You can do this either:
 
-            ul 
+            ul
                 li by phone - a DWP adviser will fill in the basic claim form during the call, it should only take 20 minutes
                 li by post - filling in a paper form that the DWP can send you, and posting it back
 
@@ -102,9 +102,9 @@ block content
                 .collapse-content
                     p It’s quicker to apply by phone, but If that isn’t possible you can write to the DWP and ask for a PIP1 form.
                     p You’ll need to tell them why you (or someone else) can’t do the PIP1 form over the phone.
-                    p Personal Independence Payment New Claims 
-                    p Post Handling Site B 
-                    p Wolverhampton 
+                    p Personal Independence Payment New Claims
+                    p Post Handling Site B
+                    p Wolverhampton
                     p WV99 1AH
 
                     a.collapse-toggle-close Close
@@ -126,8 +126,8 @@ block content
                 p If you do, they’ll send you a PIP claim form. This form is where you tell them how your condition affects you. If you’ve waited more than 2 weeks, contact the PIP claims line and ask them for an update.
                 p While you wait for the PIP2 form, you should think about #[a(href="#") how to fill in the PIP claim form] and if you need to organise any #[a(href="#") supporting evidence] to support your claim.
                 p If you don’t meet the basic eligibility conditions, you’ll be sent a decision letter to say why you’ve been refused. If you think the decision is wrong, you can #[a(href="#") challenge the DWP’s decision].
-                
-    #simpleModal.modal
+
+    //#simpleModal.modal
             .extent-country-select
                     form
                         h2 Advice can vary depending on where you live
@@ -150,7 +150,7 @@ block content
                                     | Northern Ireland
                             button#closeSimple.btn.btn-primary.right-button-icon(type="submit") Continue
 
-    script.
+    //script.
         $(document).ready(function(){
             $("#showSimpleModal").click(function() {
                 $("div#simpleModal").addClass("show");

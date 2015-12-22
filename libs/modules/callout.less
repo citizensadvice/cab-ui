@@ -10,35 +10,41 @@
 .dap-panel .dap-panel--base,
 .highlight {
 	// Unstyled
-	.callout( 
-		@blue-lighter, 
-		@blue 
-	); 
-	.callout--border; 
+	.callout(
+		@blue-lighter,
+		@blue
+	);
+	.callout--border;
 	.callout--border--left;
 }
 
 // Green
 .callout--confirmation {
-	.callout( 
-		@green-lighter, 
-		@green
-	);
-	.callout--border--left;
-    &.callout--icon {
-        .callout--icon("\f00c\00a0 Correct");
-    }
+    .callout(
+        @green-lighter,
+        @green
+    );
+    .callout--border--left;
+}
+.callout--confirmation--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
+    .callout(
+        @green-lighter,
+        @green
+    );
+    .callout--border--left;
+    .callout--icon("\2713\00a0 Correct");
 }
 
 // Red
 .callout--warning,
 .dap-panel--crucial,
 .highlight--error {
-	.callout( 
+	.callout(
 		@red-lightest,
 		@text-color,
         @callout-border: @red
-	); 
+	);
 	.callout--border--left;
     .callout--icon("\f071\00a0 Important");
     &:before {
@@ -50,13 +56,23 @@
 .callout--alert,
 .dap-panel--important,
 .highlight--warning {
-	.callout( 
-		@yellow-light
-	); 
-	.callout--border--left;
-    &.callout--icon {
-        .callout--icon("\f06a\00a0 Worth\00a0knowing");
+    .callout(
+        @yellow-light
+    );
+    .callout--border--left;
+    &:before {
+        color: @text-color;
     }
+}
+.callout--alert--icon,
+.dap-panel--important--icon,
+.highlight--warning--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
+    .callout(
+        @yellow-light
+    );
+    .callout--border--left;
+    .callout--icon("\f06a\00a0 Worth\00a0knowing");
     &:before {
         color: @text-color;
     }
@@ -65,53 +81,53 @@
 // Gray
 .callout--quote,
 .dap-panel--example {
-	.callout( 
-		@white, 
+	.callout(
+		@white,
 		@gray-2
-	); 
-	.callout--border; 
-	.callout--border--left; 
+	);
+	.callout--border;
+	.callout--border--left;
 }
 
 // White
 .callout--white {
-.callout( 
+.callout(
     @white,
-    @white 
-); 
+    @white
+);
 }
 
 // Brand - Heritage
 .callout--heritage	{
-	.callout( 
-		@heritage-yellow, 
-		@heritage-blue, 
-		@heritage-blue 
-	); 
+	.callout(
+		@heritage-yellow,
+		@heritage-blue,
+		@heritage-blue
+	);
 }
 
 // Brand - Responsible
-.callout--responsible { 
-	.callout( 
-		@responsible-aqua, 
-		@responsible-purple, 
-		@responsible-purple 
-	); 
+.callout--responsible {
+	.callout(
+		@responsible-aqua,
+		@responsible-purple,
+		@responsible-purple
+	);
 }
 
 // Brand - Inventive
-.callout--inventive { 
-	.callout( 
-		@inventive-pink, 
-		@inventive-teal 
+.callout--inventive {
+	.callout(
+		@inventive-pink,
+		@inventive-teal
 	);
 }
 
 // Brand - Generous
-.callout--generous	{ 
-	.callout( 
-		@generous-mauve, 
-		@generous-green 
+.callout--generous	{
+	.callout(
+		@generous-mauve,
+		@generous-green
 	);
 }
 
@@ -125,9 +141,9 @@
 }
 
 .box--warning {
-    .callout( 
-        @yellow-light 
-    ); 
+    .callout(
+        @yellow-light
+    );
     .callout--border--left;
 }
 
@@ -142,7 +158,7 @@
 .well--outline {
     .callout (
         @white,
-        @callout-border: @heritage-blue        
+        @callout-border: @heritage-blue
     );
     .callout--border;
     border-radius: @form-border-radius;
@@ -169,7 +185,7 @@
         font-size: @font-size-base;
         color: @text-color;
     }
-    
+
     .p {
         font-size: @font-size-base;
         color: @text-color;
@@ -190,7 +206,7 @@
         font-size: @font-size-base;
         color: @text-color;
     }
-    
+
     .p {
         font-size: @font-size-base;
         color: @text-color;
@@ -211,7 +227,7 @@
         font-size: @font-size-base;
         color: @text-color;
     }
-    
+
     .p {
         font-size: @font-size-base;
         color: @text-color;

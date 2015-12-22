@@ -1,6 +1,25 @@
 // Basic button styling
 // To style a link to look like a button use .button
 
+
+.btn {
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    font-weight: bold;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+    &:focus {
+        -webkit-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        -moz-box-shadow: 0px 0px 0px 2px @heritage-yellow;
+        box-shadow: 0px 0px 0px 2px @heritage-yellow;
+    }
+}
+
 .btn,
 .button,
 .btn-primary,
@@ -66,61 +85,6 @@ input[type=button] {
     );
 }
 
-
-// Old button styles
-// Do we need orange, pink and purple?
-.button--orange.button--orange {
-    background-color: @orange;
-
-    &:hover, &:focus, &:active {
-        background: darken(@orange,10%);
-    }
-}
-.button--pink.button--pink {
-    background-color: @pink;
-    color: @black;
-
-    &:hover, &:focus, &:active {
-        background: darken(@pink,10%);
-        color: @black;
-    }
-}
-.button--purple.button--purple {
-    background-color: @purple-dark;
-    color: @white;
-    &:hover, &:focus, &:active {
-        background: darken(@purple-dark,10%);
-    }
-}
-
-button:disabled {
-    cursor: not-allowed;
-    color: @form-disabled-text;
-    background-color: @form-disabled-bg;
-    border: none;
-    resize: none;
-    box-shadow: none;
-    &:hover {
-        cursor: not-allowed;
-        color: @form-disabled-text;
-        background-color: @form-disabled-bg;
-        border: none;
-        resize: none;
-        box-shadow: none;
-    }
-}
-
-
-// Shows a loading icon over a button
-.button--submitting {position:relative;}
-.button--submitting:after {
-    content: ' ';
-    position: absolute;
-    top: 0; bottom: 0; right: 0; left: 0;
-    background: #ddd url("assets/images/ajax-loader.gif") no-repeat center center;
-    background-color: rgba( 255,255,255,.7);
-}
-
 // Small Button styles
 
 .btn-small,
@@ -173,3 +137,60 @@ button:disabled {
         border-right: 0px;
     }
 }
+
+
+// Old button styles
+// Do we need orange, pink and purple? No.
+/*
+.button--orange.button--orange {
+    background-color: @orange;
+
+    &:hover, &:focus, &:active {
+        background: darken(@orange,10%);
+    }
+}
+.button--pink.button--pink {
+    background-color: @pink;
+    color: @black;
+
+    &:hover, &:focus, &:active {
+        background: darken(@pink,10%);
+        color: @black;
+    }
+}
+.button--purple.button--purple {
+    background-color: @purple-dark;
+    color: @white;
+    &:hover, &:focus, &:active {
+        background: darken(@purple-dark,10%);
+    }
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: @form-disabled-text;
+    background-color: @form-disabled-bg;
+    border: none;
+    resize: none;
+    box-shadow: none;
+    &:hover {
+        cursor: not-allowed;
+        color: @form-disabled-text;
+        background-color: @form-disabled-bg;
+        border: none;
+        resize: none;
+        box-shadow: none;
+    }
+}
+
+
+// Shows a loading icon over a button
+.button--submitting {position:relative;}
+.button--submitting:after {
+    content: ' ';
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    background: #ddd url("assets/images/ajax-loader.gif") no-repeat center center;
+    background-color: rgba( 255,255,255,.7);
+}
+*/

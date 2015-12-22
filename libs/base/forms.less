@@ -12,20 +12,20 @@
 
 // Buttons
 
-form {
-    .invalid {
-        color: @red;
-        padding-top: @box-spacing/4;
-        clear: both;
-    }
-    .valid {
-        color: @green;
-        padding-top: @box-spacing/4;
-        clear: both;
-    }
-    small {
-        color: @gray-3;
-    }
+form small {
+    color: @gray-3;
+}
+
+.valid,
+.invalid {
+    padding-top: @box-spacing/4;
+    clear: both;
+}
+.valid {
+    color: @green;
+}
+.invalid {
+    color: @red;
 }
 
 fieldset,
@@ -47,22 +47,16 @@ label,
     //margin-bottom: 5px;
     margin-bottom: @box-spacing*.5;
     font-weight: @font-weight-bolder;
-    .form__label--inline {
-        display: inline-block;
-    }
 }
-.radio, .checkbox, .radio--inline, .checkbox--inline {
-    font-weight: @font-weight-bold;
-    input {
-        margin-right: @box-spacing/2;
-    }
+.form__label--inline {
+    display: inline-block;
 }
 
 .form__label--hidden {
     .screenreader;
 }
 
-span.form-hint {
+.form-hint {
     display: block;
     color: @gray-3;
     margin-bottom: @box-spacing*.5;
@@ -117,10 +111,6 @@ input[type="checkbox"] {
     }
 }
 
-input[type="file"] {
-    display: block;
-}
-
 // Make range inputs behave like textual form controls
 input[type="range"] {
     display: block;
@@ -156,7 +146,6 @@ select {
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:focus:required:invalid {
-//      border-color: @red;
         outline: 2px solid @red;
         background-image: url("assets/images/red-cross.svg");
         padding-right: 2.25em;
@@ -169,7 +158,6 @@ select {
         }
     }
     &:focus:required:valid {
-//      border-color: @green;
         outline: 2px solid @green;
         background-image: url("assets/images/green-tick.svg");
         padding-right: 2.25em;
@@ -182,8 +170,6 @@ select {
         }
     }
     &:focus {
-//        border-color: @heritage-blue-lighter;
-//        outline: none;
         border-width: 1px;
         outline: 2px solid @heritage-blue-lighter;
     }
@@ -193,8 +179,10 @@ input[type="file"] {
     border: none;
     width: 100%;
     outline: none;
+    display: block;
 }
 
+/* The output tag isn't supported by MS
 output {
     display: block;
     padding-top: 11px;
@@ -202,14 +190,17 @@ output {
     line-height: 1.6;
     color: @black;
 }
+*/
 
-// Reset height for `textarea`s
+// Reset height for textareas
 textarea.form__field {
     height: auto;
 }
 
+/* Radio and checkboxed */
 .radio,
 .checkbox {
+    font-weight: @font-weight-bold;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
     border-radius: @form-border-radius;
@@ -235,6 +226,7 @@ textarea.form__field {
             z-index: -1;
             background-color: @gray-8;
             box-sizing: border-box;
+            margin-right: @box-spacing/2;
         }
         &:hover:before {
             border-color: @gray-5;
@@ -270,10 +262,10 @@ textarea.form__field {
             display: table-cell;
         }
         p {
-           display: block;
-           //float: right;
-           display: table-cell;
-           margin: 0;
+            display: block;
+            //float: right;
+            display: table-cell;
+            margin: 0;
             span {
                 font-weight: @font-weight-bolder;
             }
@@ -281,6 +273,7 @@ textarea.form__field {
     }
 }
 
+// What is this?
 .multi-select {
     padding: 0;
     height: @box-spacing*5.5;
@@ -296,8 +289,7 @@ textarea.form__field {
 
 .dropdown {
     border-radius: @form-border-radius;
-    border: 1px solid @gray-6;
-    .btn-icon("\F0D7",@color:@black);
+    .btn-icon(@i-sort,@color:@black);
     padding-right: 0;
     background-color: @white;
     display: inline-block;
@@ -305,13 +297,19 @@ textarea.form__field {
     &:after {
         pointer-events:none;
     }
+    &:after {
+        display: none \9; // Hides dropdown icon for IE8
+    }
     select {
         background: none;
-        border: none;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: window;
         padding-right: 2em;
+    }
+    .dropdown,
+    select {
+        padding-right: 0 \9; // Removes space for dropdown icon on IE8
     }
 }
 
@@ -376,56 +374,6 @@ input[class*="dob-"] {
     *:last-child {
         border-radius: 0 @form-border-radius @form-border-radius 0;
     }
-
-    &--buttons {
-    }
-    &--toggle {
-        label {
-            padding: @box-spacing-vertical @box-spacing-horizontal;
-            text-align: center;
-            input[type="radio"],
-            input[type="checkbox"] {
-                width: auto;
-                margin-right: .25em;
-            }
-            input[type="radio"]:before,
-            input[type="checkbox"]:before {
-                border-radius: 0;
-                border-width: 1px 0;
-                border-color: @gray-6;
-            }
-            input[type="radio"]:checked:before,
-            input[type="checkbox"]:checked:before {
-                border-color: @gray-6;
-            }
-            &:last-child input:before {
-                border-radius: 0 @form-border-radius @form-border-radius 0;
-                border-right-width: 1px;
-            }
-            &:first-child {
-                border-radius: @form-border-radius 0 0 @form-border-radius;
-            }
-            &:last-child {
-                border-radius: 0 @form-border-radius @form-border-radius 0;
-            }
-        }
-        button {
-            padding: @box-spacing-vertical 0;
-        }
-    }
-    &--dropdown {
-        .dropdown {
-            display: table-cell;
-            border-radius: 0 @form-border-radius @form-border-radius 0;
-            //.btn-primary;
-            background-color: @gray-8;
-            padding: 0;
-            width: auto;
-        }
-        input:first-of-type {
-            border-radius: @form-border-radius 0 0 @form-border-radius;
-        }
-    }
     .field {
         display: table-cell;
         width: 100%;
@@ -441,6 +389,68 @@ input[class*="dob-"] {
             margin-right: 0;
             border-radius: @form-border-radius;
         }
+    }
+}
+
+.field-group--toggle {
+    label {
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        text-align: center;
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: .25em;
+        }
+        input[type="radio"]:before,
+        input[type="checkbox"]:before {
+            border-radius: 0;
+            border-width: 1px 0;
+            border-color: @gray-6;
+        }
+        input[type="radio"]:checked:before,
+        input[type="checkbox"]:checked:before {
+            border-color: @gray-6;
+        }
+        &:last-child input:before {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+            border-right-width: 1px;
+        }
+        &:first-child {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+        }
+        &:last-child {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
+    }
+    button {
+        padding: @box-spacing-vertical 0;
+    }
+}
+
+.field-group--dropdown {
+    .dropdown {
+        display: table-cell;
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+        background-color: @gray-8;
+        padding: 0;
+        border: none;
+        width: auto;
+        .ie8 & {
+            display: block;
+        }
+    }
+    input:first-of-type {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    .ie8 & select {
+        width: auto;
+    }
+    select {
+        width: auto \9;
+    }
+    select,
+    input {
+        height: 3.3rem; // This makes it ~2px taller than everything else, but for some reason fixes the issues in both Windows Chrome and old IE
     }
 }
 
@@ -503,13 +513,13 @@ input[class*="dob-"] {
             padding: 0;
         }
     }
-    &__select {
-        width: 80%;
-    }
-    &__button {
-        width: 17%;
-        float: right;
-    }
+}
+.custom-dropdown__select {
+    width: 80%;
+}
+.custom-dropdown__button {
+    width: 17%;
+    float: right;
 }
 
 // If pointer events aren't supported hide the custom dropdown

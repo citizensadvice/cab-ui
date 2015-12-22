@@ -6,7 +6,7 @@
 *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 
 body, input, button, select, textarea {
-    font: @base-size/1.5 'open_sans', "Helvetica Neue", Helvetica, Arial, sans-serif;  
+    font: @base-size/1.5 'open_sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button, input, optgroup, select, textarea {
@@ -39,21 +39,12 @@ img {
     border: 1px solid @gray-8;
 }
 
-/* External links */
-.a-external:after { /* This method is easier to deploy across the site than just using padding */
-    content: "";
-    background: url("assets/images/icon_external.png") no-repeat center right;
-    padding-right: 18px;
-    padding-right: calc(~"13px + .3em"); /* image is 13px wide.  ~ to suppress LESS calculating for us grrr*/
-}
-
-
 // For areas with black text
 .black-text() {
     color: @black;
 
     a {
-        color: @black; 
+        color: @black;
     }
 
     .a-external:after {
@@ -75,7 +66,7 @@ img {
     color: @white;
 
     a {
-        color: @white; 
+        color: @white;
     }
 
     .a-external:after {
@@ -107,34 +98,6 @@ img {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0 0 1/2.5em;
-    color: @heritage-blue;
-    line-height: 1.2;
-}
-h2 {
-    font-size: 2.0em;
-    line-height: 1.3;
-    margin: 1em 0 1/2em;
-}
-h3 {
-    font-size: 1.6em;
-    margin: 1em 0 1/1.6em;
-}
-h4 {
-    font-size: 1.3em;
-    margin: 1em 0 1/1.3em;
-}
-h5 {
-    font-size: 1.1em;
-    margin: 1em 0 1/1.1em;
-}
-h6 {
-    font-size: 1em;
-}
-
 ul {margin: 1em 0;}
 li {margin-bottom: .5em;}
 
@@ -163,7 +126,7 @@ ul.li--arrow {
     }
 }
 
-.view-all { 
+.view-all {
     background: url("assets/images/view-all.png") left center no-repeat;
     border-top: 1px solid @gray-6;
     padding-left: 1.4em;

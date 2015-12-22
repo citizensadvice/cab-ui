@@ -2,13 +2,14 @@ block settings
 	- var title = "Content toolbar"
 	- var sidebar = true
 	- var toolbars = true
+	- var sharebar = true
 
 extends ../template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Modules", href: "index.html#modules"}, 
+		{title: "Modules", href: "index.html#modules"},
 		{title: "Content toolbar"}])
 
 block sidebar

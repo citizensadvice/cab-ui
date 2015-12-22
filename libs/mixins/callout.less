@@ -11,43 +11,20 @@
 		@callout-text: @text-color;
 		@callout-border: darken(@callout-background, 25%)
 	){
-    padding: .75em 1em;
-    padding: @box-spacing-vertical @box-spacing-horizontal;
-    margin: @box-spacing-vertical 0;
     background-color: @callout-background;
     color: @callout-text;
     border: 0px @callout-border solid;
-    display: block;
     &:before {
-    	color: @text-color;
     	background-color: @callout-border;
     }
 	> h1, > h2, > h3 {
 		color: @callout-headings;
-		font-size: @font-size-h3;
 	}
 	a {
 		border-bottom-color: @callout-border;
 	}
-    > *:first-child {
-    	padding-top: 0;
-    }
-    h1:first-child,
-    h2:first-child,
-    h3:first-child,
-    h4:first-child,
-    h5:first-child,
-    h6:first-child {
-    	margin-top: 0;
-    	padding-top: 0;
-    }
-    li:first-child {
-    	padding-top: 0;
-    }
-    > *:last-child {
-    	margin-bottom: 0;
-    }
-	/*.callout__link {
+	/* This was removed due to lack of use
+	.callout__link {
 	 	cursor: pointer;
 	 	display: block;
 	    padding: @box-spacing-vertical @box-spacing-horizontal*4.5 @box-spacing-vertical @box-spacing-horizontal;
@@ -60,7 +37,7 @@
 	    position: relative;
 		&:after {
 			box-sizing: border-box;
-		    font-family: 'FontAwesome';
+		    font-family: 'cab-icons';
 		    content: "\f054";
 		    color: @callout-text;
 		    background-color: darken(spin(@callout-background, 15), 10%);
@@ -85,12 +62,32 @@
 	}*/
 }
 
+*[class^="callout"] {
+    padding: .75em 1em;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    margin: @box-spacing-vertical 0;
+    display: block;
+	> h1, > h2, > h3 {
+		font-size: @font-size-h3;
+	}
+    > *:first-child {
+    	margin-top: 0;
+    	padding-top: 0;
+    }
+    > *:last-child {
+    	margin-bottom: 0;
+    }
+    > p:last-child {
+    	padding-bottom: 0;
+    }
+}
+
 // Callout icons
 .callout--icon(@icon) {
 		.callout--border;
 		.callout--border--left;
 	    &:before {
-	        font-family: 'FontAwesome';
+	        font-family: 'cab-icons';
 	        font-size: .85rem;
 	        font-weight: 300;
 	        content: @icon;

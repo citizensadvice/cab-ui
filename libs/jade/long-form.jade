@@ -9,7 +9,7 @@ extends ../template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "index.html"}, 
+		{title: "Home", href: "index.html"},
 		{title: "Templates", href: "index.html#templates"},
 		{title: "Long form content"}])
 
@@ -34,7 +34,7 @@ block section-notice
 		h2.screenreader Notice
 		.section-notice__content
 			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
-				
+
 block content
 	.articleContent
 		div
@@ -337,8 +337,8 @@ block content
 				.callout--related
 					h3 Next steps
 					p If a contractor does a bad job or doesn’t do what you agreed, you should be entitled to get it fixed or get some money back. Find out what you can do about #[a(href="#") problems with building work, decorating and home repairs].
-					
-	#simpleModal.modal
+
+	//#simpleModal.modal
 			.extent-country-select
 					form
 						h2 Advice can vary depending on where you live
@@ -361,7 +361,7 @@ block content
 									| Northern Ireland
 							button#closeSimple.btn.btn-primary.right-button-icon(type="submit") Continue
 
-	script.
+	//script.
 		$(document).ready(function(){
 			$("#showSimpleModal").click(function() {
 				$("div#simpleModal").addClass("show");
@@ -390,7 +390,7 @@ block content
 		            jQuery('.back-to-top').fadeOut(duration);
 		        }
 		    });
-		    
+
 		    jQuery('.back-to-top').click(function(event) {
 		        event.preventDefault();
 		        jQuery('html, body').animate({scrollTop: 0}, duration);

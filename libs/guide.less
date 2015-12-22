@@ -1,11 +1,15 @@
-/* Base */
-
 /**
  * Style Guide
  *
  * Basic utility classes.
  * And one or two odds and ends that coule be moved elsewhere at some point.
  */
+
+// Import all website styles
+@import "site";
+
+// Import styleguide specific styles
+@import "vendors/prism/prism";
 
 body {
     padding-top:        0px;
@@ -534,7 +538,7 @@ span[id*="overlay_button"] {
     font-weight: @font-weight-bold;
     &:before {
         content: "\00a0\f059\00a0";
-        font-family: 'Helvetica', 'FontAwesome';
+        font-family: 'cab-icons';
     }
 }
 

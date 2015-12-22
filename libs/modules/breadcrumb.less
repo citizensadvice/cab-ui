@@ -14,37 +14,46 @@
     max-width: none;
     width: @full-page-width;
 
-    .main-breadcrumb__content {
-        .limit-width(@max-page-width);
-        margin: 0 auto;
-        background-color: transparent;
-        padding: @box-spacing-vertical/2 @box-spacing-horizontal;
-        max-width: @breakpoint-lg;
-        //overflow: scroll;
-    }
-
-    .breadcrumb__extent-link {
-        display: none;
-    }
-
-    .breadcrumb__item {
-        font-size: @font-size-small;
-        line-height: (@line-height-small * 2);
-
-        &>i {
-            margin: 0 @box-spacing-horizontal*.5 0 0;
-            color: @blue-light;
-        }
-    }
-
-    .breadcrumb__item a {
-        margin: 0 @box-spacing-horizontal*.5 0 0;
-        color: @text-color;
-    }
-
     @media( max-width: @screen-xs-max ) {
         display: none;
     }
+}
+
+.main-breadcrumb__content {
+    .limit-width(@max-page-width);
+    margin: 0 auto;
+    background-color: transparent;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+    max-width: @breakpoint-lg;
+    //overflow: scroll;
+}
+
+.breadcrumb__extent-link {
+    display: none;
+}
+
+.breadcrumb__item {
+    font-size: @font-size-small;
+    line-height: (@line-height-small * 2);
+
+    & > i {
+        margin: 0 @box-spacing-horizontal*.5 0 0;
+        color: @blue-light;
+    }
+    // Once we've moved away from using i tags in the breadcrumb, replace the above section with the below section
+    /*
+    &:after {
+        .icon;
+        content: @i-angle-right;
+        margin: 0 @box-spacing-horizontal*.5 0 0;
+        color: @blue-light;
+    }
+    */
+}
+
+.breadcrumb__item a {
+    margin: 0 @box-spacing-horizontal*.5 0 0;
+    color: @text-color;
 }
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {

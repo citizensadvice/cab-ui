@@ -4,12 +4,12 @@
  * Mixin to add icons to buttons by picking the content, position, color and border.
  */
 
-.btn-icon(@icon: "\f054"; @position: right; @color: @white; @border: false) {
+.btn-icon(@icon: "\2713"; @position: right; @color: @white; @border: false) {
     position: relative;
     padding-@{position}: 2.5em;
     &:after {
         @{position}: 1em;
-        font-family: 'Helvetica', 'FontAwesome';
+        font-family: 'cab-icons' !important;
         font-weight: 300;
         content: @icon;
         color: @color;
@@ -26,7 +26,7 @@
             height: 2em;
             border: 2px solid @color;
             .round(@round-colour: @color;);
-            .vertical-align(absolute);  
+            .vertical-align(absolute);
         }
     }
 }
