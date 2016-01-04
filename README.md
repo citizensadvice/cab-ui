@@ -48,9 +48,9 @@ As this repository is used by other projects it is important to version the code
 
 `npm` can be used to increase the version numbers and, crucially, tag the git commit.
 
-* `npm version patch` Increase the patch version and tag
-* `npm version minor` Increase the minor version and tag
-* `npm version major` Increase the major version and tag
+* `npm version patch` Increase the patch version and tag. Bug fixes and other minor changes: Patch release, increment the last number, e.g. 1.0.1
+* `npm version minor` Increase the minor version and tag. New features which don't break existing features: Minor release, increment the middle number, e.g. 1.1.0
+* `npm version major` Increase the major version and tag. Changes which break backwards compatibility: Major release, increment the first number, e.g. 2.0.0
 
 Git push does not automatically transfer tags to github.  In order to push your tags you need to do either `git push origin tagname` to push a single tag or `git push --tags` to push all tags.
 
