@@ -129,7 +129,7 @@ html[lang="en-SCT"] .main-nav {
     }
 }
 
-           
+
 /*Mega Menus*/
 
 .mega-menu {
@@ -145,12 +145,13 @@ html[lang="en-SCT"] .main-nav {
     display: none;
     margin-top: 1em;
     width: 300px; /* One column - two column is set below */
-    
+
     ul {
         /*.arrow-list;*/
         list-style: none;
         margin-left: 0;
         padding-left: 0;
+        a { border-bottom: 0; }
     }
 
     .view-all {
@@ -200,13 +201,13 @@ html[lang="en-SCT"] .main-nav {
     }
 
     &__arrow {
-        border-left: 10px solid transparent; 
-        border-right: 10px solid transparent; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
         border-bottom: 10px solid @blue-navigation;
         position: absolute;
         /* We actually position this in JS as Chrome and Firefox cannot agree how position
          inside a display: table element with borders
-         The following works correctly in Chrome and IE    
+         The following works correctly in Chrome and IE
         */
         top: 0;
         /* Create a slight overlap to hide any gap while zooming */
@@ -239,7 +240,7 @@ html[lang="en-SCT"] .main-nav {
         width: 100%;
         z-index: 100;
         .clearfix;
-    }  
+    }
 
     .nav-list-primary, .main-nav__mobile-secondary {
         list-style: none;
@@ -257,7 +258,7 @@ html[lang="en-SCT"] .main-nav {
             padding: .5em;
         }
     }
-  
+
     .mega-menu,
     .nav-list-primary-more {
         display: none!important;
