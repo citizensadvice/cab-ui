@@ -11,3 +11,4 @@ node_modules
 # Other files
 *.DS_Store
 README.html
+npm-debug.log
