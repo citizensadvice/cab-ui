@@ -14,7 +14,7 @@
 }
 // Keeping columns flexible, to combine together where needed
 // Base layout
-// Container - content 
+// Container - content
 .flex-container {
     max-width: @max-page-width;
     clear: both;
@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     // Ensure nested boxes all line up
-    height: calc( ~"100% + 1em" ); 
+    height: calc( ~"100% + 1em" );
 }
 // Full width
 .flex-col-1-1 {
@@ -63,7 +63,7 @@
     width: @width-span-1;
 }
 
-// 8/12 combine with 
+// 8/12 combine with
 .flex-col-2-8 {
     width: @width-span-9;
 }
@@ -96,9 +96,6 @@
     flex-grow: 2;
 }
 
-/* Commented out because it breaks the grid by overriding the
-   width of every column beneath it...
-   
 .flex-row > * {
     margin: .5em 1%;
     margin: calc(.5em);
@@ -106,7 +103,6 @@
     width: calc( ~"@{width-span-12} - 1em" );
     float: left;
 }
-*/
 
 .flex-column {
     display: -ms-flexbox;
@@ -257,7 +253,7 @@
 }
 
 .ie8 {
-    
+
     .col-xs-12 {
         width: unit( unit( @width-span-12 ) - 2, ~"%" );
         *width: auto;
