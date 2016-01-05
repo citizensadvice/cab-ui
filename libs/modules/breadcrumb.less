@@ -58,7 +58,6 @@
 
 @media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
     .js .main-breadcrumb {
-        padding-right: unit(@box-spacing-horizontal*3.5*@base-size,px);
         padding-right: @box-spacing-horizontal*3.5;
     }
 }
@@ -77,13 +76,11 @@
     }
 
     > i {
-        margin-right: unit(@box-spacing-horizontal*.5*@base-size,px);
         margin-right: @box-spacing-horizontal*.5;
     }
 
     &:last-child a {
         border: none;
-        margin-right: unit(@box-spacing-horizontal*.5*@base-size,px);
         margin-right: @box-spacing-horizontal*.5;
     }
 }
@@ -122,7 +119,6 @@
 .breadcrumb__extent-popup {
     .popup;
     max-width: 400px;
-    margin-top: unit(@box-spacing*@base-size,px);
     margin-top: @box-spacing;
     // Bring things a little closer together in this popup
     p, ul {

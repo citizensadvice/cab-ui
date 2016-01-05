@@ -17,7 +17,6 @@
         color: @heritage-blue;
         font-weight: @font-weight-bolder;
         font-size: 1.1rem;
-        margin-bottom: unit(@box-spacing-vertical*1.25*@base-size,px);
         margin-bottom: @box-spacing-vertical*1.25;
     }
     .columns {
@@ -105,9 +104,7 @@
         }
         span {
             font-weight: 900;
-            margin-right: unit(@box-spacing-horizontal/2*@base-size,px);
             margin-right: @box-spacing-horizontal/2;
-            margin-left: unit(-@box-spacing-horizontal*@base-size,px);
             margin-left: -@box-spacing-horizontal;
             color: @heritage-blue;
         }
@@ -120,7 +117,7 @@
 }
 
 .beta-dap-menu-accordion__sections {
-  margin-bottom: unit(@box-spacing-vertical*@base-size,px);
+    margin-bottom: @box-spacing-vertical*@base-size;
 }
 
 
@@ -152,9 +149,7 @@
                 font-size: 2em;
             }
             strong {
-                margin-right: unit(@box-spacing-horizontal/4*@base-size,px);
                 margin-right: @box-spacing-horizontal/4;
-                margin-left: unit(-@box-spacing-horizontal*@base-size,px);
                 margin-left: -@box-spacing-horizontal;
             }
         }
@@ -182,12 +177,9 @@
     overflow: scroll;
     background-color: rgba(255, 255, 255, 0.75);
     visibility: hidden;
-    padding-bottom: unit(@box-spacing*2*@base-size,px);
     padding-bottom: @box-spacing*2;
     strong {
-        margin-right: unit(@box-spacing-horizontal/4*@base-size,px);
         margin-right: @box-spacing-horizontal/4;
-        margin-left: unit(-@box-spacing-horizontal*@base-size,px);
         margin-left: -@box-spacing-horizontal;
     }
     li {
