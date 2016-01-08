@@ -103,3 +103,27 @@
         padding-right: 3.5em;
     }
 }
+
+// table of contents at the top of a page
+.articleContent nav {
+    .callout(
+        @gray-8,
+        @heritage-blue
+    );
+    //.callout--border;
+    .dap-panel;
+    ul, ol {
+        margin: 0;
+        padding: 0.25rem 0;
+        padding-left: @box-spacing-horizontal*1.25;
+        //list-style: none;
+        li {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            break-inside: avoid-column;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
