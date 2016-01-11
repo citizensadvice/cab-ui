@@ -10,6 +10,7 @@
     border-top: @gray-7 1px solid;
     border-bottom: @gray-7 1px solid;
     font-size: @font-size-small;
+    line-height: 1.7rem;
     color: @gray-2;
  }
 
@@ -85,11 +86,32 @@
 }
 
 .blockLinks {
-    border: 1px solid @heritage-blue;
-    padding: 15px;
-    background-color: @blue-light;
-    font-weight: 700;
+    margin: @box-spacing-vertical 0;
+    padding: @box-spacing-vertical;
+    background-color: @aqua-light;
+    color: @heritage-blue;
+    border: solid @aqua;
+    border-width: 1px 1px 1px 1px;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bolder;
+
+    .btn-icon(@i-right,@color:@heritage-blue);
+
+    h1, h2, h3, h4, h5, h6, p {
+        text-decoration: none;
+        border: none;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bolder;
+        margin: 0;
+    } 
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken(@aqua-light, 10%);
+    }
 }
+
 
 // @todo This needs renamed
 .articleContent {
