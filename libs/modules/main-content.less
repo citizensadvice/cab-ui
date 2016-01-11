@@ -85,11 +85,47 @@
 }
 
 .blockLinks {
+    margin: @box-spacing-vertical;
+    padding: @box-spacing-vertical;
+    background-color: @aqua-light;
+    color: @heritage-blue;
+    border: solid @aqua;
+    border-width: 1px 1px 1px 1px;
+
+    .btn-icon(@i-right,@color:@heritage-blue);
+
+    h1, h2, h3, h4, h5, h6, p {
+        text-decoration: none;
+        border: none;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bolder;
+        margin: 0;
+    } 
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken(@aqua-light, 10%);
+    }
+}
+
+/*
+.blockLinks {
     border: 1px solid @heritage-blue;
     padding: 15px;
     background-color: @blue-light;
     font-weight: 700;
 }
+*/
+.collapsible--aqua {
+        .revealable(
+            @aqua-light,
+            @text-color,
+            @aqua
+        );
+        .btn-icon(@i-right,@color:@heritage-blue);
+    }
+
 
 // @todo This needs renamed
 .articleContent {
