@@ -94,7 +94,7 @@
     border-width: 1px 1px 1px 1px;
     font-size: @font-size-base;
     font-weight: @font-weight-bolder;
-
+    display: block;
     .btn-icon(@i-right,@color:@heritage-blue);
 
     h1, h2, h3, h4, h5, h6, p {
@@ -103,12 +103,13 @@
         font-size: @font-size-base;
         font-weight: @font-weight-bolder;
         margin: 0;
-    } 
+    }
 
     &:hover,
     &:focus,
     &:active {
         background-color: darken(@aqua-light, 10%);
+        border: solid @aqua;
     }
 }
 
