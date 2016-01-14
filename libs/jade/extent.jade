@@ -7,39 +7,40 @@ extends ../template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "index.html"}, 
-		{title: "Modules", href: "index.html#modules"}, 
-		{title: "Modals", href: "index.html#modals"}, 
+		{title: "Home", href: "index.html"},
+		{title: "Modules", href: "index.html#modules"},
+		{title: "Modals", href: "index.html#modals"},
 		{title: "Extent switcher"}])
 
 block sidebar
 	include ../template/sidebar-modules.jade
 
 block content
-	#simpleModal.modal
-			.extent-country-select
-					form
-						h2 Advice can vary depending on where you live
-							fieldset
-								label(for="exampleInputFile") Where do you live?
-								label.radio
-									input(type="radio", name="radio", value="?lang=en-GB", checked)
-									| England
-								label.radio
-									input(type="radio", name="radio", value="?lang=en-SCT")
-									| Scotland
-								label.radio
-									input(type="radio", name="radio", value="?lang=en-WLS")
-									| Wales
-								label.radio
-									input(type="radio", name="radio", value="?lang=en-WLS")
-									| Cmyru
-								label.radio.radio--outline
-									input(type="radio", name="radio", value="?lang=cy")
-									| Northern Ireland
-							button#closeSimple.btn.btn-primary.right-button-icon(type="submit") Continue
+	.dialog__mask(style="z-index: 2;")
+	.dialog.dialog--extent-picker(aria-describedby="dialog-1-main", aria-labelledby="dialog-1-label", role="alertdialog", style="z-index: 3;", tabindex="-1")
+		header.dialog__header
+			h2.dialog__title#dialog-1-label Choose an country
+			button.dialog__close(data-action="close", type="button")
+				i.dialog__close-icon(aria-hidden="true")
+				span.dialog__close-text Close
 
-	script.
+		div.dialog__main#dialog-1-main
+			img(alt="Citizens Advice", onerror="this.onerror=null;this.src='/Static/images/logos/ca-logo_100px.svg.png';", src="/Static/images/logos/ca-logo_100px.svg")
+			div
+				h2 Where in the UK do you live?
+				p The law can vary in different parts of the UK.
+
+			.extent-selection-desktop
+				div
+					a.btn.btn-primary.extent-selection(href="?lang=en-GB") England
+					a.btn.btn-primary.extent-selection(href="?lang=en-NIR") Northern Ireland
+					a.btn.btn-primary.extent-selection(href="?lang=en-SCT") Scotland
+					a.btn.btn-primary.extent-selection(href="?lang=en-WLS") Wales
+					a.btn.btn-primary.extent-selection(href="?lang=cy") Cymru
+
+		footer.dialog__footer
+
+	//script.
 		$(document).ready(function(){
 			$("#showSimpleModal").click(function() {
 				$("div#simpleModal").addClass("show");

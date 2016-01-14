@@ -31,12 +31,12 @@
 
 	/* Max width prevents the dialog being wider than the screen */
 	max-width: 80%;
-	width: 30em;
+	width: 40em;
 
 	/* Max height prevents the dialog being taller than the screen */
 	max-height: 80%;
 	/* Don't use height if you want to resize according to the content */
-	height: 20em;
+	//height: 20em;
 
     @media( max-width: @screen-xs-max ) {
         max-width: 95%;
@@ -91,28 +91,23 @@
 }
 
 .dialog__close {
-	color: @heritage-blue-light;
+	color: @gray-6;
 	border: none;
 	background: none;
 	cursor: pointer;
-	position: absolute;
-	right: @box-spacing-horizontal*.5;
-	top: 50%;
-	margin-top: -@box-spacing*.7;
-	margin-right: @box-spacing-horizontal*.25;
-	font-size: @font-size-h4;
-	padding: @box-spacing-horizontal*.2;
-	line-height: 1;
-	width: 1.4em;
-	height: 1.4em;
 	overflow: hidden;
     text-align: center;
+    padding: 1rem;
+    margin: 0;
+    right: 0;
+	.vertical-align(absolute);
 	&:hover,
 	&:active,
 	&:focus {
 	    color: @white;
 	    background: none;
 	    box-shadow: none;
+	    border: none;
 	}
 }
 
@@ -144,4 +139,35 @@
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
+}
+
+// Styles specifially for the extent sswitcher
+.dialog--extent-picker {
+	.dialog__header {
+		height: 0;
+		padding: 0;
+		.dialog__close {
+			position: absolute;
+			color: @gray-3;
+			top: @box-spacing-vertical*2.5;
+			&:hover {
+				color: @heritage-blue;
+			}
+		}
+		h2.dialog__title {
+			display: none;
+		}
+	}
+	.dialog__main {
+		img {
+			display: none;
+		}
+		h2 {
+			margin-top: 0;
+			padding-right: @box-spacing*2;
+		}
+	}
+	.dialog__footer {
+		display: none;
+	}
 }
