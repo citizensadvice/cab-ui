@@ -1,5 +1,5 @@
 /**
- * TABLE SYTLES
+ * TABLE STYLES
  */
 
 // Default Table
@@ -19,6 +19,10 @@ table {
         text-align: right;
     }
 }
+tr > td {
+    border: solid @gray-6;
+    border-width: 0 1px 0 0;
+}
 
 td,
 th {
@@ -27,7 +31,6 @@ th {
     text-align: left;
     vertical-align: top;
 }
-
 tr {
     border: solid @gray-6;
     border-width: 1px 0;
