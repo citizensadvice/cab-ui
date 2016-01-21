@@ -31,7 +31,7 @@
 }
 
 .main-header__content {
-    .limit-width(@max-page-width);
+    .limit-width(@breakpoint-lg);
     .clearfix;
     padding: 0 1em .5em 1em;
 }
@@ -40,8 +40,8 @@
     border: none;
     float: left;
     margin-top: .7em; // Slightly better centering
-    max-width: 30%; // For old IE
-    max-width: calc(300px); // For modern browsers
+    max-width: 24%; // For old IE
+    max-width: calc(250px); // For modern browsers
     &:hover {
         border: none;
     }
@@ -102,7 +102,7 @@
 }
 
 input.main-header__search__input {
-    width: 25em;
+    width: 16em;
     float: left;
     padding: 0.2em;
 
@@ -175,6 +175,7 @@ input.main-header__search__input {
      input.main-header__search__input {
         float: none;
         width: 100%;
+        border: 1px solid @heritage-blue;
 
      }
      .main-header__search__submit {
