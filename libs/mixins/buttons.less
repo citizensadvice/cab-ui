@@ -14,8 +14,7 @@
     display: inline-block;
     &:hover,
     &:focus,
-    &:active,
-    &:visited {
+    &:active {
         & when (@btn-background = @btn-border) {
             border: 1px solid @btn-background-hover;
         }
@@ -24,6 +23,9 @@
         }
         background-color: @btn-background-hover;
         outline: 0;
+        color: @btn-text;
+    }
+    &:visited {
         color: @btn-text;
     }
 }
