@@ -52,7 +52,7 @@
 			li {
 				display: inline;
 				a {
-					color: @white;
+					color: @heritage-blue;
 					padding: 1rem;
 					height: 100%;
 					border: none;
@@ -68,6 +68,10 @@
 						width: 50%;
 						float: left;
 					}
+				}
+				&.active a {
+					color: @heritage-blue;
+					background-color: @heritage-blue-lightest;
 				}
 			}
 			@media screen and (min-width: @screen-sm-min) {
@@ -101,6 +105,29 @@
     }
 }
 
-.main-nav {
-	display: none;
+#main-nav-2--dropdown {
+	background-color: @heritage-blue-lightest;
+	overflow: hidden;
+	.content {
+		max-width: @breakpoint-lg;
+		padding: 1.5rem 1rem;
+		margin: 0 auto;
+		overflow: hidden;
+		ul {
+			list-style: none;
+			padding-left: 0;
+			width: 100%;
+		    column-count: 3;
+		    column-gap: 2rem;
+		    li {
+		    	break-inside: avoid-column;
+		    	a {
+		    		font-weight: bold;
+		    	}
+		    }
+			@media screen and (max-width: @screen-xs-max) {
+		    	column-count: 2;
+			}
+		}
+	}
 }

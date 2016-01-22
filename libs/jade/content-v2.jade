@@ -31,6 +31,15 @@ block section-notice
         .section-notice--dev__content
             p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
+block script
+    script.
+        $(document).ready(function($) {
+            $('#get-advice').click(function(){
+                $(this).toggleClass("active");
+                $('#main-nav-2--dropdown').slideToggle('fast');
+            });
+        });
+
 block content
     .articleContent
         div
