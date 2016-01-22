@@ -19,7 +19,11 @@
 			padding-right: 1rem;
 			li {
 				display: inline;
-				padding-left: 1.5rem;
+				padding-left: 1.5em;
+				@media screen and (max-width: @screen-xs-max) {
+					font-size: @font-size-small;
+					padding-left: .75em;
+			    }
 				a {
 					color: @white;
 					border: none;
@@ -42,11 +46,9 @@
         position: relative;
 		ul {
 			list-style: none;
-			display: inline-block;
+		    display: block;
 			margin: 0;
 			padding: 0;
-			.vertical-align(absolute);
-			height: 100%;
 			li {
 				display: inline;
 				a {
@@ -60,19 +62,41 @@
 						background-color: @heritage-blue-lightest;
 						color: @heritage-blue;
 					}
+					@media screen and (max-width: @screen-xs-max) {
+						padding: 1rem 0;
+						text-align: center;
+						width: 50%;
+						float: left;
+					}
 				}
 			}
+			@media screen and (min-width: @screen-sm-min) {
+				display: inline-block;
+				.vertical-align(absolute);
+				height: 100%;
+		    }
 		}
 		.search {
 			display: inline-block;
 			float: right;
+			padding: .5rem 1rem;
 			input {
-				margin: 1rem;
 				border: none;
-				border-radius: @form-border-radius;
-				width: 300px;
+				width: 250px;
 				padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
 			}
+			button {
+				border: none;
+				padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+			}
+			@media screen and (max-width: @screen-xs-max) {
+		        display: block;
+		        width: 100%;
+		        input,
+		        button {
+		        	width: 100%;
+		        }
+		    }
 		}
     }
 }
