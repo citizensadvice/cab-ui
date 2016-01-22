@@ -1,0 +1,151 @@
+#main-nav-1--branding {
+    background-color: @heritage-blue;
+    padding: 0.5rem;
+    .content {
+        max-width: @breakpoint-lg;
+        padding: .75rem 1rem;
+        margin: 0 auto;
+        position: relative;
+        img {
+            width: 220px;
+            display: block;
+        }
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            .vertical-align(absolute);
+            right: 0;
+            padding-right: 1rem;
+            li {
+                display: inline;
+                padding-left: 1.5rem;
+                a {
+                    color: @white;
+                    border: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main-nav-1--nav {
+    background-color: @heritage-blue-lighter;
+    .content {
+        max-width: @breakpoint-lg;
+        //padding: 1rem;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 220px;
+            display: block;
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            height: 100%;        }
+        ul {
+            list-style: none;
+            display: inline-block;
+            left: 280px;
+            margin: 0;
+            padding: 0;
+            .vertical-align(absolute);
+            height: 100%;
+            li {
+                display: inline-block;
+                font-weight: @font-weight-bolder;
+                padding: 1rem;
+                //background-color: @white;
+                &:hover {
+                    background-color: @heritage-yellow-lighter;
+                }
+
+                a {
+                    background-color: @white;
+                    padding: 0 .5rem;
+                    border-radius: 2px;
+                    color: @heritage-blue;
+                    height: 100%;
+                    display: inline-block;
+                    line-height: 2.5rem;
+                    font-size: @font-size-base;
+                    border: none;
+                    &:after {
+                        font-family: 'open_sans', 'cab-icons';
+                        font-size: .85rem;
+                        font-weight: 300;
+                        content: @i-down;
+                        line-height: 1em;
+                        display: inline-block;
+                        margin: 0;
+                        padding: 0 0 0 @box-spacing-horizontal;
+
+                    }
+                    &:hover {
+                    }
+                }
+            }
+        }
+        .search {
+            display: inline-block;
+            float: right;
+            input {
+                margin: 1rem;
+                border: none;
+                border-radius: @form-border-radius;
+                width: 300px;
+                padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+            }
+        }
+    }
+}
+
+.main-nav {
+    display: none;
+}
+
+
+/***************************************************************************
+ * Header development
+ * V1 #header1
+ */
+
+
+    #header1 .main-header__top-nav {
+        clear: both;
+        margin: .5em -.4em .2em 0;
+        text-align: right;
+        width: 100%; // For old IE
+        background-color: @heritage-blue-lighter;
+        color: @white;
+        float: none;
+        max-width: calc(100%);
+        .content {
+            .limit-width(@max-page-width);
+            margin: 0 auto;
+            background-color: transparent;
+            padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+            max-width: @breakpoint-lg;
+            & > a {
+                padding: .4em;
+                color: @white;
+                display: inline-block;
+                white-space: nowrap;
+                border: none;
+            }
+        }
+    }
+
+    #header1 .main-header__top-nav__link--current {
+        font-weight: bold;
+    }
