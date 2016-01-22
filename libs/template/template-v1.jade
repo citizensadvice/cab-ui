@@ -52,37 +52,25 @@ html
 					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
 		if mockup
-			//header.styleguide--header.mockup
-				.styleguide--header--content
+			header#main-nav-1--branding
+				.content
+					ul
+						li
+							a Cymraeg
+						li
+							a Sign in
+
+			#main-nav-1--nav
+				.content
 					a(href="index.html")
-						img(src="images/ca-logo-hz-white-280px.svg")
-
-			nav#header1.main-header__top-nav
-				a(href="#") Cymraeg</a>
-				a.hide-offline.main-header__login(href="")
-					i.icon-key
-					| Sign-in
-
-			header.main-header
-				.main-header__content
-					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-280px.svg" height="80")
-					a.main-header__logo.no-print.wide(href="index.html", title="Citizens Advice home")
-						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-white-280px.svg")
-					a.main-header__logo.print-only(href="index.html", title="Citizens Advice home")
-						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-280px.svg")
-
-					.main-header__links(data-track-zone="top-bar")
-						a.main-header__menu-link.js-toggle-menu(href="")
-							i.icon-menu
-							| Menu
-
-						form.main-header__search.hide-offline(action="")
-							label.screenreader(for="main-header__search__input") Search
-							input#main-header__search__input.main-header__search__input(name="q", placeholder="", type="search")
-							button.main-header__search__submit(title="Search", type="submit")
-								i.icon-search.icon--no-text
-								span.screenreader Search
+						img(src="images/ca-logo-hz-280px.svg")
+					ul
+						li
+							a Get Advice
+						li
+							a Get Involved
+					.search
+						input(type="search")
 
 			nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
 				ul.nav-list-primary
