@@ -66,12 +66,21 @@
 		.search {
 			display: inline-block;
 			float: right;
+			padding: .5rem 1rem;
 			input {
-				margin: 1rem;
 				border: none;
-				border-radius: @form-border-radius;
 				width: 300px;
 				padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+				.btn-icon(@i-search);
+			}
+			button {
+				border: none;
+				padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+				.btn-icon(@i-search);
+				&:after {
+					top: 48%;
+					padding-right: .45rem;
+				}
 			}
 		}
     }
