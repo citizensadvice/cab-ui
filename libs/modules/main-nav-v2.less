@@ -48,6 +48,7 @@
 			list-style: none;
 		    display: block;
 			margin: 0;
+			margin-left: 1rem;
 			padding: 0;
 			li {
 				display: inline;
@@ -109,6 +110,7 @@
 #main-nav-2--dropdown {
 	background-color: @heritage-blue-lightest;
 	overflow: hidden;
+	border-bottom: 2px solid @white;
 	.content {
 		max-width: @breakpoint-lg;
 		padding: 1.5rem 1rem;
@@ -119,15 +121,17 @@
 			padding-left: 0;
 			width: 100%;
 		    column-count: 3;
-		    column-gap: 3rem;
+		    column-gap: 4rem;
 		    li {
 		    	break-inside: avoid-column;
+				padding-bottom: .5rem;
 		    	a {
 		    		font-weight: bold;
 		    	}
 		    }
 			@media screen and (max-width: @screen-xs-max) {
-		    	column-count: 1;
+		    	column-gap: 2rem;
+		    	column-count: 2;
 			}
 		}
 	}
