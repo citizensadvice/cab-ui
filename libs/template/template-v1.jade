@@ -62,14 +62,14 @@ html
 
 			#main-nav-1--nav
 				.content
-					a(href="index.html")
+					a.logo(href="index.html")
 						img(src="images/ca-logo-hz-280px.svg")
 					ul
 						li.submenu
 							a Get Advice
-						ul
+						//ul
 							.menu
-								ul.span4
+								ul
 									li
 										a(href="") Benefits
 										br
@@ -121,7 +121,10 @@ html
 							button.btn.btn-primary
 								i.icon-search
 
-			nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
+					.burger
+						i.icon-menu
+
+			//nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
 				ul.nav-list-primary
 					li.top-item.js-mega-menu(style="display: list-item;")
 						a(href="#") Benefits
