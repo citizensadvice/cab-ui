@@ -7,7 +7,7 @@
         margin: 0 auto;
         position: relative;
         img {
-            width: 220px;
+            width: 280px;
             display: block;
         }
         ul {
@@ -55,8 +55,8 @@
             height: 100%;        }
         ul {
             list-style: none;
-            display: inline-block;
-            left: 280px;
+            display: block;
+            left: 400px;
             margin: 0;
             padding: 0;
             .vertical-align(absolute);
@@ -67,9 +67,10 @@
                 padding: 1rem;
                 //background-color: @white;
                 &:hover {
-                    background-color: @heritage-yellow-lighter;
+                    background-color: @heritage-blue-lighter;
+                    //@include transition(background, 0.2s);
+                    cursor: pointer;
                 }
-
                 a {
                     background-color: @white;
                     padding: 0 .5rem;
@@ -91,20 +92,29 @@
                         padding: 0 0 0 @box-spacing-horizontal;
 
                     }
-                    &:hover {
-                    }
                 }
             }
         }
         .search {
             display: inline-block;
             float: right;
+            padding: .5rem 1rem;
             input {
-                margin: 1rem;
                 border: none;
-                border-radius: @form-border-radius;
-                width: 300px;
+                width: 250px;
                 padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
+            }
+            button {
+                border: none;
+                padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+            }
+            @media screen and (max-width: @screen-xs-max) {
+                display: block;
+                width: 100%;
+                input,
+                button {
+                    width: 100%;
+                }
             }
         }
     }
