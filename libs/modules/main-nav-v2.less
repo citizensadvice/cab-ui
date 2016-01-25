@@ -6,7 +6,7 @@
         margin: 0 auto;
         position: relative;
 		img {
-			width: 220px;
+			width: 210px;
 			display: block;
 		}
 		ul {
@@ -29,6 +29,14 @@
 					border: none;
 					&:hover {
 						text-decoration: underline;
+					}
+				}
+				a.sign-in {
+					//background-color: red;
+					&:after {
+						content: @i-key;
+						.icon;
+						margin-left: .4em;
 					}
 				}
 			}
