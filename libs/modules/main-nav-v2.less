@@ -20,9 +20,9 @@
 			li {
 				display: inline;
 				padding-left: 1.5em;
+				font-size: @font-size-small;
 				@media screen and (max-width: @screen-xs-max) {
-					font-size: @font-size-small;
-					padding-left: .75em;
+					padding-left: .5em;
 			    }
 				a {
 					color: @white;
@@ -80,6 +80,9 @@
 						width: 50%;
 						float: left;
 						//line-height: 3.2em;
+						&:hover {
+							background: none;
+						}
 					}
 				}
 				&.active a {
