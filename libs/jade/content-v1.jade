@@ -28,6 +28,33 @@ block sidebar
 //    +sidebar([
 //        ])
 
+block script
+    script.
+        $(document).ready(function($) {
+            $('#1').hover(function() {
+                $(this).addClass("active");
+                clearTimeout(this.timer);
+                $(this).find('.submenu').show();
+            }, function() {
+                this.timer = setTimeout(function() {
+                    console.log(this);
+                    $('#1').removeClass("active");
+                    $('#1').find('.submenu').hide();
+                }, 125);
+            });
+            $('#2').hover(function() {
+                $(this).addClass("active");
+                clearTimeout(this.timer);
+                $(this).find('.submenu').show();
+            }, function() {
+                this.timer = setTimeout(function() {
+                    console.log(this);
+                    $('#2').removeClass("active");
+                    $('#2').find('.submenu').hide();
+                }, 125);
+            });
+        });
+
 block section-notice
     aside.section-notice--dev
         h2.screenreader Notice

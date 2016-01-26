@@ -32,7 +32,6 @@
         max-width: @breakpoint-lg;
         padding: 0 1rem;
         margin: 0 auto;
-        overflow: hidden;
         display: table;
         width: 100%;
         a.logo {
@@ -59,7 +58,7 @@
             text-align: right;
             //margin-left: 236px;
             //.vertical-align(absolute);
-            li {
+            li.toggle {
                 display: inline-block;
                 font-weight: @font-weight-bolder;
                 padding: 0;
@@ -68,12 +67,13 @@
                 line-height: 1rem;
                 //float: left;
                 //background-color: @white;
+                position: relative;
                 &:hover {
                     background-color: @heritage-blue-lighter;
                     //@include transition(background, 0.2s);
-                    cursor: pointer;
+                    //cursor: pointer;
                 }
-                a {
+                > a {
                     background-color: @white;
                     padding: @box-spacing-vertical/1.2 @box-spacing-horizontal/2;
                     border-radius: 2px;
@@ -91,6 +91,12 @@
                         font-size: @font-size-small;
 
                     }
+                }
+                &.active a {
+                    border-radius: 2px 2px 0 0;
+                    //border-bottom: .25rem solid white;
+                    box-shadow: 0px 4px 0px 0px @gray-8;
+                    background-color: @gray-8;
                 }
             }
         }
@@ -118,12 +124,37 @@
                 }
             }
         }
+        .submenu {
+            position: absolute;
+            left: 0;
+            top: 2.5rem;
+            z-index: 1;
+            background-color: @gray-8;
+            padding: @box-spacing-vertical/1.2 @box-spacing-horizontal/2;
+            border-radius: 0 2px 2px 2px;
+            margin: 0;
+            width: 40vw;
+            column-count: 2;
+            column-gap: 4rem;
+            li {
+                break-inside: avoid-column;
+                text-align: left;
+                padding: .25rem .5rem;
+                a {
+                    border: none;
+                }
+            }
+        }
         .burger {
             display: none;
             vertical-align: middle;
             padding-left: 1rem;
-            font-size: 1rem;
             text-align: right;
+            &:after {
+                .icon;
+                content: @i-menu;
+                padding-left: .5rem;
+            }
         }
         @media screen and (max-width: 820px) {
             ul,

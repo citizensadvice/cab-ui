@@ -65,54 +65,53 @@ html
 					a.logo(href="index.html")
 						img(src="images/ca-logo-hz-280px.svg")
 					ul
-						li.submenu
+						li.toggle#1
 							a Get Advice
-						//ul
-							.menu
-								ul
-									li
-										a(href="") Benefits
-										br
-										| Some description
-									li
-										a(href="") Work
-										br
-										| Some description
-									li
-										a(href="") Debt and money
-										br
-										| Some description
-									li
-										a(href="") Relationship
-										br
-										| Some description
-									li
-										a(href="") Housing
-										br
-										| Some description
-									li
-										a(href="") Law and rights
-										br
-										| Some description
-									li
-										a(href="") Discrimination
-										br
-										| Some description
-									li
-										a(href="") Tax
-										br
-										| Some description
-									li
-										a(href="") Healthcare
-										br
-										| Some description
-									li
-										a(href="") Education
-										br
-										| Some description
+							ul.submenu(style="display:none;")
+								li
+									a(href="") Benefits
+								li
+									a(href="") Work
+								li
+									a(href="") Debt and money
+								li
+									a(href="") Relationship
+								li
+									a(href="") Housing
+								li
+									a(href="") Law and rights
+								li
+									a(href="") Discrimination
+								li
+									a(href="") Tax
+								li
+									a(href="") Healthcare
+								li
+									a(href="") Education
 
-						li
+						li.toggle#2
 							a Get Involved
+							ul.submenu(style="display:none;")
+								li
+									a(href="") Benefits
+								li
+									a(href="") Work
+								li
+									a(href="") Debt and money
+								li
+									a(href="") Relationship
+								li
+									a(href="") Housing
+								li
+									a(href="") Law and rights
+								li
+									a(href="") Discrimination
+								li
+									a(href="") Tax
+								li
+									a(href="") Healthcare
+								li
+									a(href="") Education
 
 					.search
 						.field-group.field-group--buttons
@@ -121,8 +120,7 @@ html
 							button.btn.btn-primary
 								i.icon-search
 
-					.burger
-						i.icon-menu
+					.burger Menu
 
 			//nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
 				ul.nav-list-primary
