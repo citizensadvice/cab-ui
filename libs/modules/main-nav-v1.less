@@ -150,10 +150,59 @@
             vertical-align: middle;
             padding-left: 1rem;
             text-align: right;
-            &:after {
-                .icon;
-                content: @i-menu;
-                padding-left: .5rem;
+            color: @heritage-blue;
+            span {
+                cursor: pointer;
+                &:after {
+                    .icon;
+                    content: @i-menu;
+                    padding-left: .5rem;
+                }
+            }
+            .mobile-submenu {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 6.8125rem;
+                z-index: 1;
+                background-color: @heritage-blue-lightest;
+                padding-top: .5rem;
+                ul {
+                    display: inline-block;
+                    width: 50%;
+                    float: left;
+                    text-align: left;
+                    margin: 0;
+                }
+                li {
+                    margin: 0;
+                    a {
+                        display: block;
+                        padding: .5rem .75rem;
+                        border: none;
+                        &:hover {
+                        }
+                    }
+                    &.title {
+                        display: block;
+                        padding: .5rem .75rem;
+                        font-weight: @font-weight-bolder;
+                    }
+                }
+                .mobile-search {
+                    padding: 0 .5rem;
+                    input {
+                        //border-color: @white;
+                    }
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+            .mobile-nav,
+            .mobile-search {
+                display: block;
+                clear: both;
             }
         }
         @media screen and (max-width: 820px) {
