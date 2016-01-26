@@ -53,6 +53,11 @@ block script
                     $('#2').find('.submenu').hide();
                 }, 125);
             });
+
+            $('.burger').find('span').click(function(){
+                $(this).toggleClass("active");
+                $('.mobile-submenu').slideToggle('fast');
+            });
         });
 
 block section-notice
