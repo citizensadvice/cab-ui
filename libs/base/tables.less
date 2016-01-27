@@ -58,7 +58,7 @@ tr {
         }
     }
     &:hover {
-        background-color: @gray-8;
+        //background-color: @gray-8;
     }
 }
 
@@ -279,28 +279,28 @@ table.simple-table td {
 // Collapsible tables
 .table-collapse {
     background: none;
-    //display: none;
+    display: none;
     &--toggle {
         cursor: pointer;
         & td:first-of-type:before {
-            content: @i-plus-circle;
+            content: @i-right-small;
             font-weight: @font-weight-bolder;
             margin-right: .5rem;
             font-family: 'cab-icons';
             color: @gray-2;
+            width: .5rem;
+            display: inline-block;
+            transition: .2s ease-in-out;
         }
         &.active td:first-of-type:before {
-            content: @i-minus-circle;
-            font-weight: @font-weight-bolder;
-            margin-right: .5rem;
-            font-family: 'cab-icons';
-            color: @gray-2;
+            transform: rotate(90deg);
         }
     }
     & > td {
         padding: 0;
         & > table {
             margin: 0;
+            background-color: @gray-8;
         }
     }
     &:hover {
