@@ -74,6 +74,33 @@ ol li, ul li {
     margin:             0 0 (@paragraph-margin-bottom / 2) 0;
 }
 /***************************************************************************
+* Search breadcrumb
+* Hopefully a fairly logical name
+* Holders for content, where the entire area links to further content
+* Being tested with ./public/pip-content.html
+*/
+.search-breadcrumb {
+    font-size: 14px;
+    line-height: 26px;
+    /*padding: .125rem .685rem .125rem .685rem;
+    background-color: #F2F8FF;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #537D2D;
+}
+
+.search-breadcrumb a {
+    margin: 0;
+    color: #537D2D;
+}
+.search-breadcrumb__item > i {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    color: #A5BDDC;
+}
+
+/***************************************************************************
 * Box links
 * Hopefully a fairly logical name
 * Holders for content, where the entire area links to further content

@@ -1,0 +1,65 @@
+block settings
+	- var title = "Search results"
+	- var sidebar = true
+	- var toolbars = false
+	//- var cookiemonster = true
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+//block sidebar
+	- var section = "Before you claim PIP"
+	+sidebar([
+		{title: "How to fill in your PIP claim form"},
+		{title: "How to claim PIP"},
+		{title: "How to claim PIP if you have a terminal illness"},
+		{title: "How to fill in your claim form"},
+		{title: "Getting evidence to support your PIP claim"},
+		{title: "Preparing for your PIP assessment"},
+		{title: "Changes that affect your PIP"}
+		],0)
+//    - var section = "Sibling categories"
+//    +sidebar([
+//        ])
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+	div
+
+		div.form(id="RootPlaceHolder_RootPlaceHolder_SearchPanel", role="search", onkeypress="javascript:return WebForm_FireDefaultButton(event, 'RootPlaceHolder_RootPlaceHolder_SearchCommand')")
+			label.screenreader(for="RootPlaceHolder_RootPlaceHolder_QueryInput") Search
+			input(name="ctl00$ctl00$RootPlaceHolder$RootPlaceHolder$QueryInput", value="esa", id="RootPlaceHolder_RootPlaceHolder_QueryInput", type="search", placeholder="")
+			input(type="submit", name="ctl00$ctl00$RootPlaceHolder$RootPlaceHolder$SearchCommand", value="Search", id="RootPlaceHolder_RootPlaceHolder_SearchCommand")
+
+		ol.search-results(style="list-style:none;padding-left: 0px;")
+			li.search-results__item
+				h3.search-results__heading 
+					a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/") Employment and Support Allowance (ESA)
+				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision. 
+				p.search-results__section
+					.search-breadcrumb
+						span.search-breadcrumb__item
+							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits                  
+						span.search-breadcrumb__item
+							i.icon-guillemet-right(aria-hidden='true')
+							a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/") Sick or disabled people and carers
+					
+		.pagination
+			ul
+				li.active 
+					span 1
+				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
+				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]
+				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") Next]
+				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") Last]
