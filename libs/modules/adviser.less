@@ -9,17 +9,56 @@ span[id*="overlay_button"] {
 }
 
 .adviser {
+    //color: @inventive-teal;
+    background-color: @inventive-teal-lightest;
+    padding: .3rem;
+    //border-left: 4px solid @inventive-teal-lighter;
     &:before {
         content: "A";
         display: inline-block;
-        background-color: @inventive-teal-light;
+        background-color: @inventive-teal;
         color: @white;
         width: 1.7rem;
         text-align: center;
         margin-right: .5rem;
-        font-weight: @font-weight-bolder;
-        border-radius: 1px;
-        float: right;
+        font-weight: @font-weight-base;
+        //font-weight: @font-weight-bolder;
+        //border-radius: 1px;
+    }
+}
+
+.adviser-only {
+    padding-right: 2.7rem !important;
+    //border-right: 4px solid @inventive-teal;
+    //background-color: lighten(@inventive-teal-lightest, 7%);
+    position: relative;
+    &:before {
+        content: "A";
+        display: inline-block;
+        //background-color: @inventive-teal-lighter;
+        border: 1px solid @inventive-teal-lightest;
+        color: @inventive-teal;
+        width: 1.5rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-base;
+        border-radius: 2px;
+        .vertical-align(absolute);
+        right: .5rem;
+        //float: right;
+        font-size: .8em;
+    }
+    &.-current:before {
+        background-color: @inventive-teal;
+        border-color: @inventive-teal;
+        color: @white;
+    }
+    &:hover:before {
+        background-color: @white;
+    }
+    &.-current:hover:before {
+        background-color: @inventive-teal;
+        color: @white;
     }
 }
 
@@ -42,5 +81,28 @@ span[id*="overlay_button"] {
     .-current {
         background-color: lighten(@inventive-teal-lighter, 5%) !important;
         border-color: @inventive-teal-lighter !important;
+    }
+}
+
+.collapsible--adviser, // This needs to be removed eventually
+.revealable--adviser {
+    .revealable(
+        @revealable-background: @inventive-teal-lightest;
+        @revealable-heading: @inventive-teal;
+        @revealable-border: @inventive-teal-light;
+        @revealable-icon: @inventive-teal-light;
+    );
+    .collapse-toggle:before,
+    .revealable__heading:before {
+        content: "A";
+        display: inline-block;
+        background-color: @inventive-teal;
+        color: @white;
+        width: 1.7rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-base;
+        //font-weight: @font-weight-bolder;
+        //border-radius: 1px;
     }
 }
