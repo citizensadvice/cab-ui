@@ -14,7 +14,7 @@ $(document).ready(function($) {
         $(this).next().slideToggle();
         //$(this).goTo();
         if ( !$(this).parent().hasClass('side-nav') ) {
-            $(this).goTo();
+            //$(this).goTo();
         }
     });
     $('.collapse').find('.collapse-toggle-close').click(function(){
