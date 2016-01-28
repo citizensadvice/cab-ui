@@ -9,11 +9,17 @@ span[id*="overlay_button"] {
 }
 
 .adviser {
-    color: @heritage-blue;
-    font-weight: @font-weight-bold;
     &:before {
-        content: "\00a0\f059\00a0";
-        font-family: 'cab-icons';
+        content: "A";
+        display: inline-block;
+        background-color: @inventive-teal-light;
+        color: @white;
+        width: 1.7rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-bolder;
+        border-radius: 1px;
+        float: right;
     }
 }
 
@@ -33,17 +39,6 @@ span[id*="overlay_button"] {
 
 
 .adviser-nav {
-    .side-nav-beta__sibling {
-        //border-left: 8px solid @heritage-yellow-lighter;
-        //background-color: @heritage-yellow-lighter;
-        a {
-            //color: @heritage-yellow-darker;
-        }
-        &:hover {
-            //a { color: @black; }
-            //background-color: @heritage-yellow-lighter;
-        }
-    }
     .-current {
         background-color: lighten(@inventive-teal-lighter, 5%) !important;
         border-color: @inventive-teal-lighter !important;
