@@ -36,52 +36,56 @@ block section-notice
 
 block content
 	div
+		.search-results__field.field-group.field-group--buttons
+			input(type="search", placeholder="Search", value="esa")
+			button.btn.btn-primary Search&nbsp;&nbsp;
+				i.icon-search
 
-		div.form(id="RootPlaceHolder_RootPlaceHolder_SearchPanel", role="search", onkeypress="javascript:return WebForm_FireDefaultButton(event, 'RootPlaceHolder_RootPlaceHolder_SearchCommand')")
+		//div.form(id="RootPlaceHolder_RootPlaceHolder_SearchPanel", role="search", onkeypress="javascript:return WebForm_FireDefaultButton(event, 'RootPlaceHolder_RootPlaceHolder_SearchCommand')")
 			label.screenreader(for="RootPlaceHolder_RootPlaceHolder_QueryInput") Search
 			input(name="ctl00$ctl00$RootPlaceHolder$RootPlaceHolder$QueryInput", value="esa", id="RootPlaceHolder_RootPlaceHolder_QueryInput", type="search", placeholder="")
 			input(type="submit", name="ctl00$ctl00$RootPlaceHolder$RootPlaceHolder$SearchCommand", value="Search", id="RootPlaceHolder_RootPlaceHolder_SearchCommand")
 
 		ol.search-results(style="list-style:none;padding-left: 0px;")
 			li.search-results__item
-				h3.search-results__heading 
+				h3.search-results__heading
 					a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/") Employment and Support Allowance (ESA)
-				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision. 
+				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
 				p.search-results__section
 					.search-breadcrumb
 						span.search-breadcrumb__item
-							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits                  
+							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits
 						span.search-breadcrumb__item
 							i.icon-guillemet-right(aria-hidden='true')
 							a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/") Sick or disabled people and carers
-					
+
 			li.search-results__item.search-adviser
-				h3.search-results__heading.adviser-search-title 
+				h3.search-results__heading.adviser-search-title
 					a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/") Employment and Support Allowance (ESA)
-				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision. 
+				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
 				p.search-results__section
 					.search-breadcrumb
 						span.search-breadcrumb__item
-							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits                  
+							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits
 						span.search-breadcrumb__item
 							i.icon-guillemet-right(aria-hidden='true')
 							a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/") Sick or disabled people and carers
-					
+
 			li.search-results__item
-				h3.search-results__heading 
+				h3.search-results__heading
 					a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/") Employment and Support Allowance (ESA)
-				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision. 
+				p Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
 				p.search-results__section
 					.search-breadcrumb
 						span.search-breadcrumb__item
-							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits                  
+							a(href="https://www.citizensadvice.org.uk/benefits/") Benefits
 						span.search-breadcrumb__item
 							i.icon-guillemet-right(aria-hidden='true')
 							a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/") Sick or disabled people and carers
-					
+
 		.pagination
 			ul
-				li.active 
+				li.active
 					span 1
 				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
 				li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]

@@ -6,7 +6,7 @@
  */
 
 
-.search-results {
+/*.search-results {
     list-style: none;
     padding: 0;
 }
@@ -33,5 +33,21 @@
     a {
         font-weight: @font-weight-bold;
     }
-}
+}*/
 
+.search-results__field {
+    input {
+        width: 75%;
+        @media (max-width:@screen-sm-max) {
+            width: 70%;
+        }
+        display: inline-block
+    }
+    button {
+        width: 25%;
+        @media (max-width:@screen-sm-max) {
+            width: 30%;
+        }
+        display: inline-block
+    }
+}
