@@ -1,5 +1,5 @@
-mixin link(title, href, text)
-	a(href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
+mixin link(title, href, text, css)
+	a(class=css, href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
 
 mixin breadcrumbs(obj)
 	.main-breadcrumb__content
@@ -24,7 +24,7 @@ mixin sidebar(obj, key)
 					- each item,index in obj
 						- active = index === key ? "-current": ""
 						li.side-nav-beta__sibling
-							+link(item.title, item.href, item.text)(class=active)(class=item.class)
+							+link(item.title, item.href, item.text, item.css)(class=active)
 
 mixin sidebarSiblings(obj, key)
 	nav.side-nav-beta.sibling
@@ -37,4 +37,4 @@ mixin sidebarSiblings(obj, key)
 					- each item,index in obj
 						- active = index === key ? "-current": ""
 						li.side-nav-beta__sibling
-							+link(item.title, item.href, item.text)(class=active)
+							+link(item.title, item.href, item.text, item.css)(class=active)
