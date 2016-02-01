@@ -1,86 +1,147 @@
-/**
- * SIMPLE GRID
- * New simple grid built with a mixin and loop
- */
+@gutters:           2vw;
+@create-classes:    true;
 
-// Define grid parameters
-@columns:   12;
-@gutters:   @box-spacing*2;
+// Variables for creating classes
+@columns:           12;
+@rowclass:          row; // Sets the class used for rows
+@colclass:          span; // Sets the class used for columns
+@small:             568px;
+@medium:            768px;
+@large:             1024px;
+@xlarge:            1280px;
 
-.row {
-    margin-bottom: 0;
-    @media (min-width:@breakpoint-sm){
-        margin: 0 -@gutters @gutters 0;
-        clear: both;
-        padding: 0;
-        overflow: hidden;
-    }
-    @media (min-width:@breakpoint-sm) and (max-width:@breakpoint-md) {
-        margin: 0 -@gutters*.5 @gutters*.5 0;
-    }
-    .ie8 & {
-        margin: 0 -2% 2% 0 !important;
-        clear: both !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-    }
+// Box sizing reset, allows for row padding
+* {
+    box-sizing: border-box;
 }
 
-// Create mixin
+.@{rowclass} {
+    margin: 0;
+    clear: both;
+    padding: 0;
+    overflow: hidden;
+    // Create IE7&8 gutters. Only needed if gutter
+    // value is in modern units.
+    margin-bottom: 2%\9 !important;
+    margin-right: -@gutters;
+}
+
+// Create mixin.
 // Mixin allows you to make any element a fraction width,
-// for example .col(3/5); will make an element width 60%
-.col(@x;@y;) {
+// for example .col(3/5); will make an element width 60%.
+.col(@x;@y;@z:0;) {
     float: left;
-    width: @full-page-width;
-    margin-bottom: @gutters;
-
-    @media (min-width:@breakpoint-sm) {
-        // Create calc grid for modern browsers
+    margin: 0 @gutters @gutters 0;
+    // Remove bottom margin from the last span in the last
+    // nested row, to keep vertical spacing consistent.
+    & *[class*="@{rowclass}"]:last-child *[class*="@{colclass}"]:last-child,
+    & > *[class*="@{rowclass}"]:last-child *[class*="@{colclass}"] {
+        margin-bottom: 0;
+    }
+    // Create a ruleset out of the grid values so they can
+    // be easily re-used and maintained.
+    @grid-ruleset: {
+        // Create calc grid for modern browsers.
         width: calc(percentage((@x/@y)) ~"-"@gutters);
-        margin-right: @gutters;
-        margin-bottom: 0;
-    }
 
-    @media (min-width:@breakpoint-sm) and (max-width:@breakpoint-md) {
-        // Create calc grid for modern browsers
-        width: calc(percentage((@x/@y)) ~"-"@gutters*.5);
-        margin-right: @gutters*.5;
+        // Create IE8- fallback. Due to lack of calc() support
+        // columns use an extra 2% as a gutter.
+        // Remove this if only supporting IE9+.
+        width: unit(percentage((@x/@y)) - 2, ~"%\9");
+        // Create IE7 fallback. IE7 has a hard time with
+        // decimal places in percentages.
+        // Remove this if only supporting IE9+.
+        *width: unit(floor(percentage((@x/@y)) - 2), ~"%\9 !important");
+        margin-right: 2%\9 !important;
+    };
+    // When the breakpoint is undefined, simply add the
+    // ruleset without a media query.
+    & when (@z = 0) {
+        @grid-ruleset();
     }
-
-    .ie8 & {
-        // Create IE8 fallback. Due to lack of calc() support
-        // columns use an extra 2% as a gutter
-        width: unit(percentage((@x/@y)) - 2, ~"% !important");
-        margin-right: 2% !important;
-        margin-bottom: 0 !important;
-    }
-
-    // Remove bottom margin from the last nested row, to
-    // keep vertical spacing consistent
-    & > *[class*="row"]:last-child {
-        margin-bottom: 0;
-    }
-    & .row:last-child *[class*="span"]:last-child {
-        margin-bottom: 0;
-    }
-    & > h1:first-of-type,
-    & > h2:first-of-type,
-    & > h3:first-of-type,
-    & > h4:first-of-type,
-    & > h5:first-of-type,
-    & > h6:first-of-type {
-        margin-top: 0;
+    // If the breakpoint is defined, add the ruleset inside
+    // a media query at that size.
+    & when (@z > 0) {
+        width: calc(100% ~"-"@gutters);
+        @media (min-width: @z){
+            @grid-ruleset();
+        }
     }
 }
 
-// Create loop that iterate through the columns
-.grid-loop (@i) when (@i > 0) {
-    // Rename this to change column class names
-    .span@{i} {
-        .col(@i,@columns);
+// Mixin for creating classes
+.create-grid(@s:@small;@m:@medium;@l:@large;@x:@xlarge;) when (@create-classes=true) {
+
+    *[class*="@{colclass}"] {
+        float: left;
+        margin: 0 @gutters @gutters 0;
+        width: calc(100% - @gutters);
+        & *[class*="@{rowclass}"]:last-child *[class*="@{colclass}"]:last-child,
+        & > *[class*="@{rowclass}"]:last-child *[class*="@{colclass}"] {
+            margin-bottom: 0;
+        }
     }
-    .grid-loop(@i - 1);
+
+    // Create loop that iterate through the columns.
+    .grid-loop (@i) when (@i > 0) {
+        .@{colclass}@{i} {
+            width: calc(percentage((@i/@columns)) ~"-"@gutters);
+            width: unit(percentage((@i/@columns)) - 2, ~"%\9");
+            *width: unit(floor(percentage((@i/@columns)) - 2), ~"%\9 !important");
+        }
+        .grid-loop(@i - 1);
+    }
+    // Create a class for each column.
+    .grid-loop(@columns);
+
+    // Repeat loop for each breakpoint
+    .grid-loop-sm (@i) when (@i > 0) {
+        .@{colclass}@{i}-sm {
+            width: calc(percentage((@i/@columns)) ~"-"@gutters);
+            width: unit(percentage((@i/@columns)) - 2, ~"%\9");
+            *width: unit(floor(percentage((@i/@columns)) - 2), ~"%\9 !important");
+        }
+        .grid-loop-sm(@i - 1);
+    }
+    @media (min-width: @s) {
+        .grid-loop-sm(@columns);
+    }
+
+    .grid-loop-md (@i) when (@i > 0) {
+        .@{colclass}@{i}-md {
+            width: calc(percentage((@i/@columns)) ~"-"@gutters);
+            width: unit(percentage((@i/@columns)) - 2, ~"%\9");
+            *width: unit(floor(percentage((@i/@columns)) - 2), ~"%\9 !important");
+        }
+        .grid-loop-md(@i - 1);
+    }
+    @media (min-width: @m) {
+        .grid-loop-md(@columns);
+    }
+
+    .grid-loop-lg (@i) when (@i > 0) {
+        .@{colclass}@{i}-lg {
+            width: calc(percentage((@i/@columns)) ~"-"@gutters);
+            width: unit(percentage((@i/@columns)) - 2, ~"%\9");
+            *width: unit(floor(percentage((@i/@columns)) - 2), ~"%\9 !important");
+        }
+        .grid-loop-lg(@i - 1);
+    }
+    @media (min-width: @l) {
+        .grid-loop-lg(@columns);
+    }
+
+    .grid-loop-xl (@i) when (@i > 0) {
+        .@{colclass}@{i}-xl {
+            width: calc(percentage((@i/@columns)) ~"-"@gutters);
+            width: unit(percentage((@i/@columns)) - 2, ~"%\9");
+            *width: unit(floor(percentage((@i/@columns)) - 2), ~"%\9 !important");
+        }
+        .grid-loop-xl(@i - 1);
+    }
+    @media (min-width: @x) {
+        .grid-loop-xl(@columns);
+    }
 }
 
-// Create a class for each column
-.grid-loop(@columns);
+.create-grid();
