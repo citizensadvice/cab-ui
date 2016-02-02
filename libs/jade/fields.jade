@@ -88,7 +88,7 @@ block content
 					| &lt;fieldset&gt;
 					| 	&lt;label for="exampleInputPassword1"&gt;Disabled field&lt;/label&gt;
 					| 	&lt;span class="form-hint"&gt;Description why this field isn't enabled&lt;/span&gt;
-					| 	&lt;input id="exampleInputPassword1" disabled="" placeholder="Disabled field" type="password"&gt;
+					| 	&lt;input id="exampleInputPassword1" disabled placeholder="Disabled field" type="password"&gt;
 					| &lt;/fieldset&gt;
 
 			.example-box-plain
@@ -140,7 +140,7 @@ block content
 
 			.example-box-plain
 				fieldset
-					label(for="exampleTextarea") Example textarea 
+					label(for="exampleTextarea") Example textarea
 					textarea#exampleTextarea(rows="3")
 			pre
 				code.language-html
@@ -164,7 +164,7 @@ block content
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Radio buttons
+					label(for="radio") Radio buttons
 					label.radio.radio--block
 						input(checked, name="radio", type="radio", value="option1")
 						| Yes
@@ -177,21 +177,21 @@ block content
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Radio buttons&lt;/label&gt;
+					| 	&lt;label for="radio"&gt;Radio buttons&lt;/label&gt;
 					| 	&lt;label class="radio radio--block"&gt;
-					| 		&lt;input checked="" name="radio" type="radio" value="option1"&gt;Yes
+					| 		&lt;input checked name="radio" type="radio" value="option1"&gt;Yes
 					| 	&lt;/label&gt;
 					| 	&lt;label class="radio radio--block"&gt;
 					| 		&lt;input name="radio" type="radio" value="option2"&gt;No
 					| 	&lt;/label&gt;
 					| 	&lt;label class="radio radio--block disabled"&gt;
-					| 		&lt;input disabled="" name="radio" type="radio" value="option3"&gt;Not sure
+					| 		&lt;input disabled name="radio" type="radio" value="option3"&gt;Not sure
 					| 	&lt;/label&gt;
 					| &lt;/fieldset&gt;
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Inline Radio buttons
+					label(for="radio-inline") Inline Radio buttons
 					label.radio.radio--inline
 						input(checked name="radio-inline", type="radio", value="option1")
 						| Yes
@@ -204,21 +204,21 @@ block content
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Inline Radio buttons&lt;/label&gt;
+					| 	&lt;label for="radio-inline"&gt;Inline Radio buttons&lt;/label&gt;
 					| 		&lt;label class="radio radio--inline"&gt;
-					| 	&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Yes
+					| 	&lt;input checked name="radio-inline" type="radio" value="option1"&gt;Yes
 					| 	&lt;/label&gt;
 					| 	&lt;label class="radio radio--inline"&gt;
 					| 		&lt;input name="radio-inline" type="radio" value="option2"&gt;No
 					| 	&lt;/label&gt;
 					| 	&lt;label class="radio radio--inline disabled"&gt;
-					| 		&lt;input disabled="" name="radio-inline" type="radio" value="option3"&gt;Not sure
+					| 		&lt;input disabled name="radio-inline" type="radio" value="option3"&gt;Not sure
 					| 	&lt;/label&gt;
 					| &lt;/fieldset&gt;
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Radio buttons (description)
+					label(for="radio-description") Radio buttons (description)
 					label.radio.radio--block
 						input(checked name="radio-description", type="radio", value="option1")
 						p
@@ -240,9 +240,9 @@ block content
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Radio buttons (description)&lt;/label&gt;
+					| 	&lt;label for="radio-description"&gt;Radio buttons (description)&lt;/label&gt;
 					| 	&lt;label class="radio radio--block"&gt;
-					| 		&lt;input checked="" name="radio-description" type="radio" value="option1"&gt;
+					| 		&lt;input checked name="radio-description" type="radio" value="option1"&gt;
 					| 		&lt;p&gt;
 					| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;I'm in situation A
 					| 		&lt;/p&gt;
@@ -263,7 +263,7 @@ block content
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Checkboxes
+					label(for="checkbox") Checkboxes
 					label.checkbox.checkbox--block
 						input(name="checkbox", type="checkbox")
 						| Option one
@@ -276,7 +276,7 @@ block content
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Checkboxes&lt;/label&gt;
+					| 	&lt;label for="checkbox"&gt;Checkboxes&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--block"&gt;
 					| 		&lt;input name="checkbox" type="checkbox"&gt;Option one
 					| 	&lt;/label&gt;
@@ -284,54 +284,54 @@ block content
 					| 		&lt;input name="checkbox" type="checkbox"&gt;Option two
 					| 	&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--block disabled"&gt;
-					| 		&lt;input disabled="" name="checkbox" type="checkbox"&gt;Disabled
+					| 		&lt;input disabled name="checkbox" type="checkbox"&gt;Disabled
 					| 	&lt;/label&gt;
 					| &lt;/fieldset&gt;
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Inline checkboxes
+					label(for="checkbox-inline") Inline checkboxes
 					label.checkbox.checkbox--inline
-						input(name="checkbox", type="checkbox")
+						input(name="checkbox-inline", type="checkbox")
 						| Option one
 					label.checkbox.checkbox--inline
-						input(name="checkbox", type="checkbox")
+						input(name="checkbox-inline", type="checkbox")
 						| Option two
 					label.checkbox.checkbox--inline.disabled
-						input(disabled name="checkbox", type="checkbox")
+						input(disabled name="checkbox-inline", type="checkbox")
 						| Disabled
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Inline checkboxes&lt;/label&gt;
+					| 	&lt;label for="checkbox-inline"&gt;Inline checkboxes&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--inline"&gt;
-					| 		&lt;input name="checkbox" type="checkbox"&gt;Option one
+					| 		&lt;input name="checkbox-inline" type="checkbox"&gt;Option one
 					| 	&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--inline"&gt;
-					| 		&lt;input name="checkbox" type="checkbox"&gt;Option two
+					| 		&lt;input name="checkbox-inline" type="checkbox"&gt;Option two
 					| 	&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--inline disabled"&gt;
-					| 		&lt;input disabled="" name="checkbox" type="checkbox"&gt;Disabled
+					| 		&lt;input disabled name="checkbox-inline" type="checkbox"&gt;Disabled
 					| 	&lt;/label&gt;
 					| &lt;/fieldset&gt;
 
 			.example-box-plain
 				fieldset
-					label(for="exampleInputFile") Check boxes (description)
+					label(for="checkbox-description") Check boxes (description)
 					label.checkbox.checkbox--block
-						input(name="checkbox-inline", type="checkbox")
+						input(name="checkbox-description", type="checkbox")
 						p
 							span Yes
 							br
 							| You are in situation A
 					label.checkbox.checkbox--block
-						input(name="checkbox-inline", type="checkbox")
+						input(name="checkbox-description", type="checkbox")
 						p
 							span Yes
 							br
 							| You are in situation B
 					label.checkbox.checkbox--block
-						input(name="checkbox-inline", type="checkbox")
+						input(name="checkbox-description", type="checkbox")
 						p
 							span No
 							br
@@ -339,21 +339,21 @@ block content
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="exampleInputFile"&gt;Check boxes (description)&lt;/label&gt;
+					| 	&lt;label for="checkbox-description"&gt;Check boxes (description)&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--block"&gt;
-					| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+					| 		&lt;input name="checkbox-description" type="checkbox"&gt;
 					| 		&lt;p&gt;
 					| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;You are in situation A
 					| 		&lt;/p&gt;
 					| 	&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--block"&gt;
-					| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+					| 		&lt;input name="checkbox-description" type="checkbox"&gt;
 					| 		&lt;p&gt;
 					| 			&lt;span&gt;Yes&lt;/span&gt;&lt;br&gt;You are in situation B
 					| 		&lt;/p&gt;
 					| 	&lt;/label&gt;
 					| 	&lt;label class="checkbox checkbox--block"&gt;
-					| 		&lt;input name="checkbox-inline" type="checkbox"&gt;
+					| 		&lt;input name="checkbox-description" type="checkbox"&gt;
 					| 		&lt;p&gt;
 					| 			&lt;span&gt;No&lt;/span&gt;&lt;br&gt;I'm not in any situation
 					| 		&lt;/p&gt;
