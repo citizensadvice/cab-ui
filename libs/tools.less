@@ -7,33 +7,33 @@
 
 /* Base files */
 @import "base/colors";
-.cabtool {
+.cabtools {
 	@import "base/variables";
 	@import "base/global";
-	//@import "base/tables";
+	@import "base/tables";
 	@import "base/buttons";
 	@import "base/forms";
-	//@import "base/framework";
+	@import "base/framework";
 	@import "base/icons";
 	@import "base/lists";
 	@import "base/type";
 	@import "base/utility";
 	@import "base/helpers";
-	//@import "base/simplegrid";
+	//@import "base/simplegrid"; // Only needed in guide
 
 	/* Mixin files */
 	@import "mixins/buttons";
-	@import "mixins/callout";
-	//@import "mixins/fit-content";
-	//@import "mixins/flex-box";
-	//@import "mixins/limit-width";
 	@import "mixins/revealable";
-	//@import "mixins/popup";
+	@import "mixins/callout";
+	@import "mixins/fit-content";
+	@import "mixins/flex-box";
+	@import "mixins/limit-width";
+	@import "mixins/popup";
 	@import "mixins/vertical-align";
 	@import "mixins/btn-icon";
 	//@import "mixins/spacing";
 
-	/* Module files
+	/* Module files */
 	@import "modules/extent-switcher-modal";
 	@import "modules/header";
 	@import "modules/title";
@@ -44,18 +44,17 @@
 	@import "modules/main-nav";
 	@import "modules/page-info";
 	@import "modules/breadcrumb";
-	// @import "modules/cab-forms"; // This should no longer be needed once we've updated the tools
 	@import "modules/revealable";
+	@import "modules/callout";
 	@import "modules/tablesort";
-	@import "modules/nav-steps";
 	@import "modules/navigation";
 	@import "modules/section-notice";
 	@import "modules/decision-tree";
 	@import "modules/extent-switcher";
 	@import "modules/revealable";
-	@import "modules/staff";
+	//@import "modules/staff";
 	@import "modules/status";
-	@import "modules/boxes";
+	//@import "modules/boxes";
 	@import "modules/sidebar-navigation";
 	@import "modules/sidebar-navigation-accordion";
 	@import "modules/footer-feedback";
@@ -63,31 +62,29 @@
 	@import "modules/dialog";
 	@import "modules/references";
 	@import "modules/episerver";
-	@import "modules/members";
-	@import "modules/bureau-search";
-	@import "modules/twitter";
+	//@import "modules/members";
+	//@import "modules/bureau-search";
+	//@import "modules/twitter";
 	@import "modules/environment-marker";
 	@import "modules/skip-nav";
 	@import "modules/side-links";
 	@import "modules/side-chat";
 	@import "modules/calls-for-evidence";
-	@import "modules/search-results";
+	//@import "modules/search-results";
 	@import "modules/cookie-monster";
 	@import "modules/paragraph-numbers.less";
-	@import "modules/atoz";
-	@import "modules/search-results";
+	//@import "modules/atoz";
 	@import "modules/cookie-monster";
-	@import "modules/toc";
-	@import "modules/letter";
+	//@import "modules/toc";
+	//@import "modules/letter";
 	@import "modules/section-notice";
-	@import "modules/login";
+	//@import "modules/login";
 	@import "modules/page-list";
 	@import "modules/page-tree";
 	@import "modules/share-bar";
 	@import "modules/overlay";
 	@import "modules/adviser";
-	*/
-	@import "modules/callout";
+	@import "modules/notice";
 
 	/* IE styles */
 	@import "base/ie";
