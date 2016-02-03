@@ -19,83 +19,83 @@ block content
 		div
 			.example-box-plain
 				label Buttons (directions)
-				button.btn.btn-primary-light.left-button-icon(type="button") Back
-				button.btn.btn-primary.right-button-icon(type="button") Continue
-				button.btn.btn-primary.tick-button-icon(type="submit") Submit
-				button.btn.btn-primary.search-button-icon(type="button") Search
+				button.btn-light.left-button-icon(type="button") Back
+				button.btn.right-button-icon(type="button") Continue
+				button.btn.tick-button-icon(type="submit") Submit
+				button.btn.search-button-icon(type="button") Search
 				// Recommending we use the lighter back button to differentiate between purposes
 			pre
 				code.language-html
-					| &lt;button type="button" class="btn btn-primary-light left-button-icon"&gt;Back&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-primary right-button-icon"&gt;Continue&lt;/button&gt;
-					| &lt;button type="submit" class="btn btn-primary tick-button-icon"&gt;Submit&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-primary search-button-icon"&gt;Search&lt;/button&gt;
+					| &lt;button type="button" class="btn-light left-button-icon"&gt;Back&lt;/button&gt;
+					| &lt;button type="button" class="btn right-button-icon"&gt;Continue&lt;/button&gt;
+					| &lt;button type="submit" class="btn tick-button-icon"&gt;Submit&lt;/button&gt;
+					| &lt;button type="button" class="btn search-button-icon"&gt;Search&lt;/button&gt;
 
 			// Testing back button
 			.example-box-plain
 				label Buttons (directions alternative)
-				button.btn.btn-primary-cancel.back-button-icon(type="button") Back
-				button.btn.btn-primary-cancel.left-cancel-button-icon(type="button") Cancel
+				button.btn-white.back-button-icon(type="button") Back
+				button.btn-white.left-cancel-button-icon(type="button") Cancel
 				// Recommending we use the lighter back button to differentiate between purposes
 			pre
 				code.language-html
-					| &lt;button type="button" class="btn btn-primary-cancel back-button-icon"&gt;Back&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-primary-cancel left-cancel-button-icon"&gt;Cancel&lt;/button&gt;
+					| &lt;button type="button" class="btn-white back-button-icon"&gt;Back&lt;/button&gt;
+					| &lt;button type="button" class="btn-white left-cancel-button-icon"&gt;Cancel&lt;/button&gt;
 
 			// Cmobining back button
 			.example-box-plain
 				label Buttons combined (directions alternative)
-				button.btn.btn-primary-cancel.back-button-icon(type="button") Back
-				button.btn.btn-primary.right-button-icon(type="button") Continue
+				button.btn-white.back-button-icon(type="button") Back
+				button.btn.right-button-icon(type="button") Continue
 				// Recommending we use the lighter back button to differentiate between purposes
 			pre
 				code.language-html
-					| &lt;button type="button" class="btn btn-primary-cancel back-button-icon"&gt;Back&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-primary right-button-icon"&gt;Continue&lt;/button&gt;
+					| &lt;button type="button" class="btn-white back-button-icon"&gt;Back&lt;/button&gt;
+					| &lt;button type="button" class="btn right-button-icon"&gt;Continue&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (actions)
-				button.btn.btn-secondary.email-button-icon(type="button") Email
-				button.btn.btn-secondary.print-button-icon(type="button") Print
-				button.btn.btn-secondary.restart-button-icon(type="reset") Restart
-				button.btn.btn-secondary.save-button-icon(type="button") Save
+				button.btn-secondary.email-button-icon(type="button") Email
+				button.btn-secondary.print-button-icon(type="button") Print
+				button.btn-secondary.restart-button-icon(type="reset") Restart
+				button.btn-secondary.save-button-icon(type="button") Save
 			pre
 				code.language-html
-					| &lt;button type="button" class="btn btn-secondary email-button-icon"&gt;Email&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-secondary print-button-icon"&gt;Print&lt;/button&gt;
-					| &lt;button type="reset" class="btn btn-secondary restart-button-icon"&gt;Restart&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-secondary save-button-icon"&gt;Save&lt;/button&gt;
+					| &lt;button type="button" class="btn-secondary email-button-icon"&gt;Email&lt;/button&gt;
+					| &lt;button type="button" class="btn-secondary print-button-icon"&gt;Print&lt;/button&gt;
+					| &lt;button type="reset" class="btn-secondary restart-button-icon"&gt;Restart&lt;/button&gt;
+					| &lt;button type="button" class="btn-secondary save-button-icon"&gt;Save&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (additional)
-				button.btn.btn-disabled(disabled, type="button") Continue
-				button.btn.btn-success(type="button") Success
-				button.btn.btn-warning.exclamation-button-icon(type="button") Warning
+				button.btn-disabled(disabled, type="button") Continue
+				button.btn-success(type="button") Success
+				button.btn-warning.exclamation-button-icon(type="button") Warning
 			pre
 				code.language-html
-					| &lt;button disabled="" type="button" class="btn btn-disabled"&gt;Continue&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-warning exclamation-button-icon"&gt;Warning&lt;/button&gt;
+					| &lt;button disabled type="button" class="btn-disabled"&gt;Continue&lt;/button&gt;
+					| &lt;button type="button" class="btn-success"&gt;Success&lt;/button&gt;
+					| &lt;button type="button" class="btn-warning exclamation-button-icon"&gt;Warning&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (right)
-				button.btn.btn-secondary.btn-right.print-button-icon(type="button") Print
+				button.btn-secondary.btn-right.print-button-icon(type="button") Print
 			pre
 				code.language-html
-					| &lt;button type="button" class="btn btn-secondary btn-right print-button-icon"&gt;Print&lt;/button&gt;
+					| &lt;button type="button" class="btn-secondary btn-right print-button-icon"&gt;Print&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (small)
-				button.btn.btn-disabled.btn-small(disabled type="button") Continue
-				button.btn.btn-small--green(type="button") Success
-				button.btn.btn-small--red(type="button") Delete
-				button.btn.btn-small(type="button") Basic
+				button.btn-small(disabled type="button") Continue
+				button.btn-success.btn-small(type="button") Success
+				button.btn-warning.btn-small(type="button") Delete
+				button.btn-small(type="button") Basic
 			pre
 				code.language-html
-					| &lt;button disabled="" type="button" class="btn btn-disabled btn-small"&gt;Continue&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-small--green"&gt;Success&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-small--red"&gt;Delete&lt;/button&gt;
-					| &lt;button type="button" class="btn btn-small"&gt;Basic&lt;/button&gt;
+					| &lt;button disabled type="button" class="btn-small"&gt;Continue&lt;/button&gt;
+					| &lt;button type="button" class="btn-success btn-small"&gt;Success&lt;/button&gt;
+					| &lt;button type="button" class="btn-warning btn-small"&gt;Delete&lt;/button&gt;
+					| &lt;button type="button" class="btn-small"&gt;Basic&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (group)

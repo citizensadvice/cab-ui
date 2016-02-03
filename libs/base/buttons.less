@@ -21,8 +21,8 @@
 }
 
 .btn,
-.button,
 .btn-primary,
+.button,
 .button--blue,
 button,
 input[type=submit],
@@ -31,6 +31,7 @@ input[type=button] {
     .btn();
 }
 
+.btn-light,
 .btn-primary-light {
     .btn(
         @btn-background: @aqua-light,
@@ -38,7 +39,7 @@ input[type=button] {
     );
 }
 
-.btn-primary-cancel {
+.btn-white {
     .btn(
         @btn-text:@heritage-blue,
         @btn-background:@white,
@@ -60,35 +61,47 @@ input[type=button] {
 }
 
 .btn-disabled,
-.button--grey,
-button:disabled {
+.button--grey {
     cursor: not-allowed;
     .btn(
-    @gray-3,
-    @gray-6,
-    @gray-6
+        @gray-3,
+        @gray-6,
+        @gray-6
     );
+}
+
+button:disabled {
+    border-color: @gray-6;
+    background-color: @gray-6;
+    color: @gray-3;
+    &:hover,
+    &:active,
+    &:visited {
+        border-color: @gray-6;
+        background-color: @gray-6;
+        color: @gray-3;
+    }
 }
 
 .btn-warning {
     .btn(
-    @white,
-    @red,
+        @white,
+        @red,
     );
 }
 
 .btn-success,
 .button--green {
     .btn(
-    @white,
-    @green,
-    @green-dark
+        @white,
+        @green,
+        @green-dark
     );
 }
 
 // Small Button styles
 
-.btn-small,
+/*.btn-small,
 .btn-primary-outline {
     .btn-small(
         @heritage-blue,
@@ -114,15 +127,7 @@ button:disabled {
         @white,
         @red-lighter
     );
-}
-
-.btn-disabled.btn-small {
-    .btn-small(
-        @gray-3,
-        @gray-6,
-        @gray-6
-    );
-}
+}*/
 
 // Multiple buttons in a set
 
