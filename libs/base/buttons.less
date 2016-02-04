@@ -20,15 +20,35 @@
     }
 }
 
-.btn,
-.btn-primary,
-.button,
-.button--blue,
 button,
 input[type=submit],
 input[type=reset],
 input[type=button] {
     .btn();
+}
+
+.btn,
+.btn-primary,
+.button,
+.button--blue {
+    .btn();
+}
+
+
+.btn-primary,
+.button,
+.button--blue {
+    .btn();
+    &.btn-small {
+        border-color: @heritage-blue-light;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @blue-lighter;
+            border-color: @heritage-blue-light;
+            color: @heritage-blue;
+        }
+    }
 }
 
 .btn-light,
@@ -37,6 +57,13 @@ input[type=button] {
         @btn-background: @aqua-light,
         @btn-background-hover: @aqua
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @aqua-light;
+        }
+    }
 }
 
 .btn-white {
@@ -45,14 +72,27 @@ input[type=button] {
         @btn-background:@white,
         @btn-background-hover:@heritage-blue-lightest
     );
+    &.btn-small {
+        border-color: @heritage-blue-lightest;
+    }
 }
 
 .btn-secondary {
     .btn (
-    @white,
-    @heritage-blue,
-    darken(@heritage-blue, 5%)
+        @white,
+        @heritage-blue,
+        darken(@heritage-blue, 5%)
     );
+    &.btn-small {
+        border-color: @heritage-blue-light;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @blue-lighter;
+            border-color: @heritage-blue-light;
+            color: @heritage-blue;
+        }
+    }
 }
 
 .btn-right {
@@ -88,6 +128,14 @@ button:disabled {
         @white,
         @red,
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @red-lightest;
+            color: @heritage-blue;
+        }
+    }
 }
 
 .btn-success,
@@ -97,6 +145,14 @@ button:disabled {
         @green,
         @green-dark
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @green-lighter;
+            color: @heritage-blue;
+        }
+    }
 }
 
 // Small Button styles
