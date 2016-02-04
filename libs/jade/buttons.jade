@@ -86,16 +86,23 @@ block content
 
 			.example-box-plain
 				label Buttons (small)
-				button.btn-small(disabled type="button") Continue
+				button.btn.btn-small(type="button") Basic
+				button.btn-light.btn-small(type="button") Light
+				button.btn-secondary.btn-small(type="button") Secondary
+				button.btn-white.btn-small(type="button") White
+				br
+				button.btn-small(disabled type="button") Disabled
 				button.btn-success.btn-small(type="button") Success
-				button.btn-warning.btn-small(type="button") Delete
-				button.btn-small(type="button") Basic
+				button.btn-warning.btn-small(type="button") Warning
 			pre
 				code.language-html
-					| &lt;button disabled type="button" class="btn-small"&gt;Continue&lt;/button&gt;
+					| &lt;button type="button" class="btn btn-small"&gt;Basic&lt;/button&gt;
+					| &lt;button type="button" class="btn-light btn-small"&gt;Light&lt;/button&gt;
+					| &lt;button type="button" class="btn-secondary btn-small"&gt;Secondary&lt;/button&gt;
+					| &lt;button type="button" class="btn-white btn-small"&gt;White&lt;/button&gt;
+					| &lt;button disabled="" type="button" class="btn-small"&gt;Disabled&lt;/button&gt;
 					| &lt;button type="button" class="btn-success btn-small"&gt;Success&lt;/button&gt;
-					| &lt;button type="button" class="btn-warning btn-small"&gt;Delete&lt;/button&gt;
-					| &lt;button type="button" class="btn-small"&gt;Basic&lt;/button&gt;
+					| &lt;button type="button" class="btn-warning btn-small"&gt;Warning&lt;/button&gt;
 
 			.example-box-plain
 				label Buttons (group)
