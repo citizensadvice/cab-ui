@@ -31,7 +31,7 @@
 	//@import "mixins/popup";
 	@import "mixins/vertical-align";
 	@import "mixins/btn-icon";
-	//@import "mixins/spacing";
+	//s@import "mixins/spacing";
 
 	/* Module files */
 	//@import "modules/extent-switcher-modal";
@@ -47,7 +47,7 @@
 	@import "modules/revealable";
 	@import "modules/callout";
 	//@import "modules/tablesort";
-	@import "modules/navigation";
+	//@import "modules/navigation";
 	//@import "modules/section-notice";
 	//@import "modules/decision-tree";
 	//@import "modules/extent-switcher";
@@ -95,13 +95,24 @@
 	}
 	h1, h2, h3,h4, h5, h6 {
 	    line-height: @line-height-heading !important;
-	    color: @heading-primary-color !important;
-	    font-weight: @font-weight-bolder !important;
 	    margin-top: 1em !important;
 	    margin-bottom: 0.6em !important;
 	    b, strong {
 	        font-weight: inherit !important;
 	    }
+	}
+	*[class^="callout"],
+	.dap-panel {
+	    > *:first-child {
+	    	margin-top: 0 !important;
+	    	padding-top: 0 !important;
+	    }
+	    > *:last-child {
+	    	margin-bottom: 0 !important;
+	    }
+	}
+	.main-content__right {
+		padding-left: 0;
 	}
 }
 
