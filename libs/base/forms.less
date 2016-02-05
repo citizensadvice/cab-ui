@@ -211,6 +211,7 @@ textarea.form__field {
     z-index: 1;
     background-color: @gray-8;
     input {
+        display: inline-block;
         &:before {
             content: '';
             display: block;
@@ -259,9 +260,6 @@ textarea.form__field {
         clear: left;
         float: left;
         display: table;
-        input {
-            display: table-cell;
-        }
         p {
             display: block;
             //float: right;
@@ -297,9 +295,7 @@ textarea.form__field {
     width: 100%;
     &:after {
         pointer-events:none;
-    }
-    &:after {
-        display: none \9; // Hides dropdown icon for IE8
+        display/**/: none; // Hides dropdown icon for IE7+
     }
     select {
         background: none;
@@ -310,7 +306,7 @@ textarea.form__field {
     }
     .dropdown,
     select {
-        padding-right: 0 \9; // Removes space for dropdown icon on IE8
+        padding-right/**/: 1em; // Removes space for dropdown icon on IE7+
     }
 }
 
@@ -368,6 +364,7 @@ input[class*="dob-"] {
         border-radius: 0;
         border-right: 0;
         width: 100%;
+        display: inline-block;
     }
     *:first-child {
         border-radius: @form-border-radius 0 0 @form-border-radius;
