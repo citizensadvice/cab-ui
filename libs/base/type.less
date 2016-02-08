@@ -145,6 +145,7 @@ a {
 
     &:focus {
         outline: 2px solid @heritage-yellow;
+        border-bottom: 0;
     }
 
     &:active {
@@ -178,6 +179,9 @@ a {
         text-decoration: none;
         border-bottom-color: @link-hover-color;
         background-color:  lighten(@link-color, 75%);
+    }
+    &:focus {
+        border-bottom: 0;
     }
 }
 
