@@ -24,7 +24,7 @@ block sidebar
         {title: "Getting evidence to support your PIP claim", css: "adviser-only"},
         {title: "Preparing for your PIP assessment", css: "adviser-only"},
         {title: "Changes that affect your PIP", css: "adviser-only"}
-        ],1)
+        ],0)
 
     //nav.side-nav-beta.adviser-nav
         ul
@@ -42,7 +42,7 @@ block section-notice
         .section-notice--dev__content
             p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
-    //aside.section-notice--dev__adviser#sticker(style="background-color: white; z-index: 2;")
+    aside.section-notice--dev__adviser#sticker(style="background-color: white; z-index: 2;")
         h2.screenreader Notice
         .section-notice--dev__content
             p
@@ -61,7 +61,7 @@ block script-bottom
 block content
     .articleContent
         div
-            .collapse.collapsible--adviser
+            .collapse.collapsible
                 .collapse-toggle I want to apply by phone
                 .collapse-content
                     p PIP claim line
@@ -114,7 +114,7 @@ block content
             ul
                 li your full name, address and phone number
                 li your national insurance number
-                li.adviser your bank or building society account details so payments can be made if PIP is awarded
+                li your bank or building society account details so payments can be made if PIP is awarded
                 li contact details of your GP or other health professionals you deal with
                 li the dates and details of any stays in hospital or residential care
                 li your nationality or immigration status
@@ -126,7 +126,7 @@ block content
                 .collapse-content
                     p PIP claim line
                     p Telephone 0800 917 2222
-                    p.adviser Textphone 0800 917 7777
+                    p Textphone 0800 917 7777
                     p Open Monday to Friday, 8am to 6pm
                     p Calls are free from landlines and from mobiles.
                     p It should take about 20 minutes to complete the call. If you’d prefer someone else to call for you that’s fine, but you need to be with them so that you can give permission for them to speak for you.
@@ -144,7 +144,7 @@ block content
 
                     a.collapse-toggle-close Close
 
-            .callout--adviser.callout--icon
+            //.callout--adviser.callout--icon
                 h3 Information for advisers
                 p The PIP2 form is sometimes called ‘How your condition affects you’ form
                 ul
