@@ -17,33 +17,38 @@ block sidebar
 block content
 	.articleContent
 		div
+			p It's important with date fields that the question is repeated in the first label, using the #[span.code screenreader] class.
 			.example-box-plain
-				fieldset
-					.form-group-date
-						label(for="dob-day") Day
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="dob-day")
+							span.screenreader When did you buy your car? Date field,
+							| Day
 						input#dob-day(max="31", min="1", placeholder="DD", type="number")
-					.form-group-date
+					fieldset
 						label(for="dob-month") Month
 						input#dob-month(max="12", min="1", placeholder="MM", type="number")
-					.form-group-date
+					fieldset
 						label(for="dob-year") Year
 						input#dob-year(max="2100", placeholder="YYYY", type="number")
 			pre
 				code.language-html
-					| &lt;fieldset&gt;
-					| 	&lt;div class="form-group-date"&gt;
-					| 		&lt;label for="dob-day"&gt;Day&lt;/label&gt;
+					| &lt;div class="form-group-date"&gt;
+					|	&lt;legend&gt;When did you buy your car?</legend>
+					| 	&lt;fieldset&gt;
+					| 		&lt;label for="dob-day"&gt;&lt;span class="screenreader"&gt;When did you buy your car? Date field, &lt;/span&gt;Day&lt;/label&gt;
 					| 		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
-					| 	&lt;/div&gt;
-					| 	&lt;div class="form-group-date"&gt;
+					| 	&lt;/fieldset&gt;
+					| 	&lt;fieldset&gt;
 					| 		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
 					| 		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
-					| 	&lt;/div&gt;
-					| 	&lt;div class="form-group-date"&gt;
+					| 	&lt;/fieldset&gt;
+					| 	&lt;fieldset&gt;
 					| 		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
 					| 		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
-					| 	&lt;/div&gt;
-					| &lt;/fieldset&gt;
+					| 	&lt;/fieldset&gt;
+					| &lt;/div&gt;
 
 			.example-box-plain
 				fieldset
