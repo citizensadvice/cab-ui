@@ -5,337 +5,344 @@
  */
 
 .main-content__sidebar {
-    float: left;
-    //clear: left;
-    width: @width-span-4;
-    overflow: hidden; // Stop margin collapsing issues
-    margin-bottom: @box-spacing*1.5;
-    //padding: @box-spacing @box-spacing-vertical;
-    margin: 0;
+	float: left;
+	//clear: left;
+	width: @width-span-4;
+	overflow: hidden; // Stop margin collapsing issues
+	margin-bottom: @box-spacing*1.5;
+	//padding: @box-spacing @box-spacing-vertical;
+	margin: 0;
 
-    @media ( max-width: @screen-xs-max ) {
-        float: none;
-        width: auto;
-        margin-top: @box-spacing*1.5;
-    }
+	@media ( max-width: @screen-xs-max ) {
+		float: none;
+		width: auto;
+		margin-top: @box-spacing*1.5;
+	}
 }
 
 .side-nav-beta {
-    .main-content__sidebar;
-    margin: 0 0 @box-spacing 0;
+	.main-content__sidebar;
+	margin: 0 0 @box-spacing 0;
 
-    &.sibling {
-        border: 0 solid @inventive-teal;
-        border-top-width: .5;
-        background-color: @gray-8;
-        .side-nav-beta__sibling a:hover {
-            background-color: @gray-6;
-            cursor: pointer;
-        }
-    }
-    .-visited {
-        font-weight: @font-weight-bolder;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 0;
-    }
-    li {
-        padding: 0;
-        margin: 0;
-        //border-left: @box-spacing/2 solid @gray-6;
-        a {
-            margin-bottom: 1px;
-            padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
-            display: block;
-            border-bottom: none;
-        }
-    }
+	&.sibling {
+		border: 0 solid @inventive-teal;
+		border-top-width: .5;
+		background-color: @gray-8;
+		.side-nav-beta__sibling a:hover {
+			background-color: @gray-6;
+			cursor: pointer;
+		}
+	}
+	.-visited {
+		font-weight: @font-weight-bolder;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	li {
+		padding: 0;
+		margin: 0;
+		//border-left: @box-spacing/2 solid @gray-6;
+		a {
+			margin-bottom: 1px;
+			padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+			display: block;
+			border-bottom: none;
+		}
+	}
 
-    &__heading {
-        display: none;
-        &.-active,
-        &.-open {
-            display: block;
-        }
-        > a {
-            color: @heritage-blue;
-            font-weight: @font-weight-boldest;
-            font-size: @font-size-medium;
-        }
-    }
+	&__heading {
+		display: none;
+		&.-active,
+		&.-open {
+			display: block;
+		}
+		> a {
+			color: @heritage-blue;
+			font-weight: @font-weight-boldest;
+			font-size: @font-size-medium;
+			&:after {
+				color: @heritage-blue-lighter;
+				content: "\2c4";
+				font-family: 'cab-icons';
+				margin-left: @box-spacing*.5;
+				float: right;
+			}
+		}
+	}
 
-    &__sibling {
-        span {
-            border: none;
-        }
-        &:hover {
-            background-color: @gray-8;
-        }
-        .section {
-            color: @heritage-blue;
-            font-weight: @font-weight-boldest;
-            //font-size: @font-size-medium;
-            background-color: @gray-8;
-            &:hover {
-                background-color: @heritage-blue-lightest;
-            }
-        }
-    }
-    .-current {
-        background-color: @heritage-blue-lightest;
-        font-weight: @font-weight-bolder;
-        border-color: @heritage-blue-lighter;
-        a {
-            cursor: default;
-        }
-        span {
-            border: none;
-        }
-    }
-    /*.side-nav-beta__heading + li {
-        display: block;
-    }
-    @media screen and (max-width: @screen-xs-max) {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        max-height: 100%;
-        overflow: scroll;
-        background-color: @white;
-        margin: 0;
-        box-shadow:  0px -2px 0px 0px @gray-7;
-        .side-nav-beta__heading + li {
-            display: none;
-        }
-    }*/
+	&__sibling {
+		span {
+			border: none;
+		}
+		&:hover {
+			background-color: @gray-8;
+		}
+		.section {
+			color: @heritage-blue;
+			font-weight: @font-weight-boldest;
+			//font-size: @font-size-medium;
+			background-color: @gray-8;
+			&:hover {
+				background-color: @heritage-blue-lightest;
+			}
+		}
+	}
+	.-current {
+		background-color: @heritage-blue-lightest;
+		font-weight: @font-weight-bolder;
+		border-color: @heritage-blue-lighter;
+		a {
+			cursor: default;
+		}
+		span {
+			border: none;
+		}
+	}
+	/*.side-nav-beta__heading + li {
+		display: block;
+	}
+	@media screen and (max-width: @screen-xs-max) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		max-height: 100%;
+		overflow: scroll;
+		background-color: @white;
+		margin: 0;
+		box-shadow:  0px -2px 0px 0px @gray-7;
+		.side-nav-beta__heading + li {
+			display: none;
+		}
+	}*/
 }
 
 .side-nav {
-    .main-content__sidebar;
+	.main-content__sidebar;
 
-    @media screen and (max-width: @screen-xs-max) {
-        float: none;
-        width: 100%;
-    }
+	@media screen and (max-width: @screen-xs-max) {
+		float: none;
+		width: 100%;
+	}
 
-    ul {
-        color: @text-color;
-        list-style: none;
-        padding: 0;
-    }
-    li {
-        padding: 0;
-        margin: 0;
-        //border-bottom: 0.1em solid @blue-light;
-    }
-    li:last-child {
-       border-bottom: none;
-    }
-    li.current {
-        font-weight: @font-weight-bold;
-        background-color: @blue-lighter;
-        padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
-        margin: 0;
-        border-bottom: 0.1em solid @blue-light;
-    }
-    li.title,
-    li.side-nav__group {
-        font-weight: @font-weight-bold;
-        background-color: @blue-light;
-        color: @heritage-blue;
-        margin: 0;
-        border-bottom: 0.1em solid @white;
+	ul {
+		color: @text-color;
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		padding: 0;
+		margin: 0;
+		//border-bottom: 0.1em solid @blue-light;
+	}
+	li:last-child {
+	   border-bottom: none;
+	}
+	li.current {
+		font-weight: @font-weight-bold;
+		background-color: @blue-lighter;
+		padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
+		margin: 0;
+		border-bottom: 0.1em solid @blue-light;
+	}
+	li.title,
+	li.side-nav__group {
+		font-weight: @font-weight-bold;
+		background-color: @blue-light;
+		color: @heritage-blue;
+		margin: 0;
+		border-bottom: 0.1em solid @white;
 
-        .side-nav__group-title {
-            display: block;
-            padding: @box-spacing*.7 @box-spacing*.6 @box-spacing*.9 @box-spacing*.6;
-        }
-    }
-    li.side-nav__item {
-        padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
+		.side-nav__group-title {
+			display: block;
+			padding: @box-spacing*.7 @box-spacing*.6 @box-spacing*.9 @box-spacing*.6;
+		}
+	}
+	li.side-nav__item {
+		padding: @box-spacing*.4 @box-spacing*.6 @box-spacing*.6 @box-spacing*.6;
 
-        a {
-            text-decoration: none;
-            padding: 0;
-        }
+		a {
+			text-decoration: none;
+			padding: 0;
+		}
 
-        &.-current {
-            font-weight: @font-weight-bold;
-            background-color: @blue-lighter;
-            border-bottom: 0.1em solid @blue-light;
-        }
+		&.-current {
+			font-weight: @font-weight-bold;
+			background-color: @blue-lighter;
+			border-bottom: 0.1em solid @blue-light;
+		}
 
-        &:hover {
-            background-color: @gray-6;
-        }
-    }
-    > h2 {
-        background: @heritage-blue;
-        margin: 0;
-        font-size: @font-size-medium;
-        padding: .7em .5em; // This is supposed to be the same height as the main title
+		&:hover {
+			background-color: @gray-6;
+		}
+	}
+	> h2 {
+		background: @heritage-blue;
+		margin: 0;
+		font-size: @font-size-medium;
+		padding: .7em .5em; // This is supposed to be the same height as the main title
 
-        & > a {
-            color: @white;
-        }
-    }
-    ul,
-    li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    > ul a {
-        display: block;
-        padding: .5em;
-        color: black;
-    }
+		& > a {
+			color: @white;
+		}
+	}
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	> ul a {
+		display: block;
+		padding: .5em;
+		color: black;
+	}
 
-    // Messy selector to override the selector above
-    > ul &__current {
-        font-weight: @font-weight-bold;
-        position: relative; // To absolutely position to the icon
-        padding-right: 2em;
-    }
+	// Messy selector to override the selector above
+	> ul &__current {
+		font-weight: @font-weight-bold;
+		position: relative; // To absolutely position to the icon
+		padding-right: 2em;
+	}
 
-    &__current__icon {
-        position: absolute;
-        right: .5em;
-        top: 50%;
-        font-size: 150%;
-        margin-top: -.7em;
-    }
+	&__current__icon {
+		position: absolute;
+		right: .5em;
+		top: 50%;
+		font-size: 150%;
+		margin-top: -.7em;
+	}
 
-    &__ul--level2 > li > a {
-        padding-left: 1em;
-    }
-    &__ul--level3 > li > a {
-        padding-left: 1.5em;
-    }
-    &__ul--level4 > li > a {
-        padding-left: 2em;
-    }
-    &__ul--level5 > li > a {
-        padding-left: 2.5em;
-    }
-    &__ul--level6 > li > a {
-        padding-left: 3em;
-    }
-    &__ul--level7 > li > a {
-        padding-left: 3.5em;
-    }
-    &__ul--level8 > li > a {
-        padding-left: 4em;
-    }
+	&__ul--level2 > li > a {
+		padding-left: 1em;
+	}
+	&__ul--level3 > li > a {
+		padding-left: 1.5em;
+	}
+	&__ul--level4 > li > a {
+		padding-left: 2em;
+	}
+	&__ul--level5 > li > a {
+		padding-left: 2.5em;
+	}
+	&__ul--level6 > li > a {
+		padding-left: 3em;
+	}
+	&__ul--level7 > li > a {
+		padding-left: 3.5em;
+	}
+	&__ul--level8 > li > a {
+		padding-left: 4em;
+	}
 
 
-    // Level 1
-    &--levels-1 &__ul--level1 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 1
+	&--levels-1 &__ul--level1 > li {
+		background-color: @colour-nav-7;
+	}
 
-    &--levels-2 &__ul--level1 > li {
-        background-color: @colour-nav-7;
-    }
+	&--levels-2 &__ul--level1 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 2
-    &--levels-3 &__ul--level1 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-3 &__ul--level2 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 2
+	&--levels-3 &__ul--level1 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-3 &__ul--level2 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 3
-    &--levels-4 &__ul--level1 > li {
-        background-color: @colour-nav-2;
-    }
-    &--levels-4 &__ul--level2 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-4 &__ul--level3 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 3
+	&--levels-4 &__ul--level1 > li {
+		background-color: @colour-nav-2;
+	}
+	&--levels-4 &__ul--level2 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-4 &__ul--level3 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 4
-    &--levels-5 &__ul--level1 > li {
-        background-color: @colour-nav-1;
-    }
-    &--levels-5 &__ul--level2 > li {
-        background-color: @colour-nav-2;
-    }
-    &--levels-5 &__ul--level3 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-5 &__ul--level4 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 4
+	&--levels-5 &__ul--level1 > li {
+		background-color: @colour-nav-1;
+	}
+	&--levels-5 &__ul--level2 > li {
+		background-color: @colour-nav-2;
+	}
+	&--levels-5 &__ul--level3 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-5 &__ul--level4 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 5
-    &--levels-6 &__ul--level1 > li {
-        background-color: @colour-nav-1;
-    }
-    &--levels-6 &__ul--level2 > li {
-        background-color: @colour-nav-2;
-    }
-    &--levels-6 &__ul--level3 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-6 &__ul--level4 > li {
-        background-color: @colour-nav-4;
-    }
-    &--levels-6 &__ul--level5 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 5
+	&--levels-6 &__ul--level1 > li {
+		background-color: @colour-nav-1;
+	}
+	&--levels-6 &__ul--level2 > li {
+		background-color: @colour-nav-2;
+	}
+	&--levels-6 &__ul--level3 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-6 &__ul--level4 > li {
+		background-color: @colour-nav-4;
+	}
+	&--levels-6 &__ul--level5 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 6
-    &--levels-7 &__ul--level1 > li {
-        background-color: @colour-nav-1;
-    }
-    &--levels-7 &__ul--level2 > li {
-        background-color: @colour-nav-2;
-    }
-    &--levels-7 &__ul--level3 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-7 &__ul--level4 > li {
-        background-color: @colour-nav-4;
-    }
-    &--levels-7 &__ul--level5 > li {
-        background-color: @colour-nav-5;
-    }
-    &--levels-7 &__ul--level6 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 6
+	&--levels-7 &__ul--level1 > li {
+		background-color: @colour-nav-1;
+	}
+	&--levels-7 &__ul--level2 > li {
+		background-color: @colour-nav-2;
+	}
+	&--levels-7 &__ul--level3 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-7 &__ul--level4 > li {
+		background-color: @colour-nav-4;
+	}
+	&--levels-7 &__ul--level5 > li {
+		background-color: @colour-nav-5;
+	}
+	&--levels-7 &__ul--level6 > li {
+		background-color: @colour-nav-7;
+	}
 
-    // Level 7
-    &--levels-8 &__ul--level1 > li {
-        background-color: @colour-nav-1;
-    }
-    &--levels-8 &__ul--level2  li {
-        background-color: @colour-nav-2;
-    }
-    &--levels-8 &__ul--level3 > li {
-        background-color: @colour-nav-3;
-    }
-    &--levels-8 &__ul--level4 > li {
-        background-color: @colour-nav-4;
-    }
-    &--levels-8 &__ul--level5 > li {
-        background-color: @colour-nav-5;
-    }
-    &--levels-8 &__ul--level6 > li {
-        background-color: @colour-nav-6;
-    }
-    &--levels-8 &__ul--level7 > li {
-        background-color: @colour-nav-7;
-    }
+	// Level 7
+	&--levels-8 &__ul--level1 > li {
+		background-color: @colour-nav-1;
+	}
+	&--levels-8 &__ul--level2  li {
+		background-color: @colour-nav-2;
+	}
+	&--levels-8 &__ul--level3 > li {
+		background-color: @colour-nav-3;
+	}
+	&--levels-8 &__ul--level4 > li {
+		background-color: @colour-nav-4;
+	}
+	&--levels-8 &__ul--level5 > li {
+		background-color: @colour-nav-5;
+	}
+	&--levels-8 &__ul--level6 > li {
+		background-color: @colour-nav-6;
+	}
+	&--levels-8 &__ul--level7 > li {
+		background-color: @colour-nav-7;
+	}
 }
 
 html[lang="en-SCT"] .side-nav > h2 {
-    background: @heritage-blue;
+	background: @heritage-blue;
 }
 
