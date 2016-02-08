@@ -143,16 +143,45 @@ a {
         //background-color:  lighten(@link-color, 70%);
     }
 
+    &:focus {
+        outline: 2px solid @heritage-yellow;
+        border-bottom: 0;
+    }
+
     &:active {
-        color: @link-active-colour;
+        color: @link-active-color;
     }
 
     &:visited {
-        color: @link-visited-color;
+        color: @link-color;
     }
 
     &:not([href]) {
         text-decoration: none;
+    }
+}
+
+.articleContent a {
+    color: @link-color;
+    text-decoration: none;
+    border-bottom: 1px solid @link-color;
+    &:active {
+        color: @link-active-color;
+        border-bottom-color: @link-active-color;
+    }
+    &:visited {
+        color: @link-visited-color;
+        border-bottom-color: @link-visited-color;
+    }
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: none;
+        border-bottom-color: @link-hover-color;
+        background-color:  lighten(@link-color, 75%);
+    }
+    &:focus {
+        border-bottom: 0;
     }
 }
 

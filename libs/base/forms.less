@@ -58,7 +58,7 @@ label,
 
 .form-hint {
     display: block;
-    color: @gray-3;
+    color: @gray-2;
     margin-bottom: @box-spacing*.5;
     margin-top: -@box-spacing*.5;
     font-weight: @font-weight-base;
@@ -172,7 +172,7 @@ select {
     }
     &:focus {
         border-width: 1px;
-        outline: 2px solid @heritage-blue-lighter;
+        outline: 2px solid @heritage-yellow;
     }
 }
 
@@ -249,6 +249,9 @@ textarea.form__field {
             &:hover:before {
                 border-color: @blue-light;
             }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
         }
     }
     &--inline {
