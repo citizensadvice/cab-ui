@@ -36,11 +36,8 @@ fieldset,
     margin-bottom: @box-spacing;
 }
 
-legend {
-    color: @heritage-blue;
-}
-
 label,
+legend,
 .form__label {
     display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
@@ -335,7 +332,8 @@ input[class*="dob-"] {
         margin: 0;
     }
 }*/
-.form-group-date {
+.form-group-date fieldset {
+    &:extend(fieldset);
     width: 5rem;
     display: inline-block;
     float: left;
