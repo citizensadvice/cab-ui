@@ -16,6 +16,8 @@ block sidebar
 block content
 	.articleContent
 		div
+			p Tables are a great way to lay out information that may otherwise be confusing, and can also make information a lot easier to scan. They can however be more difficult for people with accessibility needs, so it's important to only use them where they are needed.
+			p Putting long form text into a table should generally be avoided.
 			h2 Basic table
 			p It's important to use the #[span.code th] tag and #[span.code scope] attribute when defining a table heading. This is for both styling and accessibility.
 			.example-box-plain
@@ -64,9 +66,9 @@ block content
 					thead
 						tr
 							td
-							th(scope="col") Column heading
-							th(scope="col") Column heading
-							th(scope="col") Column heading
+							th(scope="col") 1
+							th(scope="col") 2
+							th(scope="col") 3
 					tbody
 						tr
 							th(scope="row") 1
@@ -84,9 +86,9 @@ block content
 					| 	&lt;thead&gt;
 					| 		&lt;tr&gt;
 					| 			&lt;td&gt;&lt;/td&gt;
-					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
-					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
-					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;1&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;2&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;3&lt;/th&gt;
 					| 		&lt;/tr&gt;
 					| 	&lt;/thead&gt;
 					| 	&lt;tbody&gt;
@@ -109,7 +111,7 @@ block content
 			p Footers on tables is important in specific situations. This is easily defined with the #[code.code tfoot] tag. It's important to use this tag for styling and accessibility.
 			p This example also shows right aligned cells, which is useful for numbers.
 			.example-box-plain
-				table.full-width
+				table
 					thead
 						tr
 							th(scope="col", colspan="2") Budget table
@@ -123,7 +125,7 @@ block content
 							td.right £00.00
 			pre
 				code.language-html
-					| &lt;table class="full-width"&gt;
+					| &lt;table&gt;
 					|	&lt;thead&gt;
 					|		&lt;tr&gt;
 					|			&lt;th scope="col" colspan="2"&gt;Budget table&lt;/th&gt;
@@ -146,7 +148,7 @@ block content
 			h2 Collapsible table
 			p Tables can include collapsible rows by simply adding the correct classes and embedding a table within a cell.
 			.example-box-plain
-				table.full-width(style="table-layout: fixed;")
+				table(style="table-layout: fixed;")
 					thead
 						tr
 							th(scope="col") th
@@ -158,8 +160,7 @@ block content
 						tr.table-collapse
 							// colspan is important to make the embedded table full width
 							td(colspan="2")
-								// .full-width class is important to make the embedded table full width
-								table.full-width(style="table-layout: fixed;")
+								table(style="table-layout: fixed;")
 									tbody
 										tr
 											td td
@@ -173,8 +174,7 @@ block content
 						tr.table-collapse
 							// colspan is important to make the embedded table full width
 							td(colspan="2")
-								// .full-width class is important to make the embedded table full width
-								table.full-width(style="table-layout: fixed;")
+								table(style="table-layout: fixed;")
 									tbody
 										tr
 											td td
@@ -184,7 +184,7 @@ block content
 											td td
 			pre
 				code.language-html
-					| &lt;table class="full-width"&gt;
+					| &lt;table&gt;
 					| 	&lt;thead&gt;
 					| 		&lt;tr&gt;
 					| 			&lt;th scope="col"&gt;th&lt;/th&gt;
@@ -199,8 +199,7 @@ block content
 					| 		&lt;tr class="table-collapse"&gt;
 					|			&lt;!-- colspan is important to make the embedded table full width --&gt;
 					| 			&lt;td colspan="2"&gt;
-					|				&lt;!-- .full-width class is important to make the embedded table full width --&gt;
-					|				&lt;table class="full-width"&gt;
+					|				&lt;table&gt;
 					|					&lt;tr&gt;
 					|						&lt;td&gt;td&lt;/td&gt;
 					|						&lt;td&gt;td&lt;/td&gt;
@@ -219,8 +218,7 @@ block content
 					| 		&lt;tr class="table-collapse"&gt;
 					|			&lt;!-- colspan is important to make the embedded table full width --&gt;
 					| 			&lt;td colspan="2"&gt;
-					|				&lt;!-- .full-width class is important to make the embedded table full width --&gt;
-					|				&lt;table class="full-width"&gt;
+					|				&lt;table&gt;
 					|					&lt;tr&gt;
 					|						&lt;td&gt;td&lt;/td&gt;
 					|						&lt;td&gt;td&lt;/td&gt;
