@@ -7,7 +7,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Styles", href: "index.html#styles"}, 
+		{title: "Styles", href: "index.html#styles"},
 		{title: "Tables"}])
 
 block sidebar
@@ -17,6 +17,7 @@ block content
 	.articleContent
 		div
 			h2 Basic table
+			p It's important to use the #[span.code th] tag and #[span.code scope] attribute when defining a table heading. This is for both styling and accessibility.
 			.example-box-plain
 				table
 					thead
@@ -57,8 +58,56 @@ block content
 					| 	&lt;/tbody&gt;
 					| &lt;/table&gt;
 
-			h2 Table with values
-			p This table is used for situations where you need a right aligned value, or a total along the bottom. Both of these are achieved by simply adding #[code.code .amount] to a cell, or #[code.code .total] to a row.
+			h2 Table with two headers
+			.example-box-plain
+				table
+					thead
+						tr
+							td
+							th(scope="col") Column heading
+							th(scope="col") Column heading
+							th(scope="col") Column heading
+					tbody
+						tr
+							th(scope="row") 1
+							td Table cell
+							td Table cell
+							td Table cell
+						tr
+							th(scope="row") 2
+							td Table cell
+							td Table cell
+							td Table cell
+			pre
+				code.language-html
+					| &lt;table&gt;
+					| 	&lt;thead&gt;
+					| 		&lt;tr&gt;
+					| 			&lt;td&gt;&lt;/td&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 			&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 		&lt;/tr&gt;
+					| 	&lt;/thead&gt;
+					| 	&lt;tbody&gt;
+					| 		&lt;tr&gt;
+					| 			&lt;th scope="row"&gt;1&lt;/th&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 		&lt;tr&gt;
+					| 			&lt;th scope="row"&gt;2&lt;/th&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 			&lt;td&gt;Table cell&lt;/td&gt;
+					| 		&lt;/tr&gt;
+					| 	&lt;/tbody&gt;
+					| &lt;/table&gt;
+
+			h2 Table with a footer
+			p Footers on tables is important in specific situations. This is easily defined with the #[code.code tfoot] tag. It's important to use this tag for styling and accessibility.
+			p This example also shows right aligned cells, which is useful for numbers.
 			.example-box-plain
 				table.full-width
 					thead
@@ -67,10 +116,11 @@ block content
 					tbody
 						tr
 							td Label
-							td.amount £00.00
-						tr.total
+							td.right £00.00
+					tfoot
+						tr
 							td Total
-							td.amount £00.00
+							td.right £00.00
 			pre
 				code.language-html
 					| &lt;table class="full-width"&gt;
@@ -82,13 +132,15 @@ block content
 					|	&lt;tbody&gt;
 					|		&lt;tr&gt;
 					|			&lt;td&gt;Label&lt;/td&gt;
-					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|			&lt;td class="right"&gt;£00.00&lt;/td&gt;
 					|		&lt;/tr&gt;
+					|	&lt;/body&gt;
+					|	&lt;tfoot&gt;
 					|		&lt;tr class="total"&gt;
 					|			&lt;td&gt;Total&lt;/td&gt;
-					|			&lt;td class="amount"&gt;£00.00&lt;/td&gt;
+					|			&lt;td class="right"&gt;£00.00&lt;/td&gt;
 					|		&lt;/tr&gt;
-					|	&lt;/tbody&gt;
+					|	&lt;/tfoot&gt;
 					| &lt;/table&gt;
 
 			h2 Collapsible table
