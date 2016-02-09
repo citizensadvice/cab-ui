@@ -1,0 +1,89 @@
+block settings
+	- var title = "Survey dialog"
+	- var sidebar = true
+	- var toolbars = true
+	- var sharebar = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Modules", href: "index.html#modules"},
+		{title: "Survey dialog"}])
+
+block sidebar
+	include ../template/sidebar-modules.jade
+
+block content
+	.articleContent
+		p Toolbars sandwich the content with functional icons.
+
+	.dialog__mask(style="z-index: 2;")
+		form.dialog.dialog--paywall(role="dialog", aria-labelledby="dialog-1-label", aria-describedby="dialog-1-main", tabindex="-1", style="z-index: 3;")
+
+			header.dialog__header
+				h2(id="dialog-1-label", class="dialog__title") Frequent user survey
+				button.dialog__close(type="button" data-action="close")
+					i(aria-hidden="true", class="dialog__close-icon")
+					span.dialog__close-text Close
+
+			.dialog__main(id="dialog-1-main")
+				p We have noticed you are a frequent user of our site. Could you answer a few quick questions to help us improve the site.
+
+			fieldset.form__radio-list(data-step="type")
+				legend I'm accessing the site
+					ul.paywall__option-list
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="type" required="" value="as part of your job" data-next="agency") as part of your job
+			
+			fieldset.form__radio-list(data-step="agency" style="display: none;")
+				legend I work in
+					ul.paywall__option-list
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") a local Citizens Advice
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") government
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") the public sector
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") an advice agency
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") other
+
+			fieldset.form__radio-list(data-step="useful" style="display: none;")
+				legend How useful is the site for your work?
+					ul.paywall__option-list
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") I can't work without it
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Very useful
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Quite useful
+						li
+							label.paywall__option-list__item
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Not that useful
+
+			div(data-step="email" data-next="email" style="display: none;")
+				p
+					label(for="paywall__email") Email (required)
+					input(type="email" id="paywall__email" name="email" required="" disabled="")
+				p Thank you
+				button(type="submit") Close
+				
+			div(data-step="thankyou" style="display: none;")
+				p Thank you
+				button(type="submit") Close
+
+			input(type="hidden" name="username" value="")
+
+			footer.dialog__footer

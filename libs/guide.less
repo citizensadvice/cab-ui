@@ -422,6 +422,50 @@ pre[class*="language-"] {
     );
 }
 
+
+/***************************************************************************
+ * Survey Feature
+ */
+
+.dialog--paywall {
+
+    width: 50em;
+    height: 30em;
+
+    > .dialog__footer {
+        display: none;
+    }
+
+}
+
+.paywall__option-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.paywall__option-list__item {
+    display: block;
+    padding: .5em;
+    margin-bottom: .2em;
+    border: 1px solid #ddd;
+}
+
+.paywall__option-list__item:hover {
+    display: block;
+    background: @heritage-blue;
+    cursor: pointer;
+}
+
+.paywall__value {
+    font-weight: bold;
+    color: black;
+}
+
+.paywall__step--completed legend:before {
+    content: "✓ ";
+    color: green;
+}
+
 /***************************************************************************
  * Colours
  * Swatches
