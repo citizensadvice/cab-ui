@@ -1,0 +1,61 @@
+block settings
+    - var title = "Search results"
+    - var sidebar = true
+    - var toolbars = false
+    //- var cookiemonster = true
+    - var mockup = false
+
+extends ../template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "index.html"},
+        {title: "Templates", href: "index.html#templates"},
+        {title: "Content"}])
+
+//block sidebar
+    - var section = "Before you claim PIP"
+    +sidebar([
+        {title: "How to fill in your PIP claim form"},
+        {title: "How to claim PIP"},
+        {title: "How to claim PIP if you have a terminal illness"},
+        {title: "How to fill in your claim form"},
+        {title: "Getting evidence to support your PIP claim"},
+        {title: "Preparing for your PIP assessment"},
+        {title: "Changes that affect your PIP"}
+        ],0)
+//    - var section = "Sibling categories"
+//    +sidebar([
+//        ])
+
+//block section-notice
+    aside.section-notice--dev
+        h2.screenreader Notice
+        .section-notice--dev__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+    .articleContent
+        div
+            //.search-results__field.field-group.field-group--buttons
+                input(type="search", placeholder="Search", value="esa")
+                button.btn.btn-primary Search&nbsp;&nbsp;
+                    i.icon-search
+
+            p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
+
+            p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.
+
+            p You should make sure you’re prepared and have all the relevant information to help you make your claim.
+
+            p Your first payment for PIP will be backdated to the date you started your claim and cover the length of time it takes the Department for Work and Pensions (DWP) to make its decision. If you're moving from DLA to PIP your PIP payments will start the day after your DLA stops.
+
+
+            .pagination
+                ul
+                    li.active
+                        span 1
+                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
+                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]
+                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") Next]
+                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") Last]
