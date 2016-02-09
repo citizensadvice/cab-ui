@@ -16,7 +16,7 @@ block sidebar
 	include ../template/sidebar-modules.jade
 
 block content
-	.articleContent
+	//.articleContent
 		p Toolbars sandwich the content with functional icons.
 
 	.dialog__mask(style="z-index: 2;")
@@ -31,69 +31,78 @@ block content
 			.dialog__main(id="dialog-1-main")
 				p We have noticed you are a frequent user of our site. Could you answer a few quick questions to help us improve the site.
 
-			fieldset.form__radio-list(data-step="type")
-				legend I'm accessing the site
-					ul.paywall__option-list
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="type" required="" value="as part of your job" data-next="agency")
-								| as part of your job
+				fieldset.form__radio-list(data-step="type")
+					legend I'm accessing the site
+						ul.paywall__option-list
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="type" required="" value="for personal use" data-next="thankyou")
+									| for personal use
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="type" required="" value="for personal use" data-next="thankyou")
+									| as part of your job
 
-			fieldset.form__radio-list(data-step="agency" style="display: none;")
-				legend I work in
-					ul.paywall__option-list
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
-								| a local Citizens Advice
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
-								| government
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
-								| the public sector
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
-								| an advice agency
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
-								| other
+				fieldset.paywall__step--completed(data-step="type")
+					legend I'm accessing the site 
+						span.paywall__value
+						| for personal use
 
-			fieldset.form__radio-list(data-step="useful" style="display: none;")
-				legend How useful is the site for your work?
-					ul.paywall__option-list
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
-								| I can't work without it
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
-								| Very useful
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
-								| Quite useful
-						li
-							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
-								| Not that useful
+				fieldset.form__radio-list(data-step="agency")
+					legend I work in
+						ul.paywall__option-list
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+									| a local Citizens Advice
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+									| government
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+									| the public sector
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+									| an advice agency
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+									| other
 
-			div(data-step="email" data-next="email" style="display: none;")
-				p
-					label(for="paywall__email") Email (required)
-					input(type="email" id="paywall__email" name="email" required="" disabled="")
-				p Thank you
-				button(type="submit") Close
+				fieldset.form__radio-list(data-step="useful")
+					legend.paywall__option-list How useful is the site for your work?
+						ul.paywall__option-list
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+									| I can't work without it
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+									| Very useful
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+									| Quite useful
+							li
+								label.paywall__option-list__item
+									input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+									| Not that useful
 
-			div(data-step="thankyou" style="display: none;")
-				p Thank you
-				button(type="submit") Close
+				div(data-step="email" data-next="email")
+					p
+						label(for="paywall__email") Email (required)
+						input(type="email" id="paywall__email" name="email" required="")
+					p Thank you
+					button(type="submit") Close
 
-			input(type="hidden" name="username" value="")
+				//div(data-step="thankyou")
+					p Thank you
+					button(type="submit") Close
 
-			footer.dialog__footer
+				input(type="hidden" name="username" value="")
+
+				//footer.dialog__footer

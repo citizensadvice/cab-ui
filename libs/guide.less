@@ -437,33 +437,53 @@ pre[class*="language-"] {
     }
 
 }
-
+.form__radio-list {
+        legend {
+        width: 100%;
+    }
+}
 .paywall__option-list {
     list-style: none;
     padding-left: 0;
+    li {
+        margin-top: 0.5em;
+    }
 }
 
 .paywall__option-list__item {
     display: block;
+    font-weight: normal;
     padding: .5em;
     margin-bottom: .2em;
     border: 1px solid #ddd;
-}
-
-.paywall__option-list__item:hover {
-    display: block;
-    background: @heritage-blue;
-    cursor: pointer;
+    width: 100% !important;
+    background-color: #f2f2f2;
+    &:hover {
+        display: block;
+        border-color: #A5BDDC;
+        background-color: #caeaff;
+        cursor: pointer;
+    }
 }
 
 .paywall__value {
     font-weight: bold;
     color: black;
 }
-
-.paywall__step--completed legend:before {
-    content: "✓ ";
-    color: green;
+.paywall__step--completed {
+    legend {
+        display: block;
+        font-weight: normal;
+        padding: .5em;
+        margin-bottom: .2em;
+        border: 1px solid #81cec6;
+        width: 100% !important;
+        background-color: #b8e3df;
+        &:before {
+            content: "✓ ";
+            color: #537d2d;
+        }
+    }
 }
 
 /***************************************************************************
