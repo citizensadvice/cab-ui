@@ -36,42 +36,52 @@ block content
 					ul.paywall__option-list
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="type" required="" value="as part of your job" data-next="agency") as part of your job
-			
+								input(type="radio" name="type" required="" value="as part of your job" data-next="agency")
+								| as part of your job
+
 			fieldset.form__radio-list(data-step="agency" style="display: none;")
 				legend I work in
 					ul.paywall__option-list
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") a local Citizens Advice
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+								| a local Citizens Advice
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") government
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+								| government
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") the public sector
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+								| the public sector
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") an advice agency
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+								| an advice agency
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="") other
+								input(type="radio" name="agency" required="" value="a local Citizens Advice" data-next="thankyou" disabled="")
+								| other
 
 			fieldset.form__radio-list(data-step="useful" style="display: none;")
 				legend How useful is the site for your work?
 					ul.paywall__option-list
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") I can't work without it
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+								| I can't work without it
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Very useful
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+								| Very useful
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Quite useful
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+								| Quite useful
 						li
 							label.paywall__option-list__item
-								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="") Not that useful
+								input(type="radio" name="useful" required="" value="I can't work without it" data-next="email" disabled="")
+								| Not that useful
 
 			div(data-step="email" data-next="email" style="display: none;")
 				p
@@ -79,7 +89,7 @@ block content
 					input(type="email" id="paywall__email" name="email" required="" disabled="")
 				p Thank you
 				button(type="submit") Close
-				
+
 			div(data-step="thankyou" style="display: none;")
 				p Thank you
 				button(type="submit") Close
