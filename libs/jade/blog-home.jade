@@ -1,59 +1,51 @@
 block settings
-    - var title = "Citizens Advice digital blog"
-    - var sidebar = true
-    - var toolbars = false
-    //- var cookiemonster = true
-    - var mockup = false
+	- var title = "Citizens Advice digital blog"
+	- var sidebar = true
+	- var toolbars = false
+	//- var cookiemonster = true
+	- var mockup = false
 
-extends ../template/template.jade
+extends ../template/template-blog.jade
 
 block breadcrumbs
-    +breadcrumbs([
-        {title: "Home"}])
+	+breadcrumbs([
+		{title: "Home"}])
 
-//block sidebar
-    - var section = "Before you claim PIP"
-    +sidebar([
-        {title: "How to fill in your PIP claim form"},
-        {title: "How to claim PIP"},
-        {title: "How to claim PIP if you have a terminal illness"},
-        {title: "How to fill in your claim form"},
-        {title: "Getting evidence to support your PIP claim"},
-        {title: "Preparing for your PIP assessment"},
-        {title: "Changes that affect your PIP"}
-        ],0)
-//    - var section = "Sibling categories"
-//    +sidebar([
-//        ])
-
-//block section-notice
-    aside.section-notice--dev
-        h2.screenreader Notice
-        .section-notice--dev__content
-            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+block sidebar
+	include ../template/sidebar-blog.jade
 
 block content
-    .articleContent
-        div
-            //.search-results__field.field-group.field-group--buttons
-                input(type="search", placeholder="Search", value="esa")
-                button.btn.btn-primary Search&nbsp;&nbsp;
-                    i.icon-search
+	.articleContent
+		div
+			.title__subheading--blog
+				h2 #[a(href="#") Making things simpler: Personal Independence Payment (PIP)]
+				
+				p.small #[a(href="#") Stephen Rehill] on January 18, 2016 in #[a(href="#") Content], #[a(href="#") Design] 
 
-            p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
+				img(src="images/sample-blog/pip-feature-images-2.jpg" alt="PIP feature image" style="width:100%;")
 
-            p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.
+				p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
 
-            p You should make sure you’re prepared and have all the relevant information to help you make your claim.
+				a(href="#" style="border-bottom:none;")
+					button.btn.btn-primary.right-button-icon(type="button" style="background-color:#81CEC6; border-color:#81CEC6;") Read full article
 
-            p Your first payment for PIP will be backdated to the date you started your claim and cover the length of time it takes the Department for Work and Pensions (DWP) to make its decision. If you're moving from DLA to PIP your PIP payments will start the day after your DLA stops.
+			.title__subheading--blog
+				h2 #[a(href="#") Introducing… immigration advice]
+				
+				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Content], #[a(href="#") Immigration] 
 
+				img(src="images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image" style="width:100%;")
 
-            .pagination
-                ul
-                    li.active
-                        span 1
-                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
-                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]
-                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") Next]
-                    li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") Last]
+				p We’ve pushed the button on some brand new content – immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+
+				a(href="#" style="border-bottom:none;")
+					button.btn.btn-primary.right-button-icon(type="button" style="background-color:#81CEC6; border-color:#81CEC6;") Read full article
+
+			.pagination
+				ul
+					li.active
+						span 1
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") Next]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") Last]
