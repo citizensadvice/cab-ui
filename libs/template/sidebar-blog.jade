@@ -1,0 +1,60 @@
+- var section = "Brand"
+    .side-nav-beta
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            fieldset
+                label(for="search") Search this blog
+                .search-results__field.field-group.field-group--buttons(style="width:85%;")
+                    input(type="search", placeholder="Search", value="Search")
+                    button.btn.btn-primary
+                        i.icon-search
+
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            fieldset
+                label(for="exampleSelect1") Select Category
+                .dropdown
+                    select(id="exampleSelect1")
+                        option All categories
+                        option Content
+                        option Design
+                        option Casebook
+                        option Research
+
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            label Recent posts
+            ul
+                li
+                    a(href="#") Making things simpler: Personal Independence Payment (PIP)
+                li 
+                    a(href="#") Introducing… immigration advice
+                li 
+                    a(href="#") How people look for things
+                li 
+                    a(href="#") Casebook: An intro to what's been happening
+                li 
+                    a(href="#") A present (kind of) from the digital team
+                li 
+                    a(href="#") Your digital team needs you!
+
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            h3 Get updates by email
+            fieldset
+                label(for="name") Your name
+                .search-results__field(style="width:95%; margin-bottom: 10px;")
+                    input(type="email", placeholder="email", value="Name")
+                label(for="email") Your email
+                .search-results__field(style="width:95%;")
+                    input(type="email", placeholder="email", value="Email")
+                    button.btn.btn-primary.right-button-icon Submit
+
+        .cards(style="color:#fff; background-color:#32457E;")
+            .card-banner-top
+                p(style="color:#fff;") Policy
+            .card-image-top
+                img(src="images/laptop-branding.png" alt="Laptop")
+            .card-text
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+                button.btn.btn-primary.right-button-icon(type="button" style="background-color:#FFBF47; border-color:#FFBF47;") Continue
+
+        //.callout--generous
+            h3 Page
+            p Pagey page
