@@ -140,11 +140,6 @@ html
 				.styleguide--header--content
 					a(href="index.html")
 						img(src="images/ca-logo-hz-white-280px.svg")
-			//header.main-header
-				.main-header__content.main-content
-					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
 
 		.main-container
 			nav.main-breadcrumb
@@ -154,6 +149,8 @@ html
 
 			.main-content
 				if sidebar
+					block sidebar
+
 					.main-content__right(id="main", role="main")
 						if title
 							.title
@@ -166,8 +163,6 @@ html
 								include sharebar.jade
 						else
 							block content
-
-					block sidebar
 				else
 					.title
 						h1.title__heading.js-ref
@@ -299,5 +294,6 @@ html
 
 		<!--[if IE 8]></div><![endif]-->
 		script(src="js/advisor.js")
+		script(src="js/sidebar.js")
 		script(src="js/core.js")
 		block script-bottom

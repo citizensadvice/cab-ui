@@ -5,7 +5,7 @@
  */
 
 .main-content__sidebar {
-	float: left;
+	//float: left;
 	//clear: left;
 	width: @width-span-4;
 	overflow: hidden; // Stop margin collapsing issues
@@ -357,3 +357,52 @@ html[lang="en-SCT"] .side-nav > h2 {
 	background: @heritage-blue;
 }
 
+// Styles for collapsible sidebar on mobile
+.side-nav-beta {
+    background-color: none;
+
+    .side-nav-beta__button {
+    	display: none;
+		padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+		display: none;
+		border-bottom: none;
+		color: @heritage-blue;
+		font-weight: @font-weight-bold;
+		background-color: @gray-8;
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+        background-color: @white;
+        margin: 0;
+        border: 1px solid @gray-6;
+        margin-bottom: 1.5rem;
+	    .side-nav-beta__button {
+	    	display: block;
+	    }
+        .side-nav-beta__button + li,
+        .side-nav-beta__button + li + li {
+            display: none !important;
+        }
+        .expanded& .side-nav-beta__button + li,
+        .expanded& .side-nav-beta__button + li + li {
+            display: block !important;
+        }
+        .expanded& .side-nav-beta__button + li + li ul {
+        	margin: 0;
+        }
+        .expanded& .side-nav-beta__button {
+        	border-bottom: 1px solid @gray-6;
+        }
+    }
+
+    .side-nav-beta__button {
+        @media screen and (max-width: @screen-xs-max) {
+            .btn-icon(@i-vertical-dots,@color:@heritage-blue);
+            cursor: pointer;
+            .expanded& {
+                .btn-icon(@i-cross,@color:@heritage-blue);
+            }
+        }
+    }
+
+}
