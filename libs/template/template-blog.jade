@@ -9,7 +9,7 @@ html
 		meta(name="keywords")
 		meta(name="description")
 
-		title Citizens Advice style guide
+		title Citizens Advice blog
 			- if (typeof title !== "undefined")
 				| - #{title}
 
@@ -162,7 +162,7 @@ html
 				if sidebar
 					.main-content__right(id="main", role="main")
 						if title
-							.title
+							//.title
 								h1.title__heading.js-ref
 									span.title__title #{title}
 						if toolbars
