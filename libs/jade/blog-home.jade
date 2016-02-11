@@ -10,6 +10,15 @@ extends ../template/template-blog.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home"}])
+	.row
+		.span12
+			.blog-panel-intro
+				h1 Our users, this means all of you
+				p.small #[a(href="#") Cat Togher] on February 5, 2016 in #[a(href="#") Casebook], #[a(href="#") Design] 
+				p No 2 local Citizens Advice are the same. They don’t represent the same people, they have different funding and they are different sizes. That’s why we’ve been working really hard to get the whole network signed up and involved in the digital project.
+
+				a(href="#" style="border-bottom:none;")
+					button.btn.btn-primary.right-button-icon(type="button" style="background-color:#81CEC6; border-color:#81CEC6;") Read full article
 
 block sidebar
 	include ../template/sidebar-blog.jade
