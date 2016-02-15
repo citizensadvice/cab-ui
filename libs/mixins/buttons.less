@@ -12,6 +12,8 @@
     padding: @box-spacing-vertical @box-spacing-horizontal;
     margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
     display: inline-block;
+    border-radius: @form-border-radius;
+    font-weight: @font-weight-bold;
     &:hover,
     &:focus,
     &:active {
@@ -30,22 +32,16 @@
     }
 }
 
-.btn-small (
-        @btn-small-text: @heritage-blue,
-        @btn-small-border: @heritage-blue-light,
-        @btn-small-background: @heritage-blue-lightest,
-        @btn-small-background-hover: @heritage-blue
-    ){
+.btn-small {
     padding: .3em .5em;
     margin-left: .25rem;
     font-size: @font-size-small;
-    cursor: pointer;
-    color: @btn-small-text;
-    background-color: @btn-small-background;
-    border: 1px solid @btn-small-border;
-
-    &:hover, &:active, &:focus  {
-        background-color: @btn-small-background-hover;
-        border: 1px solid @btn-small-border;
+    color: @heritage-blue;
+    background-color: @white;
+    border-radius: @form-border-radius;
+    font-weight: @font-weight-bold;
+    &:hover,
+    &:active,
+    &:focus  {
     }
 }

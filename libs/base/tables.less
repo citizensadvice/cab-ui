@@ -7,14 +7,14 @@ table {
     margin: @box-spacing-vertical 0;
     border-collapse: collapse;
     //table-layout: fixed;
-    &.full-width {
-        width: 100%;
-    }
-    .total {
+    width: 100%;
+    .total,
+    tfoot {
         font-weight: @font-weight-bolder;
         background-color: @gray-7;
     }
-    .amount {
+    .amount,
+    .right {
         width: 30%;
         text-align: right;
     }
@@ -68,10 +68,16 @@ td {
     }
 }
 
-th {
+th,
+*[scope=col],
+*[scope=row],
+thead td {
     background: @heritage-blue-lightest;
     color: @heritage-blue;
     font-weight: @font-weight-bolder;
+    border-color: @heritage-blue-lighter;
+    border-bottom: 1px solid @heritage-blue-lighter;
+    border-top: 1px solid @heritage-blue-lighter;
 }
 
 // Sortable Table
@@ -294,6 +300,7 @@ table.simple-table td {
         }
         &.active td:first-of-type:before {
             transform: rotate(90deg);
+            transform-origin: center left;
         }
     }
     & > td {

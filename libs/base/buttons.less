@@ -4,8 +4,6 @@
 
 .btn {
     cursor: pointer;
-    border-radius: @form-border-radius;
-    font-weight: bold;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
     &:hover,
@@ -20,10 +18,6 @@
     }
 }
 
-.btn,
-.button,
-.btn-primary,
-.button--blue,
 button,
 input[type=submit],
 input[type=reset],
@@ -31,27 +25,72 @@ input[type=button] {
     .btn();
 }
 
+.btn,
+.btn-primary,
+.button,
+.button--blue {
+    .btn();
+}
+
+
+.btn-primary,
+.button,
+.button--blue {
+    .btn();
+    &.btn-small {
+        border-color: @heritage-blue-light;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @blue-lighter;
+            border-color: @heritage-blue-light;
+            color: @heritage-blue;
+        }
+    }
+}
+
+.btn-light,
 .btn-primary-light {
     .btn(
         @btn-background: @aqua-light,
         @btn-background-hover: @aqua
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @aqua-light;
+        }
+    }
 }
 
-.btn-primary-cancel {
+.btn-white {
     .btn(
         @btn-text:@heritage-blue,
         @btn-background:@white,
         @btn-background-hover:@heritage-blue-lightest
     );
+    &.btn-small {
+        border-color: @heritage-blue-lightest;
+    }
 }
 
 .btn-secondary {
     .btn (
-    @white,
-    @heritage-blue,
-    darken(@heritage-blue, 5%)
+        @white,
+        @heritage-blue,
+        darken(@heritage-blue, 5%)
     );
+    &.btn-small {
+        border-color: @heritage-blue-light;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @blue-lighter;
+            border-color: @heritage-blue-light;
+            color: @heritage-blue;
+        }
+    }
 }
 
 .btn-right {
@@ -60,35 +99,63 @@ input[type=button] {
 }
 
 .btn-disabled,
-.button--grey,
-button:disabled {
+.button--grey {
     cursor: not-allowed;
     .btn(
-    @gray-3,
-    @gray-6,
-    @gray-6
+        @gray-3,
+        @gray-6,
+        @gray-6
     );
+}
+
+button:disabled {
+    border-color: @gray-6;
+    background-color: @gray-6;
+    color: @gray-3;
+    &:hover,
+    &:active,
+    &:visited {
+        border-color: @gray-6;
+        background-color: @gray-6;
+        color: @gray-3;
+    }
 }
 
 .btn-warning {
     .btn(
-    @white,
-    @red,
+        @white,
+        @red,
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @red-lightest;
+            color: @heritage-blue;
+        }
+    }
 }
 
 .btn-success,
 .button--green {
     .btn(
-    @white,
-    @green,
-    @green-dark
+        @white,
+        @green,
+        @green-dark
     );
+    &.btn-small {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @green-lighter;
+            color: @heritage-blue;
+        }
+    }
 }
 
 // Small Button styles
 
-.btn-small,
+/*.btn-small,
 .btn-primary-outline {
     .btn-small(
         @heritage-blue,
@@ -114,7 +181,7 @@ button:disabled {
         @white,
         @red-lighter
     );
-}
+}*/
 
 // Multiple buttons in a set
 

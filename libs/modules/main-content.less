@@ -97,6 +97,14 @@
     display: block;
     .btn-icon(@i-right,@color:@heritage-blue);
 
+    &--modal {
+        .btn-icon(@i-doc-image,@color:@heritage-blue);
+    }
+
+    &--modal-search {
+        .btn-icon(@i-search,@color:@heritage-blue);
+    }
+
     h1, h2, h3, h4, h5, h6, p {
         text-decoration: none;
         border: none;
@@ -114,6 +122,14 @@
     }
 }
 
+// Used for the summary box at the top of long content pages
+.steps {
+    background-color: @heritage-blue-lightest;
+    padding: @box-spacing-horizontal;
+    h1,h2,h3,h4,h5,h6 {
+        margin-top: 0;
+    }
+}
 
 // @todo This needs renamed
 .articleContent {
@@ -129,7 +145,7 @@
 }
 
 // table of contents at the top of a page
-.articleContent nav {
+/*.articleContent nav {
     .callout(
         @gray-8,
         @heritage-blue
@@ -150,4 +166,4 @@
             }
         }
     }
-}
+}*/

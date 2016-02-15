@@ -36,11 +36,8 @@ fieldset,
     margin-bottom: @box-spacing;
 }
 
-legend {
-    color: @heritage-blue;
-}
-
 label,
+legend,
 .form__label {
     display: block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
@@ -58,7 +55,7 @@ label,
 
 .form-hint {
     display: block;
-    color: @gray-3;
+    color: @gray-2;
     margin-bottom: @box-spacing*.5;
     margin-top: -@box-spacing*.5;
     font-weight: @font-weight-base;
@@ -104,7 +101,7 @@ select {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-    margin-top: 1px \9; // IE8-9
+    .ie(margin-top,1px);
     line-height: normal;
     margin-right: .4rem;
     &[disabled] {
@@ -172,7 +169,7 @@ select {
     }
     &:focus {
         border-width: 1px;
-        outline: 2px solid @heritage-blue-lighter;
+        outline: 2px solid @heritage-yellow;
     }
 }
 
@@ -211,6 +208,7 @@ textarea.form__field {
     z-index: 1;
     background-color: @gray-8;
     input {
+        display: inline-block;
         &:before {
             content: '';
             display: block;
@@ -249,6 +247,9 @@ textarea.form__field {
                 border-color: @blue-light;
             }
         }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
     }
     &--inline {
         clear: none;
@@ -259,9 +260,6 @@ textarea.form__field {
         clear: left;
         float: left;
         display: table;
-        input {
-            display: table-cell;
-        }
         p {
             display: block;
             //float: right;
@@ -297,9 +295,9 @@ textarea.form__field {
     width: 100%;
     &:after {
         pointer-events:none;
-    }
-    &:after {
-        display: none \9; // Hides dropdown icon for IE8
+        @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
+            display: none;
+        }
     }
     select {
         background: none;
@@ -307,10 +305,11 @@ textarea.form__field {
         -webkit-appearance: none;
         -moz-appearance: window;
         padding-right: 2em;
+        .ie(width,100%);
     }
     .dropdown,
     select {
-        padding-right: 0 \9; // Removes space for dropdown icon on IE8
+        .ie(padding-right,1em);
     }
 }
 
@@ -333,7 +332,8 @@ input[class*="dob-"] {
         margin: 0;
     }
 }*/
-.form-group-date {
+.form-group-date fieldset {
+    &:extend(fieldset);
     width: 5rem;
     display: inline-block;
     float: left;
@@ -368,6 +368,11 @@ input[class*="dob-"] {
         border-radius: 0;
         border-right: 0;
         width: 100%;
+        display: inline-block;
+    }
+    button {
+        .ie(padding,0 1em);
+        display: inline-block;
     }
     *:first-child {
         border-radius: @form-border-radius 0 0 @form-border-radius;
@@ -396,6 +401,7 @@ input[class*="dob-"] {
 .field-group--toggle {
     label {
         padding: @box-spacing-vertical @box-spacing-horizontal;
+        .ie(padding,0);
         text-align: center;
         input[type="radio"],
         input[type="checkbox"] {
@@ -439,6 +445,9 @@ input[class*="dob-"] {
         .ie8 & {
             display: block;
         }
+        select {
+            .ie(width,100%);
+        }
     }
     input:first-of-type {
         border-radius: @form-border-radius 0 0 @form-border-radius;
@@ -447,7 +456,7 @@ input[class*="dob-"] {
         width: auto;
     }
     select {
-        width: auto \9;
+        .ie(width,auto);
     }
     select,
     input {
