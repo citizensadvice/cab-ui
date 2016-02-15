@@ -17,30 +17,30 @@ block sidebar
 
 block content
 	.dialog__mask(style="z-index: 2;")
-	.dialog.dialog--extent-picker(aria-describedby="dialog-1-main", aria-labelledby="dialog-1-label", role="alertdialog", style="z-index: 3;", tabindex="-1")
-		header.dialog__header
-			h2.dialog__title#dialog-1-label Where in the UK do you live?
-			button.dialog__close(data-action="close", type="button")
-				i.dialog__close-icon(aria-hidden="true")
-				span.dialog__close-text Close
+		.dialog.dialog--extent-picker(aria-describedby="dialog-1-main", aria-labelledby="dialog-1-label", role="alertdialog", style="z-index: 3;", tabindex="-1")
+			header.dialog__header
+				h2.dialog__title#dialog-1-label Where in the UK do you live?
+				button.dialog__close(data-action="close", type="button")
+					i.dialog__close-icon(aria-hidden="true")
+					span.dialog__close-text Close
 
-		div.dialog__main#dialog-1-main
-			div
-				p The law can vary in different parts of the UK.
+			div.dialog__main#dialog-1-main
+				div
+					p The law can vary in different parts of the UK.
 
-			ul.extent-selection
-				li
-					a.btn.btn-primary.extent-selection__button(href="?lang=en-GB") England
-				li
-					a.btn.btn-primary.extent-selection__button(href="?lang=en-NIR") Northern Ireland
-				li
-					a.btn.btn-primary.extent-selection__button(href="?lang=en-SCT") Scotland
-				li
-					a.btn.btn-primary.extent-selection__button(href="?lang=en-WLS") Wales
-				li
-					a.btn.btn-primary.extent-selection__button(href="?lang=cy") Cymru
+				ul.extent-selection
+					li
+						a.btn.btn-small(href="?lang=en-GB") England
+					li
+						a.btn.btn-small(href="?lang=en-NIR") Northern Ireland
+					li
+						a.btn.btn-small(href="?lang=en-SCT") Scotland
+					li
+						a.btn.btn-small(href="?lang=en-WLS") Wales
+					li
+						a.btn.btn-small(href="?lang=cy") Cymru
 
-		footer.dialog__footer
+			footer.dialog__footer
 
 	//script.
 		$(document).ready(function(){
