@@ -1,0 +1,72 @@
+block settings
+	- var title = "Citizens Advice digital blog"
+	- var sidebar = true
+	- var toolbars = false
+	//- var cookiemonster = true
+	- var mockup = false
+
+extends ../template/template-blog.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home"}])
+
+block sidebar
+	include ../template/sidebar-blog.jade
+
+block content
+	.articleContent
+		div
+			h1(style="margin-top:0.2rem;") Working with advisers to design new PIP content
+			
+			p.small #[a(href="#") Stephen Rehill] on January 18, 2016 in #[a(href="#") Content], #[a(href="#") Design] 
+
+			p Content is only as good as the advice that sits behind it. The values inherent in that advice come from an understanding of our audience – their goals and their problems. By designing content that focuses on these things we can create something original and valuable that users will engage with and understand.
+
+			p Working with advisers is an an essential part of our content design process.
+
+			p How we involved advisers 
+
+			p Here’s an outline of just some of the ways advisers have been helping us design content for people looking for help to fill out their Personal Independence Payment (PIP) claim form.
+
+			ol
+				li We sat down with advisers in their local Citizens Advice and, armed with little more than a copy of the claim form and some post-it notes, listened to what advisers had to say, This helped us identify user problems (there were lots).
+
+				li We got a group of advisers together in a workshop and delved more deeply into the problems identified. This helped us validate and understand those problems.
+
+				li We came up with different ways to help users fill in their claim form and tested it with the our database of 500 or so advisers. This helped us rethink our approach and prioritise the problems we could solve.
+
+				li We sent advisers an early version of the advice we’d designed and asked them to feed back their thoughts (the good, the bad and the ugly – it’s all gold to us). This helped reassure us that the what we had scoped out resembled “good”.
+
+			p If someone can go to an adviser and get expert advice and help with their PIP claim form then they should also get that same value from our website.
+
+			p From 15 February people will be able to do just that. We’ll be publishing new content that focuses on the help people need and not the nuances and complications of the DWP claim form, assessment criteria and unhelpful guidance (all 70,000-plus jargon-filled words of it),
+
+
+		.title__subheading--footer
+			p Share this page
+				br
+				a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
+				a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
+				a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
+				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
+
+		.well(style="background-color:#fff;")
+			fieldset
+				h2(style="margin-top:.2rem;") Add your comments
+				
+				label(for="name") Your name
+				.search-results__field(style="width:100%; margin-bottom: 10px;")
+					input(type="email", placeholder="email", value="Name")
+				
+				label(for="email") Your email
+				.search-results__field(style="width:100%;")
+					input(type="email", placeholder="email", value="Email")
+
+			fieldset
+				label(for="exampleTextarea") Your comments
+				textarea#exampleTextarea(rows="3", style="width:100%; margin-bottom: 10px;")
+
+				button.btn.btn-secondary.right-button-icon Submit
+
+		//.well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
