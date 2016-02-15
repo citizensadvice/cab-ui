@@ -1,0 +1,39 @@
+// Styles specifially for the extent sswitcher
+.dialog--extent-picker {
+	.dialog__header { 
+		
+		background: transparent;
+
+		.dialog__close {
+			position: absolute;
+			color: @gray-3;
+			top: @box-spacing-vertical*2;
+    		padding: .75rem 1rem;
+    		z-index: 2;
+			&:hover {
+				color: @heritage-blue;
+			}
+		}
+	}
+
+	.dialog__title {
+		color: @heading-primary-color;
+		font-size: @font-size-h2;
+		height: auto;
+	    white-space: normal;
+	}
+}
+
+.extent-selection {
+	list-style: none;
+	padding: 0;
+
+	> li {
+		margin: 0;
+		display: inline-block;
+
+		> a {
+			margin-left: 0;
+		}
+	}
+}
