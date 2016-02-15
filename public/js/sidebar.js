@@ -3,9 +3,9 @@ jQuery(function($){
     var clickAllowed = true;
 
     // click function
-    $('.side-nav-beta__button').click(function(){
+    $('.section-nav__heading').click(function(){
         if(clickAllowed) {
-            $('.side-nav-beta__button').parent().parent().toggleClass('expanded');
+            $('.section-nav__heading').parent().toggleClass('expanded');
         }
     });
 
@@ -15,7 +15,7 @@ jQuery(function($){
             clickAllowed = true;
         } else {
             clickAllowed = false;
-            $('.side-nav').removeClass('expanded');
+            $('.section-nav').removeClass('expanded');
         }
     }
 

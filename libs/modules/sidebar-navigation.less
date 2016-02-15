@@ -25,12 +25,13 @@
 	.main-content__sidebar;
 	margin: 0 0 @box-spacing 0;
 	overflow: visible;
+	background-color: none;
 
 	&.sibling {
 		border: 0 solid @inventive-teal;
 		border-top-width: .5;
 		background-color: @gray-8;
-		.side-nav-beta__sibling a:hover {
+		.section-nav__sibling a:hover {
 			background-color: @gray-6;
 			cursor: pointer;
 		}
@@ -55,81 +56,65 @@
 		}
 	}
 
-	&__heading {
-		display: none;
-		&.-active,
-		&.-open {
-			display: block;
-			/* Hide icon until research deems required
-			padding-right: 2.7rem; */
-			position: relative;
-		}
-		> a {
+	&__parent {
+		color: @heritage-blue;
+		font-weight: @font-weight-boldest;
+		font-size: @font-size-medium;
+		&:visited {
 			color: @heritage-blue;
-			font-weight: @font-weight-boldest;
-			font-size: @font-size-medium;
-			/* Hide icon until research deems required
-			&:before {
-				content: "\2c4";
-				font-family: 'cab-icons';
-				display: inline-block;
-				color: @heritage-blue-lighter;
-				width: 1.5rem;
-				text-align: center;
-				margin-right: .5rem;
-				font-weight: @font-weight-base;
-				.vertical-align(absolute);
-				right: .5rem;
-			}
-			*/
 		}
 	}
 
-	&__sibling {
-		span {
-			border: none;
-		}
+	&__parent + ul li {
 		&:hover {
 			background-color: @gray-8;
 		}
-		.section {
-			color: @heritage-blue;
-			font-weight: @font-weight-boldest;
-			//font-size: @font-size-medium;
-			background-color: @gray-8;
-			&:hover {
-				background-color: @heritage-blue-lightest;
-			}
+		a:visited {
+			color: @purple-dark;
 		}
 	}
-	.-current {
-		background-color: @heritage-blue-lightest;
-		font-weight: @font-weight-bolder;
-		border-color: @heritage-blue-lighter;
-		a {
-			cursor: default;
-		}
-		span {
-			border: none;
-		}
-	}
-	/*.side-nav-beta__heading + li {
-		display: block;
-	}
-	@media screen and (max-width: @screen-xs-max) {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		max-height: 100%;
-		overflow: scroll;
-		background-color: @white;
+
+
+	// Styles for collapsible sidebar on mobile
+    &__heading {
+    	display: none;
+		padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+		font-size: @font-size-h3;
 		margin: 0;
-		box-shadow:  0px -2px 0px 0px @gray-7;
-		.side-nav-beta__heading + li {
-			display: none;
-		}
-	}*/
+		border-bottom: none;
+		color: @heritage-blue;
+		font-weight: @font-weight-bold;
+		background-color: @gray-8;
+    }
+
+    @media screen and (max-width: @screen-xs-max) {
+        background-color: @white;
+        margin: 0;
+        border: 1px solid @gray-6;
+        margin-bottom: 1.5rem;
+	    &__heading {
+	    	display: block;
+	    }
+        &__heading + ul {
+            display: none;
+        }
+        .expanded& &__heading + ul {
+            display: block;
+        }
+        .expanded& &__heading {
+        	border-bottom: 1px solid @gray-6;
+        }
+    }
+
+    &__heading {
+        @media screen and (max-width: @screen-xs-max) {
+            .btn-icon(@i-vertical-dots,@color:@heritage-blue);
+            cursor: pointer;
+            .expanded& {
+                .btn-icon(@i-cross,@color:@heritage-blue);
+            }
+        }
+    }
 }
 
 .side-nav {
@@ -356,50 +341,4 @@
 
 html[lang="en-SCT"] .side-nav > h2 {
 	background: @heritage-blue;
-}
-
-// Styles for collapsible sidebar on mobile
-.side-nav-beta {
-    background-color: none;
-
-    .side-nav-beta__button {
-    	display: none;
-		padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
-		border-bottom: none;
-		color: @heritage-blue;
-		font-weight: @font-weight-bold;
-		background-color: @gray-8;
-    }
-
-    @media screen and (max-width: @screen-xs-max) {
-        background-color: @white;
-        margin: 0;
-        border: 1px solid @gray-6;
-        margin-bottom: 1.5rem;
-	    .side-nav-beta__button {
-	    	display: block;
-	    }
-        .side-nav-beta__button + li,
-        .side-nav-beta__button + li + li {
-            display: none;
-        }
-        .expanded& .side-nav-beta__button + li,
-        .expanded& .side-nav-beta__button + li + li {
-            display: block !important;
-        }
-        .expanded& .side-nav-beta__button {
-        	border-bottom: 1px solid @gray-6;
-        }
-    }
-
-    .side-nav-beta__button {
-        @media screen and (max-width: @screen-xs-max) {
-            .btn-icon(@i-vertical-dots,@color:@heritage-blue);
-            cursor: pointer;
-            .expanded& {
-                .btn-icon(@i-cross,@color:@heritage-blue);
-            }
-        }
-    }
-
 }
