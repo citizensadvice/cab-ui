@@ -1,136 +1,47 @@
 /**
  * EXTENT SWITCHER MODAL
- *
- * New approach to extent switcher.
- *
  */
 
-.modal {
-        position: fixed;
-        padding: 10% 20% 0 20%;
-        background: #fff;
-        z-index: 100;
-        opacity: 0;
-        pointer-events: none;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        -ms-transition: all 0.25s ease-out;
-        -o-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-        background: rgba(0, 0, 0, 0) url("assets/images/popup-background.png") repeat scroll 0 0;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: scroll;
-    @media (max-width: @screen-xs-max ){
-        padding: 5% 5% 0 5%;
+// Styles specifially for the extent sswitcher
+.dialog--extent-picker {
+
+    .dialog__header {
+        background: @white;
+        .dialog__title {
+            overflow: visible;
+            height: auto;
+            white-space: normal;
+        }
+        .dialog__close {
+            position: absolute;
+            color: @gray-3;
+            top: @box-spacing-vertical*2;
+            padding: .75rem 1rem;
+            z-index: 2;
+            &:hover {
+                color: @heritage-blue;
+            }
+        }
+        h2 {
+            color: @heritage-blue;
+            font-size: @font-size-larger;
+        }
+    }
+    .dialog__footer {
+        display: none;
     }
 }
-.modal.show {
-  opacity: 1;
-        pointer-events: auto;
+
+.extent-selection {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.extent-country-select {
-  width: @width-span-12;
-  background-color: @heritage-blue-lightest;
-  padding: @box-spacing-horizontal*1.5;
-  margin-top: @box-spacing*.5;
-  h2 {
-    font-size: @font-size-h3;
-    margin-top: -(@line-height-computed * 0.25);
-  }
+@media (max-width: @screen-xs-max) {
+
+    .extent-selection__button {
+        width: 100%;
+    }
+
 }
-
-/* Add background fill when active */
-
-.popup-background {
-  display: none;
-  background: rgba(0, 0, 0, 0) url("assets/images/popup-background.png") repeat scroll 0 0;
-  z-index: 5000;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  overflow: scroll;
-}
-
-
-.popup_content, .extent-overlay {
-  z-index: 5001; /* any number + 1 */
-  background-color: @heritage-blue-lightest;
-  display: block;
-  margin: 0px auto;
-  padding: @box-spacing-horizontal;
-  max-width: 500px;
-  //border-top: 10px solid @heritage-blue;
-  position: relative;
-  top: 5%;
-  overflow: visible;
-}
-
-
-.extent-overlay {
-  width: 80%;
-  max-width: 50em;
-  .vertical-align;
-  .row::before, .row::after {
-    content: "";
-    display: table;
-    line-height: 0;
-  }
-}
-
-/* Not sure if we still need anything here
-
-.extent-overlay .row::after{
-    clear: both;
-}
-.extent-overlay .span2{
-    background:@heritage-blue;
-    color: @white;
-    display: block;
-    float:left;
-    font-weight: bold;
-    height: 60px;
-    margin: 0 1.5%;
-    padding: 5px 10px;
-    width: 17%;
-}
-
-.popup_feedback {
-    max-width: 800px;
-    height: 80%;
-    overflow-y: scroll;
-}
-
-
-.popup__heading {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.extent-overlay .span2:hover{text-decoration: none; background: darken( @blue, 10%);}
-.extent-overlay .span2 span{width: 100%; display: block;}
-
-.extent-selection-mobile{display: none;}
-
-
-.popup_wrapper {
-z-index: 5001; /* any number + 1 */
-//margin: 0 20px 0 10px;
-/*}
-
-.popup__close {
-    float: right;
-    margin-top: -.5em;
-}
-
-*/
