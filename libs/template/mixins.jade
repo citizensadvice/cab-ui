@@ -15,7 +15,8 @@ mixin breadcrumbs(obj)
 
 mixin sidebar(obj, key)
 	nav.section-nav
-		h2.section-nav__heading In this section
+		h2.section-nav__heading
+			a In this section
 		ul
 			li
 				a.section-nav__parent(href="../##{section}") #{section}
