@@ -30,6 +30,15 @@ input[type=button] {
 .button,
 .button--blue {
     .btn();
+    &.btn-small {
+        &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
+            background-color: @aqua-light;
+        }
+    }
 }
 
 
@@ -39,9 +48,11 @@ input[type=button] {
     .btn();
     &.btn-small {
         border-color: @heritage-blue-light;
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
             background-color: @blue-lighter;
             border-color: @heritage-blue-light;
             color: @heritage-blue;
@@ -56,9 +67,11 @@ input[type=button] {
         @btn-background-hover: @aqua
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
             background-color: @aqua-light;
         }
     }
@@ -83,9 +96,12 @@ input[type=button] {
     );
     &.btn-small {
         border-color: @heritage-blue-light;
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @blue-lighter;
             border-color: @heritage-blue-light;
             color: @heritage-blue;
@@ -127,9 +143,12 @@ button:disabled {
         @red,
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @red-lightest;
             color: @heritage-blue;
         }
@@ -144,9 +163,12 @@ button:disabled {
         @green-dark
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @green-lighter;
             color: @heritage-blue;
         }
