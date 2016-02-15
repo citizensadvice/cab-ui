@@ -22,9 +22,8 @@ mixin sidebar(obj, key)
 				a.section-nav__parent(href="../##{section}") #{section}
 				ul
 					- each item,index in obj
-						- active = index === key ? "-current": ""
 						li
-							+link(item.title, item.href, item.text)(class=active)
+							+link(item.title, item.href, item.text)
 
 mixin sidebarSiblings(obj, key)
 	nav.section-nav.sibling

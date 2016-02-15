@@ -34,7 +34,7 @@ html
 		script.
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
-				$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+				$('.section-nav a[href="' + filename + '"]').addClass('active');
 			});
 
 		block script
