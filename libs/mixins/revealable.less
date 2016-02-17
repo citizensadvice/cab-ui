@@ -5,37 +5,37 @@
  */
 
 .revealable (
-        @revealable-background: @heritage-blue-lighter;
-        @revealable-heading: @heritage-blue;
-        @revealable-border: @heritage-blue;
-        @revealable-icon: @blue;
+        @background: @heritage-blue-lighter;
+        @heading: @heritage-blue;
+        @border: @heritage-blue;
+        @icon: @blue;
     ) {
 
     margin: @box-spacing-vertical 0;
     background-color: @white;
     color: @text-color;
-    border: solid @revealable-border;
+    border: solid @border;
     border-width: 1px 1px 0px 1px;
 
-    .collapse-toggle,
+    .revealable-toggle,
     .revealable__heading {
-        background-color: @revealable-background;
-        background-color: @revealable-background;
-        color: @revealable-heading;
-        border-bottom: 1px solid @revealable-border;
+        background-color: @background;
+        background-color: @background;
+        color: @heading;
+        border-bottom: 1px solid @border;
         h1, h2, h3, h4, h5, h6 {
-            color: @revealable-heading;
+            color: @heading;
         }
         &:after {
-            color: @revealable-icon;
+            color: @icon;
         }
     }
 
-    .collapse-toggle-close
+    .revealable-toggle-close
     .revealable__close {
-        color: @revealable-heading;
+        color: @heading;
         &:hover {
-            color: @revealable-heading;
+            color: @heading;
         }
     }
 
@@ -44,11 +44,11 @@
         content: "\f068";
     }
 
-    .collapse-content, // This needs to be removed eventually
+    .revealable-content, // This needs to be removed eventually
     .revealable__content {
-        border-bottom: 1px solid @revealable-border;
+        border-bottom: 1px solid @border;
         /*h1, h2, h3, h4, h5, h6 {
-            color: @revealable-heading;
+            color: @heading;
         }*/
     }
 }
@@ -59,7 +59,7 @@ i.icon-chevron-up {
     display: none;
 }
 
-.collapse-toggle,
+.revealable-toggle,
 .revealable__heading {
     padding: @box-spacing-vertical @box-spacing-horizontal*3.5 @box-spacing-vertical @box-spacing-horizontal;
     cursor: pointer;
@@ -92,7 +92,7 @@ i.icon-chevron-up {
     }
 }
 
-.collapse-toggle-close, // This needs to be removed eventually
+.revealable-toggle-close, // This needs to be removed eventually
 .revealable__close {
     cursor: pointer;
     display: block;
@@ -126,7 +126,7 @@ i.icon-chevron-up {
     content: "\f068";
 }
 
-.collapse-content, // This needs to be removed eventually
+.revealable-content, // This needs to be removed eventually
 .revealable__content {
     padding: 0;
     border: 0;
@@ -143,13 +143,13 @@ i.icon-chevron-up {
 }
 
 // Functional CSS for JS
-.collapse-toggle {
+.revealable-toggle {
     cursor: pointer;
 }
-.collapse-content {
+.revealable-content {
     display: none;
 }
-.collapse-content.default {
+.revealable-content.default {
     display: block;
 }
 .start-open {

@@ -9,7 +9,7 @@
 
 $(document).ready(function($) {
     //$('.open').next.slideDown();
-    $('.collapse').find('.collapse-toggle').click(function(){
+    $('.revealable').find('.revealable-toggle').click(function(){
         $(this).toggleClass("open");
         $(this).next().slideToggle();
         //$(this).goTo();
@@ -17,7 +17,7 @@ $(document).ready(function($) {
             $(this).goTo();
         }
     });
-    $('.collapse').find('.collapse-toggle-close').click(function(){
+    $('.revealable').find('.revealable-toggle-close').click(function(){
         $(this).parent().slideToggle();
         $(this).parent().prev().toggleClass("open");
         $(this).parent().prev().goTo();
@@ -26,7 +26,7 @@ $(document).ready(function($) {
 
 // Collapsible tables
 $(document).ready(function($) {
-    $('.table-collapse--toggle').click(function(){
+    $('.table-revealable--toggle').click(function(){
         $(this).toggleClass("active");
         $(this).next().toggle();
     });

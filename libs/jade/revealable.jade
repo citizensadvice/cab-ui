@@ -16,49 +16,49 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Collapsible sections allow you to hide content that isn’t applicable to most people visiting the page, but will still be relevant to some. This is a great way of making the page more succinct and easier to scan.
+			p Revealable sections allow you to hide content that isn’t applicable to most people visiting the page, but will still be relevant to some. This is a great way of making the page more succinct and easier to scan.
 
-			p Keep in mind when creating content that the content of callopsibles will most likely not be indexed in search engines, however the 'Toggle title' will be, so this is very important to be clear and descriptive. You also shouldn't use more than 4 accordions per page.
+			p Keep in mind when creating content that the content of revealables will most likely not be indexed in search engines, however the 'Toggle title' will be, so this is very important to be clear and descriptive. You also shouldn't use more than 4 accordions per page.
 
 			p Keep in mind hidden content can also be easy for users to miss, so they should be used sparingly or only with a good reason.
 			.example-box-plain
-				.collapse.collapsible
-					.collapse-toggle Unstyled content inside header/toggle
-					.collapse-content
+				.revealable
+					.revealable-toggle Unstyled content inside header/toggle
+					.revealable-content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-						a.collapse-toggle-close Close
+						a.revealable-toggle-close Close
 			pre
 				code.language-html
-					| &lt;div class="collapse collapsible"&gt;
-					| 	&lt;div class="collapse-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
-					| 	&lt;div class="collapse-content"&gt;
+					| &lt;div class="revealable"&gt;
+					| 	&lt;div class="revealable-toggle"&gt;Unstyled content inside header/toggle&lt;/div&gt;
+					| 	&lt;div class="revealable-content"&gt;
 					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
-					| 		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
+					| 		&lt;a class="revealable-toggle-close"&gt;Close&lt;/a&gt;
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
 			.example-box-plain
-				.collapse.collapsible
-					.collapse-toggle Collapses can be grouped
-					.collapse-content
+				.revealable
+					.revealable-toggle Revealables can be grouped
+					.revealable-content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-						a.collapse-toggle-close Close
-					.collapse-toggle Collapses can be grouped
-					.collapse-content
+						a.revealable-toggle-close Close
+					.revealable-toggle Revealables can be grouped
+					.revealable-content
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-						a.collapse-toggle-close Close
+						a.revealable-toggle-close Close
 			pre
 				code.language-html
-					| &lt;div class="collapse collapsible"&gt;
-					| 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
-					| 	&lt;div class="collapse-content"&gt;
+					| &lt;div class="revealable"&gt;
+					| 	&lt;div class="revealable-toggle"&gt;Revealables can be grouped&lt;/div&gt;
+					| 	&lt;div class="revealable-content"&gt;
 					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
-					| 		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
+					| 		&lt;a class="revealable-toggle-close"&gt;Close&lt;/a&gt;
 					| 	&lt;/div&gt;
-					| 	&lt;div class="collapse-toggle"&gt;Collapses can be grouped&lt;/div&gt;
-					| 	&lt;div class="collapse-content"&gt;
+					| 	&lt;div class="revealable-toggle"&gt;Revealables can be grouped&lt;/div&gt;
+					| 	&lt;div class="revealable-content"&gt;
 					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
-					| 		&lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
+					| 		&lt;a class="revealable-toggle-close"&gt;Close&lt;/a&gt;
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
