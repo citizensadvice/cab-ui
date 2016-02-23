@@ -115,7 +115,10 @@
 	    	display: block;
 	    }
         &__heading + ul {
-            display: none;
+            display: block;
+            .js & {
+            	display: none;
+            }
         }
         .expanded& &__heading + ul {
             display: block;
