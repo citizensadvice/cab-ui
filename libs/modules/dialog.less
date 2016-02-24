@@ -101,13 +101,15 @@
     margin: 0;
     right: 0;
 	.vertical-align(absolute);
+	&:focus {
+	    outline: 2px solid @heritage-yellow;
+	}
 	&:hover,
 	&:active,
 	&:focus {
 	    color: @white;
 	    background: none;
 	    box-shadow: none;
-	    border: none;
 	}
 }
 
