@@ -269,6 +269,7 @@ textarea.form__field {
     background-color: @white;
     display: inline-block;
     width: 100%;
+    border: 1px solid @gray-6;
     &:after {
         pointer-events:none;
         @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
@@ -282,6 +283,7 @@ textarea.form__field {
         -moz-appearance: window;
         padding-right: 2em;
         .ie(width,100%);
+        border: none;
     }
     .dropdown,
     select {
