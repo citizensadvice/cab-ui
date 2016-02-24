@@ -180,15 +180,6 @@ input[type="file"] {
     display: block;
 }
 
-/* The output tag isn't supported by MS
-output {
-    display: block;
-    padding-top: 11px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: @black;
-}
-*/
 
 // Reset height for textareas
 textarea.form__field {
@@ -268,20 +259,6 @@ textarea.form__field {
                 font-weight: @font-weight-bolder;
             }
         }
-    }
-}
-
-// What is this?
-.multi-select {
-    padding: 0;
-    height: @box-spacing*5.5;
-    option {
-        padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-        -webkit-appearance: none;
-    }
-    @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-        padding: @box-spacing-vertical @box-spacing-horizontal;
-        height: auto !important;
     }
 }
 
@@ -463,88 +440,6 @@ input[class*="dob-"] {
     }
 }
 
-// Custom dropdown icons
-.select--custom-icon() {
-
-    display: inline-block;
-    overflow: hidden; // Hide the arrow
-    vertical-align: middle;
-
-    & > select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: 0; //If you want a border set it on the parent
-        background: transparent;
-        padding: @box-spacing-vertical;
-
-        // We need to push the pointer off the side so it is hidden in the overflow
-        // In webkit / blink there is no pointer to move
-        // In IE the padding is on the outside of the pointer, but in Firefox it is on the inside
-        // In IE8 and below we cannot move the pointer
-
-        // The width, plus the pointer, plus the padding (for IE9+)
-        // This needs to be at least 1.75em to hide the pointer in IE
-        // (In our case this is therefore 1em + .75em padding)
-        // In <=IE8 this will be ignored
-        width: calc( ~"100% + 1.75em" );
-
-        // The image width plus some padding so the text isn't against the arrow in Blink/Webkit
-        // In IE/Firefox there will be extra space between the text and arrow due to the native arrow
-        // In <=IE8 this will be ignored
-        margin: 0 calc( ~"33px + .75em" ) 0 0;
-
-        // For chrome - the outline is cut off on the right so hide it completely */
-        outline: none;
-
-        /* The right positioning is the extra width from above
-               In <=IE8 this will be ignored as we've used the four value poitioning syntax
-            */
-    }
-}
-
-.custom-dropdown {
-    .select--custom-icon;
-    position: relative;
-    width: 85%;
-    float: left;
-    background: @gray-6;
-
-    & > i {
-        position: absolute;
-        right: 0;
-        top: 0;
-        background: @heritage-blue;
-        color: white;
-        padding: 0 .75em;
-        font-size: 1.3em;
-        pointer-events: none;
-        &:before {
-            padding: 0;
-        }
-    }
-}
-.custom-dropdown__select {
-    width: 80%;
-}
-.custom-dropdown__button {
-    width: 17%;
-    float: right;
-}
-
-// If pointer events aren't supported hide the custom dropdown
-.no-pointer-events .custom-dropdown > i {
-    display: none;
-}
-
-// Overrider attibute selector
-input.custom-dropdown__button {
-    margin-left: 1%;
-    width: 14%;
-    float: left;
-    border-radius: 0;
-    padding: .75em;
-}
-
 /* Search fields used in blocks */
 .search-inline {
     display: table;
@@ -581,12 +476,3 @@ input.custom-dropdown__button {
         }
     }
 }
-
-/*.search-icon {
-    background-image: url("assets/images/search.svg");
-    padding-right: 3;
-    background-repeat: no-repeat;
-    background-position: center right .6rem;
-    -webkit-background-size: 1.4;
-   background-size: 1.4;
-}*/
