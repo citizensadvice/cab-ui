@@ -38,7 +38,7 @@
             color: @heading;
         }
     }
-
+    
     .open:after, // This needs to be removed eventually
     .revealable__heading[aria-expanded=true]:after {
         content: "\f068";
@@ -96,9 +96,12 @@ i.icon-chevron-up {
 .revealable__close {
     cursor: pointer;
     display: block;
+    background-color: @white;
+    color: @heritage-blue;
     padding: @box-spacing-vertical @box-spacing-horizontal*3 @box-spacing-vertical @box-spacing-horizontal;
-    margin: @box-spacing-vertical -@box-spacing-horizontal -@box-spacing-vertical -@box-spacing-horizontal;
+    margin: @box-spacing-vertical @box-spacing-vertical*2 -@box-spacing-vertical -@box-spacing-horizontal;
     text-decoration: none;
+    border-radius: 0;
     position: relative;
     cursor: pointer;
     border: none;
@@ -118,6 +121,7 @@ i.icon-chevron-up {
     &:hover,
     &:focus {
         border: none;
+        background: @heritage-blue-lightest;
     }
 }
 
