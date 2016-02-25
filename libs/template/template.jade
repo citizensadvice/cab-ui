@@ -143,8 +143,6 @@ html
 
 			.main-content
 				if sidebar
-					block sidebar
-
 					.main-content__right(id="main", role="main")
 						if title
 							.title
@@ -157,6 +155,8 @@ html
 								include sharebar.jade
 						else
 							block content
+
+					block sidebar
 				else
 					.title
 						h1.title__heading.js-ref

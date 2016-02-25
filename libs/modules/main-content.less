@@ -34,6 +34,11 @@
     padding: 0 @box-spacing;
     margin-top: @box-spacing*2;
     margin-bottom: @box-spacing*1.5;
+
+    @media screen and ( max-width: @screen-xs-max ) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .main-content--full-width {
