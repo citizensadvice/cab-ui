@@ -17,8 +17,7 @@
  .title__subheading--footer {
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding: .35rem 0;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
     border-top: @gray-7 1px solid;
     border-bottom: @gray-7 1px solid;
     font-size: @font-size-small;
@@ -35,9 +34,13 @@
     margin-top: @box-spacing*2;
     margin-bottom: @box-spacing*1.5;
 
-    @media screen and ( max-width: @screen-xs-max ) {
+    @media screen and ( max-width: (@breakpoint-content) ) {
         display: flex;
         flex-direction: column;
+        padding: 0 9%;
+    }
+    @media screen and ( max-width: (@breakpoint-sm - 1) ) {
+        padding: 0 1rem;
     }
 }
 
@@ -64,7 +67,7 @@
         padding-right: @box-spacing*6;
     }
 
-    @media ( max-width: @screen-xs-max ) {
+    @media ( max-width: @breakpoint-content ) {
         float: none;
         width: auto;
         padding: 0;
@@ -76,7 +79,7 @@
     overflow: hidden; // Stop margin collapsing issues
     margin-bottom: @box-spacing*1.5;
 
-    @media ( max-width: @screen-xs-max ) {
+    @media ( max-width: @breakpoint-content ) {
         float: none;
         width: auto;
         margin-top: @box-spacing*1.5;
