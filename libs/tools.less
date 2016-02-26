@@ -126,6 +126,7 @@
 	.widget {
 		background-color: @white;
 		overflow: hidden;
+		padding: 2px;
 
 		.section-nav li ul a:not([href]),
 		.side-nav-beta li ul a:not([href]) {
@@ -164,8 +165,13 @@
 	}
 }
 
-/* Print styles
 @media print {
-	@import "base/print";
+	//@import "base/print";
+	.section-nav {
+		display: none !important;
+	}
+	.table-collapse {
+		display: block !important;
+		width: 100%;
+	}
 }
-*/
