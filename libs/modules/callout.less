@@ -19,6 +19,14 @@
 	.callout--border--left;
 }
 
+.box--sticky {
+    .callout(
+        @inventive-teal-lightest,
+        @text-color,
+        @callout-border: @inventive-teal-light
+    );
+}
+
 // Green
 .callout--confirmation {
     .callout(
@@ -56,7 +64,8 @@
 // Yellow
 .callout--alert,
 .dap-panel--important,
-.highlight--warning {
+.highlight--warning,
+.callout--info {
     .callout(
         @yellow-light
     );
