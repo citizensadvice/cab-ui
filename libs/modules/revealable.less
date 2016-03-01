@@ -43,6 +43,14 @@
 }
 
 .no-js .revealable {
-    padding: 1rem;
-
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    border: 1px solid @heritage-blue;
+    > *:first-child {
+        margin-top: 0;
+        border-bottom: 1px solid;
+        padding-bottom: @box-spacing-vertical;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }
