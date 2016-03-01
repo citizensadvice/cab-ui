@@ -166,6 +166,8 @@ $( function ($) {
 
     }
 
+    // Fix old style revealables
+    $('section.js-' + namespace ).addClass( namespace  );
     // Setup
     $('section.' + namespace).each(setup);
 
