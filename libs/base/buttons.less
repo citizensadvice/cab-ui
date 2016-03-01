@@ -1,7 +1,7 @@
 // Basic button styling
 // To style a link to look like a button use .button
 
-
+/*
 .btn {
     cursor: pointer;
     padding: @box-spacing-vertical @box-spacing-horizontal;
@@ -17,6 +17,7 @@
         box-shadow: 0px 0px 0px 2px @heritage-yellow;
     }
 }
+*/
 
 button,
 input[type=submit],
@@ -41,7 +42,10 @@ input[type=button] {
     }
 }
 
+// This adds the style for using .button on a links in the content
+.articleContent a.button:extend(.btn all) {}
 
+/*
 .btn-primary,
 .button,
 .button--blue {
@@ -59,6 +63,7 @@ input[type=button] {
         }
     }
 }
+*/
 
 .btn-light,
 .btn-primary-light {
