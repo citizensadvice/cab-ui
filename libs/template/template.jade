@@ -1,7 +1,7 @@
 include mixins.jade
 block settings
 doctype html
-html
+html.no-js
 	head
 		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
 		meta(charset="utf-8")
@@ -25,19 +25,8 @@ html
 		link(href="images/favicon/32.png", rel="shortcut icon")
 		link(href="images/favicon/228.png", rel="apple-touch-icon")
 
-		// Javascript
-		script(src="js/vendor/jquery-1.11.3.min.js")
-		script(src="js/beta-dap-accordion.js")
-		script(src="js/revealable.js")
-		script(src="js/prism.js")
-		script(src="js/smooth.js")
-		script.
-			var filename = document.location.pathname.match(/[^\/]+$/)[0];
-			$(document).ready(function() {
-				$('.section-nav a[href="' + filename + '"]').addClass('active');
-			});
-
-		block script
+		script
+			include ../js/head.js
 
 	body
 		<!--[if IE 8]><div class="ie8"><![endif]-->
@@ -287,7 +276,19 @@ html
 				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
 
 		<!--[if IE 8]></div><![endif]-->
-		script(src="js/advisor.js")
+		script(src="js/vendor/jquery-1.11.3.min.js")
+		script(src="js/translate.js")
+		script(src="js/jquery.fn.cssSlide.js")
+		script(src="js/revealable.js")
+		script(src="js/prism.js")
+		script(src="js/smooth.js")
+		//script(src="js/advisor.js")
 		script(src="js/sidebar.js")
-		script(src="js/core.js")
+		//script(src="js/core.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.section-nav a[href="' + filename + '"]').addClass('active');
+			});
+		block script
 		block script-bottom
