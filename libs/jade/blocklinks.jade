@@ -1,5 +1,5 @@
 block settings
-	- var title = "Blocklinks"
+	- var title = "Block links"
 	- var sidebar = true
 
 extends ../template/template.jade
@@ -7,7 +7,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Modules", href: "index.html#modules"}, 
+		{title: "Modules", href: "index.html#modules"},
 		{title: "Blocklinks"}])
 
 block sidebar
@@ -16,31 +16,29 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Blocklinks are boxed text, usually with a link attribute that is not part of the content. The blocklink is usually a link to a tool or to the document that the current page is referring to.
+			p Block links are boxed text, usually with a link attribute that is not part of the content. The blocklink is usually a link to a tool or to the document that the current page is referring to.
 
 			.example-box-plain
-				a(href="#") 
-					.blockLinks
-						p First use of &lt;h2&gt; in content
+				a(href="#").blocklink Blocklink
+				a(href="#").blocklink.i-doc-image Image blocklink
+				a(href="#").blocklink.i-search Search blocklink
 			pre
 				code.language-html
-					| &lt;a class="collapse-toggle-close"&gt;Close&lt;/a&gt;
-					| 	&lt;div class="blockLinks"&gt;
-					| 		&lt;p&gt;Lorem ipsum.&lt;/p&gt;
-					| 	&lt;/div&gt;
-					| &lt;/a&gt;
+					| &lt;a href="#" class="blocklink"&gt;Blocklink&lt;/a&gt;
+					| &lt;a href="#" class="blocklink i-doc-image"&gt;Image blocklink&lt;/a&gt;
+					| &lt;a href="#" class="blocklink i-search"&gt;Search blocklink&lt;/a&gt;
 
-			h2 Blocklink as a modal
-			p Blocklinks can also be extended to be used as image modals. The function of these is to disclose images to people who choose to (similar in purpose to accordions).
+			h2 Block link as a modal
+			p Block links can also be extended to be used as image modals. The function of these is to disclose images to people who choose to (similar in purpose to accordions).
 
 			.example-box-plain
 				a.js-toggle-extent-dialog(href="#")
-					.blockLinks.blockLinks--modal
+					.blocklink.blocklink--modal
 						p What does this image look like?
 
 			.example-box-plain
 				a.js-toggle-extent-dialog(href="#")
-					.blockLinks.blockLinks--modal-search
+					.blocklink--modal-search
 						p What does this image look like?
 
 			.example-box-plain
