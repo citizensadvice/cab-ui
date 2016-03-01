@@ -93,25 +93,17 @@
     border-radius: 2px;
 }
 
+.blocklink,
 .blockLinks {
     margin: @box-spacing-vertical 0;
     padding: @box-spacing-vertical;
     background-color: @aqua-light;
     color: @heritage-blue;
-    border: solid @aqua;
-    border-width: 1px 1px 1px 1px;
+    border: 1px solid @aqua;
     font-size: @font-size-base;
     font-weight: @font-weight-bolder;
     display: block;
     .btn-icon(@i-right,@color:@heritage-blue);
-
-    &--modal {
-        .btn-icon(@i-doc-image,@color:@heritage-blue);
-    }
-
-    &--modal-search {
-        .btn-icon(@i-search,@color:@heritage-blue);
-    }
 
     h1, h2, h3, h4, h5, h6, p {
         text-decoration: none;
@@ -125,8 +117,20 @@
     &:focus,
     &:active {
         background-color: darken(@aqua-light, 10%);
-        border: solid @aqua;
-        border-width: 1px 1px 1px 1px;
+        border: 1px solid @aqua;
+    }
+
+    &:visited {
+        border: 1px solid @aqua;
+    }
+
+    // Changing the blocklink icon
+    &.i-doc-image {
+        .btn-icon(@i-doc-image,@color:@heritage-blue);
+    }
+
+    &.i-search {
+        .btn-icon(@i-search,@color:@heritage-blue);
     }
 }
 
