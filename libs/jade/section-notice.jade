@@ -7,7 +7,7 @@ extends ../template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: "index.html"},
-		{title: "Modules", href: "index.html#modules"}, 
+		{title: "Modules", href: "index.html#modules"},
 		{title: "Section Notices"}])
 
 block sidebar
@@ -53,14 +53,14 @@ block content
 					| 	&lt;/div&gt;
 					| &lt;/aside&gt;
 
-			.example-box-plain
+			//.example-box-plain
 				aside.section-notice__adviser
 					h2.screenreader Notice
 					.section-notice__content
 						p
 							span.badge ADVISER
 							| This page is part of #[a(href="#") adviser only] content.
-			pre
+			//pre
 				code.language-html
 					| &lt;aside class="section-notice__adviser"&gt;
 					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
