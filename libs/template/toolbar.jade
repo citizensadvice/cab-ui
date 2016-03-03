@@ -3,10 +3,10 @@
 	button#showSimpleModal.btn-secondary.btn-small(type="button")
 		span.screenreader This advice is for
 		| England
-	a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
-	a.a-social-print(href="javascript:window.print();", data-track="Print") Print
+	button.toolbar-button.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
+	button.toolbar-button.a-social-print(href="javascript:window.print();", data-track="Print") Print
 	if toolbarsadviser
-		a.a-social-references(href="#!", data-track="References") References
+		button.toolbar-button.a-social-references(href="#!", data-track="References") References
 		span.info-extent Extent
 		span.info-reviewed Reviewed
 		span.info-owner Owner
