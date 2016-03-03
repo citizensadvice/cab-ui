@@ -90,13 +90,6 @@
 	/* IE styles */
 	@import "base/ie";
 
-	min-height: 100px;
-	background: url('assets/loader.gif') no-repeat left center;
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	    background: url('assets/loader@2x.gif') no-repeat left center;
-	    background-size: 30px 30px;
-	}
-
 	/* Tools specific overrides */
 	a {
 		text-decoration: none !important;
@@ -124,7 +117,6 @@
 	}
 
 	.widget {
-		background-color: @white;
 		overflow: hidden;
 		padding: 2px;
 
@@ -162,6 +154,20 @@
 		    color: @link-color;
 		    font-size: 75%;
 		}
+	}
+	&.loader {
+		min-height: 100px;
+		background: url('assets/loader.gif') no-repeat left center;
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		    background: url('assets/loader@2x.gif') no-repeat left center;
+		    background-size: 30px 30px;
+		}
+		.widget {
+			background-color: @white;
+		}
+	}
+	&.dap-panel {
+		background-color: @white;
 	}
 }
 
