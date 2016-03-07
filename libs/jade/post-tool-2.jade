@@ -15,37 +15,38 @@ block breadcrumbs
 block script
 	script.
 		var x = ($('#mockup').width())*1.414;
-		$('#mockup').css({'height':x+'px'});
+		$('#mockup div').css({'min-height':x+'px'});
 		$(window).resize(function() {
 			var x = ($('#mockup').width())*1.414;
-			$('#mockup').css({'height':x+'px'});
+			$('#mockup div').css({'min-height':x+'px'});
 		});
 
 block content
 	.articleContent
-		.form.span4
-			fieldset
-				label(for="standardField") Full name
-				input#standardField(placeholder="", type="text" required)
+		.flex-container
+			.form.flex-col-1-3
+				fieldset
+					label(for="standardField") Full name
+					input#standardField(placeholder="", type="text" required)
 
-			fieldset
-				label(for="standardField") Email
-				input#standardField(placeholder="", type="email" required)
+				fieldset
+					label(for="standardField") Email
+					input#standardField(placeholder="", type="email" required)
 
-			fieldset
-				label(for="standardField") Address line 1
-				input#standardField(placeholder="", type="email" required)
+				fieldset
+					label(for="standardField") Address line 1
+					input#standardField(placeholder="", type="email" required)
 
-			fieldset
-				label(for="standardField") Address line 2
-				input#standardField(placeholder="", type="email")
+				fieldset
+					label(for="standardField") Address line 2
+					input#standardField(placeholder="", type="email")
 
-			fieldset
-				label(for="standardField") Postcode
-				input#standardField(placeholder="", type="email" required)
+				fieldset
+					label(for="standardField") Postcode
+					input#standardField(placeholder="", type="email" required)
 
-			a.btn-light.left-button-icon(href="post-tool.html") Back
-			a.btn.right-button-icon(href="post-tool-2.html") Start
+				a.btn-light.left-button-icon(href="post-tool.html") Back
+				a.btn.right-button-icon(href="post-tool-2.html") Start
 
-		#mockup.span8
-			div(style="width:100%;height:100%;border:1px solid black;") x
+			#mockup.flex-col-2-3(style="padding-left:6rem;")
+				div(style="border:1px solid black;") x
