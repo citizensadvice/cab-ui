@@ -1,0 +1,23 @@
+block settings
+	- var title = "Post tool"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			.callout--confirmation Your emails to X Y and Z have been sent.
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue nisi sit amet tellus semper mollis. Integer ut congue ipsum. Pellentesque placerat sem ut tellus lacinia mattis. Sed viverra purus nec neque vehicula gravida.
+			h2 Contact your local Electoral Registration Office
+			p We've matched your postcode to #[a.a-external-link London Borough of Bromley]. Ask them to take your details off the ‘open register’. Attach your letter.
+			p
+				a.btn-secondary.save-button-icon Download your letter
