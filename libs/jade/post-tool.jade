@@ -1,5 +1,5 @@
 block settings
-	- var title = "Post tool"
+	- var title = "Stop receiving junk mail"
 	- var sidebar = true
 	- var toolbars = false
 	- var mockup = true
@@ -15,29 +15,38 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue nisi sit amet tellus semper mollis. Integer ut congue ipsum. Pellentesque placerat sem ut tellus lacinia mattis. Sed viverra purus nec neque vehicula gravida.
+			p You'll need to contact three organisations to stop getting junk mail.
+
+			p This tool will email them all for you in one go.
+
+			p You can also remove your details from the 'open register' at your local electoral office - a list of addresses that can be used for sending junk mail.
+
+			p You'll need to post or email a letter as an attachment to your local office - we'll create one for you to print or download.
 			fieldset
-				legend(for="checkbox") Which services would you like to register with?
+				legend(for="checkbox") Who would you like to contact?
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
 						span Royal Mail Door to Door
 						br
-						| Could include information from local or national government.
+						| This will stop Royal Mail from delivering junk mail to your address.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
 						span Direct Marketing Association’s ‘Your Choice’ scheme
 						br
-						| Could include local authorities, central government, utilities, charities, political parties, local education bodies, local shops and providers of local services.
+						| This will reduce the amount of junk mail you receive.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
-					| Mailing Preference Service
+					p
+						span Mailing Preference Service
+						br
+						| You'll stop receiving junk mail that's addressed to you.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
 						span Your local electoral registration office
 						br
-						| This will not affect your right to vote.
+						| This won't affect your right to vote.
 
 			a.btn.right-button-icon(href="post-tool-2.html") Start
