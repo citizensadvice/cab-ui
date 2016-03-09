@@ -19,7 +19,7 @@ mixin sidebar(obj, key)
 			a In this section
 		ul
 			li
-				a.section-nav__parent(href="../##{section}") #{section}
+				a.section-nav__parent(href="./##{section}") #{section}
 				ul
 					- each item,index in obj
 						li
