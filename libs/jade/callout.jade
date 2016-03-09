@@ -39,6 +39,23 @@ block content
 					| &lt;/div&gt;
 
 			.example-box-plain
+				.callout--alert
+					h3 Callout alert
+					p Use the Aria tag #[code.code aria-label="Help"].
+					p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
+					//a.callout__link Callout link
+				//.callout--alert--icon
+					h3 Callout alert with icon
+					p The icon is optional and can be including by adding the #[code.code .callout--icon] class. For accessibility purposes use aria-label="Help"].
+			pre
+				code.language-html
+					| &lt;div class="callout--alert"&gt;
+					| 	&lt;h3&gt;Callout alert&lt;/h3&gt;
+					| 	&lt;p&gt;Use the Aria tag &lt;code&gt;aria-label="Help"&lt;/code&gt;.&lt;/p&gt;
+					| 	&lt;p&gt;This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.&lt;/p&gt;
+					| &lt;/div&gt;
+
+			.example-box-plain
 				.callout--warning
 					h3 Callout warning
 					p Use the Aria tag #[code.code aria-label="Important"].
@@ -53,55 +70,15 @@ block content
 					| &lt;/div&gt;
 
 			.example-box-plain
-				.callout--alert
-					h3 Callout alert
-					p Use the Aria tag #[code.code aria-label="Help"].
-					p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
-					//a.callout__link Callout link
-				.callout--alert--icon
-					h3 Callout alert with icon
-					p The icon is optional and can be including by adding the #[code.code .callout--icon] class. For accessibility purposes use aria-label="Help"].
-			pre
-				code.language-html
-					| &lt;div class="callout--alert"&gt;
-					| 	&lt;h3&gt;Callout alert&lt;/h3&gt;
-					| 	&lt;p&gt;Use the Aria tag &lt;code&gt;aria-label="Help"&lt;/code&gt;.&lt;/p&gt;
-					| 	&lt;p&gt;This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.&lt;/p&gt;
-					| &lt;/div&gt;
-					| &lt;div class="callout--alert--icon"&gt;
-					| 	&lt;h3&gt;Callout alert with icon&lt;/h3&gt;
-					| 	&lt;p&gt;The icon is optional and can be including by adding the &lt;code&gt;.callout--icon&lt;/code&gt; class.&lt;/p&gt;
-					| &lt;/div&gt;
-
-			.example-box-plain
-				.callout--confirmation
-					h3 Callout confirmation
-					p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
-				.callout--confirmation--icon
-					h3 Callout confirmation with icon
-					p The icon is optional and can be including by adding the #[code.code .callout--icon] class.
+				.callout--example
+					h3 Callout example
+					p Also referred to as Blockexample, this style is when a example needs to be displayed.
 					//a.callout__link Callout link
 			pre
 				code.language-html
-					| &lt;div class="callout--confirmation"&gt;
-					| 	&lt;h3&gt;Callout confirmation&lt;/h3&gt;
-					| 	&lt;p&gt;This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the information i.e. 'Do apply for this if…'&lt;/p&gt;
-					| &lt;/div&gt;
-					| &lt;div class="callout--confirmation--icon"&gt;
-					| 	&lt;h3&gt;Callout confirmation with icon&lt;/h3&gt;
-					| 	&lt;p&gt;The icon is optional and can be including by adding the &lt;code&gt;.callout--icon&lt;/code&gt; class.&lt;/p&gt;
-					| &lt;/div&gt;
-
-			.example-box-plain
-				.callout--quote
-					h3 Callout quote
-					p Also referred to as Blockquote, this style is when a quote needs to be displayed.
-					//a.callout__link Callout link
-			pre
-				code.language-html
-					| &lt;div class="callout--quote"&gt;
-					| 	&lt;h3&gt;Callout quote&lt;/h3&gt;
-					| 	&lt;p&gt;Also referred to as Blockquote, this style is when a quote needs to be displayed.&lt;/p&gt;
+					| &lt;div class="callout--example"&gt;
+					| 	&lt;h3&gt;Callout example&lt;/h3&gt;
+					| 	&lt;p&gt;Also referred to as Blockexample, this style is when a example needs to be displayed.&lt;/p&gt;
 					| &lt;/div&gt;
 
 			.example-box-plain
@@ -115,6 +92,21 @@ block content
 					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| &lt;/div&gt;
 
+			.example-box-plain
+				.callout--confirmation
+					h3 Callout confirmation
+					p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
+				//.callout--confirmation--icon
+					h3 Callout confirmation with icon
+					p The icon is optional and can be including by adding the #[code.code .callout--icon] class.
+					//a.callout__link Callout link
+			pre
+				code.language-html
+					| &lt;div class="callout--confirmation"&gt;
+					| 	&lt;h3&gt;Callout confirmation&lt;/h3&gt;
+					| 	&lt;p&gt;This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the information i.e. 'Do apply for this if…'&lt;/p&gt;
+					| &lt;/div&gt;
+
 			h2 Callouts combined
 			p These callouts can be combined both consecutively or combined, someexamples are shown below.
 
@@ -122,8 +114,8 @@ block content
 				.callout
 					h3 Callout
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					.callout--quote
-						h3 This is a quote
+					.callout--example
+						h3 This is a example
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--alert
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -132,8 +124,8 @@ block content
 					| &lt;div class="callout"&gt;
 					| 	&lt;h3&gt;Callout&lt;/h3&gt;
 					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-					| 	&lt;div class="callout--quote"&gt;
-					| 		&lt;h3&gt;This is a quote&lt;/h3&gt;
+					| 	&lt;div class="callout--example"&gt;
+					| 		&lt;h3&gt;This is a example&lt;/h3&gt;
 					| 		&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| 	&lt;/div&gt;
 					| 	&lt;div class="callout--alert"&gt;
@@ -142,16 +134,16 @@ block content
 					| &lt;/div&gt;
 
 			.example-box-plain
-				.callout--quote
-					h3 This is a quote
+				.callout--example
+					h3 This is a example
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--warning
 						h3 Callout warning
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 			pre
 				code.language-html
-					| &lt;div class="callout--quote"&gt;
-					| 	&lt;h3&gt;This is a quote&lt;/h3&gt;
+					| &lt;div class="callout--example"&gt;
+					| 	&lt;h3&gt;This is a example&lt;/h3&gt;
 					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| 	&lt;div class="callout--warning"&gt;
 					| 		&lt;h3&gt;Callout warning&lt;/h3&gt;
