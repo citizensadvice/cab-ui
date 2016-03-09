@@ -219,8 +219,15 @@ input.main-header__search__input {
     padding: 0;
     font-weight: normal;
     color: @heritage-blue;
+    padding: .5rem;
+    font-weight: @font-weight-bold;
     @media ( max-width: @screen-xs-max ) {
         color: @white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @white;
     }
 }
 
