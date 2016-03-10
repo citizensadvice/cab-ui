@@ -21,7 +21,7 @@ block content
 
 			h2 About the referring body
 
-			.well
+			.well--outline
 				fieldset
 					label(for="exampleSelect1") Source of referral
 					.dropdown
@@ -58,7 +58,7 @@ block content
 
 			fieldset
 				label(for="standardField") Your email address
-				input(id="standardField" placeholder="" type="text")
+				input(id="standardField" placeholder="" type="email")
 
 			fieldset
 				label(for="standardField") Your reference for this referral
@@ -73,6 +73,329 @@ block content
 						option Please select
 						option Mr
 						option 
+			fieldset
+				label(for="standardField") First name
+				input(id="standardField" placeholder="" type="text")
+			
+			fieldset
+				label(for="standardField") Last name
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Gender
+				span.form-hint As defined by the witness
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Female
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option2")
+					| Male
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option3")
+					| Prefer not to say
+			
+			.form-group-date(style="overflow: auto;")
+				legend Date of birth
+				fieldset
+					label(for="dob-day")
+						span.screenreader What is the witnesses date of birth? Date field,
+						| Day
+					input#dob-day(max="31", min="1", placeholder="DD", type="number")
+				fieldset
+					label(for="dob-month") Month
+					input#dob-month(max="12", min="1", placeholder="MM", type="number")
+				fieldset
+					label(for="dob-year") Year
+					input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			h2 The Witness’s contact details
+			p Please only provide contact information that we can use to contact the witness.
+
+			.well--outline
+				fieldset
+					label(for="standardField") Preferred phone number
+					input(id="standardField" placeholder="" type="text")
+
+				fieldset
+					legend(for="radio") Can the Witness Service leave a message if there is no answer?
+					label.radio.radio--block
+						input(name="radio", type="radio", value="option1")
+						| Yes
+					label.radio.radio--block
+						input(checked, name="radio", type="radio", value="option2")
+						| No
+			.well--outline
+				fieldset
+					label(for="standardField") Alternative phone number
+					input(id="standardField" placeholder="" type="text")
+
+				fieldset
+					legend(for="radio") Can the Witness Service leave a message if there is no answer?
+					label.radio.radio--block
+						input(name="radio", type="radio", value="option1")
+						| Yes
+					label.radio.radio--block
+						input(checked, name="radio", type="radio", value="option2")
+						| No
+			.well--outline
+				fieldset
+					label(for="standardField") Mobile number
+					input(id="standardField" placeholder="" type="text")
+				fieldset
+					legend(for="radio") Can the Witness Service send a text?
+					label.radio.radio--block
+						input(name="radio", type="radio", value="option1")
+						| Yes
+					label.radio.radio--block
+						input(checked, name="radio", type="radio", value="option2")
+						| No
+			fieldset
+				label(for="standardField") Email address
+				input(id="standardField" placeholder="" type="text")
+
+			.well--outline
+				h3 Your address
+				fieldset
+					label.radio.radio--inline
+						input(checked, name="radio", type="radio", value="option1")
+						| Lookup address
+					label.radio.radio--inline
+						input(name="radio", type="radio", value="option2")
+						| Enter address manually
+				fieldset
+					label(for="field") Enter your postcode
+					.field-group.field-group--buttons
+						input#field(type="text")
+						button.btn Lookup address
+
+			h2 The trial and the witness’s support needs
+			.well--outline
+				fieldset
+					label(for="standardField") Defendant name
+					input(id="standardField" placeholder="" type="text")
+
+				fieldset
+					label(for="standardField") URN
+					span.form-hint Where this number comes from?
+					input(id="standardField" placeholder="" type="text")
+
+				a.btn.plus-button-icon(href="#") Add defendant
+
+			fieldset
+				label(for="standardField") Offence
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Involves domestic violence (DV)?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Yes
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option2")
+					| No
+
+			fieldset
+				label(for="exampleSelect1") Court where the trial will be heard
+				.dropdown
+					select#exampleSelect1
+						option Please select
+						option London
+						option Leeds
+	
+			.form-group-date(style="overflow: auto;")
+				legend Date of trial
+				fieldset
+					label(for="dob-day")
+						span.screenreader What is the witnesses date of birth? Date field,
+						| Day
+					input#dob-day(max="31", min="1", placeholder="DD", type="number")
+				fieldset
+					label(for="dob-month") Month
+					input#dob-month(max="12", min="1", placeholder="MM", type="number")
+				fieldset
+					label(for="dob-year") Year
+					input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			h3 How are you involved in the trial?
+			fieldset
+				legend(for="radio") Are you a witness?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the defence
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the prosecution
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+			fieldset
+				legend(for="radio") Have you been affected by a crime that the trial is about?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, as a victim or survivor
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, the victim was in my family or very close to me
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+			.well--outline
+				fieldset
+					legend(for="checkbox") Grounds for Special Measures for vulnerable or intimidated witnesses (VIW)
+					span.form-hint Select all that apply
+					label.checkbox.checkbox--block
+						input(name="checkbox", type="checkbox")
+						| Young person (under 18) 
+					label.checkbox.checkbox--block
+						input(name="checkbox", type="checkbox")
+						| Physical disability (including sensory impairment) 
+					label.checkbox.checkbox--block
+						input(name="checkbox", type="checkbox")
+						| Learning disability/difficulty 
+					label.checkbox.checkbox--block
+						input(name="checkbox", type="checkbox")
+						| Mental health issues 
+					label.checkbox.checkbox--block
+						input(name="checkbox", type="checkbox")
+						| Intimidated
+
+			h3 What special measures have been identified, applied for or granted?
+			fieldset
+				legend(for="radio") Screens
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Evidence in chief
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Livelink
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Pre-recorded cross examination
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Closed court
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Removal of wigs and gowns
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Intermediary
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Aids to communication
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+
+			fieldset
+				label(for="exampleTextarea") Individual support needs, including the support of a specialist at court 
+				span.form-hint e.g. an IDVA or intermediary (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+			fieldset
+				label(for="exampleTextarea") Individual communication needs and contact preferences
+				span.form-hint Include the support of an interpreter or other language support (please give their name and role)
+				textarea#exampleTextarea(rows="3")
 
 
-			a.btn.right-button-icon(href="post-tool-2.html") Start
+			a.btn.right-button-icon(href="#") Submit
