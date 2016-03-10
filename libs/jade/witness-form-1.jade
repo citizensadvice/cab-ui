@@ -1,0 +1,32 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			p To ensure the Witness Service can effectively contact, needs assess and support witnesses we need as much information as possible with the initial referral.
+			p Sharing the necessary information in the referral document also prevents the witness being asked the same questions again and again; something we know causes distress and frustration.
+			p The referral documentation should be sent to the Witness Service by secure email at least four weeks prior to the trial date (unless the witness is called to give evidence at shorter notice) to enable contact to be made and pre-trial support provided if needed.
+
+			fieldset
+				legend(for="radio") Please select if you are referring yourself for the Witness service
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| I am referring myself, family or friend
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option2")
+					| I am an organisation referring on behalf of a client
+
+
+			a.btn.right-button-icon(href="witness-form-2.html") Start

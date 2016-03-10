@@ -1,0 +1,64 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 Information about the person being referred
+
+			fieldset
+				label(for="exampleSelect1") Your title
+				.dropdown
+					select#exampleSelect1
+						option Please select
+						option Mr
+						option 
+			fieldset
+				label(for="standardField") First name
+				input(id="standardField" placeholder="" type="text")
+			
+			fieldset
+				label(for="standardField") Last name
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Gender
+				span.form-hint As defined by the witness
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Female
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option2")
+					| Male
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option3")
+					| Prefer not to say
+			
+			.form-group-date(style="overflow: auto;")
+				legend Date of birth
+				fieldset
+					label(for="dob-day")
+						span.screenreader What is the witnesses date of birth? Date field,
+						| Day
+					input#dob-day(max="31", min="1", placeholder="DD", type="number")
+				fieldset
+					label(for="dob-month") Month
+					input#dob-month(max="12", min="1", placeholder="MM", type="number")
+				fieldset
+					label(for="dob-year") Year
+					input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+
+			a.btn-light.left-button-icon(href="witness-form-2.html") Back
+			a.btn.right-button-icon(href="witness-form-4.html") Next

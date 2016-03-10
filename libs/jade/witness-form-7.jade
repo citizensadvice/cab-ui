@@ -1,0 +1,143 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h3 What special measures have been identified, applied for or granted?
+			fieldset
+				legend(for="radio") Screens
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Evidence in chief
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Livelink
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Pre-recorded cross examination
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Closed court
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Removal of wigs and gowns
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Intermediary
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+			fieldset
+				legend(for="radio") Aids to communication
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| don’t know/ not needed 
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| need identified
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| applied for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| granted
+
+			fieldset
+				label(for="exampleTextarea") Individual support needs, including the support of a specialist at court 
+				span.form-hint e.g. an IDVA or intermediary (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+			fieldset
+				label(for="exampleTextarea") Individual communication needs and contact preferences
+				span.form-hint Include the support of an interpreter or other language support (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+			a.btn-light.left-button-icon(href="witness-form-6.html") Back
+			a.btn.tick-button-icon(href="witness-form-complete.html") Submit
