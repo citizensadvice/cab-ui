@@ -27,3 +27,10 @@
 		padding-right: @box-spacing*6;
 	}
 }
+
+.ie8-only {
+	display: none;
+	.ie8 & {
+		display: block;
+	}
+}
