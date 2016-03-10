@@ -19,47 +19,31 @@ block content
 			p Please only provide contact information that we can use to contact the witness.
 
 			
-				fieldset
-					label(for="standardField") Preferred phone number
-					input(id="standardField" placeholder="" type="text")
-
-				fieldset
-					legend(for="radio") Can the Witness Service leave a message if there is no answer?
-					label.radio.radio--inline
-						input(name="radio", type="radio", value="option1")
-						| Yes
-					label.radio.radio--inline
-						input(checked, name="radio", type="radio", value="option2")
-						| No
-			
-				fieldset
-					label(for="standardField") Alternative phone number
-					input(id="standardField" placeholder="" type="text")
-
-				fieldset
-					legend(for="radio") Can the Witness Service leave a message if there is no answer?
-					label.radio.radio--inline
-						input(name="radio", type="radio", value="option1")
-						| Yes
-					label.radio.radio--inline
-						input(checked, name="radio", type="radio", value="option2")
-						| No
-			
-				fieldset
-					label(for="standardField") Mobile number
-					input(id="standardField" placeholder="" type="text")
-				fieldset
-					legend(for="radio") Can the Witness Service send a text?
-					label.radio.radio--inline
-						input(name="radio", type="radio", value="option1")
-						| Yes
-					label.radio.radio--inline
-						input(checked, name="radio", type="radio", value="option2")
-						| No
 			fieldset
 				label(for="standardField") Email address
 				input(id="standardField" placeholder="" type="text")
 
+			fieldset
+				label(for="standardField") Preferred phone number
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Can the Witness Service leave a message if there is no answer?
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option2")
+					| No
+			fieldset
+				legend(for="radio") Can the Witness Service send a text?
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option2")
+					| No
+				
 			.well--outline
 				h3 Your address
 				fieldset
