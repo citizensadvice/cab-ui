@@ -162,11 +162,13 @@ block content
 					label.radio.radio--inline
 						input(name="radio", type="radio", value="option2")
 						| Enter address manually
+
 				fieldset
 					label(for="field") Enter your postcode
-					.field-group.field-group--buttons
-						input#field(type="text")
-						button.btn Lookup address
+					.search-results__field.field-group.field-group--buttons
+						input(type="search", placeholder="Enter postcode")
+						button.btn.btn-primary Search&nbsp;&nbsp;
+							i.icon-search
 
 			h2 The trial and the witness’s support needs
 			.well--outline

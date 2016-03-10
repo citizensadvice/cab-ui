@@ -1,0 +1,65 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 About the referring body
+
+			.well
+				fieldset
+					label(for="exampleSelect1") Source of referral
+					.dropdown
+						select#exampleSelect1
+							option Please select
+							option Defence (please say which below)
+							option WCU (Witness Care Unit)
+							option WCU (Witness Care Unit)
+							option Department for Work and Pensions (DWP)
+							option Environment Agency (EA)
+							option Local Authority (please say which below)
+							option RSPCA
+							option Other prosecuting authority (please say which below)
+							option IDVA/ ISVA
+							option Any other - not a prosecuting authority (please say which below)
+
+				fieldset
+					label(for="standardField") Other
+					span.form-hint Not a prosecuting authority
+					input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your organisation’s name
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your name
+				span.form-hint The name of the person referring this witness to the Witness Service
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your phone number
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your email address
+				input(id="standardField" placeholder="" type="email")
+
+			fieldset
+				label(for="standardField") Your reference for this referral
+				input(id="standardField" placeholder="" type="text")
+
+
+			a.btn-light.left-button-icon(href="witness-form-1.html") Back
+			a.btn.right-button-icon(href="witness-form-3.html") Next

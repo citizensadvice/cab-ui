@@ -1,0 +1,68 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 The trial and the witness’s support needs
+			.well
+				fieldset
+					label(for="standardField") Defendant name
+					input(id="standardField" placeholder="" type="text")
+
+				fieldset
+					label(for="standardField") URN
+					span.form-hint Where this number comes from?
+					input(id="standardField" placeholder="" type="text")
+
+			a.btn.plus-button-icon(href="#") Add defendant
+
+			fieldset
+				label(for="standardField") Offence
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Involves domestic violence (DV)?
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option2")
+					| No
+
+			fieldset
+				label(for="exampleSelect1") Court where the trial will be heard
+				.dropdown
+					select#exampleSelect1
+						option Please select
+						option London
+						option Leeds
+	
+			.form-group-date(style="overflow: auto;")
+				legend Date of trial
+				fieldset
+					label(for="dob-day")
+						span.screenreader What is the witnesses date of birth? Date field,
+						| Day
+					input#dob-day(max="31", min="1", placeholder="DD", type="number")
+				fieldset
+					label(for="dob-month") Month
+					input#dob-month(max="12", min="1", placeholder="MM", type="number")
+				fieldset
+					label(for="dob-year") Year
+					input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+
+			a.btn-light.left-button-icon(href="witness-form-4.html") Back
+			a.btn.right-button-icon(href="witness-form-6.html") Next
