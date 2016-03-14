@@ -15,10 +15,13 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			p You'll need to contact three organisations to stop getting junk mail.
-			p This tool will email them all for you in one go.
-			p You can also remove your details from the 'open register' - a list of addresses that can be used for sending junk mail.
-			p You'll need to post or email a letter to your local electoral office to be removed from the register - we'll create one for you to download.
+			p You can contact 3 organisations to reduce the amount of junk mail you receive.
+			p You can also remove your details from the 'open register' - a list of addresses at your local electoral office that companies can send junk mail to. 
+			p This tool will:
+			ul
+				li email the the organisations you choose
+				li create a letter for you to email or send to your local electoral office
+
 			fieldset
 				legend(for="checkbox") Who would you like to contact?
 				label.checkbox.checkbox--block
@@ -26,24 +29,24 @@ block content
 					p
 						span Royal Mail Door to Door
 						br
-						| This will stop Royal Mail from delivering junk mail to your address.
+						| You’ll receive less post that’s not addressed to you - this can include post from charities that you might want to receive.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
-						span Direct Marketing Association’s ‘Your Choice’ scheme
+						span The Direct Marketing Association’s ‘Your Choice’ scheme
 						br
-						| This will reduce the amount of junk mail you receive.
+						| You’ll receive less post that’s not addressed to you - this can include post from charities, your local council and political parties.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
 						span Mailing Preference Service
 						br
-						| You'll stop receiving junk mail that's addressed to you.
+						| You’ll stop getting post that’s addressed to you if you didn’t ask for it.
 				label.checkbox.checkbox--block
 					input(name="checkbox", type="checkbox")
 					p
 						span Your local electoral registration office
 						br
-						| Organisations won't be able to access your address to send you junk mail.
+						| Taking your address off the open register means companies won't be able to get your address to send you junk mail.
 
 			a.btn.right-button-icon(href="post-tool-2.html") Start
