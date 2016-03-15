@@ -135,8 +135,7 @@
 .a-social {
     .icon;
     display: inline-block;
-    padding: 0 0.25em 0 0.65em;
-    border-bottom: 0.0625rem solid @white;
+    padding: 0 0.5em 0 0;
     font-size: 125%;
 }
 
@@ -147,13 +146,13 @@
     border: 0;
 }
 .a-social-twitter:before {
-    margin-left: -0.65em;
     content: @i-twitter;
     color: @twitter-brand-colour;
     &:extend(.a-social);
     border: 0;
 }
-.a-social-whatsapp {
+.a-social-whatsapp,
+.a-social-google-plus {
     white-space: nowrap;
 }
 .a-social-whatsapp:before {
