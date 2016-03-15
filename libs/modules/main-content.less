@@ -25,14 +25,23 @@
     color: @gray-2;
     a {
         border-bottom: transparent;
-        padding-right: 1rem;
+        margin-right: 1rem;
+        padding: 0.25rem;
+        &:hover,
+        &:focus {
+            color: @link-hover-color;
+            text-decoration: none;
+            border-bottom: 0px solid @link-color;
+            background-color:  lighten(@link-color, 75%);
+        }
     }
     p {
         font-size: @font-size-small;
         line-height: 1.5rem;
         a {
             border-bottom: transparent;
-            padding-right: 0;
+            padding: 0;
+            margin-right: 0;
         }
     }
  }
