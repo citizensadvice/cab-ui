@@ -20,12 +20,25 @@ form small {
 .invalid {
     padding-top: @box-spacing/4;
     clear: both;
+    display: none;
 }
 .valid {
     color: @green;
 }
 .invalid {
     color: @red;
+}
+input {
+    &:valid {
+        .valid {
+            display: inline-block;
+        }
+    }
+    &:invalid {
+        .invalid {
+            display: inline-block;
+        }
+    }
 }
 
 fieldset,
