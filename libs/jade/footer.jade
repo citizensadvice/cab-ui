@@ -1,0 +1,15 @@
+block settings
+	- var title = "Footer"
+	- var footertest = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Digital principles"}])
+
+block content
+	.articleContent.row
+		.span8-md
+			p Don't look here, look down there.

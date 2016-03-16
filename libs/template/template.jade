@@ -257,6 +257,104 @@ html.no-js
 								br
 								| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
 
+		else if footertest
+			.footer-feedback
+				h2.screenreader Feedback
+				.footer-feedback__content
+					p Is there anything wrong with this page? #[a(href="#") Let us know].
+
+			#footer.main-footer(data-track-zone="footer")
+				.main-footer__content.flex-row.js-equal-height
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Advice
+						ul.li--arrow
+							li
+								a(href="#") Benefits
+							li
+								a(href="#") Work
+							li
+								a(href="#") Debt and money
+							li
+								a(href="#") Consumer
+							li
+								a(href="#") Relationships
+							li
+								a(href="#") Housing
+							li
+								a(href="#") Law and rights
+							li
+								a(href="#") Discrimination
+							li
+								a(href="#") Tax
+							li
+								a(href="#") Healthcare
+							li
+								a(href="#") Education
+							li
+								a(href="#") A to Z of advice
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Resources and tools
+						ul.li--arrow
+							li
+								a(href="#") Budgeting tool
+							li
+								a(href="#") Advice fact sheets
+							li
+								a(href="#") Advice online, by phone and in person
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 More from us
+						ul.li--arrow
+							li
+								a(href="#") About us
+							li
+								a(href="#") Annual reports
+							li
+								a(href="#") Contact us
+							li
+								a(href="#") Complaints
+							li
+								a(href="#") Blogs
+							li
+								a(href="#") Campaigns
+							li
+								a(href="#") Media
+							li
+								a(href="#") Policy research
+							li
+								a(href="#") Support us
+							li
+								a(href="#") Volunteering
+							li
+								a(href="#") Jobs
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 About Citizens Advice
+						ul.li--arrow
+							li
+								a(href="#") How we provide advice
+							li
+								a(href="#") The difference we make
+							li
+								a(href="#") Support us
+							li
+								a(href="#") How Citizens Advice works
+							li
+								a(href="#") Accessibility
+							li
+								a(href="#") Disclaimer and copyright
+							li
+								a(href="#") Privacy and cookies
+
+					.main-footer__box.main-footer__box--copyright
+						div
+							p(style="font-size:0.875rem;")
+								img(alt="", height="70", src="images/ca-logo_100px.svg", width="70")
+								| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
+								br
+								| Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
 		else
 			footer.main-footer(data-track-zone="footer", id="footer")
 				.styleguide--footer
@@ -273,7 +371,7 @@ html.no-js
 
 		.notice
 			.notice__content
-				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
+				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="https://www.google.co.uk/chrome") Google Chrome].
 
 		<!--[if IE 8]></div><![endif]-->
 		script(src="js/vendor/jquery-1.11.3.min.js")
