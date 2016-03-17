@@ -1,16 +1,194 @@
+include ../template/mixins.jade
 block settings
-	- var title = "Footer"
-	- var footertest = true
+doctype html
+html.no-js
+    head
+        meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+        meta(charset="utf-8")
+        meta(content="IE=edge", http-equiv="X-UA-Compatible")
+        meta(name="keywords")
+        meta(name="description")
 
-extends ../template/template.jade
+        title Citizens Advice style guide
 
-block breadcrumbs
-	+breadcrumbs([
-		{title: "Home", href: "index.html"},
-		{title: "Digital principles"}])
+        // Mobile Specific Metas
+        meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+        meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+        meta(content="EWS", name="cab-extent")
+        meta(content="/static/images/apple-touch-icon.png")
+        meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
 
-block content
-	.articleContent.row
-		.span8-md
-			p Updating the design, layout and content of the footer.
-			p Don't look here, look down there.
+        // Stylesheets
+        link(href="css/guide.css", rel="stylesheet")
+        link(href="images/favicon/32.png", rel="shortcut icon")
+        link(href="images/favicon/228.png", rel="apple-touch-icon")
+
+        script
+            include ../js/head.js
+
+    body
+        <!--[if IE 8]><div class="ie8"><![endif]-->
+        .skip-nav
+            a.screenreader.screenreader--focusable Skip to content
+            a.screenreader.screenreader--focusable Skip to footer
+
+        header.main-header
+            .main-header__content
+                a.main-header__logo(href="index.html", title="Citizens Advice home")
+                    img(onerror="this.onerror=null;this.src='images/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="images/ca-logo_100px.svg" height="80")
+
+                    img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-white-280px.svg")
+
+                .main-header__links(data-track-zone="top-bar")
+                    a.main-header__menu-link.js-toggle-menu(href="")
+                        i.icon-menu
+                        | Menu
+
+                    nav.main-header__top-nav
+                        a(href="#") Cymraeg</a>
+                        a.hide-offline.main-header__login(href="")
+                            i.icon-key
+                            | Sign-in
+
+                    form.main-header__search.hide-offline(action="")
+                        label.screenreader(for="main-header__search__input") Search
+                        input#main-header__search__input.main-header__search__input(name="q", placeholder="", type="search")
+                        button.main-header__search__submit(title="Search", type="submit")
+                            i.icon-search.icon--no-text
+                            span.screenreader Search
+
+        nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
+            ul.nav-list-primary
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Benefits
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Work
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Debt and money
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Consumer
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Relationships
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Housing
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Law and rights
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Discrimination
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Tax
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Healthcare
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") Education
+                li.top-item.js-mega-menu(style="display: list-item;")
+                    a(href="#") More from us
+                li.nav-list-primary-more.js-more-menu(style="display: none;")
+                    a(href="#") More
+                        i.icon-down
+
+        .main-container
+            nav.main-breadcrumb
+                block breadcrumbs
+
+            block section-notice
+
+            .main-content
+                .main-content__right(id="main", role="main")
+                    .title
+                        h1.title__heading.js-ref
+                            span.title__title 
+
+
+           .footer-feedback
+                h2.screenreader Feedback
+                .footer-feedback__content
+                    p Is there anything wrong with this page? #[a(href="#") Let us know].
+
+            #footer.main-footer(data-track-zone="footer")
+                .flex-container.main-content
+                    .col-md-9.col-sm-9.flex-container(style="padding:0 !important;")
+                        .main-footer__box.flex-col-1-1(style="padding:0 !important;")
+                            h3(style="border-bottom:1px solid #fff; padding:0 0 1rem 0;") Advice
+                        .main-footer__box.col-xs-6.col-md-4(style="padding:0 !important;")
+                            ul.li--arrow
+                                li
+                                    a(href="#") Benefits
+                                li
+                                    a(href="#") Work
+                                li
+                                    a(href="#") Debt and money
+                                li
+                                    a(href="#") Consumer
+
+                        .main-footer__box.col-xs-6.col-md-4(style="padding:0 !important;")
+                            ul.li--arrow
+                                li
+                                    a(href="#") Relationships
+                                li
+                                    a(href="#") Housing
+                                li
+                                    a(href="#") Law and rights
+                                li
+                                    a(href="#") Discrimination
+
+                        .main-footer__box.col-xs-6.col-md-4(style="padding:0 !important;")
+                            ul.li--arrow
+                                li
+                                    a(href="#") Tax
+                                li
+                                    a(href="#") Healthcare
+                                li
+                                    a(href="#") Education
+                                li
+                                    a(href="#") A to Z of advice
+
+                    .col-md-3.col-sm-3.flex-container(style="padding:0;")
+                        .main-footer__box.flex-col-1-1(style="padding:0 !important;")
+                            h3(style="border-bottom:1px solid #fff; padding:0 0 1rem 0;")  Information
+                            .main-footer__box.col-md-12.col-sm-12(style="padding:0 !important;")
+                                ul.li--arrow
+                                    li
+                                        a(href="#") Help
+                                    li
+                                        a(href="#") Cymraeg
+                                    li
+                                        a(href="#") Terms and conditions
+                                    li
+                                        a(href="#") Privacy and cookies
+
+            #footer--legal(style="padding:1rem 0rem !important; display:block; width:100%; background-color:#004b88;")
+                .main-footer__box.main-footer__box--copyright.main-content(style="padding:1rem 0rem !important; display:block; width:100%; background-color:#004b88; margin-top:0;margin-bottom:0;")
+                    //div(style="padding:0.5rem 0;") 
+                        p(style="font-size:0.875rem;")
+                            | Accessibility  |  Cymraeg  |  Disclaimer and copyright  |  Privacy and cookies  |  Contact us
+
+                    div
+                        p(style="font-size:0.875rem;color:#fff;")
+                            img(alt="", height="70", src="images/ca_wo-logo-100px.svg", width="70" style="margin-top: -0.5rem;")
+                            | Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
+                            br
+                            | Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+        .notice
+            .notice__content
+                p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="https://www.google.co.uk/chrome") Google Chrome].
+
+        <!--[if IE 8]></div><![endif]-->
+        script(src="js/vendor/jquery-1.11.3.min.js")
+        script(src="js/translate.js")
+        script(src="js/jquery.fn.cssSlide.js")
+        script(src="js/revealable.js")
+        script(src="js/prism.js")
+        script(src="js/smooth.js")
+        script(src="js/jquery.fn.top-sticky.js")
+        //script(src="js/advisor.js")
+        script(src="js/sidebar.js")
+        //script(src="js/core.js")
+        script.
+            var filename = document.location.pathname.match(/[^\/]+$/)[0];
+            $(document).ready(function() {
+                $('.section-nav a[href="' + filename + '"]').addClass('active');
+            });
+        block script
+        block script-bottom
