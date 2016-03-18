@@ -13,7 +13,18 @@
     a:hover,
     a:focus,
     a:visited {
+        background-color: @white;
+    }
+}
+@media ( max-width: @breakpoint-sm ) {
+    .main-header {
         background-color: @heritage-blue;
+        overflow: hidden; // Collapsing margin issues
+        a:hover,
+        a:focus,
+        a:visited {
+            background-color: @heritage-blue;
+        }
     }
 }
 
