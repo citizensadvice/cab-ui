@@ -17,30 +17,9 @@ block content
 		div
 			h2 About the referring body
 
-			.well
-				fieldset
-					label(for="exampleSelect1") Source of referral
-					.dropdown
-						select#exampleSelect1
-							option Please select
-							option Defence (please say which below)
-							option WCU (Witness Care Unit)
-							option WCU (Witness Care Unit)
-							option Department for Work and Pensions (DWP)
-							option Environment Agency (EA)
-							option Local Authority (please say which below)
-							option RSPCA
-							option Other prosecuting authority (please say which below)
-							option IDVA/ ISVA
-							option Any other - not a prosecuting authority (please say which below)
-
-				fieldset
-					label(for="standardField") Other
-					span.form-hint Not a prosecuting authority
-					input(id="standardField" placeholder="" type="text")
-
 			fieldset
-				label(for="standardField") Your organisation’s name
+				label(for="standardField") Your organisation’s name and department
+				span.form-hint Avoid using abbreviations or acronyms
 				input(id="standardField" placeholder="" type="text")
 
 			fieldset
@@ -57,7 +36,8 @@ block content
 				input(id="standardField" placeholder="" type="email")
 
 			fieldset
-				label(for="standardField") Your reference for this referral
+				label(for="standardField") Your reference for this referral 
+					span.optional (optional)
 				input(id="standardField" placeholder="" type="text")
 
 

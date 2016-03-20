@@ -18,18 +18,13 @@ block content
 			h2 Information about the person being referred
 
 			fieldset
-				label(for="exampleSelect1") Your title
-				.dropdown
-					select#exampleSelect1
-						option Please select
-						option Mr
-						option 
-			fieldset
 				label(for="standardField") First name
+				span.form-hint The witnesses first name
 				input(id="standardField" placeholder="" type="text")
 			
 			fieldset
 				label(for="standardField") Last name
+				span.form-hint The witnesses last name
 				input(id="standardField" placeholder="" type="text")
 
 			fieldset
@@ -46,7 +41,9 @@ block content
 					| Prefer not to say
 			
 			.form-group-date(style="overflow: auto;")
-				legend Date of birth
+				legend Date of birth 
+					span.optional (optional)
+				span.form-hint The witnesses date of birth
 				fieldset
 					label(for="dob-day")
 						span.screenreader What is the witnesses date of birth? Date field,
