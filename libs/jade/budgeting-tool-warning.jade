@@ -32,18 +32,18 @@ block content
 		.dialog.dialog--simple.dialog--extent-picker(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
 
 			header.dialog__header
-				h2#dialog-1-label.dialog__title Restarting will lose any information entered
+				h2#dialog-1-label.dialog__title You'll lose any information you entered
 				button.dialog__close(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
 
 			.dialog__main#dialog-1-main
 				div(type="Sigma.CitizensAdvice.Web.Models.Pages.StartPage")
-					p Are you sure you want to restart?
+					label Are you sure you want to restart?
 					ul.extent-selection
 						li
-							a.btn.btn-small.btn-success(href="#") Yes, I want to restart
+							a.btn.btn-success(href="#") Yes
 					
 						li
-							a.btn.btn-small.btn-warning(href="#") No, I don't want to restart
+							a.btn.btn-warning(href="#") No
 
 			footer.dialog__footer
 	.articleContent
