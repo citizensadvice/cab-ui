@@ -15,35 +15,17 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h2 Information about the person being referred
-
+			h2 About the trial
+			p If you are getting in touch about a particular trial, maybe because you are giving evidence at it, please give the name of the court where the trial will be heard, if you know it
+			h3 Location
 			fieldset
-				label(for="standardField") First name
-				span.form-hint The witnesses first name
-				input(id="standardField" placeholder="" type="text")
-			
-			fieldset
-				label(for="standardField") Last name
-				span.form-hint The witnesses last name
-				input(id="standardField" placeholder="" type="text")
-
-			fieldset
-				legend(for="radio") Gender
-				span.form-hint As defined by the witness
-				label.radio.radio--block
-					input(name="radio", type="radio", value="option1")
-					| Female
-				label.radio.radio--block
-					input(name="radio", type="radio", value="option2")
-					| Male
-				label.radio.radio--block
-					input(checked, name="radio", type="radio", value="option3")
-					| Prefer not to say
-			
-			.form-group-date(style="overflow: auto;")
-				legend Date of birth 
+				label(for="exampleSelect1") Court where the trial will be heard 
 					span.optional (optional)
-				span.form-hint The witnesses date of birth
+				input(id="standardField" placeholder="" type="text")
+	
+			.form-group-date(style="overflow: auto;")
+				legend Date of trial 
+					span.optional (optional)
 				fieldset
 					label(for="dob-day")
 						span.screenreader What is the witnesses date of birth? Date field,
@@ -57,5 +39,5 @@ block content
 					input#dob-year(max="2100", placeholder="YYYY", type="number")
 
 
-			a.btn-light.left-button-icon(href="witness-form-2.html") Back
-			a.btn.right-button-icon(href="witness-form-4.html") Next
+			a.btn-light.left-button-icon(href="witness-self-form-3.html") Back
+			a.btn.right-button-icon(href="witness-self-form-5.html") Next
