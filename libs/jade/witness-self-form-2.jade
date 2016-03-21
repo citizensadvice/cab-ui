@@ -15,39 +15,30 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h2 The trial and the witness’s support needs
-			h3 Defendants details
-			fieldset
-				label(for="standardField") Defendant name(s)
-				span.form-hint Please enter names, seperated using a comma
-				input(id="standardField" placeholder="" type="text")
-
-			//fieldset
-				label(for="standardField") URN
-				span.form-hint Where this number comes from?
-				input(id="standardField" placeholder="" type="text")
+			h2 About you
 
 			fieldset
-				label(for="standardField") Offence(s) 
-					span.optional (optional)
+				label(for="standardField") First name
+				input(id="standardField" placeholder="" type="text")
+			
+			fieldset
+				label(for="standardField") Last name
 				input(id="standardField" placeholder="" type="text")
 
 			fieldset
-				legend(for="radio") Does the case include domestic violence (DV)?
-				label.radio.radio--inline
+				legend(for="radio") Gender
+				label.radio.radio--block
 					input(name="radio", type="radio", value="option1")
-					| Yes
-				label.radio.radio--inline
-					input(checked, name="radio", type="radio", value="option2")
-					| No
-
-			h3 Location
-			fieldset
-				label(for="exampleSelect1") Court where the trial will be heard
-				input(id="standardField" placeholder="" type="text")
-	
+					| Female
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option2")
+					| Male
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option3")
+					| Prefer not to say
+			
 			.form-group-date(style="overflow: auto;")
-				legend Date of trial 
+				legend Date of birth 
 					span.optional (optional)
 				fieldset
 					label(for="dob-day")
@@ -62,5 +53,5 @@ block content
 					input#dob-year(max="2100", placeholder="YYYY", type="number")
 
 
-			a.btn-light.left-button-icon(href="witness-form-4.html") Back
-			a.btn.right-button-icon(href="witness-form-6.html") Next
+			a.btn-light.left-button-icon(href="witness-self-form-1.html") Back
+			a.btn.right-button-icon(href="witness-self-form-3.html") Next
