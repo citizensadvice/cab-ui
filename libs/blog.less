@@ -2,11 +2,18 @@
  * Blog visual
  */
 
+.styleguide--header--content-nav a:visited {
+	color: white;
+}
+.digital-blog-background {
+	background-color: #e2e2e2 !important;
+}
+
  .title__subheading--blog {
 	margin-bottom: 2rem;
 	margin-top: .8rem;
-	padding: .35rem 0;
-	padding: 0 0 1rem 0;
+	padding: 1rem 0;
+	background-color: #fff;
 	border-top: #EEEEEE 1px solid;
 	//border-bottom: #EEEEEE 1px solid;
 	font-size: 0.875rem;
@@ -17,20 +24,25 @@
 		text-decoration: none;
 		border-bottom: none;
 	}
+}
+.tag {
+	position: relative;
+	top: 0;
+	font-weight: 700;
+	line-height: 1em;
+	margin: 0;
+	display: inline-block;
+	padding: .5rem;
+	color: #004b88;
+	background-color: #fee4c3;
 	&:before {
 		font-family: 'open_sans', 'brand';
 		font-size: .85rem;
-		font-weight: 700;
-		content: "\e939\00a0\00a0 Research";
-		line-height: 1em;
-		margin: 0;
-		display: inline-block;
-		padding: .5rem;
-		color: #57486b;
-		background-color: #c2bdde;
+		//content: "\e939\00a0\00a0 ";		
 	}
 }
- .styleguide--header--content-nav {
+
+.styleguide--header--content-nav {
 	float: right;
 	text-align: right;
 	width: 500px;
@@ -94,10 +106,10 @@
 	font-size: 0.875rem;
 }
 
-.articleContent {
-	a {
-		&:hover {
-			background-color: #ffffff !improtant;
-		}
-	}
+.articleContent a:hover,
+.articleContent a:focus {
+  color: #003C64;
+  text-decoration: none;
+  border-bottom-color: #003C64;
+  background-color: #fff !important;
 }
