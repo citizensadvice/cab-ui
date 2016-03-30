@@ -15,14 +15,12 @@
 form small {
     color: @gray-3;
 }
-.optional {
-    color: @gray-2;
-    font-weight: @font-weight-base;
-}
+
 .valid,
 .invalid {
     padding-top: @box-spacing/4;
     clear: both;
+//    display: none;
 }
 .valid {
     color: @green;
@@ -30,7 +28,20 @@ form small {
 .invalid {
     color: @red;
 }
-
+/* Do we want to make valid/invalid selectors inline?
+input {
+    &:valid {
+        .valid {
+            display: inline-block;
+        }
+    }
+    &:invalid {
+        .invalid {
+            display: inline-block;
+        }
+    }
+}
+*/
 fieldset,
 .form__group {
     padding: 0;
@@ -69,6 +80,7 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=number],
+input[type=tel],
 input[type=search] {
     padding: @box-spacing-vertical @box-spacing-horizontal;
     -webkit-appearance: none;
@@ -251,117 +263,19 @@ textarea.form__field {
         clear: none;
         //float: left;
     }
-}
 
-.radio--conditional {
-    clear: both;
-    float: left;
-    width: 100%;
-    display: table;
-    p {
-        display: block;
-        //float: right;
-        display: table-cell;
-        margin: 0;
-        span {
-            font-weight: @font-weight-bolder;
-        }
-    }
-    input {
-        display: inline-block;
-        &:before {
-            content: '';
+    &--block {
+        clear: left;
+        float: left;
+        display: table;
+        p {
             display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            -webkit-user-select: none;
-            cursor: pointer;
-            border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
-            z-index: -1;
-            background-color: @gray-8;
-            box-sizing: border-box;
-            margin-right: @box-spacing/2;
-        }
-        &:hover:before {
-            border-color: @gray-5;
-        }
-        &:disabled {
-            cursor: not-allowed !important;
-            &:before {
-                cursor: not-allowed !important;
-                background-color: @form-disabled-bg;
-                border-color: @form-disabled-bg;
+            //float: right;
+            display: table-cell;
+            margin: 0;
+            span {
+                font-weight: @font-weight-bold;
             }
-        }
-        &:checked {
-            &:before {
-                border-color: @blue-light;
-                background-color: @heritage-blue-lightest;
-            }
-            &:hover:before {
-                border-color: @blue-light;
-            }
-        }
-        &:focus {
-            outline: 2px solid @heritage-yellow;
-        }
-    }
-}
-.radio--conditional {
-    input:not(checked) ~ .conditional--content {
-            display: none;
-    }
-    input:checked ~ .conditional--content {
-            display: block;
-    }
-}
-
-.conditional--content {
-    input {
-        display: inline-block;
-        &:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            -webkit-user-select: none;
-            cursor: pointer;
-            border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
-            z-index: -1;
-            background-color: @white;
-            box-sizing: border-box;
-            margin-right: @box-spacing/2;
-        }
-        &:hover:before {
-            border-color: @gray-5;
-        }
-        &:disabled {
-            cursor: not-allowed !important;
-            &:before {
-                cursor: not-allowed !important;
-                background-color: @form-disabled-bg;
-                border-color: @form-disabled-bg;
-            }
-        }
-        &:checked {
-            &:before {
-                border-color: @blue-light;
-                background-color: @blue-lighter;
-            }
-            &:hover:before {
-                border-color: @blue-light;
-            }
-        }
-        &:focus {
-            outline: 2px solid @heritage-yellow;
         }
     }
 }
@@ -414,6 +328,10 @@ input[class*="dob-"] {
         margin: 0;
     }
 }*/
+.form-group-date {
+    overflow: auto;
+}
+
 .form-group-date fieldset {
     &:extend(fieldset);
     width: 5rem;
