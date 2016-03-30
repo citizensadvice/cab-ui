@@ -136,6 +136,10 @@ a {
     text-decoration: none;
     border-bottom: 1px solid currentColor;
 
+    .ie8 & {
+        text-decoration: underline;
+    }
+
     &:hover,
     &:focus {
         color: @link-hover-color;
