@@ -15,38 +15,44 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h2 Information about the person being referred
-
+			h2 The trial and the witness’s support needs
+			h3 Defendant details
 			fieldset
-				label(for="standardField") First name
-				span.form-hint The witness’s first name
-				input(id="standardField" placeholder="" type="text")
-			
-			fieldset
-				label(for="standardField") Last name
-				span.form-hint The witness’s last name
+				label(for="standardField") Defendant name(s)
+				span.form-hint For example John SMITH, Jitesh JAMES
 				input(id="standardField" placeholder="" type="text")
 
 			//fieldset
-				legend(for="radio") Gender
-				span.form-hint As defined by the witness
-				label.radio.radio--block
-					input(name="radio", type="radio", value="option1")
-					| Female
-				label.radio.radio--block
-					input(name="radio", type="radio", value="option2")
-					| Male
-				label.radio.radio--block
-					input(checked, name="radio", type="radio", value="option3")
-					| Prefer not to say
-			
-			.form-group-date(style="overflow: auto;")
-				legend Date of birth 
+				label(for="standardField") URN
+				span.form-hint Where this number comes from?
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Offence(s) 
 					span.optional (optional)
-				span.form-hint The witness's date of birth
+				input(id="standardField" placeholder="" type="text")
+
+			//fieldset
+				legend(for="radio") Does the case include domestic violence (DV)?
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option2")
+					| No
+
+			h3 Location
+			fieldset
+				label(for="exampleSelect1") Court where the trial will be heard
+				span.form-hint For example Leeds Magistrates’ Court
+				input(id="standardField" placeholder="" type="text")
+	
+			.form-group-date(style="overflow: auto;")
+				legend Date of trial 
+					span.optional (optional)
 				fieldset
 					label(for="dob-day")
-						span.screenreader What is the witness's date of birth? Date field,
+						span.screenreader What is the witnesses date of birth? Date field,
 						| Day
 					input#dob-day(max="31", min="1", placeholder="DD", type="number")
 				fieldset
@@ -57,5 +63,5 @@ block content
 					input#dob-year(max="2100", placeholder="YYYY", type="number")
 
 
-			a.btn-light.left-button-icon(href="witness-form-2.html") Back
-			a.btn.right-button-icon(href="witness-form-4.html") Next
+			a.btn-light.left-button-icon(href="witness-form-4.html") Back
+			a.btn.right-button-icon(href="witness-form-6.html") Next

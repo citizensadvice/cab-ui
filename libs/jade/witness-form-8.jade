@@ -15,105 +15,26 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h2 Special measures
+			h2 Support needed
 
 			fieldset
-				label(for="exampleTextarea") Which special measures have been granted? 
-					span.optional (optional)
-				span.form-hint  This includes screens, evidence in chief, Livelink, pre-recorded cross examination, closed court, removal of wigs and gowns, intermediary and aids to communication
-				textarea#exampleTextarea(rows="3")
+				legend(for="radio") Which part of the court process does the witness need support with?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Trial only
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Sentence only
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Trial and sentence
 
 			fieldset
-				label(for="exampleTextarea") Which special measures have been applied for, but not yet granted? 
+				label(for="exampleTextarea") Does the witness have individual support needs? 
 					span.optional (optional)
-				span.form-hint  This includes screens, evidence in chief, Livelink, pre-recorded cross examination, closed court, removal of wigs and gowns, intermediary and aids to communication
+				span.form-hint  This includes the support of a specialist at court, for example an IDVA or intermediary (please give their name and role)
 				textarea#exampleTextarea(rows="3")
 
-
-			fieldset
-				label(for="exampleTextarea") Which special measures have been identified, but not applied for? 
-					span.optional (optional)
-				span.form-hint  This includes screens, evidence in chief, Livelink, pre-recorded cross examination, closed court, removal of wigs and gowns, intermediary and aids to communication
-				textarea#exampleTextarea(rows="3")
-
-
-			a.btn-light.left-button-icon(href="witness-form-7.html") Back
-			a.btn.tick-button-icon(href="witness-form-complete.html") Submit
-
-
-
-			///label What special measures have been identified, applied for or granted?
-			//fieldset
-				label(for="exampleSelect1") Screen?
-				.dropdown
-					select#exampleSelect1
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect2") Evidence in chief?
-				.dropdown
-					select#exampleSelect2
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect3") Livelink?
-				.dropdown
-					select#exampleSelect3
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect4") Pre-recorded cross examination?
-				.dropdown
-					select#exampleSelect4
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect5") Closed court?
-				.dropdown
-					select#exampleSelect5
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect6") Removal of wigs and gowns?
-				.dropdown
-					select#exampleSelect6
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect7") Intermediary?
-				.dropdown
-					select#exampleSelect7
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
-
-			//fieldset
-				label(for="exampleSelect8") Aids to communication?
-				.dropdown
-					select#exampleSelect8
-						option Don’t know/not needed
-						option Need identified
-						option Applied for
-						option Granted
 
 			//fieldset
 				label(for="exampleTextarea") What special measures have been identified, applied for or granted?
@@ -132,3 +53,6 @@ block content
 					span.optional (optional)
 				span.form-hint Include the support of an interpreter or other language support (please give their name and role)
 				textarea#exampleTextarea(rows="3")
+
+			a.btn-light.left-button-icon(href="witness-form-6.html") Back
+			a.btn.right-button-icon(href="witness-form-8.html") Next
