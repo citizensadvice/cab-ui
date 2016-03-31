@@ -16,10 +16,10 @@ block content
 	.articleContent
 		div
 			h2 The trial and the witness’s support needs
-			h3 Defendants details
+			h3 Defendant details
 			fieldset
 				label(for="standardField") Defendant name(s)
-				span.form-hint Please enter names, seperated using a comma
+				span.form-hint For example John SMITH, Jitesh JAMES
 				input(id="standardField" placeholder="" type="text")
 
 			//fieldset
@@ -32,7 +32,7 @@ block content
 					span.optional (optional)
 				input(id="standardField" placeholder="" type="text")
 
-			fieldset
+			//fieldset
 				legend(for="radio") Does the case include domestic violence (DV)?
 				label.radio.radio--inline
 					input(name="radio", type="radio", value="option1")
@@ -44,6 +44,7 @@ block content
 			h3 Location
 			fieldset
 				label(for="exampleSelect1") Court where the trial will be heard
+				span.form-hint For example Leeds Magistrates’ Court
 				input(id="standardField" placeholder="" type="text")
 	
 			.form-group-date(style="overflow: auto;")

@@ -15,10 +15,10 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h3 Special measures
+			h2 Support needed
 
 			fieldset
-				legend(for="radio") Which process does the witness need support with?
+				legend(for="radio") Which part of the court process does the witness need support with?
 				label.radio.radio--block
 					input(name="radio", type="radio", value="option1")
 					| Trial only
@@ -28,9 +28,12 @@ block content
 				label.radio.radio--block
 					input(name="radio", type="radio", value="option1")
 					| Trial and sentence
-				label.radio.radio--block
-					input(checked, name="radio", type="radio", value="option2")
-					| Neither
+
+			fieldset
+				label(for="exampleTextarea") Does the witness have individual support needs? 
+					span.optional (optional)
+				span.form-hint  This includes the support of a specialist at court, for example an IDVA or intermediary (please give their name and role)
+				textarea#exampleTextarea(rows="3")
 
 
 			//fieldset
