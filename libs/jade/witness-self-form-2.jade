@@ -15,7 +15,7 @@ block breadcrumbs
 block content
 	.articleContent
 		div
-			h2 About you
+			h2 Please tell us about the witness
 
 			fieldset
 				label(for="standardField") First name
@@ -25,7 +25,7 @@ block content
 				label(for="standardField") Last name
 				input(id="standardField" placeholder="" type="text")
 
-			fieldset
+			//fieldset
 				legend(for="radio") Gender
 				label.radio.radio--block
 					input(name="radio", type="radio", value="option1")
@@ -42,7 +42,7 @@ block content
 					span.optional (optional)
 				fieldset
 					label(for="dob-day")
-						span.screenreader What is the witnesses date of birth? Date field,
+						span.screenreader What is the witness's date of birth? Date field,
 						| Day
 					input#dob-day(max="31", min="1", placeholder="DD", type="number")
 				fieldset

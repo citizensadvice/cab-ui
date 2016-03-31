@@ -21,6 +21,7 @@ block content
 			fieldset
 				label(for="exampleSelect1") Court where the trial will be heard 
 					span.optional (optional)
+				span.form-hint If you know the name of the court where the trial is being held please tell us (for example Leeds Crown Court)
 				input(id="standardField" placeholder="" type="text")
 	
 			.form-group-date(style="overflow: auto;")
@@ -28,7 +29,7 @@ block content
 					span.optional (optional)
 				fieldset
 					label(for="dob-day")
-						span.screenreader What is the witnesses date of birth? Date field,
+						span.screenreader What is the witness's date of birth? Date field,
 						| Day
 					input#dob-day(max="31", min="1", placeholder="DD", type="number")
 				fieldset
