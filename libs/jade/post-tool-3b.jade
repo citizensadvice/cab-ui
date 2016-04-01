@@ -1,0 +1,57 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = false
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block script
+	script.
+		var x = ($('#letter').width())*1.414;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.414;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+block content
+	.articleContent
+		.flex-container
+			.flex-row
+				.form.col-xs-12.col-md-4
+					p This is what your email will look like. You can go back and make changes if you need to.
+					p If all of your information is correct, press send and we will send an email to:
+					ul
+						li Royal Mail Door to Door
+						li The Direct Marketing Association’s ‘Your Choice’ scheme
+						li Mailing Preference Service
+
+					a.btn-light.left-button-icon(href="post-tool-2b.html") Edit
+					a.btn-secondary.email-button-icon(href="post-tool-4b.html") Send
+
+				#letter.col-xs-12.col-md-8
+					.letter-content
+						p
+						| 1 High Street
+						br 
+						| New Town
+						br
+						| New City
+						br
+						| A1 1AA
+
+						p
+						| Please accept this communication as instructions to remove the above address from receiving all unaddressed items.
+						p
+						| I understand that I may miss information from local or national government or other publications that are sent using this service.
+
+						p
+						| Joe Blogs
+						p joe@joeblogs.com						

@@ -1,0 +1,20 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			h2 Your emails
+			.callout--confirmation Your emails to Royal Mail, Direct Marketing Association and Mailing Preference Service have been sent.
+			p You’ll start to see a difference in the amount of junk mail you receive within the next 4 weeks.

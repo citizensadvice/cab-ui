@@ -1,0 +1,31 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			//h2 Your local electoral registration office
+
+			h3 Contact Luton Borough Council
+
+			p#authority_url Visit the #[a(href="http://www.luton.gov.uk/Council_government_and_democracy/Local-democracy/electoral_registration/Pages/Electoral-registration.aspx" rel="external" id="url") Luton Borough Council website]
+			p#authority_email Email: #[a(href="mailto:electoral_services@luton.gov.uk") electoral_services@luton.gov.uk]
+			p#authority_phone Phone: 01582 510380
+			p#authority_address
+			| Luton Borough Council
+			br
+			| Town Hall
+			br
+			| Luton
+			p#authority_postcode LU1 2BQ

@@ -1,0 +1,26 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = false
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		.flex-container
+			.form.col-xs-12.col-md-4
+				p Each council handles opting-out differently, enter your postcode and we will direct you to your counils details where you will be able to contact them to opt-out.
+
+				fieldset
+					label(for="standardField") Your UK postcode
+					input#standardField(placeholder="", type="email" required)
+
+				a.btn-light.left-button-icon(href="post-tool-a.html") Back
+				a.btn.right-button-icon(href="post-tool-4a.html") Next

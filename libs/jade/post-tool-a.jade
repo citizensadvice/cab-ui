@@ -1,0 +1,52 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			p You can contact 3 organisations to reduce the amount of junk mail you receive.
+			p You can also remove your details from the 'open register' - a list of addresses at your local electoral office that companies can send junk mail to. 
+			p This tool will:
+			ul
+				li email the the organisations you choose
+				li create a letter for you to email or send to your local electoral office
+
+			fieldset
+				legend(for="checkbox") Who would you like to contact?
+				label.checkbox.checkbox--block
+					input(disabled, name="checkbox", type="checkbox")
+					p
+						span Royal Mail Door to Door
+						br
+						| You’ll receive less post that’s not addressed to you - this can include post from charities that you might want to receive.
+				label.checkbox.checkbox--block
+					input(disabled, name="checkbox", type="checkbox")
+					p
+						span The Direct Marketing Association’s ‘Your Choice’ scheme
+						br
+						| You’ll receive less post that’s not addressed to you - this can include post from charities, your local council and political parties.
+				label.checkbox.checkbox--block
+					input(disabled, name="checkbox", type="checkbox")
+					p
+						span Mailing Preference Service
+						br
+						| You’ll stop getting post that’s addressed to you if you didn’t ask for it.
+				label.checkbox.checkbox--block
+					input(checked, name="checkbox", type="checkbox")
+					p
+						span Your local electoral registration office
+						br
+						| Taking your address off the open register means companies won't be able to get your address to send you junk mail.
+
+			a.btn.right-button-icon(href="post-tool-2a.html") Start
