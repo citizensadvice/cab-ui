@@ -106,64 +106,46 @@ html.no-js
                     p Is there anything wrong with this page? #[a(href="#") Let us know].
 
             #footer.main-footer(data-track-zone="footer")
-                .flex-container.main-content(style="margin-top:0.5rem;")
-                    .col-xs-12.col-md-9.flex-container(style="padding:0 1rem 0 0 !important; margin:0;")
-                        .main-footer__box.flex-col-1-1(style="padding:0 !important;")
-                            h3(style="border-bottom:1px solid #fff; padding:0 0 1rem 0;") Get Advice
-                        .main-footer__box.col-xs-12.col-md-4(style="padding:0 !important;")
-                            ul.li--arrow
-                                li
-                                    a(href="#") Benefits
-                                li
-                                    a(href="#") Work
-                                li
-                                    a(href="#") Debt and money
-                                li
-                                    a(href="#") Consumer
+                .footer-content.flex-row
+                    .flex-column.col-xs-12.col-md-9
+                        h3 Get Advice
+                        .flex-row(style="padding: 0;")
+                            .col-xs-12.col-md-4
+                                ul
+                                    li #[a(href="#") Benefits]
+                                    li #[a(href="#") Work]
+                                    li #[a(href="#") Debt and money]
+                                    li #[a(href="#") Consumer]
 
-                        .main-footer__box.col-xs-12.col-md-4(style="padding:0 !important;")
-                            ul.li--arrow
-                                li
-                                    a(href="#") Relationships
-                                li
-                                    a(href="#") Housing
-                                li
-                                    a(href="#") Law and rights
-                                li
-                                    a(href="#") Discrimination
+                            .col-xs-12.col-md-4
+                                ul
+                                    li #[a(href="#") Relationships]
+                                    li #[a(href="#") Housing]
+                                    li #[a(href="#") Law and rights]
+                                    li #[a(href="#") Discrimination]
 
-                        .main-footer__box.col-xs-12.col-md-4(style="padding:0 !important;")
-                            ul.li--arrow
-                                li
-                                    a(href="#") Tax
-                                li
-                                    a(href="#") Healthcare
-                                li
-                                    a(href="#") Education
-                                li
-                                    a(href="#") A to Z of advice
+                            .col-xs-12.col-md-4
+                                ul
+                                    li #[a(href="#") Tax]
+                                    li #[a(href="#") Healthcare]
+                                    li #[a(href="#") Education]
+                                    li #[a(href="#") A to Z of advice]
 
-                    .form.col-xs-12.col-md-3(style="padding:0;")
-                        .main-footer__box(style="padding:0 !important;")
-                            h3(style="border-bottom:1px solid #fff; padding:0 0 1rem 0;")  Information
-                            .main-footer__box(style="padding:0 !important;")
-                                ul.li--arrow
-                                    li
-                                        a(href="#") Help
-                                    li
-                                        a(href="#") Cymraeg
-                                    li
-                                        a(href="#") Terms and conditions
-                                    li
-                                        a(href="#") Privacy and cookies
+                    .flex-column.col-xs-12.col-md-3
+                        h3 Information
+                        ul
+                            li #[a(href="#") Help]
+                            li #[a(href="#") Cymraeg]
+                            li #[a(href="#") Terms and conditions]
+                            li #[a(href="#") Privacy and cookies]
 
-            .footer--legal
-                .footer--legal--content
-                    img(alt="", src="images/ca_wo-logo-100px.svg")
-                    p
-                        | Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
-                        br
-                        | Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+                .footer--legal
+                    .footer--legal--content
+                        img(alt="", src="images/ca_wo-logo-100px.svg")
+                        p
+                            | Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
+                            br
+                            | Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
 
         //.notice
             .notice__content
