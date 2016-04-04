@@ -1,0 +1,310 @@
+include mixins.jade
+block settings
+doctype html
+html
+	head
+		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(name="keywords")
+		meta(name="description")
+
+		title Citizens Advice blog
+			- if (typeof title !== "undefined")
+				| - #{title}
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+		meta(content="EWS", name="cab-extent")
+		meta(content="/static/images/apple-touch-icon.png")
+		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
+
+		// Stylesheets
+		link(href="css/blog.css", rel="stylesheet")
+		link(href="css/guide.css", rel="stylesheet")
+		link(href="images/favicon/32.png", rel="shortcut icon")
+		link(href="images/favicon/228.png", rel="apple-touch-icon")
+
+		// Javascript
+		script(src="js/vendor/jquery-1.11.3.min.js")
+		script(src="js/beta-dap-accordion.js")
+		script(src="js/collapse.js")
+		script(src="js/prism.js")
+		script(src="js/smooth.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+			});
+
+		block script
+
+	body
+		<!--[if IE 8]><div class="ie8"><![endif]-->
+		.skip-nav
+			a.screenreader.screenreader--focusable Skip to content
+			a.screenreader.screenreader--focusable Skip to footer
+
+		if cookiemonster
+			.cookie-monster.hide-no-cookies.hide-no-js.no-print
+				.cookie-monster__content
+					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
+					button.btn.cookie-monster__close(data-action="close", type="button") Close
+
+		if mockup
+			//header.styleguide--header.mockup
+				.styleguide--header--content
+					a(href="index.html")
+						img(src="images/ca-logo-hz-white-280px.svg")
+			header.main-header
+				.main-header__content
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
+						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-280px.svg" height="80")
+					a.main-header__logo.no-print.wide(href="index.html", title="Citizens Advice home")
+						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-white-280px.svg")
+					a.main-header__logo.print-only(href="index.html", title="Citizens Advice home")
+						img(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-280px.svg")
+
+					.main-header__links(data-track-zone="top-bar")
+						a.main-header__menu-link.js-toggle-menu(href="")
+							i.icon-menu
+							| Menu
+
+						nav.main-header__top-nav
+							a(href="#") Cymraeg</a>
+							a.hide-offline.main-header__login(href="")
+								i.icon-key
+								| Sign-in
+
+						form.main-header__search.hide-offline(action="")
+							label.screenreader(for="main-header__search__input") Search
+							input#main-header__search__input.main-header__search__input(name="q", placeholder="", type="search")
+							button.main-header__search__submit(title="Search", type="submit")
+								i.icon-search.icon--no-text
+								span.screenreader Search
+
+			nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
+				ul.nav-list-primary
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Benefits
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Work
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Debt and money
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Consumer
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Relationships
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Housing
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Law and rights
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Discrimination
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Tax
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Healthcare
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Education
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") More from us
+					li.nav-list-primary-more.js-more-menu(style="display: none;")
+						a(href="#") More
+							i.icon-down
+
+		else if loginheader
+			aside.section-notice__login
+				h2.screenreader Notice
+				.section-notice__content
+					button.btn.btn-small(type="button") #[a(href="adviser.html") Adviser login]
+			header.main-header
+				.main-header__content.main-content
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;images/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
+					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+
+		else if logoutheader
+			aside.section-notice__login
+				h2.screenreader Notice
+				.section-notice__content
+					button.btn.btn-small(type="button")  #[a(href="adviser-logged-out.html") Adviser logout]
+			header.main-header
+				.main-header__content.main-content
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
+					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+
+		else
+			header.styleguide--header
+				.styleguide--header--content
+					img(src="images/ca-logo-hz-white-280px.svg")
+					.styleguide--header--content-nav
+						a(href="#") The Team
+						a(href="#") About
+						a(href="#") Get involved
+						a(href="#") Jobs
+
+
+			//header.main-header
+				.main-header__content.main-content
+					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
+					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+
+		.main-container
+			nav.main-breadcrumb
+				block breadcrumbs
+
+			block section-notice
+
+			.main-content
+				if sidebar
+					.main-content__right(id="main", role="main")
+						if title
+							//.title
+								h1.title__heading.js-ref
+									span.title__title #{title}
+						if toolbars
+							include toolbar.jade
+							block content
+							if sharebar
+								include sharebar.jade
+						else
+							block content
+
+					block sidebar
+				else
+					.title
+						h1.title__heading.js-ref
+							span.title__title #{title}
+					block content
+
+				.print-only
+					h2 This section is print only
+
+		if mockup
+			.footer-feedback
+				h2.screenreader Feedback
+				.footer-feedback__content
+					p Is there anything wrong with this page? #[a(href="#") Let us know].
+
+			#footer.main-footer(data-track-zone="footer")
+				.main-footer__content.flex-row.js-equal-height
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Advice
+						ul.li--arrow
+							li
+								a(href="#") Benefits
+							li
+								a(href="#") Work
+							li
+								a(href="#") Debt and money
+							li
+								a(href="#") Consumer
+							li
+								a(href="#") Relationships
+							li
+								a(href="#") Housing
+							li
+								a(href="#") Law and rights
+							li
+								a(href="#") Discrimination
+							li
+								a(href="#") Tax
+							li
+								a(href="#") Healthcare
+							li
+								a(href="#") Education
+							li
+								a(href="#") A to Z of advice
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 Resources and tools
+						ul.li--arrow
+							li
+								a(href="#") Budgeting tool
+							li
+								a(href="#") Advice fact sheets
+							li
+								a(href="#") Advice online, by phone and in person
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 More from us
+						ul.li--arrow
+							li
+								a(href="#") About us
+							li
+								a(href="#") Annual reports
+							li
+								a(href="#") Contact us
+							li
+								a(href="#") Complaints
+							li
+								a(href="#") Blogs
+							li
+								a(href="#") Campaigns
+							li
+								a(href="#") Media
+							li
+								a(href="#") Policy research
+							li
+								a(href="#") Support us
+							li
+								a(href="#") Volunteering
+							li
+								a(href="#") Jobs
+
+					.main-footer__box.col-md-3.col-sm-6
+						h2 About Citizens Advice
+						ul.li--arrow
+							li
+								a(href="#") How we provide advice
+							li
+								a(href="#") The difference we make
+							li
+								a(href="#") Support us
+							li
+								a(href="#") How Citizens Advice works
+							li
+								a(href="#") Accessibility
+							li
+								a(href="#") Disclaimer and copyright
+							li
+								a(href="#") Privacy and cookies
+
+					.main-footer__box.main-footer__box--copyright
+						div
+							p
+								img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+								| Copyright © 2015 Citizens Advice. All rights reserved.
+								br
+								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+								br
+								| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+								br
+								| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+		else
+			footer.main-footer(data-track-zone="footer", id="footer")
+				.styleguide--footer
+					div
+						p
+							img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+							| Copyright © 2015 Citizens Advice. All rights reserved.
+							br
+							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+							br
+							| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+							br
+							| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+		.notice
+			.notice__content
+				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
+
+		<!--[if IE 8]></div><![endif]-->
+		script(src="js/advisor.js")
+		script(src="js/core.js")
+		block script-bottom

@@ -1,0 +1,74 @@
+- var section = "Brand"
+    .side-nav-beta
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            fieldset
+                label(for="search") Search this blog
+                .search-results__field.field-group.field-group--buttons(style="width:85%;")
+                    input(type="search", placeholder="", value="Search", style="border:1px solid #fff;")
+                    button.btn.btn-primary(style="background-color:#fcbb69; border:1px solid #fff;")
+                        i.icon-search
+
+        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            label Recent posts
+            ul
+                li
+                    a(href="#") Making things simpler: Personal Independence Payment (PIP)
+                li 
+                    a(href="#") Introducing… immigration advice
+                li 
+                    a(href="#") How people look for things
+                li 
+                    a(href="#") Casebook: An intro to what's been happening
+                li 
+                    a(href="#") A present (kind of) from the digital team
+                li 
+                    a(href="#") Your digital team needs you!
+
+        .well(style="background-color: #fee4c3; border: 0px #dfdfdf solid;")
+            fieldset
+                label(for="exampleSelect1") Select Category
+                .dropdown
+                    select(id="exampleSelect1")
+                        option All categories
+                        option Content
+                        option Design
+                        option Casebook
+                        option Research
+
+        .cards(style="color:#fff; background-color:#32457E;")
+            .card-banner-top(style="background-color:#32457E;")
+                p(style="color:#fff;") Get updates by email
+            .card-text
+                fieldset
+                    label(for="name", style="color:#fff;") Your name
+                    .search-results__field(style="width:95%; margin-bottom: 10px;")
+                        input(type="Email", placeholder="Name", style="padding: 0.75rem !important;")
+                    label(for="email", style="color:#fff;") Your email
+                    .search-results__field(style="width:95%; margin-bottom: 10px;")
+                        input(type="Email", placeholder="Email", style="padding: 0.75rem !important;")
+                        button.btn.btn-primary.tick-button-icon(style="padding: 1.5rem 0.5rem -1.5rem 0 !important;") Submit
+
+
+        //.well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+            h3(style="font-weight:700;font-size:1rem;") Get updates by email
+            fieldset
+                label(for="name") Your name
+                .search-results__field(style="width:95%; margin-bottom: 10px;")
+                    input(type="Email", placeholder="Name")
+                label(for="email") Your email
+                .search-results__field(style="width:95%; margin-bottom: 10px;")
+                    input(type="Email", placeholder="Email")
+                    button.btn.btn-primary.right-button-icon Submit
+
+        //.cards(style="color:#fff; background-color:#32457E;")
+            .card-banner-top
+                p(style="color:#fff;") Policy
+            .card-image-top
+                img(src="images/laptop-branding.png" alt="Laptop")
+            .card-text
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+                button.btn.btn-primary.right-button-icon(type="button" style="background-color:#FFBF47; border-color:#FFBF47;") Continue
+
+        //.callout--generous
+            h3 Page
+            p Pagey page
