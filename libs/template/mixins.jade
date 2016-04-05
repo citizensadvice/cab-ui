@@ -14,27 +14,13 @@ mixin breadcrumbs(obj)
 			- }
 
 mixin sidebar(obj, key)
-	nav.side-nav-beta
+	nav.section-nav
+		h2.section-nav__heading
+			a In this section
 		ul
-			li.side-nav-beta__heading.-active.-open
-				a
-					span #{section}
 			li
+				a.section-nav__parent(href="./##{section}") #{section}
 				ul
 					- each item,index in obj
-						- active = index === key ? "-current": ""
-						li.side-nav-beta__sibling
-							+link(item.title, item.href, item.text)(class=active)
-
-mixin sidebarSiblings(obj, key)
-	nav.side-nav-beta.sibling
-		ul
-			li.side-nav-beta__heading.-active.-open
-				a
-					span #{section}
-			li
-				ul
-					- each item,index in obj
-						- active = index === key ? "-current": ""
-						li.side-nav-beta__sibling
-							+link(item.title, item.href, item.text)(class=active)
+						li
+							+link(item.title, item.href, item.text)

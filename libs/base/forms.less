@@ -20,6 +20,7 @@ form small {
 .invalid {
     padding-top: @box-spacing/4;
     clear: both;
+//    display: none;
 }
 .valid {
     color: @green;
@@ -27,7 +28,20 @@ form small {
 .invalid {
     color: @red;
 }
-
+/* Do we want to make valid/invalid selectors inline?
+input {
+    &:valid {
+        .valid {
+            display: inline-block;
+        }
+    }
+    &:invalid {
+        .invalid {
+            display: inline-block;
+        }
+    }
+}
+*/
 fieldset,
 .form__group {
     padding: 0;
@@ -66,6 +80,7 @@ input[type=text],
 input[type=password],
 input[type=email],
 input[type=number],
+input[type=tel],
 input[type=search] {
     padding: @box-spacing-vertical @box-spacing-horizontal;
     -webkit-appearance: none;
@@ -176,19 +191,12 @@ select {
 input[type="file"] {
     border: none;
     width: 100%;
-    outline: none;
     display: block;
+    &:focus {
+        outline: 2px solid @heritage-yellow;
+    }
 }
 
-/* The output tag isn't supported by MS
-output {
-    display: block;
-    padding-top: 11px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: @black;
-}
-*/
 
 // Reset height for textareas
 textarea.form__field {
@@ -207,12 +215,12 @@ textarea.form__field {
     margin-right: @box-spacing-horizontal/2;
     z-index: 1;
     background-color: @gray-8;
+    border: none;
     input {
         display: inline-block;
         &:before {
             content: '';
             display: block;
-            outline: none;
             width: 100%;
             height: 100%;
             top: 0;
@@ -266,23 +274,9 @@ textarea.form__field {
             display: table-cell;
             margin: 0;
             span {
-                font-weight: @font-weight-bolder;
+                font-weight: @font-weight-bold;
             }
         }
-    }
-}
-
-// What is this?
-.multi-select {
-    padding: 0;
-    height: @box-spacing*5.5;
-    option {
-        padding: @box-spacing-vertical/2 @box-spacing-horizontal/2;
-        -webkit-appearance: none;
-    }
-    @media only screen and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-        padding: @box-spacing-vertical @box-spacing-horizontal;
-        height: auto !important;
     }
 }
 
@@ -293,6 +287,7 @@ textarea.form__field {
     background-color: @white;
     display: inline-block;
     width: 100%;
+    border: 1px solid @gray-6;
     &:after {
         pointer-events:none;
         @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
@@ -306,6 +301,7 @@ textarea.form__field {
         -moz-appearance: window;
         padding-right: 2em;
         .ie(width,100%);
+        border: none;
     }
     .dropdown,
     select {
@@ -332,6 +328,10 @@ input[class*="dob-"] {
         margin: 0;
     }
 }*/
+.form-group-date {
+    overflow: auto;
+}
+
 .form-group-date fieldset {
     &:extend(fieldset);
     width: 5rem;
@@ -447,6 +447,7 @@ input[class*="dob-"] {
         }
         select {
             .ie(width,100%);
+            border: 1px solid @gray-6;
         }
     }
     input:first-of-type {
@@ -464,86 +465,16 @@ input[class*="dob-"] {
     }
 }
 
-// Custom dropdown icons
-.select--custom-icon() {
-
-    display: inline-block;
-    overflow: hidden; // Hide the arrow
-    vertical-align: middle;
-
-    & > select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: 0; //If you want a border set it on the parent
-        background: transparent;
-        padding: @box-spacing-vertical;
-
-        // We need to push the pointer off the side so it is hidden in the overflow
-        // In webkit / blink there is no pointer to move
-        // In IE the padding is on the outside of the pointer, but in Firefox it is on the inside
-        // In IE8 and below we cannot move the pointer
-
-        // The width, plus the pointer, plus the padding (for IE9+)
-        // This needs to be at least 1.75em to hide the pointer in IE
-        // (In our case this is therefore 1em + .75em padding)
-        // In <=IE8 this will be ignored
-        width: calc( ~"100% + 1.75em" );
-
-        // The image width plus some padding so the text isn't against the arrow in Blink/Webkit
-        // In IE/Firefox there will be extra space between the text and arrow due to the native arrow
-        // In <=IE8 this will be ignored
-        margin: 0 calc( ~"33px + .75em" ) 0 0;
-
-        // For chrome - the outline is cut off on the right so hide it completely */
-        outline: none;
-
-        /* The right positioning is the extra width from above
-               In <=IE8 this will be ignored as we've used the four value poitioning syntax
-            */
+.field-group--buttons {
+    input:first-of-type {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+        width: 70%;
+        display: inline-block;
     }
-}
-
-.custom-dropdown {
-    .select--custom-icon;
-    position: relative;
-    width: 85%;
-    float: left;
-    background: @gray-6;
-
-    & > i {
-        position: absolute;
-        right: 0;
-        top: 0;
-        background: @heritage-blue;
-        color: white;
-        padding: 0 .75em;
-        font-size: 1.3em;
-        pointer-events: none;
-        &:before {
-            padding: 0;
-        }
+    button {
+        width: 30%;
+        display: inline-block;
     }
-}
-.custom-dropdown__select {
-    width: 80%;
-}
-.custom-dropdown__button {
-    width: 17%;
-    float: right;
-}
-
-// If pointer events aren't supported hide the custom dropdown
-.no-pointer-events .custom-dropdown > i {
-    display: none;
-}
-
-// Overrider attibute selector
-input.custom-dropdown__button {
-    margin-left: 1%;
-    width: 14%;
-    float: left;
-    border-radius: 0;
-    padding: .75em;
 }
 
 /* Search fields used in blocks */
@@ -582,12 +513,3 @@ input.custom-dropdown__button {
         }
     }
 }
-
-/*.search-icon {
-    background-image: url("assets/images/search.svg");
-    padding-right: 3;
-    background-repeat: no-repeat;
-    background-position: center right .6rem;
-    -webkit-background-size: 1.4;
-   background-size: 1.4;
-}*/

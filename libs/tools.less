@@ -115,10 +115,68 @@
 	.main-content__right {
 		padding-left: 0;
 	}
+
+	.widget {
+		overflow: hidden;
+		padding: 2px;
+
+		.section-nav li ul a:not([href]),
+		.side-nav-beta li ul a:not([href]) {
+			background-color: transparent !important;
+		}
+
+		.section-nav li ul a.active,
+		.side-nav-beta li ul a.active {
+			background-color: @heritage-blue-lightest !important;
+		}
+
+		h2.section-nav__heading {
+			margin: 0 !important;
+		}
+		.footer-feedback__content {
+			padding: 1rem 0;
+		}
+
+		.a-external:after,
+		.a-external-link:after {
+		    font-family: 'cab-icons' !important;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    // Better Font Rendering
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    padding-left: 0.5em;
+		    padding-right: 0.25em;
+		    color: @link-color;
+		    font-size: 75%;
+		}
+	}
+	&.loader {
+		min-height: 100px;
+		background: url('assets/loader.gif') no-repeat left center;
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		    background: url('assets/loader@2x.gif') no-repeat left center;
+		    background-size: 30px 30px;
+		}
+		.widget {
+			background-color: @white;
+		}
+	}
+	&.dap-panel {
+		background-color: @white;
+	}
 }
 
-/* Print styles
 @media print {
-	@import "base/print";
+	//@import "base/print";
+	.section-nav {
+		display: none !important;
+	}
+	.table-collapse {
+		display: table-row !important;
+	}
 }
-*/

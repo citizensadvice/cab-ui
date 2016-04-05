@@ -131,18 +131,21 @@ small {
 }
 
 // Site wide links
-
 a {
     color: @link-color;
     text-decoration: none;
     border-bottom: 1px solid currentColor;
+
+    .ie8 & {
+        text-decoration: underline;
+    }
 
     &:hover,
     &:focus {
         color: @link-hover-color;
         text-decoration: none;
         border-bottom: 1px solid @link-color;
-        //background-color:  lighten(@link-color, 70%);
+        background-color:  lighten(@link-color, 75%);
     }
 
     &:focus {
@@ -152,37 +155,31 @@ a {
 
     &:active {
         color: @link-active-color;
-    }
-
-    &:visited {
-        color: @link-color;
-    }
-
-    &:not([href]) {
-        text-decoration: none;
-    }
-}
-
-.articleContent a {
-    color: @link-color;
-    text-decoration: none;
-    &:active {
-        color: @link-active-color;
         border-bottom-color: @link-active-color;
     }
+
     &:visited {
         color: @link-visited-color;
         border-bottom-color: @link-visited-color;
     }
-    &:hover,
-    &:focus {
-        color: @link-hover-color;
+
+    &:not([href]) {
         text-decoration: none;
-        border-bottom-color: @link-hover-color;
-        background-color:  lighten(@link-color, 75%);
+        pointer: default;
     }
-    &:focus {
-        border-bottom: 0;
+}
+
+// Overrides to prevent a carrying to everything
+.main-header,
+.main-breadcrumb,
+.section-nav,
+.main-footer {
+    a:hover,
+    a:active,
+    a:visited,
+    a:focus {
+        text-decoration: none;
+        background: none;
     }
 }
 

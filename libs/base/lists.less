@@ -267,18 +267,22 @@ li > ol {
     & > li:before {
         margin: 0 .25 0 -.5;
         font-family: 'cab-icons';
-        content: '\2716';
+        content: @i-tick;
+        color: @green;
+        padding-right: .5rem;
     }
 }
 
 
 .cross {
-    padding: 0 0 0 2;
+    padding: 0 0.5 0 2;
     list-style:none;
 
     & > li:before {
             margin: 0 .25 0 -.5;
             font-family: 'cab-icons';
-            content: '\2716';
+            content: @i-cross;
+            color: @red;
+            padding-right: .5rem;
     }
 }

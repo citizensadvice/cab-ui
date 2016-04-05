@@ -8,6 +8,7 @@ table {
     border-collapse: collapse;
     //table-layout: fixed;
     width: 100%;
+    background-color: @white;
     .total,
     tfoot {
         font-weight: @font-weight-bolder;
@@ -300,6 +301,7 @@ table.simple-table td {
         }
         &.active td:first-of-type:before {
             transform: rotate(90deg);
+            transform-origin: center left;
         }
     }
     & > td {

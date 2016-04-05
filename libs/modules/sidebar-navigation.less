@@ -5,7 +5,7 @@
  */
 
 .main-content__sidebar {
-	float: left;
+	//float: left;
 	//clear: left;
 	width: @width-span-4;
 	overflow: hidden; // Stop margin collapsing issues
@@ -13,35 +13,48 @@
 	//padding: @box-spacing @box-spacing-vertical;
 	margin: 0;
 
-	@media ( max-width: @screen-xs-max ) {
+	@media ( max-width: @breakpoint-content ) {
 		float: none;
 		width: auto;
 		margin-top: @box-spacing*1.5;
 	}
 }
 
-.side-nav-beta {
+.side-nav-beta,
+.section-nav {
 	.main-content__sidebar;
 	margin: 0 0 @box-spacing 0;
 	overflow: visible;
+	background-color: none;
 
-	&.sibling {
-		border: 0 solid @inventive-teal;
-		border-top-width: .5;
-		background-color: @gray-8;
-		.side-nav-beta__sibling a:hover {
-			background-color: @gray-6;
-			cursor: pointer;
-		}
+	.active {
+		background-color: @heritage-blue-lightest;
 	}
-	.-visited {
-		font-weight: @font-weight-bolder;
+
+	li ul a:not([href]),
+	li ol a:not([href]) {
+		background-color: @heritage-blue-lightest;
 	}
+
+	ul,
+	ol {
+		padding: 0;
+		margin: 0;
+	}
+
 	ul {
 		list-style: none;
-		padding: 0;
-		margin-bottom: 0;
 	}
+
+	ol li {
+		color: @gray-3;
+		display: block;
+
+		a {
+		    display: list-item !important;
+		}
+	}
+
 	li {
 		padding: 0;
 		margin: 0;
@@ -54,87 +67,84 @@
 		}
 	}
 
-	&__heading {
-		display: none;
-		&.-active,
-		&.-open {
-			display: block;
-			/* Hide icon until research deems required
-			padding-right: 2.7rem; */
-			position: relative;
-		}
-		> a {
+	a.section-nav__parent {
+		color: @heritage-blue;
+		font-weight: @font-weight-boldest;
+		font-size: @font-size-medium;
+		&:visited {
 			color: @heritage-blue;
-			font-weight: @font-weight-boldest;
-			font-size: @font-size-medium;
-			/* Hide icon until research deems required
-			&:before {
-				content: "\2c4";
-				font-family: 'cab-icons';
-				display: inline-block;
-				color: @heritage-blue-lighter;
-				width: 1.5rem;
-				text-align: center;
-				margin-right: .5rem;
-				font-weight: @font-weight-base;
-				.vertical-align(absolute);
-				right: .5rem;
-			}
-			*/
-		}
-	}
-
-	&__sibling {
-		span {
-			border: none;
 		}
 		&:hover {
 			background-color: @gray-8;
 		}
-		.section {
-			color: @heritage-blue;
-			font-weight: @font-weight-boldest;
-			//font-size: @font-size-medium;
+	}
+
+	&__parent + ul li,
+	&__parent + ol li {
+		list-style-position: inside;
+		&:hover {
 			background-color: @gray-8;
-			&:hover {
-				background-color: @heritage-blue-lightest;
-			}
+		}
+		a:visited {
+			color: @purple-dark;
 		}
 	}
-	.-current {
-		background-color: @heritage-blue-lightest;
-		font-weight: @font-weight-bolder;
-		border-color: @heritage-blue-lighter;
+
+
+	// Styles for collapsible sidebar on mobile
+    &__heading {
+    	display: none;
+    	padding: 0;
+    	margin: 0;
+        cursor: pointer;
 		a {
-			cursor: default;
+			display: block;
+			padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+			font-size: @font-size-h4;
+			margin: 0;
+			border-bottom: none;
+			color: @heritage-blue;
+			font-weight: @font-weight-bold;
+			background-color: @gray-8;
+			cursor: pointer;
+			border-bottom: 0;
+            .btn-icon(@i-vertical-dots,@color:@heritage-blue);
+            .expanded & {
+                .btn-icon(@i-cross,@color:@heritage-blue);
+            }
 		}
-		span {
-			border: none;
-		}
-	}
-	/*.side-nav-beta__heading + li {
-		display: block;
-	}
-	@media screen and (max-width: @screen-xs-max) {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		max-height: 100%;
-		overflow: scroll;
-		background-color: @white;
-		margin: 0;
-		box-shadow:  0px -2px 0px 0px @gray-7;
-		.side-nav-beta__heading + li {
-			display: none;
-		}
-	}*/
+    }
+
+    @media screen and (max-width: @breakpoint-content) {
+
+        background-color: @white;
+        margin: 0;
+        border: 1px solid @gray-6;
+        margin-bottom: 1.5rem;
+	    &__heading {
+	    	display: block;
+	    }
+        &__heading + ul {
+            display: block;
+            .js &,
+            .cabtools & {
+            	display: none;
+            }
+        }
+        .expanded& &__heading + ul {
+            display: block;
+        }
+        .expanded& &__heading {
+        	border-bottom: 1px solid @gray-6;
+        }
+        order: -1;
+    }
 }
 
 .side-nav {
 	.main-content__sidebar;
 
-	@media screen and (max-width: @screen-xs-max) {
+	@media screen and (max-width: @breakpoint-content) {
 		float: none;
 		width: 100%;
 	}
@@ -356,4 +366,3 @@
 html[lang="en-SCT"] .side-nav > h2 {
 	background: @heritage-blue;
 }
-

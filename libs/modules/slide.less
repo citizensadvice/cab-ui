@@ -1,0 +1,37 @@
+// Styles for jQuery.fn.cssSlide
+
+.slide {
+
+    // Used for the duration of the slide up transition
+    &--up {
+	    overflow-y: hidden;
+	    transition: all .35s ease-in-out;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    border-top-width: 0;
+	    border-bottom-width: 0;
+    }
+
+    // Used for the duration of the slide down transition
+    &--down {
+	    overflow-y: hidden;
+	    transition: all .35s ease-in-out;
+    }
+
+    // Used to setup the slide down transition
+    &--down-setup {
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    border-top-width: 0;
+	    border-bottom-width: 0;
+    }
+
+    // Final state for a hidden element
+    &--hidden {
+	    display: none;
+    }
+}

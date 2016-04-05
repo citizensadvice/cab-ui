@@ -6,7 +6,6 @@
  * Whole revealable can be automatically calculated by entering only one colour.
  */
 
-.collapsible, // This needs to be removed eventually
 .revealable {
     .revealable(
         @white,
@@ -43,28 +42,15 @@
     }*/
 }
 
-
-// Accordions
-.accordion .group {
-    background: @white;
-    margin-bottom: 1em;
-}
-.accordion h3 {
-    margin: @box-spacing-horizontal @box-spacing-vertical 0 @box-spacing-vertical;
-    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal*1.5;
-    cursor: pointer;
-
-    .no-js & {
-        cursor: default;
+.no-js .revealable {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    border: 1px solid @heritage-blue;
+    > *:first-child {
+        margin-top: 0;
+        border-bottom: 1px solid;
+        padding-bottom: @box-spacing-vertical;
     }
-
-    & > img:first-child {
-        position: absolute;
-        margin-left: -1.7em;
-        margin-top: .1em;
+    > *:last-child {
+        margin-bottom: 0;
     }
-}
-
-.accordionContent {
-    padding: 0 @box-spacing-horizontal @box-spacing-vertical @box-spacing-horizontal;
 }

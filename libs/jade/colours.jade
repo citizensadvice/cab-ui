@@ -13,6 +13,15 @@ block breadcrumbs
 block sidebar
 	include ../template/sidebar-styles.jade
 
+block script
+	script.
+		var sw = $('.swatch').width();
+		$('.swatch').css({'height':sw+'px'});
+		$(window).resize(function() {
+			var sw = $('.swatch').width();
+			$('.swatch').css({'height':sw+'px'});
+		});
+
 block content
 	.articleContent
 		div
@@ -21,7 +30,7 @@ block content
 					h3 Colour contrast
 					p The colour contrast ratio for text and interactive elements should be at least 4.5:1 #[a(href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html") as recommended by the W3C].
 					h3 Brand
-					p Colours as defined in the #[a(href="#") Brand Guidelines]. To be used in pairs as described below. These colours are not to be used for marketing communications such as campaigns, reporting and policy.
+					p Colours as defined in the #[a(href="#") Brand Guidelines]. To be used in pairs as displayed below.
 			.newrow
 				.span4-sm.span6.swatch.swatch--brand--heritage-blue
 					p Heritage Blue
@@ -273,11 +282,3 @@ block content
 						br
 						| @adviser-stone
 						br
-
-	script.
-		var sw = $('.swatch').width();
-		$('.swatch').css({'height':sw+'px'});
-		$(window).resize(function() {
-			var sw = $('.swatch').width();
-			$('.swatch').css({'height':sw+'px'});
-		});

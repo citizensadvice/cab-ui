@@ -26,9 +26,14 @@
         background-color: @btn-background-hover;
         outline: 0;
         color: @btn-text;
+        box-shadow: none;
     }
     &:visited {
         color: @btn-text;
+        border-color: @btn-border;
+    }
+    &:focus {
+        outline: 2px solid @heritage-yellow;
     }
 }
 

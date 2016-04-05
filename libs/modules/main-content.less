@@ -17,14 +17,32 @@
  .title__subheading--footer {
     margin-bottom: 2rem;
     margin-top: 2rem;
-    padding: .35rem 0;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
     border-top: @gray-7 1px solid;
     border-bottom: @gray-7 1px solid;
     font-size: @font-size-small;
+    line-height: 2rem;
     color: @gray-2;
     a {
         border-bottom: transparent;
+        margin-right: 1rem;
+        padding: 0.25rem;
+        &:hover,
+        &:focus {
+            color: @link-hover-color;
+            text-decoration: none;
+            border-bottom: 0px solid @link-color;
+            background-color:  lighten(@link-color, 75%);
+        }
+    }
+    p {
+        font-size: @font-size-small;
+        line-height: 1.5rem;
+        a {
+            border-bottom: transparent;
+            padding: 0;
+            margin-right: 0;
+        }
     }
  }
 
@@ -34,6 +52,15 @@
     padding: 0 @box-spacing;
     margin-top: @box-spacing*2;
     margin-bottom: @box-spacing*1.5;
+
+    @media screen and ( max-width: (@breakpoint-content) ) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 9%;
+    }
+    @media screen and ( max-width: (@breakpoint-sm - 1) ) {
+        padding: 0 1rem;
+    }
 }
 
 .main-content--full-width {
@@ -59,7 +86,7 @@
         padding-right: @box-spacing*6;
     }
 
-    @media ( max-width: @screen-xs-max ) {
+    @media ( max-width: @breakpoint-content ) {
         float: none;
         width: auto;
         padding: 0;
@@ -71,7 +98,7 @@
     overflow: hidden; // Stop margin collapsing issues
     margin-bottom: @box-spacing*1.5;
 
-    @media ( max-width: @screen-xs-max ) {
+    @media ( max-width: @breakpoint-content ) {
         float: none;
         width: auto;
         margin-top: @box-spacing*1.5;
@@ -85,25 +112,17 @@
     border-radius: 2px;
 }
 
+.blocklink,
 .blockLinks {
     margin: @box-spacing-vertical 0;
     padding: @box-spacing-vertical;
     background-color: @aqua-light;
     color: @heritage-blue;
-    border: solid @aqua;
-    border-width: 1px 1px 1px 1px;
+    border: 1px solid @aqua;
     font-size: @font-size-base;
     font-weight: @font-weight-bolder;
     display: block;
     .btn-icon(@i-right,@color:@heritage-blue);
-
-    &--modal {
-        .btn-icon(@i-doc-image,@color:@heritage-blue);
-    }
-
-    &--modal-search {
-        .btn-icon(@i-search,@color:@heritage-blue);
-    }
 
     h1, h2, h3, h4, h5, h6, p {
         text-decoration: none;
@@ -117,8 +136,20 @@
     &:focus,
     &:active {
         background-color: darken(@aqua-light, 10%);
-        border: solid @aqua;
-        border-width: 1px 1px 1px 1px;
+        border: 1px solid @aqua;
+    }
+
+    &:visited {
+        border: 1px solid @aqua;
+    }
+
+    // Changing the blocklink icon
+    &.i-doc-image {
+        .btn-icon(@i-doc-image,@color:@heritage-blue);
+    }
+
+    &.i-search {
+        .btn-icon(@i-search,@color:@heritage-blue);
     }
 }
 

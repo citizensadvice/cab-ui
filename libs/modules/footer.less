@@ -61,3 +61,52 @@
         margin-right: @box-spacing-horizontal*2;
     }
 }
+
+// NEW FOOTER?
+#footer {
+    .footer-content {
+        .limit-width(@breakpoint-lg);
+        padding: 0 1rem;
+        ul, li {
+            list-style: none;
+            padding: 0;
+        }
+        h3 {
+            border-bottom: 1px solid #fff;
+            padding: 0 0 1rem 0;
+        }
+    }
+    .footer--legal {
+        padding: 2rem 0rem;
+        display: block;
+        width: 100%;
+        background-color: @heritage-blue;
+        .footer--legal--content {
+            .limit-width(@breakpoint-lg);
+            padding: 0 1rem;
+            position: relative;
+            img {
+                width: 4.5rem;
+                @media ( max-width: @screen-xs-max ) {
+                    float: left;
+                    padding-right: 1rem;
+                }
+                @media ( min-width: @screen-sm-min ) {
+                    display: block;
+                }
+            }
+            p {
+                @media ( max-width: @screen-xs-max ) {
+                    margin-left: 4.5rem;
+                    margin-bottom: 0;
+                }
+                @media ( min-width: @screen-sm-min ) {
+                    .vertical-align(absolute);
+                    margin-left: 5.5rem;
+                }
+                font-size: 0.875rem;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -20,15 +20,16 @@ block content
 			.example-box-plain
 				.notice(style="position:relative;z-index:0;display:block;")
 					.notice__content
-						p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
+						p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider #[a.a-external-link(href="http://browsehappy.com/") upgrading your browser].
+
 			pre
 				code.language-html
 					| &lt;div class="notice"&gt;
 					| 	&lt;div class="notice__content"&gt;
-					| 		&lt;p&gt;We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to &lt;a href="#" class="a-external-link"&gt;Google Chrome&lt;/a&gt;.&lt;/p&gt;
+					| 		&lt;p&gt;We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider &lt;a href="http://browsehappy.com/" class="a-external-link"&gt;upgrading your browser&lt;/a&gt;.&lt;/p&gt;
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
-	.notice(style="display:block;")
+	.notice
 		.notice__content
-			p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
+			p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider #[a.a-external-link(href="http://browsehappy.com/") upgrading your browser].

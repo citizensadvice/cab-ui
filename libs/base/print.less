@@ -19,7 +19,6 @@ body{
 .no-print {
 	display: none !important;
 }
-
 .print-only {
 	display: block !important;
 }
@@ -31,19 +30,19 @@ body{
 a {
 	border: none;
 	text-decoration: underline;
-    &:after {
-    	content: " (" attr(href) ") ";
-    	font-size: 0.8em;
-    	font-weight: normal;
-    	color: @gray-4;
-    }
-    &.main-header__logo:after,
+	&:after {
+		content: " (" attr(href) ") ";
+		font-size: 0.8em;
+		font-weight: normal;
+		color: @gray-4;
+	}
+	&.main-header__logo:after,
 	&[href^="javascript:"]:after,
 	&[href^="#"]:after {
-    	content: "";
-    	text-decoration: none;
-    }
-    img {
+		content: "";
+		text-decoration: none;
+	}
+	img {
 		border-style: none;
 	}
 }
@@ -72,6 +71,8 @@ abbr[title]:after {
 .section-notice,
 .collapse-toggle-close,
 .revealable__close,
+.callout--adviser,
+.dap-panel--adviser,
 #overview,
 nav,
 aside,
@@ -89,10 +90,12 @@ aside,
 .callout--inventive,
 .callout--generous,
 .callout--white {
-	border: 1px solid @gray-5;
-	padding: @box-spacing;
-	margin: @box-spacing 0;
-	//page-break-inside: avoid;
+	.revealable__heading {
+		//padding: 0;
+		&:after {
+			display: none;
+		}
+	}
 }
 
 .callout__link:after {
@@ -103,6 +106,7 @@ aside,
 .collapse-content,
 .revealable__content {
 	display: block !important;
+	border: none;
 }
 
 pre, blockquote {
@@ -176,6 +180,14 @@ th {
 	border-bottom: 2px solid @gray-1;
 }
 
+tr {
+	border-width: 1px;
+}
+
+.table-collapse {
+	display: table-row;
+}
+
 .page-image {
 	margin: 20px 0;
 }
@@ -207,4 +219,18 @@ img[src="/Global/Migrated_Images/bmis/dl-icon.gif"] {
 
 .toc-legacy__num {
 	padding-left: 1em;
+}
+
+.main-header__logo {
+	display: block;
+	background-color: @white !important;
+	margin: 0;
+	width: 100%;
+	padding: 1rem;
+	img {
+		display: block;
+	}
+	img.main-header__img--mobile {
+		display: block;
+	}
 }

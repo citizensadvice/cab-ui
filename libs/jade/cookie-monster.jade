@@ -19,7 +19,7 @@ block content
 		div
 			p The cookie monster appears attached to the bottom of the screen. Once a user dismisses it with the close button it shouldn't reappear until the cookie has expired or been removed.
 			.example-box-plain
-				.cookie-monster.hide-no-cookies.hide-no-js.no-print(style="position:relative;z-index:0;")
+				.cookie-monster(style="position:relative;z-index:0;display:block;")
 					.cookie-monster__content
 						p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
 						button.btn.cookie-monster__close(data-action="close", type="button") Close

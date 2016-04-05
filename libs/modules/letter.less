@@ -14,9 +14,28 @@
 .letter-sample {
     border: 1px solid @gray-1;
     padding: @box-spacing*2;
-    margin: @box-spacing*2 0;
-    -moz-box-shadow: 2px 2px 2px @gray-1;
-    -webkit-box-shadow: 2px 2px 5px @gray-1;
-    box-shadow: 2px 2px 2px @gray-1;
+    //margin: @box-spacing*2 0;
+    -moz-box-shadow: @sample-shadow;
+    -webkit-box-shadow: @sample-shadow;
+    box-shadow: @sample-shadow;
     background: @white;
+}
+
+/* A sample letter - it is supposed to mimic a sheet of paper 
+.letter-sample {
+    border: 1px solid @gray-4;
+    padding: @box-spacing*2;
+    //margin: @box-spacing*2 0;
+    box-shadow: 2px 2px 2px @gray-6;
+    background: @white;
+}
+*/
+
+#letter {
+    .letter-content {
+        .letter-sample;
+    }
+    @media (min-width:@screen-md-min) {
+        padding-left: 4rem;
+    }
 }

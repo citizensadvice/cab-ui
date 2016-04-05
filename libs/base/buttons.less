@@ -1,7 +1,7 @@
 // Basic button styling
 // To style a link to look like a button use .button
 
-
+/*
 .btn {
     cursor: pointer;
     padding: @box-spacing-vertical @box-spacing-horizontal;
@@ -17,6 +17,7 @@
         box-shadow: 0px 0px 0px 2px @heritage-yellow;
     }
 }
+*/
 
 button,
 input[type=submit],
@@ -30,24 +31,36 @@ input[type=button] {
 .button,
 .button--blue {
     .btn();
+    &.btn-small {
+        &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
+            background-color: @aqua-light;
+        }
+    }
 }
 
-
+/*
 .btn-primary,
 .button,
 .button--blue {
     .btn();
     &.btn-small {
         border-color: @heritage-blue-light;
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
             background-color: @blue-lighter;
             border-color: @heritage-blue-light;
             color: @heritage-blue;
         }
     }
 }
+*/
 
 .btn-light,
 .btn-primary-light {
@@ -56,9 +69,11 @@ input[type=button] {
         @btn-background-hover: @aqua
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+        }
+        &:hover,
+        &:active {
             background-color: @aqua-light;
         }
     }
@@ -83,11 +98,17 @@ input[type=button] {
     );
     &.btn-small {
         border-color: @heritage-blue-light;
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @blue-lighter;
             border-color: @heritage-blue-light;
+            color: @heritage-blue;
+        }
+        &:visited {
             color: @heritage-blue;
         }
     }
@@ -127,9 +148,12 @@ button:disabled {
         @red,
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @red-lightest;
             color: @heritage-blue;
         }
@@ -144,9 +168,12 @@ button:disabled {
         @green-dark
     );
     &.btn-small {
-        &:hover,
-        &:active,
         &:focus {
+            background-color: @white;
+            color: @heritage-blue;
+        }
+        &:hover,
+        &:active {
             background-color: @green-lighter;
             color: @heritage-blue;
         }
@@ -262,3 +289,45 @@ button:disabled {
     background-color: rgba( 255,255,255,.7);
 }
 */
+
+.toolbar-button {
+    color: @link-color;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    font-size: @font-size-small;
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: none;
+        background-color:  lighten(@link-color, 75%);
+        border: none;
+        border-bottom: 1px solid currentColor;
+    }
+
+    &:focus {
+        outline: 2px solid @heritage-yellow;
+        border-bottom: 0;
+    }
+
+    &:active {
+        color: @link-active-color;
+        border: none;
+        border-bottom: 1px solid currentColor;
+    }
+
+    &:visited {
+        color: @link-visited-color;
+        border: none;
+        border-bottom: 1px solid currentColor;
+    }
+
+    &:not([href]) {
+        text-decoration: none;
+    }
+}

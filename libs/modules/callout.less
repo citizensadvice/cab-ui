@@ -19,6 +19,19 @@
 	.callout--border--left;
 }
 
+.box--sticky {
+    .callout(
+        @inventive-teal-lightest,
+        @text-color,
+        @callout-border: @inventive-teal-light
+    );
+    .callout--border;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+}
+
 // Green
 .callout--confirmation {
     .callout(
@@ -56,7 +69,8 @@
 // Yellow
 .callout--alert,
 .dap-panel--important,
-.highlight--warning {
+.highlight--warning,
+.callout--info {
     .callout(
         @yellow-light
     );
@@ -81,6 +95,8 @@
 
 // Gray
 .callout--quote,
+.callout--example,
+blockquote,
 .dap-panel--example {
 	.callout(
 		@white,

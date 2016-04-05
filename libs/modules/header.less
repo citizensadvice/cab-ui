@@ -10,6 +10,22 @@
 .main-header {
     background-color: @white;
     overflow: hidden; // Collapsing margin issues
+    a:hover,
+    a:focus,
+    a:visited {
+        background-color: @white;
+    }
+}
+@media ( max-width: @screen-xs-max ) {
+    .main-header {
+        background-color: @heritage-blue;
+        overflow: hidden; // Collapsing margin issues
+        a:hover,
+        a:focus,
+        a:visited {
+            background-color: @heritage-blue;
+        }
+    }
 }
 
 .advisernet {
@@ -40,14 +56,32 @@
     border: none;
     float: left;
     margin-top: .7em; // Slightly better centering
-    max-width: 24%; // For old IE
-    max-width: calc(250px); // For modern browsers
+    //display: inline-block;
     &:hover {
         border: none;
     }
 
-    @media ( max-width: @screen-xs-max ) {
+    img {
+        max-width: 24%; // For old IE
+        max-width: calc(250px); // For modern browsers
+    }
+
+    img.main-header__img--mobile {
         display: none;
+    }
+
+    @media ( max-width: @screen-xs-max ) {
+        display: block;
+        background-color: @heritage-blue;
+        margin: 0;
+        width: 100%;
+        padding: 1rem;
+        img {
+            display: none;
+        }
+        img.main-header__img--mobile {
+            display: block;
+        }
     }
 
     &.wide {
@@ -104,7 +138,7 @@
 input.main-header__search__input {
     width: 16em;
     float: left;
-    padding: 0.2em;
+    padding: .27em .2em;
 
     .ie8 & {
         padding: .3em .2em;
@@ -112,7 +146,7 @@ input.main-header__search__input {
 }
 
 .main-header__search__submit {
-    border: 1px solid @gray-1;
+    border: none;
     background: @gray-1;
     overflow: hidden;
     padding: .2em;
@@ -120,11 +154,14 @@ input.main-header__search__input {
     float: left;
     margin: 0 0 0 -1px;
     width: 2em;
+    height: 2em;
     color: @white;
 }
 
 .main-header__search__submit:hover, .main-header__search__submit:focus {
     background: @gray-0;
+    color: @white;
+    border: none;
 }
 
 @media ( max-width: @screen-xs-max ) {
@@ -186,12 +223,24 @@ input.main-header__search__input {
 }
 
 .main-header__logout__button,
-.main-header__logout__button:hover {
+.main-header__logout__button:hover,
+.main-header__logout__button:focus {
     background: none;
     border: none;
     padding: 0;
     font-weight: normal;
     color: @heritage-blue;
+    padding: .5rem;
+    font-weight: @font-weight-bold;
+    @media ( max-width: @screen-xs-max ) {
+        color: @white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @white;
+        color: @heritage-blue;
+    }
 }
 
 .main-header__logout {

@@ -135,9 +135,10 @@
 .a-social {
     .icon;
     display: inline-block;
-    padding: 0 0.25em 0 0.65em;
-    border-bottom: 0.0625rem solid @white;
-    font-size: 175%;
+    padding: 0 0.5em 0 0;
+    font-size: 150%;
+    bottom: -3px !important;
+    position: relative;
 }
 
 .a-social-facebook:before {
@@ -147,11 +148,14 @@
     border: 0;
 }
 .a-social-twitter:before {
-    margin-left: -0.65em;
     content: @i-twitter;
     color: @twitter-brand-colour;
     &:extend(.a-social);
     border: 0;
+}
+.a-social-whatsapp,
+.a-social-google-plus {
+    white-space: nowrap;
 }
 .a-social-whatsapp:before {
     content: @i-whatsapp;
@@ -319,8 +323,8 @@
 // Burger icon
 .icon-menu:before {
     content: @i-menu;
-    &:extend(.icon);
-    font-style: normal;
+    .icon;
+    padding-right: .5rem;
 }
 
 /*
