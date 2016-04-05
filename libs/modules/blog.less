@@ -32,7 +32,9 @@
 		margin-bottom: 0;
 	}
 }
-
+.styleguide--header--content {
+	overflow: auto;
+}
 .styleguide--header--content-nav a:visited {
 	color: white;
 }
@@ -76,9 +78,11 @@
 .styleguide--header--content-nav {
 	float: right;
 	text-align: right;
-	width: 500px;
 	padding: 1.5rem 1rem;
 	display: inline-block;
+	@media screen and (max-width: @screen-xs-max) {
+		display: none;
+	}
 	a {
 		padding: 1rem;
 		text-decoration: none;
