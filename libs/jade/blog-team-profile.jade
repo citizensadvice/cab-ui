@@ -9,7 +9,8 @@ extends ../template/template-blog.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home"}])
+		{title: "Home", href: "blog-home.html"},
+		{title: "That person"}])
 
 block sidebar
 	include ../template/sidebar-blog.jade
