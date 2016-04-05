@@ -99,18 +99,23 @@
         cursor: pointer;
 		a {
 			display: block;
-			padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
-			font-size: @font-size-h4;
+			padding: @box-spacing-horizontal*.75;
+			font-size: @font-size-h4*1.25;
 			margin: 0;
 			border-bottom: none;
 			color: @heritage-blue;
 			font-weight: @font-weight-bold;
-			background-color: @gray-8;
+			background-color: @heritage-yellow-lighter;
 			cursor: pointer;
 			border-bottom: 0;
-            .btn-icon(@i-vertical-dots,@color:@heritage-blue);
+            .btn-icon(@i-plus,@color:@heritage-blue);
             .expanded & {
-                .btn-icon(@i-cross,@color:@heritage-blue);
+                .btn-icon(@i-minus,@color:@heritage-blue);
+            }
+            &:hover,
+            &:active,
+            &:visited {
+            	background-color: @heritage-yellow-lighter;
             }
 		}
     }
@@ -119,7 +124,7 @@
 
         background-color: @white;
         margin: 0;
-        border: 1px solid @gray-6;
+        border: 1px solid @heritage-yellow;
         margin-bottom: 1.5rem;
 	    &__heading {
 	    	display: block;
@@ -135,7 +140,7 @@
             display: block;
         }
         .expanded& &__heading {
-        	border-bottom: 1px solid @gray-6;
+        	border-bottom: 1px solid @heritage-yellow;
         }
         order: -1;
     }
