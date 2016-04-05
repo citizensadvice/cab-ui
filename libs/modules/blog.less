@@ -48,7 +48,6 @@
 	padding: 1rem 0;
 	background-color: #fff;
 	border-bottom: #EEEEEE 1px solid;
-	//border-bottom: #EEEEEE 1px solid;
 	font-size: 0.875rem;
 	line-height: 1.7rem;
 	color: #606060;
@@ -58,7 +57,7 @@
 		border-bottom: none;
 	}
 }
-.tag {
+.blog-tag {
 	position: relative;
 	top: 0;
 	font-weight: 700;
@@ -66,7 +65,7 @@
 	margin: 0;
 	display: inline-block;
 	padding: .5rem;
-	color: #004b88;
+	color: @heritage-blue;
 	background-color: #fee4c3;
 	&:before {
 		font-family: 'open_sans', 'brand';
@@ -90,7 +89,7 @@
 		font-weight: 600;
 		color: white;
 		&:hover {
-			color: #A2D5FF;
+			color: @heritage-blue;
 			border-bottom: none;
 		}
 	}
@@ -165,7 +164,7 @@ Include updated nav
 
 **/
 #main-nav-1--branding {
-	background-color: #004b88;
+	background-color: @heritage-blue;
 	.content {
 		max-width: @breakpoint-lg;
 		padding: .5rem 1rem;
