@@ -1,14 +1,14 @@
 - var section = "Brand"
     .side-nav-beta
-        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+        .well(style="background-color: #fff; border-left: 0px; border-right: 0px; border-bottom: 0px; border-top: 8px #fcbb69 solid !important; margin-top: 4rem; padding:.75em 0 !important;")
             fieldset
-                label(for="search") Search this blog
+                //label(for="search") Search this blog
                 .search-results__field.field-group.field-group--buttons
-                    input(type="search", placeholder="", value="Search", style="border:1px solid #fff;")
-                    button.btn.btn-primary(style="background-color:#fcbb69; border:1px solid #fff;")
+                    input(type="search", placeholder="", value="Search", style="border: 1px solid #ccc;")
+                    button.btn.btn-primary(style="background-color:#fcbb69;border: 1px solid #fcbb69;")
                         i.icon-search
 
-        .well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
+        //.well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")
             label Recent posts
             ul
                 li
@@ -24,7 +24,7 @@
                 li
                     a(href="#") Your digital team needs you!
 
-        .well(style="background-color: #fee4c3; border: 0px #dfdfdf solid;")
+        .well(style="background-color: #fee4c3; border: 0px #dfdfdf solid; margin-top:0; margin-bottom:2rem;")
             fieldset
                 label(for="exampleSelect1") Select Category
                 .dropdown
@@ -36,7 +36,7 @@
                         option Research
 
         .cards(style="color:#fff; background-color:#32457E;")
-            .card-banner-top(style="background-color:#32457E;")
+            .card-banner-top
                 p(style="color:#fff;") Get updates of new blogs here
             .card-text
                 p If you would like to test any of the new future research and testing you can sign up on the #[a(href="#" style="color:#FCBB69;") Get Involved page].
