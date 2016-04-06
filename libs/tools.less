@@ -90,27 +90,27 @@
 	/* IE styles */
 	@import "base/ie";
 
-	/* Tools specific overrides */
+	/* Tools specific overrides 
 	a {
 		text-decoration: none !important;
 	}
 	h1, h2, h3,h4, h5, h6 {
-	    line-height: @line-height-heading !important;
-	    margin-top: 1em !important;
-	    margin-bottom: 0.6em !important;
-	    b, strong {
-	        font-weight: inherit !important;
-	    }
+		line-height: @line-height-heading !important;
+		margin-top: 1em !important;
+		margin-bottom: 0.6em !important;
+		b, strong {
+			font-weight: inherit !important;
+		}
 	}
 	*[class^="callout"],
 	.dap-panel {
-	    > *:first-child {
-	    	margin-top: 0 !important;
-	    	padding-top: 0 !important;
-	    }
-	    > *:last-child {
-	    	margin-bottom: 0 !important;
-	    }
+		> *:first-child {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+		> *:last-child {
+			margin-bottom: 0 !important;
+		}
 	}
 	.main-content__right {
 		padding-left: 0;
@@ -139,28 +139,28 @@
 
 		.a-external:after,
 		.a-external-link:after {
-		    font-family: 'cab-icons' !important;
-		    speak: none;
-		    font-style: normal;
-		    font-weight: normal;
-		    font-variant: normal;
-		    text-transform: none;
-		    line-height: 1;
-		    // Better Font Rendering
-		    -webkit-font-smoothing: antialiased;
-		    -moz-osx-font-smoothing: grayscale;
-		    padding-left: 0.5em;
-		    padding-right: 0.25em;
-		    color: @link-color;
-		    font-size: 75%;
+			font-family: 'cab-icons' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			// Better Font Rendering
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			padding-left: 0.5em;
+			padding-right: 0.25em;
+			color: @link-color;
+			font-size: 75%;
 		}
 	}
 	&.loader {
 		min-height: 100px;
 		background: url('assets/loader.gif') no-repeat left center;
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-		    background: url('assets/loader@2x.gif') no-repeat left center;
-		    background-size: 30px 30px;
+			background: url('assets/loader@2x.gif') no-repeat left center;
+			background-size: 30px 30px;
 		}
 		.widget {
 			background-color: @white;
@@ -178,5 +178,17 @@
 	}
 	.table-collapse {
 		display: table-row !important;
+	}
+}*/
+		&.loader {
+			min-height: 100px;
+			background: url('assets/loader.gif') no-repeat left center;
+			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+				background: url('assets/loader@2x.gif') no-repeat left center;
+				background-size: 30px 30px;
+			}
+		.widget {
+			background-color: @white;
+		}
 	}
 }
