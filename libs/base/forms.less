@@ -27,6 +27,14 @@ form small {
 }
 .invalid {
     color: @red;
+    .well--outline& {
+        border-color: @red;
+        ul,
+        li,
+        h3 {
+            color: @red;
+        }
+    }
 }
 /* Do we want to make valid/invalid selectors inline?
 input {
@@ -151,6 +159,7 @@ input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="text"],
+input[type="tel"],
 input[id*="dob-"],
 input[class*="dob-"],
 textarea,
@@ -158,8 +167,9 @@ select {
     width: 100%;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
-    &:focus:required:invalid {
-        outline: 2px solid @red;
+    &:required:invalid {
+        border: 2px solid @red;
+        border-radius: 0;
         background-image: url("assets/images/red-cross.svg");
         padding-right: 2.25em;
         background-repeat: no-repeat;
@@ -170,8 +180,9 @@ select {
             display: block !important;
         }
     }
-    &:focus:required:valid {
-        outline: 2px solid @green;
+    &:required:valid {
+        border: 2px solid @green;
+        border-radius: 0;
         background-image: url("assets/images/green-tick.svg");
         padding-right: 2.25em;
         background-repeat: no-repeat;
@@ -183,7 +194,7 @@ select {
         }
     }
     &:focus {
-        border-width: 1px;
+        //border-width: 1px;
         outline: 2px solid @heritage-yellow;
     }
 }
