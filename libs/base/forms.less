@@ -147,7 +147,7 @@ select[size] {
 textarea,
 input,
 select {
-    border: 1px solid @gray-6;
+    border: 2px solid @gray-6;
 }
 
 textarea {
@@ -302,7 +302,7 @@ textarea.form__field {
     background-color: @white;
     display: inline-block;
     width: 100%;
-    border: 1px solid @gray-6;
+    border: 2px solid @gray-6;
     &:after {
         pointer-events:none;
         @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
@@ -462,7 +462,7 @@ input[class*="dob-"] {
         }
         select {
             .ie(width,100%);
-            border: 1px solid @gray-6;
+            border: 2px solid @gray-6;
         }
     }
     input:first-of-type {
@@ -489,6 +489,7 @@ input[class*="dob-"] {
     button {
         width: 30%;
         display: inline-block;
+        border-width: 2px;
     }
 }
 
