@@ -14,8 +14,9 @@ block breadcrumbs
         {title: "Content"}])
 
 block sidebar
-    - var section = "Before you claim PIP"
-    +sidebar([
+    include ../template/sidebar-templates.jade
+    //- var section = "Before you claim PIP"
+    //+sidebar([
         {title: "How to fill in your PIP claim form"},
         {title: "How to claim PIP"},
         {title: "How to claim PIP if you have a terminal illness"},
@@ -24,9 +25,6 @@ block sidebar
         {title: "Preparing for your PIP assessment"},
         {title: "Changes that affect your PIP"}
         ],0)
-//    - var section = "Sibling categories"
-//    +sidebar([
-//        ])
 
 block section-notice
     aside.section-notice

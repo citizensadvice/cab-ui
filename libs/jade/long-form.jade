@@ -15,20 +15,14 @@ block breadcrumbs
 		{title: "Long form content"}])
 
 block sidebar
-	- var section = "Home improvements"
-	+sidebar([
+	include ../template/sidebar-templates.jade
+	//- var section = "Home improvements"
+	//+sidebar([
 		{title: "Before you get building work done"},
 		{title: "Problem with building work, decorating or home improvements"},
 		{title: "Cancelling building or decorating work"},
 		{title: "Building organisations"}
 		],0)
-	//- var section = "Sibling categories"
-	//+sidebarSiblings([
-		{title: "Sibling two", href: "#"},
-		{title: "Sibling three", href: "#"},
-		{title: "Sibling four", href: "#"},
-		{title: "Sibling five", href: "#"}
-		])
 
 block section-notice
 	aside.section-notice
