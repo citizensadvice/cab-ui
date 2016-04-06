@@ -401,3 +401,25 @@ Include updated nav
 		@btn-background-hover: @heritage-yellow-darker
 	);
 }
+
+.comments {
+	.comments-single {
+		border-top: 1px solid @gray-7;
+		padding: @box-spacing-vertical*2 0;
+		h3 {
+			margin-top: 0;
+		}
+		& >:last-child {
+			margin-bottom: 0;
+		}
+		&.reply {
+			margin-left: 3rem;
+			h3 {
+				margin-top: 0;
+			}
+		}
+	}
+	& >:first-child {
+		border-top: none;
+	}
+}

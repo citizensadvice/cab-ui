@@ -60,11 +60,19 @@ block content
 
 		.comments
 			.comments-single
-				h3 This guy
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam. In sit amet massa semper, ultricies nulla at, vestibulum nulla. Nulla id arcu quis odio molestie porttitor et id lacus. In fermentum aliquet libero eget rutrum.
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Domenico Perri
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam.
+			.comments-single.reply
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Eliot Hill
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				p Lorem ipsum dolor.
 			.comments-single
-				h3 That gal
-				p.small #[a(href="#") Stephen Rehill] on January 18, 2016 in #[a(href="#") Content], #[a(href="#") Design]
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Paul Chanthapanya
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted yesterday. #[a Reply]
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam. In sit amet massa semper, ultricies nulla at, vestibulum nulla. Nulla id arcu quis odio molestie porttitor et id lacus. In fermentum aliquet libero eget rutrum.
 
 		.well(style="background-color:#fff;")
