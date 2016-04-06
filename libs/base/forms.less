@@ -168,7 +168,8 @@ select {
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
     &:required:invalid {
-        border: 2px solid @red;
+        border: 1px solid @red;
+        outline: 1px solid @red;
         border-radius: 0;
         background-image: url("assets/images/red-cross.svg");
         padding-right: 2.25em;
