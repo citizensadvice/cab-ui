@@ -49,8 +49,7 @@ block content
 			.example-box-plain
 				fieldset
 					label(for="exampleInputEmail1") Inline validation error with field placeholder
-					input#exampleInputEmail1(placeholder="Email", required="", type="email")
-					small Information about these details.
+					input#exampleInputEmail1(placeholder="Email", type="email", required)
 					.invalid Please enter a valid email address
 			pre
 				code.language-html
@@ -65,8 +64,7 @@ block content
 				fieldset
 					label(for="exampleInputPassword1") Password
 					span.form-hint Enter at least 3 characters
-					input#exampleInputPassword1(pattern=".{3,10}", placeholder="Password", required="", type="password")
-					.valid Wonderful!
+					input#exampleInputPassword1(pattern=".{3,10}", type="password", required)
 					.invalid Please enter a password between 3 and 10 characters
 			pre
 				code.language-html
