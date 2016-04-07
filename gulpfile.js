@@ -86,7 +86,11 @@ gulp.task( 'watch-less', function() {
 
 gulp.task( 'clean-jade', function() {
 	return del([
-	    'public/*.html'
+	    'public/*',
+	    '!public/js',
+	    '!public/css',
+	    '!public/images',
+	    '!public/robots.txt'
 	]);
 } );
 
