@@ -7,9 +7,9 @@ extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "index.html"},
-		{title: "Modules", href: "index.html#modules"},
-		{title: "Modals", href: "index.html#modals"},
+		{title: "Home", href: "/index.html"},
+		{title: "Modules", href: "/index.html#modules"},
+		{title: "Modals", href: "/index.html#modals"},
 		{title: "Modal/Overlay"}])
 
 block sidebar
@@ -27,3 +27,27 @@ block content
 			.overlay__footer
 				button.btn.btn-primary-light(type="button") Cancel
 				button.btn.btn-primary.tick-button-icon(type="button") Agree
+
+
+		.dialog.dialog--simple.dialog--extent-picker(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
+
+			header.dialog__header
+				h2#dialog-1-label.dialog__title Where in the UK do you live?
+				button.dialog__close(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
+
+			.dialog__main#dialog-1-main
+				div(type="Sigma.CitizensAdvice.Web.Models.Pages.StartPage")
+					p The law can vary in different parts of the UK.
+					ul.extent-selection
+						li
+							a.btn.btn-small(href="?lang=en-GB") England
+
+						li
+							a.btn.btn-small(href="?lang=en-NIR") Northern Ireland
+
+						li
+							a.btn.btn-small(href="?lang=en-SCT") Scotland
+
+						li
+							a.btn.btn-small(href="?lang=en-WLS") Wales
+			footer.dialog__footer

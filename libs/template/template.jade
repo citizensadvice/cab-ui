@@ -8,7 +8,7 @@ html.no-js
 		meta(content="IE=edge", http-equiv="X-UA-Compatible")
 		meta(name="keywords")
 		meta(name="description")
-		base(href="/")
+		//base(href="/")
 
 		title Citizens Advice style guide
 			- if (typeof title !== "undefined")
@@ -22,9 +22,9 @@ html.no-js
 		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
 
 		// Stylesheets
-		link(href="css/guide.css", rel="stylesheet")
-		link(href="images/favicon/32.png", rel="shortcut icon")
-		link(href="images/favicon/228.png", rel="apple-touch-icon")
+		link(href="/css/guide.css", rel="stylesheet")
+		link(href="/images/favicon/32.png", rel="shortcut icon")
+		link(href="/images/favicon/228.png", rel="apple-touch-icon")
 
 		script
 			include ../js/head.js
@@ -45,9 +45,9 @@ html.no-js
 			header.main-header
 				.main-header__content
 					a.main-header__logo(href="index.html", title="Citizens Advice home")
-						img(onerror="this.onerror=null;this.src='images/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="images/ca-logo_100px.svg" height="80")
+						img(onerror="this.onerror=null;this.src='/images/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="/images/ca-logo_100px.svg" height="80")
 
-						img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='images/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="images/ca-logo-hz-white-280px.svg")
+						img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='/images/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="/images/ca-logo-hz-white-280px.svg")
 
 					.main-header__links(data-track-zone="top-bar")
 						a.main-header__menu-link.js-toggle-menu(href="")
@@ -105,8 +105,8 @@ html.no-js
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;images/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/images/ca-logo_100px.svg.png&#39;;", src="/images/ca-logo_100px.svg")
+					img.print-only.logo(src="/images/ca-logo-hz-280px.svg")
 
 		else if logoutheader
 			aside.section-notice__login
@@ -116,14 +116,14 @@ html.no-js
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static//images/logos/ca-logo_100px.svg.png&#39;;", src="/images/ca-logo_100px.svg")
+					img.print-only.logo(src="/images/ca-logo-hz-280px.svg")
 
 		else
 			header.styleguide--header
 				.styleguide--header--content
 					a(href="index.html")
-						img(src="images/ca-logo-hz-white-280px.svg")
+						img(src="/images/ca-logo-hz-white-280px.svg")
 
 		.main-container
 			nav.main-breadcrumb
@@ -249,7 +249,7 @@ html.no-js
 					.main-footer__box.main-footer__box--copyright
 						div
 							p
-								img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+								img(alt="", height="100", src="/images/ca-logo_100px.svg", width="100")
 								| Copyright © 2016 Citizens Advice. All rights reserved.
 								br
 								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -263,7 +263,7 @@ html.no-js
 				.styleguide--footer
 					div
 						p
-							img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+							img(alt="", height="100", src="/images/ca-logo_100px.svg", width="100")
 							| Copyright © 2016 Citizens Advice. All rights reserved.
 							br
 							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -278,27 +278,20 @@ html.no-js
 				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider #[a.a-external-link(href="http://browsehappy.com/") upgrading your browser].
 
 		<!--[if IE 8]></div><![endif]-->
-		script(src="js/vendor/jquery-1.11.3.min.js")
-		script(src="js/translate.js")
-		script(src="js/jquery.fn.cssSlide.js")
-		script(src="js/revealable.js")
-		script(src="js/prism.js")
-		script(src="js/smooth.js")
-		script(src="js/jquery.fn.top-sticky.js")
-		//script(src="js/advisor.js")
-		script(src="js/sidebar.js")
-		//script(src="js/core.js")
+		script(src="/js/vendor/jquery-1.11.3.min.js")
+		script(src="/js/translate.js")
+		script(src="/js/jquery.fn.cssSlide.js")
+		script(src="/js/revealable.js")
+		script(src="/js/prism.js")
+		script(src="/js/smooth.js")
+		script(src="/js/jquery.fn.top-sticky.js")
+		//script(src="/js/advisor.js")
+		script(src="/js/sidebar.js")
+		//script(src="/js/core.js")
 		script.
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
-
-				var pathname = window.location.href.split('#')[0];
-				$('a[href^="#"]').each(function() {
-					var $this = $(this),
-						link = $this.attr('href');
-					$this.attr('href', pathname + link);
-				});
 			});
 		block script
 		block script-bottom
