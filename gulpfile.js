@@ -108,7 +108,7 @@ gulp.task( 'watch-jade', function() {
 
 		gulp.src(event.path)
 			.pipe( jade( { pretty: true, basedir: "libs" } ) )
-	        .pipe( gulp.dest('public') )
+	        .pipe( gulp.dest('public/**/') )
 	        	.on( 'finish', function() {
 	        		var end = process.hrtime(start);
 	        		gutil.log(
