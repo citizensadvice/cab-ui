@@ -1,0 +1,92 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 About the trial
+			fieldset
+				label(for="standardField") Please give the name or names of the defendant if you can 
+					span.optional (optional)
+				input(id="standardField" placeholder="" type="text")
+
+			h3 How are you involved in the trial?
+			fieldset
+				legend(for="exampleSelect1") Are you a witness? 
+				.dropdown
+					select#exampleSelect1
+						option I’m not sure/don’t know
+						option Yes, for the defence
+						option Yes, for the prosecution
+						option Yes, but I’m not sure who for
+						option No
+
+			//fieldset
+				legend(for="exampleSelect2") Have you been affected by a crime that the trial is about? 
+				.dropdown
+					select#exampleSelect1
+						option I’m not sure/don’t know
+						option Yes, for the defence
+						option Yes, for the prosecution
+						option Yes, but I’m not sure who for
+						option No
+
+			//fieldset
+				label(for="exampleTextarea") Please say what help you would like, or any other requirements or instructions 
+					span.optional (optional)
+				span.form-hint  For example if you prefer to be called on different numbers at different times of the day
+				textarea#exampleTextarea(rows="3")
+
+			//fieldset
+				legend(for="radio1") Are you a witness? 
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, for the defence
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, for the prosecution
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(checked, name="radio1", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+			//fieldset
+				legend(for="radio") Have you been affected by a crime that the trial is about? 
+					span.optional (optional)
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the defence
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the prosecution
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+	
+
+
+			a.btn-light.left-button-icon(href="witness-self-form-4.html") Back
+			a.btn.right-button-icon(href="witness-self-form-6.html") Next

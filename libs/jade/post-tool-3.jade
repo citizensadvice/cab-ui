@@ -1,0 +1,37 @@
+block settings
+	- var title = "Stop receiving junk mail"
+	- var sidebar = false
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Templates", href: "index.html#templates"},
+		{title: "Content"}])
+
+block script
+	script.
+		var x = ($('#letter').width())*1.414;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.414;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+block content
+	.articleContent
+		.flex-container
+			.flex-row
+				.form.col-xs-12.col-md-4
+					p This is what your email to Royal Mail, Direct Marketing Association and The Mailing Preference Service will look like.
+					p You can go back and make changes if you need to.
+
+					a.btn-light.left-button-icon(href="post-tool-2.html") Edit
+					a.btn-secondary.email-button-icon(href="post-tool-4.html") Send
+
+				#letter.col-xs-12.col-md-8
+					.letter-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue nisi sit amet tellus semper mollis. Integer ut congue ipsum. Pellentesque placerat sem ut tellus lacinia mattis. Sed viverra purus nec neque vehicula gravida.

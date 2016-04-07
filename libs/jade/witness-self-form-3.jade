@@ -1,0 +1,59 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 Your contact details
+			p Let us know how we can get in touch with you. We can give you our best support over the phone and we’ll call you. We’ll call between 11am and 7pm.
+
+			fieldset
+				label(for="standardField") Phone number
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Is it safe for us to leave a message if you can’t answer?
+				label.radio.radio--inline
+					input(name="radio2", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio2", type="radio", value="option2")
+					| No
+				
+			fieldset
+				label(for="standardField") Email address
+				input(id="standardField" placeholder="" type="text")
+
+			//h3 Witness's primary address
+			//fieldset
+				label(for="standardField") Preferred phone number
+				input(id="standardField" placeholder="" type="text")
+			//fieldset
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option1")
+					| Lookup address
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option2")
+					| Enter address manually
+
+			//fieldset
+				label(for="field") Enter your postcode
+				.search-results__field.field-group.field-group--buttons
+					input(type="search", placeholder="Enter postcode")
+					button.btn.btn-primary Search&nbsp;&nbsp;
+						i.icon-search
+
+
+			a.btn-light.left-button-icon(href="witness-self-form-2.html") Back
+			a.btn.right-button-icon(href="witness-self-form-4.html") Next

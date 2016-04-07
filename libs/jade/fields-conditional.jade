@@ -1,0 +1,138 @@
+block settings
+	- var title = "Conditional fields"
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Styles", href: "index.html#styles"},
+		{title: "Forms", href: "index.html#forms"},
+		{title: "Fields"}])
+
+block script
+	script.
+
+		/*$(document).ready(function() {
+
+			// Check state of radio button and showOrHide additional fields
+			$('input[name="conditional-two"]').bind('change',function(){
+				var showOrHide = ($(this).val() == 1) ? true : false;
+				$('#1').toggle(showOrHide);
+				var showOrHide = ($(this).val() == 2) ? true : false;
+				$('#2').toggle(showOrHide);
+			});
+
+		});*/
+
+		$(document).ready(function() {
+			$('.conditional').click(function() {
+				if( $(this).find('input[value="2"]').is(':checked')) {
+					$(this).next().show();
+				} else {
+					$(this).next().hide();
+				}
+			});
+		});
+
+block content
+	.articleContent
+		.row
+			.span8
+				p Conditional fields are used in more advanced forms and are not recommended for most forms.
+
+				.example-box-plain
+					fieldset
+						label(for="exampleInputFile") Conditional Radio buttons
+						label.radio.radio--conditional
+							input(name="radio", type="radio", value="option1")
+							| Yes
+							div.conditional--content
+								fieldset
+									label.checkbox.radio--conditional
+										input(name="checkbox", type="checkbox")
+										| Option 1
+									label.checkbox.radio--conditional
+										input(name="checkbox", type="checkbox")
+										| Option 2
+						label.radio.radio--conditional
+							input(name="radio", type="radio", value="option2")
+							| No
+				pre
+					code.language-html
+						| &lt;fieldset&gt;
+						| 	&lt;label for="exampleInputFile"&gt;Radio buttons&lt;/label&gt;
+						| 	&lt;label class="radio radio--conditional"&gt;
+						| 		&lt;input checked="" name="radio" type="radio" value="option1"&gt;Yes
+						| 		&lt;div class="conditional--content"&gt;
+						| 			&lt;fieldset&gt;
+						| 					&lt;label class="checkbox checkbox--block"&gt;
+						| 						&lt;input name="checbox" type="checkbox"&gt;Option 1
+						| 						&lt;input name="checbox" type="checkbox"&gt;Option 2
+						|					&lt;/label&gt;
+						|			&lt;/fieldset&gt;
+						|		&lt;/div&gt;
+						| 	&lt;/label&gt;
+						| 	&lt;label class="radio radio--conditional"&gt;
+						| 		&lt;input name="radio" type="radio" value="option2"&gt;No
+						| 	&lt;/label&gt;
+						| &lt;/fieldset&gt;
+
+				.example-box-plain
+					fieldset.conditional
+						label(for="conditional-two") Conditional Radio buttons
+						label.radio.radio--block
+							input(name="conditional-two", type="radio", value="1")
+							| Don't show
+						label.radio.radio--block
+							input(name="conditional-two", type="radio", value="2")
+							| Show
+					.conditional--fields
+						fieldset
+							label(for="field") Field group with dropdown
+							.field-group.field-group--dropdown
+								input#field(type="number")
+								.dropdown
+									select#exampleSelect1
+										option Daily
+										option Monthly
+										option Yearly
+
+				pre
+					code.language-html
+						| &lt;fieldset class="conditional"&gt;
+						| 	&lt;label for="conditional-two"&gt;Conditional Radio buttons&lt;/label&gt;
+						| 	&lt;label class="radio radio--inline"&gt;
+						| 		&lt;input name="conditional-two" type="radio" value="1"&gt;Don't show
+						| 	&lt;/label&gt;
+						| 	&lt;label class="radio radio--inline"&gt;
+						| 		&lt;input name="conditional-two" type="radio" value="2"&gt;Show
+						| 	&lt;/label&gt;
+						| &lt;/fieldset&gt;
+						| &lt;div class="conditional--fields" style="display: block;"&gt;
+						| 	&lt;fieldset&gt;
+						| 		&lt;label for="field"&gt;Field group with dropdown&lt;/label&gt;
+						| 		&lt;div class="field-group field-group--dropdown"&gt;
+						| 			&lt;input id="field" type="number"&gt;
+						| 			&lt;div class="dropdown"&gt;
+						| 				&lt;select id="exampleSelect1"&gt;
+						| 					&lt;option&gt;Daily&lt;/option&gt;
+						| 					&lt;option&gt;Monthly&lt;/option&gt;
+						| 					&lt;option&gt;Yearly&lt;/option&gt;
+						| 				&lt;/select&gt;
+						| 			&lt;/div&gt;
+						| 		&lt;/div&gt;
+						| 	&lt;/fieldset&gt;
+						| &lt;/div&gt;
+
+				pre
+					code.language-javascript
+						| $(document).ready(function() {
+						| 	$('.conditional').click(function() {
+						| 		if( $(this).find('input[value="2"]').is(':checked')) {
+						| 			$(this).next().show();
+						| 		} else {
+						| 			$(this).next().hide();
+						| 		}
+						| 	});
+						| });

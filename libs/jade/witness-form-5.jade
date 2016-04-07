@@ -1,0 +1,68 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 The witness’s contact details
+			.callout--alert
+				p Please only provide contact information that we can safely use to contact the witness.
+
+			fieldset
+				label(for="standardField") Phone number
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				legend(for="radio") Is it safe for us to leave a message if the witness doesn’t answer the phone?
+				span.form-hint If unsure leave as 'No'
+				label.radio.radio--inline
+					input(name="radio2", type="radio", value="option1")
+					| Yes
+				label.radio.radio--inline
+					input(checked, name="radio2", type="radio", value="option2")
+					| No
+				
+			fieldset
+				label(for="standardField") Email address
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="exampleTextarea") Does the individual have communication needs and contact preferences?
+					span.optional (optional)
+				span.form-hint  Include the support of an interpreter or other language support (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+
+			//h3 Witness's primary address
+			//fieldset
+				label(for="standardField") Preferred phone number
+				input(id="standardField" placeholder="" type="text")
+			//fieldset
+				label.radio.radio--inline
+					input(checked, name="radio", type="radio", value="option1")
+					| Lookup address
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option2")
+					| Enter address manually
+
+			//fieldset
+				label(for="field") Enter your postcode
+				.search-results__field.field-group.field-group--buttons
+					input(type="search", placeholder="Enter postcode")
+					button.btn.btn-primary Search&nbsp;&nbsp;
+						i.icon-search
+
+
+			a.btn-light.left-button-icon(href="witness-form-3.html") Back
+			a.btn.right-button-icon(href="witness-form-6.html") Next

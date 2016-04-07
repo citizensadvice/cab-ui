@@ -1,0 +1,44 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 The referring body
+
+			fieldset
+				label(for="standardField") Your organisation’s name and department
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your name
+				span.form-hint The name of the person referring this witness to the Witness Service
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your phone number
+				input(id="standardField" placeholder="" type="text")
+
+			fieldset
+				label(for="standardField") Your email address
+				input(id="standardField" placeholder="" type="email")
+
+			//fieldset
+				label(for="standardField") Your reference for this referral 
+					span.optional (optional)
+				input(id="standardField" placeholder="" type="text")
+
+
+			a.btn-light.left-button-icon(href="witness-form-1.html") Back
+			a.btn.right-button-icon(href="witness-form-3.html") Next

@@ -1,0 +1,35 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 Form submitted
+			.callout--confirmation 
+				p Your form has been submitted. Our reference number, if you need to contact us, is:
+				h2 1234567
+				p Would you like a copy of your submission?
+				//button.btn-secondary.email-button-icon(type="button") Email
+				button.btn-secondary.print-button-icon(type="button") Print
+
+			.callout--related
+				h3 What happens next?
+				p Someone from the Witness Service will call you from the phone number below, or by email if you have not provided a phone number. Please add our number to the contacts on your phone so you know it’s us calling.
+
+				p If you have any questions, you can also call us on this number.
+				h4 Phone number:
+				p 0300 33 21 000
+
+				p Find out more #[a(href="https://www.citizensadvice.org.uk/about-us/citizens-advice-witness-service/about-the-citizens-advice-witness-service/") about the Witness Service] or get #[a(href="https://www.citizensadvice.org.uk/law-and-rights/legal-system/going-to-court-as-a-witness/") information about being a witness].
+				

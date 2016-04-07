@@ -1,0 +1,58 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 Support needed
+
+			fieldset
+				legend(for="radio") Which part of the court process does the witness need support with?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Trial only
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Sentence only
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| Trial and sentence
+
+			fieldset
+				label(for="exampleTextarea") Does the witness have individual support needs? 
+					span.optional (optional)
+				span.form-hint  This includes the support of a specialist at court, for example an IDVA or intermediary (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+
+			//fieldset
+				label(for="exampleTextarea") What special measures have been identified, applied for or granted?
+					span.optional (optional)
+				span.form-hint e.g. screens, evidence in chief, livelink, pre-recorded cross examination, closed court, removal of wigs and gowns, intermediary, aids to communication
+				textarea#exampleTextarea(rows="3")
+
+			//fieldset
+				label(for="exampleTextarea") Individual support needs, including the support of a specialist at court 
+					span.optional (optional)
+				span.form-hint e.g. an IDVA or intermediary (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+			//fieldset
+				label(for="exampleTextarea") Individual communication needs and contact preferences 
+					span.optional (optional)
+				span.form-hint Include the support of an interpreter or other language support (please give their name and role)
+				textarea#exampleTextarea(rows="3")
+
+			a.btn-light.left-button-icon(href="witness-form-7.html") Back
+			a.btn.tick-button-icon(href="witness-form-complete.html") Submit

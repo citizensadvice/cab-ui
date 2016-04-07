@@ -1,0 +1,34 @@
+block settings
+	- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			p Giving evidence as a witness can be daunting and the court process can be complicated and difficult to understand. The Citizens Advice Witness Service provides free and independent support for both prosecution and defence witnesses in every criminal court in England and Wales.
+
+			p Whether you are are a witness or contacting us on behalf of a witness please use this form to get in touch.  
+
+			p We’ll reply within two working days, usually by phone.
+
+			fieldset
+				legend(for="radio") Please select one of the following options:
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| I am a witness or I am making contact on behalf of a family member or friend who is a witness
+				label.radio.radio--block
+					input(disabled, name="radio", type="radio", value="option2")
+					| I work for an organisation that is referring a witness
+
+
+			a.btn.right-button-icon(href="witness-self-form-2.html") Start

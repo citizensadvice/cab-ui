@@ -1,0 +1,78 @@
+block settings
+	//- var title = "Witness Service referral form"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+
+extends ../template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "index.html"},
+		{title: "Witness Service", href: "index.html#templates"},
+		{title: "Referral form"}])
+
+block content
+	.articleContent
+		div
+			h2 Vulnerable and Intimidated Witnesses (VIW)
+
+			//h3 How are you involved in the trial?
+			//fieldset
+				legend(for="radio") Are you a witness?
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the defence
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, for the prosecution
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+			//fieldset
+				legend(for="radio1") Have you been affected by a crime that the trial is about?
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, as a victim or survivor
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, the victim was in my family or very close to me
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| yes, but I’m not sure who for
+				label.radio.radio--block
+					input(name="radio1", type="radio", value="option1")
+					| no
+				label.radio.radio--block
+					input(name="radio", type="radio", value="option1")
+					| I’m not sure/don’t know
+
+			fieldset
+				legend(for="checkbox") Grounds for special measures for Vulnerable or Intimidated Witnesses (VIW)
+				span.form-hint Select all that apply
+				label.checkbox.checkbox--block
+					input(name="checkbox", type="checkbox")
+					| Young person (under 18) 
+				label.checkbox.checkbox--block
+					input(name="checkbox", type="checkbox")
+					| Physical disability (including sensory impairment) 
+				label.checkbox.checkbox--block
+					input(name="checkbox", type="checkbox")
+					| Learning disability or difficulty 
+				label.checkbox.checkbox--block
+					input(name="checkbox", type="checkbox")
+					| Mental health issues 
+				label.checkbox.checkbox--block
+					input(name="checkbox", type="checkbox")
+					| Intimidated
+
+
+			a.btn-light.left-button-icon(href="witness-form-5.html") Back
+			a.btn.right-button-icon(href="witness-form-7.html") Next
