@@ -110,7 +110,7 @@ gulp.task( 'watch-jade', function() {
 		var start = process.hrtime();
 		gutil.log('Starting', "'" + gutil.colors.cyan('jade') + '"...');
 
-		gulp.src('libs/jade/**/*.jade')
+		gulp.src(event.path)
 			.pipe( jade( { pretty: true, basedir: "libs" } ) )
 	        .pipe( gulp.dest('public') )
 	        	.on( 'finish', function() {
