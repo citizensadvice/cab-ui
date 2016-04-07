@@ -310,118 +310,6 @@ textarea.form__field {
     }
 }
 
-.radio--conditional {
-    clear: both;
-    float: left;
-    width: 100%;
-    display: table;
-    p {
-        display: block;
-        //float: right;
-        display: table-cell;
-        margin: 0;
-        span {
-            font-weight: @font-weight-bolder;
-        }
-    }
-    input {
-        display: inline-block;
-        &:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            -webkit-user-select: none;
-            cursor: pointer;
-            border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
-            z-index: -1;
-            background-color: @gray-8;
-            box-sizing: border-box;
-            margin-right: @box-spacing/2;
-        }
-        &:hover:before {
-            border-color: @gray-5;
-        }
-        &:disabled {
-            cursor: not-allowed !important;
-            &:before {
-                cursor: not-allowed !important;
-                background-color: @form-disabled-bg;
-                border-color: @form-disabled-bg;
-            }
-        }
-        &:checked {
-            &:before {
-                border-color: @blue-light;
-                background-color: @heritage-blue-lightest;
-            }
-            &:hover:before {
-                border-color: @blue-light;
-            }
-        }
-        &:focus {
-            outline: 2px solid @heritage-yellow;
-        }
-    }
-}
-.radio--conditional {
-    input:not(checked) ~ .conditional--content {
-            display: none;
-    }
-    input:checked ~ .conditional--content {
-            display: block;
-    }
-}
-
-.conditional--content {
-    input {
-        display: inline-block;
-        &:before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            -webkit-user-select: none;
-            cursor: pointer;
-            border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
-            z-index: -1;
-            background-color: @white;
-            box-sizing: border-box;
-            margin-right: @box-spacing/2;
-        }
-        &:hover:before {
-            border-color: @gray-5;
-        }
-        &:disabled {
-            cursor: not-allowed !important;
-            &:before {
-                cursor: not-allowed !important;
-                background-color: @form-disabled-bg;
-                border-color: @form-disabled-bg;
-            }
-        }
-        &:checked {
-            &:before {
-                border-color: @blue-light;
-                background-color: @blue-lighter;
-            }
-            &:hover:before {
-                border-color: @blue-light;
-            }
-        }
-        &:focus {
-            outline: 2px solid @heritage-yellow;
-        }
-    }
-}
 .dropdown {
     border-radius: @form-border-radius;
     .btn-icon(@i-sort,@color:@black);
@@ -662,4 +550,138 @@ input[class*="dob-"] {
             .screenreader;
         }
     }
+}
+
+// Conditional field content
+.radio--conditional {
+    clear: both;
+    float: left;
+    width: 100%;
+    display: table;
+    p {
+        display: block;
+        //float: right;
+        display: table-cell;
+        margin: 0;
+        span {
+            font-weight: @font-weight-bolder;
+        }
+    }
+    input {
+        display: inline-block;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @gray-8;
+            box-sizing: border-box;
+            margin-right: @box-spacing/2;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-light;
+                background-color: @heritage-blue-lightest;
+            }
+            &:hover:before {
+                border-color: @blue-light;
+            }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
+    }
+}
+.radio--conditional {
+    input:not(checked) ~ .conditional--content {
+            display: none;
+    }
+    input:checked ~ .conditional--content {
+            display: block;
+    }
+}
+
+.conditional--content {
+    input {
+        display: inline-block;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @white;
+            box-sizing: border-box;
+            margin-right: @box-spacing/2;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-light;
+                background-color: @blue-lighter;
+            }
+            &:hover:before {
+                border-color: @blue-light;
+            }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
+    }
+}
+
+.conditional ~ .conditional--fields {
+    border-left: .5rem solid @blue-lighter;
+    padding: @box-spacing-vertical 0;
+    padding-left: @box-spacing-horizontal;
+    //background-color: @blue-lighter;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: none;
+    position: relative;
+    /*&:before {
+        height: 100%;
+        width: .5rem;
+        background-color: @blue-lighter;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+    }*/
 }
