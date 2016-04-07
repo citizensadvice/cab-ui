@@ -1,0 +1,64 @@
+block settings
+    - var title = "Validation"
+    - var sidebar = true
+    - var toolbars = true
+    //- var cookiemonster = true
+    //- var mockup = true
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "index.html"},
+        {title: "Forms", href: "index.html#forms"},
+        {title: "Validation"}])
+
+block sidebar
+    include /template/sidebar-forms.jade
+
+//block section-notice
+    aside.section-notice
+        h2.screenreader Notice
+        .section-notice__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+    .articleContent
+        div
+            p Please fill this out so we can get in contact with you.
+            .well--outline.invalid
+                h3 Please correct the errors
+                p Your form couldn't be completed due to errors. Please correct the following fields.
+                ul
+                    li #[a.invalid(href="#email-fieldset") Email]
+
+                    li #[a.invalid(href="#phone-fieldset") Phone number]
+
+            fieldset
+                label(for="name") Name
+                input#name(placeholder="", type="text", value="Eliot", required)
+
+            .form-group-date
+                legend Date of birth
+                    span.optional &nbsp;(optional)
+                fieldset
+                    label(for="dob-day")
+                        span.screenreader When did you buy your car? Date field,
+                        | Day
+                    input#dob-day(max="31", min="1", placeholder="DD", type="number")
+                fieldset
+                    label(for="dob-month") Month
+                    input#dob-month(max="12", min="1", placeholder="MM", type="number")
+                fieldset
+                    label(for="dob-year") Year
+                    input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+            fieldset#email-fieldset
+                label(for="email") Email
+                input#email(placeholder="", type="email", value="email!domain.com", required)
+                .invalid Please enter a valid email format including the @ symbol.
+
+            fieldset#phone-fieldset
+                label(for="phone") Phone number
+                input#phone(placeholder="", type="tel", required)
+                .invalid Please enter a phone number.

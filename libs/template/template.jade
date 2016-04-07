@@ -291,7 +291,7 @@ html.no-js
 		script.
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
-				$('.section-nav a[href="' + filename + '"]').addClass('active');
+				$('.section-nav a[href*="' + filename + '"]').addClass('active');
 			});
 		block script
 		block script-bottom
