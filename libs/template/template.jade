@@ -292,6 +292,13 @@ html.no-js
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
+
+				var pathname = window.location.href.split('#')[0];
+				$('a[href^="#"]').each(function() {
+					var $this = $(this),
+						link = $this.attr('href');
+					$this.attr('href', pathname + link);
+				});
 			});
 		block script
 		block script-bottom
