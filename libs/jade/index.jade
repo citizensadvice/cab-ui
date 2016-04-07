@@ -1,4 +1,4 @@
-extends ../template/template.jade
+extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -32,15 +32,16 @@ block content
 						a(href="new-grid.html") New grid layout
 					//li
 					//	a(href="new-grid-examples.html") New grid examples
+				h2#forms Forms
+				ul
 					li
-						h3#forms Forms
-						ul
-							li
-								a(href="buttons.html") Buttons
-							li
-								a(href="fields.html") Fields
-							li
-								a(href="field-groups.html") Field groups
+						a(href="buttons.html") Buttons
+					li
+						a(href="fields.html") Fields
+					li
+						a(href="field-groups.html") Field groups
+					li
+						a(href="form-error.html") Form validation
 
 			.span4-sm
 				h2#Modules Modules
@@ -87,8 +88,6 @@ block content
 					//	a(href="advisor.html") Advisor content
 					li
 						a(href="contents-page.html") Contents pages
-					li
-						a(href="form-error.html") Form validation
 					//li
 						a(href="section-index-dev.html") Section index development
 					//li
