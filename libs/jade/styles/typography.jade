@@ -2,7 +2,7 @@ block settings
 	- var title = "Typography"
 	- var sidebar = true
 
-extends ../template/template.jade
+extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -11,7 +11,7 @@ block breadcrumbs
 		{title: "Typography"}])
 
 block sidebar
-	include ../template/sidebar-styles.jade
+	include /template/sidebar-styles.jade
 
 block content
 	.articleContent

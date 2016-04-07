@@ -92,22 +92,22 @@ gulp.task( 'clean-jade', function() {
 
 gulp.task( 'jade', function() {
 
-	return gulp.src('libs/jade/*.jade')
-    	.pipe( jade( { pretty: true }) )
+	return gulp.src('libs/jade/**/*.jade')
+    	.pipe( jade( { pretty: true, basedir: "libs" }) )
     	.pipe( gulp.dest('public') );
 } );
 
 gulp.task( 'watch-jade', function() {
 
 	// This just rebuilds the affects file - cheap
-	gulp.watch('libs/jade/*.jade', function(event) {
+	gulp.watch('libs/jade/**/*.jade', function(event) {
 
 		// This is mostly a hack to make it look like proper task in the console
 		var start = process.hrtime();
 		gutil.log('Starting', "'" + gutil.colors.cyan('jade') + '"...');
 
 		gulp.src(event.path)
-			.pipe( jade( { pretty: true } ) )
+			.pipe( jade( { pretty: true, basedir: "libs" } ) )
 	        .pipe( gulp.dest('public') )
 	        	.on( 'finish', function() {
 	        		var end = process.hrtime(start);
