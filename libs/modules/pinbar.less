@@ -1,0 +1,24 @@
+.pinbar {
+	position: fixed;
+	bottom: .5rem;
+	background: @heritage-yellow-lighter;
+	padding: @box-spacing-vertical @box-spacing-horizontal;
+	border-radius: @form-border-radius;
+	margin-left: .5rem;
+	&:before {
+		.icon;
+		content: @i-pin;
+		margin-right: .5rem;
+	}
+}
+#pinmockup {
+	h1, h2, h3, h4 {
+		&:before {
+			.icon;
+			content: @i-pin;
+			margin-right: .15em;
+			color: @blue-light;
+			margin-left: -2rem;
+		}
+	}
+}
