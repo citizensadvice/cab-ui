@@ -7,8 +7,8 @@ extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "/index.html"},
-		{title: "Styles", href: "/index.html#Styles"},
+		{title: "Home", href: dir + "index.html"},
+		{title: "Styles", href: dir + "index.html#Styles"},
 		{title: "Colours"}])
 
 block sidebar
@@ -33,11 +33,6 @@ block content
 						td key
 						td.variable @i-key
 						td.unicode \e900
-					tr.i-undo
-						td.icon
-						td undo
-						td.variable @i-undo
-						td.unicode \238c
 					tr.i-target
 						td.icon
 						td target
@@ -323,3 +318,8 @@ block content
 						td vertical dots
 						td.variable @i-vertical-dots
 						td.unicode \e901
+					tr.i-pin
+						td.icon
+						td pin
+						td.variable @i-pin
+						td.unicode \e902

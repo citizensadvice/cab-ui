@@ -7,16 +7,16 @@ extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Home", href: "/index.html"},
-		{title: "Modules", href: "/index.html#Modules"},
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
 		{title: "Charts"}])
 
 block sidebar
 	include /template/sidebar-modules.jade
 
 block script
-	script(src="js/vendor/highcharts/highcharts.js")
-	script(src="js/vendor/highcharts/modules/exporting.js")
+	script(src="#{dir}js/vendor/highcharts/highcharts.js")
+	script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
 	script.
 		// Column chart
 		$(function () {
