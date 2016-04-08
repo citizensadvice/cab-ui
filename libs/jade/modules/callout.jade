@@ -17,33 +17,41 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Used as part of content formats to highlight information. This can be a few words, paragraph or paragraphs with multiple links.
-			p It is important to ask:
+			p Callouts can be used to highlight information within content, for example an important sentence, paragraph or paragraphs with multiple links.
+			p There are 5 main callout styles:
 			ul
-				li is the callout neccessary, too many, misused or unneccessary callouts weaken their value and can distract from other important content around it
-				li which style of callout is relevant, is the information 'useful', 'important' or 'recommending'
-			p Colours can't be relied upon as the only method of communicating the importance and content of a callout. Any callouts should be clearly titled using #[code.code h2] or #[code.code h3] tags. Use the appropriate Aria tags for the relevant callouts to ensure screenreaders understand the information contained.
-			h2 Callout styles
+				li warning 
+				li alert
+				li useful
+				li confirmation
+				li adviser content
 
+			p Before using a callout, think about whether you really need it. Fewer callouts have more of an impact on a piece of content. 
+			p Too many callouts can confuse and distract clients from other important content on a page.
+			p Callouts do not require headings by default but they can have be used if they are relevant to the content.
+
+			h3 Aria tags
+			p The callouts are colour-coded to help users understand their importance. They also have #[code.code h2] or #[code.code h3] tags so that users know what the content’s about.
+			p Some of the callouts use Aria tags to help visually impaired people. The Aria tags enable screenreaders to understand the information in the callouts. 
+
+			h2 Callout styles
+			h3 Callout warning
 			.example-box-plain
-				.callout
-					h3 Callout unstyled
-					p This callout does not require an Aria tag but should be labeled with a clear heading.
-					p This style is used for any neutral callouts or particularly common help tips, where the information needs to be seperated from the content.
+				.callout--warning
+					p This callout style is used for important information that has serious and/or legal implications if the client doesn’t follow the advice. It uses the Aria tag #[code.code aria-label="Important"].
 					//a.callout__link Callout link
 			pre
 				code.language-html
-					| &lt;div class="callout"&gt;
-					| 	&lt;h3&gt;Callout unstyled&lt;/h3&gt;
-					| 	&lt;p&gt;This callout does not require an Aria tag but should be labeled with a clear heading.&lt;/p&gt;
-					| 	&lt;p&gt;This style is used for any neutral callouts or particularly common help tips, where the information needs to be seperated from the content.&lt;/p&gt;
+					| &lt;div class="callout--warning"&gt;
+					| 	&lt;h3&gt;Callout warning&lt;/h3&gt;
+					| 	&lt;p&gt;This callout style is used for important information that has serious and/or legal implications if the client doesn’t follow the advice. It uses the Aria tag &lt;code&gt;aria-label="Important"&lt;/code&gt;.&lt;/p&gt;
 					| &lt;/div&gt;
 
+			h3 Callout alert
 			.example-box-plain
 				.callout--alert
-					h3 Callout alert
+					p This callout style should be used on important, non-mandatory advice for clients that doesn’t have any serious or legal implications. There might be other implications.
 					p Use the Aria tag #[code.code aria-label="Help"].
-					p This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.
 					//a.callout__link Callout link
 				//.callout--alert--icon
 					h3 Callout alert with icon
@@ -51,52 +59,30 @@ block content
 			pre
 				code.language-html
 					| &lt;div class="callout--alert"&gt;
-					| 	&lt;h3&gt;Callout alert&lt;/h3&gt;
+					| 	&lt;p&gt;This callout style should be used on important, non-mandatory advice for clients that doesn’t have any serious or legal implications. There might be other implications.&lt;/p&gt;
 					| 	&lt;p&gt;Use the Aria tag &lt;code&gt;aria-label="Help"&lt;/code&gt;.&lt;/p&gt;
-					| 	&lt;p&gt;This callout style should be applied on information which is important and will have implications on the client if they do understand and follow the advice but it isn't mandatory and won't have legal implications they don't follow.&lt;/p&gt;
 					| &lt;/div&gt;
 
+			h3 Callout unstyled
 			.example-box-plain
-				.callout--warning
-					h3 Callout warning
-					p Use the Aria tag #[code.code aria-label="Important"].
-					p The warning callout should be used for any important snippet of text that has serious and/or legal implications if the client does not follow the advice.
+				.callout
+					p This callout style is for information that would be useful for clients to know. There wouldn’t be any legal implications for clients if they didn’t read the information.
+					p This callout is useful for things like tips to help clients.
+					p This callout needs an #[code.code h3] but doesn’t use an Aria tag.
 					//a.callout__link Callout link
 			pre
 				code.language-html
-					| &lt;div class="callout--warning"&gt;
-					| 	&lt;h3&gt;Callout warning&lt;/h3&gt;
-					| 	&lt;p&gt;Use the Aria tag &lt;code&gt;aria-label="Important"&lt;/code&gt;.&lt;/p&gt;
-					| 	&lt;p&gt;The warning callout should be used for any important snippet of text that has serious and/or legal implications if the client does not follow the advice.&lt;/p&gt;
+					| &lt;div class="callout"&gt;
+					| 	&lt;p&gt;This callout style is for information that would be useful for clients to know. There wouldn’t be any legal implications for clients if they didn’t read the information.&lt;/p&gt;
+					| 	&lt;p&gt;This callout is useful for things like tips to help clients.&lt;/p&gt;
+					| 	&lt;p&gt;This callout needs an &lt;code&gt;h3&lt;/code&gt; but doesn’t use an Aria tag.&lt;/p&gt;
 					| &lt;/div&gt;
 
-			.example-box-plain
-				.callout--example
-					h3 Callout example
-					p Also referred to as Blockexample, this style is when a example needs to be displayed.
-					//a.callout__link Callout link
-			pre
-				code.language-html
-					| &lt;div class="callout--example"&gt;
-					| 	&lt;h3&gt;Callout example&lt;/h3&gt;
-					| 	&lt;p&gt;Also referred to as Blockexample, this style is when a example needs to be displayed.&lt;/p&gt;
-					| &lt;/div&gt;
 
-			.example-box-plain
-				.callout--adviser
-					h3 Adviser content
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-			pre
-				code.language-html
-					| &lt;div class="callout--adviser"&gt;
-					| 	&lt;h3&gt;Adviser content&lt;/h3&gt;
-					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-					| &lt;/div&gt;
-
+			h3 Callout confirmation
 			.example-box-plain
 				.callout--confirmation
-					h3 Callout confirmation
-					p This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the informaiton i.e. 'Do apply for this if…'
+					p This callout style is used to confirm an action.
 				//.callout--confirmation--icon
 					h3 Callout confirmation with icon
 					p The icon is optional and can be including by adding the #[code.code .callout--icon] class.
@@ -104,19 +90,42 @@ block content
 			pre
 				code.language-html
 					| &lt;div class="callout--confirmation"&gt;
-					| 	&lt;h3&gt;Callout confirmation&lt;/h3&gt;
-					| 	&lt;p&gt;This callout is used to confirm an action as correct or where the content needs to act as positive reinforcement of the information i.e. 'Do apply for this if…'&lt;/p&gt;
+					| 	&lt;p&gt;This callout style is used to confirm an action&lt;/p&gt;
 					| &lt;/div&gt;
 
-			h2 Callouts combined
-			p These callouts can be combined both consecutively or combined, someexamples are shown below.
+
+			h3 Callout example
+			.example-box-plain
+				.callout--example
+					p This callout style is also known as a Blockquote and is used to highlight a quote or example within content.
+					//a.callout__link Callout link
+			pre
+				code.language-html
+					| &lt;div class="callout--example"&gt;
+					| 	&lt;p&gt;Also referred to as Blockexample, this style is when a example needs to be displayed.&lt;/p&gt;
+					| &lt;/div&gt;
+
+			h3 Adviser content
+			.example-box-plain
+				.callout--adviser
+					p This callout style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+			pre
+				code.language-html
+					| &lt;div class="callout--adviser"&gt;
+					| 	&lt;p&gt;This callout style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.&lt;/p&gt;
+					| &lt;/div&gt;
+
+
+			h2 Combining callouts
+			p The callouts can also be combined. 
+			p For example, you could have both a quote and an alert within an unstyled callout, or you could have a warning callout within a quote. 
+			p Here are some examples:
 
 			.example-box-plain
 				.callout
-					h3 Callout
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--example
-						h3 This is a example
+						h3 This is a specific heading 
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--alert
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -136,22 +145,21 @@ block content
 
 			.example-box-plain
 				.callout--example
-					h3 This is a example
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--warning
-						h3 Callout warning
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 			pre
 				code.language-html
 					| &lt;div class="callout--example"&gt;
-					| 	&lt;h3&gt;This is a example&lt;/h3&gt;
 					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| 	&lt;div class="callout--warning"&gt;
-					| 		&lt;h3&gt;Callout warning&lt;/h3&gt;
 					| 		&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
 
+			h3 Next steps
+			p This callout is to show further reading or related links.
+			p It is the only callout that requires a heading.
 			.example-box-plain
 				.callout--related
 					h3 Next steps
