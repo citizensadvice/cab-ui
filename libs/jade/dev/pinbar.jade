@@ -14,9 +14,23 @@ block breadcrumbs
 block sidebar
 	include /template/sidebar-brand.jade
 
+block script
+	script.
+			$(document).ready(function() {
+				$( "h2" ).click(function() {
+					$( this ).toggleClass( "pinned" );
+				});
+				$( "h3" ).click(function() {
+					$( this ).toggleClass( "pinned" );
+				});
+				$( "h4" ).click(function() {
+					$( this ).toggleClass( "pinned" );
+				});
+			});
+
 block content
 	#pinmockup.articleContent
-		.pinbar Content pinned for later
+		.pinbar Saved content
 
 		// DUMMY TEXT FOR DAYZ!
 		div
@@ -40,7 +54,7 @@ block content
 
 			p If you’re waiting a very long time for a decision on your claim, contact your local Citizens Advice in England and Wales or in Scotland. You can complain to the DWP if the delay is unreasonable and may be able to claim compensation if it’s considered unlawful. However, there are no set rules on what counts as unreasonable or unlawful
 
-			h2 Start your claim - fill in a PIP1 form
+			h2.pinned Start your claim - fill in a PIP1 form
 
 			p You can start your PIP claim by filling in a PIP1 form. You can do this either:
 
@@ -104,7 +118,7 @@ block content
 				p #[a(href="#") Appointees and benefit claims]
 
 			.callout--related
-				h3 Next steps
+				h3.pinned Next steps
 				p The DWP will assess whether you meet the basic eligibility conditions.
 				p If you do, they’ll send you a PIP claim form. This form is where you tell them how your condition affects you. If you’ve waited more than 2 weeks, contact the PIP claims line and ask them for an update.
 				p While you wait for the PIP2 form, you should think about #[a(href="#") how to fill in the PIP claim form] and if you need to organise any #[a(href="#") supporting evidence] to support your claim.
