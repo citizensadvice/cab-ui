@@ -17,7 +17,7 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Forms can help people find the information they need, complete a task or complete an application online. 
+			p Forms can help people find the information they need, complete a task or complete an application online.
 
 			p Ask for the minimum amount of information needed for the client to complete the task, this makes the forms shorter, and improves completion rates. Make clear that optional fields are optional.
 
@@ -27,11 +27,12 @@ block content
 			.example-box-plain
 				fieldset
 					label(for="standardField") Standard field
+						span.optional &nbsp;(optional)
 					input#standardField(placeholder="", type="text")
 			pre
 				code.language-html
 					| &lt;fieldset&gt;
-					| 	&lt;label for="standardField"&gt;Standard field&lt;/label&gt;
+					| 	&lt;label for="standardField"&gt;Standard field &lt;span class="optional"&gt;(optional)&lt;/span&gt;&lt;/label&gt;
 					| 	&lt;input id="standardField" placeholder="" type="text"&gt;
 					| &lt;/fieldset&gt;
 
