@@ -6,6 +6,7 @@
 
 // Node modules
 var URL = require('url');
+var pathUtils = require('path');
 
 var prettyHrtime = require('pretty-hrtime');
 
@@ -110,9 +111,17 @@ gulp.task( 'watch-jade', function() {
 		var start = process.hrtime();
 		gutil.log('Starting', "'" + gutil.colors.cyan('jade') + '"...');
 
+		// Find the relative path between the jade directory and the file
+		// and apply that to the public directory to get the right folder
+		var relativePath = pathUtils.parse( pathUtils.relative( 
+			pathUtils.resolve( __dirname, 'libs/jade' ), 
+			event.path 
+		) ).dir;
+		relativePath = pathUtils.resolve( 'public', relativePath );
+
 		gulp.src(event.path)
 			.pipe( jade( { pretty: true, basedir: "libs" } ) )
-	        .pipe( gulp.dest('public') )
+	        .pipe( gulp.dest( relativePath ) )
 	        	.on( 'finish', function() {
 	        		var end = process.hrtime(start);
 	        		gutil.log(
