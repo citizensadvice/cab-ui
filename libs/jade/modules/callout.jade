@@ -20,19 +20,19 @@ block content
 			p Callouts can be used to highlight information within content, for example an important sentence, paragraph or paragraphs with multiple links.
 			p There are 5 main callout styles:
 			ul
-				li warning 
+				li warning
 				li alert
 				li useful
 				li confirmation
-				li adviser content
+				li example
 
-			p Before using a callout, think about whether you really need it. Fewer callouts have more of an impact on a piece of content. 
+			p Before using a callout, think about whether you really need it. Fewer callouts have more of an impact on a piece of content.
 			p Too many callouts can confuse and distract clients from other important content on a page.
-			p Callouts do not require headings by default but they can have be used if they are relevant to the content.
+			p Callouts do not require headings by default but they can be used if they are relevant to the content.
 
 			h3 Aria tags
 			p The callouts are colour-coded to help users understand their importance. They also have #[code.code h2] or #[code.code h3] tags so that users know what the content’s about.
-			p Some of the callouts use Aria tags to help visually impaired people. The Aria tags enable screenreaders to understand the information in the callouts. 
+			p Some of the callouts use Aria tags to help visually impaired people. The Aria tags enable screenreaders to understand the information in the callouts.
 
 			h2 Callout styles
 			h3 Callout warning
@@ -115,17 +115,30 @@ block content
 					| 	&lt;p&gt;This callout style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.&lt;/p&gt;
 					| &lt;/div&gt;
 
+			h3 Next steps
+			p This callout is to show further reading or related links.
+			p It is the only callout that requires a heading.
+			.example-box-plain
+				.callout--related
+					h3 Next steps
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Also #[a(href="#") including a link to other content].
+			pre
+				code.language-html
+					| &lt;div class="callout--related"&gt;
+					| 	&lt;h3&gt;Next steps&lt;/h3&gt;
+					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Also &lt;a href="#"&gt; including a link to other content&lt;/a&gt;&lt;/p&gt;
+					| &lt;/div&gt;
 
 			h2 Combining callouts
-			p The callouts can also be combined. 
-			p For example, you could have both a quote and an alert within an unstyled callout, or you could have a warning callout within a quote. 
+			p The callouts can also be combined.
+			p For example, you could have both a quote and an alert within an unstyled callout, or you could have a warning callout within a quote.
 			p Here are some examples:
 
 			.example-box-plain
 				.callout
 					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--example
-						h3 This is a specific heading 
+						h3 This is a specific heading
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					.callout--alert
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -155,20 +168,6 @@ block content
 					| 	&lt;div class="callout--warning"&gt;
 					| 		&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 					| 	&lt;/div&gt;
-					| &lt;/div&gt;
-
-			h3 Next steps
-			p This callout is to show further reading or related links.
-			p It is the only callout that requires a heading.
-			.example-box-plain
-				.callout--related
-					h3 Next steps
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Also #[a(href="#") including a link to other content].
-			pre
-				code.language-html
-					| &lt;div class="callout--related"&gt;
-					| 	&lt;h3&gt;Next steps&lt;/h3&gt;
-					| 	&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Also &lt;a href="#"&gt; including a link to other content&lt;/a&gt;&lt;/p&gt;
 					| &lt;/div&gt;
 
 			// unindent when uncommenting
