@@ -37,29 +37,62 @@ block content
 
             fieldset
                 label(for="name") Name
-                input#name(placeholder="", type="text", value="Eliot", required)
+                    span.optional &nbsp;(optional)
+                input#name(placeholder="", type="text")
 
             .form-group-date
                 legend Date of birth
-                    span.optional &nbsp;(optional)
                 fieldset
                     label(for="dob-day")
                         span.screenreader When did you buy your car? Date field,
                         | Day
-                    input#dob-day(max="31", min="1", placeholder="DD", type="number")
+                    input.invalid#dob-day(max="31", min="1", placeholder="DD", type="number")
                 fieldset
                     label(for="dob-month") Month
-                    input#dob-month(max="12", min="1", placeholder="MM", type="number")
+                    input.invalid#dob-month(max="12", min="1", placeholder="MM", type="number")
                 fieldset
                     label(for="dob-year") Year
-                    input#dob-year(max="2100", placeholder="YYYY", type="number")
+                    input.invalid#dob-year(max="2100", placeholder="YYYY", type="number")
+                .invalid Please enter a date.
 
             fieldset#email-fieldset
                 label(for="email") Email
-                input#email(placeholder="", type="email", value="email!domain.com", required)
+                input.invalid#email(placeholder="", type="email", value="email!domain.com")
                 .invalid Please enter a valid email format including the @ symbol.
 
             fieldset#phone-fieldset
                 label(for="phone") Phone number
-                input#phone(placeholder="", type="tel", required)
+                input.invalid#phone(placeholder="", type="tel")
                 .invalid Please enter a phone number.
+
+            fieldset
+                legend(for="radio-inline") Inline Radio buttons
+                label.radio.radio--inline
+                    input.invalid(name="radio-inline", type="radio", value="option1")
+                    | Yes
+                label.radio.radio--inline
+                    input.invalid(name="radio-inline", type="radio", value="option2")
+                    | No
+                .invalid Please select one.
+
+            fieldset
+                legend(for="checkbox") Checkboxes
+                label.checkbox.checkbox--block
+                    input.invalid(name="checkbox", type="checkbox")
+                    | Option one
+                label.checkbox.checkbox--block
+                    input.invalid(name="checkbox", type="checkbox")
+                    | Option two
+                .invalid Please select at least one.
+
+            fieldset
+                label(for="exampleSelect1") Example dropdown select
+                .dropdown
+                    select.invalid#exampleSelect1
+                        option None
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                .invalid Please select one.

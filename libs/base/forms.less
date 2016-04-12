@@ -21,40 +21,24 @@ form small {
     color: @gray-3;
 }
 
-.valid,
-.invalid {
+div.invalid,
+span.invalid {
     padding-top: @box-spacing/4;
     clear: both;
-//    display: none;
-}
-.valid {
-    color: @green;
-}
-.invalid {
     color: @red;
-    .well--outline& {
-        border-color: @red;
-        ul,
-        li,
-        h3 {
-            color: @red;
-        }
+}
+.well--outline.invalid {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    color: @black;
+    border-color: @red;
+    ul,
+    li,
+    h3,
+    a {
+        color: @red;
     }
 }
-/* Do we want to make valid/invalid selectors inline?
-input {
-    &:valid {
-        .valid {
-            display: inline-block;
-        }
-    }
-    &:invalid {
-        .invalid {
-            display: inline-block;
-        }
-    }
-}
-*/
+
 fieldset,
 .form__group {
     padding: 0;
@@ -184,6 +168,15 @@ select {
         -webkit-background-size: 1.5em 1.5em;
         background-size: 1.5em 1.5em;
     }
+    &.invalid {
+        border-color: @red;
+        border-radius: 0;
+        background-image: url("assets/images/red-cross.svg");
+        background-repeat: no-repeat;
+        background-position: center right .6em;
+        -webkit-background-size: 1.5em 1.5em;
+        background-size: 1.5em 1.5em;
+    }
     /*&:required:valid {
         border: 2px solid @green;
         border-radius: 0;
@@ -256,11 +249,21 @@ textarea.form__field {
             -webkit-user-select: none;
             cursor: pointer;
             border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
+            border: 2px solid @gray-6;
             z-index: -1;
             background-color: @gray-8;
             box-sizing: border-box;
             margin-right: @box-spacing/2;
+        }
+        &.invalid {
+            color: @red;
+        }
+        &.invalid:before {
+            border-color: @red;
+            //background-color: @red-lightest;
+        }
+        &.invalid:hover:before {
+            border-color: @red;
         }
         &:hover:before {
             border-color: @gray-5;
@@ -293,6 +296,9 @@ textarea.form__field {
     &--inline {
         clear: none;
         //float: left;
+        label& {
+            margin-bottom: 0;
+        }
     }
 
     &--block {
@@ -308,6 +314,9 @@ textarea.form__field {
                 font-weight: @font-weight-bold;
             }
         }
+        label&:last-of-type {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -318,6 +327,7 @@ textarea.form__field {
     background-color: @white;
     display: inline-block;
     width: 100%;
+    //border: 2px solid @gray-6;
     &:after {
         pointer-events:none;
         @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
@@ -328,10 +338,19 @@ textarea.form__field {
         background: none;
         cursor: pointer;
         -webkit-appearance: none;
-        -moz-appearance: window;
+        //-moz-appearance: window;
+        -moz-appearance: none;
         padding-right: 2em;
         .ie(width,100%);
         border: 2px solid @gray-6;
+        //border: none;
+        &.invalid {
+            border-color: @red;
+        }
+        &:focus {
+            outline: none;
+            border-color: @heritage-yellow;
+        }
     }
     .dropdown,
     select {
@@ -360,6 +379,7 @@ input[class*="dob-"] {
 }*/
 .form-group-date {
     overflow: auto;
+    margin-bottom: 1rem;
 }
 
 .form-group-date fieldset {
@@ -368,6 +388,7 @@ input[class*="dob-"] {
     display: inline-block;
     float: left;
     margin-right: @box-spacing-horizontal/2;
+    margin-bottom: 0;
     &:last-child {
         margin: 0;
     }
