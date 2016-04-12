@@ -4,9 +4,9 @@ block settings
 	- var dir = "../"
 
 block script
-	script(src="#{dir}dev/datepicker/javascript/jquery-1.12.0.js")
-	script(src="#{dir}dev/datepicker/javascript/zebra_datepicker.js")
-	script(src="#{dir}dev/datepicker/javascript/core.js")
+	script(src="#{dir}js/datepicker/js/jquery-1.12.0.js")
+	script(src="#{dir}js/datepicker/js/zebra_datepicker.js")
+	script(src="#{dir}js/datepicker/js/core.js")
 
 extends /template/template.jade
 
@@ -683,5 +683,5 @@ block content
 				.main-wrapper
 					form(action="javascript:void(0)" method="post")
 						div
-							input#datepicker-example8(type="text", style="width:20rem;margin-right:1rem;")
+							input#datepicker-example8.Zebra_DatePicker_Icon-brand(type="text", style="width:20rem;margin-right:1rem;")
 
