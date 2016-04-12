@@ -75,3 +75,17 @@
 		}
 	}
 }
+
+.pinned {
+	p, li, h2, h3, h4 {
+		background-color: lighten(@green-lighter, 10%);
+	}
+	*[class^="callout"],
+	.dap-panel,
+	.box--sticky,
+	blockquote {
+		p, li, h2, h3, h4 {
+			background: fadeout(@gray-3, 85%);
+		}
+	}
+}
