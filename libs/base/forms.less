@@ -236,6 +236,17 @@ textarea.form__field {
     z-index: 1;
     background-color: @gray-8;
     border: none;
+    /*&.invalid {
+        background-color: @red-lightest;
+        color: @red;
+        input:before {
+            background-color: @red-lightest;
+            border-color: @red;
+        }
+        input:hover:before {
+            border-color: @red;
+        }
+    }*/
     input {
         display: inline-block;
         &:before {
@@ -254,9 +265,6 @@ textarea.form__field {
             background-color: @gray-8;
             box-sizing: border-box;
             margin-right: @box-spacing/2;
-        }
-        &.invalid {
-            color: @red;
         }
         &.invalid:before {
             border-color: @red;
