@@ -1,0 +1,146 @@
+block settings
+	- var title = "Content toolbar"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Content toolbar"}])
+
+block sidebar
+	include /template/sidebar-brand.jade
+
+block content
+	.overlay
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header References
+				ul.reference__list
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
+					li.removed
+						button.btn.btn-secondary
+							span.screenreader Undo
+						p
+							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI)
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § Health and safety
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI)
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § Health and safety
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI)
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
+					li
+						button.btn.btn-warning
+							span.screenreader Delete
+						p
+							a(href="#") Basic rights at work (EWSNI) § Health and safety
+			.overlay__footer
+				button.btn.btn-primary-light(type="button") Close
+				button.btn.btn-primary(type="button") Clear All
+				.btn-group
+					button.btn.btn-secondary(type="button") Load
+					button.btn.btn-secondary(type="button") Save
+					button.btn.btn-secondary(type="button") Copy
+
+					
+	div
+		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+		section#step1
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, #[span#overlay_button-1 consectetuer] adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step2
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-2 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
+			.callout--adviser Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step3
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+	#overlay1.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header 19.1 Overlay title
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			.overlay__footer
+				button#overlay1_close.btn.btn-primary.close-button-icon(type="button") Close
+
+	#overlay2.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header 19.2 Overlay title
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			.overlay__footer
+				button#overlay2_close.btn.btn-primary.close-button-icon(type="button") Close
