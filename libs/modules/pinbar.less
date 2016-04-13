@@ -33,6 +33,7 @@
 	h1, h2, h3, h4 {
 		position: relative;
 		cursor: pointer;
+		pointer-events: none;
 		&:before {
 			.icon;
 			content: @i-circle;
@@ -41,6 +42,7 @@
 			cursor: pointer;
 			margin-right: .15em;
 			display: inline-block;
+			pointer-events: all;
 			@media (min-width: 600px) and (max-width: 750px), (min-width: 1150px) {
 				position: absolute;
 				margin-left: -2rem;
@@ -78,14 +80,14 @@
 
 .pinned {
 	p, li, h2, h3, h4 {
-		background-color: lighten(@green-lighter, 10%);
+		background-color: @yellow;
 	}
 	*[class^="callout"],
 	.dap-panel,
 	.box--sticky,
 	blockquote {
 		p, li, h2, h3, h4 {
-			background: fadeout(@gray-3, 85%);
+			//background: fadeout(@gray-3, 85%);
 		}
 	}
 }
