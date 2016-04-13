@@ -29,10 +29,10 @@
 	/* Max height prevents the dialog being taller than the screen */
 	max-height: 80%;
 
-    @media( max-width: @screen-xs-max ) {
-        max-width: 95%;
-        max-height: 95%;
-    }
+	@media( max-width: @screen-xs-max ) {
+		max-width: 95%;
+		max-height: 95%;
+	}
 
 	background: @white;
 	/* We will limit ourselves to the new syntax and the IE tweener syntax */
@@ -119,6 +119,9 @@
 	}
 }
 
+
+
+
 .overlay__footer {
 	border-top: 1px solid @gray-7;
 	padding: @box-spacing-vertical @box-spacing-horizontal/2;
@@ -129,10 +132,10 @@
 	text-align: right;
 	.btn {
 		margin: @box-spacing-horizontal*.5 0 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5;
-	    //font-size: @font-size-small;
-	    &.reference__list {
+		//font-size: @font-size-small;
+		&.reference__list {
 			padding: @box-spacing-vertical/3 @box-spacing-horizontal/2;
-		    font-weight: 700;
+			font-weight: 700;
 		}
 	}
 	.btn-group {
@@ -147,3 +150,134 @@
 		margin: @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 @box-spacing-horizontal*.5 0;
 	}
 }
+
+
+/* Overlay developed for print and reference functionality 
+
+see - ./dev/reference-action.html
+
+*/
+
+.pin__modal {
+	/* The position, display and transform are used for feature tests in the script.  Things might break if these are changed */
+	position: fixed;
+	/* See https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ie-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	/* Max width prevents the dialog being wider than the screen */
+	width: 65em;
+	max-width: 70%;
+	/* Max height prevents the dialog being taller than the screen */
+	height: 80%;
+	max-height: 80%;
+
+	@media( max-width: @screen-xs-max ) {
+		max-width: 95%;
+		max-height: 95%;
+	}
+
+	background: @white;
+	/* We will limit ourselves to the new syntax and the IE tweener syntax */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
+}
+
+.pin__actions {
+	position: absolute;
+	display: block;
+	z-index: 1;
+	height: 100%;
+	width: 30%;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	padding: 0 @box-spacing-horizontal;
+	background-color: @green-lighter;
+	border-radius: 0;
+	-webkit-transition: opacity 0.6s;
+	-moz-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+	overflow-y: scroll;
+	
+	h3 {
+  		line-height: 2;
+	}
+}
+
+
+.pin__content {
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	width: 67%;
+	margin-right: 30%;
+	padding: 1rem 0 0 0;
+	& >:first-child {
+		margin-top: 0;
+	}
+	& >:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.pin__list {
+	list-style: none;
+	padding: 0;
+	li {
+		position: relative;
+		margin: 0;
+		p {
+			padding: @box-spacing-vertical*.5 0 @box-spacing-vertical*.5 0;
+		    margin: 0 10rem 0 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		button {
+			.btn-icon("\e603");
+			.vertical-align(absolute);
+			right: @box-spacing-horizontal*.75;
+			margin: 0;
+			padding: 1rem 2rem 1rem .6rem;
+			&:hover ~ p {
+				background-color: @red-lightest;
+			}
+		}
+		&.removed {
+			background-color: @red-lightest;
+			a {
+				//text-decoration: line-through;
+				color: @red;
+			}
+			button {
+				.btn-icon("\f0e2");
+				.vertical-align(absolute);
+				right: @box-spacing-horizontal*.75;
+				margin: 0;
+				padding: @box-spacing;
+				&:hover ~ p {
+					background-color: @gray-8;
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+			a {
+				border: none;
+			}
+		}
+	}
+}
+

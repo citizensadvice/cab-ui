@@ -1,5 +1,5 @@
 block settings
-	- var title = "Content toolbar"
+	- var title = "Reference action"
 	- var sidebar = true
 	- var mockup = true
 	- var dir = "../"
@@ -10,99 +10,68 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Modules", href: dir + "index.html#Modules"},
-		{title: "Content toolbar"}])
+		{title: "Reference action"}])
 
 block sidebar
 	include /template/sidebar-brand.jade
 
 block content
 	.overlay
-		.overlay__modal
-			.overlay__main
-				h3.overlay__header References
-				ul.reference__list
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
-					li.removed
-						button.btn.btn-secondary
-							span.screenreader Undo
-						p
-							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI)
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § Health and safety
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI)
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § Health and safety
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI)
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
-					li
-						button.btn.btn-warning
-							span.screenreader Delete
-						p
-							a(href="#") Basic rights at work (EWSNI) § Health and safety
-			.overlay__footer
-				button.btn.btn-primary-light(type="button") Close
-				button.btn.btn-primary(type="button") Clear All
-				.btn-group
-					button.btn.btn-secondary(type="button") Load
-					button.btn.btn-secondary(type="button") Save
-					button.btn.btn-secondary(type="button") Copy
+		.pin__modal
+			.flex-row
+				.flex-column.col-xs-12.col-md-8.pin__content
+					h3 References
+
+					section.revealable
+						h3 Unstyled content inside header
+						p Lorem ipsum.
+
+					ul.pin__list
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+							p
+								a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
+						li.removed
+							button.btn.btn-primary
+								span.screenreader Undo
+							p
+								a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+							p
+								a(href="#") Basic rights at work (EWSNI)
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+							p
+								a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+							p
+								a(href="#") Basic rights at work (EWSNI) § Health and safety
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+							p
+								a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
+						li
+							button.btn.btn-warning
+								span.screenreader Delete
+
+				.flex-column.col-xs-12.col-md-4.pin__actions
+						h3 Actions
+						fieldset
+							label(for="exampleInputEmail1") Email
+							input#exampleInputEmail1(placeholder="Email", type="email")
+						button.btn.btn-secondary.email-button-icon(type="button") Send email
+						p #[a(href="#") Print references]
+						p #[a(href="#") Clear reference list]
+				
+
+
 
 					
 	div
