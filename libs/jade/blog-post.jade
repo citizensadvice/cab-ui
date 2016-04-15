@@ -58,37 +58,36 @@ block content
 			a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
-		.comments
-			.comments-single
+		.comment
+			.comment-single
 				div(style="clear:both;")
 					h3.col-xs-8(style="width: 60%; display: inline-block;") Domenico Perri
 					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam.
-			.comments-single.reply
+			.comment-single.reply
 				div(style="clear:both;")
 					h3.col-xs-8(style="width: 60%; display: inline-block;") Eliot Hill
 					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
 				p Lorem ipsum dolor.
-			.comments-single
+			.comment-single
 				div(style="clear:both;")
 					h3.col-xs-8(style="width: 60%; display: inline-block;") Paul Chanthapanya
 					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted yesterday. #[a Reply]
 				p In sit amet massa semper, ultricies nulla at, vestibulum nulla. Nulla id arcu quis odio molestie porttitor et id lacus. In fermentum aliquet libero eget rutrum.
 
-		.well(style="background-color:#fff;")
+		.well
+			h2 Add your comment
 			fieldset
-				h2(style="margin-top:.2rem;") Add your comments
-
 				label(for="name") Your name
 				.search-results__field(style="width:100%; margin-bottom: 10px;")
-					input(type="email", placeholder="email", value="Name")
+					input(type="text", placeholder="Your name")
 
 				label(for="email") Your email
 				.search-results__field(style="width:100%;")
-					input(type="email", placeholder="email", value="Email")
+					input(type="email", placeholder="Your email")
 
 			fieldset
-				label(for="exampleTextarea") Your comments
+				label(for="exampleTextarea") Your comment
 				textarea#exampleTextarea(rows="3", style="width:100%; margin-bottom: 10px;")
 
 				button.btn.btn-secondary.right-button-icon Submit
