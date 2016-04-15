@@ -1,46 +1,48 @@
 .savebar {
-	margin-left: 0;
+	margin: 0;
 	left: 0;
 	position: fixed;
 	bottom: -(1rem + (@box-spacing-vertical * 2) + 4px);
 	background: @yellow-lighter;
-	border: 2px solid @yellow-light;
-	border-width: 2px 0 0 0;
+	border: solid @yellow-light;
+	border-width: 2px 2px 0 0;
 	z-index: 1;
 	cursor: pointer;
-	color: @black;
 	transition: .5s;
-	border-radius: 0 2px 0 0;
+	border-radius: 0 @form-border-radius 0 0;
 	overflow: hidden;
-	.alert, .button {
+	@media (min-width: 600px) and (max-width: 750px), (min-width: 1100px)  {
+		margin-left: -1rem;
+		left: auto;
+		border-radius: @form-border-radius @form-border-radius 0 0;
+		border-width: 2px 2px 0 2px;
+	}
+	.alert,
+	.button {
 		display: inline-block;
 	}
 	.alert {
-		padding: 1rem;
-	}
-	.alert:before {
-		.icon;
-		content: @i-star;
-		padding-right: .25rem;
-		color: @yellow;
+		padding: 0 1rem;
+		&:before {
+			.icon;
+			content: @i-star;
+			padding-right: .5rem;
+			color: @yellow;
+		}
 	}
 	.button {
 		.btn-icon(@i-external-link);
 	}
-	&:hover .button {
-		background-color: darken(@aqua, 10%);
-	}
-
-	@media (min-width: 600px) and (max-width: 750px), (min-width: 1100px)  {
-		margin-left: -1rem;
-		left: auto;
-		width: auto;
-		border-radius: @form-border-radius @form-border-radius 0 0;
-		border-width: 2px 2px 0 2px;
-	}
-	&.showMe {
+	&.show {
 		bottom: 0;
 	}
+	/* Show this if bar is wrapped in a
+	a,
+	a:hover,
+	a:visited {
+		background: none;
+		border: none;
+	}*/
 }
 
 .save {
@@ -60,13 +62,12 @@
 	&:hover:after {
 		content: @i-star-o;
 	}
-	&.saved:after {
-		color: @yellow;
-		content: @i-star;
+	&.saved {
+		background-color: @yellow-lighter;
+		outline: 1rem/3 solid @yellow-lighter;
+		&:after {
+			color: @yellow;
+			content: @i-star;
+		}
 	}
-}
-
-.saved {
-	background-color: @yellow-lighter;
-	outline: 1rem/3 solid @yellow-lighter;
 }

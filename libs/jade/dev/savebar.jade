@@ -21,21 +21,21 @@ block script
 
 			$( ".save" ).on( "click", function() {
 				$( this ).toggleClass( "saved" );
-
 				// Show the savebar
-				$( ".savebar" ).addClass("showMe");
+				$( ".savebar" ).addClass("show");
 
 				// Checks if there are any .saved classes on the page.
 				// If not hide the savebar.
 				if ( $( ".saved" ).length ) {
 					$( ".savebar span.count" ).html( $( ".saved" ).length );
+					// Show/hide 's' in 'items' depending on count.
 					if ( $( ".saved" ).length > 1 ) {
-						$( ".counts" ).show();
+						$( ".count-s" ).show();
 					} else {
-						$( ".counts" ).hide();
+						$( ".count-s" ).hide();
 					}
 				} else {
-					$( ".savebar" ).removeClass("showMe");
+					$( ".savebar" ).removeClass("show");
 				}
 			});
 		});
@@ -43,7 +43,7 @@ block script
 block content
 	#pinmockup.articleContent(style="position: relative;")
 		.savebar
-			.alert You have #[span.count] saved item#[span.counts(style="display: none;") s]
+			.alert #[span.count] saved item#[span.count-s(style="display: none;") s]
 			.button View&nbsp;
 
 		// DUMMY TEXT FOR DAYZ!
