@@ -17,17 +17,19 @@ block sidebar
 block script
 	script.
 		$(document).ready(function() {
-			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>");
+			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'>Save<span class='d' style='display:none;'>d</span></span>");
 
-			$( ".save" ).on( "click", function() {
+			$( ".save-button" ).on( "click", function() {
 				$( this ).toggleClass( "saved" );
+				$( this ).prev().toggleClass( "saved" );
+				$( this ).find(".d").toggle();
 				// Show the savebar
 				$( ".savebar" ).addClass("show");
 
 				// Checks if there are any .saved classes on the page.
 				// If not hide the savebar.
 				if ( $( ".saved" ).length ) {
-					$( ".savebar span.count" ).html( $( ".saved" ).length );
+					$( ".savebar span.count" ).html( $( ".saved" ).length / 2 );
 					// Show/hide 's' in 'items' depending on count.
 					if ( $( ".saved" ).length > 1 ) {
 						$( ".count-s" ).show();
