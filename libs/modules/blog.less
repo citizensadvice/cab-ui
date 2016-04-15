@@ -2,47 +2,55 @@
  * Blog visual
  */
 
-.team {
-	//padding: 1rem;
-	text-align: center;
-}
-.articleContent .avatar-full img {
-	border-radius: 50%;
-	//box-shadow: 0 2px 0 0 #eee,0 1px 3px 0 #eee;
-	//margin: .5rem;
-	width: 100%;
-	max-width: 200px;
-	border: 2px solid @heritage-yellow;
-	display: inline-block;
-}
-.articleContent .avatar-left img {
-	border-radius: 50%;
-	margin: 0 1rem .75rem 0;
-	//box-shadow: 0 2px 0 0 #eee,0 1px 3px 0 #eee;
-	//margin: .5rem;
-	width: 100%;
-	max-width: 200px;
-	float: right;
-	clear: left;
-	border: 2px solid @heritage-yellow;
+// Global elements
+.side-nav-beta,
+.section-nav {
+	order: 0 !important;
 }
 
-.avatar-title {
-	h3 {
-		margin-bottom: 0;
+.small {
+	font-size: 0.875rem;
+}
+
+.blog-tag {
+	font-weight: 700;
+	line-height: 1rem;
+	display: inline-block;
+	padding: .5rem;
+	color: @heritage-blue;
+	background-color: @heritage-yellow-lighter;
+}
+
+// Sidebar
+.blog-sidebar--search {
+	border-top: 8px @heritage-yellow solid;
+	//margin-top: 2rem;
+	padding-top:.75rem;
+	margin-bottom: 2rem;
+	fieldset {
+		margin: 0;
+		button {
+			margin: 0;
+		}
 	}
 }
-.styleguide--header--content {
-	overflow: auto;
-}
-.styleguide--header--content-nav a:visited {
-	color: white;
-}
-.digital-blog-background {
-	background-color: #e2e2e2 !important;
+
+.blog-sidebar--category {
+	.well;
+	background-color: #fee4c3;
+	border: 0px #dfdfdf solid;
+	margin-top:0;
+	margin-bottom:2rem;
 }
 
- .title__subheading--blog {
+.blog-sidebar--updates {
+	.cards;
+	color: #fff;
+	background-color: #32457E;
+}
+
+// Homepage
+.title__subheading--blog {
 	//margin-bottom: 2rem;
 	//margin-top: .8rem;
 	padding: 1rem 0;
@@ -57,21 +65,85 @@
 		border-bottom: none;
 	}
 }
-.blog-tag {
-	position: relative;
-	top: 0;
-	font-weight: 700;
-	line-height: 1em;
-	margin: 0;
-	display: inline-block;
-	padding: .5rem;
-	color: @heritage-blue;
-	background-color: #fee4c3;
-	&:before {
-		font-family: 'open_sans', 'brand';
-		font-size: .85rem;
-		//content: "\e939\00a0\00a0 ";
+
+.blog-column-excerpt {
+	//padding: 1rem 1em 1rem 0;
+	//border-bottom: 1px solid #eee;
+	//margin: 0 .5rem;
+	h2, h3 {
+		margin-top: 0;
+		a {
+			margin-top: 0;
+			color: #004b88;
+			text-decoration: none;
+			border-bottom: none;
+		}
 	}
+}
+
+// Articles
+.articleContent .avatar-full img {
+	border-radius: 50%;
+	width: 100%;
+	max-width: 200px;
+	border: 2px solid @heritage-yellow;
+	display: inline-block;
+}
+
+.articleContent .avatar-left img {
+	border-radius: 50%;
+	margin: 0 1rem .75rem 0;
+	width: 100%;
+	max-width: 200px;
+	float: right;
+	clear: left;
+	border: 2px solid @heritage-yellow;
+}
+
+// Comments
+.comment {
+	.comment-single {
+		border-top: 1px solid @gray-7;
+		padding: @box-spacing-vertical*2 0;
+		h3 {
+			margin-top: 0;
+		}
+		& >:last-child {
+			margin-bottom: 0;
+		}
+		&.reply {
+			margin-left: 3rem;
+			h3 {
+				margin-top: 0;
+			}
+		}
+	}
+	& >:first-child {
+		border-top: none;
+	}
+}
+
+// Pages
+.team {
+	//padding: 1rem;
+	text-align: center;
+}
+
+.avatar-title {
+	h3 {
+		margin-bottom: 0;
+	}
+}
+
+//
+/* Styles that aren't being used */
+//
+
+.styleguide--header--content {
+	overflow: auto;
+}
+.styleguide--header--content-nav a:visited {
+	color: white;
 }
 
 .styleguide--header--content-nav {
@@ -112,20 +184,12 @@
 		}
 	}
 }
-.blog-column-excerpt {
-	//padding: 1rem 1em 1rem 0;
-	//border-bottom: 1px solid #eee;
-	//margin: 0 .5rem;
-	h2, h3 {
-		margin-top: 0;
-		a {
-			margin-top: 0;
-			color: #004b88;
-			text-decoration: none;
-			border-bottom: none;
-		}
-	}
-}
+
+/*.digital-blog-background {
+	background-color: #e2e2e2 !important;
+}*/
+
+/* The html using these styles is commented out
 .blog-panel-intro {
 	max-width: 1040px;
 	margin: auto;
@@ -152,18 +216,18 @@
 		transform: translateY(-50%);
 		right:-12%;
 	}
-}
+} */
 
-.small {
-	font-size: 0.875rem;
-}
+/* This isn't being used anywhere
+.btn-yellow {
+		border: 1px solid @white !important;
+	.btn(
+		@btn-background: @heritage-yellow,
+		@btn-background-hover: @heritage-yellow-darker
+	);
+} */
 
-/**
-
-Include updated nav
-
-**/
-#main-nav-1--branding {
+/*#main-nav-1--branding {
 	background-color: @heritage-blue;
 	.content {
 		max-width: @breakpoint-lg;
@@ -392,34 +456,4 @@ Include updated nav
 			}
 		}
 	}
-}
-
-.btn-yellow {
-		border: 1px solid @white !important;
-	.btn(
-		@btn-background: @heritage-yellow,
-		@btn-background-hover: @heritage-yellow-darker
-	);
-}
-
-.comments {
-	.comments-single {
-		border-top: 1px solid @gray-7;
-		padding: @box-spacing-vertical*2 0;
-		h3 {
-			margin-top: 0;
-		}
-		& >:last-child {
-			margin-bottom: 0;
-		}
-		&.reply {
-			margin-left: 3rem;
-			h3 {
-				margin-top: 0;
-			}
-		}
-	}
-	& >:first-child {
-		border-top: none;
-	}
-}
+}*/
