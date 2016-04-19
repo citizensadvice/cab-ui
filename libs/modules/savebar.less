@@ -93,3 +93,56 @@ h3:hover .save-button,
 h4:hover .save-button {
 	display: inline-block;
 }
+
+/* Email specific features for the visual */
+.email-width {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.email-header {
+	background-color: @heritage-blue-lightest;
+}
+.email-links {
+    margin: @box-spacing-vertical 0;
+    padding: @box-spacing-vertical;
+    background-color: @aqua-light;
+    color: @heritage-blue;
+    border: 1px solid @aqua;
+    font-size: @font-size-base;
+    font-weight: @font-weight-bolder;
+    display: block;
+    .btn-icon(@i-right,@color:@heritage-blue);
+    &-breadcrumb  {
+    	font-weight: @font-weight-base;
+    	font-size: @font-size-small;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        text-decoration: none;
+        border: none;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bolder;
+        margin: .25rem 0 0 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken(@aqua-light, 10%);
+        border: 1px solid @aqua;
+    }
+
+    &:visited {
+        border: 1px solid @aqua;
+    }
+
+    // Changing the blocklink icon
+    &.i-doc-image {
+        .btn-icon(@i-doc-image,@color:@heritage-blue);
+    }
+
+    &.i-search {
+        .btn-icon(@i-search,@color:@heritage-blue);
+    }
+}
