@@ -1,0 +1,52 @@
+block settings
+	- var title = "Your personalised content"
+	- var dir = "../../"
+
+extends /template/email-template.jade
+
+block content
+	.articleContent
+		.flex-container
+			.flex-row
+				.form.col-xs-12.col-md-8
+					h2(style="margin-top:0;") Your saved advice
+					p The below advice has been sent to #[a(href="#") youremail@domain.name] from FirstName SurName. You can click directly on the links to take you back to the advice on the website.
+
+					.email-links
+						.email-links-breadcrumb
+							| Sick or disabled people and carers  >  PIP
+						h2 Applying for ESA
+
+					.email-links
+						.email-links-breadcrumb
+							| Sick or disabled people and carers  >  PIP
+						h2 Applying for ESA
+
+					.email-links
+						.email-links-breadcrumb
+							| Sick or disabled people and carers  >  PIP
+						h2 Applying for ESA
+
+
+					.callout--related
+						h3 More Help
+						p If you have any questions or need help, contact our Benefits helpline 020 0000 0000. Calls are charged at local rates
+
+				.form.col-xs-12.col-md-4
+					.cards(style="color:#004b88; background-color:#fcbb69;")
+						.card-banner-top
+							p(style="color:#004b88;") Campaigns
+						.card-image-top
+							img(src="#{dir}images/pen_heritageblue_RGB.svg" alt="Pen")
+						.card-text
+							p Support our campaign to tell Government to make ESA #fitforwork.
+							button.btn.btn-primary.right-button-icon(type="button" style="background-color:#004b88; border-color:#004b88; color:#fff;") Continue
+
+//					.cards(style="color:#fff; background-color:#32457E;")
+						.card-banner-top
+							p(style="color:#fff;") Policy
+						.card-image-top
+							img(src="#{dir}images/laptop-branding.png" alt="Laptop")
+						.card-text
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+							button.btn.btn-primary.right-button-icon(type="button" style="background-color:#FFBF47; border-color:#FFBF47;") Continue
