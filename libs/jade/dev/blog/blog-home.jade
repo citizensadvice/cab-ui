@@ -2,11 +2,10 @@ block settings
 	//- var title = "Citizens Advice digital blog"
 	- var sidebar = true
 	- var toolbars = false
-	//- var cookiemonster = true
-	- var mockup = false
+	- var blog = true
 	- var dir = "../../"
 
-extends /template/template-blog.jade
+extends /template/template.jade
 
 //block breadcrumbs
 	+breadcrumbs([
@@ -14,6 +13,15 @@ extends /template/template-blog.jade
 
 block sidebar
 	include /template/sidebar-blog.jade
+
+block script
+	script.
+		$(document).ready(function() {
+			$( "#toggle" ).on( "click", function() {
+				console.log('lol');
+				$( this ).next().slideToggle();
+			});
+		});
 
 block content
 	.articleContent

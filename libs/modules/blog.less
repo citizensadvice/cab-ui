@@ -3,8 +3,7 @@
  */
 
 // Global elements
-.side-nav-beta,
-.section-nav {
+.blog-sidebar {
 	order: 0 !important;
 }
 
@@ -138,24 +137,48 @@
 	}
 }
 
-//
-/* Styles that aren't being used */
-//
-
-.styleguide--header--content {
-	overflow: auto;
+// Header
+.blog-header {
+    background-color: @heritage-blue;
+    &--content {
+        max-width: @breakpoint-lg;
+        margin: 0 auto;
+        overflow: auto;
+        img {
+            display: inline-block;
+            width: 220px;
+            padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
+        }
+        a:hover,
+        a:focus,
+		a:visited {
+            background: none;
+        }
+    }
+    #toggle {
+    	display: inline-block;
+    	float: right;
+    	padding: 1.5rem 1rem;
+    	cursor: pointer;
+    	@media screen and (min-width: 751px) {
+    		display: none;
+    	}
+    	&:after {
+    		.icon;
+    		color: @white;
+    		content: @i-menu;
+    	}
+    }
 }
-.styleguide--header--content-nav a:visited {
-	color: white;
-}
 
-.styleguide--header--content-nav {
-	float: right;
-	text-align: right;
-	padding: 1.5rem 1rem;
-	display: inline-block;
-	@media screen and (max-width: @screen-xs-max) {
-		display: none;
+.blog-navigation {
+	padding: 0 0 .5rem 1rem;
+	list-style: none;
+	margin: 0;
+	padding-top: 0;
+	display: none;
+	li a {
+		padding: 0;
 	}
 	a {
 		padding: 1rem;
@@ -163,30 +186,29 @@
 		border-bottom: none;
 		font-weight: 600;
 		color: white;
-		&:hover, &:active {
-			color: @heritage-blue;
+		&:hover,
+		&:active,
+		&:visited  {
+			color: @white;
 			border-bottom: none;
 		}
 	}
-	&--1 {
-		float: right;
-		text-align: right;
-		width: 500px;
+	@media screen and (min-width: 751px) {
 		padding: 1.5rem 1rem;
 		display: inline-block;
-		a {
-			padding: 1rem;
-			text-decoration: none;
-			border-bottom: none;
-			font-weight: 600;
-			color: @heritage-blue;
-			&:hover {
-				color: @blue;
-				border-bottom: none;
+		float: right;
+		li {
+			display: inline;
+			a {
+				padding: 0 1rem;
 			}
 		}
 	}
 }
+
+//
+/* Styles that aren't being used */
+//
 
 /*.digital-blog-background {
 	background-color: #e2e2e2 !important;

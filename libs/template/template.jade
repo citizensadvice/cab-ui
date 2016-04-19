@@ -121,6 +121,23 @@ html.no-js
 						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/#{dir}images/logos/ca-logo_100px.svg.png&#39;;", src="#{dir}images/ca-logo_100px.svg")
 					img.print-only.logo(src="#{dir}images/ca-logo-hz-280px.svg")
 
+		else if blog
+			header.blog-header
+				.blog-header--content
+					a(href="blog-home.html", style="border: none;")
+						img(src="#{dir}images/ca-logo-hz-white-280px.svg")
+
+					#toggle
+					ul.blog-navigation
+						li
+							a(href="blog-team.html") The Team
+						li
+							a(href="#") About
+						li
+							a(href="blog-get-involved.html") Get involved
+						li
+							a(href="#") Jobs
+
 		else
 			header.styleguide--header
 				.styleguide--header--content
@@ -205,6 +222,42 @@ html.no-js
 								| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
 								br
 								| Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+			else if blog
+				#footer.main-footer(data-track-zone="footer")
+					.footer-content.flex-row
+						.flex-column.col-xs-12.col-md-9
+							h3 Digital Blog
+							.flex-row(style="padding: 0;")
+								.col-xs-12.col-sm-4
+									ul
+										li #[a(href="#") The Team]
+										li #[a(href="#") About]
+
+								.col-xs-12.col-sm-4
+									ul
+										li #[a(href="#") Get Involved]
+										li #[a(href="#") Jobs]
+
+								.col-xs-12.col-sm-4
+									ul
+										li #[a(href="#") Content style guide]
+										li #[a(href="#") UI design guide]
+
+						.flex-column.col-xs-12.col-md-3
+							h3 Information
+							ul
+								li #[a(href="#") Terms and conditions]
+								li #[a(href="#") Privacy and cookies]
+
+					.footer--legal
+						.footer--legal--content
+							img(alt="", src="#{dir}images/ca_wo-logo-100px.svg")
+							p
+								| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
+								br
+								| Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
 			else
 				#footer.main-footer(data-track-zone="footer")
 					.main-footer__content.flex-row.js-equal-height

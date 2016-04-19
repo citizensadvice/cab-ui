@@ -940,9 +940,13 @@ div.tooltip:before {
             max-width: @breakpoint-lg;
             margin: 0 auto;
             img {
+                display: inline-block;
                 width: 220px;
                 padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
-                display: block;
+            }
+            a:hover,
+            a:focus {
+                background: none;
             }
         }
         .mockup &--content img {
