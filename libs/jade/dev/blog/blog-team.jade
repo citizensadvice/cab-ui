@@ -15,6 +15,15 @@ extends /template/template.jade
 block sidebar
 	include /template/sidebar-blog.jade
 
+block script
+	script.
+		$(document).ready(function() {
+			$( "#toggle" ).on( "click", function() {
+				console.log('lol');
+				$( this ).next().slideToggle();
+			});
+		});
+
 block content
 	.articleContent
 		.flex-container
