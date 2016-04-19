@@ -18,59 +18,48 @@ block sidebar
 block content
 	.overlay
 		.pin__modal
-			.flex-row
-				.flex-column.col-xs-12.col-md-8.pin__content
-					h3 References
+			.pin__actions
+				h2 Your saved advice
+				.tab-group
+					.tab
+						input(type="radio" id="one" name="tab-group" checked)
+						label(for="one") References
+						.content
+							button.btn-secondary.btn-small(type="button") Print all
+							button.btn-warning.btn-small(type="button" style="float:right;") Clear all
 
-					section.revealable
-						h3 Unstyled content inside header
-						p Lorem ipsum.
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
 
-					ul.pin__list
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
-							p
-								a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
-						li.removed
-							button.btn.btn-primary
-								span.screenreader Undo
-							p
-								a(href="#") Claim compensation if your flight's delayed or cancelled (EWSNI) § If your flight’s delayed for 3 or more hours
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
-							p
-								a(href="#") Basic rights at work (EWSNI)
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
-							p
-								a(href="#") Basic rights at work (EWSNI) § The right to ask for flexible working
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
-							p
-								a(href="#") Basic rights at work (EWSNI) § Health and safety
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
-							p
-								a(href="#") Get airline compensation for lost or delayed luggage (EWSNI) § What you could get from the airline
-						li
-							button.btn.btn-warning
-								span.screenreader Delete
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
 
-				.flex-column.col-xs-12.col-md-4.pin__actions
-						h3 Actions
-						fieldset
-							label(for="exampleInputEmail1") Email
-							input#exampleInputEmail1(placeholder="Email", type="email")
-						button.btn.btn-secondary.email-button-icon(type="button") Send email
-						p #[a(href="#") Print references]
-						p #[a(href="#") Clear reference list]
-				
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
 
+
+					.tab
+						input(type="radio" id="two" name="tab-group")
+						label(for="two") Email
+						.content
+							div
+								p Send your saved references to yours, a friend or family members email address
+								fieldset
+									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your name
+									span.form-hint The name of the person referring this witness to the Witness Service
+									input(id="standardField" placeholder="" type="text")
+
+								fieldset
+									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your email address
+									input(id="standardField" placeholder="" type="email")
+
+								button.btn-secondary.email-button-icon(type="button") Email
 
 
 					

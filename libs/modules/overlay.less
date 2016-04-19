@@ -161,6 +161,7 @@ see - ./dev/reference-action.html
 .pin__modal {
 	/* The position, display and transform are used for feature tests in the script.  Things might break if these are changed */
 	position: fixed;
+	padding: 1rem;
 	/* See https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ */
 	top: 50%;
 	left: 50%;
@@ -193,6 +194,11 @@ see - ./dev/reference-action.html
 	-webkit-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.75);
+
+	h2 {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+	}
 }
 
 .pin__actions {
@@ -200,12 +206,12 @@ see - ./dev/reference-action.html
 	display: block;
 	z-index: 1;
 	height: 100%;
-	width: 30%;
+	width: 100%;
 	bottom: 0;
 	right: 0;
 	margin: 0;
 	padding: 0 @box-spacing-horizontal;
-	background-color: @green-lighter;
+	background-color: @heritage-blue-lightest;
 	border-radius: 0;
 	-webkit-transition: opacity 0.6s;
 	-moz-transition: opacity 0.6s;
