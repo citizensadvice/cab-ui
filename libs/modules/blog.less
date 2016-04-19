@@ -143,9 +143,9 @@
     &--content {
         max-width: @breakpoint-lg;
         margin: 0 auto;
-        overflow: auto;
+        position: relative;
         img {
-            display: inline-block;
+            display: block;
             width: 220px;
             padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
         }
@@ -194,13 +194,15 @@
 		}
 	}
 	@media screen and (min-width: 751px) {
-		padding: 1.5rem 1rem;
-		display: inline-block;
-		float: right;
+		padding: 0;
+		display: inline-block !important;
+		right: 0;
+		.vertical-align(absolute);
 		li {
 			display: inline;
 			a {
-				padding: 0 1rem;
+				padding: 1rem;
+				display: inline-block;
 			}
 		}
 	}
