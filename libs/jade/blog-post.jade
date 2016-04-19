@@ -1,5 +1,5 @@
 block settings
-	- var title = "Citizens Advice digital blog"
+	- var title = "Working with advisers to design new PIP content"
 	- var sidebar = true
 	- var toolbars = false
 	//- var cookiemonster = true
@@ -17,39 +17,34 @@ block sidebar
 
 block content
 	.articleContent
-		div
-			h1(style="margin-top:0.2rem;") Working with advisers to design new PIP content
+		block toolbars
+			include ../template/toolbar-blog.jade
 
-			//p.small #[a(href="#") Stephen Rehill] on January 18, 2016 in #[a(href="#") Content], #[a(href="#") Design]
+		p Content is only as good as the advice that sits behind it. The values inherent in that advice come from an understanding of our audience – their goals and their problems. By designing content that focuses on these things we can create something original and valuable that users will engage with and understand.
 
-			block toolbars
-				include ../template/toolbar-blog.jade
+		p Working with advisers is an an essential part of our content design process.
 
-			p Content is only as good as the advice that sits behind it. The values inherent in that advice come from an understanding of our audience – their goals and their problems. By designing content that focuses on these things we can create something original and valuable that users will engage with and understand.
+		p How we involved advisers
 
-			p Working with advisers is an an essential part of our content design process.
+		p Here’s an outline of just some of the ways advisers have been helping us design content for people looking for help to fill out their Personal Independence Payment (PIP) claim form.
 
-			p How we involved advisers
+		ol
+			li We sat down with advisers in their local Citizens Advice and, armed with little more than a copy of the claim form and some post-it notes, listened to what advisers had to say, This helped us identify user problems (there were lots).
 
-			p Here’s an outline of just some of the ways advisers have been helping us design content for people looking for help to fill out their Personal Independence Payment (PIP) claim form.
+			li We got a group of advisers together in a workshop and delved more deeply into the problems identified. This helped us validate and understand those problems.
 
-			ol
-				li We sat down with advisers in their local Citizens Advice and, armed with little more than a copy of the claim form and some post-it notes, listened to what advisers had to say, This helped us identify user problems (there were lots).
+			li We came up with different ways to help users fill in their claim form and tested it with the our database of 500 or so advisers. This helped us rethink our approach and prioritise the problems we could solve.
 
-				li We got a group of advisers together in a workshop and delved more deeply into the problems identified. This helped us validate and understand those problems.
+			li We sent advisers an early version of the advice we’d designed and asked them to feed back their thoughts (the good, the bad and the ugly – it’s all gold to us). This helped reassure us that the what we had scoped out resembled “good”.
 
-				li We came up with different ways to help users fill in their claim form and tested it with the our database of 500 or so advisers. This helped us rethink our approach and prioritise the problems we could solve.
+		p If someone can go to an adviser and get expert advice and help with their PIP claim form then they should also get that same value from our website.
 
-				li We sent advisers an early version of the advice we’d designed and asked them to feed back their thoughts (the good, the bad and the ugly – it’s all gold to us). This helped reassure us that the what we had scoped out resembled “good”.
+		p From 15 February people will be able to do just that. We’ll be publishing new content that focuses on the help people need and not the nuances and complications of the DWP claim form, assessment criteria and unhelpful guidance (all 70,000-plus jargon-filled words of it),
 
-			p If someone can go to an adviser and get expert advice and help with their PIP claim form then they should also get that same value from our website.
-
-			p From 15 February people will be able to do just that. We’ll be publishing new content that focuses on the help people need and not the nuances and complications of the DWP claim form, assessment criteria and unhelpful guidance (all 70,000-plus jargon-filled words of it),
-
-			.blog-tag
-				| Research
-			.blog-tag
-				| Content
+		.blog-tag
+			| Research
+		.blog-tag
+			| Content
 
 		.title__subheading--footer
 			p Share this page. #[a(#) Find out more about sharing.]
@@ -91,5 +86,3 @@ block content
 				textarea#exampleTextarea(rows="3", style="width:100%; margin-bottom: 10px;")
 
 				button.btn.btn-secondary.right-button-icon Submit
-
-		//.well(style="background-color: #f2f8ff; border: 0px #dfdfdf solid;")

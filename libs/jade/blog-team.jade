@@ -1,6 +1,6 @@
 block settings
 	- var title = "The Team"
-	- var sidebar = false
+	- var sidebar = true
 	- var toolbars = false
 	//- var cookiemonster = true
 	- var mockup = false
@@ -11,6 +11,7 @@ extends ../template/template-blog.jade
 	+breadcrumbs([
 		{title: "Home", href: "blog-home.html"},
 		{title: "The Team"}])
+
 block sidebar
 	include ../template/sidebar-blog.jade
 
@@ -19,7 +20,7 @@ block content
 		.flex-container
 			h2.col-xs-12 Management
 			.flex-row
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -27,7 +28,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -35,7 +36,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -43,7 +44,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -53,7 +54,7 @@ block content
 								p Manager
 			h2.col-xs-12 Content
 			.flex-row
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -61,7 +62,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -69,7 +70,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -77,7 +78,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -85,7 +86,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -93,7 +94,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -101,7 +102,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -109,7 +110,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -117,7 +118,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -125,7 +126,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -133,7 +134,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -143,7 +144,7 @@ block content
 								p Content Designer
 			h2.col-xs-12 Design
 			.flex-row
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
@@ -151,7 +152,7 @@ block content
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Designer
-				.col-xs-6.col-sm-4.col-md-3
+				.col-xs-6
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
