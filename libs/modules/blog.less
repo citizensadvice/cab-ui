@@ -145,9 +145,12 @@
         margin: 0 auto;
         position: relative;
         img {
-            display: block;
+            display: inline-block;
             width: 220px;
             padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
+    		@media screen and (min-width: 751px) {
+    			display: block;
+    		}
         }
         a:hover,
         a:focus,
