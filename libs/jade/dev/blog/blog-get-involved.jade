@@ -1,0 +1,63 @@
+block settings
+	- var title = "Get involved"
+	- var sidebar = true
+	- var toolbars = false
+	//- var cookiemonster = true
+	- var mockup = false
+	- var dir = "../../"
+
+extends /template/template-blog.jade
+
+//block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "blog-home.html"},
+		{title: "Get involved"}])
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.articleContent
+		p The digital team is redesigning our online content and building a new case management system for Citizens Advice based on user need.
+
+		p Starting with real user needs and understanding the tasks that people actually need to complete is key to our approach and there are lots of ways you can help.
+
+		h3 If you work in a local Citizens Advice
+
+		p We always need local staff and volunteers to test out our other ideas and prototypes and give us feedback, particularly those from local Citizens Advice we’ve not already worked with.
+
+		p Please email us with your name, role and location and we’ll add you to our mailing list for research and testing.
+
+		p Hundreds of staff and volunteers are already helping us with our research and testing. This map shows all the locations we’ve been working with and where we have gaps:
+
+		iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="600px", scrolling="no")
+
+		h3 If you get advice online, or might in future
+
+		p It’s really important that people who get advice from us online are involved in developing and testing the changes we’re making to our online advice.
+
+		p You can use the form below to sign up to help with future research and testing. We will regularly send out short tasks to complete online. All activities are completely optional and you can unsubscribe completely at any time using the link at the bottom of our emails.
+
+		.well--outline
+			h2 Sign up here
+			p If you would like to test any of the new or future research, content and design
+
+			fieldset
+				label(for="name") Your name
+				.search-results__field
+					input(type="email", placeholder="email", value="Name")
+
+			fieldset
+				label(for="email") Your email
+				.search-results__field
+					input(type="email", placeholder="email", value="Email")
+
+			button.btn.btn-secondary.right-button-icon Submit
+
+
+		.title__subheading--footer
+			p Share this page. #[a(#) Find out more about sharing.]
+			a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
+			a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
+			a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
+			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
