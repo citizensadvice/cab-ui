@@ -1,0 +1,32 @@
+- var section = "Brand"
+    .side-nav-beta
+        .blog-sidebar--search
+            fieldset
+                .search-results__field.field-group.field-group--buttons
+                    input(type="search", placeholder="Search", style="border: 1px solid #ccc;")
+                    button.btn.btn-primary(style="background-color:#fcbb69;border: 1px solid #fcbb69;")
+                        i.icon-search
+
+        .blog-sidebar--category
+            fieldset
+                label(for="exampleSelect1") Select Category
+                .dropdown
+                    select(id="exampleSelect1")
+                        option All categories
+                        option Content
+                        option Design
+                        option Casebook
+                        option Research
+
+        .blog-sidebar--updates
+            .card-banner-top
+                p(style="color:#fff;") Get updates of new blogs here
+            .card-text
+                p If you would like to test any of the new future research and testing you can sign up on the #[a(href="#" style="color:#FCBB69;") Get Involved page].
+                fieldset
+                    label(for="name") Your name
+                    input(type="Email", placeholder="Name")
+                fieldset
+                    label(for="email") Your email
+                    input(type="Email", placeholder="Email")
+                button.btn.btn-primary.tick-button-icon Submit
