@@ -146,3 +146,54 @@ h4:hover .save-button {
         .btn-icon(@i-search,@color:@heritage-blue);
     }
 }
+
+
+/* Tabs */
+
+.tab-group {
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+.tab  {
+  float: left;
+  width: 20%;
+}
+
+.tab label {
+  background: @gray-7;
+  padding: 20px;
+  position: relative;
+  top: 20px;
+  border-top: 4px solid @gray-7;
+}
+
+.tab .content {
+  position: absolute;
+  top: 88px;
+  left: 0px;
+  background: @white;
+  overflow-y: scroll;
+  width: 99%;
+  padding: 15px;
+}
+
+.tab [type=radio]:checked ~ label {
+  background: @white;
+  border-top: 4px solid @heritage-yellow;
+  z-index: 2;
+  visibility: visible;
+}
+
+.tab [type=radio]:not(:checked) ~ label ~ .content {
+    display: none;
+}
+
+.tab [type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+
+input[type=radio] {
+  display: none;
+}
