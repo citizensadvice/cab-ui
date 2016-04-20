@@ -8,7 +8,7 @@
     "build": "gulp build",
     "server": "http-server public"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.1.1",
     "cssnano": "^3.3.2",
