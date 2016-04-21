@@ -111,8 +111,9 @@ Gradually, the LESS files will need to fit into a new folder structure.
 	   ├─ modules				all website page elements, such as breadcrumbs
 	   └─ assets				all images and fonts required by the CSS
 
+## Commit and patch messages
 
+* Make sure every commit message has a title/summary line, with an explanation on another line beneath
+* Always prepend the commit title with either `fix:`, `change:`, `add:` or `dev:`, depending on what the content of the commit is
 
-
-
-
+Patch messages should follow this same format, with a summary of changes under each of the four headings above.
