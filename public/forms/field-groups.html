@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Field groups
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../images/favicon/32.png" rel="shortcut icon">
+    <link href="../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="styleguide--header">
+      <div class="styleguide--header--content"><a href="index.html"><img src="../images/ca-logo-hz-white-280px.svg"></a></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../index.html#Forms" title="Forms">Forms</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Field groups</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Field groups</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <p>Often 2 fields can be linked to the same question. This may be because the question has multiple answers, or the question can be answered in different ways - for example daily/weekly/monthly.</p>
+              <p>Combined form fields allows the user to easily answer the multiple parts of the question at the same time, in a way that looks simple and logical.</p>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with dropdown</label>
+                  <div class="field-group field-group--dropdown">
+                    <input id="field" type="number">
+                    <div class="dropdown">
+                      <select id="exampleSelect1">
+                        <option>Daily</option>
+                        <option>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with dropdown&lt;/label&gt;
+	&lt;div class="field-group field-group--dropdown"&gt;
+		&lt;input id="field" type="number"&gt;
+		&lt;div class="dropdown"&gt;
+			&lt;select id="exampleSelect1"&gt;
+				&lt;option&gt;Daily&lt;/option&gt;
+				&lt;option&gt;Monthly&lt;/option&gt;
+				&lt;option&gt;Yearly&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with button</label>
+                  <div class="field-group field-group--buttons">
+                    <input id="field" type="search">
+                    <button class="btn">Search</button>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with button&lt;/label&gt;
+	&lt;div class="field-group field-group--buttons"&gt;
+		&lt;input id="field" type="text"&gt;
+		&lt;button class="btn"&gt;Search&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with checkbox buttons</label>
+                  <div class="field-group field-group--toggle">
+                    <input id="field" type="number">
+                    <label class="checkbox checkbox--inline">
+                      <input checked name="checkbox-inline" type="checkbox" value="option1">Week
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                      <input name="checkbox-inline" type="checkbox" value="option2">Month
+                    </label>
+                    <label class="checkbox checkbox--inline">
+                      <input name="checkbox-inline" type="checkbox" value="option3">Year
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with checkbox buttons&lt;/label&gt;
+	&lt;div class="field-group field-group--toggle"&gt;
+		&lt;input id="field" type="number"&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input checked="" name="checkbox-inline" type="checkbox" value="option1"&gt;Week
+		&lt;/label&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input name="checkbox-inline" type="checkbox" value="option2"&gt;Month
+		&lt;/label&gt;
+		&lt;label class="checkbox checkbox--inline"&gt;
+			&lt;input name="checkbox-inline" type="checkbox" value="option3"&gt;Year
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <div class="example-box-plain">
+                <fieldset>
+                  <label for="field">Field group with radio buttons</label>
+                  <div class="field-group field-group--toggle">
+                    <input id="field" type="number">
+                    <label class="radio radio--inline">
+                      <input checked name="radio-inline" type="radio" value="option1">Week
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option2">Month
+                    </label>
+                    <label class="radio radio--inline">
+                      <input name="radio-inline" type="radio" value="option3">Year
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <pre><code class="language-html">&lt;fieldset&gt;
+	&lt;label for="field"&gt;Field group with radio buttons&lt;/label&gt;
+	&lt;div class="field-group field-group--toggle"&gt;
+		&lt;input id="field" type="number"&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input checked="" name="radio-inline" type="radio" value="option1"&gt;Week
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option2"&gt;Month
+		&lt;/label&gt;
+		&lt;label class="radio radio--inline"&gt;
+			&lt;input name="radio-inline" type="radio" value="option3"&gt;Year
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+              <h2>Date field</h2>
+              <p>In date fields the question and field type need to be repeated in the first label, using the <span class="code">screenreader</span> class.</p>
+              <div class="example-box-plain">
+                <div class="form-group-date">
+                  <legend>When did you buy your car?</legend>
+                  <fieldset>
+                    <label for="dob-day"><span class="screenreader">When did you buy your car? Date field,</span>Day</label>
+                    <input id="dob-day" max="31" min="1" placeholder="DD" type="number">
+                  </fieldset>
+                  <fieldset>
+                    <label for="dob-month">Month</label>
+                    <input id="dob-month" max="12" min="1" placeholder="MM" type="number">
+                  </fieldset>
+                  <fieldset>
+                    <label for="dob-year">Year</label>
+                    <input id="dob-year" max="2100" placeholder="YYYY" type="number">
+                  </fieldset>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="form-group-date"&gt;
+	&lt;legend&gt;When did you buy your car?</legend>
+	&lt;fieldset&gt;
+		&lt;!-- It's important to repeat the question and explain the field in the day label --&gt;
+		&lt;label for="dob-day"&gt;&lt;span class="screenreader"&gt;When did you buy your car? Date field, &lt;/span&gt;Day&lt;/label&gt;
+		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
+	&lt;/fieldset&gt;
+	&lt;fieldset&gt;
+		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
+		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
+	&lt;/fieldset&gt;
+	&lt;fieldset&gt;
+		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
+		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
+	&lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <nav class="section-nav">
+          <h2 class="section-nav__heading"><a>In this section</a></h2>
+          <ul>
+            <li><a href="../#Forms" class="section-nav__parent">Forms</a>
+              <ul>
+                <li><a href="buttons.html" title="Buttons">Buttons</a>
+                </li>
+                <li><a href="fields.html" title="Fields">Fields</a>
+                </li>
+                <li><a href="field-groups.html" title="Field groups">Field groups</a>
+                </li>
+                <li><a href="fields-conditional.html" title="Conditional fields">Conditional fields</a>
+                </li>
+                <li><a href="validation.html" title="Validation">Validation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="styleguide--footer">
+        <div>
+          <p><img alt="" height="100" src="../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../js/translate.js"></script>
+    <script src="../js/jquery.fn.cssSlide.js"></script>
+    <script src="../js/revealable.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../js/smooth.js"></script>
+    <script src="../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>

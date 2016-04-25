@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Icons
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../images/favicon/32.png" rel="shortcut icon">
+    <link href="../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="styleguide--header">
+      <div class="styleguide--header--content"><a href="index.html"><img src="../images/ca-logo-hz-white-280px.svg"></a></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../index.html#Styles" title="Styles">Styles</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Colours</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Icons</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <p>Icons are used for clarity and quick recognition of functions. It’ is important that these icons are used as CSS content on an element, and this can easily be done by using their variable in the LESS.</p>
+              <p>In the rare case that an icon is included as an element, it’s important to hide it screenreaders. This can be done using the <code class="code">aria-hidden="true"</code> attribute.</p>
+              <p>These icons are all included in an icon font called cab-icons.</p>
+              <table class="iconlist">
+                <thead>
+                  <tr>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Variable</th>
+                    <th>Unicode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="i-key">
+                    <td class="icon"></td>
+                    <td>key</td>
+                    <td class="variable">@i-key</td>
+                    <td class="unicode">\e900</td>
+                  </tr>
+                  <tr class="i-target">
+                    <td class="icon"></td>
+                    <td>target</td>
+                    <td class="variable">@i-target</td>
+                    <td class="unicode">\e605</td>
+                  </tr>
+                  <tr class="i-help">
+                    <td class="icon"></td>
+                    <td>help</td>
+                    <td class="variable">@i-help</td>
+                    <td class="unicode">\3f</td>
+                  </tr>
+                  <tr class="i-search">
+                    <td class="icon"></td>
+                    <td>search</td>
+                    <td class="variable">@i-search</td>
+                    <td class="unicode">\e600</td>
+                  </tr>
+                  <tr class="i-email">
+                    <td class="icon"></td>
+                    <td>email</td>
+                    <td class="variable">@i-email</td>
+                    <td class="unicode">\f003</td>
+                  </tr>
+                  <tr class="i-star">
+                    <td class="icon"></td>
+                    <td>star</td>
+                    <td class="variable">@i-star</td>
+                    <td class="unicode">\e602</td>
+                  </tr>
+                  <tr class="i-star-o">
+                    <td class="icon"></td>
+                    <td>star o</td>
+                    <td class="variable">@i-star-o</td>
+                    <td class="unicode">\f006</td>
+                  </tr>
+                  <tr class="i-tick">
+                    <td class="icon"></td>
+                    <td>tick</td>
+                    <td class="variable">@i-tick</td>
+                    <td class="unicode">\e601</td>
+                  </tr>
+                  <tr class="i-cross">
+                    <td class="icon"></td>
+                    <td>cross</td>
+                    <td class="variable">@i-cross</td>
+                    <td class="unicode">\e603</td>
+                  </tr>
+                  <tr class="i-bin">
+                    <td class="icon"></td>
+                    <td>bin</td>
+                    <td class="variable">@i-bin</td>
+                    <td class="unicode">\e607</td>
+                  </tr>
+                  <tr class="i-inbox">
+                    <td class="icon"></td>
+                    <td>inbox</td>
+                    <td class="variable">@i-inbox</td>
+                    <td class="unicode">\e618</td>
+                  </tr>
+                  <tr class="i-redo">
+                    <td class="icon"></td>
+                    <td>redo</td>
+                    <td class="variable">@i-redo</td>
+                    <td class="unicode">\f01e</td>
+                  </tr>
+                  <tr class="i-left">
+                    <td class="icon"></td>
+                    <td>left</td>
+                    <td class="variable">@i-left</td>
+                    <td class="unicode">\e604</td>
+                  </tr>
+                  <tr class="i-right">
+                    <td class="icon"></td>
+                    <td>right</td>
+                    <td class="variable">@i-right</td>
+                    <td class="unicode">\e5f0</td>
+                  </tr>
+                  <tr class="i-angle-double-left">
+                    <td class="icon"></td>
+                    <td>angle double left</td>
+                    <td class="variable">@i-angle-double-left</td>
+                    <td class="unicode">\f100</td>
+                  </tr>
+                  <tr class="i-angle-double-right">
+                    <td class="icon"></td>
+                    <td>angle double right</td>
+                    <td class="variable">@i-angle-double-right</td>
+                    <td class="unicode">\f101</td>
+                  </tr>
+                  <tr class="i-angle-left">
+                    <td class="icon"></td>
+                    <td>angle left</td>
+                    <td class="variable">@i-angle-left</td>
+                    <td class="unicode">\f104</td>
+                  </tr>
+                  <tr class="i-angle-right">
+                    <td class="icon"></td>
+                    <td>angle right</td>
+                    <td class="variable">@i-angle-right</td>
+                    <td class="unicode">\f105</td>
+                  </tr>
+                  <tr class="i-plus-circle">
+                    <td class="icon"></td>
+                    <td>plus circle</td>
+                    <td class="variable">@i-plus-circle</td>
+                    <td class="unicode">\f055</td>
+                  </tr>
+                  <tr class="i-minus-circle">
+                    <td class="icon"></td>
+                    <td>minus circle</td>
+                    <td class="variable">@i-minus-circle</td>
+                    <td class="unicode">\f056</td>
+                  </tr>
+                  <tr class="i-plus">
+                    <td class="icon"></td>
+                    <td>plus</td>
+                    <td class="variable">@i-plus</td>
+                    <td class="unicode">\f067</td>
+                  </tr>
+                  <tr class="i-minus">
+                    <td class="icon"></td>
+                    <td>minus</td>
+                    <td class="variable">@i-minus</td>
+                    <td class="unicode">\f068</td>
+                  </tr>
+                  <tr class="i-exclamation-circle">
+                    <td class="icon"></td>
+                    <td>exclamation circle</td>
+                    <td class="variable">@i-exclamation-circle</td>
+                    <td class="unicode">\f06a</td>
+                  </tr>
+                  <tr class="i-exclamation-triangle">
+                    <td class="icon"></td>
+                    <td>exclamation triangle</td>
+                    <td class="variable">@i-exclamation-triangle</td>
+                    <td class="unicode">\f071</td>
+                  </tr>
+                  <tr class="i-up">
+                    <td class="icon"></td>
+                    <td>up</td>
+                    <td class="variable">@i-up</td>
+                    <td class="unicode">\e609</td>
+                  </tr>
+                  <tr class="i-down">
+                    <td class="icon"></td>
+                    <td>down</td>
+                    <td class="variable">@i-down</td>
+                    <td class="unicode">\e612</td>
+                  </tr>
+                  <tr class="i-external-link">
+                    <td class="icon"></td>
+                    <td>external link</td>
+                    <td class="variable">@i-external-link</td>
+                    <td class="unicode">\f08e</td>
+                  </tr>
+                  <tr class="i-megaphone">
+                    <td class="icon"></td>
+                    <td>megaphone</td>
+                    <td class="variable">@i-megaphone</td>
+                    <td class="unicode">\e613</td>
+                  </tr>
+                  <tr class="i-menu">
+                    <td class="icon"></td>
+                    <td>menu</td>
+                    <td class="variable">@i-menu</td>
+                    <td class="unicode">\e615</td>
+                  </tr>
+                  <tr class="i-right-small">
+                    <td class="icon"></td>
+                    <td>right small</td>
+                    <td class="variable">@i-right-small</td>
+                    <td class="unicode">\e616</td>
+                  </tr>
+                  <tr class="i-sort">
+                    <td class="icon"></td>
+                    <td>sort</td>
+                    <td class="variable">@i-sort</td>
+                    <td class="unicode">\e617</td>
+                  </tr>
+                  <tr class="i-sort-desc">
+                    <td class="icon"></td>
+                    <td>sort desc</td>
+                    <td class="variable">@i-sort-desc</td>
+                    <td class="unicode">\e619</td>
+                  </tr>
+                  <tr class="i-sort-asc">
+                    <td class="icon"></td>
+                    <td>sort asc</td>
+                    <td class="variable">@i-sort-asc</td>
+                    <td class="unicode">\e620</td>
+                  </tr>
+                  <tr class="i-doc">
+                    <td class="icon"></td>
+                    <td>doc</td>
+                    <td class="variable">@i-doc</td>
+                    <td class="unicode">\f016</td>
+                  </tr>
+                  <tr class="i-doc-pdf">
+                    <td class="icon"></td>
+                    <td>doc pdf</td>
+                    <td class="variable">@i-doc-pdf</td>
+                    <td class="unicode">\f1c1</td>
+                  </tr>
+                  <tr class="i-doc-word">
+                    <td class="icon"></td>
+                    <td>doc word</td>
+                    <td class="variable">@i-doc-word</td>
+                    <td class="unicode">\f1c2</td>
+                  </tr>
+                  <tr class="i-doc-excel">
+                    <td class="icon"></td>
+                    <td>doc excel</td>
+                    <td class="variable">@i-doc-excel</td>
+                    <td class="unicode">\f16d</td>
+                  </tr>
+                  <tr class="i-doc-powerpoint">
+                    <td class="icon"></td>
+                    <td>doc powerpoint</td>
+                    <td class="variable">@i-doc-powerpoint</td>
+                    <td class="unicode">\f1c4</td>
+                  </tr>
+                  <tr class="i-doc-image">
+                    <td class="icon"></td>
+                    <td>doc image</td>
+                    <td class="variable">@i-doc-image</td>
+                    <td class="unicode">\f1c5</td>
+                  </tr>
+                  <tr class="i-doc-zip">
+                    <td class="icon"></td>
+                    <td>doc zip</td>
+                    <td class="variable">@i-doc-zip</td>
+                    <td class="unicode">\f1c6</td>
+                  </tr>
+                  <tr class="i-doc-audio">
+                    <td class="icon"></td>
+                    <td>doc audio</td>
+                    <td class="variable">@i-doc-audio</td>
+                    <td class="unicode">\f1c7</td>
+                  </tr>
+                  <tr class="i-doc-video">
+                    <td class="icon"></td>
+                    <td>doc video</td>
+                    <td class="variable">@i-doc-video</td>
+                    <td class="unicode">\f1c8</td>
+                  </tr>
+                  <tr class="i-doc-code">
+                    <td class="icon"></td>
+                    <td>doc code</td>
+                    <td class="variable">@i-doc-code</td>
+                    <td class="unicode">\f1c9</td>
+                  </tr>
+                  <tr class="i-whatsapp">
+                    <td class="icon"></td>
+                    <td>whatsapp</td>
+                    <td class="variable">@i-whatsapp</td>
+                    <td class="unicode">\f232</td>
+                  </tr>
+                  <tr class="i-copy">
+                    <td class="icon"></td>
+                    <td>copy</td>
+                    <td class="variable">@i-copy</td>
+                    <td class="unicode">\e614</td>
+                  </tr>
+                  <tr class="i-clock">
+                    <td class="icon"></td>
+                    <td>clock</td>
+                    <td class="variable">@i-clock</td>
+                    <td class="unicode">\e622</td>
+                  </tr>
+                  <tr class="i-print">
+                    <td class="icon"></td>
+                    <td>print</td>
+                    <td class="variable">@i-print</td>
+                    <td class="unicode">\e623</td>
+                  </tr>
+                  <tr class="i-save">
+                    <td class="icon"></td>
+                    <td>save</td>
+                    <td class="variable">@i-save</td>
+                    <td class="unicode">\e610</td>
+                  </tr>
+                  <tr class="i-load">
+                    <td class="icon"></td>
+                    <td>load</td>
+                    <td class="variable">@i-load</td>
+                    <td class="unicode">\e611</td>
+                  </tr>
+                  <tr class="i-happy">
+                    <td class="icon"></td>
+                    <td>happy</td>
+                    <td class="variable">@i-happy</td>
+                    <td class="unicode">\e624</td>
+                  </tr>
+                  <tr class="i-help">
+                    <td class="icon"></td>
+                    <td>help</td>
+                    <td class="variable">@i-help</td>
+                    <td class="unicode">\e625</td>
+                  </tr>
+                  <tr class="i-exit">
+                    <td class="icon"></td>
+                    <td>exit</td>
+                    <td class="variable">@i-exit</td>
+                    <td class="unicode">\e60a</td>
+                  </tr>
+                  <tr class="i-new-window">
+                    <td class="icon"></td>
+                    <td>new window</td>
+                    <td class="variable">@i-new-window</td>
+                    <td class="unicode">\e60f</td>
+                  </tr>
+                  <tr class="i-google">
+                    <td class="icon"></td>
+                    <td>google</td>
+                    <td class="variable">@i-google</td>
+                    <td class="unicode">\e60b</td>
+                  </tr>
+                  <tr class="i-facebook">
+                    <td class="icon"></td>
+                    <td>facebook</td>
+                    <td class="variable">@i-facebook</td>
+                    <td class="unicode">\e60c</td>
+                  </tr>
+                  <tr class="i-twitter">
+                    <td class="icon"></td>
+                    <td>twitter</td>
+                    <td class="variable">@i-twitter</td>
+                    <td class="unicode">\e60d</td>
+                  </tr>
+                  <tr class="i-undo">
+                    <td class="icon"></td>
+                    <td>undo</td>
+                    <td class="variable">@i-undo</td>
+                    <td class="unicode">\e626</td>
+                  </tr>
+                  <tr class="i-vertical-dots">
+                    <td class="icon"></td>
+                    <td>vertical dots</td>
+                    <td class="variable">@i-vertical-dots</td>
+                    <td class="unicode">\e901</td>
+                  </tr>
+                  <tr class="i-circle">
+                    <td class="icon"></td>
+                    <td>circle</td>
+                    <td class="variable">@i-circle</td>
+                    <td class="unicode">\e902</td>
+                  </tr>
+                  <tr class="i-circle-check">
+                    <td class="icon"></td>
+                    <td>circle-check</td>
+                    <td class="variable">@i-circle-check</td>
+                    <td class="unicode">\e903</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <nav class="section-nav">
+          <h2 class="section-nav__heading"><a>In this section</a></h2>
+          <ul>
+            <li><a href="../#Styles" class="section-nav__parent">Styles</a>
+              <ul>
+                <li><a href="typography.html" title="Typography">Typography</a>
+                </li>
+                <li><a href="colours.html" title="Colours">Colours</a>
+                </li>
+                <li><a href="icons.html" title="Icons">Icons</a>
+                </li>
+                <li><a href="tables.html" title="Tables">Tables</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="styleguide--footer">
+        <div>
+          <p><img alt="" height="100" src="../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../js/translate.js"></script>
+    <script src="../js/jquery.fn.cssSlide.js"></script>
+    <script src="../js/revealable.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../js/smooth.js"></script>
+    <script src="../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>

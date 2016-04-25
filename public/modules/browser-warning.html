@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Browser warning
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../images/favicon/32.png" rel="shortcut icon">
+    <link href="../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="styleguide--header">
+      <div class="styleguide--header--content"><a href="index.html"><img src="../images/ca-logo-hz-white-280px.svg"></a></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../index.html#Modules" title="Modules">Modules</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Browser warning</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Browser warning</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <p>Notices appear attached to the bottom of the screen and cannot be dismissed. Because these cannot be dismissed they may become annoying, meaning they should be used as infrequently as possible.</p>
+              <div class="example-box-plain">
+                <div style="position:relative;z-index:0;display:block;" class="notice">
+                  <div class="notice__content">
+                    <p>We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="language-html">&lt;div class="notice"&gt;
+	&lt;div class="notice__content"&gt;
+		&lt;p&gt;We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider &lt;a href="http://browsehappy.com/" class="a-external-link"&gt;upgrading your browser&lt;/a&gt;.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+          <div class="notice">
+            <div class="notice__content">
+              <p>We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.</p>
+            </div>
+          </div>
+        </div>
+        <nav class="section-nav">
+          <h2 class="section-nav__heading"><a>In this section</a></h2>
+          <ul>
+            <li><a href="../#Modules" class="section-nav__parent">Modules</a>
+              <ul>
+                <li><a href="callout.html" title="Callout">Callout</a>
+                </li>
+                <li><a href="revealable.html" title="Revealable">Revealable</a>
+                </li>
+                <li><a href="charts.html" title="Charts">Charts</a>
+                </li>
+                <li><a href="section-notice.html" title="Section Notices">Section Notices</a>
+                </li>
+                <li><a href="toolbar.html" title="Content toolbar">Content toolbar</a>
+                </li>
+                <li><a href="cookie-monster.html" title="Cookie Monster">Cookie Monster</a>
+                </li>
+                <li><a href="browser-warning.html" title="Browser warning">Browser warning</a>
+                </li>
+                <li><a href="sticky.html" title="Sticky box">Sticky box</a>
+                </li>
+                <li><a href="extent.html" title="Extent Switcher">Extent Switcher</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="styleguide--footer">
+        <div>
+          <p><img alt="" height="100" src="../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../js/translate.js"></script>
+    <script src="../js/jquery.fn.cssSlide.js"></script>
+    <script src="../js/revealable.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../js/smooth.js"></script>
+    <script src="../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>
