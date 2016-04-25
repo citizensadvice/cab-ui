@@ -732,6 +732,10 @@ input[class*="dob-"] {
     margin-bottom: @box-spacing-vertical;
     display: block;
     overflow: hidden;
+    &:first-of-type {
+        border-top: 1px solid @gray-6;
+        padding-top: @box-spacing-vertical;
+    }
     .response--q, .response--a {
         display: inline-block;
     }
