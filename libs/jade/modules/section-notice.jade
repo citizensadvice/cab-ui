@@ -22,6 +22,13 @@ block section-notice
 				span.badge NEW
 				| This page is part of #[a(href="#") our new approach to digital advice].
 
+	aside.section-notice__changing
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge SURVEY
+				| Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
+
 	aside.section-notice__adviser
 		h2.screenreader Notice
 		.section-notice__content
@@ -49,25 +56,46 @@ block content
 					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
 					| 	&lt;div class="section-notice__content"&gt;
 					| 		&lt;p&gt;
-					| 			&lt;span class="badge"&gt;NEW&lt;/span&gt;This page is part of &lt;a href="#"&gt;our new approach to digital advice&lt;/a&gt;.
+					| 			&lt;span class="badge"&gt;NEW&lt;/span&gt;
+					| 			This page is part of &lt;a href="#"&gt;our new approach to digital advice&lt;/a&gt;.
 					| 		&lt;/p&gt;
 					| 	&lt;/div&gt;
 					| &lt;/aside&gt;
 
-			//.example-box-plain
+			.example-box-plain
+				aside.section-notice__changing
+					h2.screenreader Notice
+					.section-notice__content
+						p
+							span.badge SURVEY
+							| Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
+			pre
+				code.language-html
+					| &lt;aside class="section-notice__changing"&gt;
+					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
+					| 	&lt;div class="section-notice__content"&gt;
+					| 		&lt;p&gt;
+					| 			&lt;span class="badge"&gt;SURVEY&lt;/span&gt;
+					| 			Help us to improve our [section] advice. Please &lt;a href="#"&gt;complete our short survey&lt;/a&gt;. It'll take about 5-10 minutes.
+					| 		&lt;/p&gt;
+					| 	&lt;/div&gt;
+					| &lt;/aside&gt;
+
+			.example-box-plain
 				aside.section-notice__adviser
 					h2.screenreader Notice
 					.section-notice__content
 						p
 							span.badge ADVISER
 							| This page is part of #[a(href="#") adviser only] content.
-			//pre
+			pre
 				code.language-html
 					| &lt;aside class="section-notice__adviser"&gt;
 					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
 					| 	&lt;div class="section-notice__content"&gt;
 					| 		&lt;p&gt;
-					| 			&lt;span class="badge"&gt;ADVISER&lt;/span&gt;This page is part of &lt;a href="#"&gt;adviser only&lt;/a&gt; content.
+					| 			&lt;span class="badge"&gt;ADVISER&lt;/span&gt;
+					| 			This page is part of &lt;a href="#"&gt;adviser only&lt;/a&gt; content.
 					| 		&lt;/p&gt;
 					| 	&lt;/div&gt;
 					| &lt;/aside&gt;
