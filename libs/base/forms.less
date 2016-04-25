@@ -652,6 +652,13 @@ input[class*="dob-"] {
 }
 
 .conditional--content {
+    fieldset {
+        label {
+            font-weight: @font-weight-bold;
+            padding: @box-spacing-vertical 0 @box-spacing-vertical*.5 0;
+            background-color: transparent;
+        }
+    }
     input {
         display: inline-block;
         &:before {
@@ -702,7 +709,7 @@ input[class*="dob-"] {
     padding: @box-spacing-vertical 0;
     padding-left: @box-spacing-horizontal;
     //background-color: @blue-lighter;
-    margin-top: -1rem;
+    margin-top: -.5rem;
     margin-bottom: 1rem;
     display: none;
     position: relative;

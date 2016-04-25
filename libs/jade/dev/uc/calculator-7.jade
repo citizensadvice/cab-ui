@@ -33,13 +33,9 @@ block content
 	.articleContent
 		div
 			fieldset
-				legend(for="radio") How old are you?
-				label.radio.radio--block
-					input(checked, name="radio", type="radio", value="option1")
-					| Under 25
-				label.radio.radio--block
-					input(name="radio", type="radio", value="option2")
-					| 25 or over
+				legend(for="standardField") How much do you expect to earn in the next month (after tax)?
+				input#standardField(placeholder="£" type="number")
 
-			a.btn-light.left-button-icon(href="calculator-2.html") Back
-			a.btn.right-button-icon(href="calculator-4.html", type="button") Continue
+
+			a.btn-light.left-button-icon(href="calculator-6.html") Back
+			a.btn.right-button-icon(href="calculator-8.html", type="button") Continue
