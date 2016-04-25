@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Brand icons
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../images/favicon/32.png" rel="shortcut icon">
+    <link href="../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="styleguide--header">
+      <div class="styleguide--header--content"><a href="index.html"><img src="../images/ca-logo-hz-white-280px.svg"></a></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../index.html#Branding" title="Branding">Branding</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Brand icons</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Brand icons</span></h1>
+          </div>
+          <div class="articleContent">
+            <div>
+              <p>Brand icons differ from the website content icons because they are used to illustrate information from and about Citizens Advice.</p>
+              <p>They should be used to support the information.</p>
+              <table class="iconlist brand">
+                <thead>
+                  <tr>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Variable</th>
+                    <th>Unicode</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="brand-accelerator">
+                    <td class="icon-brand"></td>
+                    <td>accelerator</td>
+                    <td class="variable">@brand-accelerator</td>
+                    <td class="unicode">\e900</td>
+                  </tr>
+                  <tr class="brand-add_folder">
+                    <td class="icon-brand"></td>
+                    <td>add folder</td>
+                    <td class="variable">@brand-add_folder</td>
+                    <td class="unicode">\e901</td>
+                  </tr>
+                  <tr class="brand-agenda">
+                    <td class="icon-brand"></td>
+                    <td>agenda</td>
+                    <td class="variable">@brand-agenda</td>
+                    <td class="unicode">\e902</td>
+                  </tr>
+                  <tr class="brand-alarm_clock">
+                    <td class="icon-brand"></td>
+                    <td>alarm clock</td>
+                    <td class="variable">@brand-alarm_clock</td>
+                    <td class="unicode">\e903</td>
+                  </tr>
+                  <tr class="brand-arrow_down">
+                    <td class="icon-brand"></td>
+                    <td>arrow down</td>
+                    <td class="variable">@brand-arrow_down</td>
+                    <td class="unicode">\e904</td>
+                  </tr>
+                  <tr class="brand-arrow_left">
+                    <td class="icon-brand"></td>
+                    <td>arrow left</td>
+                    <td class="variable">@brand-arrow_left</td>
+                    <td class="unicode">\e905</td>
+                  </tr>
+                  <tr class="brand-arrow_right">
+                    <td class="icon-brand"></td>
+                    <td>arrow right</td>
+                    <td class="variable">@brand-arrow_right</td>
+                    <td class="unicode">\e906</td>
+                  </tr>
+                  <tr class="brand-arrow_up">
+                    <td class="icon-brand"></td>
+                    <td>arrow up</td>
+                    <td class="variable">@brand-arrow_up</td>
+                    <td class="unicode">\e907</td>
+                  </tr>
+                  <tr class="brand-battery_1">
+                    <td class="icon-brand"></td>
+                    <td>battery 1</td>
+                    <td class="variable">@brand-battery_1</td>
+                    <td class="unicode">\e908</td>
+                  </tr>
+                  <tr class="brand-battery_2">
+                    <td class="icon-brand"></td>
+                    <td>battery 2</td>
+                    <td class="variable">@brand-battery_2</td>
+                    <td class="unicode">\e909</td>
+                  </tr>
+                  <tr class="brand-battery_3">
+                    <td class="icon-brand"></td>
+                    <td>battery 3</td>
+                    <td class="variable">@brand-battery_3</td>
+                    <td class="unicode">\e90a</td>
+                  </tr>
+                  <tr class="brand-battery_4">
+                    <td class="icon-brand"></td>
+                    <td>battery 4</td>
+                    <td class="variable">@brand-battery_4</td>
+                    <td class="unicode">\e90b</td>
+                  </tr>
+                  <tr class="brand-blackboard_graph">
+                    <td class="icon-brand"></td>
+                    <td>blackboard graph</td>
+                    <td class="variable">@brand-blackboard_graph</td>
+                    <td class="unicode">\e90c</td>
+                  </tr>
+                  <tr class="brand-boat">
+                    <td class="icon-brand"></td>
+                    <td>boat</td>
+                    <td class="variable">@brand-boat</td>
+                    <td class="unicode">\e90d</td>
+                  </tr>
+                  <tr class="brand-booknote_add">
+                    <td class="icon-brand"></td>
+                    <td>booknote add</td>
+                    <td class="variable">@brand-booknote_add</td>
+                    <td class="unicode">\e90e</td>
+                  </tr>
+                  <tr class="brand-booknote_remove">
+                    <td class="icon-brand"></td>
+                    <td>booknote remove</td>
+                    <td class="variable">@brand-booknote_remove</td>
+                    <td class="unicode">\e90f</td>
+                  </tr>
+                  <tr class="brand-booknote">
+                    <td class="icon-brand"></td>
+                    <td>booknote</td>
+                    <td class="variable">@brand-booknote</td>
+                    <td class="unicode">\e910</td>
+                  </tr>
+                  <tr class="brand-calendar">
+                    <td class="icon-brand"></td>
+                    <td>calendar</td>
+                    <td class="variable">@brand-calendar</td>
+                    <td class="unicode">\e911</td>
+                  </tr>
+                  <tr class="brand-camera_1">
+                    <td class="icon-brand"></td>
+                    <td>camera 1</td>
+                    <td class="variable">@brand-camera_1</td>
+                    <td class="unicode">\e912</td>
+                  </tr>
+                  <tr class="brand-camera_2">
+                    <td class="icon-brand"></td>
+                    <td>camera 2</td>
+                    <td class="variable">@brand-camera_2</td>
+                    <td class="unicode">\e913</td>
+                  </tr>
+                  <tr class="brand-case">
+                    <td class="icon-brand"></td>
+                    <td>case</td>
+                    <td class="variable">@brand-case</td>
+                    <td class="unicode">\e915</td>
+                  </tr>
+                  <tr class="brand-case_2">
+                    <td class="icon-brand"></td>
+                    <td>case 2</td>
+                    <td class="variable">@brand-case_2</td>
+                    <td class="unicode">\e914</td>
+                  </tr>
+                  <tr class="brand-cd">
+                    <td class="icon-brand"></td>
+                    <td>cd</td>
+                    <td class="variable">@brand-cd</td>
+                    <td class="unicode">\e916</td>
+                  </tr>
+                  <tr class="brand-check">
+                    <td class="icon-brand"></td>
+                    <td>check</td>
+                    <td class="variable">@brand-check</td>
+                    <td class="unicode">\e917</td>
+                  </tr>
+                  <tr class="brand-chronometer">
+                    <td class="icon-brand"></td>
+                    <td>chronometer</td>
+                    <td class="variable">@brand-chronometer</td>
+                    <td class="unicode">\e918</td>
+                  </tr>
+                  <tr class="brand-clock">
+                    <td class="icon-brand"></td>
+                    <td>clock</td>
+                    <td class="variable">@brand-clock</td>
+                    <td class="unicode">\e919</td>
+                  </tr>
+                  <tr class="brand-cloud_check">
+                    <td class="icon-brand"></td>
+                    <td>cloud check</td>
+                    <td class="variable">@brand-cloud_check</td>
+                    <td class="unicode">\e91a</td>
+                  </tr>
+                  <tr class="brand-cloud_delete">
+                    <td class="icon-brand"></td>
+                    <td>cloud delete</td>
+                    <td class="variable">@brand-cloud_delete</td>
+                    <td class="unicode">\e91b</td>
+                  </tr>
+                  <tr class="brand-cloud_download">
+                    <td class="icon-brand"></td>
+                    <td>cloud download</td>
+                    <td class="variable">@brand-cloud_download</td>
+                    <td class="unicode">\e91c</td>
+                  </tr>
+                  <tr class="brand-cloud_upload">
+                    <td class="icon-brand"></td>
+                    <td>cloud upload</td>
+                    <td class="variable">@brand-cloud_upload</td>
+                    <td class="unicode">\e91d</td>
+                  </tr>
+                  <tr class="brand-cloudy">
+                    <td class="icon-brand"></td>
+                    <td>cloudy</td>
+                    <td class="variable">@brand-cloudy</td>
+                    <td class="unicode">\e91e</td>
+                  </tr>
+                  <tr class="brand-cocktail">
+                    <td class="icon-brand"></td>
+                    <td>cocktail</td>
+                    <td class="variable">@brand-cocktail</td>
+                    <td class="unicode">\e91f</td>
+                  </tr>
+                  <tr class="brand-coffee">
+                    <td class="icon-brand"></td>
+                    <td>coffee</td>
+                    <td class="variable">@brand-coffee</td>
+                    <td class="unicode">\e920</td>
+                  </tr>
+                  <tr class="brand-compass">
+                    <td class="icon-brand"></td>
+                    <td>compass</td>
+                    <td class="variable">@brand-compass</td>
+                    <td class="unicode">\e921</td>
+                  </tr>
+                  <tr class="brand-compress">
+                    <td class="icon-brand"></td>
+                    <td>compress</td>
+                    <td class="variable">@brand-compress</td>
+                    <td class="unicode">\e922</td>
+                  </tr>
+                  <tr class="brand-cutlery">
+                    <td class="icon-brand"></td>
+                    <td>cutlery</td>
+                    <td class="variable">@brand-cutlery</td>
+                    <td class="unicode">\e923</td>
+                  </tr>
+                  <tr class="brand-delete_folder">
+                    <td class="icon-brand"></td>
+                    <td>delete folder</td>
+                    <td class="variable">@brand-delete_folder</td>
+                    <td class="unicode">\e924</td>
+                  </tr>
+                  <tr class="brand-delete">
+                    <td class="icon-brand"></td>
+                    <td>delete</td>
+                    <td class="variable">@brand-delete</td>
+                    <td class="unicode">\e925</td>
+                  </tr>
+                  <tr class="brand-dialogue_add">
+                    <td class="icon-brand"></td>
+                    <td>dialogue add</td>
+                    <td class="variable">@brand-dialogue_add</td>
+                    <td class="unicode">\e926</td>
+                  </tr>
+                  <tr class="brand-dialogue_delete">
+                    <td class="icon-brand"></td>
+                    <td>dialogue delete</td>
+                    <td class="variable">@brand-dialogue_delete</td>
+                    <td class="unicode">\e927</td>
+                  </tr>
+                  <tr class="brand-dialogue_happy">
+                    <td class="icon-brand"></td>
+                    <td>dialogue happy</td>
+                    <td class="variable">@brand-dialogue_happy</td>
+                    <td class="unicode">\e928</td>
+                  </tr>
+                  <tr class="brand-dialogue_sad">
+                    <td class="icon-brand"></td>
+                    <td>dialogue sad</td>
+                    <td class="variable">@brand-dialogue_sad</td>
+                    <td class="unicode">\e929</td>
+                  </tr>
+                  <tr class="brand-dialogue_text">
+                    <td class="icon-brand"></td>
+                    <td>dialogue text</td>
+                    <td class="variable">@brand-dialogue_text</td>
+                    <td class="unicode">\e92a</td>
+                  </tr>
+                  <tr class="brand-dialogue_think">
+                    <td class="icon-brand"></td>
+                    <td>dialogue think</td>
+                    <td class="variable">@brand-dialogue_think</td>
+                    <td class="unicode">\e92b</td>
+                  </tr>
+                  <tr class="brand-diamond">
+                    <td class="icon-brand"></td>
+                    <td>diamond</td>
+                    <td class="variable">@brand-diamond</td>
+                    <td class="unicode">\e92c</td>
+                  </tr>
+                  <tr class="brand-dish_fork">
+                    <td class="icon-brand"></td>
+                    <td>dish fork</td>
+                    <td class="variable">@brand-dish_fork</td>
+                    <td class="unicode">\e92d</td>
+                  </tr>
+                  <tr class="brand-dish_spoon">
+                    <td class="icon-brand"></td>
+                    <td>dish spoon</td>
+                    <td class="variable">@brand-dish_spoon</td>
+                    <td class="unicode">\e92e</td>
+                  </tr>
+                  <tr class="brand-download_folder">
+                    <td class="icon-brand"></td>
+                    <td>download folder</td>
+                    <td class="variable">@brand-download_folder</td>
+                    <td class="unicode">\e92f</td>
+                  </tr>
+                  <tr class="brand-download">
+                    <td class="icon-brand"></td>
+                    <td>download</td>
+                    <td class="variable">@brand-download</td>
+                    <td class="unicode">\e930</td>
+                  </tr>
+                  <tr class="brand-expand">
+                    <td class="icon-brand"></td>
+                    <td>expand</td>
+                    <td class="variable">@brand-expand</td>
+                    <td class="unicode">\e931</td>
+                  </tr>
+                  <tr class="brand-eye">
+                    <td class="icon-brand"></td>
+                    <td>eye</td>
+                    <td class="variable">@brand-eye</td>
+                    <td class="unicode">\e932</td>
+                  </tr>
+                  <tr class="brand-fast_food">
+                    <td class="icon-brand"></td>
+                    <td>fast food</td>
+                    <td class="variable">@brand-fast_food</td>
+                    <td class="unicode">\e933</td>
+                  </tr>
+                  <tr class="brand-flag">
+                    <td class="icon-brand"></td>
+                    <td>flag</td>
+                    <td class="variable">@brand-flag</td>
+                    <td class="unicode">\e934</td>
+                  </tr>
+                  <tr class="brand-folder">
+                    <td class="icon-brand"></td>
+                    <td>folder</td>
+                    <td class="variable">@brand-folder</td>
+                    <td class="unicode">\e935</td>
+                  </tr>
+                  <tr class="brand-geolocalizator">
+                    <td class="icon-brand"></td>
+                    <td>geolocalizator</td>
+                    <td class="variable">@brand-geolocalizator</td>
+                    <td class="unicode">\e936</td>
+                  </tr>
+                  <tr class="brand-globe">
+                    <td class="icon-brand"></td>
+                    <td>globe</td>
+                    <td class="variable">@brand-globe</td>
+                    <td class="unicode">\e937</td>
+                  </tr>
+                  <tr class="brand-graph_descending">
+                    <td class="icon-brand"></td>
+                    <td>graph descending</td>
+                    <td class="variable">@brand-graph_descending</td>
+                    <td class="unicode">\e938</td>
+                  </tr>
+                  <tr class="brand-graph_rising">
+                    <td class="icon-brand"></td>
+                    <td>graph rising</td>
+                    <td class="variable">@brand-graph_rising</td>
+                    <td class="unicode">\e939</td>
+                  </tr>
+                  <tr class="brand-graph">
+                    <td class="icon-brand"></td>
+                    <td>graph</td>
+                    <td class="variable">@brand-graph</td>
+                    <td class="unicode">\e93a</td>
+                  </tr>
+                  <tr class="brand-hammer">
+                    <td class="icon-brand"></td>
+                    <td>hammer</td>
+                    <td class="variable">@brand-hammer</td>
+                    <td class="unicode">\e93b</td>
+                  </tr>
+                  <tr class="brand-happy_drop">
+                    <td class="icon-brand"></td>
+                    <td>happy drop</td>
+                    <td class="variable">@brand-happy_drop</td>
+                    <td class="unicode">\e93c</td>
+                  </tr>
+                  <tr class="brand-headphones">
+                    <td class="icon-brand"></td>
+                    <td>headphones</td>
+                    <td class="variable">@brand-headphones</td>
+                    <td class="unicode">\e93d</td>
+                  </tr>
+                  <tr class="brand-heart_broken">
+                    <td class="icon-brand"></td>
+                    <td>heart broken</td>
+                    <td class="variable">@brand-heart_broken</td>
+                    <td class="unicode">\e93e</td>
+                  </tr>
+                  <tr class="brand-heart">
+                    <td class="icon-brand"></td>
+                    <td>heart</td>
+                    <td class="variable">@brand-heart</td>
+                    <td class="unicode">\e93f</td>
+                  </tr>
+                  <tr class="brand-home">
+                    <td class="icon-brand"></td>
+                    <td>home</td>
+                    <td class="variable">@brand-home</td>
+                    <td class="unicode">\e940</td>
+                  </tr>
+                  <tr class="brand-hourglass">
+                    <td class="icon-brand"></td>
+                    <td>hourglass</td>
+                    <td class="variable">@brand-hourglass</td>
+                    <td class="unicode">\e941</td>
+                  </tr>
+                  <tr class="brand-image">
+                    <td class="icon-brand"></td>
+                    <td>image</td>
+                    <td class="variable">@brand-image</td>
+                    <td class="unicode">\e942</td>
+                  </tr>
+                  <tr class="brand-key">
+                    <td class="icon-brand"></td>
+                    <td>key</td>
+                    <td class="variable">@brand-key</td>
+                    <td class="unicode">\e943</td>
+                  </tr>
+                  <tr class="brand-life_buoy">
+                    <td class="icon-brand"></td>
+                    <td>life buoy</td>
+                    <td class="variable">@brand-life_buoy</td>
+                    <td class="unicode">\e944</td>
+                  </tr>
+                  <tr class="brand-list">
+                    <td class="icon-brand"></td>
+                    <td>list</td>
+                    <td class="variable">@brand-list</td>
+                    <td class="unicode">\e945</td>
+                  </tr>
+                  <tr class="brand-lock_closed">
+                    <td class="icon-brand"></td>
+                    <td>lock closed</td>
+                    <td class="variable">@brand-lock_closed</td>
+                    <td class="unicode">\e946</td>
+                  </tr>
+                  <tr class="brand-lock_open">
+                    <td class="icon-brand"></td>
+                    <td>lock open</td>
+                    <td class="variable">@brand-lock_open</td>
+                    <td class="unicode">\e947</td>
+                  </tr>
+                  <tr class="brand-loudspeaker">
+                    <td class="icon-brand"></td>
+                    <td>loudspeaker</td>
+                    <td class="variable">@brand-loudspeaker</td>
+                    <td class="unicode">\e948</td>
+                  </tr>
+                  <tr class="brand-magnifier_minus">
+                    <td class="icon-brand"></td>
+                    <td>magnifier minus</td>
+                    <td class="variable">@brand-magnifier_minus</td>
+                    <td class="unicode">\e949</td>
+                  </tr>
+                  <tr class="brand-magnifier_plus">
+                    <td class="icon-brand"></td>
+                    <td>magnifier plus</td>
+                    <td class="variable">@brand-magnifier_plus</td>
+                    <td class="unicode">\e94a</td>
+                  </tr>
+                  <tr class="brand-magnifier">
+                    <td class="icon-brand"></td>
+                    <td>magnifier</td>
+                    <td class="variable">@brand-magnifier</td>
+                    <td class="unicode">\e94b</td>
+                  </tr>
+                  <tr class="brand-mail_open">
+                    <td class="icon-brand"></td>
+                    <td>mail open</td>
+                    <td class="variable">@brand-mail_open</td>
+                    <td class="unicode">\e94c</td>
+                  </tr>
+                  <tr class="brand-mail">
+                    <td class="icon-brand"></td>
+                    <td>mail</td>
+                    <td class="variable">@brand-mail</td>
+                    <td class="unicode">\e94d</td>
+                  </tr>
+                  <tr class="brand-map">
+                    <td class="icon-brand"></td>
+                    <td>map</td>
+                    <td class="variable">@brand-map</td>
+                    <td class="unicode">\e94e</td>
+                  </tr>
+                  <tr class="brand-medical_case">
+                    <td class="icon-brand"></td>
+                    <td>medical case</td>
+                    <td class="variable">@brand-medical_case</td>
+                    <td class="unicode">\e94f</td>
+                  </tr>
+                  <tr class="brand-microphone_1">
+                    <td class="icon-brand"></td>
+                    <td>microphone 1</td>
+                    <td class="variable">@brand-microphone_1</td>
+                    <td class="unicode">\e950</td>
+                  </tr>
+                  <tr class="brand-microphone_2">
+                    <td class="icon-brand"></td>
+                    <td>microphone 2</td>
+                    <td class="variable">@brand-microphone_2</td>
+                    <td class="unicode">\e951</td>
+                  </tr>
+                  <tr class="brand-minus">
+                    <td class="icon-brand"></td>
+                    <td>minus</td>
+                    <td class="variable">@brand-minus</td>
+                    <td class="unicode">\e952</td>
+                  </tr>
+                  <tr class="brand-multiple_image">
+                    <td class="icon-brand"></td>
+                    <td>multiple image</td>
+                    <td class="variable">@brand-multiple_image</td>
+                    <td class="unicode">\e953</td>
+                  </tr>
+                  <tr class="brand-music_back">
+                    <td class="icon-brand"></td>
+                    <td>music back</td>
+                    <td class="variable">@brand-music_back</td>
+                    <td class="unicode">\e954</td>
+                  </tr>
+                  <tr class="brand-music_backtoend">
+                    <td class="icon-brand"></td>
+                    <td>music backtoend</td>
+                    <td class="variable">@brand-music_backtoend</td>
+                    <td class="unicode">\e955</td>
+                  </tr>
+                  <tr class="brand-music_eject">
+                    <td class="icon-brand"></td>
+                    <td>music eject</td>
+                    <td class="variable">@brand-music_eject</td>
+                    <td class="unicode">\e956</td>
+                  </tr>
+                  <tr class="brand-music_forward">
+                    <td class="icon-brand"></td>
+                    <td>music forward</td>
+                    <td class="variable">@brand-music_forward</td>
+                    <td class="unicode">\e957</td>
+                  </tr>
+                  <tr class="brand-music_forwardtoend">
+                    <td class="icon-brand"></td>
+                    <td>music forwardtoend</td>
+                    <td class="variable">@brand-music_forwardtoend</td>
+                    <td class="unicode">\e958</td>
+                  </tr>
+                  <tr class="brand-music_pause">
+                    <td class="icon-brand"></td>
+                    <td>music pause</td>
+                    <td class="variable">@brand-music_pause</td>
+                    <td class="unicode">\e959</td>
+                  </tr>
+                  <tr class="brand-music_play">
+                    <td class="icon-brand"></td>
+                    <td>music play</td>
+                    <td class="variable">@brand-music_play</td>
+                    <td class="unicode">\e95a</td>
+                  </tr>
+                  <tr class="brand-music_random">
+                    <td class="icon-brand"></td>
+                    <td>music random</td>
+                    <td class="variable">@brand-music_random</td>
+                    <td class="unicode">\e95b</td>
+                  </tr>
+                  <tr class="brand-music_repeat">
+                    <td class="icon-brand"></td>
+                    <td>music repeat</td>
+                    <td class="variable">@brand-music_repeat</td>
+                    <td class="unicode">\e95c</td>
+                  </tr>
+                  <tr class="brand-music_stop">
+                    <td class="icon-brand"></td>
+                    <td>music stop</td>
+                    <td class="variable">@brand-music_stop</td>
+                    <td class="unicode">\e95d</td>
+                  </tr>
+                  <tr class="brand-musical_note">
+                    <td class="icon-brand"></td>
+                    <td>musical note</td>
+                    <td class="variable">@brand-musical_note</td>
+                    <td class="unicode">\e95f</td>
+                  </tr>
+                  <tr class="brand-musical_note_2">
+                    <td class="icon-brand"></td>
+                    <td>musical note 2</td>
+                    <td class="variable">@brand-musical_note_2</td>
+                    <td class="unicode">\e95e</td>
+                  </tr>
+                  <tr class="brand-old_video_cam">
+                    <td class="icon-brand"></td>
+                    <td>old video cam</td>
+                    <td class="variable">@brand-old_video_cam</td>
+                    <td class="unicode">\e960</td>
+                  </tr>
+                  <tr class="brand-paper_pen">
+                    <td class="icon-brand"></td>
+                    <td>paper pen</td>
+                    <td class="variable">@brand-paper_pen</td>
+                    <td class="unicode">\e961</td>
+                  </tr>
+                  <tr class="brand-paper_pencil">
+                    <td class="icon-brand"></td>
+                    <td>paper pencil</td>
+                    <td class="variable">@brand-paper_pencil</td>
+                    <td class="unicode">\e962</td>
+                  </tr>
+                  <tr class="brand-paper_sheet">
+                    <td class="icon-brand"></td>
+                    <td>paper sheet</td>
+                    <td class="variable">@brand-paper_sheet</td>
+                    <td class="unicode">\e963</td>
+                  </tr>
+                  <tr class="brand-pen_pencil_ruler">
+                    <td class="icon-brand"></td>
+                    <td>pen pencil ruler</td>
+                    <td class="variable">@brand-pen_pencil_ruler</td>
+                    <td class="unicode">\e964</td>
+                  </tr>
+                  <tr class="brand-pencil_ruler">
+                    <td class="icon-brand"></td>
+                    <td>pencil ruler</td>
+                    <td class="variable">@brand-pencil_ruler</td>
+                    <td class="unicode">\e965</td>
+                  </tr>
+                  <tr class="brand-pencil">
+                    <td class="icon-brand"></td>
+                    <td>pencil</td>
+                    <td class="variable">@brand-pencil</td>
+                    <td class="unicode">\e966</td>
+                  </tr>
+                  <tr class="brand-plus">
+                    <td class="icon-brand"></td>
+                    <td>plus</td>
+                    <td class="variable">@brand-plus</td>
+                    <td class="unicode">\e967</td>
+                  </tr>
+                  <tr class="brand-portable_pc">
+                    <td class="icon-brand"></td>
+                    <td>portable pc</td>
+                    <td class="variable">@brand-portable_pc</td>
+                    <td class="unicode">\e968</td>
+                  </tr>
+                  <tr class="brand-pricetag">
+                    <td class="icon-brand"></td>
+                    <td>pricetag</td>
+                    <td class="variable">@brand-pricetag</td>
+                    <td class="unicode">\e969</td>
+                  </tr>
+                  <tr class="brand-printer">
+                    <td class="icon-brand"></td>
+                    <td>printer</td>
+                    <td class="variable">@brand-printer</td>
+                    <td class="unicode">\e96a</td>
+                  </tr>
+                  <tr class="brand-profile_add">
+                    <td class="icon-brand"></td>
+                    <td>profile add</td>
+                    <td class="variable">@brand-profile_add</td>
+                    <td class="unicode">\e96b</td>
+                  </tr>
+                  <tr class="brand-profile_remove">
+                    <td class="icon-brand"></td>
+                    <td>profile remove</td>
+                    <td class="variable">@brand-profile_remove</td>
+                    <td class="unicode">\e96c</td>
+                  </tr>
+                  <tr class="brand-profile">
+                    <td class="icon-brand"></td>
+                    <td>profile</td>
+                    <td class="variable">@brand-profile</td>
+                    <td class="unicode">\e96d</td>
+                  </tr>
+                  <tr class="brand-rainy">
+                    <td class="icon-brand"></td>
+                    <td>rainy</td>
+                    <td class="variable">@brand-rainy</td>
+                    <td class="unicode">\e96e</td>
+                  </tr>
+                  <tr class="brand-rotate">
+                    <td class="icon-brand"></td>
+                    <td>rotate</td>
+                    <td class="variable">@brand-rotate</td>
+                    <td class="unicode">\e96f</td>
+                  </tr>
+                  <tr class="brand-setting_1">
+                    <td class="icon-brand"></td>
+                    <td>setting 1</td>
+                    <td class="variable">@brand-setting_1</td>
+                    <td class="unicode">\e970</td>
+                  </tr>
+                  <tr class="brand-setting_2">
+                    <td class="icon-brand"></td>
+                    <td>setting 2</td>
+                    <td class="variable">@brand-setting_2</td>
+                    <td class="unicode">\e971</td>
+                  </tr>
+                  <tr class="brand-share">
+                    <td class="icon-brand"></td>
+                    <td>share</td>
+                    <td class="variable">@brand-share</td>
+                    <td class="unicode">\e972</td>
+                  </tr>
+                  <tr class="brand-shield_down">
+                    <td class="icon-brand"></td>
+                    <td>shield down</td>
+                    <td class="variable">@brand-shield_down</td>
+                    <td class="unicode">\e973</td>
+                  </tr>
+                  <tr class="brand-shield_left">
+                    <td class="icon-brand"></td>
+                    <td>shield left</td>
+                    <td class="variable">@brand-shield_left</td>
+                    <td class="unicode">\e974</td>
+                  </tr>
+                  <tr class="brand-shield_right">
+                    <td class="icon-brand"></td>
+                    <td>shield right</td>
+                    <td class="variable">@brand-shield_right</td>
+                    <td class="unicode">\e975</td>
+                  </tr>
+                  <tr class="brand-shield_up">
+                    <td class="icon-brand"></td>
+                    <td>shield up</td>
+                    <td class="variable">@brand-shield_up</td>
+                    <td class="unicode">\e976</td>
+                  </tr>
+                  <tr class="brand-shopping_cart_content">
+                    <td class="icon-brand"></td>
+                    <td>shopping cart content</td>
+                    <td class="variable">@brand-shopping_cart_content</td>
+                    <td class="unicode">\e977</td>
+                  </tr>
+                  <tr class="brand-shopping_cart">
+                    <td class="icon-brand"></td>
+                    <td>shopping cart</td>
+                    <td class="variable">@brand-shopping_cart</td>
+                    <td class="unicode">\e978</td>
+                  </tr>
+                  <tr class="brand-sinth">
+                    <td class="icon-brand"></td>
+                    <td>sinth</td>
+                    <td class="variable">@brand-sinth</td>
+                    <td class="unicode">\e979</td>
+                  </tr>
+                  <tr class="brand-smartphone">
+                    <td class="icon-brand"></td>
+                    <td>smartphone</td>
+                    <td class="variable">@brand-smartphone</td>
+                    <td class="unicode">\e97a</td>
+                  </tr>
+                  <tr class="brand-spread">
+                    <td class="icon-brand"></td>
+                    <td>spread</td>
+                    <td class="variable">@brand-spread</td>
+                    <td class="unicode">\e97b</td>
+                  </tr>
+                  <tr class="brand-squares">
+                    <td class="icon-brand"></td>
+                    <td>squares</td>
+                    <td class="variable">@brand-squares</td>
+                    <td class="unicode">\e97c</td>
+                  </tr>
+                  <tr class="brand-stormy">
+                    <td class="icon-brand"></td>
+                    <td>stormy</td>
+                    <td class="variable">@brand-stormy</td>
+                    <td class="unicode">\e97d</td>
+                  </tr>
+                  <tr class="brand-sunny">
+                    <td class="icon-brand"></td>
+                    <td>sunny</td>
+                    <td class="variable">@brand-sunny</td>
+                    <td class="unicode">\e97e</td>
+                  </tr>
+                  <tr class="brand-tablet">
+                    <td class="icon-brand"></td>
+                    <td>tablet</td>
+                    <td class="variable">@brand-tablet</td>
+                    <td class="unicode">\e97f</td>
+                  </tr>
+                  <tr class="brand-three_stripes_horiz">
+                    <td class="icon-brand"></td>
+                    <td>three stripes horiz</td>
+                    <td class="variable">@brand-three_stripes_horiz</td>
+                    <td class="unicode">\e980</td>
+                  </tr>
+                  <tr class="brand-three_stripes_vert">
+                    <td class="icon-brand"></td>
+                    <td>three stripes vert</td>
+                    <td class="variable">@brand-three_stripes_vert</td>
+                    <td class="unicode">\e981</td>
+                  </tr>
+                  <tr class="brand-ticket">
+                    <td class="icon-brand"></td>
+                    <td>ticket</td>
+                    <td class="variable">@brand-ticket</td>
+                    <td class="unicode">\e982</td>
+                  </tr>
+                  <tr class="brand-todolist_add">
+                    <td class="icon-brand"></td>
+                    <td>todolist add</td>
+                    <td class="variable">@brand-todolist_add</td>
+                    <td class="unicode">\e983</td>
+                  </tr>
+                  <tr class="brand-todolist_check">
+                    <td class="icon-brand"></td>
+                    <td>todolist check</td>
+                    <td class="variable">@brand-todolist_check</td>
+                    <td class="unicode">\e984</td>
+                  </tr>
+                  <tr class="brand-todolist">
+                    <td class="icon-brand"></td>
+                    <td>todolist</td>
+                    <td class="variable">@brand-todolist</td>
+                    <td class="unicode">\e985</td>
+                  </tr>
+                  <tr class="brand-trash_bin">
+                    <td class="icon-brand"></td>
+                    <td>trash bin</td>
+                    <td class="variable">@brand-trash_bin</td>
+                    <td class="unicode">\e986</td>
+                  </tr>
+                  <tr class="brand-tshirt">
+                    <td class="icon-brand"></td>
+                    <td>tshirt</td>
+                    <td class="variable">@brand-tshirt</td>
+                    <td class="unicode">\e987</td>
+                  </tr>
+                  <tr class="brand-tv_monitor">
+                    <td class="icon-brand"></td>
+                    <td>tv monitor</td>
+                    <td class="variable">@brand-tv_monitor</td>
+                    <td class="unicode">\e988</td>
+                  </tr>
+                  <tr class="brand-umbrella">
+                    <td class="icon-brand"></td>
+                    <td>umbrella</td>
+                    <td class="variable">@brand-umbrella</td>
+                    <td class="unicode">\e989</td>
+                  </tr>
+                  <tr class="brand-upload_folder">
+                    <td class="icon-brand"></td>
+                    <td>upload folder</td>
+                    <td class="variable">@brand-upload_folder</td>
+                    <td class="unicode">\e98a</td>
+                  </tr>
+                  <tr class="brand-upload">
+                    <td class="icon-brand"></td>
+                    <td>upload</td>
+                    <td class="variable">@brand-upload</td>
+                    <td class="unicode">\e98b</td>
+                  </tr>
+                  <tr class="brand-variable">
+                    <td class="icon-brand"></td>
+                    <td>variable</td>
+                    <td class="variable">@brand-variable</td>
+                    <td class="unicode">\e98c</td>
+                  </tr>
+                  <tr class="brand-video_cam">
+                    <td class="icon-brand"></td>
+                    <td>video cam</td>
+                    <td class="variable">@brand-video_cam</td>
+                    <td class="unicode">\e98d</td>
+                  </tr>
+                  <tr class="brand-volume_higher">
+                    <td class="icon-brand"></td>
+                    <td>volume higher</td>
+                    <td class="variable">@brand-volume_higher</td>
+                    <td class="unicode">\e98e</td>
+                  </tr>
+                  <tr class="brand-volume_lower">
+                    <td class="icon-brand"></td>
+                    <td>volume lower</td>
+                    <td class="variable">@brand-volume_lower</td>
+                    <td class="unicode">\e98f</td>
+                  </tr>
+                  <tr class="brand-volume_off">
+                    <td class="icon-brand"></td>
+                    <td>volume off</td>
+                    <td class="variable">@brand-volume_off</td>
+                    <td class="unicode">\e990</td>
+                  </tr>
+                  <tr class="brand-watch">
+                    <td class="icon-brand"></td>
+                    <td>watch</td>
+                    <td class="variable">@brand-watch</td>
+                    <td class="unicode">\e991</td>
+                  </tr>
+                  <tr class="brand-waterfall">
+                    <td class="icon-brand"></td>
+                    <td>waterfall</td>
+                    <td class="variable">@brand-waterfall</td>
+                    <td class="unicode">\e992</td>
+                  </tr>
+                  <tr class="brand-website_1">
+                    <td class="icon-brand"></td>
+                    <td>website 1</td>
+                    <td class="variable">@brand-website_1</td>
+                    <td class="unicode">\e993</td>
+                  </tr>
+                  <tr class="brand-website_2">
+                    <td class="icon-brand"></td>
+                    <td>website 2</td>
+                    <td class="variable">@brand-website_2</td>
+                    <td class="unicode">\e994</td>
+                  </tr>
+                  <tr class="brand-wine">
+                    <td class="icon-brand"></td>
+                    <td>wine</td>
+                    <td class="variable">@brand-wine</td>
+                    <td class="unicode">\e995</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <nav class="section-nav">
+          <h2 class="section-nav__heading"><a>In this section</a></h2>
+          <ul>
+            <li><a href="../#Branding" class="section-nav__parent">Branding</a>
+              <ul>
+                <li><a href="brand-icons.html" title="Brand icons">Brand icons</a>
+                </li>
+                <li><a href="speech-line.html" title="Speech line">Speech line</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <footer data-track-zone="footer" id="footer" class="main-footer">
+      <div class="styleguide--footer">
+        <div>
+          <p><img alt="" height="100" src="../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../js/translate.js"></script>
+    <script src="../js/jquery.fn.cssSlide.js"></script>
+    <script src="../js/revealable.js"></script>
+    <script src="../js/prism.js"></script>
+    <script src="../js/smooth.js"></script>
+    <script src="../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>

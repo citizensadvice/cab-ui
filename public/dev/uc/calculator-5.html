@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Universal Credit calculator
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../../css/guide.css" rel="stylesheet">
+    <link href="../../images/favicon/32.png" rel="shortcut icon">
+    <link href="../../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="main-header">
+      <div class="main-header__content"><a href="index.html" title="Citizens Advice home" class="main-header__logo"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo_100px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo_100px.svg" height="80"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo-hz-white-280px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo-hz-white-280px.svg" class="main-header__img--mobile no-print wide"></a>
+        <div data-track-zone="top-bar" class="main-header__links"><a href="" class="main-header__menu-link js-toggle-menu"><i class="icon-menu"></i>Menu</a>
+          <nav class="main-header__top-nav"><a href="#">Cymraeg</a></a><a href="" class="hide-offline main-header__login"><i class="icon-key"></i>Sign-in</a></nav>
+          <form action="" class="main-header__search hide-offline">
+            <label for="main-header__search__input" class="screenreader">Search</label>
+            <input id="main-header__search__input" name="q" placeholder="" type="search" class="main-header__search__input">
+            <button title="Search" type="submit" class="main-header__search__submit"><i class="icon-search icon--no-text"></i><span class="screenreader">Search</span></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav data-track-zone="main-nav" style="overflow: visible;" class="main-nav">
+      <ul class="nav-list-primary">
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Benefits</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Work</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Debt and money</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Consumer</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Relationships</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Housing</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Law and rights</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Discrimination</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Tax</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Healthcare</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Education</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">More from us</a></li>
+        <li style="display: none;" class="nav-list-primary-more js-more-menu"><a href="#">More<i class="icon-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../../index.html#templates" title="Templates">Templates</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Advisor content</span>
+        </div>
+      </nav>
+      <aside class="section-notice">
+        <h2 class="screenreader">Notice</h2>
+        <div class="section-notice__content">
+          <p><span class="badge">NEW</span>This page is part of <a href="#">our new approach to digital advice</a>.</p>
+        </div>
+      </aside>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="title">
+            <h1 class="title__heading js-ref"><span class="title__title">Universal Credit calculator</span></h1>
+          </div>
+          <div class="title__subheading">This advice is for
+            <button id="showSimpleModal" type="button" class="btn-secondary btn-small"><span class="screenreader">This advice is for</span>England</button>
+            <button href="javascript:emailCurrentPage()" data-track="Email page" class="toolbar-button a-social-email">Share this advice</button>
+            <button href="javascript:window.print();" data-track="Print" class="toolbar-button a-social-print">Print</button>
+          </div>
+          <div class="articleContent">
+            <div>
+              <fieldset>
+                <legend for="radio">Are you a carer for someone with severe physical or learning difficulties?</legend>
+                <label class="radio radio--block">
+                  <input checked name="radio" type="radio" value="option1">Yes
+                </label>
+                <label class="radio radio--block">
+                  <input name="radio" type="radio" value="option2">No
+                </label>
+              </fieldset><a href="calculator-4.html" class="btn-light left-button-icon">Back</a><a href="calculator-6.html" type="button" class="btn right-button-icon">Continue</a>
+            </div>
+          </div>
+        </div>
+        <!-- Set the number at the end to the array position of the active page-->
+        <nav class="section-nav">
+          <h2 class="section-nav__heading"><a>In this section</a></h2>
+          <ul>
+            <li><a href="../#Section title" class="section-nav__parent">Section title</a>
+              <ul>
+                <li><a href="#" title="Sibling page 1">Sibling page 1</a>
+                </li>
+                <li><a href="#" title="Sibling page 2">Sibling page 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-feedback">
+      <h2 class="screenreader">Feedback</h2>
+      <div class="footer-feedback__content">
+        <p>Is there anything wrong with this page? <a href="#">Let us know</a>.</p>
+      </div>
+    </div>
+    <div id="footer" data-track-zone="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Debt and money</a></li>
+            <li><a href="#">Consumer</a></li>
+            <li><a href="#">Relationships</a></li>
+            <li><a href="#">Housing</a></li>
+            <li><a href="#">Law and rights</a></li>
+            <li><a href="#">Discrimination</a></li>
+            <li><a href="#">Tax</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">A to Z of advice</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Resources and tools</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Budgeting tool</a></li>
+            <li><a href="#">Advice fact sheets</a></li>
+            <li><a href="#">Advice online, by phone and in person</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>More from us</h2>
+          <ul class="li--arrow">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Annual reports</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Campaigns</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Policy research</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">Volunteering</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>About Citizens Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">How we provide advice</a></li>
+            <li><a href="#">The difference we make</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">How Citizens Advice works</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer and copyright</a></li>
+            <li><a href="#">Privacy and cookies</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p><img alt="" height="100" src="../../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../../js/translate.js"></script>
+    <script src="../../js/jquery.fn.cssSlide.js"></script>
+    <script src="../../js/revealable.js"></script>
+    <script src="../../js/prism.js"></script>
+    <script src="../../js/smooth.js"></script>
+    <script src="../../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>

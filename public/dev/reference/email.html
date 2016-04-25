@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide- Your personalised content
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../../css/guide.css" rel="stylesheet">
+    <link href="../../images/favicon/32.png" rel="shortcut icon">
+    <link href="../../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body>
+    <header class="main-header email-header">
+      <div class="main-header__content email-width"><a href="index.html" title="Citizens Advice home" class="main-header__logo"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo_100px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo_100px.svg" height="80"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo-hz-white-280px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo-hz-white-280px.svg" class="main-header__img--mobile no-print wide"></a></div>
+    </header>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+      </nav>
+      <div class="main-content email-width">
+        <div id="main" role="main" class="main-content__right"></div>
+        <div class="articleContent">
+          <div class="flex-container">
+            <div class="flex-row">
+              <div class="form col-xs-12 col-md-8">
+                <h2 style="margin-top:0;">Your saved advice</h2>
+                <p>The below advice has been sent to <a href="#">youremail@domain.name</a> from FirstName SurName. You can click directly on the links to take you back to the advice on the website.</p>
+                <div class="email-links">
+                  <div class="email-links-breadcrumb">Sick or disabled people and carers  >  PIP</div>
+                  <h2>Applying for ESA</h2>
+                </div>
+                <div class="email-links">
+                  <div class="email-links-breadcrumb">Sick or disabled people and carers  >  PIP</div>
+                  <h2>Applying for ESA</h2>
+                </div>
+                <div class="email-links">
+                  <div class="email-links-breadcrumb">Sick or disabled people and carers  >  PIP</div>
+                  <h2>Applying for ESA</h2>
+                </div>
+                <div class="callout--related">
+                  <h3>More Help</h3>
+                  <p>If you have any questions or need help, contact our Benefits helpline 020 0000 0000. Calls are charged at local rates</p>
+                </div>
+              </div>
+              <div class="form col-xs-12 col-md-4">
+                <div style="color:#004b88; background-color:#fcbb69;" class="cards">
+                  <div class="card-banner-top">
+                    <p style="color:#004b88;">Campaigns</p>
+                  </div>
+                  <div class="card-image-top"><img src="../../images/pen_heritageblue_RGB.svg" alt="Pen"></div>
+                  <div class="card-text">
+                    <p>Support our campaign to tell Government to make ESA #fitforwork.</p>
+                    <button type="button" style="background-color:#004b88; border-color:#004b88; color:#fff;" class="btn btn-primary right-button-icon">Continue</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer" data-track-zone="footer" class="main-footer">
+      <div class="footer-content flex-row"></div>
+      <div class="footer--legal">
+        <div class="footer--legal--content"><img alt="" src="../../images/ca_wo-logo-100px.svg">
+          <p>Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.<br>Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD<br>Click here to <a href="#" style="color:#fff; text-decoration:underline;">unsubscribe</a> from receiving any emails.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../../js/translate.js"></script>
+    <script src="../../js/jquery.fn.cssSlide.js"></script>
+    <script src="../../js/revealable.js"></script>
+    <script src="../../js/prism.js"></script>
+    <script src="../../js/smooth.js"></script>
+    <script src="../../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>

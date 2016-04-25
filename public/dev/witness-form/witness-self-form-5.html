@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords">
+    <meta name="description">
+    <!--base(href="#{dir}")-->
+    <title>Citizens Advice style guide
+    </title>
+    <!-- Mobile Specific Metas-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=2.0" name="viewport">
+    <meta content="48a2415d-980f-4763-a5b9-e10e000636b3" name="cab-guid">
+    <meta content="EWS" name="cab-extent">
+    <meta content="../../static/images/apple-touch-icon.png">
+    <meta content="B53C5C20449FC2233D3862B4DBEDFA3E" name="msvalidate.01">
+    <!-- Stylesheets-->
+    <link href="../../css/guide.css" rel="stylesheet">
+    <link href="../../images/favicon/32.png" rel="shortcut icon">
+    <link href="../../images/favicon/228.png" rel="apple-touch-icon">
+    <script>/**
+ *  @fileoverview
+ *
+ *  Scripts to go directly into the <head> element
+ *  These should be very small and therefore they should not be included as a file, but as inline JS
+ *  
+ *  This script needs minfiying before being added to the <head>
+ */
+
+( function (document, window ) {
+
+    /**
+     *	Update the no-js class to js
+     */
+    var html = document.documentElement;
+    html.className = html.className.replace(/\bno-js\b/, 'js');
+
+    /**
+     *	Creates a dummy version of $
+     *	Any functions add will be queued to run after jQuery is built and ready
+     */
+    window.$ = function (fn) {
+        var q = window.$.q = window.$.q || [];
+        q.push(fn);
+        if (typeof fn !== 'function') {
+            throw new Error('jQuery not yet loaded');
+        }
+    };
+
+    /**
+     *	Cookie banner
+     */
+    if (/\beprivacy=3(;|$)/i.test(document.cookie)) {
+        html.className += ' hide-cookie-monster';
+    }
+
+    /**
+     *  Are (session) cookies accepted
+     */
+    document.cookie = 'z=1; path=/';
+    if (/(?:^| )z=1(?:;|$)/.test(document.cookie)) {
+        document.cookie = 'z=; expires=' + new Date(0).toUTCString() + '; path=/';
+    } else {
+        html.className = html.className += ' no-cookies';
+    }
+
+}( document, window ));
+
+    </script>
+  </head>
+  <body><!--[if IE 8]><div class="ie8"><![endif]-->
+    <div class="skip-nav"><a class="screenreader screenreader--focusable">Skip to content</a><a class="screenreader screenreader--focusable">Skip to footer</a></div>
+    <header class="main-header">
+      <div class="main-header__content"><a href="index.html" title="Citizens Advice home" class="main-header__logo"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo_100px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo_100px.svg" height="80"><img onerror="this.onerror=null;this.src='../../images/logos/ca-logo-hz-white-280px.svg.png';" alt="Citizens Advice" src="../../images/ca-logo-hz-white-280px.svg" class="main-header__img--mobile no-print wide"></a>
+        <div data-track-zone="top-bar" class="main-header__links"><a href="" class="main-header__menu-link js-toggle-menu"><i class="icon-menu"></i>Menu</a>
+          <nav class="main-header__top-nav"><a href="#">Cymraeg</a></a><a href="" class="hide-offline main-header__login"><i class="icon-key"></i>Sign-in</a></nav>
+          <form action="" class="main-header__search hide-offline">
+            <label for="main-header__search__input" class="screenreader">Search</label>
+            <input id="main-header__search__input" name="q" placeholder="" type="search" class="main-header__search__input">
+            <button title="Search" type="submit" class="main-header__search__submit"><i class="icon-search icon--no-text"></i><span class="screenreader">Search</span></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav data-track-zone="main-nav" style="overflow: visible;" class="main-nav">
+      <ul class="nav-list-primary">
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Benefits</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Work</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Debt and money</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Consumer</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Relationships</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Housing</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Law and rights</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Discrimination</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Tax</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Healthcare</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">Education</a></li>
+        <li style="display: list-item;" class="top-item js-mega-menu"><a href="#">More from us</a></li>
+        <li style="display: none;" class="nav-list-primary-more js-more-menu"><a href="#">More<i class="icon-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <nav class="main-breadcrumb">
+        <div class="main-breadcrumb__content"><span class="breadcrumb__item"><a href="../../index.html" title="Home">Home</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item"><a href="../../index.html#templates" title="Witness Service">Witness Service</a><i class="icon-guillemet-right"></i></span><span class="breadcrumb__item">Referral form</span>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div id="main" role="main" class="main-content__right">
+          <div class="articleContent">
+            <div>
+              <h2>About the trial</h2>
+              <fieldset>
+                <label for="standardField">Please give the name or names of the defendant if you can<span class="optional">(optional)</span></label>
+                <input id="standardField" placeholder="" type="text">
+              </fieldset>
+              <h3>How are you involved in the trial?</h3>
+              <fieldset>
+                <legend for="exampleSelect1">Are you a witness?</legend>
+                <div class="dropdown">
+                  <select id="exampleSelect1">
+                    <option>I’m not sure/don’t know</option>
+                    <option>Yes, for the defence</option>
+                    <option>Yes, for the prosecution</option>
+                    <option>Yes, but I’m not sure who for</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </fieldset>
+              <!--fieldset
+              legend(for="exampleSelect2") Have you been affected by a crime that the trial is about?
+              .dropdown
+              	select#exampleSelect1
+              		option I’m not sure/don’t know
+              		option Yes, for the defence
+              		option Yes, for the prosecution
+              		option Yes, but I’m not sure who for
+              		option No
+              
+              -->
+              <!--fieldset
+              label(for="exampleTextarea") Please say what help you would like, or any other requirements or instructions
+              	span.optional (optional)
+              span.form-hint  For example if you prefer to be called on different numbers at different times of the day
+              textarea#exampleTextarea(rows="3")
+              
+              -->
+              <!--fieldset
+              legend(for="radio1") Are you a witness?
+              label.radio.radio--block
+              	input(name="radio1", type="radio", value="option1")
+              	| yes, for the defence
+              label.radio.radio--block
+              	input(name="radio1", type="radio", value="option1")
+              	| yes, for the prosecution
+              label.radio.radio--block
+              	input(name="radio1", type="radio", value="option1")
+              	| yes, but I’m not sure who for
+              label.radio.radio--block
+              	input(name="radio1", type="radio", value="option1")
+              	| no
+              label.radio.radio--block
+              	input(checked, name="radio1", type="radio", value="option1")
+              	| I’m not sure/don’t know
+              
+              -->
+              <!--fieldset
+              legend(for="radio") Have you been affected by a crime that the trial is about?
+              	span.optional (optional)
+              label.radio.radio--block
+              	input(name="radio", type="radio", value="option1")
+              	| yes, for the defence
+              label.radio.radio--block
+              	input(name="radio", type="radio", value="option1")
+              	| yes, for the prosecution
+              label.radio.radio--block
+              	input(name="radio", type="radio", value="option1")
+              	| yes, but I’m not sure who for
+              label.radio.radio--block
+              	input(name="radio", type="radio", value="option1")
+              	| no
+              label.radio.radio--block
+              	input(checked, name="radio", type="radio", value="option1")
+              	| I’m not sure/don’t know
+              
+              
+              
+              
+              --><a href="witness-self-form-4.html" class="btn-light left-button-icon">Back</a><a href="witness-self-form-6.html" class="btn right-button-icon">Next</a>
+            </div>
+          </div>
+        </div>
+        <div class="print-only">
+          <h2>This section is print only</h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-feedback">
+      <h2 class="screenreader">Feedback</h2>
+      <div class="footer-feedback__content">
+        <p>Is there anything wrong with this page? <a href="#">Let us know</a>.</p>
+      </div>
+    </div>
+    <div id="footer" data-track-zone="footer" class="main-footer">
+      <div class="main-footer__content flex-row js-equal-height">
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Debt and money</a></li>
+            <li><a href="#">Consumer</a></li>
+            <li><a href="#">Relationships</a></li>
+            <li><a href="#">Housing</a></li>
+            <li><a href="#">Law and rights</a></li>
+            <li><a href="#">Discrimination</a></li>
+            <li><a href="#">Tax</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">A to Z of advice</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>Resources and tools</h2>
+          <ul class="li--arrow">
+            <li><a href="#">Budgeting tool</a></li>
+            <li><a href="#">Advice fact sheets</a></li>
+            <li><a href="#">Advice online, by phone and in person</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>More from us</h2>
+          <ul class="li--arrow">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Annual reports</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Campaigns</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Policy research</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">Volunteering</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box col-md-3 col-sm-6">
+          <h2>About Citizens Advice</h2>
+          <ul class="li--arrow">
+            <li><a href="#">How we provide advice</a></li>
+            <li><a href="#">The difference we make</a></li>
+            <li><a href="#">Support us</a></li>
+            <li><a href="#">How Citizens Advice works</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer and copyright</a></li>
+            <li><a href="#">Privacy and cookies</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__box main-footer__box--copyright">
+          <div>
+            <p><img alt="" height="100" src="../../images/ca-logo_100px.svg" width="100">Copyright © 2016 Citizens Advice. All rights reserved.<br>Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057<br>VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England<br>Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Code changed, not using here as implimented through cms-->
+    <!--.notice
+    .notice__content
+    	p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider <a href="http://browsehappy.com/" class="a-external-link">upgrading your browser</a>.
+    
+    --><!--[if IE 8]></div><![endif]-->
+    <script src="../../js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="../../js/translate.js"></script>
+    <script src="../../js/jquery.fn.cssSlide.js"></script>
+    <script src="../../js/revealable.js"></script>
+    <script src="../../js/prism.js"></script>
+    <script src="../../js/smooth.js"></script>
+    <script src="../../js/jquery.fn.top-sticky.js"></script>
+    <!--script(src="#{dir}js/advisor.js")-->
+    <script src="../../js/sidebar.js"></script>
+    <!--script(src="#{dir}js/core.js")-->
+    <script>
+      var filename = document.location.pathname.match(/[^\/]+$/)[0];
+      $(document).ready(function() {
+      	$('.section-nav a[href*="' + filename + '"]').addClass('active');
+      });
+    </script>
+  </body>
+</html>
