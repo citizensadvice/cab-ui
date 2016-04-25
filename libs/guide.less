@@ -1700,35 +1700,3 @@ div.tooltip:before {
         content: @brand-wine;
     }
 }
-
-.response {
-    margin: @box-spacing-vertical 0;
-    background-color: @white;
-    border-bottom: 1px solid @gray-6;
-    //padding: @box-spacing-vertical @box-spacing-horizontal;
-    padding-bottom: @box-spacing-vertical;
-    margin-bottom: @box-spacing-vertical;
-    display: block;
-    overflow: hidden;
-    .q, .a {
-        display: inline-block;
-    }
-    .q {
-        font-weight: @font-weight-bold;
-        width: 69%;
-    }
-    .a {
-        text-align: right;
-        width: 30%;
-    }
-    .a a {
-        //float: right;
-        margin: 0;
-        cursor: pointer;
-        &:after {
-            .icon;
-            content: @i-undo;
-            padding-left: 1em/2;
-        }
-    }
-}

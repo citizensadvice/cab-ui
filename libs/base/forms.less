@@ -716,3 +716,37 @@ input[class*="dob-"] {
         content: '';
     }*/
 }
+
+.response {
+    margin: @box-spacing-vertical 0;
+    background-color: @white;
+    border-bottom: 1px solid @gray-6;
+    padding-bottom: @box-spacing-vertical;
+    margin-bottom: @box-spacing-vertical;
+    display: block;
+    overflow: hidden;
+    .response--q, .response--a {
+        display: inline-block;
+    }
+    .response--q {
+        font-weight: @font-weight-bold;
+    }
+    .response--a a {
+        margin: 0;
+        cursor: pointer;
+        &:after {
+            .icon;
+            content: @i-redo;
+            padding-left: 1em/2;
+        }
+    }
+    @media (min-width: @breakpoint-sm) {
+        .response--q {
+            width: 69%;
+        }
+        .response--a {
+            text-align: right;
+            width: 30%;
+        }
+    }
+}
