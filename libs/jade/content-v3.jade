@@ -62,7 +62,16 @@ block script
         $(document).ready(function($) {
             $('#get-advice').click(function(){
                 $(this).toggleClass("active");
-                $('#main-nav-2--dropdown').slideToggle('fast');
+                $('#main-nav-3--dropdown').slideToggle('fast');
+                $('#main-nav-3--dropdown-1').removeClass("active");
+            });
+        });
+    script.
+        $(document).ready(function($) {
+            $('#get-involved').click(function(){
+                $(this).toggleClass("active");
+                $('#main-nav-3--dropdown-1').slideToggle('fast');
+                $('#main-nav-3--dropdown').removeClass("active");
             });
         });
 
