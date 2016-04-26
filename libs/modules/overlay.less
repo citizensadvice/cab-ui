@@ -152,7 +152,7 @@
 }
 
 
-/* Overlay developed for print and reference functionality 
+/* Overlay developed for print and reference functionality
 
 see - ./dev/reference-action.html
 
@@ -216,10 +216,17 @@ see - ./dev/reference-action.html
 	-webkit-transition: opacity 0.6s;
 	-moz-transition: opacity 0.6s;
 	transition: opacity 0.6s;
-	overflow-y: scroll;
-	
+	overflow-y: auto;
+
 	h3 {
   		line-height: 2;
+	}
+
+	.dialog__close {
+		color: @heritage-blue;
+		position: fixed;
+		top: 1.5rem;
+		right: 0;
 	}
 }
 
