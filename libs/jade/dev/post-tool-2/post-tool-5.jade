@@ -1,0 +1,21 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam, massa sed mattis convallis, nunc risus consectetur urna, id pretium sem orci placerat turpis. Nunc a accumsan orci, in dignissim sapien.
+
+			a.btn-primary.email-button-icon(href="post-tool-6.html") Send and continue

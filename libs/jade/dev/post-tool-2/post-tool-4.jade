@@ -1,0 +1,43 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = false
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block script
+	script.
+		var x = ($('#letter').width())*1.414;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.414;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+block content
+	.articleContent
+		.flex-container
+			.flex-row
+				.form.col-xs-12.col-md-4
+					p This is what your email and letter to the services you chose will look like.
+					ul
+						li Local Electoral Registration
+						li The Mailing Preference Service
+						li Royal Mail
+						li Direct Marketing Association
+					p You can go back and make changes if you need to.
+
+					a.btn-light.left-button-icon(href="post-tool-3.html") Edit
+					a.btn.right-button-icon(href="post-tool-5.html") Next
+
+				#letter.col-xs-12.col-md-8
+					.letter-content
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce congue nisi sit amet tellus semper mollis. Integer ut congue ipsum. Pellentesque placerat sem ut tellus lacinia mattis. Sed viverra purus nec neque vehicula gravida.

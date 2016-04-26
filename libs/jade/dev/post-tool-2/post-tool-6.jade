@@ -1,0 +1,68 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			p Your local electoral registration office is listed below, and on your letter when you download it.
+
+			p You'll need to post or email them your letter as an attachment to be taken off the ‘open register’.
+
+			p It's worth checking their website to see whether they prefer to receive letters, or emails.
+
+			.well--outline
+				h2 Your letter for Royal Mail Door to Door
+
+				p
+					| Royal Mail Door to Door
+					br
+					| Address Line 1
+					br
+					| Address Line 2
+					br
+					| Town
+					br
+					| City
+					br
+					| Postcode
+
+				a.btn-secondary.save-button-icon(href="post-tool-7.html") Download
+
+			.well--outline
+				h2 London Borough of Bromley
+
+				p Visit the #[a(href="#") London Borough of Bromley website]
+
+				p Email: electoral@bromley.gov.uk
+
+				p Phone: 0300 3038665
+
+				p
+					| London Borough of Bromley
+					br
+					| Electoral Services
+					br
+					| Civic Centre
+					br
+					| Stockwell Close
+					br
+					| Bromley
+					br
+					| BR1 3UH
+
+				p
+					a.btn-secondary.save-button-icon(href="post-tool-7.html") Download
+
+			a.btn.right-button-icon(href="post-tool-7.html") Finish
