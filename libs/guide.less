@@ -986,6 +986,21 @@ div.tooltip:before {
     }
 }
 
+
+#repo {
+    display: inline-block;
+    float: right;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    color: @white;
+    &:after {
+        .icon;
+        color: @white;
+        content: @i-github;
+        padding-left: .5rem;
+    }
+}
+
 // Icons page
 .iconlist {
     .icon {
