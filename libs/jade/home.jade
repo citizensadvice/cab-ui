@@ -1,0 +1,242 @@
+block settings
+doctype html
+html
+	head
+		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(name="keywords")
+		meta(name="description")
+
+		title Citizens Advice style guide
+			- if (typeof title !== "undefined")
+				| - #{title}
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+		meta(content="EWS", name="cab-extent")
+		meta(content="/static/images/apple-touch-icon.png")
+		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
+
+		// Stylesheets
+		link(href="css/guide.css", rel="stylesheet")
+		link(href="images/favicon/32.png", rel="shortcut icon")
+		link(href="images/favicon/228.png", rel="apple-touch-icon")
+
+		// Javascript
+		script(src="js/vendor/jquery-1.11.3.min.js")
+		script(src="js/beta-dap-accordion.js")
+		script(src="js/collapse.js")
+		script(src="js/prism.js")
+		script(src="js/smooth.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.side-nav-beta a[href="' + filename + '"]').addClass('-current');
+			});
+
+		script.
+			$(document).ready(function($) {
+				$('#get-advice').click(function(){
+					$(this).toggleClass("active");
+					$('#main-nav-3--dropdown').slideToggle('fast');
+					$('#main-nav-3--dropdown-1').removeClass("active");
+				});
+			});
+		script.
+			$(document).ready(function($) {
+				$('#get-involved').click(function(){
+					$(this).toggleClass("active");
+					$('#main-nav-3--dropdown-1').slideToggle('fast');
+					$('#main-nav-3--dropdown').removeClass("active");
+				});
+			});
+
+	body
+		<!--[if IE 8]><div class="ie8"><![endif]-->
+		.skip-nav
+			a.screenreader.screenreader--focusable Skip to content
+			a.screenreader.screenreader--focusable Skip to footer
+
+		header#main-nav-1--branding
+			.content
+				ul
+					li
+						a Cymraeg
+					li
+						a Sign in
+
+		#main-nav-3--nav
+			.content
+				a.logo(href="index.html")
+					img(src="images/ca-logo-hz-280px.svg")
+				ul
+					li#get-advice
+						a Get Advice
+					li#get-involved
+						a Get Involved
+						
+				.search
+					.field-group.field-group--buttons
+						input(type="search", placeholder="Search")
+						div(style="display:table-cell;")
+						button.btn.btn-yellow
+							i.icon-search
+
+		#main-nav-3--dropdown(style="display:none;")
+			.content
+				ul
+					li
+						a(href="") Benefits
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Work
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Debt and money
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Consumer
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Relationship
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Housing
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Law and rights
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Discrimination
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Tax
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Healthcare
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Education
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") More from us
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+		#main-nav-3--dropdown-1(style="display:none;")
+			.content
+				ul
+					li
+						a(href="") About Citizens Advice
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Contact us
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Policy research
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Our blogs
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Campaigns
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") How Citizens Advice works
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Volunteer
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Jobs
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Press releases
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Support us
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") The difference we make
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					li
+						a(href="") Find your local Citizens Advice
+						br
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+		.main-container
+		.home-first
+			.home__content
+				.col-md-6.col-sm-12
+					h1 Welcome to Citizens Advice
+					p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
+				.col-md-3.col-sm-12
+		.home-second
+			.home__content
+				.flex-container.flex-row
+					div.col-sm-4.col-sm-12								
+							h2 Latest blog
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+					div.col-sm-4.col-sm-12
+						.blog-lead
+							.blog-name
+								p Latest Blog
+								h3 #[a(href="#") Payday loans: An improved market? ]
+							p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
+
+					div.col-sm-4.col-sm-12
+						.blog-lead
+							.blog-name
+								p Volunteer opportunities
+								h3 #[a(href="#") Become a volunteer in your community ]
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+		//.footer-feedback
+			h2.screenreader Feedback
+			.footer-feedback__content
+				p Is there anything wrong with this page? #[a(href="#") Let us know].
+
+		footer.main-footer(data-track-zone="footer", id="footer")
+			.styleguide--footer
+				div
+					p
+						img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+						| Copyright © 2015 Citizens Advice. All rights reserved.
+						br
+						| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
+						br
+						| VAT number 726 0202 76 Company limited by guarantee. Registered number 1436945 England
+						br
+						| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+
+
+		<!--[if IE 8]></div><![endif]-->
+		script(src="js/advisor.js")
+		script(src="js/core.js")
+		block script-bottom

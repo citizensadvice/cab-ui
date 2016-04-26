@@ -1,0 +1,37 @@
+/**
+ * Homepage
+ *
+ * Initial styling for site wide footer.
+ */
+
+.home-first {
+    background-color: @heritage-yellow-lighter;
+}
+
+.home-second {
+    background-color: @white;
+}
+
+.home__content {
+    .limit-width(@breakpoint-lg);
+    padding: @box-spacing-vertical @box-spacing-horizontal @box-spacing-vertical*2 @box-spacing-horizontal;
+    //max-width: @breakpoint-lg;
+}
+
+.blog-lead {
+    .blog-name {
+        p {
+            font-size: @font-size-small;
+            font-weight: @font-weight-base;
+            margin-bottom: 0.5rem;
+            color: @gray-3;
+        }
+        h2, h3 {
+            font-weight: @font-weight-bolder;
+            margin-top: 0;
+            a {
+                border-bottom: none;
+            }
+        }
+    }
+}
