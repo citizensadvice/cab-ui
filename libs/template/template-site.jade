@@ -43,32 +43,45 @@ html.no-js
 					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
 					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
-		header#main-nav-1--branding
-			.content
-				ul
-					li
-						a Cymraeg
-					li
-						a Sign in
+		header#main-nav-beta
+			.branding
+				.content
+					ul
+						li
+							a Cymraeg
+						li
+							a Sign in
+			.navigation
+				.content
+					a.logo(href="#{dir}index.html")
+						img.wide(src="#{dir}images/ca-logo-hz-280px.svg")
+						img.slim(src="#{dir}images/ca-logo-st-220px.svg")
 
-		#main-nav-3--nav
-			.content
-				a.logo(href="#{dir}index.html")
-					img(src="#{dir}images/ca-logo-hz-280px.svg")
-				ul
-					li#get-advice
-						a Get Advice
-					li#get-involved
-						a Get Involved
-
-				.search
-					.field-group.field-group--buttons
-						input(type="search", placeholder="Search")
-						div(style="display:table-cell;")
-						button.btn.btn-yellow
+					ul
+						li#get-advice
+							a
+								span Get&nbsp;
+								span Advice
+						li#get-involved
+							a
+								span Get&nbsp;
+								span Involved
+						li#search-toggle
 							i.icon-search
 
-		#main-nav-3--dropdown(style="display:none;")
+					.search
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Search")
+							button.btn
+								i.icon-search
+
+		#main-nav-beta--search
+			.field-group.field-group--buttons
+				input#field(type="search", placeholder="Search")
+				button.btn
+					i.icon-search
+
+		#main-nav-beta--advice
 			.content
 				ul
 					li
@@ -120,7 +133,7 @@ html.no-js
 						br
 						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-		#main-nav-3--dropdown-1(style="display:none;")
+		#main-nav-beta--involved
 			.content
 				ul
 					li
@@ -263,31 +276,60 @@ html.no-js
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
-			});
 
-			$(document).ready(function($) {
+				// Click #get-advice
 				$('#get-advice').click(function(){
-					if ($('#get-involved').hasClass("active")) {
+					// If either of the other two are active
+					if ($('#get-involved').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						// Remove class from other two
 						$('#get-involved').removeClass("active");
-						$('#main-nav-3--dropdown-1').slideUp('fast');
-						$('#main-nav-3--dropdown').delay(250).slideDown('fast');
+						$('#search-toggle').removeClass("active");
+						// Slide other two up
+						$('#main-nav-beta--involved').slideUp('fast');
+						$('#main-nav-beta--search').slideUp('fast');
+						// Wait 250ms and then slide down
+						$('#main-nav-beta--advice').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-3--dropdown').slideToggle('fast');
+						$('#main-nav-beta--advice').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
-			});
 
-			$(document).ready(function($) {
+				// Click #get-advice
 				$('#get-involved').click(function(){
-					if ($('#get-advice').hasClass("active")) {
+					// If either of the other two are active
+					if ($('#get-advice').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						// Remove class from other two
 						$('#get-advice').removeClass("active");
-						$('#main-nav-3--dropdown').slideUp('fast');
-						$('#main-nav-3--dropdown-1').delay(250).slideDown('fast');
+						$('#search-toggle').removeClass("active");
+						// Slide other two up
+						$('#main-nav-beta--advice').slideUp('fast');
+						$('#main-nav-beta--search').slideUp('fast');
+						// Wait 250ms and then slide down
+						$('#main-nav-beta--involved').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-3--dropdown-1').slideToggle('fast');
+						$('#main-nav-beta--involved').slideToggle('fast');
+					}
+					$(this).toggleClass("active");
+				});
+
+				// Click #get-advice
+				$('#search-toggle').click(function(){
+					// If either of the other two are active
+					if ($('#get-involved').hasClass("active") || $('#get-advice').hasClass("active")) {
+						// Remove class from other two
+						$('#get-advice').removeClass("active");
+						$('#get-involved').removeClass("active");
+						// Slide other two up
+						$('#main-nav-beta--involved').slideUp('fast');
+						$('#main-nav-beta--advice').slideUp('fast');
+						// Wait 250ms and then slide down
+						$('#main-nav-beta--search').delay(250).slideDown('fast');
+
+					} else {
+						$('#main-nav-beta--search').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
