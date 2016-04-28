@@ -178,30 +178,33 @@ html.no-js
 
 			block section-notice
 
-			.main-content
-				if sidebar
-					.main-content__right(id="main", role="main")
-						if title
-							.title
-								h1.title__heading.js-ref
-									span.title__title #{title}
-						if toolbars
-							include toolbar.jade
-							block content
-							if sharebar
-								include sharebar.jade
-						else
-							block content
+			if fullpage
+				block content
+			else
+				.main-content
+					if sidebar
+						.main-content__right(id="main", role="main")
+							if title
+								.title
+									h1.title__heading.js-ref
+										span.title__title #{title}
+							if toolbars
+								include toolbar.jade
+								block content
+								if sharebar
+									include sharebar.jade
+							else
+								block content
 
-					block sidebar
-				else
-					.title
-						h1.title__heading.js-ref
-							span.title__title #{title}
-					block content
+						block sidebar
+					else
+						.title
+							h1.title__heading.js-ref
+								span.title__title #{title}
+						block content
 
-				.print-only
-					h2 This section is print only
+					.print-only
+						h2 This section is print only
 
 		#footer.main-footer(data-track-zone="footer")
 			.footer-content.flex-row
