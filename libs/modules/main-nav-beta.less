@@ -58,9 +58,11 @@
 		.logo:focus {
 			border: none !important;
 			background: none;
+			.vertical-align(absolute);
+			left: 1rem;
 			img {
-				.vertical-align(absolute);
-				left: 1rem;
+				display: block;
+				vertical-align: top;
 				&.wide {
 					display: none;
 					width: 220px;
@@ -129,6 +131,8 @@
 					@media screen and (min-width: @breakpoint-sm) {
 						font-size: 1.2rem;
             			line-height: 3.9rem;
+						padding-left: 1.25rem;
+						padding-right: 1.25rem;
             		}
 					@media screen and (min-width: @breakpoint-md) {
 						display: none;
@@ -153,10 +157,16 @@
 				padding-top: .3rem;
 				padding-bottom: .3rem;
 			}
+			input:focus {
+				border-color: @heritage-yellow;
+			}
 	        button {
 	        	background-color: @heritage-yellow;
 	        	border-color: @white;
 	        	margin: 0;
+				&:focus {
+					border-color: @heritage-blue-light;
+				}
 	        }
 	    }
 	}
@@ -178,10 +188,16 @@
 		padding-top: .5rem;
 		padding-bottom: .5rem;
 	}
+	input:focus {
+		border-color: @heritage-yellow;
+	}
     button {
     	background-color: @heritage-yellow;
     	border-color: @white;
     	margin: 0;
+		&:focus {
+			border-color: @heritage-blue-light;
+		}
     }
 	@media screen and (min-width: @breakpoint-md) {
 		display: none !important;
