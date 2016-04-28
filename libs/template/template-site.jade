@@ -267,19 +267,29 @@ html.no-js
 
 			$(document).ready(function($) {
 				$('#get-advice').click(function(){
+					if ($('#get-involved').hasClass("active")) {
+						$('#get-involved').removeClass("active");
+						$('#main-nav-3--dropdown-1').slideUp('fast');
+						$('#main-nav-3--dropdown').delay(250).slideDown('fast');
+
+					} else {
+						$('#main-nav-3--dropdown').slideToggle('fast');
+					}
 					$(this).toggleClass("active");
-					$('#main-nav-3--dropdown').slideToggle('fast');
-					$('#main-nav-3--dropdown-1').slideUp('fast');
-					$('#get-involved').removeClass("active");
 				});
 			});
 
 			$(document).ready(function($) {
 				$('#get-involved').click(function(){
+					if ($('#get-advice').hasClass("active")) {
+						$('#get-advice').removeClass("active");
+						$('#main-nav-3--dropdown').slideUp('fast');
+						$('#main-nav-3--dropdown-1').delay(250).slideDown('fast');
+
+					} else {
+						$('#main-nav-3--dropdown-1').slideToggle('fast');
+					}
 					$(this).toggleClass("active");
-					$('#main-nav-3--dropdown-1').slideToggle('fast');
-					$('#main-nav-3--dropdown').slideUp('fast');
-					$('#get-advice').removeClass("active");
 				});
 			});
 		block script
