@@ -2,7 +2,6 @@
     max-width: @breakpoint-lg;
     padding: 0 1rem;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 #main-nav-beta {
@@ -91,17 +90,24 @@
             	display: inline-block;
             	margin: 0;
             	cursor: pointer;
+				font-weight: @font-weight-bolder;
+                text-align: center;
+				vertical-align: top;
 				padding: .5rem .5rem;
+                line-height: 1.25rem;
 				@media screen and (min-width: @breakpoint-sm) {
 					padding: 0 1rem;
+            		line-height: 3.9rem;
+            		font-size: 1.2rem;
 				}
 				@media screen and (min-width: @breakpoint-md) {
 	            	&:hover {
 	            		background-color: @blue-lighter;
 	            	}
 				}
-                color: @heritage-blue;
-                text-align: center;
+            	&.active {
+            		background-color: @blue-lighter;
+            	}
 				a,
 				a:hover,
 				a:active,
@@ -109,27 +115,25 @@
 				a:focus {
 					border: none;
 					background: none;
-					font-weight: @font-weight-bolder;
                 	color: @heritage-blue;
-                	line-height: 1.25rem;
                 	span {
                 		display: block;
+						@media screen and (min-width: @breakpoint-sm) {
+	            			display: inline;
+						}
                 	}
+				}
+				a:focus span {
+					outline: @heritage-yellow solid 2px;
 					@media screen and (min-width: @breakpoint-sm) {
-						font-size: 1.2rem;
-            			line-height: 3.9rem;
-            			span {
-            				display: inline-block;
-            			}
+            			outline: none;
 					}
 				}
 				&#search-toggle {
-					vertical-align: top;
 					line-height: 2.5rem;
 					padding-left: .75rem;
 					padding-right: .75rem;
 					@media screen and (min-width: @breakpoint-sm) {
-						font-size: 1.2rem;
             			line-height: 3.9rem;
 						padding-left: 1.25rem;
 						padding-right: 1.25rem;
@@ -138,9 +142,6 @@
 						display: none;
 					}
 				}
-            	&.active {
-            		background-color: @blue-lighter;
-            	}
             }
         }
         .search {
@@ -207,12 +208,10 @@
 #main-nav-beta--advice,
 #main-nav-beta--involved {
     background-color: @blue-lighter;
-    overflow: hidden;
     .content {
         max-width: @breakpoint-lg;
         padding: 1.5rem 1.5rem .5rem 1.5rem;
         margin: 0 auto;
-        overflow: hidden;
         ul {
             list-style: none;
             padding-left: 0;
