@@ -116,18 +116,16 @@
 					border: none;
 					background: none;
                 	color: @heritage-blue;
+                	display: inline-block;
+					@media screen and (min-width: @breakpoint-sm) {
+            			display: inline;
+					}
                 	span {
                 		display: block;
 						@media screen and (min-width: @breakpoint-sm) {
 	            			display: inline;
 						}
                 	}
-				}
-				a:focus span {
-					outline: @heritage-yellow solid 2px;
-					@media screen and (min-width: @breakpoint-sm) {
-            			outline: none;
-					}
 				}
 				&#search-toggle {
 					line-height: 2.5rem;
