@@ -49,7 +49,7 @@ gulp.task( 'clean-less', function() {
 gulp.task( 'less', function() {
 
 	var postCssPlugins = [
-		autoprefixer({ browsers: ['> 1%','ie >= 8'] }),
+		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
 		rgbaFallback,
 		opacity,
 		pixrem,
