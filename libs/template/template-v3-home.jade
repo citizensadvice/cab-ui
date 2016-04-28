@@ -17,20 +17,20 @@ html
 		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
 		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
 		meta(content="EWS", name="cab-extent")
-		meta(content="/static/images/apple-touch-icon.png")
+		meta(content="../../static/images/apple-touch-icon.png")
 		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
 
 		// Stylesheets
-		link(href="css/guide.css", rel="stylesheet")
-		link(href="images/favicon/32.png", rel="shortcut icon")
-		link(href="images/favicon/228.png", rel="apple-touch-icon")
+		link(href="../../css/guide.css", rel="stylesheet")
+		link(href="../../images/favicon/32.png", rel="shortcut icon")
+		link(href="../../images/favicon/228.png", rel="apple-touch-icon")
 
 		// Javascript
-		script(src="js/vendor/jquery-1.11.3.min.js")
-		script(src="js/beta-dap-accordion.js")
-		script(src="js/collapse.js")
-		script(src="js/prism.js")
-		script(src="js/smooth.js")
+		script(src="../../js/vendor/jquery-1.11.3.min.js")
+		script(src="../../js/beta-dap-accordion.js")
+		script(src="../../js/collapse.js")
+		script(src="../../js/prism.js")
+		script(src="../../js/smooth.js")
 		script.
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
@@ -64,7 +64,7 @@ html
 			#main-nav-3--nav
 				.content
 					a.logo(href="index.html")
-						img(src="images/ca-logo-hz-280px.svg")
+						img(src="../../images/ca-logo-hz-280px.svg")
 					ul
 						li#get-advice
 							a Get Advice
@@ -190,8 +190,8 @@ html
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;images/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;../../images/ca-logo_100px.svg.png&#39;;", src="../../images/ca-logo_100px.svg")
+					img.print-only.logo(src="../../images/ca-logo-hz-280px.svg")
 
 		else if logoutheader
 			aside.section-notice__login
@@ -201,19 +201,19 @@ html
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;../../Static/images/logos/ca-logo_100px.svg.png&#39;;", src="../../images/ca-logo_100px.svg")
+					img.print-only.logo(src="../../images/ca-logo-hz-280px.svg")
 
 		else
 			header.styleguide--header
 				.styleguide--header--content
 					a(href="index.html")
-						img(src="images/ca-logo-hz-white-280px.svg")
+						img(src="../../images/ca-logo-hz-white-280px.svg")
 			//header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/images/logos/ca-logo_100px.svg.png&#39;;", src="images/ca-logo_100px.svg")
-					img.print-only.logo(src="images/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;../../Static/images/logos/ca-logo_100px.svg.png&#39;;", src="../../images/ca-logo_100px.svg")
+					img.print-only.logo(src="../../images/ca-logo-hz-280px.svg")
 
 		.main-container
 			nav.main-breadcrumb
@@ -339,7 +339,7 @@ html
 					.main-footer__box.main-footer__box--copyright
 						div
 							p
-								img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+								img(alt="", height="100", src="../../images/ca-logo_100px.svg", width="100")
 								| Copyright © 2015 Citizens Advice. All rights reserved.
 								br
 								| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -353,7 +353,7 @@ html
 				.styleguide--footer
 					div
 						p
-							img(alt="", height="100", src="images/ca-logo_100px.svg", width="100")
+							img(alt="", height="100", src="../../images/ca-logo_100px.svg", width="100")
 							| Copyright © 2015 Citizens Advice. All rights reserved.
 							br
 							| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -362,11 +362,11 @@ html
 							br
 							| Registered office: Citizens Advice, 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
 
-		.notice
+		//.notice
 			.notice__content
 				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider upgrading to #[a.a-external-link(href="#") Google Chrome].
 
 		<!--[if IE 8]></div><![endif]-->
-		script(src="js/advisor.js")
-		script(src="js/core.js")
+		script(src="../../js/advisor.js")
+		script(src="../../js/core.js")
 		block script-bottom

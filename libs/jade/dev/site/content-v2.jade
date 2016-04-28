@@ -4,8 +4,9 @@ block settings
     - var toolbars = true
     //- var cookiemonster = true
     - var mockup = true
+    - var dir = "../../"
 
-extends ../template/template-v1.jade
+extends /template/template-v2.jade
 
 block breadcrumbs
     +breadcrumbs([
@@ -25,11 +26,12 @@ block sidebar
         {title: "Changes that affect your PIP"}
         ],0)
 
+
     .cards.side-nav-beta(style="color:#fff; background-color:#32457E;")
         .card-banner-top
             p(style="color:#fff;") Policy
         .card-image-top
-            img(src="images/laptop-branding.png" alt="Laptop")
+            img(src="#{dir}images/laptop-branding.png" alt="Laptop")
         .card-text
             p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
             button.btn.btn-primary.right-button-icon(type="button" style="background-color:#FFBF47; border-color:#FFBF47;") Continue
@@ -50,46 +52,20 @@ block sidebar
         h3 An example of a quote in a report when the speech line should be used instead of the speech bubble
         p Quote from William Shakespear 1690
         .box-speech-line
+//block section-notice
+    aside.section-notice--dev
+        h2.screenreader Notice
+        .section-notice--dev__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
 block script
     script.
         $(document).ready(function($) {
-            $('#1').hover(function() {
-                $(this).addClass("active");
-                clearTimeout(this.timer);
-                $(this).find('.submenu').show();
-            }, function() {
-                this.timer = setTimeout(function() {
-                    console.log(this);
-                    $('#1').removeClass("active");
-                    $('#1').find('.submenu').hide();
-                }, 125);
-            });
-            $('#2').hover(function() {
-                $(this).addClass("active");
-                clearTimeout(this.timer);
-                $(this).find('.submenu').show();
-            }, function() {
-                this.timer = setTimeout(function() {
-                    console.log(this);
-                    $('#2').removeClass("active");
-                    $('#2').find('.submenu').hide();
-                }, 125);
-            });
-
-            $('.burger').find('span').click(function(){
+            $('#get-advice').click(function(){
                 $(this).toggleClass("active");
-                $('.mobile-submenu').slideToggle('fast');
+                $('#main-nav-2--dropdown').slideToggle('fast');
             });
         });
-
-block section-notice
-    aside.section-notice--dev
-        h2.screenreader Notice
-        .section-notice--dev__content
-            p
-                span.badge NEW
-                | This page is new – #[a(href="#") your feedback] will help us to improve it.
 
 block content
     .articleContent
