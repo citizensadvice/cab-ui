@@ -1,0 +1,37 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			p Use this tool to easily contact up to 4 organisations that will help to reduce the amount of junk mail you get through the post.
+			p This tool will allow you to email:
+			ul
+				li Royal Mail Door to Door
+				li Mailing Preference Service
+				li Direct Marketing Association’s ‘Your Choice’ scheme
+
+			p It will also give you a letter to download and send to organisations that can reduce your junk mail
+			ul
+				li Your local electoral registration office
+
+			p You’ll still get mail from organisations that you’ve asked to send you marketing material, for example charities or businesses.
+
+			.callout
+				h3 Additional things you can do
+				p Put a ‘no junk mail’ sign on your door or letterbox to help stop junk mail that's delivered door-to-door - for example takeaway menus
+				p You can order stickers online from the #[a.a-external(href="#") Stop Junk Mail Campaign].
+
+			a.btn.right-button-icon(href="post-tool-2.html") Start

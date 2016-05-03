@@ -1,0 +1,47 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			h2 Send emails or download your letter
+			p We recommend sending to all organisations below to remove as much junk mail as possible from your post.
+
+			.well
+				h3 Email Royal Mail 'Door to Door'
+				p Charities, businesses and other organisations often pay Royal Mail to deliver marketing post for them. Tick this box to send an email to Royal Mail saying that you don't want this marketing post.
+				p They’ll send you a form to fill in.
+				a.btn-secondary.email-button-icon(href="#") Send email
+
+			.well
+				h3 Email the ‘Your Choice’ scheme
+				p The ‘Your Choice’ scheme allows you to get less marketing mail from various organisations, including government, political parties, charities, and businesses. You’ll still get any post that’s directly addressed to you.
+				p They’ll send you a form to fill in.
+				a.btn-secondary.email-button-icon(href="#") Send email
+
+			.well
+				h3 Email the Mailing Preference Service
+				p The Mailing Preference Service keep a list of people who don’t want to get marketing post. Businesses that check this list will stop sending you mail. You’ll receive a confirmation email.
+				a.btn.tick-button-icon(href="#") Email sent
+
+			.well
+				h3 Write to your electoral registration office
+				p Your local electoral registration office keeps a list of addresses called the ‘open register’. This list can be bought and used it to send junk mail. It won’t affect your right to vote.
+				a.btn-secondary.save-button-icon(href="#") Download letter
+
+			.callout
+				p You’ll start to see a difference in the amount of junk mail you receive within the next 4 weeks.
+
+				p Put a ‘no junk mail’ sign on your door or letterbox to help stop junk mail that's delivered door-to-door straight away. You also can order stickers online from the #[a.a-external(href="#") Stop Junk Mail Campaign].
