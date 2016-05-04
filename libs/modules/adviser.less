@@ -25,17 +25,16 @@ span[id*="overlay_button"] {
         @text-color,
         @callout-border: @inventive-teal-light
     );
-        border-top: 0px;
-        border-right: 0px;
-        border-bottom: 0px;
-    .callout--border--left;
+        border-width: 1px;
+        //border-left: 0px;
+    //.callout--border--left;
     .callout--icon("Adviser");
     &:before {
         color: @inventive-teal;
         font-weight: @font-weight-bolder;
         font-size: @font-size-base;
         background-color: @white;
-        padding: .5rem 0 0 1rem;
+        padding: .75rem 0 0 1rem;
     }
 }
 
@@ -55,5 +54,29 @@ span[id*="overlay_button"] {
     .-current {
         background-color: lighten(@inventive-teal-lighter, 5%) !important;
         border-color: @inventive-teal-lighter !important;
+    }
+}
+
+.collapsible--adviser, // This needs to be removed eventually
+.revealable--adviser {
+    .revealable(
+        @background: lighten(@inventive-teal-lightest, 9%);
+        @heading: @inventive-teal;
+        @border: @inventive-teal-light;
+        @icon: @inventive-teal-light;
+    );
+        border-width: 1px 1px 0px 0.5rem;
+    .collapse-toggle:before,
+    .revealable__heading:before {
+        content: "A";
+        display: inline-block;
+        background-color: @inventive-teal;
+        color: @white;
+        width: 1.7rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-base;
+        //font-weight: @font-weight-bolder;
+        //border-radius: 1px;
     }
 }
