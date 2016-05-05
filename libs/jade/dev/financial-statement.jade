@@ -1,0 +1,126 @@
+- var title = "Debt page"
+- var sidebar = true
+- var mockup = true
+- var dir = "../"
+
+doctype html
+html
+	head
+		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(name="keywords")
+		meta(name="description")
+
+		title Citizens Advice financial statement
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+		meta(content="EWS", name="cab-extent")
+		meta(content="#{dir}static/images/apple-touch-icon.png")
+		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
+
+		// Stylesheets
+		link(href="#{dir}css/guide.css", rel="stylesheet")
+		link(href="#{dir}images/favicon/32.png", rel="shortcut icon")
+		link(href="#{dir}images/favicon/228.png", rel="apple-touch-icon")
+
+	body
+		#financial-statement
+			div(style="clear:both;")
+				img(onerror="this.onerror=null;this.src='#{dir}images/logos/ca-logo-hz-280px.svg.png';", alt="Citizens Advice", src="#{dir}images/ca-logo-hz-280px.svg")
+
+			section
+				h1 Financial statement
+				table.lines
+					tr
+						td(width="50%") Name
+						td(width="50%") Address
+					tr
+						td Number of adults
+						td &nbsp;
+					tr
+						td &nbsp;
+						td &nbsp;
+					tr
+						td &nbsp;
+						td &nbsp;
+					tr
+						td &nbsp;
+						td Postcode
+
+			section
+				h2 Income
+				table
+					tbody
+						tr
+							td Table cell
+							td.amount £00.00
+						tr
+							td Table cell
+							td.amount £00.00
+					tfoot
+						tr
+							td Total
+							td.amount £00.00
+
+			section
+				h2 Outgoing
+				table
+					tbody
+						tr
+							td Table cell
+							td.amount £00.00
+						tr
+							td Table cell
+							td.amount £00.00
+					tfoot
+						tr
+							td Total
+							td.amount £00.00
+
+			section
+				h2 Debts
+				table
+					tbody
+						tr
+							td Table cell
+							td.amount £00.00
+						tr
+							td Table cell
+							td.amount £00.00
+					tfoot
+						tr
+							td Total
+							td.amount £00.00
+
+			section
+				h2 Extra information
+				table.lines
+					tr
+						td &nbsp;
+					tr
+						td &nbsp;
+					tr
+						td &nbsp;
+					tr
+						td &nbsp;
+
+			section
+				h2 Confirmation
+				table.lines
+					tr
+						td(width="50%") Your name
+						td &nbsp;
+					tr
+						td Signature
+						td &nbsp;
+
+				table.lines
+					tr
+						td(width="50%") Your partner's name
+						td &nbsp;
+					tr
+						td Signature
+						td &nbsp;
