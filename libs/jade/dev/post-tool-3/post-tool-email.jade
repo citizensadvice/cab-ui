@@ -6,30 +6,37 @@ extends /template/email-template.jade
 
 block content
 	.articleContent
-		h1(style="margin-top:0;") Your saved advice
+		h1(style="margin-top:0;") Letter for your electoral office - reduce junk mail
 
-		p This is a confirmation of your emails sent to Royal Mail, ‘Your Choice’ scheme and Mailing Preference Service.
+		p Hi,
 
-		h2 Your letter for your local electoral registration office
-		p You'll also need to print the attached PDF and send it to the following address.
-		p
-			strong London Borough of Bromley
+		p We’ve attached a letter for you to send to your local electoral office so they can remove you from the ‘open register’. This won’t affect your right to vote.
 
-		p Visit the #[a(href="#") London Borough of Bromley website]
+		p Your local electoral office is: #[strong London Borough of Bromley]
 
-		p Email: electoral@bromley.gov.uk
+		.well
+			p Website: #[a(href="http://www.bromley.gov.uk/", target="_blank") www.bromley.gov.uk]
+			p Email: electoral@bromley.gov.uk
+			p Phone: 0300 3038665
+			p
+				| London Borough of Bromley
+				br
+				| Electoral Services
+				br
+				| Civic Centre
+				br
+				| Stockwell Close
+				br
+				| Bromley
+				br
+				| BR1 3UH
 
-		p Phone: 0300 3038665
+		p You can either:
 
-		p
-			| London Borough of Bromley
-			br
-			| Electoral Services
-			br
-			| Civic Centre
-			br
-			| Stockwell Close
-			br
-			| Bromley
-			br
-			| BR1 3UH
+		ul
+			li email this PDF as an attachment
+			li download it and send it in the post
+
+		p Check your local electoral office’s website to find out whether they prefer to get letters or emails.
+
+		p Once you’ve sent it, you’ll start to see a difference in the amount of junk mail you get in about a month.
