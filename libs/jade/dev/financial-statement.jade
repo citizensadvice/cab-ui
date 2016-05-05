@@ -45,9 +45,6 @@ html
 						td &nbsp;
 					tr
 						td &nbsp;
-						td &nbsp;
-					tr
-						td &nbsp;
 						td Postcode
 
 			section
@@ -57,13 +54,16 @@ html
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 					tfoot
 						tr
 							td Total
 							td.amount £00.00
+							td(width="30%") &nbsp;
 
 			section
 				h2 Outgoing
@@ -72,13 +72,16 @@ html
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 					tfoot
 						tr
 							td Total
 							td.amount £00.00
+							td(width="30%") &nbsp;
 
 			section
 				h2 Debts
@@ -87,13 +90,16 @@ html
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 						tr
 							td Table cell
 							td.amount £00.00
+							td(width="30%") &nbsp;
 					tfoot
 						tr
 							td Total
 							td.amount £00.00
+							td(width="30%") &nbsp;
 
 			section
 				h2 Extra information
@@ -109,18 +115,21 @@ html
 
 			section
 				h2 Confirmation
-				table.lines
-					tr
-						td(width="50%") Your name
-						td &nbsp;
-					tr
-						td Signature
-						td &nbsp;
+				.row(style="clear:both;overflow:auto;")
+					.span6
+						table.lines
+							tr
+								td(width="50%") Your name
+								td &nbsp;
+							tr
+								td Signature
+								td &nbsp;
 
-				table.lines
-					tr
-						td(width="50%") Your partner's name
-						td &nbsp;
-					tr
-						td Signature
-						td &nbsp;
+					.span6
+						table.lines
+							tr
+								td(width="50%") Partner's name
+								td &nbsp;
+							tr
+								td Signature
+								td &nbsp;
