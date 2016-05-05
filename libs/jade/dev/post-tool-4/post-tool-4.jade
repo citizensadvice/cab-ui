@@ -26,7 +26,7 @@ block script
 					$( this ).addClass( "btn-loading" ).html("Sending...");
 					$( this ).delay(800).queue(function(){
 					    $( this ).removeClass( "btn-loading" );
-					    $( this ).addClass( "btn-success" ).addClass( "tick-button-icon" ).html("Sent");
+					    $( this ).addClass( "btn-success" ).addClass( "tick-button-icon" ).css( "cursor", "not-allowed" ).html("Sent");
 					});
 				}
 			});
@@ -53,7 +53,7 @@ block content
 			.well
 				h3 Email the Mailing Preference Service
 				p The Mailing Preference Service keep a list of people who don’t want to get marketing post. Businesses that check this list will stop sending you mail. You’ll receive a confirmation email.
-				button#3.btn-secondary.email-button-icon Email sent
+				button#3.btn-secondary.email-button-icon Send email
 
 			.well
 				h3 Write to your electoral registration office
