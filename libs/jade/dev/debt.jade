@@ -1,0 +1,80 @@
+block settings
+	- var title = "Debt page"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Volunteering with the Citizens Advice network"}])
+
+block sidebar
+	include /template/sidebar-modules.jade
+
+block content
+	.articleContent
+		.well--outline
+			h2 Credit card, store card debts or payday loans
+				a.remove-field.remove.u-pull-right(style="font-size: 1rem;") Remove
+			fieldset
+				label(for="standardField") Name of creditor
+				input#standardField(placeholder="", type="text")
+			fieldset
+				label(for="standardField") Total debt owed
+				input#standardField(placeholder="", type="text")
+			fieldset
+				label(for="standardField") Amount you're paying back&nbsp;
+					span.optional (optional)
+				.field-group.field-group--dropdown
+					input#field(type="number")
+					.dropdown
+						select#exampleSelect1
+							option Daily
+							option Monthly
+							option Yearly
+		.well--outline
+			h2 Credit card, store card debts or payday loans
+				a.remove-field.remove.u-pull-right(style="font-size: 1rem;") Remove
+			fieldset
+				label(for="standardField") Name of creditor
+				input#standardField(placeholder="", type="text")
+			fieldset
+				label(for="standardField") Total debt owed
+				input#standardField(placeholder="", type="text")
+			fieldset
+				label(for="standardField") Amount you're paying back&nbsp;
+					span.optional (optional)
+				.field-group.field-group--dropdown
+					input#field(type="number")
+					.dropdown
+						select#exampleSelect1
+							option Daily
+							option Monthly
+							option Yearly
+
+		#add-more.well
+			label(style="display:block;") Add arrears
+			.field#fieldOptions
+				.dropdown(style="width:100%;")
+					select#select
+						option Choose from the list
+						option Mortgage or rent arrears or arrears for any loans secured against your home
+						option Council Tax arrears
+						option Credit card, store card debts or payday loans
+						option Bank or building society loans arrears
+						option Personal loans
+						option Catalogue, home credit or in-store credit debts arrears
+						option Overdraft charges arrears
+						option Money borrowed from friends or family
+						option Income Tax, National Insurance and VAT
+						option Gas and electricity bills arrears
+						option Child maintenance arrears
+						option TV licence arrears
+						option Hire purchase agreements arrears
+						option Court fines arrears
+						option Student loans arrears
+						option Other direct payments for arrears
