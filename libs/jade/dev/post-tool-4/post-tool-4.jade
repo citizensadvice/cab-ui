@@ -13,6 +13,25 @@ block breadcrumbs
 		{title: "Templates", href: dir + "index.html#templates"},
 		{title: "Content"}])
 
+block script
+	script.
+		$(document).ready(function() {
+			$('#1, #2, #3, #4').click(function(){
+				var count = parseInt($(this).data('click'), 10) || 0;
+				count++;
+				$(this).data('click',count);
+
+				if ( count <= 1 ) {
+					$( this ).removeClass( "btn-secondary" ).removeClass( "email-button-icon" );
+					$( this ).addClass( "btn-loading" ).html("Sending...");
+					$( this ).delay(800).queue(function(){
+					    $( this ).removeClass( "btn-loading" );
+					    $( this ).addClass( "btn-success" ).addClass( "tick-button-icon" ).html("Sent");
+					});
+				}
+			});
+		});
+
 block content
 	.articleContent
 		div
@@ -23,23 +42,23 @@ block content
 				h3 Email Royal Mail 'Door to Door'
 				p Charities, businesses and other organisations often pay Royal Mail to deliver marketing post for them. Tick this box to send an email to Royal Mail saying that you don't want this marketing post.
 				p They’ll send you a form to fill in.
-				a.btn-secondary.email-button-icon(href="#") Send email
+				button#1.btn-secondary.email-button-icon Send email
 
 			.well
 				h3 Email the ‘Your Choice’ scheme
 				p The ‘Your Choice’ scheme allows you to get less marketing mail from various organisations, including government, political parties, charities, and businesses. You’ll still get any post that’s directly addressed to you.
 				p They’ll send you a form to fill in.
-				a.btn-secondary.email-button-icon(href="#") Send email
+				button#2.btn-secondary.email-button-icon Send email
 
 			.well
 				h3 Email the Mailing Preference Service
 				p The Mailing Preference Service keep a list of people who don’t want to get marketing post. Businesses that check this list will stop sending you mail. You’ll receive a confirmation email.
-				a.btn.tick-button-icon(href="#") Email sent
+				button#3.btn-secondary.email-button-icon Email sent
 
 			.well
 				h3 Write to your electoral registration office
 				p Your local electoral registration office keeps a list of addresses called the ‘open register’. This list can be bought and used it to send junk mail. It won’t affect your right to vote.
-				a.btn-secondary.save-button-icon(href="#") Download letter
+				button#4.btn-secondary.email-button-icon Send letter to myself
 
 			.callout
 				p You’ll start to see a difference in the amount of junk mail you receive within the next 4 weeks.
