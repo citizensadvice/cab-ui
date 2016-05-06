@@ -38,6 +38,41 @@ span[id*="overlay_button"] {
     }
 }
 
+.adviser-only {
+    padding-right: 2.7rem !important;
+    //border-right: 4px solid @inventive-teal;
+    //background-color: lighten(@inventive-teal-lightest, 7%);
+    position: relative;
+    &:before {
+        content: "A";
+        display: inline-block;
+        //background-color: @inventive-teal-lighter;
+        border: 1px solid @inventive-teal-lightest;
+        color: @inventive-teal;
+        width: 1.5rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-base;
+        border-radius: 2px;
+        .vertical-align(absolute);
+        right: .5rem;
+        //float: right;
+        font-size: .8em;
+    }
+    &.-current:before {
+        background-color: @inventive-teal;
+        border-color: @inventive-teal;
+        color: @white;
+    }
+    &:hover:before {
+        background-color: @white;
+    }
+    &.-current:hover:before {
+        background-color: @inventive-teal;
+        color: @white;
+    }
+}
+
 
 .adviser-nav {
     .side-nav-beta__sibling {
