@@ -1,0 +1,17 @@
+block settings
+	- var title = "Search results"
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search results"}])
+
+block script
+
+block content
+	.flex-container.flex-row
+		.col-sm-8.col-xs-12
+			
