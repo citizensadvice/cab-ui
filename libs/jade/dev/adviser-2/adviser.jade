@@ -17,41 +17,7 @@ block breadcrumbs
 block sidebar
 	include /template/sidebar-modules.jade
 
-block script
-	script.
-		$(document).ready(function() {
-			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'>Save<span class='d' style='display:none;'>d</span></span>");
-
-			$( ".save-button" ).on( "click", function() {
-				$( this ).toggleClass( "saved" );
-				$( this ).prev().toggleClass( "saved" );
-				$( this ).find(".d").toggle();
-				// Show the savebar
-				$( ".savebar" ).addClass("show");
-
-				// Checks if there are any .saved classes on the page.
-				// If not hide the savebar.
-				if ( $( ".saved" ).length ) {
-					$( ".savebar span.count" ).html( $( ".saved" ).length / 2 );
-					// Show/hide 's' in 'items' depending on count.
-					if ( $( ".saved" ).length > 1 ) {
-						$( ".count-s" ).show();
-					} else {
-						$( ".count-s" ).hide();
-					}
-				} else {
-					$( ".savebar" ).removeClass("show");
-				}
-			});
-		});
-
 block content
-	#pinmockup.articleContent(style="position: relative;")
-		.savebar
-			.alert #[span.count] saved item#[span.count-s(style="display: none;") s]
-			.button View&nbsp;
-
-		// DUMMY TEXT FOR DAYZ!
 		p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
 
 		p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.

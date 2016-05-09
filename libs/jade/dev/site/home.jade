@@ -1,0 +1,62 @@
+block settings
+	- var title = "Volunteering with the Citizens Advice network"
+	- var fullpage = true
+	- var dir = "../../"
+	- var newfooter = true
+
+extends /template/template-site.jade
+
+block content
+		.main-container
+		.home-first
+			.home__content
+				.flex-container.flex-row
+					.col-md-6.col-sm-12
+						h1 Welcome to Citizens Advice
+						p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
+						.home__content-trends
+							h2 Most viewed 
+							p #[a(href="#") Employment Support Allowance ]
+							p #[a(href="#") Personal Independence Payment ]
+							p #[a(href="#") Basic rights at work ]
+							p #[a(href="#") Report to Trading Standards ]
+							p #[a(href="#") Consumer ]
+					.col-md-6.col-sm-12.hide-mobile.home--feature
+						img(src="../../images/sample-blog/man_on_phone.svg" alt="" style="width:100%;")
+
+
+		.home-second
+			.home__content
+				.flex-container.flex-row
+					div.col-sm-4.col-sm-12								
+						.blog-lead
+							.blog-name
+								p Issues affecting people
+						.data-display
+							p.data-display-intro Problems at work
+							p We research issues affecting people everyday and lobby Government to change policy.
+							h3 380,000
+							p employment issues in 2015
+							h3 84%
+							p increase in unauthorised deduction from wages
+							p #[a(href="#") Read more about our research ]		
+
+					div.col-sm-4.col-sm-12
+						.blog-lead
+							.blog-name
+								p Latest Blog
+								h3 #[a(href="#") Payday loans: An improved market? ]
+							img(src="../../images/sample-blog/adviser-needs.jpg" alt="Blog image" style="width:100%;")
+							p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
+
+					div.col-sm-4.col-sm-12.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
+						.card-banner-top
+							p(style="color:#57486b;") Help others
+						.card-text
+							img(src="../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+							p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+							fieldset
+								label(for="standardField", style="color:#57486b;") Search your area
+								input#standardField(placeholder="", type="text")
+
+							button.btn.btn-secondary.right-button-icon Search roles

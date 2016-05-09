@@ -1,0 +1,64 @@
+block settings
+	- var title = "Personal Independence Payment (PIP)"
+	- var fullpage = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Benefits"}])
+
+block content
+	.fullwidth-content
+			h1 Personal Independence Payment (PIP)
+			p Personal Independence Payment (PIP) is extra money to help you with everyday life if you’ve an illness, disability or mental health condition.
+
+			p You can get it on top of Employment and Support Allowance or other benefits. Your income, savings, and whether you’re working or not don’t affect your eligibility.
+
+	.fullwidth-content
+		.flex-container.flex-row
+			.col-md-8.col-sm-12
+				.contents-page__section
+					h2 Before you claim PIP
+					p #[a(href="#") Check if you’re eligible for PIP]
+					p #[a(href="#") PIP: presence, residence and length of condition rules]
+					p #[a(href="#") How much PIP you can get and for how long]
+					p #[a(href="#") Extra money and help PIP entitles you to]
+					p #[a(href="#") Moving from DLA to PIP]
+
+				.contents-page__section
+					h2 Help with your PIP claim
+					p #[a(href="#") How to claim PIP]
+					p #[a(href="#") How to claim PIP if you have a terminal illness]
+					p #[a(href="#") Help filling in your PIP claim form]
+					p #[a(href="#") Getting evidence to support your PIP claim]
+					p #[a(href="#") Sending your PIP claim form]
+					p #[a(href="#") Preparing for your PIP assessment]
+					p #[a(href="#") Changes that affect your PIP]
+
+				.contents-page__section
+					h2 PIP appeals
+					p #[a(href="#") Challenging a PIP decision - mandatory reconsideration]
+					p #[a(href="#") Challenging a PIP decision - apply for a tribunal hearing]
+					p #[a(href="#") Challenging a PIP decision - the tribunal hearing]
+					p #[a(href="#") How the DWP makes a decision on PIP claims]
+				.contents-page__section
+					h2 PIP resources
+					p #[a(href="#") PIP resources for advisers]
+					p #[a(href="#") Letter to confirm the DWP has given you more time to send your PIP claim form]
+					p #[a(href="#") Letter to send evidence after your PIP claim form]
+
+			.col-md-4.col-sm-12
+				div.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
+					.card-banner-top
+						p(style="color:#57486b;") Help others
+					.card-text
+						img(src="../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+						p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+						fieldset
+							label(for="standardField", style="color:#57486b;") Search your area
+							input#standardField(placeholder="", type="text")
+
+						button.btn.btn-secondary.right-button-icon Search roles
