@@ -1,0 +1,20 @@
+block settings
+	- var title = "Find a local Citizens Advice"
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Local Citizens Advice"}])
+
+block script
+
+block content
+	label Enter your postcode or town name to find a Citizens advice near you, or #[a(href="#") use your devices location].
+	.field-group.field-group--buttons
+		input#field(type="search", placeholder="Enter your town name or postcode")
+		button.btn
+			i.icon-search
+	p Find local Citizens Advice in #[a(href="#") Northern Ireland].

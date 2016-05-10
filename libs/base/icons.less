@@ -14,8 +14,8 @@
     font-style: normal;
 }
 
-.icon() {
-    font-family: 'cab-icons' !important;
+.icon(@font: 'cab-icons';) {
+    font-family: @font !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -247,6 +247,21 @@
 // Depreciated styles, need to be fixed
 
 // For search box in header
+.icon-local {
+    &:before {
+        .icon(
+            @font: 'brand';
+        );
+        content: '\e936';
+        color: @heritage-blue-lighter;
+        font-size: @font-size-small;
+        margin: 0 .5rem;
+    }
+    li a {
+        color: @heritage-blue-lighter;
+    }
+}
+
 .icon-search:before {
     content: @i-search;
     .icon;
