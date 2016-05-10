@@ -19,15 +19,12 @@ span[id*="overlay_button"] {
 
 .callout--adviser,
 .dap-panel--adviser {
-        //box-shadow: 0px 0px 5px @gray-3;
+    border-width: 1px;
     .callout(
         lighten(@inventive-teal-lightest, 9%),
         @text-color,
         @callout-border: @inventive-teal-light
     );
-        border-width: 1px;
-        //border-left: 0px;
-    //.callout--border--left;
     .callout--icon("Adviser");
     &:before {
         color: @inventive-teal;
@@ -106,6 +103,6 @@ span[id*="overlay_button"] {
         margin-right: .5rem;
         font-weight: @font-weight-base;
         //font-weight: @font-weight-bolder;
-        //border-radius: 1px;
+        border-radius: 2px;
     }
 }
