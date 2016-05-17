@@ -1,0 +1,37 @@
+.index-page__box {
+	.callout(
+		@white,
+		@heritage-blue,
+		@callout-border: @gray-6
+	);
+	.callout--border;
+    .callout--border--top;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    border-radius: 2px;
+    & >:first-child {
+    	margin-top: 0;
+    }
+    & >:last-child {
+    	margin-bottom: 0;
+    }
+    h2 a {
+    	border: none;
+    	color: @heritage-blue;
+    }
+    .li--arrow {
+    	list-style: none;
+    	padding: 0;
+    	li {
+    		border: 0 solid @gray-6;
+    		//border-top-width: 1px;
+    		//padding-top: .5rem;
+    		padding-bottom: .25rem;
+    		a {
+    			//border: none;
+    		}
+    		&:last-child {
+    			margin-bottom: 0;
+    		}
+    	}
+    }
+}
