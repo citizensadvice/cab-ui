@@ -1,0 +1,223 @@
+block settings
+	- var title = "Benefits"
+	//- var fullpage = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Volunteering with the Citizens Advice network"}])
+
+block content
+	.index-page.flex-row.js-equal-height
+		.col-md-8
+			p It's important to make sure that you get all the help that you're entitled to. These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran. There is also information about council tax and housing costs, national insurance, payment of benefits and problems with benefits.
+	.index-page.flex-row.js-equal-height
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Benefits - introduction
+			ul.li--arrow
+				li
+					a Benefit calculators: what benefits can you get
+				li
+					a National insurance – contributions and benefits
+				li
+					a Payment of benefits and tax credits
+				li
+					a Problems with benefits and tax credits
+		.index-page__box.col-md-4.col-sm-6
+			h2 A to Z of benefits
+			p An A to Z listing of all the benefits covered in our advice pages
+			form
+				label.screenreader A to Z of benefits
+				.custom-dropdown
+					select(required="")
+						option Please select…
+						option Asbestos-related illness benefit
+						option Attendance allowance
+						option Benefits cap
+						option Bereavement benefits
+						option Budgeting loans
+						option Carer's allowance
+						option Child benefit
+						option Child tax credit
+						option Cold weather payments
+						option Community care grants
+						option Constant attendance allowance
+						option Crisis loans
+						option Disability living allowance
+						option Disablement benefit
+						option Education maintenance allowance
+						option Employment and support allowance
+						option Exceptionally severe disablement allowance
+						option Funeral payments
+						option Guardians allowance
+						option Housing benefit
+						option Incapacity benefit
+						option Income support
+						option Industrial injuries disablement benefit
+						option Jobseeker's allowance
+						option Maternity allowance
+						option Maternity grants
+						option Pension credit
+						option Personal Independence Payment
+						option Reduced earnings allowance
+						option Retirement allowance
+						option Severe disablement allowance
+						option Social fund
+						option State retirement pension
+						option Statutory sick pay
+						option Universal Credit
+						option War pension
+						option War widow's/widower's pension
+						option Widowed Parent’s Allowance
+						option Widows' benefits
+						option Winter fuel payment
+						option Working tax credit
+					i.icon-down(aria-hidden="true")
+				button.custom-dropdown__button(data-track-submit="Index dropdown: A to Z of benefits", type="submit") Go
+		.index-page__box.col-md-4.col-sm-6
+			h2 Benefits search
+			p Search for articles in our benefits section.
+			form
+				label Benefits
+				.search-inline__field
+					input(placeholder="", type="search")
+				.search-inline__button
+					button(data-track-submit="Index search: Benefits search", type="submit") Search
+				input(type="hidden")
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Help if on a low income
+			ul.li--arrow
+				li
+					a Help with your rent - Housing Benefit
+				li
+					a Help with your Council Tax - Council Tax Reduction
+				li
+					a Help for people on a low income - Income Support
+				li
+					a Help for people on a low income - the Social Fund and other welfare schemes
+				li
+					a Foodbanks and other help in your area
+				li
+					a Help with health, education and legal costs
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a In work or looking for work
+			ul.li--arrow
+				li
+					a Benefits and tax credits for people in work
+				li
+					a Benefits for people looking for work
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Sick or disabled people and carers
+			ul.li--arrow
+				li
+					a Benefits for people who are sick or disabled
+				li
+					a Employment and Support Allowance (ESA)
+				li
+					a Personal Independence Payment
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Children and young people
+			ul.li--arrow
+				li
+					a Benefits for families and children
+				li
+					a Child Benefit and tax if you have a high income
+				li
+					a Young people and benefits
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Older people
+			ul.li--arrow
+				li
+					a Benefits for older people
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Coming from abroad and claiming benefits
+			ul.li--arrow
+				li
+					a The habitual residence test - an introduction
+				li
+					a British and Irish citizens
+				li
+					a EEA nationals
+				li
+					a Non-EEA nationals
+				li
+					a If you fail the habitual residence test
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Universal Credit
+			p Check if you're eligible to apply for Universal Credit, make an application and get advice on solving any problems you have.
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Housing Benefit restrictions for social housing tenants
+			ul.li--arrow
+				li
+					a Housing Benefit size restrictions in social housing
+				li
+					a Housing Benefit size restrictions in social housing: special circumstances
+				li
+					a Housing benefit size restrictions in social housing if you were living in the same home since 1 January 1996
+				li
+					a Housing Benefit size restrictions in social housing: what you can do
+				li
+					a Housing Benefit - bedroom calculator for social housing tenants
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a The Benefit Cap
+			ul.li--arrow
+				li
+					a What you need to know
+				li
+					a The Benefit Cap and Housing Benefit
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Bereavement
+			ul.li--arrow
+				li
+					a Benefits and bereavement
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Armed forces and veterans
+			ul.li--arrow
+				li
+					a Benefits and concessions for the Armed Forces, veterans and their families
+				li
+					a How reserve forces training can affect benefits
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Changes to Welfare benefits
+			ul.li--arrow
+				li
+					a Welfare benefits reform – what's changing
+				li
+					a Welfare benefits reform – what do the changes mean?
+				li
+					a Benefits changes timeline
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Benefits fact sheets
+			p Fact sheets covering social security benefits and tax credits.
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Benefits advice in BSL
+			p Find out about benefits you may be able to get, how to claim them and the help you can get from a Citizens Advice Bureau. Information in British Sign Language (BSL).
+		.index-page__box.col-md-4.col-sm-6
+			h2
+				a Other resources and tools
+			ul.li--arrow
+				li
+					a Bedroom calculator for social housing tenants
+				li
+					a Budgeting tool
+				li
+					a What to bring on your local Citizens Advice visit
