@@ -1,0 +1,45 @@
+block settings
+	- var title = "Maternity Pay"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			h2 Statutory maternity pay rights
+			.well--outline
+				p Use this to find out what dates you would need to have been working for your employer to be eligible for maternity pay.
+				.form-group-date
+					legend What date is your baby due?
+					fieldset
+						label(for="dob-day")
+							span.screenreader What date is your baby due,
+							| Day
+						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+					fieldset
+						label(for="dob-month") Month
+						input#dob-month(max="12", min="1", placeholder="MM", type="number")
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+				a.btn.right-button-icon(href="#") Submit
+
+			.well--outline
+				p You'll need to have started working on or before #[strong 5 January 2016]
+					br
+					| and still be working for them on #[strong 5 March 2016]
+
+
+				a.btn-secondary.restart-button-icon(href="#") Restart
+
