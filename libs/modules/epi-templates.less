@@ -35,3 +35,23 @@
     	}
     }
 }
+
+.page-list {
+    article {
+        //.well;
+        border-top: 2px solid @gray-7;
+        padding-top: .75rem;
+        margin-top: 1rem;
+        & .page-list-content >:first-child {
+            margin-top: 0;
+        }
+        & .page-list-content >:last-child {
+            margin-bottom: 0;
+        }
+        h2 a {
+            font-size: @font-size-medium;
+            border: none;
+            color: @heritage-blue;
+        }
+    }
+}
