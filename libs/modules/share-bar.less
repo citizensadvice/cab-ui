@@ -137,19 +137,23 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
                 }
             }
         }
-
-        &.share-bar__link--closed:focus span {
-            // Close the share bar link while it is still in focus
-            clip: rect(0 0 0 0);
-            width: 1px;
-            margin-left: -1px;
-        }
-
-        &.share-bar__link--closed:hover span {
-            // But still allow the link to be expanded when hovering
-            clip: auto;
-            width: 15em;
-            margin-left: -15em;
+        
+        @media (min-width: @screen-sm-min) {
+        
+            &.share-bar__link--closed:focus span {
+                // Close the share bar link while it is still in focus
+                clip: rect(0 0 0 0);
+                width: 1px;
+                margin-left: -1px;
+            }
+    
+            &.share-bar__link--closed:hover span {
+                // But still allow the link to be expanded when hovering
+                clip: auto;
+                width: 15em;
+                margin-left: -15em;
+            }
+            
         }
     }
 
