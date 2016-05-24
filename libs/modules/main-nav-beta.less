@@ -167,6 +167,8 @@
 				border-color: @white;
 				padding-top: .3rem;
 				padding-bottom: .3rem;
+                .ie(border-width,1px);
+                .ie(padding-bottom,.6em);
 			}
 			input:focus {
 				border-color: @heritage-blue-light;
@@ -174,7 +176,6 @@
 	        button {
 	        	background-color: @heritage-yellow;
 	        	border-color: @white;
-	        	//margin: 0;
 				&:focus {
 					border-color: @heritage-blue-light;
 				}
