@@ -128,6 +128,7 @@ block content
 
 			h2 Date field
 			p In date fields the question and field type need to be repeated in the first label, using the #[span.code screenreader] class.
+
 			.example-box-plain
 				.form-group-date
 					legend When did you buy your car?
@@ -135,13 +136,13 @@ block content
 						label(for="dob-day")
 							span.screenreader When did you buy your car? Date field,
 							| Day
-						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+						input#dob-day(placeholder="DD", maxlength="2", min="1", max="31",  name="day", type="number", pattern="\d{1,2}", autoComplete="off")
 					fieldset
 						label(for="dob-month") Month
-						input#dob-month(max="12", min="1", placeholder="MM", type="number")
+						input#dob-month(placeholder="MM", maxlength="2", min="1", max="12", name="month", type="number", pattern="\d{1,2}", autoComplete="off")
 					fieldset
 						label(for="dob-year") Year
-						input#dob-year(max="2100", placeholder="YYYY", type="number")
+						input#dob-year(placeholder="YYYY", maxlength="4",  min="1900", max="2100", name="year", type="number", pattern="\d{4}", autoComplete="off")
 			pre
 				code.language-html
 					| &lt;div class="form-group-date"&gt;
@@ -149,14 +150,14 @@ block content
 					| 	&lt;fieldset&gt;
 					|		&lt;!-- It's important to repeat the question and explain the field in the day label --&gt;
 					| 		&lt;label for="dob-day"&gt;&lt;span class="screenreader"&gt;When did you buy your car? Date field, &lt;/span&gt;Day&lt;/label&gt;
-					| 		&lt;input id="dob-day" max="31" min="1" placeholder="DD" type="number"&gt;
+					| 		&lt;input id="dob-day" placeholder="DD" maxlength="2" min="1" max="31"  name="day" type="number" pattern="\d{1,2}" autoComplete="off"&gt;
 					| 	&lt;/fieldset&gt;
 					| 	&lt;fieldset&gt;
 					| 		&lt;label for="dob-month"&gt;Month&lt;/label&gt;
-					| 		&lt;input id="dob-month" max="12" min="1" placeholder="MM" type="number"&gt;
+					| 		&lt;input id="dob-month" placeholder="MM" maxlength="2" min="1" max="12" name="month" type="number" pattern="\d{1,2}" autoComplete="off"&gt;
 					| 	&lt;/fieldset&gt;
 					| 	&lt;fieldset&gt;
 					| 		&lt;label for="dob-year"&gt;Year&lt;/label&gt;
-					| 		&lt;input id="dob-year" max="2100" placeholder="YYYY" type="number"&gt;
+					| 		&lt;input id="dob-year" placeholder="YYYY" maxlength="4"  min="1900" max="2100" name="year" type="number" pattern="\d{4}" autoComplete="off"&gt;
 					| 	&lt;/fieldset&gt;
 					| &lt;/div&gt;
