@@ -674,8 +674,11 @@ input[class*="dob-"] {
     fieldset, .fieldset {
         label {
             font-weight: @font-weight-bold;
-            padding: @box-spacing-vertical 0 @box-spacing-vertical*.5 0;
+            padding: @box-spacing-vertical*.75 @box-spacing-vertical;
             background-color: transparent;
+        }
+        input[type="checkbox"] {
+            padding: 0.75rem 1rem;
         }
     }
     input {
