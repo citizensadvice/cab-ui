@@ -530,7 +530,7 @@ input[class*="dob-"] {
 
 .field-group--buttons {
     input:first-of-type {
-        border-radius: @form-border-radius 0 0 @form-border-radius;
+        border-radius: @form-border-radius;
         width: 100%;
         display: inline-block;
         padding-right: 30%;
@@ -547,6 +547,9 @@ input[class*="dob-"] {
         margin-left: -30%;
         border-width: 2px;
         border-radius: 0;
+        &:last-of-type {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
         &:focus {
             outline: 0;
             border: 2px solid @heritage-yellow;
