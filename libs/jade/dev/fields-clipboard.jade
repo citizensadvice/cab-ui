@@ -1,0 +1,72 @@
+block settings
+	- var title = "Copy to clipboard"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Forms", href: dir + "index.html#Forms"},
+		{title: "Fields"}])
+
+block sidebar
+	include /template/sidebar-forms.jade
+
+// 3. Instantiate clipboard
+block script
+	script.
+		var clipboard = new Clipboard('.btn');
+
+		clipboard.on('success', function(e) {
+			console.log(e);
+		});
+
+		clipboard.on('error', function(e) {
+			console.log(e);
+		});
+
+		$(document).ready(function() {
+			$('button').click(function(){
+				//var count = parseInt($(this).data('click'), 10) || 0;
+				//count++; $(this).data('click',count);
+
+
+					$( this ).removeClass( "btn-secondary" ).removeClass( "save-button-icon" );
+					$( this ).addClass( "btn" ).html("Copied").addClass( "tick-button-icon" );
+
+					$( this ).delay(800).queue(function(){
+					    $( this ).removeClass( "btn");
+					    $( this ).addClass( "btn-secondary" ).removeClass("tick-button-icon").addClass("save-button-icon" ).html("Copy link");
+					    $(this).stop();
+					});
+				
+			});
+		});
+
+
+block content
+	.articleContent
+
+		p Copy to clipboard is an experimental pattern to enable users to copy the web page easily. This means that clients can share through any medium and not just pre-defined list of social sharing applications.
+
+		.example-box-plain
+			fieldset
+				label(for="field") Field group with copy to clipboard button
+				.field-group.field-group--buttons
+					input#pageurl(type="text" value="https://github.com/citizensadvice/cab-ui" readonly)
+					button.btn.btn-secondary.save-button-icon(data-clipboard-action="copy" data-clipboard-target="#pageurl") Copy link
+
+					script(src="#{dir}js/clipboard.min.js")
+
+		pre
+			code.language-html
+				| &lt;fieldset&gt;
+				| 	&lt;label for="field"&gt;Field group with copy to clipboard button&lt;/label&gt;
+				| 	&lt;div class="field-group field-group--buttons"&gt;
+				| 		&lt;input id="pageurl" type="text"&gt;
+				| 		&lt;button class="btn btn-secondary save-button-icon"&gt;Copy link&lt;/button&gt;
+				| 	&lt;/div&gt;
+				| &lt;/fieldset&gt;
+
