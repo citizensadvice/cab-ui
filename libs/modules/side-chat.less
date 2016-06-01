@@ -6,56 +6,70 @@
  */
 
 .side-chat {
-    background-color: @white;
-    //padding: 0 @box-spacing-horizontal;
+	background-color: @white;
+	//padding: 0 @box-spacing-horizontal;
 
-    & > .webchat h2 {
-	    font-size: @font-size-medium;
-	    line-height: @line-height-large;
-        margin: 0;
-        padding: @box-spacing-horizontal*.7 0;
-    }
+	& > .webchat h2 {
+		font-size: @font-size-medium;
+		line-height: @line-height-large;
+		margin: 0;
+		padding: @box-spacing-horizontal*.7 0;
+	}
 
-    & > .webchat .webchat__button {
-        margin-bottom: @box-spacing-horizontal;
-    }
+	& > .webchat .webchat__button {
+		margin-bottom: @box-spacing-horizontal;
+	}
 
 }
 
 /* Visuals for second iteration of webchat */
 
 .advice-chat {
-    margin: 0;
-    right: @box-spacing-horizontal;
-    bottom: 0;
-    position: fixed;
-    padding: @box-spacing-vertical/2 @box-spacing-horizontal 0 @box-spacing-horizontal;
-    background: @green-lighter;
-    border: solid @green-light;
-    border-width: 2px 2px 0 2px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: @form-border-radius*4 @form-border-radius*4 0 0;
-    overflow: hidden;
-    box-shadow: 0px 2px 8px @gray-5;
-    &:focus {
-        background-color: @green-light;
-        border: solid @green;
-        border-width: 2px 2px 0 2px;
-    }
-    @media (min-width: 600px) and (max-width: 750px)  {
-        display: none;
-    }
-    p {
-        font-weight: @font-weight-bold;
-        color: @heritage-blue;
-        margin: 0 0 .5em 0;
-    }
+	margin: 0;
+	right: @box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	padding: @box-spacing-vertical/2 @box-spacing-horizontal 0 @box-spacing-horizontal;
+	background: @green-lighter;
+	border: solid @green-light;
+	border-width: 2px 2px 0 2px;
+	z-index: 1;
+	cursor: pointer;
+	border-radius: @form-border-radius*2 @form-border-radius*2 0 0;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px @gray-5;
+	&:focus {
+		background-color: @green-light;
+		border: solid @green;
+		border-width: 2px 2px 0 2px;
+	}
+	@media (min-width: 600px) and (max-width: 750px)  {
+		display: none;
+	}
+	p {
+		font-weight: @font-weight-bold;
+		color: @heritage-blue;
+		margin: 0 0 .5em 0;
+	}
 }
 
 .advice-chat--session {
-    width: 20em;
-    height: 25em;
-    transition: .2s ease-in-out;
-    display: none;
+	width: 20em;
+	height: 25em;
+	transition: .2s ease-in-out;
+	display: none;
+}
+#chat-button-close {
+	text-align: right;
+	&:after {
+		.icon;
+		content: @i-cross;
+		padding-left: .5em;
+		color: @white;
+	}
+}
+#chat-advice {
+	button {
+		margin-top: 0;
+	}
 }

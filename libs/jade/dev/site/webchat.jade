@@ -132,9 +132,27 @@ block content
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
 	#chat-button.advice-chat(aria-checked="true" tabindex="0" role="button")
-		p.icon-chat Chat with an adviser now
+		p.icon-chat Chat with an adviser 
 
 	#chat-advice.advice-chat.advice-chat--session
+		//h3 Webchat
 		p#chat-button-close Close
+		.fieldset
+			label(for="standardField") Your name
+				span.optional &nbsp;(optional)
+			input#standardField(placeholder="", type="text")
+		.fieldset
+			label(for="exampleSelect1") What do you need advice on?
+			.dropdown
+				select#exampleSelect1
+					option Benefits
+					option Debt
+					option Housing
+					option Work
+		fieldset
+			label.checkbox.checkbox--block 
+				input(checked, name="checkbox", type="checkbox", value="option1")
+				| I consent to the webchat #[a.a-external-link(href="#") terms and conditions]
 
+		button.btn-secondary.right-button-icon(type="submit") Submit
 
