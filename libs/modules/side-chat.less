@@ -21,3 +21,51 @@
     }
 
 }
+
+/* Visuals for second iteration of webchat */
+
+.advice-chat {
+    margin: 0;
+    right: @box-spacing-horizontal;
+    bottom: 0;
+    position: fixed;
+    padding: @box-spacing-vertical/2 @box-spacing-horizontal 0 @box-spacing-horizontal;
+    background: @green-lighter;
+    border: solid @green-light;
+    border-width: 2px 2px 0 2px;
+    border-radius: @form-border-radius;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: @form-border-radius*4 @form-border-radius*4 0 0;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px @gray-5;
+    &:focus {
+        background-color: @green-light;
+        border: solid @green;
+        border-width: 2px 2px 0 2px;
+    }
+    @media (min-width: 600px) and (max-width: 750px)  {
+        display: none;
+    }
+    p {
+        font-weight: @font-weight-bold;
+        color: @heritage-blue;
+        margin: 0 0 .5em 0;
+    }
+    .alert,
+    .button {
+        display: inline-block;
+    }
+    .alert {
+        padding: 0 1rem;
+        &:before {
+            .icon;
+            content: @i-star;
+            padding-right: .5rem;
+            color: @yellow;
+        }
+    }
+    .button {
+        .btn-icon(@i-external-link);
+    }
+}

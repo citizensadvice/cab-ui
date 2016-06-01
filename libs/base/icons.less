@@ -268,6 +268,21 @@
     }
 }
 
+.icon-chat {
+    &:after {
+        .icon(
+            @font: 'brand';
+        );
+        content: '\e92b';
+        color: @heritage-blue;
+        font-size: @font-size-small;
+        margin: .35rem .35rem 0 .8rem;
+    }
+    li a {
+        color: @heritage-blue-lighter;
+    }
+}
+
 .icon-search:before {
     content: @i-search;
     .icon;
