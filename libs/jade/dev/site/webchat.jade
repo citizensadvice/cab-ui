@@ -15,6 +15,25 @@ block breadcrumbs
 block sidebar
 	include /template/sidebar-site-content.jade
 
+block script
+	script.
+		// Click #chat-button
+		$(document).ready(function() {
+			$('#chat-button').on('click', function(){
+				/*if ($('#chat-button').hasClass("active")) {
+					$('#chat-advice').slideUp('fast');
+				}
+				$(this).toggleClass("active");
+				console.log('troll');*/
+				$(this).hide();
+				$('#chat-advice').show();
+			});
+			$('#chat-button-close').on('click', function(){
+				$('#chat-advice').hide();
+				$('#chat-button').show();
+			});
+		});
+
 block content
 	.articleContent
 		div
@@ -112,5 +131,10 @@ block content
 				a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
-	.advice-chat(aria-checked="true" tabindex="0")
+	#chat-button.advice-chat(aria-checked="true" tabindex="0" role="button")
 		p.icon-chat Chat with an adviser now
+
+	#chat-advice.advice-chat.advice-chat--session
+		p#chat-button-close Close
+
+

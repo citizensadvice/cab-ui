@@ -33,7 +33,6 @@
     background: @green-lighter;
     border: solid @green-light;
     border-width: 2px 2px 0 2px;
-    border-radius: @form-border-radius;
     z-index: 1;
     cursor: pointer;
     border-radius: @form-border-radius*4 @form-border-radius*4 0 0;
@@ -52,20 +51,11 @@
         color: @heritage-blue;
         margin: 0 0 .5em 0;
     }
-    .alert,
-    .button {
-        display: inline-block;
-    }
-    .alert {
-        padding: 0 1rem;
-        &:before {
-            .icon;
-            content: @i-star;
-            padding-right: .5rem;
-            color: @yellow;
-        }
-    }
-    .button {
-        .btn-icon(@i-external-link);
-    }
+}
+
+.advice-chat--session {
+    width: 20em;
+    height: 25em;
+    transition: .2s ease-in-out;
+    display: none;
 }
