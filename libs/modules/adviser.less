@@ -65,11 +65,37 @@ a.adviser-only { // Styles for adding A icon to sidebar links
     }
 }*/
 
-.adviser-nav { // Styles for adviser specific sidebar block
+.section-nav .adviser-nav {
+    //background-color: lighten(@inventive-teal-lightest, 9%);
+    margin-top: 1rem;
+    .section-nav__parent {
+        //border-top: .25rem solid @inventive-teal-light;
+        padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+        font-weight: @font-weight-boldest;
+        font-size: @font-size-medium;
+        color: @inventive-teal;
+        display: block;
+        .badge {
+            background-color: @inventive-teal;
+            color: @white;
+            padding: .3em .5em;
+            text-transform: uppercase;
+            font-weight: @font-weight-bolder;
+            font-size: .75rem;
+            bottom: .275em;
+            position: relative;
+        }
+    }
 
+    a {
+        color: @inventive-teal;
+        &.active {
+            background-color: lighten(@inventive-teal-lightest, 9%);
+        }
+    }
 }
 
-.adviser-nav {
+/*.adviser-nav {
     .side-nav-beta__sibling {
         //border-left: 8px solid @heritage-yellow-lighter;
         //background-color: @heritage-yellow-lighter;
@@ -85,7 +111,7 @@ a.adviser-only { // Styles for adding A icon to sidebar links
         background-color: lighten(@inventive-teal-lighter, 5%) !important;
         border-color: @inventive-teal-lighter !important;
     }
-}
+}*/
 
 .collapsible--adviser, // This needs to be removed eventually
 .revealable--adviser {
