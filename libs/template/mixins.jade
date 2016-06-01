@@ -24,3 +24,15 @@ mixin sidebar(obj, key)
 					- each item,index in obj
 						li
 							+link(item.title, item.href, item.text, item.css)
+
+mixin adviser-sidebar(obj, key)
+	nav.section-nav.adviser-nav
+		h2.section-nav__heading
+			a Adviser pages in this section
+		ul
+			li
+				a.section-nav__parent(href="../##{section}") Adviser #{section}
+				ul
+					- each item,index in obj
+						li
+							+link(item.title, item.href, item.text, item.css)
