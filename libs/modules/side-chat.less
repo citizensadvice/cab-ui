@@ -23,7 +23,6 @@
 }
 
 /* Visuals for second iteration of webchat */
-
 .advice-chat {
 	margin: 0;
 	right: @box-spacing-horizontal;
@@ -37,10 +36,38 @@
 	cursor: pointer;
 	border-radius: @form-border-radius*2 @form-border-radius*2 0 0;
 	overflow: hidden;
-	box-shadow: 0px 2px 8px @gray-5;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
 	&:focus {
 		background-color: @green-light;
 		border: solid @green;
+		border-width: 2px 2px 0 2px;
+	}
+	@media (min-width: 600px) and (max-width: 750px)  {
+		display: none;
+	}
+	p {
+		font-weight: @font-weight-bold;
+		color: @heritage-blue;
+		margin: 0 0 .5em 0;
+	}
+}
+.advice-chat--offline {
+	margin: 0;
+	right: @box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	padding: @box-spacing-vertical/2 @box-spacing-horizontal 0 @box-spacing-horizontal;
+	background: @gray-7;
+	border: solid @gray-4;
+	border-width: 2px 2px 0 2px;
+	z-index: 1;
+	cursor: pointer;
+	border-radius: @form-border-radius*2 @form-border-radius*2 0 0;
+	overflow: hidden;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+	&:focus {
+		background-color: @gray-7;
+		border: solid @heritage-yellow;
 		border-width: 2px 2px 0 2px;
 	}
 	@media (min-width: 600px) and (max-width: 750px)  {

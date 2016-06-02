@@ -131,30 +131,21 @@ block content
 				a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
-	#chat-button.advice-chat(aria-checked="true" tabindex="0" role="button")
-		p.icon-chat Chat with an adviser 
+	#chat-button.advice-chat--offline(aria-checked="true" tabindex="0" role="button")
+		p.icon-chat--offline Chat is unavailable 
 
-	#chat-advice.advice-chat.advice-chat--session
+	#chat-advice.advice-chat--offline.advice-chat--session
 		//h3 Webchat
 		p#chat-button-close Close
-		.fieldset
-			label(for="standardField") Your name
-				span.optional &nbsp;(optional)
-			input#standardField(placeholder="", type="text")
-		.fieldset
-			label(for="exampleSelect1") What do you need advice on?
-			.dropdown
-				select#exampleSelect1
-					option Benefits
-					option Debt
-					option Housing
-					option Employment
-					option Immigration
-					option Other
 		fieldset
-			label.checkbox.checkbox--block 
-				input(name="checkbox", type="checkbox", value="option1")
-				| I consent to the webchat #[a.a-external-link(href="#") terms and conditions]
+			label(for="search") Search for a local Citizens Advice
+			.search-results__field.field-group.field-group--buttons
+				input(type="search", placeholder="Search")
+				button.btn.btn-primary(style="background-color:#fcbb69;border: 2px solid #fcbb69;")
+					i.icon-search
 
-		button.btn-secondary.right-button-icon(type="submit") Submit
-
+		h4 Other ways to get advice
+		ul
+			a#[li(href="#") Consumer helpline]
+			a#[li(href="#") Email advice]
+			a#[li(href="#") Check webchat hours]
