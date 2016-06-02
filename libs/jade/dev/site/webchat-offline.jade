@@ -137,15 +137,16 @@ block content
 	#chat-advice.advice-chat--offline.advice-chat--session
 		//h3 Webchat
 		p#chat-button-close Close
+		h4 Other ways to get advice
+		ul
+			a#[li(href="#") Check webchat hours]
+			a#[li(href="#") Email advice]
+			a#[li(href="#") Consumer helpline]
+
 		fieldset
 			label(for="search") Search for a local Citizens Advice
 			.search-results__field.field-group.field-group--buttons
-				input(type="search", placeholder="Search")
+				input(type="search", placeholder="Enter town or postcode")
 				button.btn.btn-primary(style="background-color:#fcbb69;border: 2px solid #fcbb69;")
 					i.icon-search
 
-		h4 Other ways to get advice
-		ul
-			a#[li(href="#") Consumer helpline]
-			a#[li(href="#") Email advice]
-			a#[li(href="#") Check webchat hours]
