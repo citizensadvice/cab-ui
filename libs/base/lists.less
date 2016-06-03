@@ -38,6 +38,11 @@ li > ol {
     margin-top: (@line-height-computed * 0.5);
 }
 
+p ~ ul,
+p ~ ol {
+    margin-top: -(@font-size-base/2);
+}
+
 .li--no-style {
     list-style: none;
     padding-left: 0;
