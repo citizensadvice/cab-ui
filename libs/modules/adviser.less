@@ -124,12 +124,17 @@ a.adviser-only { // Styles for adding A icon to sidebar links
         @border: @inventive-teal-light;
         @icon: @inventive-teal-light;
     );
-    border-width: 1px 1px 0px 0.5rem;
+    border-width: 1px 1px 0px 1px;
     .revealable__content:before {
-        content: "Adviser";
-        display: block;
-        color: @inventive-teal;
+        content: "adviser";
+        text-transform: uppercase;
         font-weight: @font-weight-bolder;
-        margin-bottom: .75rem;
+        font-size: .75rem;
+        position: relative;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-color: @inventive-teal;
+        color: @white;
+        padding: .3em .5em;
     }
 }
