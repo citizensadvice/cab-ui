@@ -69,7 +69,7 @@ a.adviser-only { // Styles for adding A icon to sidebar links
 }*/
 
 .section-nav .adviser-nav {
-    //background-color: lighten(@inventive-teal-lightest, 9%);
+    background-color: lighten(@inventive-teal-lightest, 9%);
     margin-top: 1rem;
     .section-nav__parent {
         //border-top: .25rem solid @inventive-teal-light;
@@ -87,6 +87,11 @@ a.adviser-only { // Styles for adding A icon to sidebar links
             font-size: .75rem;
             bottom: .275em;
             position: relative;
+        }
+    }
+    li {
+        &:hover {
+            background-color: @inventive-teal-lightest;
         }
     }
 
