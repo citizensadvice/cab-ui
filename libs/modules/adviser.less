@@ -91,14 +91,17 @@ a.adviser-only { // Styles for adding A icon to sidebar links
     }
     li {
         &:hover {
-            background-color: @inventive-teal-lightest;
+            background-color: lighten(@inventive-teal-lightest, 12%);
         }
     }
 
     a {
         color: @inventive-teal;
         &.active {
-            background-color: lighten(@inventive-teal-lightest, 9%);
+            background-color: @inventive-teal-lightest;
+            &:hover {
+                background-color: lighten(@inventive-teal-lightest, 12%);
+            }
         }
     }
 }
