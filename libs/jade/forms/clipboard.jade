@@ -9,7 +9,7 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Forms", href: dir + "index.html#Forms"},
-		{title: "Fields"}])
+		{title: "Copy to clipboard"}])
 
 block sidebar
 	include /template/sidebar-forms.jade
@@ -41,7 +41,7 @@ block script
 					    $( this ).addClass( "btn-secondary" ).removeClass("tick-button-icon").addClass("save-button-icon" ).html("Copy link");
 					    $(this).stop();
 					});
-				
+
 			});
 		});
 
