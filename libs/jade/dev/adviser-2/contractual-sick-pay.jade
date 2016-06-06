@@ -1,0 +1,82 @@
+block settings
+	- var title = "Contractual sick pay"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var newfoot = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Content toolbar"}])
+
+block section-notice
+	aside.section-notice__adviser
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge ADVISER
+				| This page is part of #[a(href="#") adviser only] content.
+
+block sidebar
+	include /template/sidebar-adviser.jade
+
+block content
+	p If an employer has their own sick pay scheme it should be included in your client’s employment contract. It can be:
+	ul
+		li explained in writing - in the contract itself or in the ‘written statement of employment particulars’ they should get within 2 months of starting work
+		li based on a verbal agreement with the employer
+		li implied by a custom and practice at their place of work - for example if your client had it in the past, or other employees have been paid it
+
+	h2.ref-heading
+		span.ref-heading__heading What evidence an employer can ask for
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p Contractual schemes can have different rules from statutory sick pay for what your client has to do to get paid. The employer can specify:
+	ul
+		li what evidence they need about the sickness
+		li when they should get the evidence
+	p This can include asking the client to self-certify or get a doctor’s note straight away. You can find more information about #[a.a-external(href="https://www.gov.uk/taking-sick-leave", rel="external") self-certification and sickness on GOV.UK].
+	p A doctor might charge a fee to provide a note before the 8th day of sickness. The client’s contract should say who has to pay the fee - the employer or the client.
+
+	h2.ref-heading
+		span.ref-heading__heading How much contractual sick pay a client should get
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p Employers don’t have to pay contractual sick pay at the normal rate of pay. Your client's contract can set any amount, as long as it's at least the statutory £88.45 a week for up to 28 weeks. This applies even if your client’s sickness is classed as a disability.
+	p You can use the #[a.a-external(href="https://www.gov.uk/calculate-statutory-sick-pay", rel="external") statutory sick pay calculator on GOV.UK] to check the mimimum they should get.
+
+	h2.ref-heading
+		span.ref-heading__heading If an employer stops a client returning to work
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p An employer can stop someone returning to work until they’ve been examined by a company doctor - even if their own GP says they’re fit to work.
+	p In this situation the Employment Appeal Tribunal decided that an employee who is willing to work should be paid their normal wage, unless their contract says otherwise.
+
+	h2.ref-heading
+		span.ref-heading__heading When to raise a grievance over procedure
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p The employer should clearly explain its sickness procedure to your client. The procedure should be based on evidence and mustn't discriminate.
+	p If there’s evidence proper procedure hasn’t been followed, a client can #[a(href="/advisernet/work/dispute-resolution/grievances/grievances-at-work/") raise a grievance] if the employer:
+	ul
+		li refuses to pay contractual sick pay
+		li doesn't pay the right amount
+
+	h2.ref-heading
+		span.ref-heading__heading Getting benefits as well if sick pay goes beyond 28 weeks
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p Your client might be entitled to contractual sick pay for longer than 28 weeks (the maximum for statutory sick pay). In this case they can also claim contributory #[a(href="/advisernet/benefits/esa-and-incapacity-benefit/employment-and-support-allowance-esa/employment-and-support-allowance-esa/") Employment and Support Allowance] (ESA) after 28 weeks.
+	p ESA isn’t reduced by the amount of contractual sick pay. But the employer can reduce the contractual sick pay by the amount of ESA they get, if it’s in your client’s contract.
+
+	h2.ref-heading
+		span.ref-heading__heading Implying contractual sick pay into contracts that don't mention it
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	.callout--alert
+		p In these cases you’ll probably need to refer your client for #[a(href="/cablink/advice-and-education/expert-advice-team/Citizens-Advice-Expert-Advice-team/ask-the-expert-consultancy/") specialist help].
+	p Your client might be entitled to contractual sick pay if it's implied in their contract, even if it it isn't specifically mentioned.
+	p For example, they might be able to argue that they had it in the past or that other employees have been paid it. This will depend on:
+	ul
+		li how long ago they got contractual sick pay
+		li any changes to their contract about their entitlement to contractual sick pay
+	p Depending on the contract and the circumstances, a tribunal might decide the right to contractual sick pay should be implied into the contract.

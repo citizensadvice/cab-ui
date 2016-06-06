@@ -20,19 +20,93 @@ span[id*="overlay_button"] {
 .callout--adviser,
 .dap-panel--adviser {
     .callout(
-        @inventive-teal-lightest,
+        lighten(@inventive-teal-lightest, 9%),
         @text-color,
         @callout-border: @inventive-teal-light
     );
-    .callout--border--left;
-    .callout--icon("Adviser-only content");
     &:before {
+        content: "adviser";
+        text-transform: uppercase;
+        font-weight: @font-weight-bolder;
+        font-size: .75rem;
+        position: relative;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-color: @inventive-teal;
         color: @white;
+        padding: .3em .5em;
     }
 }
 
+/*li.adviser-only a,
+a.adviser-only { // Styles for adding A icon to sidebar links
+    padding-right: 2.7rem !important;
+    //border-right: 4px solid @inventive-teal;
+    //background-color: lighten(@inventive-teal-lightest, 7%);
+    position: relative;
+    &:before {
+        content: "A";
+        display: inline-block;
+        //background-color: @inventive-teal-lighter;
+        border: 1px solid @inventive-teal-lightest;
+        width: 1.5rem;
+        text-align: center;
+        margin-right: .5rem;
+        font-weight: @font-weight-base;
+        border-radius: 2px;
+        .vertical-align(absolute);
+        right: .5rem;
+        //float: right;
+        font-size: .8em;
+        background-color: @inventive-teal;
+        border-color: @inventive-teal;
+        color: @white;
+    }
+    &:hover:before {
+        background-color: @inventive-teal;
+        color: @white;
+    }
+}*/
 
-.adviser-nav {
+.section-nav .adviser-nav {
+    background-color: lighten(@inventive-teal-lightest, 9%);
+    margin-top: 1rem;
+    .section-nav__parent {
+        //border-top: .25rem solid @inventive-teal-light;
+        padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
+        font-weight: @font-weight-boldest;
+        font-size: @font-size-medium;
+        color: @inventive-teal;
+        display: block;
+        .badge {
+            background-color: @inventive-teal;
+            color: @white;
+            padding: .3em .5em;
+            text-transform: uppercase;
+            font-weight: @font-weight-bolder;
+            font-size: .75rem;
+            bottom: .275em;
+            position: relative;
+        }
+    }
+    li {
+        &:hover {
+            background-color: lighten(@inventive-teal-lightest, 12%);
+        }
+    }
+
+    a {
+        color: @inventive-teal;
+        &.active {
+            background-color: @inventive-teal-lightest;
+            &:hover {
+                background-color: lighten(@inventive-teal-lightest, 12%);
+            }
+        }
+    }
+}
+
+/*.adviser-nav {
     .side-nav-beta__sibling {
         //border-left: 8px solid @heritage-yellow-lighter;
         //background-color: @heritage-yellow-lighter;
@@ -47,5 +121,28 @@ span[id*="overlay_button"] {
     .-current {
         background-color: lighten(@inventive-teal-lighter, 5%) !important;
         border-color: @inventive-teal-lighter !important;
+    }
+}*/
+
+.collapsible--adviser, // This needs to be removed eventually
+.revealable--adviser {
+    .revealable(
+        @background: lighten(@inventive-teal-lightest, 9%);
+        @heading: @inventive-teal;
+        @border: @inventive-teal-light;
+        @icon: @inventive-teal-light;
+    );
+    border-width: 1px 1px 0px 1px;
+    .revealable__content:before {
+        content: "adviser";
+        text-transform: uppercase;
+        font-weight: @font-weight-bolder;
+        font-size: .75rem;
+        position: relative;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-color: @inventive-teal;
+        color: @white;
+        padding: .3em .5em;
     }
 }

@@ -1,0 +1,105 @@
+block settings
+	- var title = "Saving content"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var newfoot = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Content toolbar"}])
+
+block sidebar
+	include /template/sidebar-adviser.jade
+
+block content
+		p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
+
+		p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.
+
+		p You should make sure you’re prepared and have all the relevant information to help you make your claim.
+
+		p Your first payment for PIP will be backdated to the date you started your claim and cover the length of time it takes the Department for Work and Pensions (DWP) to make its decision. If you're moving from DLA to PIP your PIP payments will start the day after your DLA stops.
+
+		h2 The claims process
+
+		p There are 3 stages to your claim:
+
+		ol
+			li Start your claim by calling the DWP
+			li Wait for them to send you a claim form
+			li Go to a face-to-face assessment - most people have to do this (but you won’t if you’re terminally ill)
+
+		p It can take up to 2 weeks for the DWP to send you a PIP claim form. While you wait, it’s a good idea to think about how you’ll fill in the claim form and if you need any supporting evidence.
+
+		p If you’re waiting a very long time for a decision on your claim, contact your local Citizens Advice in England and Wales or in Scotland. You can complain to the DWP if the delay is unreasonable and may be able to claim compensation if it’s considered unlawful. However, there are no set rules on what counts as unreasonable or unlawful
+
+		h2 Start your claim - fill in a PIP1 form
+
+		p You can start your PIP claim by filling in a PIP1 form. You can do this either:
+
+		ul
+			li by phone - a DWP adviser will fill in the basic claim form during the call, it should only take 20 minutes
+			li by post - filling in a paper form that the DWP can send you, and posting it back
+
+			p You can’t fill in the PIP1 form online.
+
+		.callout
+			p It’s best to start your claim by phone because it’s quicker and your PIP payments are usually backdated to when you start your claim - either the date you phone or the date the DWP receives your PIP1 form.
+
+			p You can only get the PIP claim forms from the DWP, not online or from Citizens Advice.
+
+		h2 Basic information you need to start your claim
+
+		p You’ll need to have this information when you call the DWP:
+
+		ul
+			li your full name, address and phone number
+			li your national insurance number
+			li your bank or building society account details so payments can be made if PIP is awarded
+			li contact details of your GP or other health professionals you deal with
+			li the dates and details of any stays in hospital or residential care
+			li your nationality or immigration status
+			li if you’ve been abroad for more than 4 weeks at a time in the last 3 years (you’ll need the dates and details)
+			li You’ll be asked if you have any conditions relating to your mental health, a learning difficulty or behavioural condition. These questions are asked to check if you need any additional help or support with your claim.
+
+		section.revealable
+			h3 I want to apply by phone
+			p PIP claim line
+			p Telephone 0800 917 2222
+			p Textphone 0800 917 7777
+			p Open Monday to Friday, 8am to 6pm
+			p Calls are free from landlines and from mobiles.
+			p It should take about 20 minutes to complete the call. If you’d prefer someone else to call for you that’s fine, but you need to be with them so that you can give permission for them to speak for you.
+
+		section.revealable
+			h3 I want to apply by post
+			p It’s quicker to apply by phone, but If that isn’t possible you can write to the DWP and ask for a PIP1 form.
+			p You’ll need to tell them why you (or someone else) can’t do the PIP1 form over the phone.
+			p Personal Independence Payment New Claims
+			p Post Handling Site B
+			p Wolverhampton
+			p WV99 1AH
+
+		.callout--adviser.callout--icon
+			h3 Information for advisers
+			p The PIP2 form is sometimes called ‘How your condition affects you’ form
+			ul
+				li DWP guidance: #[a.a-external-link(href="#") Sample PIP1 form]
+				li DWP guidance: #[a.a-external-link(href="#") Sample PIP2 form]
+				li DWP guidance: #[a.a-external-link(href="#") Compensation for poor service]
+			p Case law: #[a(href="#") Unlawful delays in processing a PIP claim and the High Court’s decision]
+			p Power of attorney: #[a(href="#") making decisions for someone who lacks mental capacity]
+			p #[a(href="#") Appointees and benefit claims]
+
+		.callout--related
+			h3 Next steps
+			p The DWP will assess whether you meet the basic eligibility conditions.
+			p If you do, they’ll send you a PIP claim form. This form is where you tell them how your condition affects you. If you’ve waited more than 2 weeks, contact the PIP claims line and ask them for an update.
+			p While you wait for the PIP2 form, you should think about #[a(href="#") how to fill in the PIP claim form] and if you need to organise any #[a(href="#") supporting evidence] to support your claim.
+			p If you don’t meet the basic eligibility conditions, you’ll be sent a decision letter to say why you’ve been refused. If you think the decision is wrong, you can #[a(href="#") challenge the DWP’s decision].

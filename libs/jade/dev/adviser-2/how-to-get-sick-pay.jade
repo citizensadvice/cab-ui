@@ -1,0 +1,121 @@
+block settings
+	- var title = "How to get sick pay"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var newfoot = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Workplace Rights", href: dir + "#"},
+		{title: "How to get sick pay"}])
+
+block sidebar
+	include /template/sidebar-adviser.jade
+
+block content
+	p Your employer must tell you what to do when you’re off work sick. Usually they’ll have rules about:
+
+	ul
+		li when to tell them you’re sick
+		li what information to give them about your illness
+
+	p If they haven’t told you, make sure you ask them what to do or check your staff handbook.
+
+	p You should always follow their rules as you’ll be breaking your contract if you don’t. You can still get the statutory #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") sick pay you’re entitled to], but you might not get extra contractual sick pay and could eventually lose your job.
+
+	.callout--adviser
+		p This page mostly covers statutory sick pay. #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/adviser-sick-pay-to-test/adviser-contractual-sick-pay/") Get more detail on contractual sick pay].
+
+	h2.ref-heading
+		span.ref-heading__heading How to get statutory sick pay
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If your employer hasn’t told you what to do to get statutory sick pay (SSP), you should:
+	ol
+		li Tell your employer straight away that you’re sick and can’t work.
+		li Let your employer know what the first day of your illness was, even if it was a non-working day.
+		li Confirm your illness in writing if your employer asks for it (this is called ‘self-certification’). You’ll need to do this within 7 days of telling your employer you’re sick.
+		li Get a doctor’s note if you’re sick for longer than 7 days, and your employer asks you to get one. The 7 days includes days you wouldn’t normally be working.
+
+	h3.ref-heading
+		span.ref-heading__heading What your employer can’t ask you to do
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If you’re entitled to SSP, and your contract doesn’t have any extra rules about contractual sick pay, your employer isn’t allowed to:
+	ul
+		li demand that you tell them you’re sick by a certain time of day
+		li make you contact them more than once a week
+		li make you get a doctor’s note before you’ve been sick for 8 days
+		li insist you use a specific form to tell them about your illness (self-certification)
+		li refuse to let someone else tell them you’re sick, for example if you’re too ill to get in touch yourself
+	p If your employer refuses to pay your SSP because of any of these reasons, you can #[a(href="https://www.citizensadvice.org.uk/work/rights-at-work/pay/problems-getting-paid/") take steps to get paid]. #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") Contact your nearest Citizens Advice] for help.
+
+	h2.ref-heading
+		span.ref-heading__heading Getting a note from your doctor
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If you’re sick for more than 7 days you’ll probably have to get a note from your doctor. You might hear these referred to as ‘fit notes’ (they used to be called ‘sick notes’).
+
+	p On the note, your doctor will say that you:
+	ul
+		li are not fit for work
+		li may be fit for work
+	p If your doctor says you ‘may be fit for work’ they can recommend the type of work you might be able to do.
+	p If your employer can’t make the changes your doctor recommends, you’ll still be considered unfit for work and can carry on getting sick pay.
+
+	.callout--alert
+		p If you’re off work sick because of a disability, your employer has a legal duty to make ‘#[a(href="https://www.citizensadvice.org.uk/discrimination/what-are-the-different-types-of-discrimination/duty-to-make-reasonable-adjustments-for-disabled-people/") reasonable adjustments]’ to help you return to work.
+		p If you’re not sure your condition is classed as a disability, you can get help from #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") your nearest Citizens Advice].
+	.callout--adviser
+		h3.ref-heading
+			span.ref-heading__heading If an employer doubts your client’s incapacity to work
+			span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+		p If an employer has doubts about your client’s incapacity for work, they can contact Medical Services via HMRC for help.
+		p GOV.UK has detailed guidance about fit notes and what happens if an employer asks for #[a(href="https://www.gov.uk/guidance/statutory-sick-pay-employee-fitness-to-work") medical advice through HMRC].
+
+	h2.ref-heading
+		span.ref-heading__heading Returning to work
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+
+	p If you want to return to work early, your employer might ask you to get a note from your doctor confirming you’re fit for work. This will usually be because your employer needs it for their insurance.
+
+	p Your doctor can recommend that you work less hours or days for a bit, and gradually increase them back to normal - this is called a ‘phased return’. This could affect your pay so you need to discuss it with your employer.
+
+	h3.ref-heading
+		span.ref-heading__heading Doing ’lighter work’
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+
+	p Your employer might offer to let you do lighter duties than usual until you’re properly well again.
+	p You’re allowed to say no if you don’t want to do it  - your employer still has to pay statutory sick pay you’re entitled to.
+	p If you prefer to do lighter work rather than stay at home, you won’t be entitled to statutory sick pay. You’ll need to tell your employer you’ll do lighter work temporarily and return to your old job when you’re fit to do it. You should agree this in writing with your employer if you can.
+	p Contact #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") your nearest Citizens Advice] if you want help working out what your options are.
+
+	.callout--adviser
+		h3.ref-heading
+			span.ref-heading__heading Planning a phased return to work
+			span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+		p Before agreeing a phased return to work, make sure the client doesn’t lose out on money.
+		p For days the client works, they’re entitled to their normal pay.
+		p For days they’re off they might still be entitled to either:
+		ul
+			li contractual sick pay - check their contract or with their employer
+			li statutory sick pay - as long as the times they’re off work last for at least 4 days
+		p Any days your client gets SSP will count towards the 28-week maximum.
+
+		.callout--example
+			h3 Example
+			p Susan was off sick for 6 weeks and got statutory sick pay in that time. She normally works full time, Monday to Friday. She has agreed with her employer to return to work on a phased basis.
+			p For the first 2 weeks back Susan comes in 3 days a week - Wednesday to Friday. The third week she works 4 days - Tuesday to Friday. From her fourth week she returns to working full-time, Monday to Friday.
+			h4 Susan’s sick pay
+			p For the first 2 weeks she gets SSP for Monday and Tuesday. This is because she’s classed as being sick for 4 days in a row - Saturday, Sunday, Monday, Tuesday.
+			p She also gets her normal pay for working on Wednesday to Friday.
+			p In her 3rd week back she doesn’t get SSP for the Monday as she hasn’t been sick for 4 days in a row - just Saturday, Sunday, and Monday.
+			p She gets her normal pay for working on Tuesday to Friday.
+			p When she returns to work full time she gets her normal full pay.
+	h2.ref-heading
+		span.ref-heading__heading How you’re paid sick pay
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p You’re usually paid statutory and contractual sick pay in the same way as your normal wages - for example weekly into your bank account. You’ll pay tax and National Insurance on your sick pay.
+	p As well as sick pay, you might be able to #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/money-when-sick/") get other money while you’re off work].

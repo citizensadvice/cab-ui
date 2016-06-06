@@ -1,0 +1,150 @@
+block settings
+	- var title = "Benefits"
+	- var fullpage = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Get Advice", href: dir + "navigation.html"},
+		{title: "Benefits"}])
+
+block content
+		.main-container
+		.home-first
+			.home__content
+				.flex-container.flex-row
+					.col-md-6.col-sm-12
+						h1 Benefits
+						p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
+					.col-md-6.col-sm-12.hide-mobile.home--feature
+						//.home__content-trends
+							h2 Most viewed content
+							p #[a(href="#") Employment Support Allowance ]
+							p #[a(href="#") Personal Independence Payment ]
+							p #[a(href="#") Basic rights at work ]
+
+
+		.home-second
+			.home__content
+				.flex-container.flex-row
+					div.col-sm-8.col-sm-12
+						.blog-lead
+							.blog-name
+								p Browse benefits advice
+						.group-index-list
+							h3 #[a(href="#") Benefit calculator]
+							p Find out what benefits and how much you could be entitled to
+						.group-index-list
+							h3 #[a(href="topic.html") Personal Independence Payment (PIP)]
+						.group-index-list
+							h3 #[a(href="#") Employment Support Allowance (ESA)]
+						.group-index-list
+							h3 #[a(href="#") Benefits for people in work or looking for work]
+						.group-index-list
+							h3 #[a(href="#") Benefits for older people]
+						.group-index-list
+							h3 #[a(href="#") Universal Credit]
+						.group-index-list
+							h3 #[a(href="#") Children and young people]
+						.group-index-list
+							h3 #[a(href="#") Coming from abroad and claiming benefits]
+
+
+					div.col-sm-4.col-sm-12
+						.blog-sidebar--category(style="background-color:#c2bdde; margin-top: 1.25rem;")
+							h2(style="color:#57486b;") Find a specific benefit
+							.dropdown
+								select#exampleSelect1
+									option Attendance Allowance
+									option 2
+									option 3
+									option 4
+									option 5
+
+							button.btn.btn-secondary.right-button-icon Search
+
+
+						//.blog-sidebar--updates(style="background-color:#006278; height:100%;")
+							.card-banner-top
+								p(style="color:#fff;") Resources for advisers
+							.card-text
+								p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+								fieldset
+									label(for="standardField", style="color:#57486b;") Search your area
+									input#standardField(placeholder="", type="text")
+
+								button.btn.btn-secondary.right-button-icon Search roles
+
+						//.blog-lead
+							.blog-name
+								p Issues affecting people
+						//.data-display
+							p.data-display-intro Benefits
+							h3 52%
+							p of ESA applicants were wrongly placed in mandatory consideration in 2015
+							p #[a(href="#") Read more about our research ]
+
+						.callout--related
+							h3 If you need more help
+							p Contact the Citizens Advice consumer helpline on 03454 04 05 06 if you need more help - a trained adviser can give you advice over the phone. You can also use an online form or write to them.
+							p If you’re in Northern Ireland, contact Consumerline.
+
+	.fullwidth-yellow
+		.fullwidth-content
+			.flex-container.flex-row
+				.col-sm-6.col-xs-12
+					h2 Volunteer locally with us
+
+					h3 Interested in volunteering with Citizens Advice?
+
+					p Search for local opportunities, including trustee roles, fill out a quick online form and your local Citizens Advice will get in touch with you to discuss options.
+
+				.col-sm-6.col-xs-12
+					h3 Do you have good listening skills?
+
+					p Perhaps you'd be interested in being a telephone assessor for our national phone service.
+
+					h3 Interested in supporting witnesses in courts?
+
+					p Volunteer for our #[a Witness Service]?
+
+				.col-xs-12
+					fieldset
+						label(for="field") Search opportunities
+						.field-group.field-group--buttons
+							input#field(type="search")
+							button.btn Search
+
+	.fullwidth-blue
+		.fullwidth-content
+			.flex-container.flex-row
+				.col-sm-8.col-xs-12
+					h2 Why volunteer with us?
+
+					p Hear from our volunteers
+					p(style="position: relative;padding-bottom: 56.25%; padding-top: 25px;height: 0;")
+						iframe(src="https://www.youtube.com/embed/jtLJKyNLV_E", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
+
+					p #[a More from our volunteer stars]
+
+					h2 Disabled volunteers
+
+					p We offer a warm welcome to every volunteer whatever their background.
+
+					p #[a Find out what you can expect from us as a disabled volunteer]
+
+					h2 About volunteering with Citizens Advice
+
+					p Find out about:
+
+					ul
+						li #[a our volunteer roles]
+						li #[a being a trustee]
+						li #[a being a telephone assessor]
+						li #[a being a Witness Service volunteer]
+
+					p We also have some #[a answers to common questions] on volunteering with us.
+
+					Read our report about the #[a value of volunteering] to individuals, communities and society.

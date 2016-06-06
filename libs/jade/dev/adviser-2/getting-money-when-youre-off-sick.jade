@@ -1,0 +1,89 @@
+block settings
+	- var title = "Getting money when you’re off work sick"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var newfoot = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Workplace Rights", href: dir + "#"},
+		{title: "Getting money when you’re off work sick"}])
+
+block sidebar
+	include /template/sidebar-adviser.jade
+
+block content
+	p If you’re entitled to Statutory Sick Pay (SSP) when you’re off work sick, you can get £88.45 per week for up to 28 weeks.
+	p Your employer might pay you more than the statutory amount (called contractual sick pay), so you should always check with them.
+	p To #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/how-to-get-sick-pay/") get sick pay] you’ll need to follow your employer’s rules.
+
+	.callout--adviser
+		p This page mostly covers statutory sick pay. #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/adviser-sick-pay-to-test/adviser-contractual-sick-pay/") Get more detail on contractual sick pay].
+		p For SSP you can use the #[a(href="https://www.gov.uk/calculate-statutory-sick-pay") statutory sick pay calculator on GOV.UK] to work out exactly what your client should get for the time they have off sick.
+		p You won’t be able to use the calculator if they work irregular hours - you’ll need to #[a(href="https://www.gov.uk/guidance/statutory-sick-pay-manually-calculate-your-employees-payments") work the amount out manually] or #[a(href="https://www.citizensadvice.org.uk/cablink/advice-and-education/expert-advice-team/Citizens-Advice-Expert-Advice-team/ask-the-expert-consultancy/") get specialist advice].
+
+	h2.ref-heading
+		span.ref-heading__heading What extra money you could be entitled to
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If your income is reduced while you’re off work sick, you might be able to claim benefits like housing benefit. You can #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/how-to-get-sick-pay/") use our benefits checker] to check what you might be entitled to.
+
+	p You might also be entitled to get benefits like #[a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/how-to-get-sick-pay/") Personal Independence Payment (PIP)] if #[a(href="https://www.citizensadvice.org.uk/discrimination/protected-characteristics/disability-discrimination/") your condition is classed as a disability]. You can get advice from #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") your local Citizens Advice] if you’re not sure your condition is a disability.
+
+	.callout--adviser
+		p Proving that someone who’s off work sick is classed as disabled can be difficult. You might need to get #[a(href="https://www.citizensadvice.org.uk/cablink/advice-and-education/expert-advice-team/Citizens-Advice-Expert-Advice-team/ask-the-expert-consultancy/") specialist advice].
+
+	h3 If you already get benefits, including tax credits
+	p You’ll still get tax credits when you’re getting sick pay.
+	p Some benefits might increase while your pay is less than usual. Tell any departments that pay you benefits about your illness to see if you are entitled to more.
+
+	h2.ref-heading
+		span.ref-heading__heading Using your holiday pay
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p You’ll still build up your #[a(href="https://www.citizensadvice.org.uk/work/rights-at-work/holiday/holiday-pay-what-youre-entitled-to/") holiday entitlement] while you’re off sick.
+
+	p Holiday pay is the same amount as your normal pay so you might be able to take holiday pay instead of sick pay. For example if you’ve run out of sick pay or gone on to a reduced rate of sick pay.
+
+	p You’ll need to talk to your employer about it as they don’t have to let you.
+
+	.callout--example
+		p You’ve been off sick for 6 months and aren’t likely to return to work for another month. Your contract says you’re entitled to be off sick on full pay for 6 months and then on half pay for a further 6 months. You ask to take the next 4 weeks as holiday, so you receive full pay instead of half pay.
+
+	h2.ref-heading
+		span.ref-heading__heading When your sick pay ends
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If you have a long-term illness and your sick pay is coming to an end, you might be able to get Employment and Support Allowance (ESA). #[a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/before-you-apply-for-esa/eligiblility-for-esa/") Check if you’re eligible for ESA].
+	p You can #[a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/employment-and-support-allowance/help-with-your-esa-claim/claiming-esa-filling-in-the-esa1-form/") start your claim for ESA] 3 months before your sick pay ends, as the application process can take a while.
+
+	h2.ref-heading
+		span.ref-heading__heading If you’re not getting the sick pay you’re entitled to
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p There are #[a(href="https://www.citizensadvice.org.uk/work/rights-at-work/pay/problems-getting-paid/") steps you can take to get money you’re owed] if you’re not getting pay your contract says you’re entitled to.
+
+	p Try speaking to your employer if you think your statutory sick pay is wrong - ask them to explain how they’ve worked it out. The rules can be tricky. You:
+	ul
+		li have to be sick for at least 4 days in a row (including non-working days)
+		li won’t get SSP for the first 3 working days you’re off sick - unless you had been sick and getting SSP in the last 8 weeks and are eligible to start getting it again
+		li If you’re not happy with your employer’s explanation, you should contact HM Revenue and Customs (HMRC).
+	p HMRC employees’ enquiry line
+		br
+		| Telephone: 0300 200 3500
+		br
+		| Textphone: 0300 200 3212
+	p Open Monday to Friday, 8am to 5pm.
+
+	p Calls can cost up to 12p a minute from landlines, and between 3p and 45p a minute from mobiles.
+	p If you need more help at any stage, you can get advice from #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") your local Citizens Advice].
+
+	.callout--alert
+		p If you’re having money problems you can:
+		ul
+			li #[a(href="https://budgetplanner.adviceguide.org.uk/guidancenotes") get help with bills]
+			li #[a(href="https://budgetplanner.adviceguide.org.uk/guidancenotes") use our budgeting tool] to see where your money goes each month
+			li get ideas to #[a(href="https://www.citizensadvice.org.uk/archived-content/archived-advice/epics-archive/budgeting/how-to-spend-less/") make your money go further]
+			li #[a(href="http://benefits-calculator.turn2us.org.uk/AboutYou") check you’re getting all the benefits you’re entitled to]
+		p If you need more help, you can get advice from #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") your local Citizens Advice].
