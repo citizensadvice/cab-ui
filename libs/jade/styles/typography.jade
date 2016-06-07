@@ -19,25 +19,16 @@ block content
 		div
 			p We use #[a(href="http://www.google.com/fonts/specimen/Open+Sans") Open Sans] - it’s a sans-serif font chosen for legibility and consistency in online and offline applications. The font comes in various weights, but we only use 4 of these.
 			p When calling in the font weights or any of the typographic styles in LESS, be sure to use the variable rather than the font weight directly.
-			p(style="font-weight: 400;") Open Sans 400
-				span.code @font-weight-base
-			p(style="font-weight: 600;") Open Sans 600
-				span.code @font-weight-bold
-			p(style="font-weight: 700;") Open Sans 700
-				span.code @font-weight-bolder
-			p(style="font-weight: 800;") Open Sans 800
-				span.code @font-weight-boldest
+			p(style="font-weight: 400;") Open Sans 400 #[span.code @font-weight-base]
+			p(style="font-weight: 600;") Open Sans 600 #[span.code @font-weight-bold]
+			p(style="font-weight: 700;") Open Sans 700 #[span.code @font-weight-bolder]
+			p(style="font-weight: 800;") Open Sans 800 #[span.code @font-weight-boldest]
 
-			h1 h1 for page titles
-				span.code @font-size-h1
-			h2 h2 sub header, for section titles
-				span.code @font-size-h2
-			h3 h3 for headings within sections
-				span.code @font-size-h3
-			h4 h4
-				span.code @font-size-h4
-			h5 h5
-				span.code @font-size-h5
+			h1 h1 for page titles #[span.code @font-size-h1]
+			h2 h2 sub header, for section titles #[span.code @font-size-h2]
+			h3 h3 for headings within sections #[span.code @font-size-h3]
+			h4 h4 #[span.code @font-size-h4]
+			h5 h5 #[span.code @font-size-h5]
 
 			p This is a paragraph of text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 			h2 Sub header, for introducing content sections
