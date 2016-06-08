@@ -65,6 +65,7 @@
         padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         border-bottom: @gray-7 1px solid;
+        background-color: @white;
         .badge {
             background-color: @green-light;
             color: @text-color;
@@ -72,6 +73,10 @@
         }
     }
     &__adviser {
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
         .badge {
             background-color: @inventive-teal;
             color: @white;
