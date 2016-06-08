@@ -19,13 +19,16 @@ block content
 		div
 			p Forms can help people find the information they need, complete a task or complete an application online.
 
-			p Ask for the minimum amount of information needed for the client to complete the task, this makes the forms shorter, and improves completion rates. Make clear that optional fields are optional.
+			p Ask for the minimum amount of information needed for the client to complete the task, this makes the forms shorter, and improves completion rates. Make it clear that optional fields are optional.
 
-			h3 Examples of form components
+			h2 Examples of form components
 			p Use a field for a person’s full name if possible - different cultures structure names in different ways so Firstname, Surname isn't always appropriate.
 
-			h3 Structure
-			p For single fields use a #[span.code div] with the class #[span.code fieldset], this is a better syntax for building simpler tools and forms with a single question per page. When creating tools with multiple questions or fields, for example date or address fields.
+			h2 Structure
+			p For tools with a single field per page, wrap them with #[span.code div.fieldset]. When creating tools with multiple questions or fields, for example date or address fields, it is best to use the #[span.code fieldset] tag.
+
+			h2 Labels
+			p It is generally preferred to use the #[span.code label] tag for field labels, however other field types can be used. It's important that regardless of tag, the label contains the #[span.code for=""] attribute with the fields ID inside.
 
 			.example-box-plain
 				.fieldset

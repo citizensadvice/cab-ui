@@ -9,7 +9,7 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Forms", href: dir + "index.html#Forms"},
-		{title: "Fields"}])
+		{title: "Copy to clipboard"}])
 
 block sidebar
 	include /template/sidebar-forms.jade
@@ -28,6 +28,7 @@ block script
 		});
 
 		$(document).ready(function() {
+			$('#pageurl').attr("value", window.location.href);
 			$('button').click(function(){
 				//var count = parseInt($(this).data('click'), 10) || 0;
 				//count++; $(this).data('click',count);
@@ -41,7 +42,7 @@ block script
 					    $( this ).addClass( "btn-secondary" ).removeClass("tick-button-icon").addClass("save-button-icon" ).html("Copy link");
 					    $(this).stop();
 					});
-				
+
 			});
 		});
 
@@ -49,16 +50,14 @@ block script
 block content
 	.articleContent
 
-		p Copy to clipboard is an experimental pattern to enable users to copy the web page easily. This means that clients can share through any medium and not just pre-defined list of social sharing applications.
+		p Copy to clipboard is an experimental pattern that allows users to copy the current url easily. This means that clients can share through any channel, not just from the options in the #[a(href="#{dir}modules/toolbar.html") toolbar].
 
 		.example-box-plain
 			fieldset
 				label(for="field") Field group with copy to clipboard button
 				.field-group.field-group--buttons
-					input#pageurl(type="text" value="https://github.com/citizensadvice/cab-ui" readonly)
+					input#pageurl(type="text" readonly)
 					button.btn.btn-secondary.save-button-icon(data-clipboard-action="copy" data-clipboard-target="#pageurl") Copy link
-
-					script(src="#{dir}js/clipboard.min.js")
 
 		pre
 			code.language-html

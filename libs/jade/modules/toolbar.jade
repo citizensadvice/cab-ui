@@ -19,6 +19,16 @@ block sidebar
 
 block content
 	.articleContent
+		p The content toolbars sandwich the content of the page, sitting below the page heading and above the footer.
+		p The top toolbar contains important page information;
+		ul
+			li Extent switcher
+			li Print button
+			li Reference button (to open the reference window)
+			li Extent, this is an admin only function that shows what extent the page was written for
+			li Reviewed, who/when the article was last reviewed
+			li Owner, who the page owner is
+		p The bottom toolbar is reserved for sharing functionality.
 		.example-box-plain
 			.title__subheading
 				| This advice is for
@@ -30,7 +40,6 @@ block content
 				span.info-extent Extent
 				span.info-reviewed Reviewed
 				span.info-owner Owner
-			p Toolbars sandwich the content with functional icons.
 			.title__subheading--footer
 				p Share this page. #[a(#) Find out more about sharing.]
 				a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
@@ -39,26 +48,24 @@ block content
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 				//button.toolbar-button.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
 				a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
-				a.a-social-copy Copy link
+				button.a-social-copy Copy link
+					.copied Copied!
 		pre
 			code.language-html
-				| &lt;div class="example-box-plain"&gt;
-				|     &lt;div class="title__subheading"&gt;
-				|         This advice is for &lt;button class="btn-secondary btn-small" id="showSimpleModal" type="button"&gt;
-				|         &lt;span class="screenreader"&gt;This advice is for&lt;/span&gt;England&lt;/button&gt;
-				|         &lt;button class="toolbar-button a-social-print" data-track="Print" href="javascript:window.print();"&gt;Print&lt;/button&gt;
-				|         &lt;button class="toolbar-button a-social-references" data-track="References" href="#!"&gt;References&lt;/button&gt;
-				|         &lt;span class="info-extent"&gt;Extent&lt;/span&gt;
-				|         &lt;span class="info-reviewed"&gt;Reviewed&lt;/span&gt;
-				|         &lt;span class="info-owner"&gt;Owner&lt;/span&gt;
-				|     &lt;/div&gt;
-				|     &lt;p&gt;Toolbars sandwich the content with functional icons.&lt;/p&gt;
-				|     &lt;div class="title__subheading--footer"&gt;
-				|         &lt;p&gt;Share this page. &lt;a&gt;Find out more about sharing.&lt;/a&gt;&lt;/p&gt;
-				|         &lt;a class="a-social-twitter" data-track="Twitter" href="https://twitter.com/share?url=" rel="external"&gt;Twitter&lt;/a&gt;
-				|         &lt;a class="a-social-facebook" data-track="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=" rel="external"&gt;Facebook&lt;/a&gt;
-				|         &lt;a class="a-social-whatsapp show-mobile" href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);"&gt;Whatsapp&lt;/a&gt;
-				|         &lt;a class="a-social-email" data-track="Email page" href="javascript:emailCurrentPage()"&gt;Email&lt;/a&gt;
-				|         &lt;a class="a-social-copy"&gt;Copy link&lt;/a&gt;
-				|     &lt;/div&gt;
+				| &lt;div class="title__subheading"&gt;
+				|     This advice is for &lt;button class="btn-secondary btn-small" id="showSimpleModal" type="button"&gt;
+				|     &lt;span class="screenreader"&gt;This advice is for&lt;/span&gt;England&lt;/button&gt;
+				|     &lt;button class="toolbar-button a-social-print" data-track="Print" href="javascript:window.print();"&gt;Print&lt;/button&gt;
+				|     &lt;button class="toolbar-button a-social-references" data-track="References" href="#!"&gt;References&lt;/button&gt;
+				|     &lt;span class="info-extent"&gt;Extent&lt;/span&gt;
+				|     &lt;span class="info-reviewed"&gt;Reviewed&lt;/span&gt;
+				|     &lt;span class="info-owner"&gt;Owner&lt;/span&gt;
+				| &lt;/div&gt;
+				| &lt;div class="title__subheading--footer"&gt;
+				|     &lt;p&gt;Share this page. &lt;a&gt;Find out more about sharing.&lt;/a&gt;&lt;/p&gt;
+				|     &lt;a class="a-social-twitter" data-track="Twitter" href="https://twitter.com/share?url=" rel="external"&gt;Twitter&lt;/a&gt;
+				|     &lt;a class="a-social-facebook" data-track="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=" rel="external"&gt;Facebook&lt;/a&gt;
+				|     &lt;a class="a-social-whatsapp show-mobile" href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);"&gt;Whatsapp&lt;/a&gt;
+				|     &lt;a class="a-social-email" data-track="Email page" href="javascript:emailCurrentPage()"&gt;Email&lt;/a&gt;
+				|     &lt;button class="a-social-copy"&gt;Copy link&lt;div class="copied"&gt;Copied!&lt;/div&gt;&lt;/button&gt;
 				| &lt;/div&gt;

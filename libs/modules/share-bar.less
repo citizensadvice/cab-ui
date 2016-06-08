@@ -4,6 +4,56 @@
  * Current sharing sidebar, social icons.
  */
 
+// Styles for the 'copied' notification on copy link
+.a-social-copy,
+.a-social-copy:hover,
+.a-social-copy:active,
+.a-social-copy:focus {
+    position: relative;
+    padding: .25rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: @font-weight-base;
+    font-size: 0.875rem;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    color: @link-color;
+    line-height: 2rem;
+}
+
+.a-social-copy:hover,
+.a-social-copy:active,
+.a-social-copy:focus {
+    background-color: lighten(@link-color, 75%);
+}
+
+.a-social-copy .copied {
+    display: none;
+    background-color: @heritage-blue;
+    color: @white;
+    padding: .25rem .75rem;
+    position: absolute;
+    top: -2.65rem;
+    left: 50%;
+    border-radius: 2px;
+    margin-left: -2.2rem;
+    &:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(0, 75, 136, 0);
+        border-top-color: #004b88;
+        border-width: 5px;
+        margin-left: -5px;
+    }
+}
+
 /* User agent check needed, are we doing this on a server level or page level? */
 .a-social-whatsapp {
     display: visible;
@@ -137,23 +187,23 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
                 }
             }
         }
-        
+
         @media (min-width: @screen-sm-min) {
-        
+
             &.share-bar__link--closed:focus span {
                 // Close the share bar link while it is still in focus
                 clip: rect(0 0 0 0);
                 width: 1px;
                 margin-left: -1px;
             }
-    
+
             &.share-bar__link--closed:hover span {
                 // But still allow the link to be expanded when hovering
                 clip: auto;
                 width: 15em;
                 margin-left: -15em;
             }
-            
+
         }
     }
 
