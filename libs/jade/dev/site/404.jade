@@ -1,0 +1,25 @@
+block settings
+	- var title = "404"
+	- var fullpage = true
+	- var dir = "../../"
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block content
+	style.
+		body {
+			background-color: #004b88;
+		}
+	.fullwidth(style="background-color: white;")
+		.fullwidth-content
+			.newrow
+				.span8-md
+					h1 Page not found
+					div
+						p If you entered a web address please check it was correct.
+						p You can also ​search or #[a(href="navigation.html") browse] the site to find the information you need.
+					.field-group.field-group--buttons
+						input#field(type="search", placeholder="Search")
+						button.btn Search&nbsp;&nbsp;
+							i.icon-search
