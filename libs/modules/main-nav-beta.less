@@ -7,7 +7,7 @@
 #main-nav-beta {
 	// Branding bar along the top, dark blue
 	.branding {
-		background-color: @heritage-blue;
+		background-color: @intranet;
 		text-align: right;
 		padding: .25rem 0;
         ul {
@@ -46,7 +46,7 @@
 
 	// Main bar beneath branding bar, light blue
 	.navigation {
-		background-color: @heritage-blue-lighter;
+		background-color: @intranet-lighter;
 		text-align: right;
 		@media screen and (min-width: @breakpoint-md) {
 			text-align: center;
@@ -114,11 +114,11 @@
 				}
 				@media screen and (min-width: @breakpoint-md) {
 	            	&:hover {
-	            		background-color: @blue-lighter;
+	            		background-color: @intranet-lightest;
 	            	}
 				}
             	&.active {
-            		background-color: @blue-lighter;
+            		background-color: @intranet-lightest;
             	}
 				a,
 				a:hover,
@@ -127,7 +127,7 @@
 				a:focus {
 					border: none;
 					background: none;
-                	color: @heritage-blue;
+                	color: @intranet;
                 	display: inline-block;
 					@media screen and (min-width: @breakpoint-sm) {
             			display: inline;
@@ -175,14 +175,15 @@
                 .ie(padding-bottom,.6em);
 			}
 			input:focus {
-				border-color: @heritage-blue-light;
+				border-color: @intranet-light;
 			}
 	        button {
-	        	background-color: @heritage-yellow;
+	        	background-color: @intranet-alt;
 	        	border-color: @white;
+	        	color: @intranet;
                 .ie(padding-bottom,.45em);
 				&:focus {
-					border-color: @heritage-blue-light;
+					border-color: @intranet-light;
 				}
 	        }
 	    }
@@ -196,7 +197,7 @@
 }
 
 #main-nav-beta--search {
-	background-color: @blue-lighter;
+	background-color: @intranet-lightest;
 	padding: 1rem;
 	//padding-top: 0;
 	input,
@@ -208,15 +209,15 @@
                 .ie(padding-bottom,.6em);
 	}
 	input:focus {
-		border-color: @heritage-yellow;
+		border-color: @intranet-alt;
 	}
     button {
-    	background-color: @heritage-yellow;
+    	background-color: @intranet-alt;
     	border-color: @white;
                 .ie(padding-bottom,.425em);
     	//margin: 0;
 		&:focus {
-			border-color: @heritage-blue-light;
+			border-color: @intranet-light;
 		}
     }
 	@media screen and (min-width: @breakpoint-md) {
@@ -226,7 +227,7 @@
 
 #main-nav-beta--advice,
 #main-nav-beta--involved {
-    background-color: @blue-lighter;
+    background-color: @intranet-lightest;
     .content {
         max-width: @breakpoint-lg;
         padding: 1.5rem 1.5rem .5rem 1.5rem;
