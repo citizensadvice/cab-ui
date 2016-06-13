@@ -93,105 +93,45 @@ html.no-js
 			.content
 				ul
 					li
-						a(href="group.html") Benefits
-						br
-						| Benefit eligibility and calculators. Applying and problems with applications.
+						a(href="group.html") News and events
 					li
-						a(href="") Work
-						br
-						| Rights at work, workplace discrimination, self-employment, rules and regulations of work.
+						a(href="") Team
 					li
-						a(href="") Debt and money
-						br
-						| Dealing with debts and arrears, budgeting, mortgages and pension services.
+						a(href="") Job opportunities
 					li
-						a(href="") Consumer
-						br
-						| The law and your rights when purchasing goods and services.
-					li
-						a(href="") Relationship
-						br
-						| Marriage, divorce, partnerships and looking after people. Births, deaths and wills.
-					li
-						a(href="") Housing
-						br
-						| Renting or buying a house, tenancy agreements and your rights as a homeowner or tenant.
-					li
-						a(href="") Law and rights
-						br
-						| Legal and civil rights, policing, the prison system and witness services.
-					li
-						a(href="") Discrimination
-						br
-						| Types of discrimination, steps to take if you have been discriminated against.
-					li
-						a(href="") Tax
-						br
-						| Taxable income, payments, refunds and problems. Council, pensioners and inheritance tax.
-					li
-						a(href="") Healthcare
-						br
-						| Help with NHS and dental. Private, alternative and armed forces healthcare.
-					li
-						a(href="") Education
-						br
-						| School and higher education, support for learning, discrimination and financial advice.
+						a(href="") Policies
 
 		#main-nav-beta--job
 			.content
 				ul
 					li
-						a(href="") About Citizens Advice
+						a(href="") External relations
 					li
-						a(href="") Contact us
+						a(href="") Brand
 					li
-						a(href="") Policy research
+						a(href="") Membership
 					li
-						a(href="") Our blogs
+						a(href="") Planning
 					li
-						a(href="") Campaigns
+						a(href="") Equiality
 					li
-						a(href="") How Citizens Advice works
-					li
-						a(href="") Volunteer
-					li
-						a(href="") Jobs
-					li
-						a(href="") Press releases
-					li
-						a(href="") Support us
-					li
-						a(href="") The difference we make
-					li
-						a(href="") Find your local Citizens Advice
+						a(href="") Client services
 
 		#main-nav-beta--news
 			.content
 				ul
 					li
-						a(href="") About Citizens Advice
+						a(href="") Training
 					li
-						a(href="") Contact us
+						a(href="") Technology
 					li
-						a(href="") Policy research
+						a(href="") Support
 					li
-						a(href="") Our blogs
+						a(href="") Fundraising
 					li
-						a(href="") Campaigns
+						a(href="") Running local offices
 					li
-						a(href="") How Citizens Advice works
-					li
-						a(href="") Volunteer
-					li
-						a(href="") Jobs
-					li
-						a(href="") Press releases
-					li
-						a(href="") Support us
-					li
-						a(href="") The difference we make
-					li
-						a(href="") Find your local Citizens Advice
+						a(href="") Finance
 
 		.main-container
 			nav.main-breadcrumb
@@ -209,13 +149,9 @@ html.no-js
 								.title
 									h1.title__heading.js-ref
 										span.title__title #{title}
+							block content
 							if toolbars
 								include toolbar.jade
-								block content
-								if sharebar
-									include sharebar.jade
-							else
-								block content
 
 						block sidebar
 					else
