@@ -60,14 +60,15 @@ html.no-js
 						img.slim(src="#{dir}images/ca-logo-st-220px.svg")
 
 					ul
-						li#get-advice
+						li#org
 							a(href="#")
-								span Get&nbsp;
-								span Advice
-						li#get-involved
+								span Connect
+						li#job
 							a(href="#")
-								span Get&nbsp;
-								span Involved
+								span Work
+						li#news
+							a(href="#")
+								span Update
 						li#search-toggle
 							a(href="#")
 								i.icon-search
@@ -84,7 +85,7 @@ html.no-js
 				button.btn
 					i.icon-search
 
-		#main-nav-beta--advice
+		#main-nav-beta--org
 			.content
 				ul
 					li
@@ -132,7 +133,35 @@ html.no-js
 						br
 						| School and higher education, support for learning, discrimination and financial advice.
 
-		#main-nav-beta--involved
+		#main-nav-beta--job
+			.content
+				ul
+					li
+						a(href="") About Citizens Advice
+					li
+						a(href="") Contact us
+					li
+						a(href="") Policy research
+					li
+						a(href="") Our blogs
+					li
+						a(href="") Campaigns
+					li
+						a(href="") How Citizens Advice works
+					li
+						a(href="") Volunteer
+					li
+						a(href="") Jobs
+					li
+						a(href="") Press releases
+					li
+						a(href="") Support us
+					li
+						a(href="") The difference we make
+					li
+						a(href="") Find your local Citizens Advice
+
+		#main-nav-beta--news
 			.content
 				ul
 					li
@@ -253,54 +282,81 @@ html.no-js
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
 
-				// Click #get-advice
-				$('#get-advice').click(function(){
+				// Click #org
+				$('#org').click(function(){
 					// If either of the other two are active
-					if ($('#get-involved').hasClass("active") || $('#search-toggle').hasClass("active")) {
+					if ($('#job').hasClass("active") || $('#news').hasClass("active") || $('#search-toggle').hasClass("active")) {
 						// Remove class from other two
-						$('#get-involved').removeClass("active");
+						$('#job').removeClass("active");
+						$('#news').removeClass("active");
 						$('#search-toggle').removeClass("active");
 						// Slide other two up
-						$('#main-nav-beta--involved').slideUp('fast');
+						$('#main-nav-beta--job').slideUp('fast');
+						$('#main-nav-beta--news').slideUp('fast');
 						$('#main-nav-beta--search').slideUp('fast');
 						// Wait 250ms and then slide down
-						$('#main-nav-beta--advice').delay(250).slideDown('fast');
+						$('#main-nav-beta--org').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-beta--advice').slideToggle('fast');
+						$('#main-nav-beta--org').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
 
-				// Click #get-advice
-				$('#get-involved').click(function(){
+				// Click #org
+				$('#job').click(function(){
 					// If either of the other two are active
-					if ($('#get-advice').hasClass("active") || $('#search-toggle').hasClass("active")) {
+					if ($('#org').hasClass("active") || $('#news').hasClass("active") || $('#search-toggle').hasClass("active")) {
 						// Remove class from other two
-						$('#get-advice').removeClass("active");
+						$('#org').removeClass("active");
+						$('#news').removeClass("active");
 						$('#search-toggle').removeClass("active");
 						// Slide other two up
-						$('#main-nav-beta--advice').slideUp('fast');
+						$('#main-nav-beta--org').slideUp('fast');
+						$('#main-nav-beta--news').slideUp('fast');
 						$('#main-nav-beta--search').slideUp('fast');
 						// Wait 250ms and then slide down
-						$('#main-nav-beta--involved').delay(250).slideDown('fast');
+						$('#main-nav-beta--job').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-beta--involved').slideToggle('fast');
+						$('#main-nav-beta--job').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
 
-				// Click #get-advice
+				// Click #news
+				$('#news').click(function(){
+					// If either of the other two are active
+					if ($('#org').hasClass("active") || $('#job').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						// Remove class from other two
+						$('#org').removeClass("active");
+						$('#job').removeClass("active");
+						$('#search-toggle').removeClass("active");
+						// Slide other two up
+						$('#main-nav-beta--org').slideUp('fast');
+						$('#main-nav-beta--job').slideUp('fast');
+						$('#main-nav-beta--search').slideUp('fast');
+						// Wait 250ms and then slide down
+						$('#main-nav-beta--news').delay(250).slideDown('fast');
+
+					} else {
+						$('#main-nav-beta--news').slideToggle('fast');
+					}
+					$(this).toggleClass("active");
+				});
+
+				// Click #search-toggle
 				$('#search-toggle').click(function(){
 					// If either of the other two are active
-					if ($('#get-involved').hasClass("active") || $('#get-advice').hasClass("active")) {
+					if ($('#job').hasClass("active") || $('#org').hasClass("active") || $('#news').hasClass("active")) {
 						// Remove class from other two
-						$('#get-advice').removeClass("active");
-						$('#get-involved').removeClass("active");
+						$('#org').removeClass("active");
+						$('#job').removeClass("active");
+						$('#news').removeClass("active");
 						// Slide other two up
-						$('#main-nav-beta--involved').slideUp('fast');
-						$('#main-nav-beta--advice').slideUp('fast');
+						$('#main-nav-beta--org').slideUp('fast');
+						$('#main-nav-beta--job').slideUp('fast');
+						$('#main-nav-beta--news').slideUp('fast');
 						// Wait 250ms and then slide down
 						$('#main-nav-beta--search').delay(250).slideDown('fast');
 
