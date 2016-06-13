@@ -1260,8 +1260,14 @@ div.tooltip:before {
         content: @i-github;
     }
 
-    .i-spinner .icon:before {
+    .i-spinner {
+        position: relative;
+    }
+
+    .i-spinner .icon:after {
+        display: block;
         content: @i-spinner;
+        .spinner;
     }
 
     .brand-accelerator .icon-brand:before {
