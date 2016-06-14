@@ -9,14 +9,14 @@ extends /template/template-site.jade
 
 block content
 		.main-container
-			.home-first(style="background-color:#f2f8ff;")
+			.home-first(style="background-color:#f2f8ff; background-image:url(#{dir}images/sample-blog/intranet-home.jpg); background-size:cover;")
 				.home__content
 					.flex-container.flex-row
-						.col-md-8.col-sm-12
+						.col-md-8.col-sm-12(style="background-color: rgba(255,255,255,0.8); padding: 3rem;")
 							.blog-lead
 								.blog-name
 									p Tuesday 13 June
-							h1 Hello Dom Dom Dom
+							h1(style="margin-top:0;") Hello Firstname Lastname
 							p Welcome to the intranet, this is your site for the latest organisational information, news and tools to help you do your best work. If you have any feedback #[a(href="#") let us know].
 							//.home__content-trends
 								h2 Most viewed 
