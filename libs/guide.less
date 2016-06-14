@@ -1721,6 +1721,9 @@ div.tooltip:before {
     position: -webkit-sticky;
     position: sticky;
     z-index: 1;
+    @media screen and (max-width: @breakpoint-content) {
+        display: none;
+    }
     nav {
         background-color: @intranet-lightest;
         margin-top: 1rem;
