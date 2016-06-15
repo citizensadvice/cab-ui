@@ -107,7 +107,7 @@
 				vertical-align: top;
 				padding: .5rem .5rem;
                 line-height: 1.25rem;
-				@media screen and (min-width: @breakpoint-sm) {
+				@media screen and (min-width: @breakpoint-lg) {
 					padding: 0 1rem;
             		line-height: 3.9rem;
             		font-size: 1.2rem;
@@ -134,7 +134,7 @@
 					}
                 	span {
                 		display: block;
-						@media screen and (min-width: @breakpoint-sm) {
+						@media screen and (min-width: @breakpoint-lg) {
 	            			display: inline;
 						}
                 	}
@@ -144,7 +144,7 @@
 					padding-left: .75rem;
 					padding-right: .75rem;
 					@media screen and (min-width: @breakpoint-sm) {
-            			line-height: 3.9rem;
+            			//line-height: 3.9rem;
 						padding-left: 1.25rem;
 						padding-right: 1.25rem;
             		}
@@ -156,12 +156,13 @@
         }
         .search {
 			vertical-align: top;
-			margin: .25rem 0;
+			margin: 0;
 			float: right;
 			display: none;
 			width: 14rem;
 			@media screen and (min-width: @breakpoint-lg) {
-				width: 21rem;
+				//width: 21rem;
+				margin: .25rem 0;
 			}
 			@media screen and (min-width: @breakpoint-md) {
 				display: inline-block;
