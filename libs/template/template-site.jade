@@ -64,15 +64,15 @@ html.no-js
 						img.slim(src="#{dir}images/intranet/MyCA-logo-hz-350px.svg")
 
 					ul
-						li#org
+						li#one
 							a(href="#")
 								span Do&nbsp;
 								span your&nbsp;job
-						li#job
+						li#two
 							a(href="#")
 								span Connect&nbsp;
 								span and&nbsp;share
-						li#news
+						li#three
 							a(href="#")
 								span Get&nbsp;
 								span updated
@@ -92,7 +92,7 @@ html.no-js
 				button.btn
 					i.icon-search
 
-		#main-nav-beta--org
+		#main-nav-beta--one
 			.content
 				ul
 					li
@@ -119,7 +119,7 @@ html.no-js
 						a(href="") Technology
 
 
-		#main-nav-beta--job
+		#main-nav-beta--two
 			.content
 				ul
 					li
@@ -133,7 +133,7 @@ html.no-js
 					li
 						a(href="") Share work
 
-		#main-nav-beta--news
+		#main-nav-beta--three
 			.content
 				ul
 					li
@@ -232,82 +232,62 @@ html.no-js
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
 
-				// Click #org
-				$('#org').click(function(){
-					// If either of the other two are active
-					if ($('#job').hasClass("active") || $('#news').hasClass("active") || $('#search-toggle').hasClass("active")) {
-						// Remove class from other two
-						$('#job').removeClass("active");
-						$('#news').removeClass("active");
+				$('#one').click(function(){
+					if ($('#two').hasClass("active") || $('#three').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						$('#two').removeClass("active");
+						$('#three').removeClass("active");
 						$('#search-toggle').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--job').slideUp('fast');
-						$('#main-nav-beta--news').slideUp('fast');
+						$('#main-nav-beta--two').slideUp('fast');
+						$('#main-nav-beta--three').slideUp('fast');
 						$('#main-nav-beta--search').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--org').delay(250).slideDown('fast');
+						$('#main-nav-beta--one').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-beta--org').slideToggle('fast');
+						$('#main-nav-beta--one').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
 
-				// Click #org
-				$('#job').click(function(){
-					// If either of the other two are active
-					if ($('#org').hasClass("active") || $('#news').hasClass("active") || $('#search-toggle').hasClass("active")) {
-						// Remove class from other two
-						$('#org').removeClass("active");
-						$('#news').removeClass("active");
+				$('#two').click(function(){
+					if ($('#one').hasClass("active") || $('#three').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						$('#one').removeClass("active");
+						$('#three').removeClass("active");
 						$('#search-toggle').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--org').slideUp('fast');
-						$('#main-nav-beta--news').slideUp('fast');
+						$('#main-nav-beta--one').slideUp('fast');
+						$('#main-nav-beta--three').slideUp('fast');
 						$('#main-nav-beta--search').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--job').delay(250).slideDown('fast');
+						$('#main-nav-beta--two').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-beta--job').slideToggle('fast');
+						$('#main-nav-beta--two').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
 
-				// Click #news
-				$('#news').click(function(){
-					// If either of the other two are active
-					if ($('#org').hasClass("active") || $('#job').hasClass("active") || $('#search-toggle').hasClass("active")) {
-						// Remove class from other two
-						$('#org').removeClass("active");
-						$('#job').removeClass("active");
+				$('#three').click(function(){
+					if ($('#one').hasClass("active") || $('#two').hasClass("active") || $('#search-toggle').hasClass("active")) {
+						$('#one').removeClass("active");
+						$('#two').removeClass("active");
 						$('#search-toggle').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--org').slideUp('fast');
-						$('#main-nav-beta--job').slideUp('fast');
+						$('#main-nav-beta--one').slideUp('fast');
+						$('#main-nav-beta--two').slideUp('fast');
 						$('#main-nav-beta--search').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--news').delay(250).slideDown('fast');
+						$('#main-nav-beta--three').delay(250).slideDown('fast');
 
 					} else {
-						$('#main-nav-beta--news').slideToggle('fast');
+						$('#main-nav-beta--three').slideToggle('fast');
 					}
 					$(this).toggleClass("active");
 				});
 
-				// Click #search-toggle
 				$('#search-toggle').click(function(){
-					// If either of the other two are active
-					if ($('#job').hasClass("active") || $('#org').hasClass("active") || $('#news').hasClass("active")) {
-						// Remove class from other two
-						$('#org').removeClass("active");
-						$('#job').removeClass("active");
-						$('#news').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--org').slideUp('fast');
-						$('#main-nav-beta--job').slideUp('fast');
-						$('#main-nav-beta--news').slideUp('fast');
-						// Wait 250ms and then slide down
+					if ($('#two').hasClass("active") || $('#one').hasClass("active") || $('#three').hasClass("active")) {
+						$('#one').removeClass("active");
+						$('#two').removeClass("active");
+						$('#three').removeClass("active");
+						$('#main-nav-beta--one').slideUp('fast');
+						$('#main-nav-beta--two').slideUp('fast');
+						$('#main-nav-beta--three').slideUp('fast');
 						$('#main-nav-beta--search').delay(250).slideDown('fast');
 
 					} else {
