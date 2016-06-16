@@ -17,19 +17,19 @@ block sidebar
 // 3. Instantiate clipboard
 block script
 	script.
-		var clipboard = new Clipboard('.btn');
+		var clipboard2 = new Clipboard('.btn');
 
-		clipboard.on('success', function(e) {
+		clipboard2.on('success', function(e) {
 			console.log(e);
 		});
 
-		clipboard.on('error', function(e) {
+		clipboard2.on('error', function(e) {
 			console.log(e);
 		});
 
 		$(document).ready(function() {
 			$('#pageurl').attr("value", window.location.href);
-			$('button').click(function(){
+			$('.btn-secondary').click(function(){
 				//var count = parseInt($(this).data('click'), 10) || 0;
 				//count++; $(this).data('click',count);
 
@@ -68,4 +68,16 @@ block content
 				| 		&lt;button class="btn btn-secondary save-button-icon"&gt;Copy link&lt;/button&gt;
 				| 	&lt;/div&gt;
 				| &lt;/fieldset&gt;
+
+		p There is also a smaller version for this pattern, which is used in the #[a(href="#{dir}modules/toolbar.html") toolbar]
+
+		.example-box-plain
+			button.a-social-copy Copy link
+				.copied Copied!
+
+		pre
+			code.language-html
+				| &lt;button class="btn a-social-copy"&gt;Copy link
+				| 	&lt;div class="copied"&gt;Copied!&lt;/div&gt;
+				| &lt;/button&gt;
 
