@@ -8,11 +8,11 @@ extends /template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Modules", href: dir + "index.html#Styles"},
 		{title: "Charts"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /template/sidebar-styles.jade
 
 block script
 	script(src="#{dir}js/vendor/highcharts/highcharts.js")
