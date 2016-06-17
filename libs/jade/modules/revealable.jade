@@ -17,7 +17,7 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Revealable sections allow you to ‘hide’ content that’s only relevant to some people visiting the page. 
+			p Revealable sections allow you to ‘hide’ content that’s only relevant to some people visiting the page.
 			p The ‘hidden’ content sits under a clickable h3 heading. Once clicked, the rest of the content is revealed.
 			p They’re a great way to make a page easier to read - people can scan through quickly.
 			p Bear in mind that hidden content can be easy for people to miss, so use the revealables sparingly - you should aim to use no more than 4 per page.
@@ -33,6 +33,18 @@ block content
 					| &lt;section class="revealable"&gt;
 					| 	&lt;h3&gt;Unstyled content inside header/toggle&lt;/h3&gt;
 					| 	&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| &lt;/section&gt;
+
+			.example-box-plain
+				section.revealable.revealable--adviser
+					h3 Adviser content inside revealable
+					p This callout style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+
+			pre
+				code.language-html
+					| &lt;section class="revealable revealable--adviser"&gt;
+					| 	&lt;h3&gt;Adviser content inside revealable&lt;/h3&gt;
+					| 	&lt;p&gt;This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.&lt;/p&gt;
 					| &lt;/section&gt;
 
 
