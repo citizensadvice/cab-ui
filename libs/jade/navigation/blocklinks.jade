@@ -8,11 +8,11 @@ extends /template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Navigation", href: dir + "index.html#Navigation"},
 		{title: "Blocklinks"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /template/sidebar-navigation.jade
 
 block content
 	.articleContent
