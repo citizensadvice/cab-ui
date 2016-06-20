@@ -176,7 +176,7 @@
 	#toggle {
 		display: inline-block;
 		float: right;
-		padding: 1.5rem 1rem;
+		padding: 1.27rem 1.5rem;
 		cursor: pointer;
 		@media screen and (min-width: 751px) {
 			display: none;
@@ -186,6 +186,12 @@
 			color: @white;
 			content: @i-menu;
 		}
+		&.active {
+			background-color: @heritage-blue-lightest;
+			&:after {
+				color: @heritage-blue;
+			}
+		}
 	}
 }
 
@@ -193,34 +199,50 @@
 	padding: 0 0 .5rem 1rem;
 	list-style: none;
 	margin: 0;
-	padding-top: 0;
 	display: none;
+	padding: 1rem;
+	background-color: @heritage-blue-lightest;
+	li {
+		text-align: left;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
 	li a {
 		padding: 0;
+		display: block;
+		padding: .25rem;
 	}
 	a {
 		padding: 1rem;
 		text-decoration: none;
 		border-bottom: none;
 		font-weight: 600;
-		color: white;
+		color: @heritage-blue;
 		&:hover,
 		&:active,
-		&:visited  {
-			color: @white;
+		&:visited,
+		&:focus {
+			color: @heritage-blue;
 			border-bottom: none;
 		}
 	}
 	@media screen and (min-width: 751px) {
 		padding: 0;
-		display: inline-block;
+		display: inline-block !important;
 		right: 0;
 		.vertical-align(absolute);
+		background-color: @heritage-blue;
 		li {
 			display: inline;
-			a {
+			a,
+			a:hover,
+			a:active,
+			a:visited,
+			a:focus {
 				padding: 1rem;
 				display: inline-block;
+				color: @white;
 			}
 		}
 	}
