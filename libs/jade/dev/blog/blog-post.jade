@@ -61,34 +61,33 @@ block content
 
 		.comment
 			.comment-single
-				div(style="clear:both;")
-					h3.col-xs-8(style="width: 60%; display: inline-block;") Domenico Perri
-					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				h3
+					p.small(style="float:right;") Posted 2 weeks ago. #[a Reply]
+					| Domenico Perri
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam.
 			.comment-single.reply
-				div(style="clear:both;")
-					h3.col-xs-8(style="width: 60%; display: inline-block;") Eliot Hill
-					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				h3
+					p.small(style="float:right;") Posted 2 weeks ago. #[a Reply]
+					| Eliot Hill
 				p Lorem ipsum dolor.
 			.comment-single
-				div(style="clear:both;")
-					h3.col-xs-8(style="width: 60%; display: inline-block;") Paul Chanthapanya
-					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted yesterday. #[a Reply]
+				h3
+					p.small(style="float:right;") Posted yesterday. #[a Reply]
+					| Paul Chanthapanya Paul Chanthapanya Paul Chanthapanya
 				p In sit amet massa semper, ultricies nulla at, vestibulum nulla. Nulla id arcu quis odio molestie porttitor et id lacus. In fermentum aliquet libero eget rutrum.
 
 		.well
 			h2 Add your comment
-			fieldset
+			.fieldset
 				label(for="name") Your name
-				.search-results__field(style="width:100%; margin-bottom: 10px;")
-					input(type="text", placeholder="Your name")
+				input(type="text", placeholder="Your name")
 
+			.fieldset
 				label(for="email") Your email
-				.search-results__field(style="width:100%;")
-					input(type="email", placeholder="Your email")
+				input(type="email", placeholder="Your email")
 
-			fieldset
+			.fieldset
 				label(for="exampleTextarea") Your comment
-				textarea#exampleTextarea(rows="3", style="width:100%; margin-bottom: 10px;")
+				textarea#exampleTextarea(rows="3")
 
-				button.btn.btn-secondary.right-button-icon Submit
+			button.btn.btn-secondary.right-button-icon Submit
