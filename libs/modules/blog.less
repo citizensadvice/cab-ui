@@ -27,6 +27,19 @@
 	//margin-top: 2rem;
 	padding-top:.75rem;
 	margin-bottom: 2rem;
+	button {
+		background-color: @heritage-yellow;
+		border-color: @heritage-yellow;
+		&:active,
+		&:hover {
+			background-color: @heritage-yellow-darker;
+			border-color: @heritage-yellow-darker;
+		}
+		&:focus {
+			background-color: @heritage-yellow-darker;
+			border-color: @heritage-blue-lighter;
+		}
+	}
 }
 
 .blog-sidebar--category {
