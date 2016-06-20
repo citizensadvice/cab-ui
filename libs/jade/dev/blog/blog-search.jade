@@ -1,0 +1,75 @@
+block settings
+	- var title = "Search results"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = false
+	- var dir = "../../"
+	- var blog = true
+
+extends /template/template.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.search.blog
+		.field-group.field-group--buttons
+			input#field(type="search", placeholder="Enter your town name or postcode", value="benafits")
+			button.btn Search&nbsp;&nbsp;
+				i.icon-search
+	p Did you mean #[a benefits]?
+	ul.search-results.blog
+		li
+			.heading
+				a Blog article title
+			.description Excerpt goes here. Should be longer than this though...
+			ul.section
+				li #[a Tag]
+				li #[a Tag]
+				li #[a Tag]
+
+		li
+			.heading
+				a Blog article title
+			.description Excerpt goes here. Should be longer than this though...
+			ul.section
+				li #[a Tag]
+				li #[a Tag]
+				li #[a Tag]
+
+		li
+			.heading
+				a Blog article title
+			.description Excerpt goes here. Should be longer than this though...
+			ul.section
+				li #[a Tag]
+				li #[a Tag]
+				li #[a Tag]
+
+		li
+			.heading
+				a Blog article title
+			.description Excerpt goes here. Should be longer than this though...
+			ul.section
+				li #[a Tag]
+				li #[a Tag]
+				li #[a Tag]
+
+		li
+			.heading
+				a Blog article title
+			.description Excerpt goes here. Should be longer than this though...
+			ul.section
+				li #[a Tag]
+				li #[a Tag]
+				li #[a Tag]
+
+
+	.pagination
+		ul
+			li.active #[span 1]
+			li #[a 2]
+			li #[a 3]
+			li.pagination--dot ...
+			li #[a 9]
+			li #[a Next]

@@ -401,6 +401,14 @@ html.no-js
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
 			});
+		if blog
+			script.
+				$(document).ready(function() {
+					$( "#toggle" ).on( "click", function() {
+						$( this ).next().slideToggle();
+						$( this ).toggleClass('active');
+					});
+				});
 
 		block script
 
