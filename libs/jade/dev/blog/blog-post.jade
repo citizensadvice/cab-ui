@@ -2,10 +2,10 @@ block settings
 	- var title = "Working with advisers to design new PIP content"
 	- var sidebar = true
 	- var toolbars = false
-	- var blog = true
-	- var dir = "../../"
+	//- var cookiemonster = true
+	- var mockup = false
 
-extends /template/template.jade
+extends ../template/template-blog.jade
 
 //block breadcrumbs
 	+breadcrumbs([
@@ -13,21 +13,12 @@ extends /template/template.jade
 		{title: "Working with advisers to design new PIP content"}])
 
 block sidebar
-	include /template/sidebar-blog.jade
-
-block script
-	script.
-		$(document).ready(function() {
-			$( "#toggle" ).on( "click", function() {
-				console.log('lol');
-				$( this ).next().slideToggle();
-			});
-		});
+	include ../template/sidebar-blog.jade
 
 block content
 	.articleContent
 		block toolbars
-			include /template/toolbar-blog.jade
+			include ../template/toolbar-blog.jade
 
 		p Content is only as good as the advice that sits behind it. The values inherent in that advice come from an understanding of our audience – their goals and their problems. By designing content that focuses on these things we can create something original and valuable that users will engage with and understand.
 
@@ -59,8 +50,12 @@ block content
 			p Share this page. #[a(#) Find out more about sharing.]
 			a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
 			a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
-			a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
+			//a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
+			//button.toolbar-button.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
+			a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
+			button.a-social-copy Copy link
+				.copied Copied!
 
 		.comment
 			.comment-single

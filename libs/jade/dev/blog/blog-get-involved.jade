@@ -2,10 +2,10 @@ block settings
 	- var title = "Get involved"
 	- var sidebar = true
 	- var toolbars = false
-	- var blog = true
-	- var dir = "../../"
+	//- var cookiemonster = true
+	- var mockup = false
 
-extends /template/template.jade
+extends ../template/template-blog.jade
 
 //block breadcrumbs
 	+breadcrumbs([
@@ -13,16 +13,7 @@ extends /template/template.jade
 		{title: "Get involved"}])
 
 block sidebar
-	include /template/sidebar-blog.jade
-
-block script
-	script.
-		$(document).ready(function() {
-			$( "#toggle" ).on( "click", function() {
-				console.log('lol');
-				$( this ).next().slideToggle();
-			});
-		});
+	include ../template/sidebar-blog.jade
 
 block content
 	.articleContent

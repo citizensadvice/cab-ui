@@ -2,10 +2,10 @@ block settings
 	- var title = "The Team"
 	- var sidebar = true
 	- var toolbars = false
-	- var blog = true
-	- var dir = "../../"
+	//- var cookiemonster = true
+	- var mockup = false
 
-extends /template/template.jade
+extends ../template/template-blog.jade
 
 //block breadcrumbs
 	+breadcrumbs([
@@ -13,16 +13,7 @@ extends /template/template.jade
 		{title: "The Team"}])
 
 block sidebar
-	include /template/sidebar-blog.jade
-
-block script
-	script.
-		$(document).ready(function() {
-			$( "#toggle" ).on( "click", function() {
-				console.log('lol');
-				$( this ).next().slideToggle();
-			});
-		});
+	include ../template/sidebar-blog.jade
 
 block content
 	.articleContent
@@ -33,7 +24,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
@@ -41,7 +32,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
@@ -49,7 +40,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
@@ -57,7 +48,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Manager
@@ -67,7 +58,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -75,7 +66,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -83,7 +74,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -91,7 +82,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -99,7 +90,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -107,7 +98,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -115,7 +106,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -123,7 +114,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -131,7 +122,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -139,7 +130,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -147,7 +138,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Content Designer
@@ -157,7 +148,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Designer
@@ -165,7 +156,7 @@ block content
 					.team
 						a(href="blog-team-profile.html")
 							.avatar-full
-								img(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+								img(src="images/sample-blog/avatar.png" alt="That Person")
 							.avatar-title
 								h3(href="blog-team-profile.html") That Person
 								p Designer
