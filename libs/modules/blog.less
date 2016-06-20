@@ -134,39 +134,43 @@
 
 // Header
 .blog-header {
-    background-color: @heritage-blue;
-    &--content {
-        max-width: @breakpoint-lg;
-        margin: 0 auto;
-        position: relative;
-        img {
-            display: inline-block;
-            width: 220px;
-            padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
-    		@media screen and (min-width: 751px) {
-    			display: block;
-    		}
-        }
-        a:hover,
-        a:focus,
+	background-color: @heritage-blue;
+	&--content {
+		max-width: @breakpoint-lg;
+		margin: 0 auto;
+		position: relative;
+		.logo {
+			border: none;
+		}
+		img {
+			display: inline-block;
+			vertical-align: top;
+			width: 220px;
+			padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
+			@media screen and (min-width: 751px) {
+				display: block;
+			}
+		}
+		a:hover,
+		a:focus,
 		a:visited {
-            background: none;
-        }
-    }
-    #toggle {
-    	display: inline-block;
-    	float: right;
-    	padding: 1.5rem 1rem;
-    	cursor: pointer;
-    	@media screen and (min-width: 751px) {
-    		display: none;
-    	}
-    	&:after {
-    		.icon;
-    		color: @white;
-    		content: @i-menu;
-    	}
-    }
+			background: none;
+		}
+	}
+	#toggle {
+		display: inline-block;
+		float: right;
+		padding: 1.5rem 1rem;
+		cursor: pointer;
+		@media screen and (min-width: 751px) {
+			display: none;
+		}
+		&:after {
+			.icon;
+			color: @white;
+			content: @i-menu;
+		}
+	}
 }
 
 .blog-navigation {

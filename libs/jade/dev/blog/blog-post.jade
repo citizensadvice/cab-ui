@@ -4,8 +4,10 @@ block settings
 	- var toolbars = false
 	//- var cookiemonster = true
 	- var mockup = false
+	- var dir = "../../"
+	- var blog = true
 
-extends ../template/template-blog.jade
+extends /template/template.jade
 
 //block breadcrumbs
 	+breadcrumbs([
@@ -13,12 +15,12 @@ extends ../template/template-blog.jade
 		{title: "Working with advisers to design new PIP content"}])
 
 block sidebar
-	include ../template/sidebar-blog.jade
+	include /template/sidebar-blog.jade
 
 block content
 	.articleContent
 		block toolbars
-			include ../template/toolbar-blog.jade
+			include /template/toolbar-blog.jade
 
 		p Content is only as good as the advice that sits behind it. The values inherent in that advice come from an understanding of our audience – their goals and their problems. By designing content that focuses on these things we can create something original and valuable that users will engage with and understand.
 
