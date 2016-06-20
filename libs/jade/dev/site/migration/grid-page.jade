@@ -1,0 +1,63 @@
+block settings
+	- var title = "Volunteering with us"
+	//- var sidebar = true
+	//- var mockup = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-modules.jade
+
+block content
+	div
+	// New code snippet
+	.index-page.flex-row.js-equal-height
+		// New code snippet
+		.col-md-8
+			p.first-paragraph We have over 21,500 highly trained volunteers supporting the delivery of our work. They come from all sorts of backgrounds and help with everything we do.
+			p.first-paragraph Could you join them?
+	.flex-row.js-equal-height.home-page.section-home
+		.flex-column.col-sm-12
+			.flex-row.js-equal-height
+				.home-page__box.col-sm-7
+					h2 Volunteer locally with us
+					div
+						h4 Interested in volunteering with Citizens Advice?
+						p Search for local opportunities, including trustee roles, fill out a quick online form and your local Citizens Advice will get in touch with you to discuss options.
+						form
+							label Search opportunities
+							.search-inline__field
+								input(type="search")
+							.search-inline__button
+								input(type="submit", value="Search")
+						p Do you have good listening skills?
+						p Perhaps you'd be interested in being a #[a telephone assessor] for our national phone service.
+						h4 Interested in supporting witnesses in courts?
+						p Volunteer for our #[a Witness Service]?
+				.home-page__box.col-sm-5
+					h2 Why volunteer with us?
+		.flex-column.col-sm-12
+			.flex-row.js-equal-height
+				.home-page__box.col-sm-6
+					h2 Disabled volunteers
+					div
+						p We offer a warm welcome to every volunteer whatever their background.
+						p #[a Find out what you can expect from us as a disabled volunteer]
+				.home-page__box.col-sm-6
+					h2 About volunteering with Citizens Advice
+					div
+						p Find out about:
+						ul
+							li #[a our volunteer roles]
+							li #[a being a trustee]
+							li #[a being a telephone assessor]
+							li #[a being a Witness Service volunteer].
+						p We also have some #[a answers to common questions] on volunteering with us.
+						p Read our report about the #[a value of volunteering] to individuals, communities and society.

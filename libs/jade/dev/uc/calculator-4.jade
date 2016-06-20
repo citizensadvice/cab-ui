@@ -1,0 +1,58 @@
+block settings
+	- var title = "Universal Credit calculator"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Advisor content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+	.articleContent
+		div
+			fieldset
+				legend(for="exampleSelect1") How many children are in your household?
+				span.form-hint Include any children you're legally responsible for or foster.
+				.dropdown
+					select#exampleSelect1
+						option 0
+						option 1
+						option 2
+						option 3
+						option 4
+						option 5
+						option 6
+						option 7
+						option 8
+						option 9
+						option 10
+						option 11
+						option 12
+						option 13
+						option 14
+						option 15
+
+			a.btn-light.left-button-icon(href="calculator-3.html") Back
+			a.btn.right-button-icon(href="calculator-5.html", type="button") Continue

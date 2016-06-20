@@ -1,5 +1,5 @@
-mixin link(title, href, text)
-	a(href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
+mixin link(title, href, text, css)
+	a(class=css, href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
 
 mixin breadcrumbs(obj)
 	.main-breadcrumb__content
@@ -19,8 +19,20 @@ mixin sidebar(obj, key)
 			a In this section
 		ul
 			li
-				a.section-nav__parent(href="./##{section}") #{section}
+				a.section-nav__parent(href="../##{section}") #{section}
 				ul
 					- each item,index in obj
 						li
-							+link(item.title, item.href, item.text)
+							+link(item.title, item.href, item.text, item.css)
+
+mixin sidebar-inline(obj, key)
+	ul
+		- each item,index in obj
+			li
+				+link(item.title, item.href, item.text, item.css)
+
+mixin sidebar-inline-adviser(obj, key)
+	ul
+		- each item,index in obj
+			li
+				+link(item.title, item.href, item.text, item.css)

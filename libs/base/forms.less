@@ -12,45 +12,34 @@
 
 // Buttons
 
+.optional {
+    color: @gray-2;
+    font-weight: @font-weight-base;
+}
+
 form small {
     color: @gray-3;
 }
 
-.valid,
-.invalid {
+div.invalid,
+span.invalid {
     padding-top: @box-spacing/4;
     clear: both;
-//    display: none;
-}
-.valid {
-    color: @green;
-}
-.invalid {
     color: @red;
-    .well--outline& {
-        border-color: @red;
-        ul,
-        li,
-        h3 {
-            color: @red;
-        }
+}
+.well--outline.invalid {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    color: @black;
+    border-color: @red;
+    ul,
+    li,
+    h3,
+    a {
+        color: @red;
     }
 }
-/* Do we want to make valid/invalid selectors inline?
-input {
-    &:valid {
-        .valid {
-            display: inline-block;
-        }
-    }
-    &:invalid {
-        .invalid {
-            display: inline-block;
-        }
-    }
-}
-*/
-fieldset,
+
+fieldset, .fieldset,
 .form__group {
     padding: 0;
     margin: 0;
@@ -114,7 +103,9 @@ input[type=checkbox] + label {
 input[type=text][size="1"] {
     width: 3em;
 }
-
+input[readonly] {
+    background-color: @gray-7;
+}
 
 select {
     max-width: 100%;
@@ -160,6 +151,7 @@ input[type="password"],
 input[type="number"],
 input[type="text"],
 input[type="tel"],
+input[type="search"],
 input[id*="dob-"],
 input[class*="dob-"],
 textarea,
@@ -167,12 +159,21 @@ select {
     width: 100%;
     padding: @box-spacing-vertical @box-spacing-horizontal;
     border-radius: @form-border-radius;
-    &:required:invalid {
+    /*&:required:invalid {
         //outline: 2px solid @red;
         border-color: @red;
         border-radius: 0;
         background-image: url("assets/images/red-cross.svg");
         //padding-right: 2.25em;
+        background-repeat: no-repeat;
+        background-position: center right .6em;
+        -webkit-background-size: 1.5em 1.5em;
+        background-size: 1.5em 1.5em;
+    }*/
+    &.invalid {
+        border-color: @red;
+        border-radius: 0;
+        background-image: url("assets/images/red-cross.svg");
         background-repeat: no-repeat;
         background-position: center right .6em;
         -webkit-background-size: 1.5em 1.5em;
@@ -237,6 +238,17 @@ textarea.form__field {
     z-index: 1;
     background-color: @gray-8;
     border: none;
+    /*&.invalid {
+        background-color: @red-lightest;
+        color: @red;
+        input:before {
+            background-color: @red-lightest;
+            border-color: @red;
+        }
+        input:hover:before {
+            border-color: @red;
+        }
+    }*/
     input {
         display: inline-block;
         &:before {
@@ -250,11 +262,18 @@ textarea.form__field {
             -webkit-user-select: none;
             cursor: pointer;
             border-radius: @form-border-radius;
-            border: 1px solid @gray-6;
+            border: 2px solid @gray-6;
             z-index: -1;
             background-color: @gray-8;
             box-sizing: border-box;
             margin-right: @box-spacing/2;
+        }
+        &.invalid:before {
+            border-color: @red;
+            //background-color: @red-lightest;
+        }
+        &.invalid:hover:before {
+            border-color: @red;
         }
         &:hover:before {
             border-color: @gray-5;
@@ -287,6 +306,9 @@ textarea.form__field {
     &--inline {
         clear: none;
         //float: left;
+        label& {
+            margin-bottom: 0;
+        }
     }
 
     &--block {
@@ -302,6 +324,9 @@ textarea.form__field {
                 font-weight: @font-weight-bold;
             }
         }
+        //label&:last-of-type {
+            //margin-bottom: 0;
+        //}
     }
 }
 
@@ -312,6 +337,7 @@ textarea.form__field {
     background-color: @white;
     display: inline-block;
     width: 100%;
+    //border: 2px solid @gray-6;
     &:after {
         pointer-events:none;
         @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
@@ -322,10 +348,19 @@ textarea.form__field {
         background: none;
         cursor: pointer;
         -webkit-appearance: none;
-        -moz-appearance: window;
+        //-moz-appearance: window;
+        -moz-appearance: none;
         padding-right: 2em;
         .ie(width,100%);
         border: 2px solid @gray-6;
+        //border: none;
+        &.invalid {
+            border-color: @red;
+        }
+        &:focus {
+            outline: none;
+            border-color: @heritage-yellow;
+        }
     }
     .dropdown,
     select {
@@ -354,14 +389,16 @@ input[class*="dob-"] {
 }*/
 .form-group-date {
     overflow: auto;
+    margin-bottom: 1rem;
 }
 
 .form-group-date fieldset {
     &:extend(fieldset);
-    width: 5rem;
+    width: 6rem;
     display: inline-block;
     float: left;
     margin-right: @box-spacing-horizontal/2;
+    margin-bottom: 0;
     &:last-child {
         margin: 0;
     }
@@ -390,12 +427,13 @@ input[class*="dob-"] {
     }
     input {
         border-radius: 0;
-        border-right: 0;
+        //border-right: 0;
         width: 100%;
         display: inline-block;
     }
     button {
-        .ie(padding,0 1em);
+        .ie(border-width,1px);
+        .ie(padding-bottom,.6em);
         display: inline-block;
     }
     *:first-child {
@@ -472,6 +510,7 @@ input[class*="dob-"] {
         select {
             .ie(width,100%);
             border: 2px solid @gray-6;
+            border-left: 0;
         }
     }
     input:first-of-type {
@@ -491,21 +530,42 @@ input[class*="dob-"] {
 
 .field-group--buttons {
     input:first-of-type {
-        border-radius: @form-border-radius 0 0 @form-border-radius;
-        width: 70%;
+        border-radius: @form-border-radius;
+        width: 100%;
         display: inline-block;
+        padding-right: 30%;
+    }
+    input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+        margin-top:-2px;
+        margin-bottom: -2px;
     }
     button {
         width: 30%;
         display: inline-block;
+        margin-left: -30%;
         border-width: 2px;
+        border-radius: 0;
+        &:last-of-type {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
         &:focus {
             outline: 0;
             border: 2px solid @heritage-yellow;
             border-radius: 0;
         }
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+            margin-top:0px;
+            margin-bottom:0px;
+        }
         &:hover {
             border-width: 2px;
+            //-webkit-box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
+            //-moz-box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
+            //box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
         }
     }
 }
@@ -543,6 +603,188 @@ input[class*="dob-"] {
 
         & > label {
             .screenreader;
+        }
+    }
+}
+
+// Conditional field content
+.radio--conditional {
+    clear: both;
+    float: left;
+    width: 100%;
+    display: table;
+    p {
+        display: block;
+        //float: right;
+        display: table-cell;
+        margin: 0;
+        span {
+            font-weight: @font-weight-bolder;
+        }
+    }
+    input {
+        display: inline-block;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @gray-8;
+            box-sizing: border-box;
+            margin-right: @box-spacing/2;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-light;
+                background-color: @heritage-blue-lightest;
+            }
+            &:hover:before {
+                border-color: @blue-light;
+            }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
+    }
+}
+.radio--conditional {
+    input:not(checked) ~ .conditional--content {
+            display: none;
+    }
+    input:checked ~ .conditional--content {
+            display: block;
+    }
+}
+
+.conditional--content {
+    fieldset, .fieldset {
+        label {
+            font-weight: @font-weight-bold;
+            padding: @box-spacing-vertical*.75 @box-spacing-vertical;
+            background-color: transparent;
+        }
+        input[type="checkbox"] {
+            padding: 0.75rem 1rem;
+        }
+    }
+    input {
+        display: inline-block;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 1px solid @gray-6;
+            z-index: -1;
+            background-color: @white;
+            box-sizing: border-box;
+            margin-right: @box-spacing/2;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-light;
+                background-color: @blue-lighter;
+            }
+            &:hover:before {
+                border-color: @blue-light;
+            }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
+    }
+}
+
+.conditional ~ .conditional--fields {
+    border-left: .5rem solid @blue-lighter;
+    padding: @box-spacing-vertical 0;
+    padding-left: @box-spacing-horizontal;
+    //background-color: @blue-lighter;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    display: none;
+    position: relative;
+    /*&:before {
+        height: 100%;
+        width: .5rem;
+        background-color: @blue-lighter;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+    }*/
+}
+
+.response {
+    margin: @box-spacing-vertical 0;
+    background-color: @white;
+    border-bottom: 1px solid @gray-6;
+    padding-bottom: @box-spacing-vertical;
+    margin-bottom: @box-spacing-vertical;
+    display: block;
+    overflow: hidden;
+    &:first-of-type {
+        border-top: 1px solid @gray-6;
+        padding-top: @box-spacing-vertical;
+    }
+    .response--q, .response--a {
+        display: inline-block;
+    }
+    .response--q {
+        font-weight: @font-weight-bold;
+    }
+    .response--a a {
+        margin: 0;
+        cursor: pointer;
+        /*&:after {
+            .icon;
+            content: @i-undo;
+            padding-left: 1em/2;
+        }*/
+    }
+    @media (min-width: @breakpoint-sm) {
+        .response--q {
+            width: 69%;
+        }
+        .response--a {
+            text-align: right;
+            width: 30%;
         }
     }
 }

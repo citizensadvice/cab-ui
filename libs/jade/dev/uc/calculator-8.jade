@@ -1,0 +1,81 @@
+block settings
+	- var title = "Universal Credit calculator"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Advisor content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+	.articleContent
+		div
+			h3 Your results
+
+			p Below is a breakdown of the maximum amount of Universal Credit you could get. You might get less than this - the actual amount you get will depend on where you live and your income. If your claim is successful you'll be told exactly how much you'll get
+
+			table
+				thead
+					tr
+						th(scope="col", colspan="2") The maximum amount of Universal Credit you could get
+				tbody
+					tr
+						td 
+							h4 Standard allowance
+							p This is based on your age and whether or not you have a partner.
+
+						td £251.77
+					tr
+						td
+							h4 Housing costs
+							p This part of Universal Credit covers your housing costs - this is the maximum amount someone in your situation can get. The actual amount will depend on where you live, the size of your house, and how many people live there.
+							p Check how much you'll actually get for housing costs on the Directgov website.
+						td £10.00
+					tr
+						td 
+							h4 Carers
+							p You'll get this if you're a carer.
+						td £150.39
+
+				tfoot
+					tr
+						td Total per month
+						td £412.16
+
+			h3 More help
+			p Contact the Universal Credit helpline if you need more details about how much you're entitled to.
+			p Universal Credit helpline
+			p Telephone: 0345 600 0723
+			p Textphone: 0345 600 0743
+
+			.callout--related
+				h3 Next steps
+				a(href="#") Check if you're eligible for Universal Credit.
+				br
+				a(href="#") Apply for Universal Credit.
+				br
+				a(href="#") Read what to do if you're on Universal Credit and you think you've been paid the wrong amount.
+
+			a.btn-secondary.restart-button-icon(href="calculator-1.html" type="reset") Restart

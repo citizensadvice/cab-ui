@@ -1,0 +1,30 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			p Use this tool to reduce the amount of junk mail you get through the post.
+			p The tool will:
+			ul
+				li send emails on your behalf to organisations that can reduce your junk mail
+				li email you a letter to send to your electoral office - this will remove you from a list that gets used for junk mail
+			p You’ll still get mail from organisations that you’ve asked to send you post. But you’ll get less post that you haven’t asked for, eg from local political parties and businesses.
+
+			.callout
+				p You should put a ‘no junk mail’ sign on your door or letterbox to help stop junk mail that gets delivered door-to-door - for example takeaway menus.
+				p You can order stickers online from the #[a.a-external(href="#") Stop Junk Mail Campaign].
+
+			a.btn.right-button-icon(href="post-tool-2.html") Start

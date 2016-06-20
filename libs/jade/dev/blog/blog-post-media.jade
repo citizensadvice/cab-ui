@@ -1,0 +1,90 @@
+block settings
+	- var title = "What imagery works?"
+	- var sidebar = true
+	- var toolbars = false
+	- var blog = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+//block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "blog-home.html"},
+		{title: "Working with advisers to design new PIP content"}])
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block script
+	script.
+		$(document).ready(function() {
+			$( "#toggle" ).on( "click", function() {
+				console.log('lol');
+				$( this ).next().slideToggle();
+			});
+		});
+
+block content
+	.articleContent
+		block toolbars
+			include /template/toolbar-blog.jade
+
+		p As the title suggests, we have to look at imagery from the perspective of what works. What imagery communicates the message we are trying to get across.
+
+		p When we are researching, testing, designing or showing new approaches we talk to real people, clients, advisers, colleagues and stakeholders alike. We show them the idea, the prototype and ask them to try it and feedback. If we don't get individuals emotional reactions and cognitive understandings/interpretations we can't expect to know how things will work in the wild.
+
+		p A similar approach is needed with imagery, we need to show what is happening to make things more understandable and to communicate more easily what we are doing.
+
+		p We don't think it's applicable to have images for every post/communication. But we also don't think it's appropriate to have silhouettes for every communication as well.
+
+		p If the organisations stance is still use silhouettes then we will need to look at documentating how individuals can create these or if there is a way we can progress the appearance to make them more descriptive eg combining them.
+
+		p Images are memorable and when used to communicate can be worth a thousand words.
+
+		.blog-tag
+			| Design
+		.blog-tag
+			| Content
+		.blog-tag
+			| Research
+
+		.title__subheading--footer
+			p Share this page. #[a(#) Find out more about sharing.]
+			a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
+			a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
+			a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
+			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
+
+		.comment
+			.comment-single
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Domenico Perri
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus tortor, ullamcorper eu placerat eget, suscipit vel quam.
+			.comment-single.reply
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Eliot Hill
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted 2 weeks ago. #[a Reply]
+				p Lorem ipsum dolor.
+			.comment-single
+				div(style="clear:both;")
+					h3.col-xs-8(style="width: 60%; display: inline-block;") Paul Chanthapanya
+					p.col-xs-4.small(style="width: 39%; display: inline-block; text-align: right;") Posted yesterday. #[a Reply]
+				p In sit amet massa semper, ultricies nulla at, vestibulum nulla. Nulla id arcu quis odio molestie porttitor et id lacus. In fermentum aliquet libero eget rutrum.
+
+		.well
+			h2 Add your comment
+			fieldset
+				label(for="name") Your name
+				.search-results__field(style="width:100%; margin-bottom: 10px;")
+					input(type="text", placeholder="Your name")
+
+				label(for="email") Your email
+				.search-results__field(style="width:100%;")
+					input(type="email", placeholder="Your email")
+
+			fieldset
+				label(for="exampleTextarea") Your comment
+				textarea#exampleTextarea(rows="3", style="width:100%; margin-bottom: 10px;")
+
+				button.btn.btn-secondary.right-button-icon Submit

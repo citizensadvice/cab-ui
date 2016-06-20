@@ -27,6 +27,7 @@
         border-bottom: transparent;
         margin-right: 1rem;
         padding: 0.25rem;
+        display: inline-block;
         &:hover,
         &:focus {
             color: @link-hover-color;
@@ -166,12 +167,6 @@
 .articleContent {
      @media ( max-width: @screen-sm-max ) {
         width: auto;
-    }
-}
-
-@media ( max-width: @max-page-width-before-the-share-bar-ruins-it-all ) and ( min-width: @screen-sm-min ) {
-    .js .main-content {
-        padding-right: 3.5em;
     }
 }
 

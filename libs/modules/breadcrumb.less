@@ -9,7 +9,7 @@
     padding: 0;
     clear: left;
     // Hack as we have Bootstrap in the mix
-    background-color: @heritage-blue-lightest;
+    //background-color: @heritage-blue-lightest;
     padding: 0;
     max-width: none;
     width: @full-page-width;
@@ -25,6 +25,7 @@
     background-color: transparent;
     padding: @box-spacing-vertical/2 @box-spacing-horizontal;
     max-width: @breakpoint-lg;
+    border-bottom: #eeeeee 1px solid;
     //overflow: scroll;
 }
 
@@ -56,11 +57,11 @@
     color: @text-color;
 }
 
-@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+/*@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
     .js .main-breadcrumb {
         padding-right: @box-spacing-horizontal*3.5;
     }
-}
+}*/
 
 // .breadcrumb is a generic class for displaying breadcrumbs
 .breadcrumb__item {

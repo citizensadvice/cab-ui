@@ -5,7 +5,7 @@
  *
  */
 
-.section-notice {
+/*.section-notice {
     background: @heritage-yellow-lighter;
     &__content {
         .limit-width;
@@ -50,7 +50,7 @@
             font-size: @font-size-small;
         }
     }
-}
+}*/
 
 /**
  * SECTION NOTICE DEVELOPMENT
@@ -59,43 +59,23 @@
  *
  */
 
-.section-notice--dev {
+.section-notice {
     &__content {
         .limit-width;
         padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
         overflow: hidden;
         border-bottom: @gray-7 1px solid;
+        background-color: @white;
         .badge {
             background-color: @green-light;
             color: @text-color;
             margin-right: @box-spacing-horizontal;
         }
     }
-    &__adviser {
-        .badge {
-            background-color: @inventive-teal;
-            color: @white;
-        }
-    }
     &__changing {
-        .limit-width;
-        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
-        overflow: hidden;
-        border-bottom: @gray-7 1px solid;
         .badge {
             background-color: @heritage-yellow;
-            color: @text-color;
-            margin-right: @box-spacing-horizontal;
         }
-    }
-    @media( max-width: @screen-xs-max ) {
-        display: none;
-    }
-}
-
-@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
-    .js .section-notice__content {
-        padding-right: @box-spacing-horizontal*3.5;
     }
 }
 
@@ -109,3 +89,8 @@
     }
 }
 
+@media( max-width: @screen-xs-max ) {
+    *[class^="section-notice"] {
+        display: none;
+    }
+}

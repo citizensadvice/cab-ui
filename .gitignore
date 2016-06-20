@@ -1,5 +1,5 @@
 # The built files
-public/*.html
+public/**/*.html
 public/css
 
 # The gh-pages cache directory

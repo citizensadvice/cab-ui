@@ -1,0 +1,61 @@
+block settings
+	- var title = "Tool for advice"
+	- var logoutheader = true
+	- var sidebar = true
+	- var toolbars = true
+	- var toolbarsadviser = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Advice Tool"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Content page", href: "adviser.html"},
+		{title: "Advice tool", href: "adviser-tool.html"}],
+		1)
+
+	nav.side-nav-beta.adviser-nav
+		ul
+			li.side-nav-beta__heading.-active.-open
+
+				a
+					span Adviser pages
+			ul
+				li.side-nav-beta__sibling
+					a(href="adviser-2.html") Legislation
+
+block content
+	div
+		h2.ref-heading
+			span.ref-heading__heading Use this tool to receive tailored advice
+			span.ref-heading__toggle.ref-heading__toggle--off
+				a.js-toggle-ref(href="#!") Add reference
+		p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat.
+		.callout--adviser Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+		h3.ref-heading
+			span.ref-heading__heading Before you start
+			span.ref-heading__toggle.ref-heading__toggle--off
+				a.js-toggle-ref(href="#!") Add reference
+		ul
+			li Lorem ipsum dolor sit amet
+			li Lorem ipsum dolor sit amet
+			li Lorem ipsum dolor sit amet
+
+		button.btn.btn-primary-light.right-button-icon(type="button") Start

@@ -1,6 +1,6 @@
 {
   "name": "cab-ui",
-  "version": "1.2.17",
+  "version": "2.0.0",
   "private": true,
   "description": "Design elements to be used across all Citizens Advice products",
   "scripts": {
@@ -8,9 +8,9 @@
     "build": "gulp build",
     "server": "http-server public"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.1.1",
+    "autoprefixer": "^6.3.6",
     "cssnano": "^3.3.2",
     "del": "^2.2.0",
     "gulp": "^3.9.0",

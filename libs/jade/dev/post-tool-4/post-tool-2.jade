@@ -1,0 +1,48 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			h2 Your details
+
+			fieldset
+				label(for="standardField") Full name
+				input#standardField(placeholder="", type="text")
+
+			fieldset
+				label(for="standardField") Address line 1
+				input#standardField(placeholder="", type="text")
+
+			fieldset
+				label(for="standardField") Address line 2 #[span.optional (optional)]
+				input#standardField(placeholder="", type="text")
+
+			fieldset
+				label(for="standardField") Town or city
+				input#standardField(placeholder="", type="text")
+
+			fieldset
+				label(for="standardField") Postcode
+				input#standardField(placeholder="", type="text")
+
+			fieldset
+				label(for="standardField") Email
+				span.form-hint Your email will only be used to send a confirmation
+				input#standardField(placeholder="", type="email")
+
+
+			a.btn-light.left-button-icon(href="post-tool.html") Back
+			a.btn.right-button-icon(href="post-tool-3.html") Next

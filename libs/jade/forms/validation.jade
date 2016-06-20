@@ -1,0 +1,195 @@
+block settings
+    - var title = "Validation"
+    - var sidebar = true
+    - var toolbars = false
+    //- var cookiemonster = true
+    //- var mockup = true
+    - var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: dir + "index.html"},
+        {title: "Forms", href: dir + "index.html#Forms"},
+        {title: "Validation"}])
+
+block sidebar
+    include /template/sidebar-forms.jade
+
+//block section-notice
+    aside.section-notice
+        h2.screenreader Notice
+        .section-notice__content
+            p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+    .articleContent
+        p Form validation is an important part of guiding a users journey through entry fields. Most field types have an error style, making it clear to the user which fields are incorrect and why.
+        p Form pages should include an error box at the top of the form with anchor links to the incorrect form fields. Each field should then have its own error text beneath it that explains the problem.
+        p When a user corrects the field it should remove the red outline. This can be seen by correcting the Email input below. The CSS only supports Javascript validation. To show validation with a class (rather than HTML5), toggle the #[code.code .invalid] class on the form element.
+        .example-box-plain
+            .well--outline.invalid
+                h3 Please correct the errors
+                p Your form couldn't be completed due to errors. Please correct the following fields.
+                ul
+                    li #[a.invalid(href="#date-fieldset") Date]
+                    li #[a.invalid(href="#email-fieldset") Email]
+                    li #[a.invalid(href="#phone-fieldset") Phone number]
+                    li #[a.invalid(href="#radio-fieldset") Radio buttons]
+                    li #[a.invalid(href="#checkbox-fieldset") Checkboxes]
+                    li #[a.invalid(href="#dropdown-fieldset") Dropdown]
+
+            fieldset
+                label(for="name") Name
+                    span.optional &nbsp;(optional)
+                input#name(placeholder="", type="text")
+
+            .form-group-date#date-fieldset
+                legend Date
+                fieldset
+                    label(for="dob-day")
+                        span.screenreader When did you buy your car? Date field,
+                        | Day
+                    input.invalid#dob-day(placeholder="DD", maxlength="2", min="1", max="31",  name="day", type="number", pattern="\d{1,2}", autoComplete="off")
+                fieldset
+                    label(for="dob-month") Month
+                    input.invalid#dob-month(placeholder="MM", maxlength="2", min="1", max="12", name="month", type="number", pattern="\d{1,2}", autoComplete="off")
+                fieldset
+                    label(for="dob-year") Year
+                    input.invalid#dob-year(placeholder="YYYY", maxlength="4",  min="1900", max="2100", name="year", type="number", pattern="\d{4}", autoComplete="off")
+                .invalid Please enter a date.
+
+            fieldset#email-fieldset
+                label(for="email") Email
+                input.invalid#email(placeholder="", type="email", value="email!domain.com", required)
+                .invalid Please enter a valid email format including the @ symbol.
+
+            fieldset#phone-fieldset
+                label(for="phone") Phone number
+                input.invalid#phone(placeholder="", type="tel")
+                .invalid Please enter a phone number.
+
+            fieldset#radio-fieldset
+                legend(for="radio-inline") Radio buttons
+                label.radio.radio--inline
+                    input.invalid(name="radio-inline", type="radio", value="option1")
+                    | Yes
+                label.radio.radio--inline
+                    input.invalid(name="radio-inline", type="radio", value="option2")
+                    | No
+                .invalid Please select one.
+
+            fieldset#checkbox-fieldset
+                legend(for="checkbox") Checkboxes
+                label.checkbox.checkbox--block
+                    input.invalid(name="checkbox", type="checkbox")
+                    | Option one
+                label.checkbox.checkbox--block
+                    input.invalid(name="checkbox", type="checkbox")
+                    | Option two
+                .invalid Please select at least one.
+
+            fieldset#dropdown-fieldset
+                label(for="exampleSelect1") Dropdown
+                .dropdown
+                    select.invalid#exampleSelect1
+                        option None
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                .invalid Please select one.
+        pre
+            code.language-html
+                | &lt;div class="example-box-plain"&gt;
+                |     &lt;div class="well--outline invalid"&gt;
+                |         &lt;h3&gt;Please correct the errors&lt;/h3&gt;
+                |         &lt;p&gt;Your form couldn't be completed due to errors. Please correct the following fields.&lt;/p&gt;
+                |         &lt;ul&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#date-fieldset"&gt;Date&lt;/a&gt;&lt;/li&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#email-fieldset"&gt;Email&lt;/a&gt;&lt;/li&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#phone-fieldset"&gt;Phone number&lt;/a&gt;&lt;/li&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#radio-fieldset"&gt;Radio buttons&lt;/a&gt;&lt;/li&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#checkbox-fieldset"&gt;Checkboxes&lt;/a&gt;&lt;/li&gt;
+                |             &lt;li&gt;&lt;a class="invalid" href="#dropdown-fieldset"&gt;Dropdown&lt;/a&gt;&lt;/li&gt;
+                |         &lt;/ul&gt;
+                |     &lt;/div&gt;
+                |     &lt;fieldset&gt;
+                |         &lt;label for="name"&gt;Name&lt;span class="optional"&gt;&nbsp;(optional)&lt;/span&gt;&lt;/label&gt;
+                |         &lt;input id="name" placeholder="" type="text"&gt;
+                |     &lt;/fieldset&gt;
+                |     &lt;div class="form-group-date" id="date-fieldset"&gt;
+                |         &lt;legend&gt;Date&lt;/legend&gt;
+                |         &lt;fieldset&gt;
+                |             &lt;label for="dob-day"&gt;&lt;span class="screenreader"&gt;Date,&lt;/span&gt;Day&lt;/label&gt;
+                |             &lt;input class="invalid" id="dob-day" placeholder="DD" maxlength="2" min="1" max="31"  name="day" type="number" pattern="\d{1,2}" autoComplete="off"&gt;
+                |         &lt;/fieldset&gt;
+                |         &lt;fieldset&gt;
+                |             &lt;label for="dob-month"&gt;Month&lt;/label&gt;
+                |             &lt;input class="invalid" id="dob-month" placeholder="MM" maxlength="2" min="1" max="12" name="month" type="number" pattern="\d{1,2}" autoComplete="off"&gt;
+                |         &lt;/fieldset&gt;
+                |         &lt;fieldset&gt;
+                |             &lt;label for="dob-year"&gt;Year&lt;/label&gt;
+                |             &lt;input class="invalid" id="dob-year" placeholder="YYYY" maxlength="4"  min="1900" max="2100" name="year" type="number" pattern="\d{4}" autoComplete="off"&gt;
+                |         &lt;/fieldset&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please enter a date.
+                |         &lt;/div&gt;
+                |     &lt;/div&gt;
+                |     &lt;fieldset id="email-fieldset"&gt;
+                |         &lt;label for="email"&gt;Email&lt;/label&gt;
+                |         &lt;input id="email" placeholder="" type="email" value="email!domain.com" required&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please enter a valid email format including the @ symbol.
+                |         &lt;/div&gt;
+                |     &lt;/fieldset&gt;
+                |     &lt;fieldset id="phone-fieldset"&gt;
+                |         &lt;label for="phone"&gt;Phone number&lt;/label&gt;
+                |         &lt;input class="invalid" id="phone" placeholder="" type="tel"&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please enter a phone number.
+                |         &lt;/div&gt;
+                |     &lt;/fieldset&gt;
+                |     &lt;fieldset id="radio-fieldset"&gt;
+                |         &lt;legend for="radio-inline"&gt;Radio buttons&lt;/legend&gt;
+                |         &lt;label class="radio radio--inline"&gt;
+                |             &lt;input class="invalid" name="radio-inline" type="radio" value="option1"&gt;Yes
+                |         &lt;/label&gt;
+                |         &lt;label class="radio radio--inline"&gt;
+                |             &lt;input class="invalid" name="radio-inline" type="radio" value="option2"&gt;No
+                |         &lt;/label&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please select one.
+                |         &lt;/div&gt;
+                |     &lt;/fieldset&gt;
+                |     &lt;fieldset id="checkbox-fieldset"&gt;
+                |         &lt;legend for="checkbox"&gt;Checkboxes&lt;/legend&gt;
+                |         &lt;label class="checkbox checkbox--block"&gt;
+                |             &lt;input class="invalid" name="checkbox" type="checkbox"&gt;Option one
+                |         &lt;/label&gt;
+                |         &lt;label class="checkbox checkbox--block"&gt;
+                |             &lt;input class="invalid" name="checkbox" type="checkbox"&gt;Option two
+                |         &lt;/label&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please select at least one.
+                |         &lt;/div&gt;
+                |     &lt;/fieldset&gt;
+                |     &lt;fieldset id="dropdown-fieldset"&gt;
+                |         &lt;label for="exampleSelect1"&gt;Dropdown&lt;/label&gt;
+                |         &lt;div class="dropdown"&gt;
+                |             &lt;select class="invalid" id="exampleSelect1"&gt;
+                |                 &lt;option&gt;None&lt;/option&gt;
+                |                 &lt;option&gt;1&lt;/option&gt;
+                |                 &lt;option&gt;2&lt;/option&gt;
+                |                 &lt;option&gt;3&lt;/option&gt;
+                |                 &lt;option&gt;4&lt;/option&gt;
+                |                 &lt;option&gt;5&lt;/option&gt;
+                |             &lt;/select&gt;
+                |         &lt;/div&gt;
+                |         &lt;div class="invalid"&gt;
+                |             Please select one.
+                |         &lt;/div&gt;
+                |     &lt;/fieldset&gt;
+                | &lt;/div&gt;

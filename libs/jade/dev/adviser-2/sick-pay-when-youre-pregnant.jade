@@ -1,0 +1,100 @@
+block settings
+	- var title = "Getting sick pay when you're pregnant"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var sharebar = true
+	- var newfoot = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Content toolbar"}])
+
+block sidebar
+	include /template/sidebar-adviser.jade
+
+block content
+	p If you get Statutory Sick Pay (SSP) while you’re pregnant, different rules might apply depending if your illness is related to your pregnancy or not.
+	h2.ref-heading
+		span.ref-heading__heading Getting sick pay can affect maternity pay
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p Your maternity pay might be affected if you're off sick while you're pregnant and your pay is less than usual.
+	p This is because your first 6 weeks of maternity pay is 90% of your average pay during an 8 week ‘qualifying period’. This qualifying period takes place while you're pregnant.
+	p Example
+	.callout--quote
+		p You work during the whole 8-week maternity pay qualifying period and receive your usual pay of £200 per week. This means your first 6 weeks of maternity pay will be £180 per week.
+		p However, if you're off sick for 2 weeks during your maternity pay qualifying period, your normal pay of £200 per week drops to £88.45 per week (the amount for statutory sick pay). This means your first 6 weeks of maternity pay will drop from £180 per week to £154.91 per week, because you'd claimed sick pay.
+
+	h2.ref-heading
+		span.ref-heading__heading Off work sick because of your pregnancy
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If you're ill because of your pregnancy you can claim:
+	ul
+		li #[a(href="/development/workplace-rights/sick-pay/check-if-youre-entitled-to-sick-pay/") sick pay] until 4 weeks before your baby is due
+
+		li #[a(href="/work/rights-at-work/parental-rights/parental-rights-at-work/") maternity pay] in the 4 weeks before your baby is due - this happens automatically and is not up to your employer to decide
+
+
+	p Your doctor can tell you if you're ill because of your pregnancy.
+	p You can’t be dismissed for having time off sick because of your pregnancy as you’re protected against #[a(href="/discrimination/what-are-the-different-types-of-discrimination/pregnancy-and-maternity-discrimination/") discrimination while you’re pregnant].
+	p You also have other #[a(href="/work/rights-at-work/parental-rights/parental-rights-at-work/") rights while you’re pregnant], for example time off for ante-natal appointments.
+	p You can read more about #[a.a-external(href="http://www.maternityaction.org.uk/advice-2/mums-dads-scenarios/pregnant/sickness-during-pregnancy-and-maternity-leave/", rel="external") sickness during pregnancy and maternity leave] on the Maternity Action website.
+
+	h2.ref-heading
+		span.ref-heading__heading Sickness not related to your pregnancy
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p If you’re sick and it’s got nothing to do with being pregnant, for example you have the flu or a stomach bug, you can claim any sick pay you’re entitled to as usual, until either:
+	ul
+		li the week the baby is due
+		li the date you’ve chosen your maternity pay to start
+
+	p Then you’ll start getting any maternity pay you’re entitled to.
+	p You should be treated the same as anyone else who is off work sick. If you think you're being treated differently because you're pregnant contact #[a(href="/about-us/how-we-provide-advice/") your local Citizens Advice] for help.
+
+	h2.ref-heading
+		span.ref-heading__heading Problems getting sick pay
+		span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+	p There are things you can do if you have any problems getting sick pay. If your employer:
+	ul
+		li says you can’t get it - #[a(href="/development/workplace-rights/sick-pay/check-if-youre-entitled-to-sick-pay/") check you’re entitled to get sick pay]
+
+		li won’t pay you for time off sick or has paid you the wrong amount - find out the #[a(href="/work/rights-at-work/pay/problems-getting-paid/") steps to get the sick pay you’re owed]
+
+		li has dismissed you or forced you to resign because you’re sick - find out #[a(href="/work/work-comes-to-an-end/dismissal/") whether your dismissal is fair or not]
+
+
+	.callout--adviser
+		h2.ref-heading
+			span.ref-heading__heading When your client has given birth recently
+			span.ref-heading__toggle.ref-heading__toggle--off #[a.js-toggle-ref Add reference]
+		p When your client can get SSP depends on whether she's entitled to statutory maternity pay (SMP) or Maternity Allowance (MA). (You might hear this referred to as the 'disqualifying period').
+
+	section.revealable.revealable--adviser
+		h3 If your client gets maternity pay
+		p Your client can't get statutory sick pay while she's getting statutory maternity pay or Maternity Allowance.
+		p If she's sick before or during her 39 weeks of maternity pay, she can't get sick pay until whichever is later out of:
+		ul
+			li 8 weeks after her maternity pay ends
+			li 8 weeks after her sickness ends
+
+		p This means your client could lose out on sick pay if she calls in sick before she's due to return to work.
+		p If she's sick after her 39 weeks of maternity pay, the normal rules for sick pay apply.
+		.callout--quote
+			p <strong>Example</strong>
+			p If Alice phones in sick on the day she's due to start work after her maternity pay ends, she could get SSP if she meets the other conditions.
+			p If she phones in during the last week of her maternity pay and says she won't be able to return to work because she's sick, she won't get SSP for at least 8 weeks.
+
+	section.revealable.revealable--adviser
+		h3 If your client can't get maternity pay
+		p Unless she's already getting SSP, your client isn't entitled to SSP until 18 weeks after the earlier of:
+		ul
+			li the start of the week the baby is born
+			li the start of the 4th week before the baby’s due, if your client is off sick because of the pregnancy
+
+		p Your client should get form SSP1 from her employer and claim benefits from the Jobcentre.
+		p You can #[a(href="/benefits/benefits-introduction/what-benefits-can-i-get/benefit-checker/") use the benefits checker] to see what she might be entitled to.

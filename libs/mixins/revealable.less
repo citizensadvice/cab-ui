@@ -38,7 +38,7 @@
             color: @heading;
         }
     }
-    
+
     .open:after, // This needs to be removed eventually
     .revealable__heading[aria-expanded=true]:after {
         content: "\f068";
@@ -89,6 +89,9 @@ i.icon-chevron-up {
     > *:last-child {
         margin-bottom: 0;
         padding-bottom: 0;
+    }
+    &:focus {
+        outline: 2px solid @heritage-yellow;
     }
 }
 

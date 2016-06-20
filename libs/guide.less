@@ -885,9 +885,17 @@ div.tooltip:before {
             max-width: @breakpoint-lg;
             margin: 0 auto;
             img {
+                display: inline-block;
                 width: 220px;
                 padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
+<<<<<<< HEAD
                 display: inline-block;
+=======
+            }
+            a:hover,
+            a:focus {
+                background: none;
+>>>>>>> development
             }
         }
         .mockup &--content img {
@@ -924,6 +932,21 @@ div.tooltip:before {
         .main-footer__box--copyright;
         max-width: @breakpoint-lg;
         margin: 0 auto;
+    }
+}
+
+
+#repo {
+    display: inline-block;
+    float: right;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    color: @white;
+    &:after {
+        .icon;
+        color: @white;
+        content: @i-github;
+        padding-left: .5rem;
     }
 }
 
@@ -1180,6 +1203,20 @@ div.tooltip:before {
 
     .i-vertical-dots .icon:before {
         content: @i-vertical-dots;
+    }
+
+    .i-github .icon:before {
+        content: @i-github;
+    }
+
+    .i-spinner {
+        position: relative;
+    }
+
+    .i-spinner .icon:after {
+        display: block;
+        content: @i-spinner;
+        .spinner;
     }
 
     .brand-accelerator .icon-brand:before {
@@ -1631,5 +1668,20 @@ div.tooltip:before {
     }
     .brand-wine .icon-brand:before {
         content: @brand-wine;
+    }
+}
+
+.index-row-1 {
+    .col(3,5,780px);
+    .index-col {
+        .col(1,3,480px);
+    }
+}
+
+.index-row-2 {
+    .col(2,5,780px);
+    .index-col {
+        .col(1,3,480px);
+        .col(1,2,780px);
     }
 }

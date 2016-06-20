@@ -1,0 +1,100 @@
+block settings
+	- var title = "Universal Credit calculator"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Advisor content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+	.articleContent
+		div
+			fieldset
+				label(for="exampleInputFile") What kind of property do you live in?
+				label.radio.radio--conditional
+					input(name="radio", type="radio", value="option1")
+					| A bedroom in a shared house or flat
+					div.conditional--content
+						fieldset
+							label(for="field") How much is your rent?
+							.field-group.field-group--dropdown
+								input#field(placeholder="£" type="number")
+								.dropdown
+									select#exampleSelect1
+										option Monthly
+										option Weekly
+				label.radio.radio--conditional
+					input(name="radio", type="radio", value="option1")
+					| One bedroom house or flat (or a studio/bedsit)
+					div.conditional--content
+						fieldset
+							label(for="field") How much is your rent?
+							.field-group.field-group--dropdown
+								input#field(placeholder="£" type="number")
+								.dropdown
+									select#exampleSelect1
+										option Monthly
+										option Weekly
+				label.radio.radio--conditional
+					input(name="radio", type="radio", value="option1")
+					| Two bedroom house or flat
+					div.conditional--content
+						fieldset
+							label(for="field") How much is your rent?
+							.field-group.field-group--dropdown
+								input#field(placeholder="£" type="number")
+								.dropdown
+									select#exampleSelect1
+										option Monthly
+										option Weekly
+				label.radio.radio--conditional
+					input(name="radio", type="radio", value="option1")
+					| Three bedroom house or flat
+					div.conditional--content
+						fieldset
+							label(for="field") How much is your rent?
+							.field-group.field-group--dropdown
+								input#field(placeholder="£" type="number")
+								.dropdown
+									select#exampleSelect1
+										option Monthly
+										option Weekly
+				label.radio.radio--conditional
+					input(name="radio", type="radio", value="option1")
+					| Four bedroom house or flat
+					div.conditional--content
+						fieldset
+							label(for="field") How much is your rent?
+							.field-group.field-group--dropdown
+								input#field(placeholder="£" type="number")
+								.dropdown
+									select#exampleSelect1
+										option Monthly
+										option Weekly
+
+
+			a.btn-light.left-button-icon(href="calculator-5.html") Back
+			a.btn.right-button-icon(href="calculator-7.html", type="button") Continue

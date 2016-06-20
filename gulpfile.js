@@ -6,6 +6,7 @@
 
 // Node modules
 var URL = require('url');
+var pathUtils = require('path');
 
 var prettyHrtime = require('pretty-hrtime');
 
@@ -48,7 +49,7 @@ gulp.task( 'clean-less', function() {
 gulp.task( 'less', function() {
 
 	var postCssPlugins = [
-		autoprefixer({ browsers: ['> 1%','ie >= 8'] }),
+		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
 		rgbaFallback,
 		opacity,
 		pixrem,
@@ -86,29 +87,41 @@ gulp.task( 'watch-less', function() {
 
 gulp.task( 'clean-jade', function() {
 	return del([
-	    'public/*.html'
+	    'public/*',
+	    '!public/js',
+	    '!public/css',
+	    '!public/images',
+	    '!public/robots.txt'
 	]);
 } );
 
 gulp.task( 'jade', function() {
 
-	return gulp.src('libs/jade/*.jade')
-    	.pipe( jade( { pretty: true }) )
+	return gulp.src('libs/jade/**/*.jade')
+    	.pipe( jade( { pretty: true, basedir: "libs" }) )
     	.pipe( gulp.dest('public') );
 } );
 
 gulp.task( 'watch-jade', function() {
 
 	// This just rebuilds the affects file - cheap
-	gulp.watch('libs/jade/*.jade', function(event) {
+	gulp.watch('libs/jade/**/*.jade', function(event) {
 
 		// This is mostly a hack to make it look like proper task in the console
 		var start = process.hrtime();
 		gutil.log('Starting', "'" + gutil.colors.cyan('jade') + '"...');
 
+		// Find the relative path between the jade directory and the file
+		// and apply that to the public directory to get the right folder
+		var relativePath = pathUtils.parse( pathUtils.relative( 
+			pathUtils.resolve( __dirname, 'libs/jade' ), 
+			event.path 
+		) ).dir;
+		relativePath = pathUtils.resolve( 'public', relativePath );
+
 		gulp.src(event.path)
-			.pipe( jade( { pretty: true } ) )
-	        .pipe( gulp.dest('public') )
+			.pipe( jade( { pretty: true, basedir: "libs" } ) )
+	        .pipe( gulp.dest( relativePath ) )
 	        	.on( 'finish', function() {
 	        		var end = process.hrtime(start);
 	        		gutil.log(

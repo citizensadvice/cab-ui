@@ -1,0 +1,69 @@
+block settings
+	- var title = "Sidebar"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Revealable"}])
+
+block sidebar
+	include /template/sidebar-modules.jade
+
+block content
+	.articleContent
+		div
+			p lorem
+
+			.example-box-plain
+				section.revealable
+					nav.section-nav
+						h2.section-nav__heading
+							a In this section
+						ul
+							li
+								a.section-nav__parent(href="../#Modules") Modules
+								ul
+									li
+										a(href="callout.html", title="Callout") Callout
+									li
+										a(href="revealable.html", title="Revealable") Revealable
+									li
+										a(href="charts.html", title="Charts") Charts
+									li
+										a(href="section-notice.html", title="Section Notices") Section Notices
+									li
+										a(href="toolbar.html", title="Content toolbar") Content toolbar
+									li
+										a(href="cookie-monster.html", title="Cookie Monster") Cookie Monster
+									li
+										a(href="browser-warning.html", title="Browser warning") Browser warning
+									li
+										a(href="sticky.html", title="Sticky box") Sticky box
+									li
+										a(href="extent.html", title="Extent Switcher") Extent Switcher
+
+			pre
+				code.language-html
+					| &lt;section class="revealable"&gt;
+					| 	&lt;h3&gt;Unstyled content inside header/toggle&lt;/h3&gt;
+					| 	&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+					| &lt;/section&gt;
+
+			.example-box-plain
+				section.revealable.revealable--adviser
+					h3 Adviser content inside revealable
+					p This callout style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+
+			pre
+				code.language-html
+					| &lt;section class="revealable revealable--adviser"&gt;
+					| 	&lt;h3&gt;Adviser content inside revealable&lt;/h3&gt;
+					| 	&lt;p&gt;This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.&lt;/p&gt;
+					| &lt;/section&gt;
+
+

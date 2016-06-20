@@ -14,8 +14,8 @@
     font-style: normal;
 }
 
-.icon() {
-    font-family: 'cab-icons' !important;
+.icon(@font: 'cab-icons';) {
+    font-family: @font !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -25,6 +25,11 @@
     // Better Font Rendering
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+// Created a global style that can be used to wrap inline icons to give them the correct font
+.i {
+    .icon;
 }
 
 // Inline icons for use in paragraph and headings
@@ -130,6 +135,10 @@
 .close-button-icon {
     .btn-icon(@i-cross);
 }
+.spinner-button-icon {
+    .btn-icon(@i-spinner);
+    .btn-spinner;
+}
 
 // Social icons
 .a-social {
@@ -169,6 +178,12 @@
     &:extend(.a-social);
     border: 0;
 }
+.a-social-copy:before {
+    content: @i-copy;
+    color: @blue-light;
+    &:extend(.a-social);
+    border: 0;
+}
 
 .a-social-top {
     .icon;
@@ -184,7 +199,7 @@
 .info-reviewed {
     border-bottom: 0;
     margin-right: .9em;
-    white-space: nowrap;
+    display: inline-block;
     &:before {
         content: @i-clock;
         color: @blue-light;
@@ -194,7 +209,7 @@
 .info-owner {
     border-bottom: 0;
     margin-right: .9em;
-    white-space: nowrap;
+    display: inline-block;
     &:before {
         content: @i-happy;
         color: @blue-light;
@@ -204,6 +219,7 @@
 .info-extent {
     border-bottom: 0;
     margin-right: .9em;
+    display: inline-block;
     &:before {
         content: @i-target;
         color: @blue-light;
@@ -213,7 +229,6 @@
 .a-social-print {
     border-bottom: 0;
     margin-right: .9em;
-    white-space: nowrap;
     &:before {
         content: @i-print;
         color: @blue-light;
@@ -224,7 +239,6 @@
 .a-social-references {
     border-bottom: 0;
     margin-right: .9em;
-    white-space: nowrap;
     &:before {
         content: @i-star;
         color: @blue-light;
@@ -235,7 +249,6 @@
 .a-social-email {
     border-bottom: 0;
     margin-right: .9em;
-    white-space: nowrap;
     &:before {
         content: @i-email;
         color: @blue-light;
@@ -247,6 +260,50 @@
 // Depreciated styles, need to be fixed
 
 // For search box in header
+.icon-local {
+    &:before {
+        .icon(
+            @font: 'brand';
+        );
+        content: '\e936';
+        color: @heritage-blue-lighter;
+        font-size: @font-size-small;
+        margin: 0 .25rem;
+    }
+    li a {
+        color: @heritage-blue-lighter;
+    }
+}
+
+.icon-chat {
+    &:after {
+        .icon(
+            @font: 'brand';
+        );
+        content: '\e92b';
+        color: @heritage-blue;
+        font-size: @font-size-small;
+        margin: .35rem .35rem 0 .8rem;
+    }
+    li a {
+        color: @heritage-blue-lighter;
+    }
+}
+.icon-chat--offline {
+    &:after {
+        .icon(
+            @font: 'brand';
+        );
+        content: '\e929';
+        color: @heritage-blue;
+        font-size: @font-size-small;
+        margin: .35rem .35rem 0 .8rem;
+    }
+    li a {
+        color: @heritage-blue-lighter;
+    }
+}
+
 .icon-search:before {
     content: @i-search;
     .icon;

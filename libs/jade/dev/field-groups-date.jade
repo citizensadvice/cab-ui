@@ -1,0 +1,688 @@
+block settings
+	- var title = "Date fields"
+	- var sidebar = true
+	- var dir = "../"
+
+block script
+	script(src="#{dir}js/datepicker/js/jquery-1.12.0.js")
+	script(src="#{dir}js/datepicker/js/zebra_datepicker.js")
+	script(src="#{dir}js/datepicker/js/core.js")
+	link(href="#{dir}js/datepicker/css/bootstrap.css", rel="stylesheet")
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Forms", href: dir + "index.html#Forms"},
+		{title: "Date fields"}])
+
+block sidebar
+	include /template/sidebar-forms.jade
+
+block content
+	.articleContent
+		div
+			p Development for testing preferred entry approaches for dates.
+
+			h3 Fields
+			.well
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="dob-day")
+							span.screenreader When did you buy your car? Date field,
+							| Day
+						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+					fieldset
+						label(for="dob-month") Month
+						input#dob-month(max="12", min="1", placeholder="MM", type="number")
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			.well
+				.form-group-date
+					legend What is your date of birth?
+					fieldset
+						label(for="dob-day")
+							span.screenreader When did you buy your car? Date field,
+							| Day
+						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+					fieldset
+						label(for="dob-month") Month
+						input#dob-month(max="12", min="1", placeholder="MM", type="number")
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			h3 Fields and one dropdown
+			.well
+				.form-group-date
+					legend What is your date of birth?
+					fieldset
+						label(for="exampleSelect1") Day
+						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option(selected="selected") June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			.well
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="exampleSelect1") Day
+						input#dob-day(max="31", min="1", placeholder="DD", type="number")
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option(selected="selected") June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+
+
+			h3 Fields and 2 dropdowns
+			.well
+				.form-group-date
+					legend What is your date of birth?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			.well
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			h3 Fields and 2 dropdowns (mid number selection)
+			.well
+				.form-group-date
+					legend What is your date of birth?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option(selected="selected") 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option(selected="selected") June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+			.well
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option(selected="selected") 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option(selected="selected") June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						input#dob-year(max="2100", placeholder="YYYY", type="number")
+
+
+
+
+			h3 Dropdowns
+			.well
+				.form-group-date
+					legend What is your date of birth?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						.dropdown(style="width:6rem;")
+							select#exampleSelect1
+								option 2016
+								option 2015
+								option 2014
+								option 2013
+								option 2012
+								option 2011
+								option 2010
+								option 2009
+								option 2008
+								option 2007
+								option 2006
+								option 2005
+								option 2004
+								option 2003
+								option 2002
+								option 2001
+								option 2000
+								option 1999
+								option 1998
+								option 1997
+								option 1996
+								option 1995
+								option 1994
+								option 1993
+								option 1992
+								option 1991
+								option 1990
+								option 1989
+								option 1988
+								option 1987
+								option 1986
+								option 1985
+								option 1984
+								option 1983
+								option 1982
+								option 1981
+								option 1980
+								option 1979
+								option 1978
+								option 1977
+								option 1976
+								option 1975
+								option 1974
+								option 1973
+								option 1972
+								option 1971
+								option 1970
+								option 1969
+								option 1968
+								option 1967
+								option 1966
+								option 1965
+								option 1964
+								option 1963
+								option 1962
+								option 1961
+								option 1960
+								option 1959
+								option 1958
+								option 1957
+								option 1956
+								option 1955
+								option 1954
+								option 1953
+								option 1952
+								option 1951
+								option 1950
+								option 1949
+								option 1948
+								option 1947
+								option 1946
+								option 1945
+								option 1944
+								option 1943
+								option 1942
+								option 1941
+								option 1940
+								option 1939
+								option 1938
+								option 1937
+								option 1936
+								option 1935
+								option 1934
+								option 1933
+								option 1932
+								option 1931
+								option 1930
+								option 1929
+								option 1928
+								option 1927
+								option 1926
+								option 1925
+								option 1924
+								option 1923
+								option 1922
+								option 1921
+								option 1920
+								option 1919
+								option 1918
+								option 1917
+								option 1916
+
+
+			.well
+				.form-group-date
+					legend When did you buy your car?
+					fieldset
+						label(for="exampleSelect1") Day
+						.dropdown
+							select#exampleSelect1
+								option 1
+								option 2
+								option 3
+								option 4
+								option 5
+								option 6
+								option 7
+								option 8
+								option 9
+								option 10
+								option 11
+								option 12
+								option 13
+								option 14
+								option 15
+								option 16
+								option 17
+								option 18
+								option 19
+								option 20
+								option 21
+								option 22
+								option 23
+								option 24
+								option 25
+								option 26
+								option 27
+								option 28
+								option 29
+								option 30
+								option 31
+
+					fieldset
+						label(for="dob-month") Month
+						.dropdown(style="width:10.5rem;")
+							select#exampleSelect1
+								option January
+								option February
+								option March
+								option April
+								option May
+								option June
+								option July
+								option August
+								option September
+								option October
+								option November
+								option December
+					fieldset
+						label(for="dob-year") Year
+						.dropdown(style="width:6rem;")
+							select#exampleSelect1
+								option 2016
+								option 2015
+								option 2014
+								option 2013
+								option 2012
+								option 2011
+								option 2010
+								option 2009
+								option 2008
+								option 2007
+								option 2006
+								option 2005
+								option 2004
+								option 2003
+								option 2002
+								option 2001
+								option 2000
+								option 1999
+								option 1998
+								option 1997
+								option 1996
+								option 1995
+								option 1994
+								option 1993
+								option 1992
+								option 1991
+								option 1990
+								option 1989
+								option 1988
+								option 1987
+								option 1986
+								option 1985
+								option 1984
+								option 1983
+								option 1982
+								option 1981
+								option 1980
+								option 1979
+								option 1978
+								option 1977
+								option 1976
+								option 1975
+								option 1974
+								option 1973
+								option 1972
+								option 1971
+								option 1970
+								option 1969
+								option 1968
+								option 1967
+								option 1966
+								option 1965
+								option 1964
+								option 1963
+								option 1962
+								option 1961
+								option 1960
+								option 1959
+								option 1958
+								option 1957
+								option 1956
+								option 1955
+								option 1954
+								option 1953
+								option 1952
+								option 1951
+								option 1950
+								option 1949
+								option 1948
+								option 1947
+								option 1946
+								option 1945
+								option 1944
+								option 1943
+								option 1942
+								option 1941
+								option 1940
+								option 1939
+								option 1938
+								option 1937
+								option 1936
+								option 1935
+								option 1934
+								option 1933
+								option 1932
+								option 1931
+								option 1930
+								option 1929
+								option 1928
+								option 1927
+								option 1926
+								option 1925
+								option 1924
+								option 1923
+								option 1922
+								option 1921
+								option 1920
+								option 1919
+								option 1918
+								option 1917
+								option 1916
+
+
+			h3 Datepicker
+			.well
+				.main-wrapper
+					form(action="javascript:void(0)" method="post")
+						div
+							input#datepicker-example8.Zebra_DatePicker_Icon-brand(type="text", style="width:20rem;margin-right:1rem;")
+

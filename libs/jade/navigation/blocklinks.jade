@@ -1,0 +1,32 @@
+block settings
+	- var title = "Block links"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Navigation", href: dir + "index.html#Navigation"},
+		{title: "Blocklinks"}])
+
+block sidebar
+	include /template/sidebar-navigation.jade
+
+block content
+	.articleContent
+		div
+			p Block links are, as it sounds, links which are styled as boxes. They take up the maximum width of content areas, these links are always internal and are only used when the main purpose of the page is to provide signposting to a set of options.
+
+			a(href="https://www.citizensadvice.org.uk/benefits/sick-or-disabled-people-and-carers/pip/help-with-your-pip-claim/fill-in-form/") An example of a block links in the wild.
+
+			.example-box-plain
+				a(href="#").blocklink Blocklink
+				a(href="#").blocklink.i-doc-image Image blocklink
+				a(href="#").blocklink.i-search Search blocklink
+			pre
+				code.language-html
+					| &lt;a href="#" class="blocklink"&gt;Blocklink&lt;/a&gt;
+					| &lt;a href="#" class="blocklink i-doc-image"&gt;Image blocklink&lt;/a&gt;
+					| &lt;a href="#" class="blocklink i-search"&gt;Search blocklink&lt;/a&gt;

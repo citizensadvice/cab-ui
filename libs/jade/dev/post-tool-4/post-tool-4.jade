@@ -1,0 +1,69 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block script
+	script.
+		$(document).ready(function() {
+			$('button').click(function(){
+				var count = parseInt($(this).data('click'), 10) || 0;
+				count++; $(this).data('click',count);
+
+				if ( count <= 1 ) {
+					$( this ).removeClass( "btn-secondary" ).removeClass( "email-button-icon" );
+					$( this ).addClass( "btn-loading" ).html("Sending...");
+
+					$( this ).delay(800).queue(function(){
+					    $( this ).removeClass( "btn-loading" );
+					    $( this ).addClass( "btn-success" ).addClass( "tick-button-icon" ).css( "cursor", "not-allowed" ).html("Sent");
+					});
+				}
+			});
+		});
+
+block content
+	.articleContent
+		div
+			h2 Choose who you want to contact
+			p An email will be sent on your behalf to the following organisations that can reduce your junk mail. It’s best to contact all of them.
+			p You’ll still get mail from organisations that you’ve asked to send you post. But you’ll get less post that you haven’t asked for, eg from local political parties and businesses.
+
+			.well
+				h3 Email Royal Mail 'Door to Door'
+				p Charities, businesses and other organisations often pay Royal Mail to deliver marketing post for them. Tick this box to send an email to Royal Mail saying that you don't want this marketing post.
+				p They’ll send you a form to fill in. Once you’ve sent it to them you should notice a difference in 6 weeks.
+				p
+					button.btn-secondary.email-button-icon Send email
+
+			.well
+				h3 Email the ‘Your Choice’ scheme
+				p The ‘Your Choice’ scheme allows you to get less marketing mail from various organisations, including government, political parties, charities, and businesses. You’ll still get any post that’s directly addressed to you.
+				p They’ll send you a form to fill in. Once you’ve sent it to them you should notice a difference within 12 weeks.
+				p
+					button.btn-secondary.email-button-icon Send email
+
+			.well
+				h3 Email the Mailing Preference Service
+				p The Mailing Preference Service keep a list of people who don’t want to get marketing post. Businesses that check this list will stop sending you mail. You’ll receive a confirmation email.
+				p They’ll send you a form to fill in. Once you’ve sent it to them you should notice a difference in about a month.
+				p
+					button.btn-secondary.email-button-icon Send email
+
+			.well
+				h3 Contact your electoral registration office
+				p Your local electoral registration office keeps a list of addresses called the ‘open register’. This list can be bought and used it to send junk mail. It won’t affect your right to vote.
+				p We’ll email you a pdf. You should send this to your local electoral office - the address will be on the pdf.
+				p You’ll see a difference in the amount of junk mail you get in about a month.
+				p
+					button.btn-secondary.email-button-icon Send email

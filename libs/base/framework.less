@@ -5,95 +5,13 @@
  * 12 columns, using 3/4 columns
  */
 
-// Row - full width this is a row for horizontal division
-.flex-row {
-    max-width: @full-page-width;
-    margin: auto;
-    clear: both;
-    padding: calc(@box-spacing-vertical * .7) 0 (@box-spacing-vertical * .7)  (@box-spacing-vertical * 1);
-}
-// Keeping columns flexible, to combine together where needed
-// Base layout
-// Container - content
-.flex-container {
-    max-width: @max-page-width;
-    clear: both;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    // Ensure nested boxes all line up
-    height: calc( ~"100% + 1em" );
-}
-// Full width
-.flex-col-1-1 {
-    width: @width-span-12;
-}
-// Half
-.flex-col-1-2 {
-    width: @width-span-6;
-}
-// Third
-.flex-col-1-3 {
-    width: @width-span-4;
-}
-// Two thirds
-.flex-col-2-3 {
-    width: @width-span-8;
-}
-// Quarter
-.flex-col-1-4 {
-    width: @width-span-3;
-}
-// Three Quarter
-.flex-col-3-4 {
-    width: @width-span-9;
-}
-// Sixth
-.flex-col-1-6 {
-    width: @width-span-2;
-}
-
-// Extended layout
-// 1/12
-.flex-col-1-12 {
-    width: @width-span-1;
-}
-
-// 8/12 combine with
-.flex-col-2-8 {
-    width: @width-span-9;
-}
-
-.flex-row--header__heritage-blue {
-    max-width: @full-page-width;
-    margin: auto;
-    clear: left;
-    padding: calc(@box-spacing-vertical * 2) 0;
-    background-color: @heritage-blue !important;
-}
-
-/**
- * OLD FRAMEWORK
- */
 .flex-row {
     clear: both;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: -.5em -1%;
     margin: calc(-.5em);
-
-    // Force a stretch if this is child of a flex-column
-    -webkit-flex-grow: 2;
-    -ms-flex-positive: 2;
-    flex-grow: 2;
+    flex-grow: 2; // force a stretch if this is child of a flex-column
 }
 
 .flex-row > * {
@@ -104,12 +22,8 @@
     float: left;
 }
 
-.flex-column {
-    display: -ms-flexbox;
-    display: -webkit-flex;
+.flex-column { // this stacks the grid items vertically, and can be used on a div with .flex-row
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -151,319 +65,259 @@
 }
 
 @media (min-width:@screen-sm-min) {
-
     .col-sm-12 {
         width: calc( ~"@{width-span-12} - 1em" );
     }
-
     .col-sm-11 {
         width: calc( ~"@{width-span-11} - 1em" );
     }
-
     .col-sm-10 {
         width: calc( ~"@{width-span-10} - 1em" );
     }
-
     .col-sm-9 {
         width: calc( ~"@{width-span-9} - 1em" );
     }
-
     .col-sm-8 {
         width: calc( ~"@{width-span-8} - 1em" );
     }
-
     .col-sm-7 {
         width: calc( ~"@{width-span-7} - 1em" );
     }
-
     .col-sm-6 {
         width: calc( ~"@{width-span-6} - 1em" );
     }
-
     .col-sm-5 {
         width: calc( ~"@{width-span-5} - 1em" );
     }
-
     .col-sm-4 {
         width: calc( ~"@{width-span-4} - 1em" );
     }
-
     .col-sm-3 {
         width: calc( ~"@{width-span-3} - 1em" );
     }
-
     .col-sm-2 {
         width: calc( ~"@{width-span-2} - 1em" );
     }
-
     .col-sm-1 {
         width: calc( ~"@{width-span-1} - 1em" );
     }
 }
 
 @media (min-width:@screen-md-min) {
-
     .col-md-12 {
         width: calc( ~"@{width-span-12} - 1em" );
     }
-
     .col-md-11 {
         width: calc( ~"@{width-span-11} - 1em" );
     }
-
     .col-md-10 {
         width: calc( ~"@{width-span-10} - 1em" );
     }
-
     .col-md-9 {
         width: calc( ~"@{width-span-9} - 1em" );
     }
-
     .col-md-8 {
         width: calc( ~"@{width-span-8} - 1em" );
     }
-
     .col-md-7 {
         width: calc( ~"@{width-span-7} - 1em" );
     }
-
     .col-md-6 {
         width: calc( ~"@{width-span-6} - 1em" );
     }
-
     .col-md-5 {
         width: calc( ~"@{width-span-5} - 1em" );
     }
-
     .col-md-4 {
         width: calc( ~"@{width-span-4} - 1em" );
     }
-
     .col-md-3 {
         width: calc( ~"@{width-span-3} - 1em" );
     }
-
     .col-md-2 {
         width: calc( ~"@{width-span-2} - 1em" );
     }
-
     .col-md-1 {
         width: calc( ~"@{width-span-1} - 1em" );
     }
 }
 
 .ie8 {
-
     .col-xs-12 {
         width: unit( unit( @width-span-12 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-11 {
         width: unit( unit( @width-span-11 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-10 {
         width: unit( unit( @width-span-10 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-9 {
         width: unit( unit( @width-span-9 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-8 {
         width: unit( unit( @width-span-8 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-7 {
         width: unit( unit( @width-span-7 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-6 {
         width: unit( unit( @width-span-6 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-5 {
         width: unit( unit( @width-span-5 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-4 {
         width: unit( unit( @width-span-4 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-3 {
         width: unit( unit( @width-span-3 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-2 {
         width: unit( unit( @width-span-2 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-xs-1 {
         width: unit( unit( @width-span-1 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-12 {
         width: unit( unit( @width-span-12 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-11 {
         width: unit( unit( @width-span-11 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-10 {
         width: unit( unit( @width-span-10 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-9 {
         width: unit( unit( @width-span-9 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-8 {
         width: unit( unit( @width-span-8 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-7 {
         width: unit( unit( @width-span-7 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-6 {
         width: unit( unit( @width-span-6 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-5 {
         width: unit( unit( @width-span-5 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-4 {
         width: unit( unit( @width-span-4 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-3 {
         width: unit( unit( @width-span-3 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-2 {
         width: unit( unit( @width-span-2 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-sm-1 {
         width: unit( unit( @width-span-1 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-12 {
         width: unit( unit( @width-span-12 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-11 {
         width: unit( unit( @width-span-11 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-10 {
         width: unit( unit( @width-span-10 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-9 {
         width: unit( unit( @width-span-9 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-8 {
         width: unit( unit( @width-span-8 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-7 {
         width: unit( unit( @width-span-7 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-6 {
         width: unit( unit( @width-span-6 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-5 {
         width: unit( unit( @width-span-5 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-4 {
         width: unit( unit( @width-span-4 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-3 {
         width: unit( unit( @width-span-3 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-2 {
         width: unit( unit( @width-span-2 ) - 2, ~"%" );
         *width: auto;
         *float: none;
     }
-
     .col-md-1 {
         width: unit( unit( @width-span-1 ) - 2, ~"%" );
         *width: auto;
@@ -472,51 +326,39 @@
 }
 
 @media (min-width:@screen-lg-min) {
-
     .col-lg-12 {
         width: calc( ~"@{width-span-12} - 1em" );
     }
-
     .col-lg-11 {
         width: calc( ~"@{width-span-11} - 1em" );
     }
-
     .col-lg-10 {
         width: calc( ~"@{width-span-10} - 1em" );
     }
-
     .col-lg-9 {
         width: calc( ~"@{width-span-9} - 1em" );
     }
-
     .col-lg-8 {
         width: calc( ~"@{width-span-8} - 1em" );
     }
-
     .col-lg-7 {
         width: calc( ~"@{width-span-7} - 1em" );
     }
-
     .col-lg-6 {
         width: calc( ~"@{width-span-6} - 1em" );
     }
-
     .col-lg-5 {
         width: calc( ~"@{width-span-5} - 1em" );
     }
-
     .col-lg-4 {
         width: calc( ~"@{width-span-4} - 1em" );
     }
-
     .col-lg-3 {
         width: calc( ~"@{width-span-3} - 1em" );
     }
-
     .col-lg-2 {
         width: calc( ~"@{width-span-2} - 1em" );
     }
-
     .col-lg-1 {
         width: calc( ~"@{width-span-1} - 1em" );
     }

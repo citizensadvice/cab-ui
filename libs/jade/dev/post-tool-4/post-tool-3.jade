@@ -1,0 +1,32 @@
+block settings
+	- var title = "Stop junk mail"
+	- var sidebar = true
+	- var toolbars = false
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Content"}])
+
+block content
+	.articleContent
+		div
+			h2 Confirm your details
+			p Please confirm your details are correct, you can go back to edit them.
+			p Your name
+				br
+				| 1 Road name
+				br
+				| Townname
+				br
+				| A1A1 A1A
+				br
+				| email@address.com
+
+			a.btn-light.left-button-icon(href="post-tool-2.html") Edit details
+			a.btn.right-button-icon(href="post-tool-4.html") Confirm

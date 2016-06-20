@@ -1,0 +1,104 @@
+block settings
+	- var title = "Reference action"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Reference action"}])
+
+block sidebar
+	include /template/sidebar-brand.jade
+
+block content
+	.overlay
+		.pin__modal
+			.pin__actions
+				h2 Your saved advice
+				.tab-group
+					.tab
+						input(type="radio" id="one" name="tab-group" checked)
+						label(for="one") References
+						.content
+							button.btn-secondary.btn-small(type="button") Print all
+							button.btn-warning.btn-small(type="button" style="float:right;") Clear all
+
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
+
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
+
+							.email-links
+								.email-links-breadcrumb
+									| Sick or disabled people and carers  >  PIP
+								h2 Applying for ESA
+
+
+					.tab
+						input(type="radio" id="two" name="tab-group")
+						label(for="two") Email
+						.content
+							div
+								p Send your saved references to yours, a friend or family members email address
+								fieldset
+									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your name
+									input(id="standardField" placeholder="" type="text")
+
+								fieldset
+									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Recipients email address
+									span.form-hint This can be your own, or you can add multiple addresses seperated with a comma
+									input(id="standardField" placeholder="" type="email")
+
+								button.btn-secondary.email-button-icon(type="button") Send email
+
+
+
+	div
+		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+		section#step1
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, #[span#overlay_button-1 consectetuer] adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step2
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. #[span#overlay_button-2 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.]
+			.callout--adviser Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step3
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+	#overlay1.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header 19.1 Overlay title
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			.overlay__footer
+				button#overlay1_close.btn.btn-primary.close-button-icon(type="button") Close
+
+	#overlay2.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header 19.2 Overlay title
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			.overlay__footer
+				button#overlay2_close.btn.btn-primary.close-button-icon(type="button") Close

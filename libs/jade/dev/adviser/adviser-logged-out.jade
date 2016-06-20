@@ -1,0 +1,53 @@
+block settings
+	- var title = "Content page"
+	- var loginheader = true
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Client content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Content page", href: "#"},
+		{title: "Advice tool", href: "adviser-tool-logged-out.html"}],
+		0)
+
+	nav.side-nav-beta.adviser-nav
+		ul
+			li.side-nav-beta__heading.-active.-open
+
+block content
+	div
+		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+		section#step1
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step2
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step3
+			h2.ref-heading
+				span.ref-heading__heading Content subheading
+				span.ref-heading__toggle.ref-heading__toggle--off
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.

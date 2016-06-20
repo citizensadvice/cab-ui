@@ -1,0 +1,272 @@
+block settings
+	- var title = "Check if you're eligible for Universal Credit"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Adviser content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Check if you're eligible for Universal Credit"}],
+		0)
+
+	nav.side-nav-beta.adviser-nav
+		ul
+			li.side-nav-beta__heading.-active.-open
+				a
+					span Adviser pages
+			ul
+				li.side-nav-beta__sibling
+					a(href="adviser-2.html") Legislation
+
+block content
+	.articleContent
+		div
+			.callout--adviser
+				h2 Note for Advisers
+				p This page outlines the #[strong current] eligibility for Universal Credit, also known as the ‘gateway conditions’.
+				p Eventually, clients in different circumstances will also be able to claim Universal Credit, but at the moment there are restrictions on who can claim while it’s being rolled out.
+				p This page will be updated regularly as the eligibility rules change.
+			p Universal Credit is a new benefit that you can only get in some parts of the UK.
+			p If you’re living in a Universal Credit area, you might need to apply for Universal Credit instead of other existing benefits like Jobseeker's Allowance, Housing Benefit or Tax Credits etc.
+			p It’s mainly available to people who are unemployed or earn less than £338 a month - but you can get it in some other circumstances.
+			h2.ref-heading#h-get-help
+				span.ref-heading__heading Get help
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p It can be complicated to work out if you’re eligible just by reading all the small print - the rules are outlined in full below.
+			p It might be quicker and easier to talk to an expert so you can explain your personal circumstances. You can do this in a few ways:
+			ul
+				li call the #[strong Universal Credit helpline] on 0345 600 0723 (Textphone: 0345 600 0743). Calls can cost 9p a minute from a landline, or between 8p and 40p a minute from a mobile (your phone supplier can tell you how much you’ll pay). You can call and ask them to call you back
+				li contact your #[a(href="/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice]
+			h2.ref-heading#h-who-can-apply-for-universal-credit
+				span.ref-heading__heading Who can apply for Universal Credit
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			h3.ref-heading#h-you-can-currently-only-apply-in-a-universal-credit-area
+				span.ref-heading__heading You can currently only apply in a Universal Credit area
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p The first thing you should do is see if you live in a Universal Credit area. Follow these steps:
+			ol
+				li #[a.a-external(href="http://los.direct.gov.uk/default.aspx?type=1&amp;lang=en", rel="external", target="_blank") Find your nearest Jobcentre] if you don’t know it.
+				li Check the list of #[a.a-external(href="https://www.gov.uk/jobcentres-where-you-can-claim-universal-credit", rel="external", target="_blank") Jobcentres that accept Universal Credit applications] to find out if your nearest Jobcentre is on the list. Some Jobcentres are only accepting claims from single people - the list will say where.
+			p If you can’t apply for Universal Credit, you should look at other benefits - use the Turn2us benefits checker to #[a.a-external(href="http://benefits-calculator.turn2us.org.uk/AboutYou", rel="external", target="_top") see what you can apply for]. Your #[a(href="/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice] can also help you.
+			h3.ref-heading#h-if-you-live-in-a-universal-credit-area
+				span.ref-heading__heading If you live in a Universal Credit area
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p To be eligible for Universal Credit, you must currently:
+			ul
+				li expect to earn less than £338 (after tax) in the next month
+				li be #[span#overlay_button-2 between 18 years old and 60 years and 6 months old]
+				li be a British citizen (non-British citizens can #[a(href="/benefits/universal-credit/before-you-apply/eligibility-non-british-citizen/", target="_top") apply in some places])
+
+				li have a National Insurance number
+				li have less than £6,000 in savings or other investments - eg shares, or property that you don't live in. This is increased to a £16,000 limit if you live in certain areas of Sutton or Croydon - see below
+			p If you live with your partner, you usually both need to be eligible. You'll need to:
+			ul
+				li live at the same address (you don't have to be married or civil partners to apply)
+				li expect to earn less than £541 (after tax) combined in the next month
+				li have less than £6,000 in savings or other investments between you. This is increased to a £16,000 limit if you live in certain areas of Sutton or Croydon - see below
+			p There are currently very limited circumstances when you can apply as a single person while being part of a couple who is living together. You can read more in #[a(href="/benefits/universal-credit/before-you-apply/how-universal-credit-works-for-couples/") the rules for how Universal Credit works for couples].
+			h3.ref-heading#h-the-following-conditions-will-also-apply-unless-you-live-in-sutton-or-croydon-
+				span.ref-heading__heading The following conditions will also apply (unless you live in Sutton or Croydon)
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			.callout--warning
+				p There are fewer restrictions on applying if you live in parts of Sutton and Croydon. If you have a postcode beginning with SM5 2**, SM6 7**, SM6 8**, SM6 9** or CR0 4**,  this section does not apply to you. If you live anywhere else in the UK, you'll need to meet the conditions below as well as the conditions already listed.
+
+			p You must have lived in the UK for the last 2 years, and not have been abroad for more than 4 weeks continuously during that time.
+			p You #[strong can’t] get Universal Credit if any of the following apply:
+			ul
+				li you can't work or look for work (eg because of illness or disability)
+				li you’re in supported or temporary accommodation
+				li you’re a homeowner
+				li you’ve applied for a fitness for work note from a doctor
+				li you’re pregnant or have given birth within the last 15 weeks
+				li you have caring responsibilities, eg for a disabled person
+				li you’re self-employed, or expect to earn money from self-employment in the next month
+				li you’re a company director or part of a limited liability partnership
+				li you’re in education or on a training course of any kind
+				li you live in the same household as a member of the regular or reserve forces who’s away on duty
+				li you pay child maintenance via the Child Support Agency
+				li you’re an approved foster parent (even if you have no foster children)
+				li you’re expecting to adopt a child in the next 2 months
+				li you’ve adopted a child within the last 12 months
+				li you’re homeless
+			p If you're not sure whether or not you can apply, contact the Universal Credit helpline or visit your #[a(href="/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") local Citizens Advice].
+			p
+				strong Universal Credit helpline
+				br
+				| Telephone: 0345 600 0723
+				br
+				| Textphone: 0345 600 0743
+				br
+				| Monday to Friday, 8am to 6pm
+			p Calls to this number can cost up to 9p a minute from a landline, or between 8p and 40p a minute from a mobile (your phone supplier can tell you how much you’ll pay). You can call and ask them to call you back.
+			p Your #[a(href="/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") nearest Citizens Advice] can also help.
+			.callout--info
+				p If you can’t apply for Universal Credit, you should look at other benefits - use the Turn2us benefits checker to #[a.a-external(href="http://benefits-calculator.turn2us.org.uk/AboutYou", rel="external") see what you can apply for].
+
+			h3.ref-heading#h-if-you-ve-applied-for-other-benefits
+				span.ref-heading__heading If you've applied for other benefits
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href="#!") Add reference
+			p You can’t get Universal Credit if you've applied for any of the following and you're waiting for a decision:
+			ul
+				li Jobseeker’s Allowance
+				li Employment and Support Allowance
+				li Income Support
+				li Housing Benefit
+				li Child Tax Credit
+				li Working Tax Credit
+			p You can’t get Universal Credit if you’re appealing against a decision to not give you any of the following:
+			ul
+				li Jobseeker’s Allowance
+				li Employment and Support Allowance
+				li Income Support (IS)
+			p You can’t get Universal Credit if you’re waiting for a revision of a decision (including a 'mandatory reconsideration') to not give you any of the following:
+			ul
+				li Jobseeker’s Allowance
+				li Employment and Support Allowance
+				li Income Support
+				li Housing Benefit
+			p You can’t get Universal Credit if you’re entitled to:
+			ul
+				li Employment and Support Allowance
+				li Income Support
+				li Incapacity Benefit
+				li Severe Disablement Allowance
+				li Disability Living Allowance
+				li Personal Independence Payment
+			p You might be eligible for other benefits if you’re not eligible for Universal Credit. Use the Turn2us benefits checker to #[a.a-external(href="http://benefits-calculator.turn2us.org.uk/AboutYou", rel="external") see what you can apply for], or contact your #[a(href="/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/") nearest Citizens Advice].
+			.callout--related
+				h2.ref-heading#h-next-steps
+					span.ref-heading__heading Next steps
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href="#!") Add reference
+				p #[a(href="/benefits/universal-credit/apply/apply-for-universal-credit/") Apply for Universal Credit].
+
+			.callout--adviser
+				h2.ref-heading#h-information-for-advisers
+					span.ref-heading__heading Information for advisers
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href="#!") Add reference
+				p More detailed guidance on eligibility for Universal Credit can be found in:
+				ul
+					li the decision makers' guide - chapter C1 on GOV.UK - remember this is guidance for DWP staff and not the defined law
+					li the 'Child Poverty Action Group (CPAG) Welfare Benefits and Tax Credits Handbook' for more detailed guidance on eligibility
+
+
+
+
+
+	div
+		p Introduction is optional, but for a long format advice page it can be useful to summarise the pages content, this should be kept as a relatively short paragraph that covers what this page of content will do.
+		section#step1
+			h2 First use of &lt;h2&gt; in content
+			p Lorem ipsum dolor sit amet, #[span#overlay_button-1 consectetuer] adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step2
+			h2 Second use of &lt;h2&gt; in content
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		section#step3
+			h2 Third use of &lt;h2&gt; in content
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+	#overlay1.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h3.overlay__header 19.1 Overlay title
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			.overlay__footer
+				button#overlay1_close.btn.btn-primary.close-button-icon(type="button") Close
+
+	#overlay2.overlay(style="display:none;")
+		.overlay__modal
+			.overlay__main
+				h2.overlay__header 9.2.1.85 Universal Credit - which 16 and 17 year olds can get it?
+				p To get UC, you have to meet certain basic conditions of entitlement and in most cases must be aged at least 18. A 16 or 17 year old who meets special conditions is able to claim UC. This page explains those special conditions.
+
+				h3 16 and 17 year olds who can claim Universal Credit
+
+				p You can get UC at age 16 or 17 where you satisfy one of the following conditions:
+				ul
+					li you have limited capability for work or are waiting for an assessment and have provided medical evidence. More about limited capability for work
+					li you have caring responsibilities for a severely disabled person. More about caring responsibilities for a severely disabled person
+					li you or your partner are responsible for a child. If your partner is responsible for the child, your partner must meet the basic conditions including being age 18
+					li you are pregnant and your baby is due within 11 weeks or was born no more than 15 weeks ago
+					li you are without parental support and not looked after by the local authority.
+				p However, if you are 16 or 17 and a care leaver you are not eligible for UC unless you have limited capability for work (or are awaiting assessment) or you or your partner are responsible for a child.
+
+				p If you satisfy one of the conditions for getting UC at age 16 or 17 you may not have to meet any work-related requirement.
+
+				p More about work-related requirements.
+
+				p More about which work-related requirements do you have to meet.
+
+				p More about who is in the no work-related requirements group.
+
+				h4 Without parental support
+
+				p Without parental support means that you:
+				ul
+					li have no parent; or
+					li cannot live with your parent because of estrangement. This means you cannot live with your parent because your relationship has broken down emotionally; or
+					li cannot live with your parent because your health would be at risk if you lived with them or because they are unable to support you financially because of their physical or mental condition; or
+					li you cannot live with your parent because they are in prison; or
+					li you cannot live with your parent because they are not allowed to enter Great Britain.
+				h3 Claiming Universal Credit if your partner is aged 16 or 17
+
+				p If your partner is aged 16 or 17 and meets the special conditions you can make a joint claim for UC.
+
+				p If your partner is aged 16 or 17 and does not meet the special conditions you can claim as a single person.
+
+				p If you have to claim as a single person your entitlement is based on your circumstances but  your partner’s income and capital are taken into account.
+
+				p More about couples who have to claim UC as a single person.
+			.overlay__footer
+				button#overlay2_close.btn.btn-primary.close-button-icon(type="button") Close
+
+	script.
+		$('#overlay_button-1').append(function() {
+			return "<sup class='adviser'>19.1</sup>";
+		})
+		$('#overlay_button-2').append(function() {
+			return "<sup class='adviser'>9.2.1.85</sup>";
+		})
+
+
+		$(document).ready(function(){
+			$('#overlay_button-1').click(function() {
+				$('#overlay1').toggle();
+			});
+			$('#overlay1_close').click(function() {
+				$('#overlay1').hide();
+			});
+			$('#overlay_button-2').click(function() {
+				$('#overlay2').toggle();
+			});
+			$('#overlay2_close').click(function() {
+				$('#overlay2').hide();
+			});
+		});

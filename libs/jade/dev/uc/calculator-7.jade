@@ -1,0 +1,41 @@
+block settings
+	- var title = "Universal Credit calculator"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Templates", href: dir + "index.html#templates"},
+		{title: "Advisor content"}])
+
+block sidebar
+	- var section = "Section title"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Sibling page 1"},
+		{title: "Sibling page 2"}],
+		0)
+
+block section-notice
+	aside.section-notice
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge NEW
+				| This page is part of #[a(href="#") our new approach to digital advice].
+
+block content
+	.articleContent
+		div
+			fieldset
+				legend(for="standardField") How much do you expect to earn in the next month (after tax)?
+				input#standardField(placeholder="£" type="number")
+
+
+			a.btn-light.left-button-icon(href="calculator-6.html") Back
+			a.btn.right-button-icon(href="calculator-8.html", type="button") Continue
