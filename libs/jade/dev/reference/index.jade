@@ -17,10 +17,77 @@ block sidebar
 block script
 	script.
 		$(document).ready(function() {
-			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'>Save<span class='d' style='display:none;'>d</span></span>");
+			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'> save<span class='d' style='display:none;'>d</span></span>");
 
-			$( ".overlay, .revealable" ).find( "h1, h2, h3, h4" ).find( ".save-button" ).remove();
+			$( ".overlay, .revealable, .section-nav" ).find( "h1, h2, h3, h4" ).find( ".save-button" ).remove();
 
+			// Adds the number into the save-button
+			/*
+			h2 = 1;
+			$( "h2 .save-button" ).each(function() {
+				$(this).prepend("."+h2);
+				$(this).parent().nextUntil("h2").find(".save-button").prepend("."+h2);
+				h2++;
+
+				h3 = 1;
+				$(this).parent().nextUntil("h2").each(function() {
+					if ($(this).is("h3")) {
+						$(this).find(".save-button").prepend("."+h3);
+						$(this).nextUntil("h2, h3").find(".save-button").prepend("."+h3);
+						h3++;
+
+						h4 = 1;
+						$(this).nextUntil("h3").each(function() {
+							if ($(this).is("h4")) {
+								$(this).find(".save-button").prepend("."+h4);
+								$(this).nextUntil("h2, h3, h4").find(".save-button").prepend("."+h4);
+								h4++;
+							}
+						});
+					}
+				});
+			});
+
+			$( ".save-button" ).prepend("10.4.3");
+			*/
+
+			// Add the number in front of the title
+			/*
+			$( "h2, h3, h4" ).prepend("<span class='unique'></span> ");
+
+			h2 = 1;
+			$( "h2 .save-button" ).each(function() {
+				$(this).parent().find(".unique").prepend(h2+".");
+				$(this).parent().nextUntil("h2").find(".unique").append(h2+".");
+				h2++;
+
+				h3 = 1;
+				$(this).parent().nextUntil("h2").each(function() {
+					if ($(this).is("h3")) {
+						$(this).find(".unique").append(h3+".");
+						$(this).nextUntil("h2, h3").find(".unique").append(h3+".");
+						h3++;
+
+						h4 = 1;
+						$(this).nextUntil("h3").each(function() {
+							if ($(this).is("h4")) {
+								$(this).find(".unique").append(h4+".");
+								h4++;
+							}
+						});
+					}
+				});
+			});
+			*/
+
+			x = 1;
+			$(":header").each(function() {
+				$(this).prepend(x+". ");
+				x++;
+			});
+
+			// Add page number
+			$( "h1" ).prepend("10.4.3 ");
 
 			$( ".save-button" ).on( "click", function() {
 				$( this ).toggleClass( "saved" );
@@ -109,6 +176,48 @@ block content
 			.button View&nbsp;
 
 		// DUMMY TEXT FOR DAYZ!
+		h2 Heading two
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
+		h2 Heading two
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
+		h2 Heading two
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
+		h3 Heading three
+
+		h4 Heading four
+
+		h4 Heading four
+
 		p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
 
 		p If you’re #[a(href="#") moving from DLA to PIP] your payments won’t stop while you’re waiting for your PIP claim to be processed, as long as you make your claim for PIP within a month of being told by the DWP that you should.

@@ -1,5 +1,5 @@
 block settings
-	- var title = "Revealable"
+	- var title = "Sidebar"
 	- var sidebar = true
 	- var dir = "../"
 
@@ -17,16 +17,35 @@ block sidebar
 block content
 	.articleContent
 		div
-			p Revealable sections allow you to ‘hide’ content that’s only relevant to some people visiting the page.
-			p The ‘hidden’ content sits under a clickable h3 heading. Once clicked, the rest of the content is revealed.
-			p They’re a great way to make a page easier to read - people can scan through quickly.
-			p Bear in mind that hidden content can be easy for people to miss, so use the revealables sparingly - you should aim to use no more than 4 per page.
-			p Content within the revealables is unlikely to be indexed in search engines. The 'toggle title' - the title inside the revealable - will be, so make sure it’s clear and descriptive.
+			p lorem
 
 			.example-box-plain
 				section.revealable
-					h3 Unstyled content inside header/toggle
-					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+					nav.section-nav
+						h2.section-nav__heading
+							a In this section
+						ul
+							li
+								a.section-nav__parent(href="../#Modules") Modules
+								ul
+									li
+										a(href="callout.html", title="Callout") Callout
+									li
+										a(href="revealable.html", title="Revealable") Revealable
+									li
+										a(href="charts.html", title="Charts") Charts
+									li
+										a(href="section-notice.html", title="Section Notices") Section Notices
+									li
+										a(href="toolbar.html", title="Content toolbar") Content toolbar
+									li
+										a(href="cookie-monster.html", title="Cookie Monster") Cookie Monster
+									li
+										a(href="browser-warning.html", title="Browser warning") Browser warning
+									li
+										a(href="sticky.html", title="Sticky box") Sticky box
+									li
+										a(href="extent.html", title="Extent Switcher") Extent Switcher
 
 			pre
 				code.language-html

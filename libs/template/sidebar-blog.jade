@@ -1,32 +1,31 @@
-- var section = "Brand"
-    .side-nav-beta.blog-sidebar
-        .blog-sidebar--search
-            fieldset
-                .search-results__field.field-group.field-group--buttons
-                    input(type="search", placeholder="Search")
-                    button.btn.btn-primary(style="background-color:#fcbb69;border: 2px solid #fcbb69;")
-                        i.icon-search
+.side-nav-beta.blog-sidebar
+    .blog-sidebar--search
+        fieldset
+            .search-results__field.field-group.field-group--buttons
+                input(type="search", placeholder="Search")
+                button.btn.btn-primary
+                    i.icon-search
 
-        .blog-sidebar--category
-            fieldset
-                label(for="exampleSelect1") Select Category
-                .dropdown
-                    select(id="exampleSelect1")
-                        option All categories
-                        option Content
-                        option Design
-                        option Casebook
-                        option Research
+    .blog-sidebar--category
+        fieldset
+            label(for="exampleSelect1") Select Category
+            .dropdown
+                select(id="exampleSelect1")
+                    option All categories
+                    option Content
+                    option Design
+                    option Casebook
+                    option Research
 
-        .blog-sidebar--updates
-            .card-banner-top
-                p(style="color:#fff;") Subscribe by email
-            .card-text
-                p Enter your name and email address to subscribe to the digital blog and receive notifications of new posts by email.
-                fieldset
-                    label(for="name") Your name
-                    input(type="Email", placeholder="Name")
-                fieldset
-                    label(for="email") Your email
-                    input(type="Email", placeholder="Email")
-                button.btn.btn-primary.tick-button-icon Submit
+    .blog-sidebar--updates
+        .card-banner-top
+            p Subscribe by email
+        .card-text
+            p Enter your name and email address to subscribe to the digital blog and receive notifications of new posts by email.
+            .fieldset
+                label(for="name") Your name
+                input(type="Email", placeholder="Name")
+            .fieldset
+                label(for="email") Your email
+                input(type="Email", placeholder="Email")
+            button.btn.btn-primary.tick-button-icon Submit

@@ -8,11 +8,11 @@ extends /template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-		{title: "Modules", href: dir + "index.html#Modules"},
+		{title: "Features", href: dir + "index.html#Features"},
 		{title: "Section Notices"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /template/sidebar-features.jade
 
 block section-notice
 	aside.section-notice
@@ -29,7 +29,7 @@ block section-notice
 				span.badge SURVEY
 				| Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
 
-	aside.section-notice__adviser
+	aside.section-notice__adviser.js-make-sticky
 		h2.screenreader Notice
 		.section-notice__content
 			p
@@ -90,7 +90,7 @@ block content
 							| This page is part of #[a(href="#") adviser only] content.
 			pre
 				code.language-html
-					| &lt;aside class="section-notice__adviser"&gt;
+					| &lt;aside class="section-notice__adviser js-make-sticky"&gt;
 					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
 					| 	&lt;div class="section-notice__content"&gt;
 					| 		&lt;p&gt;
