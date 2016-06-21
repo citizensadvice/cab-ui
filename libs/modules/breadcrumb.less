@@ -114,6 +114,12 @@
         display: none;
     }
 
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @heritage-blue-lightest;
+    }
+
     .js & {
         // Don't show the cursor if the JS is enabled as this won't be a clickable link
         cursor: default;
