@@ -1,0 +1,30 @@
+block settings
+	- var title = "Sidebar navigation"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Navigation", href: dir + "index.html#Navigation"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-navigation.jade
+
+block content
+	.articleContent
+		div
+			p Sidebars
+
+			h2 Desktop sidebar
+
+			img(src="#{dir}images/sidebar-example.svg", style="border:none;")
+
+			h2 Mobile sidebar
+
+			img(src="#{dir}images/sidebar-mobile-example.svg", style="border:none;")
+
+
