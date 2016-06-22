@@ -1,0 +1,97 @@
+block settings
+	- var title = "Legal status of volunteers"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = ""
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Talent", href: dir + "#"},
+		{title: "Volunteers", href: dir + "#"},
+		{title: "Legal and policies for volunteers"}])
+
+block sidebar
+	include /template/sidebar-site-content.jade
+	#in-page-nav.section-nav.js-make-sticky
+		nav
+			h2.section-nav__heading
+				a In this page
+			ul
+				li
+					a(href="#1") Differentiate volunteers from paid employees
+				li
+					a(href="#2") Start your claim - fill in a PIP1 form
+				li
+					a(href="#3") Basic information you need to start your claim
+				li
+					a(href="#4") Next steps
+
+block script
+	script.
+		$(window).scroll(function() {
+			var scrollPos = $(document).scrollTop();
+			$('#in-page-nav li a').each(function() {
+				var currLink = $(this);
+				var refElement = $(currLink.attr("href"));
+
+				if (refElement.position().top - 130 <= scrollPos && refElement.position().top + refElement.height() -125 > scrollPos) {
+					currLink.addClass("active")
+				} else {
+					currLink.removeClass("active")
+				}
+			});
+		});
+
+block content
+	.articleContent
+		div
+			p Volunteers do not have the same employment rights as paid employees. Therefore, you must distinguish volunteers from paid employees. The main reason you need to do this is because if a volunteer makes a complaint and feels it wasn’t addressed internally, they may try to establish employee status to resolve it. There have been cases of this happening at Citizens Advice and at other organisations.
+
+			section#1
+				h2 Differentiate volunteers from paid employees
+
+				h3 1. Reimburse actual expenses only
+				p The law states that if there is a payment (‘consideration’) between the volunteer and the employer, then this creates a contract. This means that your volunteer could be considered a paid employee. Paying a volunteer more than you should do could also have serious implications for volunteers who receive state benefits or are asylum seekers.You must only reimburse actual expenses (preferably receipted). 
+				ul.cross
+					li Do not pay a flat rate, for example for lunch or travel, as this may be classed as income (‘consideration').
+					li Do not offer volunteers perks such as discounts at local shops. This could also be classed as ‘consideration’.
+
+				h3 2. Treat your volunteer in a way that reflects their voluntary status
+				p You must treat volunteers in a way that reflects that there is no contractual or employment relationship. This applies to how you behave and your language. For example you must not reprimand a volunteer for failing to attend work (as they are not obliged to do so). You must use language that reflects expectation - not obligation.
+				.callout
+					h4 Best practice
+					ul
+						li Use the words ‘volunteer agreement’ rather than ‘job description’
+						li Use the template Volunteer arrangements without forming a contract to create your volunteer agreement
+						li Avoid words that you would use in a contract such as ‘commitment’, ‘obligation’, ‘contract’, ‘job description’, ‘sick leave’, ‘annual leave’. Instead focus on the ‘hopes’ and ‘expectations’ of both the volunteer and the organisation.
+				h3 3. Create distinct policies for volunteers
+				p You must create distinct policies for volunteers that are different from those for your paid employees. Even if there are similarities in the policies, you must create different ones for volunteers to reflect the difference in the relationship.
+				
+				.callout 
+					h4 Best practice 
+					p Use these example volunteer policies as a starting point. You can tailor them as needed. Make sure the language you use reflects the non-contractual relationship.
+
+				h3 4. Only offer training necessary for the volunteering role
+				p You must offer only training that is necessary for the volunteer to carry out their chosen activity. You must not offer other training that is not necessary because it could be viewed as ‘consideration’ (payment).
+				p You must make it clear that the organisation is not obliged to provide training, and that the volunteer is not obliged to undertake it. However this may mean that the volunteer is unable to carry out certain activities if they do not undertake the training.
+
+				h2 Protect volunteers’ personal data
+				p You will probably need to keep some details about your volunteers (unless it’s only for an informal, one-off piece of work). You must make sure you complete the legal duties in the Data Protection Act of 1998 if the details you need to keep for your volunteers fall into the Act’s definition of ‘personal data’.
+
+				h2 Ensure health and safety for volunteers
+				p Volunteers are not covered by the same health and safety legislation as paid employees. However they are protected under health and safety laws in two ways:
+				ol
+					li The ‘duty of care' is a common law duty which applies to all individuals and organisations. 
+					li Health and safety legislation (Section 3 of the Health and Safety at Work Act 1974) requires that employers limit risks to anyone coming into contact with their organisation. This includes volunteers.
+				p You must:
+				ul
+					li Ensure volunteers’ workplace is safe. This keeps volunteers safe, and also paid employees in the same environment.
+					li Carry out a risk assessment to account for all risks to all individuals affected by the organisation's activities
+					li Extend your personal accident insurance to cover volunteers.
+
+				.callout
+					h4 Best practice 
+					p Apply the same standards to volunteers’ health and safety as you would for paid employees, even if the legislation does not apply. For example follow the guidance Working with VDUs (Visual Display Units - eg: laptops, computers) from the Health and Safety Executive. Volunteers are not covered by this legislation but it’s best practice to follow it.
