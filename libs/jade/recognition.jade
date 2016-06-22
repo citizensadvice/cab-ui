@@ -1,0 +1,100 @@
+block settings
+	- var title = "Recognising volunteers"
+	- var sidebar = true
+	- var toolbars = false
+	- var dir = ""
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Do your job", href: dir + "home-1.html"},
+		{title: "Talent", href: dir + "talent.html"},
+		{title: "Managing volunteers", href: dir + "volunteers.html#managing"},
+		{title: title}])
+
+block sidebar
+	- var section = "Managing volunteers"
+	+sidebar([
+		{title: "Induction", href: "#"},
+		{title: "Performance management", href: "#"},
+		{title: "Recognising volunteers", href: "recognition.html"},
+		{title: "Volunteer complaints", href: "#"},
+		{title: "Measuring impact", href: "#"},
+		{title: "Volunteer administration", href: "#"},
+		{title: "Leavers", href: "#"}
+	])
+	#in-page-nav.section-nav.js-make-sticky
+		nav
+			h2.section-nav__heading
+				a This page contains
+			ul
+				li
+					a(href="#1") Everyday ways to recognise volunteers
+				li
+					a(href="#2") Significant ways to recognise volunteers
+				li
+					a(href="#3") Nominations for hours
+
+block script
+	script.
+		$(window).scroll(function() {
+			var scrollPos = $(document).scrollTop();
+			$('#in-page-nav li a').each(function() {
+				var currLink = $(this);
+				var refElement = $(currLink.attr("href"));
+
+				if (refElement.position().top - 130 <= scrollPos && refElement.position().top + refElement.height() -125 > scrollPos) {
+					currLink.addClass("active")
+				} else {
+					currLink.removeClass("active")
+				}
+			});
+		});
+
+block content
+	.articleContent
+		div
+			p Celebrating volunteers brings many benefits for both the volunteers and our organisation. Showing appreciation for a volunteer's contribution can boost their morale, motivation and self confidence. It also benefits our organisation by creating a supportive culture and increasing volunteer retention levels.
+
+			section#1
+				h2 Everyday ways to recognise volunteers
+
+				ul
+					li #[strong Say thank you!] It’s the simplest form of recognition and the most effective. Say thank you at the end of each day.
+					li #[strong Pass on positive feedback.] Pass on positive comments from a client or service to the volunteer.  For many volunteers to know that they’ve changed someone’s life is the biggest reward of all.
+					li #[strong Show volunteers the value of their work.] You could show them the financial impact they’ve made and highlight it newsletters or the annual report.
+					li #[strong Include them in the day-to-day life of our organisation.] Introduce them to other volunteers and employees and invite them to meetings and your AGM.
+					li #[strong Keep them informed.] Share the latest news with them.
+					li #[strong Ask for their ideas and feedback.] Invite volunteers to sit on your advisory boards and committees. Ask them regularly for their input.
+					li #[strong Ensure other employees, senior managers and trustees show an interest in their work.] Make sure they take time to learn about what volunteers do.
+
+			section#2
+				h2 Significant ways to recognise volunteers
+
+				ul
+					li #[strong Share achievements outside your organisation.] This could be a letter to your volunteer’s employer acknowledging their work. You could also send a short profile piece and a photo to your local newspaper.
+					li #[strong Arrange an event.] Celebrate something that has gone well and recognise the contributions of volunteers in achieving it.
+					li #[strong Take part in events that celebrate volunteering.] The two main national events are Volunteers’ Week (early June) and Student Volunteering Week (early February).
+					li #[strong Enter volunteers for local, national and global awards.] Make sure they are happy that you do this.
+					li #[strong Present our award certificates to volunteers.] It’s best to do this at an event so it feels like a proper celebration. Download and edit certificates from #[a web-to-print Prinkk]:
+						ol
+							li Long Service Certificate. The period of service can be non-continuous and spread across different locations. Example: Jane spent 15 years volunteering at Anytown Citizens Advice.
+							li Certificate of Recognition recognises a group or individual that has made a positive contribution to their local service. Example: John and Alan raised £200 to buy a new sofa for the Citizens Advice waiting room.
+							li Certificate of Merit recognises an individual's excellent work. Example: In addition to giving debt advice to a client, Annie wrote grant applications to local trusts. The client is now on their way to being debt free.
+
+			section#3
+				h2 Nominations for honours
+
+				p The honours system is a way of recognising outstanding merit and service. It allows people whose efforts may otherwise go unnoticed to be recognised in a nationally celebrated way.
+
+				p We recommend that you first share your nomination with Citizens Advice and then we can pass it to the Honours Secretariat with a supporting note from the Chief Executive of Citizens Advice. Gov.uk has the #[a criteria details, forms and guidance notes] you need to nominate someone. Please send completed forms to Sharon.Auguste@citizensadvice.org.uk.
+
+				p You can also submit your nominations directly to the Honours Secretariat at the Cabinet Office without the support of Citizens Advice.
+
+		.title__subheading
+			span.info-reviewed #[strong First published]: 12 June 2012
+			span.info-reviewed #[strong Last updated]: 4 April 2016
+			span.info-reviewed #[strong Review required]: 4 April 2017
+			span.info-owner #[strong Content owner]: #[a Chris Freed], #[a People and Equalities team]
+			span.info-owner #[strong Content publisher]: #[a Jess Lines]
