@@ -79,6 +79,27 @@
     }
 }
 
+#brexit {
+    background-color: @heritage-yellow-lighter;
+    .brexit__content {
+        .limit-width;
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        overflow: hidden;
+        @media( max-width: @screen-xs-max ) {
+            font-size: @font-size-small;
+        }
+        p {
+            margin: 0;
+        }
+        .badge {
+            background-color: @heritage-yellow;
+            color: @text-color;
+            margin-right: @box-spacing-horizontal/2;
+            display: inline-block;
+        }
+    }
+}
+
 @media (max-width: @screen-sm-max ) {
      .section-notice__content {
         padding: @box-spacing-horizontal @box-spacing-horizontal 0 @box-spacing-horizontal;
