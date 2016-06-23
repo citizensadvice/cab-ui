@@ -5,60 +5,6 @@
  *
  */
 
-/*.section-notice {
-    background: @heritage-yellow-lighter;
-    &__content {
-        .limit-width;
-        padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
-        overflow: hidden;
-        p a {
-            border-bottom: none;
-            &:hover {
-                border-bottom: 0.0625rem solid;
-            }
-        }
-        .badge {
-            margin-right: @box-spacing-horizontal;
-        }
-    }
-    &__adviser {
-        background-color: @inventive-teal-lighter;
-        p a:hover {
-            border-bottom: 0.0625rem solid;
-        }
-        .badge {
-            background-color: @inventive-teal;
-            color: @white;
-        }
-    }
-    @media( max-width: @screen-xs-max ) {
-        display: none;
-    }
-}
-
-@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
-    .js .section-notice__content {
-        padding-right: @box-spacing-horizontal*3.5;
-    }
-}
-
-@media (max-width: @screen-sm-max ) {
-     .section-notice__content {
-        padding: @box-spacing-horizontal @box-spacing-horizontal 0 @box-spacing-horizontal;
-
-        p {
-            font-size: @font-size-small;
-        }
-    }
-}*/
-
-/**
- * SECTION NOTICE DEVELOPMENT
- *
- * Amending the pattern for changed content.
- *
- */
-
 .section-notice {
     &__content {
         .limit-width;
@@ -79,9 +25,9 @@
     }
 }
 
-#brexit {
+#sitenotice {
     background-color: @heritage-yellow-lighter;
-    .brexit__content {
+    .sitenotice__content {
         .limit-width;
         padding: @box-spacing-vertical @box-spacing-horizontal;
         overflow: hidden;

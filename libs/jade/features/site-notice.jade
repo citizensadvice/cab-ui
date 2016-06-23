@@ -1,0 +1,40 @@
+block settings
+	- var title = "Website Notice"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Features", href: dir + "index.html#Features"},
+		{title: title}])
+
+	#sitenotice
+		.sitenotice__content
+			.badge Notice
+			| Website notices appear on all pages of the website.
+
+block sidebar
+	include /template/sidebar-features.jade
+
+block content
+	.articleContent
+		div
+			p The website notice appears between the breadcrumbs and section notices on every page of the website, including the homepage. Only one website notice can be used at a time, and it shouldn't be used outside exceptional circumstances.
+
+			.example-box-plain
+				#sitenotice
+					.sitenotice__content
+						.badge Notice
+						| Website notices appear on all pages of the website.
+
+			pre
+				code.language-html
+					| &lt;div id="sitenotice"&gt;
+					| 	&lt;div class="sitenotice__content"&gt;
+					| 		&lt;div class="badge"&gt;Notice&lt;/div&gt;
+					| 		Website notices appear on all pages of the website.
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
