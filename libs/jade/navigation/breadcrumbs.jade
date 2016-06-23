@@ -19,25 +19,28 @@ block content
 		div
 			p The breadcrumb is an important part of the user journey. It helps users arriving deep into the site to orientate themselves and also allows advisers to describe the journey that leads to the content page. Breadcrumbs should appear on all pages, the only time they won’t change is when a user is completing a tool or wizard.
 
-			p The current page shouldn’t be included in the breadcrumb. The labels should match the previous pages titles and link back to them. It doesn’t need to start on the home page but a link back to the navigation page should be the first link in the breadcrumb trail.
+			p The current page shouldn’t be linked in the breadcrumb. The labels should match the previous pages titles and link back to them. It doesn’t need to start on the home page but a link back to the navigation page should be the first link in the breadcrumb trail.
 
 			.example-box-plain
-				+breadcrumbs([
-					{title: "Home", href: dir + "index.html"},
-					{title: "Navigation", href: dir + "index.html#Navigation"},
-					{title: title}])
+				nav.main-breadcrumb(style="display:block !important;")
+					+breadcrumbs([
+						{title: "Home", href: dir + "index.html"},
+						{title: "Navigation", href: dir + "index.html#Navigation"},
+						{title: title}])
 			pre
 				code.language-html
-					| &lt;div class="main-breadcrumb__content"&gt;
-					| 	&lt;span class="breadcrumb__item"&gt;
-					| 		&lt;a href="../index.html" title="Home"&gt;Home&lt;/a&gt;
-					| 		&lt;i class="icon-guillemet-right"&gt;&lt;/i&gt;
-					| 	&lt;/span&gt;
-					| 	&lt;span class="breadcrumb__item"&gt;
-					| 		&lt;a href="../index.html#Navigation" title="Navigation"&gt;Navigation&lt;/a&gt;
-					| 		&lt;i class="icon-guillemet-right"&gt;&lt;/i&gt;
-					| 	&lt;/span&gt;
-					| 	&lt;span class="breadcrumb__item"&gt;
-					| 		Breadcrumbs
-					| 	&lt;/span&gt;
-					| &lt;/div&gt;
+					| &lt;nav class="main-breadcrumb"&gt;
+					| 	&lt;div class="main-breadcrumb__content"&gt;
+					| 		&lt;span class="breadcrumb__item"&gt;
+					| 			&lt;a href="../index.html" title="Home"&gt;Home&lt;/a&gt;
+					| 			&lt;i class="icon-guillemet-right"&gt;&lt;/i&gt;
+					| 		&lt;/span&gt;
+					| 		&lt;span class="breadcrumb__item"&gt;
+					| 			&lt;a href="../index.html#Navigation" title="Navigation"&gt;Navigation&lt;/a&gt;
+					| 			&lt;i class="icon-guillemet-right"&gt;&lt;/i&gt;
+					| 		&lt;/span&gt;
+					| 		&lt;span class="breadcrumb__item"&gt;
+					| 			Breadcrumbs
+					| 		&lt;/span&gt;
+					| 	&lt;/div&gt;
+					| &lt;/nav&gt;
