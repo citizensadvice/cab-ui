@@ -2,6 +2,15 @@
  * PRINT STYLESHEET
  */
 
+// Print notice
+.articleContent:after {
+	//.callout--example;
+	display: block;
+	padding-top: 1rem;
+	font-size: unit(@font-size-small, em);
+	content: "Copyright \00a9 2002-2016 Citizens Advice. All rights reserved Registered charity no: 279057 Company no: 1436945 England";
+}
+
 * {
 	background: transparent;
 	color: black;
@@ -42,6 +51,9 @@ a {
 		content: "";
 		text-decoration: none;
 	}
+	&[name]:not([href]):after {
+		display: none;
+	}
 	img {
 		border-style: none;
 	}
@@ -71,27 +83,31 @@ abbr[title]:after {
 .section-notice,
 .collapse-toggle-close,
 .revealable__close,
-.callout--adviser,
-.dap-panel--adviser,
 #overview,
 nav,
 aside,
-.title__subheading .btn {
+.title__subheading .btn,
+.title__subheading--footer,
+.footer-feedback {
 	display: none;
 }
 
 .callout* {
 	page-break-inside: avoid;
 }
+
+.callout--adviser,
+.dap-panel--advise {
+	border: solid @inventive-teal 1px;
+	&:before {
+		color: @inventive-teal;
+		padding: 0;
+	}
+}
+
 .revealable,
-.collapse,
-.callout--heritage,
-.callout--responsible,
-.callout--inventive,
-.callout--generous,
-.callout--white {
+.collapse {
 	.revealable__heading {
-		//padding: 0;
 		&:after {
 			display: none;
 		}
@@ -233,4 +249,8 @@ img[src="/Global/Migrated_Images/bmis/dl-icon.gif"] {
 	img.main-header__img--mobile {
 		display: block;
 	}
+}
+
+.main-content__right {
+	width: 100%;
 }
