@@ -1,0 +1,110 @@
+block settings
+	- var title = "Prioritise your debts"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Prioritise your debts"}])
+
+block sidebar
+	//include /template/sidebar-site-content.jade
+
+block content
+	.articleContent
+		p When you have more than one debt you’ll need to work out which ones are the most urgent to deal with first. Ordering your debts by importance will put you in a good position to sort them out. Depending on your situation this could mean:
+		ul
+			li paying your debts off
+			li negotiating with creditors
+			li speaking to an adviser about other possible debt solutions
+			li just getting creditors to stop chasing you for money
+
+		p There are 2 types of debt:
+		ul
+			li priority debts, which can have serious consequences if you don’t deal with them (eg losing your home)
+			li non-priority debts
+
+		p You need to deal with all your priority debts before you deal with non-priority debts, unless not paying a non-priority debt would also result in a very serious consequence, like losing your home.
+
+		.callout
+			p You may be hassled more for non-priority debts (eg credit cards) than for priority debts (eg Council Tax), even though priority debts have more serious consequences if you don’t pay them. Always deal with the priority debts first. 
+
+		h2 How to prioritise your debts
+		p First get together all of your debt statements and other paperwork like warning letters and bills. Next select each of the following types of debt you have.
+		
+		p Use this tool to work out which debts you should be prioritising.
+
+		fieldset
+			legend(for="checkbox-inline") Select all the debts you have
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Mortgage/secured loan
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Rent 
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Council Tax
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Gas/Electricity 
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Maintenance 
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Income tax 
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| VAT
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| National insurance contribution
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Telephone/mobile phone/internet packages
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Hire purchase
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Fines
+
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Credit cards/store cards
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| catalogues/mail order
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| unsecured loans
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| personal debts
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Benefit overpayments
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Overdrafts
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Tax credit overpayment
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Hire purchase
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Parking penalties
+			label.checkbox.checkbox--block
+				input(name="checkbox-inline", type="checkbox")
+				| Water rates arrears
+
+		button.btn.right-button-icon(type="button") Continue
+
