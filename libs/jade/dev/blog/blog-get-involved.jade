@@ -2,17 +2,11 @@ block settings
 	- var title = "Get involved"
 	- var sidebar = true
 	- var toolbars = false
-	//- var cookiemonster = true
-	- var mockup = false
 	- var dir = "../../"
 	- var blog = true
+	- var nofooter = true
 
-extends /template/template.jade
-
-//block breadcrumbs
-	+breadcrumbs([
-		{title: "Home", href: "blog-home.html"},
-		{title: "Get involved"}])
+extends /template/template-site.jade
 
 block sidebar
 	include /template/sidebar-blog.jade
