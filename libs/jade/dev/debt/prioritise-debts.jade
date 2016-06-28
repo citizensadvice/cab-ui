@@ -39,72 +39,78 @@ block content
 		
 		p Use this tool to work out which debts you should be prioritising.
 
-		fieldset
-			legend(for="checkbox-inline") Select all the debts you have
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Mortgage/secured loan
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Rent 
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Council Tax
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Gas/Electricity 
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Maintenance 
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Income tax 
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| VAT
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| National insurance contribution
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Telephone/mobile phone/internet packages
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Hire purchase
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Fines
+		.flex-container.flex-row
+			.col-sm-12.col-xs-12
+				fieldset
+					legend(for="checkbox-inline") Select all the debts you have
+		.flex-container.flex-row
+			.col-sm-6.col-xs-12
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Mortgage/secured loan
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Rent 
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Council Tax
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Gas/Electricity 
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Maintenance 
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Income tax 
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| VAT
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| National insurance 
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Hire purchase
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Water rates arrears
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Fines
 
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Credit cards/store cards
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| catalogues/mail order
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| unsecured loans
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| personal debts
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Benefit overpayments
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Overdrafts
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Tax credit overpayment
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Hire purchase
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Parking penalties
-			label.checkbox.checkbox--block
-				input(name="checkbox-inline", type="checkbox")
-				| Water rates arrears
 
-		button.btn.right-button-icon(type="button") Continue
+			.col-sm-6.col-xs-12
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Credit cards/store cards
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Catalogues/mail order
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Unsecured loans
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Personal debts
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Benefit overpayments
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Overdrafts
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Tax credit overpayment
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Hire purchase
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Parking penalties
+				label.checkbox.checkbox--inline(style="width: 100%;")
+					input(name="checkbox-inline", type="checkbox")
+					| Telephone, mobile phone, internet packages
+
+		a.button.btn.right-button-icon(href="prioritise-debts-results.html") Continue
 

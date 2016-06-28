@@ -1,0 +1,41 @@
+block settings
+	- var title = "Your prioritised debts"
+	- var sidebar = true
+	- var toolbars = false
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Your prioritised debts"}])
+
+block sidebar
+	//include /template/sidebar-site-content.jade
+
+block content
+	.articleContent
+		p The list of debts you selected has been prioritised into order of importance based on the severity of consequences.
+		p We still recommend you look through each individual debt and follow the steps involved.
+
+	h2 Priority debt
+	.well--outline--warning
+		p Mortgage/secured loan
+	.well--outline--warning
+		p Council Tax arrears
+
+	h2 Non-priority debt
+	.well--outline
+		p Overdraft
+	.well--outline
+		p Telephone/mobile phone/internet packages		
+
+
+	a.button.btn-secondary.restart-button-icon(href="prioritise-debts.html") Restart
+
+
+	.callout--related
+		h3 Further help
+		p If you'd prefer to talk to someone call our Adviceline on 0300 330 1313. Calls to this service cost the same as calling 01 and 02 numbers
