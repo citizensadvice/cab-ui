@@ -1,0 +1,83 @@
+/**
+ * Speech lines
+ * Used as a brand callout for content
+ * see speech-lines.html
+ */
+
+.speech-lines (@speech-line-color: @heritage-blue;)  {
+    border-bottom: .5rem solid @speech-line-color;
+    padding-bottom: .75rem;
+    margin-bottom: 2rem;
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: @font-weight-boldest;
+        font-size: @font-size-larger;
+        color: @speech-line-color;
+    }
+    p {
+        font-weight: @font-weight-bold;
+    }
+    .cite {
+        font-size: @font-size-small;
+        color: @speech-line-color;
+    }
+    .box-speech-line {
+        width: 65px;
+        height: 40px;
+        margin: 4px 0 0 20%;
+        position: absolute;
+        border: solid 8px @speech-line-color;
+        border-color: transparent transparent @speech-line-color transparent;
+        border-radius: 0px 10px 60px 0px;
+        background-color: white;
+        padding-bottom: 2em;
+    }
+}
+
+.speech-lines {
+    .speech-lines (
+        @heritage-blue
+    );
+}
+
+.speech-lines-purple {
+    .speech-lines (
+        @responsible-purple
+    );
+}
+
+.speech-lines-teal {
+    .speech-lines (
+        @inventive-teal
+    );
+}
+
+.box-speech-line (@box-speech-line-color: @heritage-blue;) {
+    width: 65px;
+    height: 40px;
+    margin: 4px 0 0 20%;
+    position: absolute;
+    border: solid 8px @box-speech-line-color;
+    border-color: transparent transparent @box-speech-line-color transparent;
+    border-radius: 0px 10px 60px 0px;
+    background-color: white;
+    padding-bottom: 2em;
+}
+
+.box-speech-line {
+    .box-speech-line (
+        @heritage-blue
+    );
+}
+.box-speech-line-purple {
+    .box-speech-line (
+        @responsible-purple
+    );
+}
+.box-speech-line-teal {
+    .box-speech-line (
+        @inventive-teal
+    );
+}

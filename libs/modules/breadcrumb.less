@@ -26,7 +26,6 @@
     padding: @box-spacing-vertical/2 @box-spacing-horizontal;
     max-width: @breakpoint-lg;
     border-bottom: #eeeeee 1px solid;
-    //overflow: scroll;
 }
 
 .breadcrumb__extent-link {
@@ -112,6 +111,12 @@
         margin: -.1em -.5em -.1em 1em;
         padding: .2em .3em;
         display: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @heritage-blue-lightest;
     }
 
     .js & {

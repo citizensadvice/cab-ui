@@ -1,0 +1,86 @@
+block settings
+	- var title = "Work at Citizens Advice"
+	//- var sidebar = true
+	- var dir = "../../"
+	- var blog = true
+	- var fullpage = true
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.fullwidth
+		.fullwidth-content
+			.col-sm-8
+				.title
+					h1.title__heading.js-ref
+						span.title__title #{title}
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+	.fullwidth-aqua
+		.fullwidth-content
+			.flex-row
+				.col-md-7
+					h2(style="margin-top: 0;") Help millions of people
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				.col-md-5
+					.stats
+						.i-brand &#xe96d;
+						h3 22,000,000
+						p visitors per&nbsp;year
+					.stats
+						.i-brand &#xe993;
+						h3 404,500
+						p page views per&nbsp;day
+
+	.fullwidth
+		.fullwidth-content
+			h2 What it's like to be part of the digital team
+			.flex-row
+				.col-sm-5
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				.col-sm-7
+					div(style="display: block; position: relative;")
+						.speech-lines-teal
+							p An example of a quote in a report when the speech line should be used instead of the speech bubble
+							p.cite Dommink Preri, Designa
+							.box-speech-line
+
+	.fullwidth-yellow
+		.fullwidth-content
+			//h2 Positions
+			.flex-row
+				.col-sm-6
+					ul.jobs
+						h3(style="margin-top: 0;") Content team
+						li
+							h3 #[a Junior content designer]
+							p
+								span.location London, England
+								br
+								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						li
+							h3 #[a Senior content designer]
+							p
+								span.location London, England
+								br
+								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+				.col-sm-6
+					ul.jobs
+						h3(style="margin-top: 0;") Technical team
+						li
+							h3 #[a Front end developer]
+							p
+								span.location London, England
+								br
+								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						li
+							h3 #[a UX designer]
+							p
+								span.location London, England
+								br
+								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.

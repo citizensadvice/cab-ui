@@ -43,122 +43,140 @@ html.no-js
 					p This site uses cookies. Find out more about #[a(href="#") our use of cookies].
 					button.btn.cookie-monster__close(data-action="close", type="button") Close
 
-		header#main-nav-beta
-			.branding
+		if blog
+			header.blog-header
+				.blog-header--content
+					a(href="blog-home.html", style="border: none;")
+						img(src="#{dir}images/ca-logo-hz-white-280px.svg")
+
+					#toggle
+					ul.blog-navigation
+						li
+							a(href="blog-team.html") The Team
+						li
+							a(href="#") About
+						li
+							a(href="blog-get-involved.html") Get involved
+						li
+							a(href="blog-jobs.html") Jobs
+
+		else
+			header#main-nav-beta
+				.branding
+					.content
+						ul
+							li
+								a.icon-local(href="locator.html") Find a local Citizens Advice
+							li(href="#")
+								a Cymraeg
+							li(href="#")
+								a Sign in
+				.navigation
+					.content
+						a.logo(href="#{dir}index.html")
+							img.wide(src="#{dir}images/ca-logo-hz-280px.svg")
+							img.slim(src="#{dir}images/ca-logo-st-220px.svg")
+
+						ul
+							li#get-advice
+								a(href="#")
+									span Get&nbsp;
+									span Advice
+							li#get-involved
+								a(href="#")
+									span Get&nbsp;
+									span Involved
+							li#search-toggle
+								a(href="#")
+									i.icon-search
+
+						.search
+							.field-group.field-group--buttons
+								input#field(type="search", placeholder="Search")
+								button.btn
+									i.icon-search
+
+			#main-nav-beta--search
+				.field-group.field-group--buttons
+					input#field(type="search", placeholder="Search")
+					button.btn
+						i.icon-search
+
+			#main-nav-beta--advice
 				.content
 					ul
 						li
-							a.icon-local(href="locator.html") Find a local Citizens Advice
-						li(href="#")
-							a Cymraeg
-						li(href="#")
-							a Sign in
-			.navigation
+							a(href="group.html") Benefits
+							br
+							| Benefit eligibility and calculators. Applying and problems with applications.
+						li
+							a(href="") Work
+							br
+							| Rights at work, workplace discrimination, self-employment, rules and regulations of work.
+						li
+							a(href="") Debt and money
+							br
+							| Dealing with debts and arrears, budgeting, mortgages and pension services.
+						li
+							a(href="") Consumer
+							br
+							| The law and your rights when purchasing goods and services.
+						li
+							a(href="") Relationship
+							br
+							| Marriage, divorce, partnerships and looking after people. Births, deaths and wills.
+						li
+							a(href="") Housing
+							br
+							| Renting or buying a house, tenancy agreements and your rights as a homeowner or tenant.
+						li
+							a(href="") Law and rights
+							br
+							| Legal and civil rights, policing, the prison system and witness services.
+						li
+							a(href="") Discrimination
+							br
+							| Types of discrimination, steps to take if you have been discriminated against.
+						li
+							a(href="") Tax
+							br
+							| Taxable income, payments, refunds and problems. Council, pensioners and inheritance tax.
+						li
+							a(href="") Healthcare
+							br
+							| Help with NHS and dental. Private, alternative and armed forces healthcare.
+						li
+							a(href="") Education
+							br
+							| School and higher education, support for learning, discrimination and financial advice.
+
+			#main-nav-beta--involved
 				.content
-					a.logo(href="#{dir}index.html")
-						img.wide(src="#{dir}images/ca-logo-hz-280px.svg")
-						img.slim(src="#{dir}images/ca-logo-st-220px.svg")
-
 					ul
-						li#get-advice
-							a(href="#")
-								span Get&nbsp;
-								span Advice
-						li#get-involved
-							a(href="#")
-								span Get&nbsp;
-								span Involved
-						li#search-toggle
-							a(href="#")
-								i.icon-search
-
-					.search
-						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search")
-							button.btn
-								i.icon-search
-
-		#main-nav-beta--search
-			.field-group.field-group--buttons
-				input#field(type="search", placeholder="Search")
-				button.btn
-					i.icon-search
-
-		#main-nav-beta--advice
-			.content
-				ul
-					li
-						a(href="group.html") Benefits
-						br
-						| Benefit eligibility and calculators. Applying and problems with applications.
-					li
-						a(href="") Work
-						br
-						| Rights at work, workplace discrimination, self-employment, rules and regulations of work.
-					li
-						a(href="") Debt and money
-						br
-						| Dealing with debts and arrears, budgeting, mortgages and pension services.
-					li
-						a(href="") Consumer
-						br
-						| The law and your rights when purchasing goods and services.
-					li
-						a(href="") Relationship
-						br
-						| Marriage, divorce, partnerships and looking after people. Births, deaths and wills.
-					li
-						a(href="") Housing
-						br
-						| Renting or buying a house, tenancy agreements and your rights as a homeowner or tenant.
-					li
-						a(href="") Law and rights
-						br
-						| Legal and civil rights, policing, the prison system and witness services.
-					li
-						a(href="") Discrimination
-						br
-						| Types of discrimination, steps to take if you have been discriminated against.
-					li
-						a(href="") Tax
-						br
-						| Taxable income, payments, refunds and problems. Council, pensioners and inheritance tax.
-					li
-						a(href="") Healthcare
-						br
-						| Help with NHS and dental. Private, alternative and armed forces healthcare.
-					li
-						a(href="") Education
-						br
-						| School and higher education, support for learning, discrimination and financial advice.
-
-		#main-nav-beta--involved
-			.content
-				ul
-					li
-						a(href="") About Citizens Advice
-					li
-						a(href="") Contact us
-					li
-						a(href="") Policy research
-					li
-						a(href="") Our blogs
-					li
-						a(href="") Campaigns
-					li
-						a(href="") How Citizens Advice works
-					li
-						a(href="") Volunteer
-					li
-						a(href="") Jobs
-					li
-						a(href="") Press releases
-					li
-						a(href="") Support us
-					li
-						a(href="") The difference we make
-					li
-						a(href="") Find your local Citizens Advice
+						li
+							a(href="") About Citizens Advice
+						li
+							a(href="") Contact us
+						li
+							a(href="") Policy research
+						li
+							a(href="") Our blogs
+						li
+							a(href="") Campaigns
+						li
+							a(href="") How Citizens Advice works
+						li
+							a(href="") Volunteer
+						li
+							a(href="") Jobs
+						li
+							a(href="") Press releases
+						li
+							a(href="") Support us
+						li
+							a(href="") The difference we make
+						li
+							a(href="") Find your local Citizens Advice
 
 		.main-container
 			nav.main-breadcrumb
@@ -190,9 +208,6 @@ html.no-js
 							h1.title__heading.js-ref
 								span.title__title #{title}
 						block content
-
-					.print-only
-						h2 This section is print only
 
 		#footer.main-footer(data-track-zone="footer")
 			if !nofooter
@@ -248,68 +263,69 @@ html.no-js
 		//script(src="#{dir}js/advisor.js")
 		script(src="#{dir}js/sidebar.js")
 		//script(src="#{dir}js/core.js")
-		script.
-			var filename = document.location.pathname.match(/[^\/]+$/)[0];
-			$(document).ready(function() {
-				$('.section-nav a[href*="' + filename + '"]').addClass('active');
+		if !blog
+			script.
+				var filename = document.location.pathname.match(/[^\/]+$/)[0];
+				$(document).ready(function() {
+					$('.section-nav a[href*="' + filename + '"]').addClass('active');
 
-				// Click #get-advice
-				$('#get-advice').click(function(){
-					// If either of the other two are active
-					if ($('#get-involved').hasClass("active") || $('#search-toggle').hasClass("active")) {
-						// Remove class from other two
-						$('#get-involved').removeClass("active");
-						$('#search-toggle').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--involved').slideUp('fast');
-						$('#main-nav-beta--search').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--advice').delay(250).slideDown('fast');
+					// Click #get-advice
+					$('#get-advice').click(function(){
+						// If either of the other two are active
+						if ($('#get-involved').hasClass("active") || $('#search-toggle').hasClass("active")) {
+							// Remove class from other two
+							$('#get-involved').removeClass("active");
+							$('#search-toggle').removeClass("active");
+							// Slide other two up
+							$('#main-nav-beta--involved').slideUp('fast');
+							$('#main-nav-beta--search').slideUp('fast');
+							// Wait 250ms and then slide down
+							$('#main-nav-beta--advice').delay(250).slideDown('fast');
 
-					} else {
-						$('#main-nav-beta--advice').slideToggle('fast');
-					}
-					$(this).toggleClass("active");
+						} else {
+							$('#main-nav-beta--advice').slideToggle('fast');
+						}
+						$(this).toggleClass("active");
+					});
+
+					// Click #get-advice
+					$('#get-involved').click(function(){
+						// If either of the other two are active
+						if ($('#get-advice').hasClass("active") || $('#search-toggle').hasClass("active")) {
+							// Remove class from other two
+							$('#get-advice').removeClass("active");
+							$('#search-toggle').removeClass("active");
+							// Slide other two up
+							$('#main-nav-beta--advice').slideUp('fast');
+							$('#main-nav-beta--search').slideUp('fast');
+							// Wait 250ms and then slide down
+							$('#main-nav-beta--involved').delay(250).slideDown('fast');
+
+						} else {
+							$('#main-nav-beta--involved').slideToggle('fast');
+						}
+						$(this).toggleClass("active");
+					});
+
+					// Click #get-advice
+					$('#search-toggle').click(function(){
+						// If either of the other two are active
+						if ($('#get-involved').hasClass("active") || $('#get-advice').hasClass("active")) {
+							// Remove class from other two
+							$('#get-advice').removeClass("active");
+							$('#get-involved').removeClass("active");
+							// Slide other two up
+							$('#main-nav-beta--involved').slideUp('fast');
+							$('#main-nav-beta--advice').slideUp('fast');
+							// Wait 250ms and then slide down
+							$('#main-nav-beta--search').delay(250).slideDown('fast');
+
+						} else {
+							$('#main-nav-beta--search').slideToggle('fast');
+						}
+						$(this).toggleClass("active");
+					});
 				});
-
-				// Click #get-advice
-				$('#get-involved').click(function(){
-					// If either of the other two are active
-					if ($('#get-advice').hasClass("active") || $('#search-toggle').hasClass("active")) {
-						// Remove class from other two
-						$('#get-advice').removeClass("active");
-						$('#search-toggle').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--advice').slideUp('fast');
-						$('#main-nav-beta--search').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--involved').delay(250).slideDown('fast');
-
-					} else {
-						$('#main-nav-beta--involved').slideToggle('fast');
-					}
-					$(this).toggleClass("active");
-				});
-
-				// Click #get-advice
-				$('#search-toggle').click(function(){
-					// If either of the other two are active
-					if ($('#get-involved').hasClass("active") || $('#get-advice').hasClass("active")) {
-						// Remove class from other two
-						$('#get-advice').removeClass("active");
-						$('#get-involved').removeClass("active");
-						// Slide other two up
-						$('#main-nav-beta--involved').slideUp('fast');
-						$('#main-nav-beta--advice').slideUp('fast');
-						// Wait 250ms and then slide down
-						$('#main-nav-beta--search').delay(250).slideDown('fast');
-
-					} else {
-						$('#main-nav-beta--search').slideToggle('fast');
-					}
-					$(this).toggleClass("active");
-				});
-			});
 		block script
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

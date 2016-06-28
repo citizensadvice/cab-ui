@@ -1,17 +1,10 @@
 block settings
 	- var title = "Citizens Advice digital blog"
-	- var sidebar = false
-	- var toolbars = false
-	//- var cookiemonster = true
-	- var mockup = false
 	- var dir = "../../"
 	- var blog = true
+	- var nofooter = true
 
-extends /template/template.jade
-
-block breadcrumbs
-	+breadcrumbs([
-		{title: "Home"}])
+extends /template/template-site.jade
 
 block content
 	.articleContent

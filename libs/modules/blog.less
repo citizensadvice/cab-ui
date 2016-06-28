@@ -280,3 +280,53 @@
 		}
 	}
 }
+
+.jobs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		background-color: rgba(255, 255, 255, 0.75);
+		padding: @box-spacing-vertical @box-spacing-horizontal;
+		border-radius: 2px;
+	    & >:first-child {
+	    	margin-top: 0;
+	    }
+	    & >:last-child {
+	    	margin-bottom: 0;
+	    }
+		h3 {
+			font-size: @font-size-base;
+			a {
+				border: none;
+			}
+		}
+		.location {
+			font-weight: @font-weight-bold;
+			font-size: @font-size-small;
+		}
+	}
+}
+
+// This is copied from data display and should be merged back in at some point
+.stats {
+	position: relative;
+	padding-left: 4rem;
+	.i-brand {
+		left: 0;
+		font-size: 3rem;
+		position: absolute;
+		top: 1.4rem;
+		color: @heritage-blue;
+	}
+    h3 {
+        font-weight: @font-weight-boldest;
+        font-size: 4rem;
+        color: @heritage-blue;
+        margin: 0;
+    }
+    p {
+        color: @heritage-blue;
+        margin-top: 0;
+    }
+}

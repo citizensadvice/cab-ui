@@ -1,18 +1,12 @@
 block settings
 	- var title = "Working with advisers to design new PIP content"
 	- var sidebar = true
-	- var toolbars = false
-	//- var cookiemonster = true
-	- var mockup = false
 	- var dir = "../../"
 	- var blog = true
+	- var blog = true
+	- var nofooter = true
 
-extends /template/template.jade
-
-//block breadcrumbs
-	+breadcrumbs([
-		{title: "Home", href: "blog-home.html"},
-		{title: "Working with advisers to design new PIP content"}])
+extends /template/template-site.jade
 
 block sidebar
 	include /template/sidebar-blog.jade

@@ -1,0 +1,35 @@
+block settings
+	- var title = "Sidebar navigation"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Navigation", href: dir + "index.html#Navigation"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-navigation.jade
+
+block content
+	.articleContent
+		div
+
+			h2 Desktop sidebar
+
+			p This is vertical navigation on the right hand side or top of the page on desktops. It’s used alongside content and contains sibling pages. When a sidebar navigation isn’t used on a content page, the content should not extend further than the main-content width.
+
+			img(src="#{dir}images/sidebar-example.svg")
+
+			h2 Mobile sidebar
+
+			p The mobile version of the sidebar is collapsed and at the top of the page, this is achieved using the flex order -1. It is a continuation of the revealables pattern
+
+			p The title of the section nav, that groups the list of sibling pages needs to link back to the previous page.
+
+			img(src="#{dir}images/sidebar-mobile-example.svg")
+
+

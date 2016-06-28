@@ -1,0 +1,26 @@
+block settings
+	- var title = "Footer navigation"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Navigation", href: dir + "index.html#Navigation"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-navigation.jade
+
+block content
+	.articleContent
+		div
+
+			p The footer navigation is optional and should contain information or links relative to the page/area of the site, based on user needs.
+
+			p The footer navigation isn’t mandatory but the legal footer needs to be included on all Citizens Advice pages.
+
+			img(src="#{dir}images/footer-example.svg")
+

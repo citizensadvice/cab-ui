@@ -120,10 +120,6 @@
 	    	display: block;
 			background-color: @heritage-yellow-lighter;
 			cursor: pointer;
-            .btn-icon(@i-plus,@color:@heritage-blue);
-            .expanded & {
-                .btn-icon(@i-minus,@color:@heritage-blue);
-            }
             &:hover,
             &:active,
             &:visited {
@@ -133,7 +129,11 @@
 				font-size: @font-size-h4*1.25;
 				color: @heritage-blue;
 				cursor: pointer;
+            	.btn-icon(@i-plus,@color:@heritage-blue);
 			}
+            .expanded & a {
+                .btn-icon(@i-minus,@color:@heritage-blue);
+            }
 	    }
         &__heading + ul {
             display: block;
