@@ -1,0 +1,94 @@
+block settings
+	- var title = "Work at Citizens Advice"
+	//- var sidebar = true
+	- var dir = "../../"
+	- var blog = true
+	- var fullpage = true
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.fullwidth
+		.fullwidth-content
+			.title
+				h1.title__heading.js-ref
+					span.title__title #{title}
+			.flex-row
+				.col-sm-6
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+					h2(style="margin-top: 0;") Do work that changes lives
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+				.col-sm-6
+					p(style="position: relative;padding-bottom: 56.25%; padding-top: 25px;height: 0;")
+						iframe(src="https://www.youtube.com/embed/jtLJKyNLV_E", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
+
+	.fullwidth-aqua
+		.fullwidth-content
+			.flex-row
+				.col-sm-6
+					.stats
+						.i-brand &#xe96d;
+						h3 22,000,000
+						p visitors per&nbsp;year
+					.stats
+						.i-brand &#xe993;
+						h3 404,500
+						p page views per&nbsp;day
+				.col-sm-6
+					div(style="display: block; position: relative;")
+						.speech-lines-teal
+							h3 An example of a quote in a report when the speech line should be used instead of the speech bubble
+							p.cite Dommink Preri, Designa
+							.box-speech-line(style="background-color:#b8e3df;")
+
+	.fullwidth(style="background-color:#f2f2f2;")
+		.fullwidth-content
+			//.title
+				h2 Benefits of Citizens Advice
+			.flex-row
+				.col-sm-3
+					h3 Flexible working
+					.blog-lead
+						.blog-name
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+
+				.col-sm-1
+				.col-sm-3
+					h3 Supportive environment
+					.blog-lead
+						.blog-name
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+				.col-sm-1
+				.col-sm-3
+					h3 Great rewards
+					.blog-lead
+						.blog-name
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				.col-sm-1
+
+
+	.fullwidth-yellow
+		.fullwidth-content
+			//h2 Positions
+			.flex-row
+				//.col-sm-6
+					h3 How to apply
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+
+				.col-sm-8
+					h3 Available roles
+					section.revealable
+						h3 Content Design
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+					section.revealable
+						h3 UX Design
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+					section.revealable
+						h3 Research
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
