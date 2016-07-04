@@ -1,0 +1,85 @@
+block settings
+	- var title = "Accessibility"
+	- var sidebar = true
+	- var dir = "/"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+	//	{title: "Navigation", href: dir + "index.html#Navigation"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-navigation.jade
+
+block content
+	.articleContent
+		div
+			h2 Helpers
+
+			pre
+				code.language-css
+					| .screenreader;
+
+			pre
+				code.language-css
+					| .screenreader--focusable;
+
+			h2 Icons
+
+			p Never use icons without words.
+
+			h2 Colours
+
+			p Use 2:1 contrast. Never rely on colours alone (callouts).
+
+			h2 Button vs link
+
+			p When to use buttons, and when not to.
+
+			h2 Expandable navigations
+
+			p Navigations that expand should always push the content, rather than overlap it.
+
+			img(src="#{dir}images/navigation-push-example.svg")
+
+			h2 Form structure
+
+			pre
+				code.language-html
+					| &lt;form&gt;
+					| 	&lt;fieldset&gt;
+					| 		&lt;legend&gt;Legend&lt;/legend&gt;
+					| 		&lt;label for="field-1"&gt;Label&lt;/label&gt;
+					| 		&lt;span id="field-1-help"&gt;Form help&lt;/span&gt;
+					| 		&lt;input id="field-1" aria-describedby="field-1-help" /&gt;
+					| 		&lt;label for="field-2"&gt;Label&lt;/label&gt;
+					| 		&lt;span id="field-2-help"&gt;Form help&lt;/span&gt;
+					| 		&lt;input id="field-2" aria-describedby="field-2-help" /&gt;
+					| 	&lt;/fieldset&gt;
+					| &lt;/form&gt;
+
+			pre
+				code.language-text
+					| form
+					| 	fieldset
+					| 		legend
+					| 		label for="field-1"
+					| 		span id="field-1-help"
+					| 		input id="field-1" aria-describedby="field-1-help"
+					| 		label for="field-2"
+					| 		span id="field-2-help"
+					| 		input id="field-2" aria-describedby="field-2-help"
+
+			h2 Focus outline
+
+			p Generally, outlines have been replaced with borders.
+
+			img(src="#{dir}images/outline-example.svg", style="width: 100%;")
+
+			pre
+				code.language-css
+					| outline: none;
+					| border: 2px solid @heritage-yellow;
