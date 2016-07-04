@@ -257,9 +257,12 @@ pre[class*="language-"] {
     //padding: @box-spacing-vertical @box-spacing-horizontal;
     .callout--border;
     margin-top: 0;
-    border-radius: 0 0 @form-border-radius @form-border-radius;
+    border-radius: @form-border-radius;
     font-size: .85rem;
     max-height: 15rem;
+    .example-box-plain + & {
+        border-radius: 0 0 @form-border-radius @form-border-radius;
+    }
 }
 
 /***************************************************************************
