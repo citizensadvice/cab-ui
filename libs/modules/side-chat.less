@@ -37,7 +37,12 @@
 	border-radius: @form-border-radius*2 @form-border-radius*2 0 0;
 	overflow: hidden;
 	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
-	&:focus {
+		a {
+			background-color: @green-light;
+			border: solid @green;
+			border-width: 2px 2px 0 2px;
+		}
+	&:focus, &:hover, &:active {
 		background-color: @green-light;
 		border: solid @green;
 		border-width: 2px 2px 0 2px;
