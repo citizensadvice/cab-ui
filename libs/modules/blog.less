@@ -31,14 +31,20 @@
 // Sidebar
 .blog-sidebar--search {
 	border-top: 8px @heritage-yellow solid;
-	padding-top: 1rem;
+	background-color: #fee4c3;
+	padding: 0.75rem 1rem;
 	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	fieldset {
+		margin-bottom: 0;
+	}
 	@media screen and (min-width: 751px) {
 		margin-top: 0;
 	}
 	button {
 		background-color: @heritage-yellow;
 		border-color: @heritage-yellow;
+		margin-bottom: 0;
 		&:active,
 		&:hover {
 			background-color: @heritage-yellow-darker;
@@ -53,11 +59,57 @@
 
 .blog-sidebar--navigation {
 	//background-color: @gray-7;
+	border-top: 8px @heritage-yellow solid;
+	background-color: #fee4c3;
 	margin-bottom: 1.5rem;
+	padding: .75rem;
+
+	li ul a:not([href]),
+	li ol a:not([href]) {
+		background-color: @heritage-blue-lightest;
+	}
+
+	ul,
+	ol {
+		padding: 0;
+		margin: 0;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	ol li {
+		color: @gray-3;
+		display: block;
+
+		a {
+		    display: list-item !important;
+		}
+	}
+
+	li {
+		padding: 0;
+		margin: 0;
+		//border-left: @box-spacing/2 solid @gray-6;
+		a {
+			margin-bottom: 1px;
+			padding: @box-spacing-vertical*.75 -@box-spacing-horizontal*.75;
+			display: block;
+			border-bottom: none;
+            &:hover,
+            &:active,
+            &:visited {
+            	background-color: @heritage-yellow-lighter;
+            	border-bottom: 2px solid @heritage-yellow;
+            }
+		}
+	}
 }
 
 .blog-sidebar--category {
 	.well;
+	border-top: 8px @heritage-yellow solid;
 	background-color: #fee4c3;
 	margin-bottom: 1.5rem;
 }
