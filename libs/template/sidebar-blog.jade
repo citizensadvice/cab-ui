@@ -1,23 +1,11 @@
 .side-nav-beta.blog-sidebar
     .blog-sidebar--search
+        label Search blog
         fieldset
             .search-results__field.field-group.field-group--buttons
                 input(type="search", placeholder="Search")
                 button.btn.btn-primary
                     i.icon-search
-
-    .blog-sidebar--navigation
-        ul
-            li
-                a(href="blog-home.html") Home
-            li
-                a(href="#") About
-            li
-                a(href="blog-team.html") The Team
-            li
-                a(href="blog-get-involved.html") Get involved
-            li
-                a(href="blog-jobs.html") Jobs
 
     .blog-sidebar--category
         fieldset
@@ -29,6 +17,21 @@
                     option Design
                     option Casebook
                     option Research
+
+    .blog-sidebar--navigation
+        .fieldset
+            label Blog pages
+        ul
+            li
+                a(href="blog-home.html") Home
+            li
+                a(href="#") About
+            li
+                a(href="blog-team.html") The Team
+            li
+                a(href="blog-get-involved.html") Get involved
+            li
+                a(href="blog-jobs.html") Jobs
 
     .blog-sidebar--updates
         label(for="") Subscribe by email
