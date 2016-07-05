@@ -1,9 +1,8 @@
 block settings
-	- var title = "Work at Citizens Advice"
-	//- var sidebar = true
+	- var title = "Join the digital team"
+	- var sidebar = true
 	- var dir = "../../"
 	- var blog = true
-	- var fullpage = true
 	- var nofooter = true
 
 extends /template/template-site.jade
@@ -12,75 +11,71 @@ block sidebar
 	include /template/sidebar-blog.jade
 
 block content
-	.fullwidth
-		.fullwidth-content
+	.articleContent
+		.flex-row
+			.col-12
+				p #[strong “We design content and tools to help the most vulnerable in society - who face increasing problems in today&#39;s world.”]
+
+				p That’s what one person said when we asked our digital team what it’s like to work at Citizens Advice recently, and it sums up why we think the team is so special. Our work can make a real difference to people at difficult times in their lives. We help people solve problems - and, as another person put it, we are “doing something with a positive social purpose, not just aimed at achieving more traffic or selling things.”
+
+				p Citizens Advice is doing important digital work: we are designing content and tools for challenges that haven’t been solved before, like helping people fill out claim forms for Personal Independence Payment or Employment and Support Allowance.
+
+				p Our team is collaborative. Join us and you’ll get the chance to:
+
+				p work in a multi-disciplinary team, learning from your colleagues and other parts of the organisation take part in user research and testing, seeing the difference your work can make to real people. We work in an experimental, agile way - it’s okay to fail fast and learn early from any mistakes.
+
+				div(style="background-color: #F2F2F2; padding: 1rem;")
+					h3(style="margin-top: 0;") Available roles
+
+					section.revealable
+						h3 Content Design
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+					section.revealable
+						h3 UX Design
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+					section.revealable
+						h3 Research
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
+
+					h3 Job alerts by email
+					fieldset(style="margin-bottom: 0;")
+						.field-group.field-group--buttons
+							input(type="text", placeholder="Email")
+							button.btn.btn-primary Go
+
+		.flex-row
+			.col-sm-6
+				.stats(style="margin: 2rem 0;")
+					.i-brand &#xe96d;
+					h3  1.9m
+					p people helped by our local Citizens Advice network
+			.col-sm-6
+				.stats(style="margin: 2rem 0;")
+					.i-brand &#xe993;
+					h3 20.7m
+					p people assisted via our website
+
+		.flex-row
+			.col-sm-12
+				p(style="position: relative;padding-bottom: 56.25%; padding-top: 25px;height: 0;")
+					iframe(src="https://www.youtube.com/embed/jtLJKyNLV_E", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
+
+		.flex-row
+			.col-sm-1
+			.col-sm-10
+				div(style="margin: 1rem 0 2rem 0; overflow: hidden;")
+					.speech-lines
+						h3(style="margin-top: 0;") Excellent information. Clear, practical advice. Thank you.
+						p.cite Website user
+						.box-speech-line
+			.col-sm-1
+
+		.flex-row
 			.col-sm-8
-				.title
-					h1.title__heading.js-ref
-						span.title__title #{title}
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+				h3(style="margin-top: 0;") Flexible working
+				.blog-lead
+					.blog-name
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-	.fullwidth-aqua
-		.fullwidth-content
-			.flex-row
-				.col-md-6
-					h2(style="margin-top: 0;") Help millions of people
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-				.col-md-6
-					.stats
-						.i-brand &#xe96d;
-						h3 22,000,000
-						p visitors per&nbsp;year
-					.stats
-						.i-brand &#xe993;
-						h3 404,500
-						p page views per&nbsp;day
-
-	.fullwidth
-		.fullwidth-content
-			h2 What it's like to be part of the digital team
-			.flex-row
-				.col-sm-6
-					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-				.col-sm-6
-					div(style="display: block; position: relative;")
-						.speech-lines-teal
-							p An example of a quote in a report when the speech line should be used instead of the speech bubble
-							p.cite Dommink Preri, Designa
-							.box-speech-line
-
-	.fullwidth-yellow
-		.fullwidth-content
-			//h2 Positions
-			.flex-row
-				.col-sm-6
-					ul.jobs
-						h3(style="margin-top: 0;") Content team
-						li
-							h3 #[a Junior content designer]
-							p
-								span.location London, England
-								br
-								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						li
-							h3 #[a Senior content designer]
-							p
-								span.location London, England
-								br
-								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-				.col-sm-6
-					ul.jobs
-						h3(style="margin-top: 0;") Technical team
-						li
-							h3 #[a Front end developer]
-							p
-								span.location London, England
-								br
-								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						li
-							h3 #[a UX designer]
-							p
-								span.location London, England
-								br
-								| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+			.col-sm-4
+				img(src="#{dir}/images/charity-times-winner.jpg", style="max-height: 200px; border: none;")
