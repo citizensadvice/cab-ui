@@ -24,9 +24,11 @@
 // Sidebar
 .blog-sidebar--search {
 	border-top: 8px @heritage-yellow solid;
-	//margin-top: 2rem;
-	padding-top:.75rem;
-	margin-bottom: 2rem;
+	padding-top: 1rem;
+	margin-top: 3rem;
+	@media screen and (min-width: 751px) {
+		margin-top: 0;
+	}
 	button {
 		background-color: @heritage-yellow;
 		border-color: @heritage-yellow;
@@ -42,16 +44,19 @@
 	}
 }
 
+.blog-sidebar--navigation {
+	//background-color: @gray-7;
+	margin-bottom: 1.5rem;
+}
+
 .blog-sidebar--category {
 	.well;
 	background-color: #fee4c3;
-	border: 0px #dfdfdf solid;
-	margin-top:0;
-	margin-bottom:2rem;
+	margin-bottom: 1.5rem;
 }
 
 .blog-sidebar--updates {
-	.cards;
+	.well;
 	color: #fff;
 	background-color: #32457E;
 }
@@ -158,13 +163,11 @@
 		max-width: @breakpoint-lg;
 		margin: 0 auto;
 		position: relative;
-		.logo {
-			border: none;
-		}
 		img {
 			display: inline-block;
 			vertical-align: top;
-			width: 220px;
+			max-width: 220px;
+			max-height: 65px;
 			padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
 			@media screen and (min-width: 751px) {
 				display: block;
@@ -174,6 +177,17 @@
 		a:focus,
 		a:visited {
 			background: none;
+		}
+		.wide {
+			display: none;
+		}
+		@media screen and (min-width: 751px) {
+			.wide {
+				display: block;
+			}
+			.slim {
+				display: none;
+			}
 		}
 	}
 	#toggle {
@@ -193,6 +207,22 @@
 			background-color: @heritage-blue-lightest;
 			&:after {
 				color: @heritage-blue;
+			}
+		}
+	}
+	.blog-header--branding {
+		right: 1rem;
+		.vertical-align(absolute);
+		a {
+			font-size: @font-size-medium;
+			font-weight: @font-weight-bold;
+			color: @white;
+			border-color: @heritage-blue;
+			&:hover,
+			&:focus,
+			&:active {
+				color: @white;
+				border-color: @white;
 			}
 		}
 	}

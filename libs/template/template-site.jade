@@ -47,10 +47,11 @@ html.no-js
 			header.blog-header
 				.blog-header--content
 					a(href="blog-home.html", style="border: none;")
-						img(src="#{dir}images/ca-logo-hz-white-280px.svg")
+						img.wide(src="#{dir}images/ca-logo-hz-white-280px.svg")
+						img.slim(src="#{dir}images/ca-logo-st-white-220px.svg")
 
-					#toggle
-					ul.blog-navigation
+					//#toggle
+					//ul.blog-navigation
 						li
 							a(href="blog-team.html") The Team
 						li
@@ -59,6 +60,9 @@ html.no-js
 							a(href="blog-get-involved.html") Get involved
 						li
 							a(href="blog-jobs.html") Jobs
+
+					.blog-header--branding
+						a(href="#") Digital Blog
 
 		else
 			header#main-nav-beta
