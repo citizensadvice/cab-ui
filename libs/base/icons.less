@@ -165,19 +165,12 @@
     &:extend(.a-social);
     border: 0;
 }
-.a-social-whatsapp,
-.a-social-google-plus {
+.a-social-whatsapp {
     white-space: nowrap;
 }
 .a-social-whatsapp:before {
     content: @i-whatsapp;
     color: @whatsapp-brand-colour;
-    &:extend(.a-social);
-    border: 0;
-}
-.a-social-google-plus:before {
-    content: @i-google;
-    color: @google-plus-brand-colour;
     &:extend(.a-social);
     border: 0;
 }
@@ -330,11 +323,6 @@
 
 .icon-email:before {
     content: @i-email;
-    .icon;
-}
-
-.icon-google:before {
-    content: @i-google;
     .icon;
 }
 
