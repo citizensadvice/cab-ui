@@ -31,7 +31,7 @@
 // Sidebar
 .blog-sidebar--search {
 	border-top: 8px @heritage-yellow solid;
-	background-color: #fee4c3;
+	background-color: @heritage-yellow-lightest;
 	padding: 0.75rem 1rem;
 	margin-top: 3rem;
 	margin-bottom: 1.5rem;
@@ -44,6 +44,7 @@
 	button {
 		background-color: @heritage-yellow;
 		border-color: @heritage-yellow;
+		margin-top: 0;
 		margin-bottom: 0;
 		&:active,
 		&:hover {
@@ -60,7 +61,7 @@
 .blog-sidebar--navigation {
 	//background-color: @gray-7;
 	border-top: 8px @heritage-yellow solid;
-	background-color: #fee4c3;
+	background-color: @heritage-yellow-lightest;
 	margin-bottom: 1.5rem;
 	padding: .75rem;
 
@@ -101,7 +102,7 @@
             &:active,
             &:visited {
             	background-color: @heritage-yellow-lighter;
-            	border-bottom: 2px solid @heritage-yellow;
+            	//border-bottom: 2px solid @heritage-yellow;
             }
 		}
 	}
@@ -110,7 +111,7 @@
 .blog-sidebar--category {
 	.well;
 	border-top: 8px @heritage-yellow solid;
-	background-color: #fee4c3;
+	background-color: @heritage-yellow-lightest;
 	margin-bottom: 1.5rem;
 }
 
@@ -124,7 +125,7 @@
 .blog-home--article {
 	padding: 1rem 0 2rem 0;
 	background-color: @white;
-	border-bottom: @gray-6 2px solid;
+	border-bottom: @gray-6 1px solid;
 	font-size: 0.875rem;
 	line-height: 1.7rem;
 	h2 {
@@ -220,6 +221,9 @@
 	.comment-single {
 		border-top: 1px solid @gray-7;
 		padding: @box-spacing-vertical*2 0;
+		&:first-of-type {
+			padding-top: 0;
+		}
 		h3 {
 			margin-top: 0;
 			.small {
