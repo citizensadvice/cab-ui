@@ -165,12 +165,26 @@
     &:extend(.a-social);
     border: 0;
 }
-.a-social-whatsapp {
+.a-social-whatsapp,
+.a-social-messenger-plus,
+.a-social-linkedin {
     white-space: nowrap;
 }
 .a-social-whatsapp:before {
     content: @i-whatsapp;
     color: @whatsapp-brand-colour;
+    &:extend(.a-social);
+    border: 0;
+}
+.a-social-messenger-plus:before {
+    content: @i-messenger;
+    color: @messenger-brand-colour;
+    &:extend(.a-social);
+    border: 0;
+}
+.a-social-linkedin:before {
+    content: @i-linkedin;
+    color: @linkedin-brand-colour;
     &:extend(.a-social);
     border: 0;
 }
@@ -323,6 +337,16 @@
 
 .icon-email:before {
     content: @i-email;
+    .icon;
+}
+
+.icon-messenger:before {
+    content: @i-messenger;
+    .icon;
+}
+
+.icon-linkedin:before {
+    content: @i-linkedin;
     .icon;
 }
 
