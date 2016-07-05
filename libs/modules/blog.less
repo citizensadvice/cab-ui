@@ -63,7 +63,7 @@
 	border-top: 8px @heritage-yellow solid;
 	background-color: @heritage-yellow-lightest;
 	margin-bottom: 1.5rem;
-	padding: .75rem;
+	padding: .75rem 1rem;
 
 	li ul a:not([href]),
 	li ol a:not([href]) {
@@ -131,10 +131,11 @@
 	h2 {
 		margin-top: 0;
 		margin-bottom: .5rem;
+		line-height: 2.65rem;
 		a {
-			color: #004b88;
+			color: @heritage-blue;
 			text-decoration: none;
-			//border-bottom: none;
+			border-color: @heritage-blue;
 		}
 	}
 	.small {
@@ -162,10 +163,9 @@
     	margin: 0;
 	    padding: 1rem;
 		a {
-			margin-top: 0;
-			color: #004b88;
+			color: @heritage-blue;
 			text-decoration: none;
-			//border-bottom: none;
+			border-color: @heritage-blue;
 		}
 	}
     .articleContent & img {
@@ -263,6 +263,7 @@
 		max-width: @breakpoint-lg;
 		margin: 0 auto;
 		position: relative;
+		padding: .75rem 0;
 		img {
 			display: inline-block;
 			vertical-align: top;
@@ -283,7 +284,7 @@
 		}
 		@media screen and (min-width: 751px) {
 			.wide {
-				display: block;
+				display: inline-block;
 			}
 			.slim {
 				display: none;
