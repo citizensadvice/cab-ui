@@ -1,59 +1,68 @@
 block settings
-	- var title = "Citizens Advice digital blog"
+	//- var title = "Citizens Advice digital blog"
 	- var sidebar = true
+	- var dir = "../../"
 	- var blog = true
 	- var nofooter = true
 
 extends /template/template-site.jade
 
 block sidebar
-	include /template/sidebar-blog-v1.jade
+	include /template/sidebar-blog.jade
 
 block content
 	.articleContent
-		div
-			.title__subheading--blog
-				.blog-tag
-					| Research
-				.blog-tag
-					| Content
-				h2 #[a(href="#") Making things simpler: Personal Independence Payment (PIP)]
-				p.small #[a(href="#") Stephen Rehill] on January 18, 2016 in #[a(href="#") Content], #[a(href="#") Design]
-				img(src="images/sample-blog/pip-feature-images-2.jpg" alt="PIP feature image" style="width:100%;")
-				p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
-				a(href="#" style="border-bottom:none;")
-					button.btn-secondary.btn-small(type="button") Read full article
+		.flex-container.flex-row
+			.blog-home--article-newest
+				img(src="#{dir}images/sample-blog/pip-feature-images-2.jpg" alt="PIP feature image")
+				h2 #[a(href="blog-post.html") Making things simpler: Personal Independence Payment (PIP)]
+				.excerpt
+					p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
 
-			.title__subheading--blog
-				.blog-tag
-					| Design
-				.blog-tag
-					| Research
-				h2 #[a(href="#") Introducing… immigration advice]
-				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Content], #[a(href="#") Immigration]
-				img(src="images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image" style="width:100%;")
+			.blog-home--article
+				h2 #[a(href="blog-post.html") Introducing… immigration advice]
+				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Design], #[a(href="#") Research]
+				img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
 				p We’ve pushed the button on some brand new content – immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
-				a(href="#" style="border-bottom:none;")
-					button.btn-secondary.btn-small(type="button") Read full article
+				//a.btn-secondary.btn-small(href="#", type="button") Read full article
 
-			.row.flex-container
-				.col-xs-12.col-md-6.blog-column-excerpt
-					.cards
-						.card-image-top
-							img(src="images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image" style="width:100%;")
-						.card-text
-							h3 #[a(href="#") Introducing… immigration advice]
-							p We’ve launched immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
-				.col-xs-12.col-md-6.blog-column-excerpt
-					.cards
-						.card-image-top
-							img(src="images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image" style="width:100%;")
-						.card-text
-							h3 #[a(href="#") Introducing… immigration advice]
-							p We’ve launched immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+			.blog-home--article
+				h2 #[a(href="blog-post.html") Introducing… immigration advice]
+				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Design], #[a(href="#") Research]
+				img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
+				p We’ve pushed the button on some brand new content – immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+				//a.btn-secondary.btn-small(href="#", type="button") Read full article
 
+			.blog-home--article
+				h2 #[a(href="blog-post.html") Introducing… immigration advice]
+				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Design], #[a(href="#") Research]
+				img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
+				p We’ve pushed the button on some brand new content – immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+				//a.btn-secondary.btn-small(href="#", type="button") Read full article
 
-			.pagination
+			.blog-home--article
+				h2 #[a(href="blog-post.html") Introducing… immigration advice]
+				p.small #[a(href="#") Emily Brunwin] on January 1, 2016 in #[a(href="#") Design], #[a(href="#") Research]
+				img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
+				p We’ve pushed the button on some brand new content – immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+				//a.btn-secondary.btn-small(href="#", type="button") Read full article
+
+		//.flex-container.flex-row
+			.col-xs-12.col-md-6.blog-home--excerpt
+				.card-image-top
+					img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
+				.card-text
+					h3 #[a(href="#") Introducing… immigration advice]
+					p We’ve launched immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+			.col-xs-12.col-md-6.blog-home--excerpt
+				.card-image-top
+					img(src="#{dir}images/sample-blog/For-blog-post-featured-images.png" alt="Imigration feature image")
+				.card-text
+					h3 #[a(href="#") Introducing… immigration advice]
+					p We’ve launched immigration advice for the public and advisers. It’s new territory – so why did we take the leap?
+
+		.flex-container.flex-row
+			.col-xs-12.pagination
 				ul
 					li.active
 						span 1
