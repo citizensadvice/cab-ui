@@ -1,0 +1,44 @@
+block settings
+	- var title = "Citizens Advice blogs"
+	//- var sidebar = true
+	- var dir = "../../"
+	//- var blogname = "Digital Blog"
+	- var blog = true
+	- var fullpage = true
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.fullwidth-yellow(style="margin-top: -1.25rem;")
+		.fullwidth-content
+			.flex-row
+				.col-md-6.col-sm-12
+					.title
+						h1.title__heading.js-ref
+							span.title__title #{title}
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis viverra dui. Donec at odio ut nulla varius imperdiet. Sed rhoncus felis nec purus bibendum, nec egestas lectus tristique.
+
+	.fullwidth
+		.fullwidth-content
+			.flex-row
+				.col-md-8
+					.group-index-list
+						h3 #[a(href="") Charity blog]
+						p A blog for the whole charity
+					.group-index-list
+						h3 #[a(href="") Policy blog]
+						p Our blog about policy updates and changes
+					.group-index-list
+						h3 #[a(href="") Digital blog]
+						p The digital teams blog
+				.col-md-4
+					.blog-sidebar--updates
+						label(for="") Subscribe by email
+						.fieldset(style="margin-bottom: 0;")
+							.field-group.field-group--buttons
+								input(type="text", placeholder="Email")
+								button.btn.btn-primary Go
