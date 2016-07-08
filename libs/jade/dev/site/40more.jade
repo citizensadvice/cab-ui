@@ -1,0 +1,16 @@
+block settings
+	- var title = "This content has been removed"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block content
+	.articleContent
+		p We no longer cover this advice. However you can find similar advice on #[a GOV.UK].
+		p You can also ​search or browse the site to find the information you need.
+		.field-group.field-group--buttons
+			input#field(type="search")
+			button.btn Search&nbsp;&nbsp;
+				i.icon-search
