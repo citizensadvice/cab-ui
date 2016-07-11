@@ -61,14 +61,12 @@ block content
 					p #[a(href="#") Letter to send evidence after your PIP claim form]
 
 			.col-md-4.col-sm-12
-				div.blog-sidebar--updates(style="background-color:#a6d6ae;")
+				.cards-branding--aqua
 					.card-banner-top
-						p(style="color:#57486b;") Help others
+						h3 Help others
 					.card-text
-						img(src="../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
-						p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
-						fieldset
-							label(for="standardField", style="color:#57486b;") Search your area
-							input#standardField(placeholder="", type="text")
-
-						button.btn.btn-secondary.right-button-icon Search roles
+						img(src="#{dir}images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+						p Join one of over 300 local Citizens Advice, get training and help people.
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Postcode")
+							button.btn Search
