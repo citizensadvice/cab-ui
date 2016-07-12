@@ -397,6 +397,9 @@ html.no-js
 			var filename = document.location.pathname.match(/[^\/]+$/)[0];
 			$(document).ready(function() {
 				$('.section-nav a[href*="' + filename + '"]').addClass('active');
+
+				// Connect up LinkedIn buttons
+				$('.a-social-linkedin').attr('href', "http://www.linkedin.com/shareArticle?mini=true&title="+document.title+"&url="+window.location);
 			});
 		if blog
 			script.
