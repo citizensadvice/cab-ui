@@ -8,13 +8,13 @@
     margin-bottom: .75rem;
     box-shadow: 0 2px 0 0 @gray-7,0 1px 3px 0 @gray-7;
     background-color: @white;
+    overflow: hidden;
     .card-banner-top {
         border-radius: @form-border-radius @form-border-radius 0 0;
-        :first-child {
+        >:first-child {
             padding: 1rem 0 1rem 1rem;
             margin: 0;
             border-radius: @form-border-radius;
-            font-weight: @font-weight-bolder;
             font-size: @font-size-medium;
         }
         & + .card-text {
@@ -37,16 +37,62 @@
     }
     .card-text-left {
         padding: 1rem 1rem 1rem 0;
-        :first-child {
+        >:first-child {
             padding-top: 0rem;
             margin-top: 0rem;
         }
     }
     .card-text {
         padding: 1rem;
-        :first-child {
+        >:first-child {
             padding-top: 0rem;
             margin-top: 0rem;
+        }
+    }
+}
+
+.cards-branding--teal {
+    .cards;
+    color: @white;
+    background-color: @inventive-teal;
+}
+
+.cards-branding--aqua {
+    .cards;
+    color: @responsible-purple;
+    background-color: @responsible-aqua;
+    h3 {
+        color: @responsible-purple;
+    }
+    button {
+        background-color: @responsible-purple;
+        border-color: @responsible-purple;
+        color: @white;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken(@responsible-purple, 10%);
+            border-color: darken(@responsible-purple, 10%);
+            color: @white;
+        }
+    }
+}
+
+.cards-branding--purple {
+    .cards;
+    color: @white;
+    background-color: @purple-dark;
+    h3 {
+        color: @white;
+    }
+    button {
+        background-color: @heritage-yellow;
+        border-color: @heritage-yellow;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken(@heritage-yellow, 10%);
+            border-color: darken(@heritage-yellow, 10%);
         }
     }
 }
