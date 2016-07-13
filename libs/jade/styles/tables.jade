@@ -237,3 +237,195 @@ block content
 					| 		&lt;/tr&gt;
 					| 	&lt;/tbody&gt;
 					| &lt;/table&gt;
+
+			h2 Responsive tables
+			p The best approach to responsive tables is simply horizontal scrolling. This can be achieved by wrapping the table in two divs, #[span.code .table-responsive] and #[span.code .inner].
+			.example-box-plain
+				.table-responsive
+					.inner
+						table
+							thead
+								tr
+									th(scope="col") Column heading
+									th(scope="col") Column heading
+									th(scope="col") Column heading
+									th(scope="col") Column heading
+									th(scope="col") Column heading
+									th(scope="col") Column heading
+							tbody
+								tr
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+								tr
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+			pre
+				code.language-html
+					| &lt;div class="table-responsive"&gt;
+					| 	&lt;div class="inner"&gt;
+					| 		&lt;table&gt;
+					| 			&lt;thead&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;Column heading&lt;/th&gt;
+					| 				&lt;/tr&gt;
+					| 			&lt;/thead&gt;
+					| 			&lt;tbody&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 			&lt;/tbody&gt;
+					| 		&lt;/table&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;
+
+			h3 Responsive table with two headers
+			p The example table with two headers can also be made responsive, where the left header sticks to the left of the page. This is done the same way as other responsive tables, but with the addition of the #[span.code .sticky] class on the outer div.
+			.example-box-plain
+				.table-responsive.sticky
+					.inner
+						table
+							thead
+								tr
+									td &nbsp;
+									th(scope="col") 1
+									th(scope="col") 2
+									th(scope="col") 3
+									th(scope="col") 4
+									th(scope="col") 5
+									th(scope="col") 6
+									th(scope="col") 7
+									th(scope="col") 8
+							tbody
+								tr
+									th(scope="row") 1
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+								tr
+									th(scope="row") 2
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+								tr
+									th(scope="row") 3
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+								tr
+									th(scope="row") 4
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+									td Table cell
+			pre
+				code.language-html
+					| &lt;div class="table-responsive sticky"&gt;
+					| 	&lt;div class="inner"&gt;
+					| 		&lt;table&gt;
+					| 			&lt;thead&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;td&gt;&nbsp;&lt;/td&gt;
+					| 					&lt;th scope="col"&gt;1&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;2&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;3&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;4&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;5&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;6&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;7&lt;/th&gt;
+					| 					&lt;th scope="col"&gt;8&lt;/th&gt;
+					| 				&lt;/tr&gt;
+					| 			&lt;/thead&gt;
+					| 			&lt;tbody&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;th scope="row"&gt;1&lt;/th&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;th scope="row"&gt;2&lt;/th&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;th scope="row"&gt;3&lt;/th&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 				&lt;tr&gt;
+					| 					&lt;th scope="row"&gt;4&lt;/th&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 					&lt;td&gt;Table cell&lt;/td&gt;
+					| 				&lt;/tr&gt;
+					| 			&lt;/tbody&gt;
+					| 		&lt;/table&gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;

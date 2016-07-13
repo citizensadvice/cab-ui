@@ -318,3 +318,35 @@ table.simple-table td {
         padding-left: 1.5em;
     }
 }
+
+// Responsive tables
+.table-responsive {
+    position: relative;
+    .inner {
+        overflow-x: scroll;
+        overflow-y: visible;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
+    tr > * {
+        width: 10em;
+        vertical-align: top;
+    }
+    tr {
+        overflow: hidden;
+        position: relative;
+    }
+    &.sticky {
+        .inner {
+            margin-left: 5em;
+        }
+        tr >:first-child  {
+            position: absolute;
+            left: 0;
+            width: 5em;
+            margin-top: -1px;
+        }
+    }
+}
