@@ -1,0 +1,55 @@
+block settings
+	- var title = "Letter to complain about faulty goods"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block script
+	script.
+		var x = ($('#letter').width())*1.3;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.3;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+		$(document).ready(function() {
+			$('.conditional').click(function() {
+				if( $(this).find('input[value="2"]').is(':checked')) {
+					$(this).next().show();
+				} else {
+					$(this).next().hide();
+				}
+			});
+		});
+
+
+block content
+	.articleContent
+		p Use this letter template to complain to a trader about faulty goods. It should help the trader understand your point of view and their legal obligation to sort out the problem.
+
+		p You can send the letter by post or copy the text into an email. If you’d prefer to talk to the trader on the phone or in person you could read it out to them.
+
+		p Before you use this template, make sure you read our advice on how to return faulty goods.
+
+		.well--outline
+			.letter-steps
+				p Step 3 of 5
+
+			//h2 Letter to complain about faulty goods
+			h2 Traders details
+
+			.fieldset
+				label(for="traderName") Trader's name
+				input#standardField(placeholder="", type="text")
+
+			.fieldset
+				label(for="traderAddress") Trader's address
+					span.optional &nbsp;(optional)
+				textarea#yourAddress(rows="4")
+
+
+			a.btn-light.left-button-icon(href="letter-2.html") Back
+			a.btn.right-button-icon(href="letter-4.html") Continue
