@@ -1,0 +1,40 @@
+block settings
+	- var title = "Template letters"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block content
+	.articleContent
+		p Use the below tool to select from one of our template letters or #[a view all template letters].
+
+		.fieldset
+			label(for="exampleSelect1") I would like to
+			.dropdown
+				select#exampleSelect1
+					option Appeal a decision
+					option Complain about a service
+					option Make a complaint
+					option Cancel an item or service
+					option Challenge a decision
+					option Get a refund
+					option Report an issue
+					option Replace an item
+
+		.fieldset
+			label(for="exampleSelect1") Select a subject area
+			.dropdown
+				select#exampleSelect1
+					option Benefits
+					option Housing
+					option Consumer
+					option Courts
+					option Debt
+					option Healthcare
+					option Education
+					option Law
+
+
+		button.btn.search-button-icon(type="button") Search
