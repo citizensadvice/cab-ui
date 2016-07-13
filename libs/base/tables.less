@@ -326,27 +326,38 @@ table.simple-table td {
         overflow-x: scroll;
         overflow-y: visible;
     }
-    table {
-        table-layout: fixed;
-        width: 100%;
-    }
-    tr > * {
-        width: 10em;
-        vertical-align: top;
-    }
-    tr {
-        overflow: hidden;
-        position: relative;
-    }
-    &.sticky {
-        .inner {
-            margin-left: 5em;
+    @media screen and ( max-width: @screen-md-min ) {
+        table {
+            table-layout: fixed;
+            width: 100%;
         }
-        tr >:first-child  {
-            position: absolute;
-            left: 0;
-            width: 5em;
-            margin-top: -1px;
+        tr > * {
+            width: 10em;
+            vertical-align: top;
+            &[colspan="2"] {
+                width: 20em;
+            }
+            &[colspan="3"] {
+                width: 30em;
+            }
+            &[colspan="4"] {
+                width: 40em;
+            }
+        }
+        tr {
+            overflow: hidden;
+            position: relative;
+        }
+        &.sticky {
+            .inner {
+                margin-left: 5em;
+            }
+            tr >:first-child  {
+                position: absolute;
+                left: 0;
+                width: 5em;
+                margin-top: -1px;
+            }
         }
     }
 }

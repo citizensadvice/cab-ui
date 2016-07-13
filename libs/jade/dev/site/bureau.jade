@@ -1,5 +1,5 @@
 block settings
-	- var title = "Bromley Town Citizens Advice"
+	- var title = "North East Doncaster (Thorne) Citizens Advice Bureau"
 	- var fullpage = true
 	- var dir = "../../"
 
@@ -8,81 +8,141 @@ extends /template/template-site.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-		{title: "Local Citizens Advice"}])
+		{title: title}])
 
 block script
 
 block content
 	.fullwidth-yellow
 		.fullwidth-content
-			h1 #{title}
+			h1(style="margin-top: 0;") #{title}
 			.flex-row
-				.col-sm-6
-					p 020 8315 1940
+				.col-md-4.col-sm-6
+					p
+						a advicecabthorne@fsmail.net
 						br
-						a.a-external-link http://www.bromleycab.org.uk/
-				.col-sm-6
-					p Community House South Street
+						| #[strong Advice Line] 0844 499 4137
 						br
-						| BROMLEY
+						| #[strong Debt Line] 01405 741457
 						br
-						| Kent
+						| #[strong Benefit Line] 01405 816702
+				.col-md-4.col-sm-6
+					p Thorne Office, Marriott House 5a Browns Lane Thorne
+						| DONCASTER
 						br
-						| BR1 1RH
+						| South Yorkshire
+						br
+						| DN8 5AF
+				.col-md-4.col-sm-12
+					p #[span.i &#x267f;] Wheelchair accessible
+						br
+						| #[span.i &#xe908;] Induction loop
+						br
+						| Wheelchair toilet access
+						br
+						| Internet advice access
 
 	.fullwidth-content
-		iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
+		.col-sm-8
+			h2 About our advice service
 
-		.flex-row
-			.col-sm-8
-				h2 About our advice service
+			p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
+			p Alternatively, drop in to Thorne bureau on a Monday between 10:00-2:00 and Wednesday between 10:00-12:30 where a face to face assessment will be conducted.
+			p Forthcoming closures:
+			p **Please note that we are closed on Bank Holidays**
 
-				p The Bureau will be closed on May 2nd and May 30th due to Bank Holidays
+		.col-sm-12
+			h2 Advice session times
+			.tab-group
+				.tab
+					input(type="radio" id="one" name="tab-group" checked)
+					label(for="one") References
+					.content
+						button.btn-secondary.btn-small(type="button") Print all
+						button.btn-warning.btn-small(type="button" style="float:right;") Clear all
 
-				p Please be advised that the service is provided by trained volunteers, operates on a "first come first served" basis and is subject to volunteer availability. We advise that you arrive early in order that you can be seen.
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
 
-			.col-sm-12
-				h2 Advice session times
-				table
-					thead
-						tr
-							th Day
-							th(colspan="2", width="40%") Advice session times
-							th(colspan="2", width="40%") Telephone session times
-						//tr
-							th Day
-							th Time
-							th Further information
-							th Time
-							th Further information
-					tbody
-						tr
-							td Monday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Tuesday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Wednesday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Thursday
-							td
-							td Pre-booked appointments only
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Friday
-							td
-							td Pre-booked appointments only
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
+
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
+
+
+				.tab
+					input(type="radio" id="two" name="tab-group")
+					label(for="two") Email
+					.content
+						div
+							p Send your saved references to yours, a friend or family members email address
+							fieldset
+								label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your name
+								input(id="standardField" placeholder="" type="text")
+
+							fieldset
+								label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Recipients email address
+								span.form-hint This can be your own, or you can add multiple addresses seperated with a comma
+								input(id="standardField" placeholder="" type="email")
+
+							button.btn-secondary.email-button-icon(type="button") Send email
+
+			//.table-responsive
+				.inner
+					table
+						thead
+							tr
+								th(width="10%")
+								th(colspan="2") Advice session times
+								th(colspan="2") Telephone session times
+						tbody
+							tr
+								td Monday
+								td(width="15%") 10.00 - 14.00
+								td(width="30%") Debt appointments only.
+								td(width="15%") 10.00 - 14.00
+								td(width="30%") TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+							tr
+								td Tuesday
+								td
+								td *NEW* general drop-in session where a brief assessment will be conducted. General appts.
+								td 10.00 - 14.00
+								td TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+							tr
+								td Wednesday
+								td 10.00 - 12.30
+								td General drop-in session where a brief assessment will be conducted. From 5th June 2013
+								td 10.00 - 14.00
+								td TEL 0844 499 4137 for a brief assessment . from June 5th 2013
+							tr
+								td Thursday
+								td
+								td Debt appointments only.
+								td
+								td Telephone line closed
+							tr
+								td Friday
+								td
+								td Closed
+								td
+								td TEL 0844 499 4137 For a brief assessment . This service will close from June 7th 2013
+
+	.fullwidth-gray
+		.fullwidth-content
+			.flex-row
+				.col-sm-6
+					label Enter your postcode for directions.
+					.field-group.field-group--buttons
+						input#field(type="search", placeholder="Enter your postcode")
+						button.btn Find&nbsp; #[span.i &#xe605;]
+
+			.flex-row
+				.col-sm-12
+					iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
