@@ -1,0 +1,67 @@
+block settings
+	- var title = "Letter to complain about faulty goods"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block script
+	script.
+		var x = ($('#letter').width())*1.3;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.3;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+		$(document).ready(function() {
+			$('.conditional').click(function() {
+				if( $(this).find('input[value="2"]').is(':checked')) {
+					$(this).next().show();
+				} else {
+					$(this).next().hide();
+				}
+			});
+		});
+
+
+block content
+	.articleContent
+		p Use this letter template to complain to a trader about faulty goods. It should help the trader understand your point of view and their legal obligation to sort out the problem.
+
+		p You can send the letter by post or copy the text into an email. If you’d prefer to talk to the trader on the phone or in person you could read it out to them.
+
+		p Before you use this template, make sure you read our advice on how to return faulty goods.
+
+		.well--outline
+			.letter-steps
+				p Step 4 of 5
+
+			//h2 Letter to complain about faulty goods
+			h2 About the goods
+
+			.fieldset
+				label(for="goods") What are the goods?
+				input#standardField(placeholder="", type="text")
+
+			.form-group-date
+				legend When did you buy the goods?
+				fieldset
+					label(for="dob-day")
+						span.screenreader When did you buy the goods? Date field,
+						| Day
+					input#dob-day(placeholder="DD", maxlength="2", min="1", max="31",  name="day", type="number", pattern="\d{1,2}", autoComplete="off")
+				fieldset
+					label(for="dob-month") Month
+					input#dob-month(placeholder="MM", maxlength="2", min="1", max="12", name="month", type="number", pattern="\d{1,2}", autoComplete="off")
+				fieldset
+					label(for="dob-year") Year
+					input#dob-year(placeholder="YYYY", maxlength="4",  min="1900", max="2100", name="year", type="number", pattern="\d{4}", autoComplete="off")
+
+			.fieldset
+				label(for="yourName") Price of goods
+				input#standardField(placeholder="", type="text")
+
+			a.btn-light.left-button-icon(href="letter-3.html") Back
+			a.btn.right-button-icon(href="letter-5.html") Continue
