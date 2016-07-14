@@ -9,7 +9,6 @@
     &__content {
         .limit-width;
         padding: @box-spacing-horizontal 0 0 @box-spacing-horizontal;
-        overflow: hidden;
         border-bottom: @gray-7 1px solid;
         background-color: @white;
         .badge {
@@ -22,6 +21,12 @@
         .badge {
             background-color: @heritage-yellow;
         }
+        @media( max-width: @screen-xs-max ) {
+            display: none;
+        }
+    }
+    @media( max-width: @screen-xs-max ) {
+        display: none;
     }
 }
 
@@ -56,8 +61,3 @@
     }
 }
 
-@media( max-width: @screen-xs-max ) {
-    *[class^="section-notice"] {
-        display: none;
-    }
-}
