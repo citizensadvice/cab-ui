@@ -53,7 +53,15 @@ block content
 
 		.col-sm-12
 			h2 Advice session times
-			.tab-group
+
+			.tab-area
+				#tabone.content tab one content
+				#tabtwo.content tab two content
+				.tabs
+					a(href="#tabone") Tab one
+					a(href="#tabtwo") Tab two
+
+			//.tab-group
 				.tab
 					input(type="radio" id="one" name="tab-group" checked)
 					label(for="one") References
