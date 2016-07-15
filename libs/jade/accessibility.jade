@@ -8,7 +8,6 @@ extends /template/template.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-	//	{title: "Navigation", href: dir + "index.html#Navigation"},
 		{title: title}])
 
 block sidebar
@@ -18,36 +17,50 @@ block content
 	.articleContent
 		div
 			h2 Helpers
-
-			pre
-				code.language-css
-					| .screenreader;
-
-			pre
-				code.language-css
-					| .screenreader--focusable;
+			p The stylesheet includes two helper classes for screenreaders;
+			ul
+				li #[code.code .screenreader] will hide the element unless viewed by a screenreader. This is useful for situations where screenreader users may need more information than non-screenreader users.
+				li #[code.code .screenreader--focusable] allows non focussable elements to be focusable for screenreaders.
 
 			h2 Icons
+			h3 Labels
+			p Icons should always be used with word labels. There are rare exceptions to this, however it's important to always assume that a user doesn't know what an icon means on its own.
+			img(src="#{dir}images/icon-example.svg")
 
-			p Never use icons without words.
+			h3 Symbols
+			p The only exception to using icons without labels are accessibility symbols. This is because, for the people who need them, they're very widely recognised. They should still be used with label where possible.
+			.flex-row
+				.col-sm-6
+					| #[span.i(style="font-size: 1.5em;") &#x267f;]&nbsp;&nbsp;#[strong Wheelchair access]
+				.col-sm-6
+					| #[span.i(style="font-size: 1.5em;") &#xe908;]&nbsp;&nbsp;#[strong Induction loop]
 
 			h2 Colours
 
-			p Use 2:1 contrast. Never rely on colours alone (callouts).
+			h3 Contrast
+			p It's important that coloured content over a coloured background meets the 2:1 contrast ratio, as #[a.a-external-link(href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html") recommended by W3C].
+			p Colour combinations can quickly and easily be tested on the #[a.a-external-link(href="http://webaim.org/resources/contrastchecker/") WebAIM website].
+
+			h3 Recognition
+			p Not all colours appear the same to all colour blind people. This means that we can't always assume block colours will be recognised by every user, which is an issue when the colour conveys meaning.
+			p An example of this is red callouts. The red is critical to the function of this callout, as it emphasises the importance of the content.
+			img(src="#{dir}images/colour-example.svg")
 
 			h2 Button vs link
 
-			p When to use buttons, and when not to.
+			p Links and buttons are not treated the same by all accessibility software. Because of this, it's important to use the correct one based on the situation.
+			p As a general rule, buttons should be used for functional events (such as form events), while links should be used only for linking.
+			p For example, to open a dialog you would use a button. Whereas to open a new tab, you'd use a link, as you'd be navigating to a new webpage.
 
 			h2 Expandable navigations
 
-			p Navigations that expand should always push the content, rather than overlap it.
+			p Expandable navigations shouldn't appear above content on the page, but should instead push the content down. This prevents accessibility issues around accessing content that might appear beneath an open navigation.
 
 			img(src="#{dir}images/navigation-push-example.svg")
 
-			h2 Form structure
+			//h2 Form structure
 
-			pre
+			//pre
 				code.language-html
 					| &lt;form&gt;
 					| 	&lt;fieldset&gt;
@@ -61,7 +74,7 @@ block content
 					| 	&lt;/fieldset&gt;
 					| &lt;/form&gt;
 
-			pre
+			//pre
 				code.language-text
 					| form
 					| 	fieldset
@@ -75,11 +88,16 @@ block content
 
 			h2 Focus outline
 
-			p Generally, outlines have been replaced with borders.
+			p Generally, outlines have been replaced with borders (with some exceptions). However, all focus states for all elements should use a 2px yellow border.
 
-			img(src="#{dir}images/outline-example.svg", style="width: 100%;")
+			img(src="#{dir}images/outline-example.svg")
 
 			pre
 				code.language-css
+					| /* Remove outline */
 					| outline: none;
 					| border: 2px solid @heritage-yellow;
+			pre
+				code.language-css
+					| /* Improve outline */
+					| outline: 2px solid @heritage-yellow;
