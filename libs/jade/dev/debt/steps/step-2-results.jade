@@ -1,0 +1,60 @@
+block settings
+	- var title = "Step 2 - Work out which debts are a priority"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Step 2 - Work out which debts are a priority"}])
+
+block sidebar
+	- var section = "Get help with your debts"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Step 1 - Gather information for each debt", href: "step-1.html"},
+		{title: "Step 2 - Work out which debts are a priority", href: "step-2.html"},
+		{title: "Step 3 - Work out what you can afford to pay", href: "step-3.html"},
+		{title: "Step 4 - Contact your creditors", href: "step-4.html"},
+		{title: "After you've worked out your budget", href:"after-your-budget.html"}],
+		2)
+
+block content
+	.articleContent
+		p When you have more than one debt, they need to be put in order so the most important ones are dealt with first. 
+
+		p Credit card companies and payday lenders tend to contact you the most, but other things like Council Tax and rent or mortgage debts are much more of a priority. This is because what can happen if you get behind on these is more serious.
+
+		.well--outline
+			h2 Priority debt
+			.well--outline--warning
+				h3 Mortgage/secured loan
+				p #[a(href="#") Talk to your mortgage lender straight away]
+
+			.well--outline--warning
+				h3 Council Tax arrears
+				p #[a(href="#") Talk to your council straight away]
+
+			h2 Non-priority debt
+			.well--outline
+				h3 Overdraft
+				p #[a(href="#") Talk to your loan company straight away]
+
+			.well--outline
+				h3 Telephone/mobile phone/internet packages		
+				p #[a(href="#") Talk to your telephone/mobile phone/internet provider straight away]
+
+			a.button.btn-secondary.restart-button-icon(href="step-2.html") Restart
+
+
+
+		a.blockLinks(href="#{dir}dev/debt/steps/step-3.html") Step 3 - Work out what you can afford to pay
+		a.blockLinks.blocklinks--back(href="#{dir}dev/debt/get-help-with-your-debts-1.html") Get help with your debts
+
+		//.callout--related
+			h3 Get more help
+			p You can get free advice from one of our debt specialists. They can talk through your options and help you to find a solution. 
