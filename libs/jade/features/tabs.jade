@@ -60,16 +60,36 @@ block script
 
 block content
 	.articleContent
-		ul.tablist(role='tablist')
-			li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') One
-			li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Two
-			li#tab3.tab(aria-controls='panel3', role='tab', aria-selected='false', tabindex='0') Three
-		#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
-			h3 Tab one
-			p Tab one content
-		#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
-			h3 Tab two
-			p Tab one content
-		#panel3.tab-panel(aria-labelledby='tab3', role='tabpanel', aria-hidden='true')
-			h3 Tab three
-			p Tab one content
+		.example-box-plain
+			ul.tablist(role='tablist')
+				li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') One
+				li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Two
+				li#tab3.tab(aria-controls='panel3', role='tab', aria-selected='false', tabindex='0') Three
+			#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
+				h3 Tab one
+				p Tab one content
+			#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
+				h3 Tab two
+				p Tab one content
+			#panel3.tab-panel(aria-labelledby='tab3', role='tabpanel', aria-hidden='true')
+				h3 Tab three
+				p Tab one content
+		pre
+			code.language-html
+				| &lt;ul role="tablist" class="tablist"&gt;
+				| 	&lt;li id="tab1" aria-controls="panel1" aria-selected="true" role="tab" tabindex="0" class="tab"&gt;One&lt;/li&gt;
+				| 	&lt;li id="tab2" aria-controls="panel2" role="tab" aria-selected="false" tabindex="0" class="tab"&gt;Two&lt;/li&gt;
+				| 	&lt;li id="tab3" aria-controls="panel3" role="tab" aria-selected="false" tabindex="0" class="tab"&gt;Three&lt;/li&gt;
+				| &lt;/ul&gt;
+				| &lt;div id="panel1" aria-labelledby="tab1" role="tabpanel" aria-hidden="false" class="tab-panel"&gt;
+				| 	&lt;h3&gt;Tab one&lt;/h3&gt;
+				| 	&lt;p&gt;Tab one content&lt;/p&gt;
+				| &lt;/div&gt;
+				| &lt;div id="panel2" aria-labelledby="tab2" role="tabpanel" aria-hidden="true" class="tab-panel"&gt;
+				| 	&lt;h3&gt;Tab two&lt;/h3&gt;
+				| 	&lt;p&gt;Tab one content&lt;/p&gt;
+				| &lt;/div&gt;
+				| &lt;div id="panel3" aria-labelledby="tab3" role="tabpanel" aria-hidden="true" class="tab-panel"&gt;
+				| 	&lt;h3&gt;Tab three&lt;/h3&gt;
+				| 	&lt;p&gt;Tab one content&lt;/p&gt;
+				| &lt;/div&gt;
