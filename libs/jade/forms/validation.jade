@@ -23,6 +23,14 @@ block sidebar
         .section-notice__content
             p #[span.badge NEW] This page is part of #[a(href="#") our new approach to digital advice].
 
+block section-notice
+    aside.section-notice__changing
+        h2.screenreader Notice
+        .section-notice__content
+            p
+                span.badge CAUTION
+                | This design pattern is still being developed and tested.
+
 block content
     .articleContent
         p Form validation is an important part of guiding a users journey through entry fields. Most field types have an error style, making it clear to the user which fields are incorrect and why.

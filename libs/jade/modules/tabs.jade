@@ -9,7 +9,7 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Modules", href: dir + "index.html#Modules"},
-		{title: "Tables"}])
+		{title: "Tab"}])
 
 block sidebar
 	include /template/sidebar-modules.jade
@@ -58,13 +58,32 @@ block script
 			});
 		});
 
+block section-notice
+	aside.section-notice__changing
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge CAUTION
+				| This design pattern is still being developed and tested.
+
 block content
 	.articleContent
-		p Tabs have a very infrequent use case, so should be avoided where the content may better work in revealable. It's important to keep in mind that tabs shouldn't be used with more than 3-4 tabs, and display as normal content on mobile.
-		p Because tab functionality is removed on mobile (and browsers without Javascript), it's important to never use the tab text as a title, as it won't be visible to everyone. Generally, tabs should have shorter titles than content anyway.
+		p This pattern is referring to in-page tabs, as a way for users to manage what content is visible on screen. The optimum number of tabs is 3-4, as this indicates the amount of content on the page won't be overwhelming. 
+		p Tabs should:
+		ul.tick
+			li have short, accurate labels
+			li have information that is logically sorted
+			li only appear on a single row
+			li have a title inside each tab
+		p Tabs shouldn't:
+		ul.cross
+			li have information that needs to be seen simultaneously
+			li rely on the label as it's title
 		h2 Accessibility
-		p Accessibility is an important part of using tabs. This means that the syntax needs to work well for keyboard users and screen readers. This means that all the Javascript and CSS is based around aria attributes, to distinguish the active tab.
-		p An important inclusion is being able to use the arrow keys to navigate between tabs, as well as the tab key.
+		p Tabs have been built using aria attributes, to enable navigation with keyboard (arrows and tabbing) and voiceover assisted technologies.
+		h2 Progressive enhancement
+		p Without javascript and on mobile devices, the tabs stack as content blocks, and remove the tab labels.
+
 		.example-box-plain
 			ul.tablist(role='tablist')
 				li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') Tab one

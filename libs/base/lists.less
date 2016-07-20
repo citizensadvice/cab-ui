@@ -290,3 +290,20 @@ p ~ ol {
             padding-right: .5rem;
     }
 }
+
+.warning {
+    padding: 0 0.5 0 2;
+    margin-left: -1.35em;
+    list-style:none;
+    margin-bottom: 0rem;
+    margin-top: -0.5rem;
+
+    & > li:before {
+            margin: 0 -.25 0 -.5;
+            font-family: 'cab-icons';
+            content: @i-exclamation-triangle;
+            color: @red;
+            font-size: 0.75em;
+            padding-right: .5rem;
+    }
+}
