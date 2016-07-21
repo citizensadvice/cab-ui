@@ -1,5 +1,5 @@
 block settings
-	- var title = "Bromley Town Citizens Advice"
+	- var title = "North East Doncaster (Thorne) Citizens Advice Bureau"
 	- var fullpage = true
 	- var dir = "../../"
 
@@ -8,81 +8,173 @@ extends /template/template-site.jade
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
-		{title: "Local Citizens Advice"}])
+		{title: title}])
 
 block script
+	script.
+		$(document).ready(function() {
+			$("li[role='tab']").click(function(){
+				$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+				$(this).attr("aria-selected","true");  // select this tab
+				$("#"+($(this).attr("aria-controls"))).attr("aria-hidden","false");  // show this panel
+			});
+
+			$("li[role='tab']").keydown(function(ev) {
+				if (ev.which ==13) {
+					$(this).click()
+				}
+			});
+
+			//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggle the tabs.
+			$("li[role='tab']").keydown(function(ev) {
+				var selected= $(this).attr("aria-selected");
+				if (ev.which ==39) {
+					if ($(this).next().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").next().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				} else if (ev.which ==37) {
+					if ($(this).prev().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").prev().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				}
+			});
+		});
 
 block content
 	.fullwidth-yellow
 		.fullwidth-content
-			h1 #{title}
+			h1(style="margin-top: 0;") #{title}
 			.flex-row
 				.col-sm-6
-					p 020 8315 1940
+					p
+						a advicecabthorne@fsmail.net
 						br
-						a.a-external-link http://www.bromleycab.org.uk/
+						| #[strong Advice Line] 0844 499 4137
+						br
+						| #[strong Debt Line] 01405 741457
+						br
+						| #[strong Benefit Line] 01405 816702
 				.col-sm-6
-					p Community House South Street
+					p Thorne Office, Marriott House 5a Browns Lane Thorne
+						| DONCASTER
 						br
-						| BROMLEY
+						| South Yorkshire
 						br
-						| Kent
-						br
-						| BR1 1RH
+						| DN8 5AF
 
 	.fullwidth-content
-		iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
-
 		.flex-row
 			.col-sm-8
 				h2 About our advice service
 
-				p The Bureau will be closed on May 2nd and May 30th due to Bank Holidays
+				p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
+				p Alternatively, drop in to Thorne bureau on a Monday between 10:00-2:00 and Wednesday between 10:00-12:30 where a face to face assessment will be conducted.
+				p Forthcoming closures:
+				p **Please note that we are closed on Bank Holidays**
 
-				p Please be advised that the service is provided by trained volunteers, operates on a "first come first served" basis and is subject to volunteer availability. We advise that you arrive early in order that you can be seen.
+			.col-sm-4
+				h2 Access details
+				p #[span.i &#x267f;] Wheelchair accessible
+					br
+					| #[span.i &#xe908;] Induction loop
+					br
+					| Wheelchair toilet access
+					br
+					| Internet advice access
 
 			.col-sm-12
 				h2 Advice session times
-				table
-					thead
-						tr
-							th Day
-							th(colspan="2", width="40%") Advice session times
-							th(colspan="2", width="40%") Telephone session times
-						//tr
-							th Day
-							th Time
-							th Further information
-							th Time
-							th Further information
-					tbody
-						tr
-							td Monday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Tuesday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Wednesday
-							td 10.00 - 13.00
-							td Drop in
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Thursday
-							td
-							td Pre-booked appointments only
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
-						tr
-							td Friday
-							td
-							td Pre-booked appointments only
-							td 10.00 - 12.00 and #[br]14.00 - 16.00
-							td
+
+				ul.tablist(role='tablist')
+					li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') Advice session times
+					li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Telephone session times
+				#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
+					.table-responsive
+						.inner
+							table
+								thead
+									tr
+										th
+										th(colspan="2") Advice session times
+								tbody
+									tr
+										th(width="15%") Monday
+										td(width="20%") 10.00 - 14.00
+										td(width="65%") Debt appointments only.
+									tr
+										th Tuesday
+										td
+										td *NEW* general drop-in session where a brief assessment will be conducted. General appts.
+									tr
+										th Wednesday
+										td 10.00 - 12.30
+										td General drop-in session where a brief assessment will be conducted. From 5th June 2013
+									tr
+										th Thursday
+										td
+										td Debt appointments only.
+									tr
+										th Friday
+										td
+										td Closed
+
+				#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
+					.table-responsive
+						.inner
+							table
+								thead
+									tr
+										th
+										th(colspan="2") Telephone session times
+								tbody
+									tr
+										th(width="15%") Monday
+										td(width="20%") 10.00 - 14.00
+										td(width="65%") TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+									tr
+										th Tuesday
+										td 10.00 - 14.00
+										td TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+									tr
+										th Wednesday
+										td 10.00 - 14.00
+										td TEL 0844 499 4137 for a brief assessment . from June 5th 2013
+									tr
+										th Thursday
+										td
+										td Telephone line closed
+									tr
+										th Friday
+										td
+										td TEL 0844 499 4137 For a brief assessment . This service will close from June 7th 2013
+
+
+	.fullwidth-gray
+		.fullwidth-content
+			.flex-row
+				.col-sm-6
+					form(action="http://maps.google.co.uk/maps" method="get")
+						label Get directions from your location
+						.field-group.field-group--buttons
+							input#saddr(type="search", name="saddr")
+							button.btn(type="submit") Directions&nbsp; #[span.i &#xe605;]
+							input(type="hidden", name="daddr", value="DN8 5AF")
+							input(type="hidden", name="hl", value="en")
+
+			.flex-row
+				.col-sm-12
+					iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")

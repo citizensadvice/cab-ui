@@ -1,0 +1,76 @@
+block settings
+	- var title = "Get help with your debts"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Prioritise your debts"}])
+
+block sidebar
+	//include /template/sidebar-site-content.jade
+
+block content
+	.articleContent
+		p Deal with your debts by going through each step in this guide in order. 
+		p The advice will help you decide:
+		ul
+			li what you should do first 
+			li what you can deal with yourself
+			li what you need might need specialist help with - and show you where to get this help
+		p You can come back to this guide as you complete each step and are ready to move onto the next one.
+		.callout--warning
+			p Contact your local Citizens Advice immediately in England and Wales, Scotland or Northern Ireland if you've received court papers, are facing eviction or are expecting bailiffs (or sheriff officers in Scotland).
+		h2 Step 1 - Gather information for each debt
+		p Collect together all the letters and emails you’ve had from your creditors and originals or copies of any credit agreements you’ve signed. If you don’t have an up-to-date statement from a creditor, you can ask them for one. This should tell you all the payments you’ve made and what’s left to pay.
+		p Make a list of all your creditors, and how much you owe each one. This will include things like Council Tax and mortgage or rent arrears, as well as credit cards or loan payments.
+
+		h2 Step 2 - Work out which debts are a priority
+		p When you have more than one debt, they need to be put in order so the most important ones are dealt with first. 
+
+		p Credit card companies and payday lenders tend to contact you the most, but other things like Council Tax and rent or mortgage debts are much more of a priority. This is because what can happen if you get behind on these is more serious.
+
+		p #[a(href="#") Use our tool] to see which of your debts is a ‘priority’ debt. This is quick to do and will show you which creditors you need to contact straight away. When you’ve done this, you can move on to the next step to work out what you can pay.
+
+		h2 Step 3 - Work out what you can afford to pay 
+		p The amount you offer to each creditor needs to be realistic for you to pay, as well as acceptable to them. 
+		p If you don’t know how much you have left each week or month after your household bills and living costs, use our budgeting tool to help you. 
+		p Once you know what you can offer, follow the advice in Step 4 about contacting your creditors.
+
+		h3 If you have no money spare
+		p Get help from a free debt specialist if you’ve worked out your budget and have little or no money spare each month. A specialist can explain your options and will help you find a solution.
+
+		h2 Step 4 - Contact your creditors 
+		p Once you’ve completed Steps 2 and 3, you’ll know which of your debts is a ‘priority’ and how much you can offer each creditor. 
+		p Deal with any priority debts first, before dealing with non-priority debts. 
+
+		h3 Priority debts
+		p Call each priority creditor as soon as possible. Explain that you’re in debt and why, and that you’re sorting out the situation. This shows your creditors that you’re not ignoring what’s happening.  
+		p It’s best to be completely honest, as this can encourage them to give you more time to pay. 
+		p Make your offer of repayment and be clear about whether it’s weekly or monthly. If the first person you speak to is unhelpful, ask to speak to someone more senior.
+		p Keep a note of who you’ve spoken to and what you’ve agreed, and follow up your call with a letter, confirming it all. Make sure you keep copies of any letters you write.
+
+		h4 If you can’t agree with the creditor
+		p You can get help from a specialist debt adviser if you’re finding it difficult to come to an agreement with a creditor. 
+		h3 Non-priority debts
+		p Once you’ve made new arrangements for any priority debts, you can move on to non-priority debts. 
+		p Use the #[a(href="#") budgeting tool] if you need to recalculate your incomings and outgoings after setting up new payments for priority debts.
+		p You’ll need to use the money you have left each week or month to pay off the non-priority debts. 
+
+		.callout
+			p Your creditors might try and pressure you into making a payment over the phone. Try not to feel pressured to do this, even if they’re being pushy. You don’t have to make a payment if you don’t want to. 
+
+		p Contacting your creditors can be a hard thing to do - if you need help, contact Citizens Advice first - they can talk you through the process.  
+
+		h2 After you’ve worked out your budget 
+		p Once you’ve done a budget, you should have a good idea of what money you’ve got left each month after your living costs. 
+		p You normally won’t have to pay back all of the money you owe straight away. You can negotiate with your creditors to come to an agreement where you pay back an amount each month that you can afford. 
+
+		.callout--related
+			h3 Get more help
+			p You can get free advice from one of our debt specialists. They can talk through your options and help you to find a solution. 

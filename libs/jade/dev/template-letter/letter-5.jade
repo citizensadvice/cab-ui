@@ -1,0 +1,86 @@
+block settings
+	- var title = "Letter to complain about faulty goods"
+	- var sidebar = true
+	- var mockup = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block script
+	script.
+		var x = ($('#letter').width())*1.3;
+		$('#letter div').css({'min-height':x+'px'});
+		$(window).resize(function() {
+			var x = ($('#letter').width())*1.3;
+			$('#letter div').css({'min-height':x+'px'});
+		});
+
+		$(document).ready(function() {
+			$('.conditional').click(function() {
+				if( $(this).find('input[value="2"]').is(':checked')) {
+					$(this).next().show();
+				} else {
+					$(this).next().hide();
+				}
+			});
+		});
+
+
+block content
+	.articleContent
+		p Use this letter template to complain to a trader about faulty goods. It should help the trader understand your point of view and their legal obligation to sort out the problem.
+
+		p You can send the letter by post or copy the text into an email. If you’d prefer to talk to the trader on the phone or in person you could read it out to them.
+
+		p Before you use this template, make sure you read our advice on how to return faulty goods.
+
+
+		.well--outline
+			.letter-steps
+				p Step 5 of 5
+
+			//h2 Letter to complain about faulty goods
+			h2 About the problem
+
+			fieldset.conditional
+				label(for="conditional-two") What's wrong with the goods?
+				label.checkbox.checkbox--block
+					input(name="conditional-two", type="checkbox", value="1")
+					| Not of satisfactory quality
+				label.radio.radio--block
+					input(name="conditional-two", type="checkbox", value="1")
+					| Not fit for purpose
+				label.radio.radio--block
+					input(name="conditional-two", type="checkbox", value="1")
+					| Do not match the description
+				label.radio.radio--block
+					input(name="conditional-two", type="checkbox", value="2")
+					| Other reason
+			.conditional--fields
+				fieldset
+					textarea#yourAddress(rows="4")
+
+			fieldset.conditional
+				label(for="conditional-two") What are you asking for?
+				label.radio.radio--block
+					input(name="conditional-two", type="radio", value="1")
+					| Ask for a refund
+				label.radio.radio--block
+					input(name="conditional-two", type="radio", value="1")
+					| Ask for a replacement
+				label.radio.radio--block
+					input(name="conditional-two", type="radio", value="1")
+					| Ask for a repair
+				label.radio.radio--block
+					input(name="conditional-two", type="radio", value="1")
+					| Ask for a discount
+				label.radio.radio--block
+					input(name="conditional-two", type="radio", value="2")
+					| Ask for compensation
+			.conditional--fields
+				label(for="yourName") Amount of compensation requested
+				input#standardField(placeholder="", type="text")
+
+
+			a.btn-light.left-button-icon(href="letter-4.html") Back
+			a.btn.right-button-icon(href="letter-6.html") Complete

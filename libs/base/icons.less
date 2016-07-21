@@ -166,7 +166,8 @@
     border: 0;
 }
 .a-social-whatsapp,
-.a-social-google-plus {
+.a-social-messenger-plus,
+.a-social-linkedin {
     white-space: nowrap;
 }
 .a-social-whatsapp:before {
@@ -175,9 +176,15 @@
     &:extend(.a-social);
     border: 0;
 }
-.a-social-google-plus:before {
-    content: @i-google;
-    color: @google-plus-brand-colour;
+.a-social-messenger:before {
+    content: @i-messenger;
+    color: @messenger-brand-colour;
+    &:extend(.a-social);
+    border: 0;
+}
+.a-social-linkedin:before {
+    content: @i-linkedin;
+    color: @linkedin-brand-colour;
     &:extend(.a-social);
     border: 0;
 }
@@ -193,14 +200,14 @@
     //line-height: 2.5rem;
     display: inline-block;
     padding: 0 0.45em 0 0;
-    border-bottom: 0;
+    border-bottom-color: @white;
     font-size: 125%;
     position: relative;
     bottom: -0.125em; //shift baseline of icons slightly down
 }
 
 .info-reviewed {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     display: inline-block;
     &:before {
@@ -210,7 +217,7 @@
     }
 }
 .info-owner {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     display: inline-block;
     &:before {
@@ -220,7 +227,7 @@
     }
 }
 .info-extent {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     display: inline-block;
     &:before {
@@ -230,7 +237,7 @@
     }
 }
 .a-social-print {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     &:before {
         content: @i-print;
@@ -240,7 +247,7 @@
     }
 }
 .a-social-references {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     &:before {
         content: @i-star;
@@ -249,8 +256,18 @@
         bottom: -0.05em;
     }
 }
+.a-social-word {
+    border-bottom-color: @white;
+    margin-right: .9em;
+    &:before {
+        content: @i-doc-word;
+        color: @blue-light;
+        &:extend(.a-social-top);
+        bottom: -0.05em;
+    }
+}
 .a-social-email {
-    border-bottom: 0;
+    border-bottom-color: @white;
     margin-right: .9em;
     &:before {
         content: @i-email;
@@ -333,8 +350,13 @@
     .icon;
 }
 
-.icon-google:before {
-    content: @i-google;
+.icon-messenger:before {
+    content: @i-messenger;
+    .icon;
+}
+
+.icon-linkedin:before {
+    content: @i-linkedin;
     .icon;
 }
 

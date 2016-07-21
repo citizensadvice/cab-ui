@@ -1,0 +1,65 @@
+block settings
+	- var title = "Step 1 - Gather information for each debt"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Gather information for each debt"}])
+
+block sidebar
+	- var section = "Get help with your debts"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Step 1 - Gather information for each debt", href: "step-1.html"},
+		{title: "Step 2 - Work out which debts are a priority", href: "step-2.html"},
+		{title: "Step 3 - Work out what you can afford to pay", href: "step-3.html"},
+		{title: "Step 4 - Contact your creditors", href: "step-4.html"},
+		{title: "After you've worked out your budget", href:"after-your-budget.html"}],
+		1)
+
+block content
+	.articleContent
+		p Find any letters and emails you've had about your debts, along with the credit agreements you've signed.
+
+		p For each debt, you need to find:
+		ul
+			li the name of the creditor or lender
+			li your account or reference number
+			li a copy of the loan agreement you signed (sometimes called a 'credit agreement' in your paperwork)
+			li details of how much the debt is now
+		
+		p If you don't have an up-to-date statement from a creditor, you can ask them for one. This will tell you all the payments you've made and what's left to pay.
+
+		p Make a list of your creditors and how much you owe each one. You can #[a(href="#") print and use our example table] to do this, or start a spreadsheet or list of your own.
+
+		h3 Example table
+
+		table
+			thead
+				tr
+					th(scope="col") Name or type of creditor
+					th(scope="col") Account or reference number
+					th(scope="col") Amount you owe
+			tbody
+				tr
+					td Example: NatWest mortgage
+					td BN6654-11
+					td £2350
+				tr
+					td Example: Mastercard
+					td 5299 - xxxx-xxxx-xxxx
+					td £11,235
+
+
+		a.blockLinks(href="#{dir}dev/debt/steps/step-2.html") Step 2 - Work out which debts are a priority
+		a.blockLinks.blocklinks--back(href="#{dir}dev/debt/get-help-with-your-debts-1.html") Get help with your debts
+
+		//.callout--related
+			h3 Get more help
+			p You can get free advice from one of our debt specialists. They can talk through your options and help you to find a solution. 

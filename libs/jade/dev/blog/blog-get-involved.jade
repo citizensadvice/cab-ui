@@ -3,6 +3,7 @@ block settings
 	- var sidebar = true
 	- var toolbars = false
 	- var dir = "../../"
+	- var blogname = "Digital Blog"
 	- var blog = true
 	- var nofooter = true
 
@@ -49,10 +50,13 @@ block content
 
 			button.btn.btn-secondary.right-button-icon Submit
 
-
 		.title__subheading--footer
 			p Share this page. #[a(#) Find out more about sharing.]
 			a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
 			a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
-			a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
+			a.a-social-messenger.show-mobile(href="") Messenger
+			a.a-social-linkedin.show-mobile(href="") LinkedIn
+			a.a-social-email(href="javascript:emailCurrentPage()", data-track="Email page") Email
+			button.a-social-copy Copy link
+				.copied Copied!

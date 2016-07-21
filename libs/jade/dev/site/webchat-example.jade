@@ -1,0 +1,37 @@
+doctype html
+html.no-js
+	head
+		title Citizens Advice webchat
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
+		meta(content="EWS", name="cab-extent")
+		meta(content="../../static/images/apple-touch-icon.png")
+		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
+
+		// Stylesheets
+		link(href="../../css/guide.css", rel="stylesheet")
+		link(href="../../images/favicon/32.png", rel="shortcut icon")
+		link(href="../../images/favicon/228.png", rel="apple-touch-icon")
+
+	body(onload="window.resizeTo(320,480)")
+		header#main-nav-beta
+			.navigation
+				.content(style="text-align: left !important; padding: 10px !important;")
+					img.wide(src="../../images/ca-logo-hz-280px.svg" style="text-align: left !important; max-width: 180px !important;")
+
+		aside(class="" style="max-width:400px; padding: 10px !important; margin-top: 10px !important;" id="agilisys-engage-webchat")
+			
+			p Need help now?
+			p Chat on-line to one of our advisers.
+			p Confirm you're happy with our terms and conditions stating that we'll collect and store personal information you provide, but won't share it.
+			p Please click here for more information.
+
+			fieldset
+				legend(for="radio") I consent
+				label.radio.radio--block
+					input(checked, name="radio", type="radio", value="option1")
+					| Yes
+
+			button.btn.tick-button-icon(type="submit") Submit

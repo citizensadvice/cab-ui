@@ -1,0 +1,40 @@
+block settings
+	- var title = "Step 3 - Work out what you can afford to pay"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Step 2 - Work out which debts are a priority"}])
+
+block sidebar
+	- var section = "Get help with your debts"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Step 1 - Gather information for each debt", href: "step-1.html"},
+		{title: "Step 2 - Work out which debts are a priority", href: "step-2.html"},
+		{title: "Step 3 - Work out what you can afford to pay", href: "step-3.html"},
+		{title: "Step 4 - Contact your creditors", href: "step-4.html"},
+		{title: "After you've worked out your budget", href:"after-your-budget.html"}],
+		3)
+
+block content
+	.articleContent 
+		p The amount you offer to each creditor needs to be realistic for you to pay, as well as acceptable to them. 
+		p If you don’t know how much you have left each week or month after your household bills and living costs, use our budgeting tool to help you. 
+		p Once you know what you can offer, follow the advice in Step 4 about contacting your creditors.
+
+		h3 If you have no money spare
+		p Get help from a free debt specialist if you’ve worked out your budget and have little or no money spare each month. A specialist can explain your options and will help you find a solution.
+
+		a.blockLinks(href="#{dir}dev/debt/steps/step-4.html") Step 4 - Contact your creditors
+		a.blockLinks.blocklinks--back(href="#{dir}dev/debt/get-help-with-your-debts-1.html") Get help with your debts
+
+		//.callout--related
+			h3 Get more help
+			p You can get free advice from one of our debt specialists. They can talk through your options and help you to find a solution. 

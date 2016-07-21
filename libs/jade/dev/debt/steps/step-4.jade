@@ -1,0 +1,54 @@
+block settings
+	- var title = "Step 4 - Contact your creditors"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Debt", href: dir + "#"},
+		{title: "Step 4 - Contact your creditors"}])
+
+block sidebar
+	- var section = "Get help with your debts"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Step 1 - Gather information for each debt", href: "step-1.html"},
+		{title: "Step 2 - Work out which debts are a priority", href: "step-2.html"},
+		{title: "Step 3 - Work out what you can afford to pay", href: "step-3.html"},
+		{title: "Step 4 - Contact your creditors", href: "step-4.html"},
+		{title: "After you've worked out your budget", href:"after-your-budget.html"}],
+		4)
+
+block content
+	.articleContent 
+		p Once you’ve completed Steps 2 and 3, you’ll know which of your debts is a ‘priority’ and how much you can offer each creditor. 
+		p Deal with any priority debts first, before dealing with non-priority debts. 
+
+		h2 Priority debts
+		p Call each priority creditor as soon as possible. Explain that you’re in debt and why, and that you’re sorting out the situation. This shows your creditors that you’re not ignoring what’s happening.  
+		p It’s best to be completely honest, as this can encourage them to give you more time to pay. 
+		p Make your offer of repayment and be clear about whether it’s weekly or monthly. If the first person you speak to is unhelpful, ask to speak to someone more senior.
+		p Keep a note of who you’ve spoken to and what you’ve agreed, and follow up your call with a letter, confirming it all. Make sure you keep copies of any letters you write.
+
+		h4 If you can’t agree with the creditor
+		p You can get help from a specialist debt adviser if you’re finding it difficult to come to an agreement with a creditor. 
+		h2 Non-priority debts
+		p Once you’ve made new arrangements for any priority debts, you can move on to non-priority debts. 
+		p Use the #[a(href="#") budgeting tool] if you need to recalculate your incomings and outgoings after setting up new payments for priority debts.
+		p You’ll need to use the money you have left each week or month to pay off the non-priority debts. 
+
+		.callout
+			p Your creditors might try and pressure you into making a payment over the phone. Try not to feel pressured to do this, even if they’re being pushy. You don’t have to make a payment if you don’t want to. 
+
+		p Contacting your creditors can be a hard thing to do - if you need help, contact Citizens Advice first - they can talk you through the process.  
+
+		a.blockLinks(href="#{dir}dev/debt/steps/after-your-budget.html") After you’ve worked out your budget
+		a.blockLinks.blocklinks--back(href="#{dir}dev/debt/get-help-with-your-debts-1.html") Get help with your debts
+
+		//.callout--related
+			h3 Get more help
+			p You can get free advice from one of our debt specialists. They can talk through your options and help you to find a solution. 

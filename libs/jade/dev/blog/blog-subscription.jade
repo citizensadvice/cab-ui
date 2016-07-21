@@ -1,0 +1,48 @@
+block settings
+	- var title = "Subscribe by email"
+	//- var sidebar = true
+	- var dir = "../../"
+	//- var blogname = "Digital Blog"
+	- var blog = true
+	- var fullpage = true
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.fullwidth
+		.fullwidth-content
+			.title
+				h1.title__heading.js-ref
+					span.title__title #{title}
+			.flex-row
+				.col-sm-8
+					form
+					.fieldset
+						label(for="standardField") Your email
+						input#standardField(placeholder="email@email.com", type="email")
+					.fieldset(style="display:block;")
+						legend(for="checkbox") Select the blogs you'd like to subscribe to
+						label.checkbox.checkbox--block
+							input(name="checkbox", type="checkbox")
+							p
+								span Charity blog
+								br
+								| A blog for the whole charity
+						label.checkbox.checkbox--block
+							input(name="checkbox", type="checkbox")
+							p
+								span Policy blog
+								br
+								| Our blog about policy updates and changes
+						label.checkbox.checkbox--block
+							input(checked, name="checkbox", type="checkbox")
+							p
+								span Digital blog
+								br
+								| The digital teams blog
+					.fieldset
+						button.btn.tick-button-icon(type="submit") Update email preferences
