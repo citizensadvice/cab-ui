@@ -1,0 +1,89 @@
+block settings
+	- var title = "Change of circumstances while you're getting Attendance Allowance"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Claiming Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Claiming Attendance Allowance"
+	+sidebar([
+		{title: "How to claim Attendance Allowance", href: "how-to-claim-attendance-allowance.html"},
+		{title: "Help with filling in the Attendance Allowance form", href: "help-with-filling-in-the-attendance-allowance-form.html"},
+		{title: "Claiming Attendance Allowance if you're terminally ill", href: "claiming-attendance-allowance-if-youre-terminally-ill.html"},
+		{title: "Renew an Attendance Allowance claim", href: "renew-an-attendance-allowance-claim.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p You need to tell the Department for Work and Pensions (DWP) as soon as possible if your condition changes - this can affect your Attendance Allowance.
+			p You should call the DWP&apos;s Attendance Allowance helpline if:
+			ul
+				li your condition gets better or worse
+				li the level of help and care you need changes
+				li you go into hospital for more than 28 days
+				li you go into a care home or residential care
+			p
+				strong Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312
+				br
+				| Monday to Friday, 8am to 6pm
+			p Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			.callout
+				p There are lots of changes that can affect Attendance Allowance and these are just some examples.
+				p If you&apos;re not sure if a change affects your Attendance Allowance, it&apos;s best to tell the DWP anyway. Not telling them could mean you&apos;re missing out on extra money, or you could get an &apos;overpayment&apos; - this is when you&apos;re paid money you have to pay back.
+			h2#h-if-you-go-into-hospital.ref-heading
+				span.ref-heading__heading If you go into hospital
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s best to keep the DWP informed of any dates you go in and out of hospital. This will ensure you&apos;ll always get the right amount of Attendance Allowance and you won&apos;t have to pay any money back.
+			p Your Attendance Allowance will stop after you&apos;ve been in hospital for 28 days (4 weeks). You&apos;ll be paid again from the day that you leave hospital.
+			p When working out how many days you&apos;ve been in hospital, don&apos;t count the day you go in or the day you come out.
+			h3#h-going-in-and-out-of-hospital-over-a-period-of-time.ref-heading
+				span.ref-heading__heading Going in and out of hospital over a period of time
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If you&apos;re in hospital and come back out again, but then go back within 28 days, these periods in hospital will be &apos;linked&apos; and added together. Here&apos;s an example of how it works:
+			p Eliot goes into hospital on 1 January. He then returns home on 12 January. This means he&apos;s been in hospital for 10 full days (you don&apos;t count the first day or the last day).
+			.callout--quote
+				p Eliot has to go back to hospital on 19 January. Because he&apos;s been out of hospital for less than 28 days, these 2 periods in hospital become linked.
+				p He keeps going in and out of hospital over the next few months but there&apos;s always less than 28 days between each hospital stay. This means that his linked periods in hospital will all add up over time. Eventually he has a total of 28 days of linked time in hospital. When he reaches the 28 days of linked time in hospital, Eliot&apos;s Attendance Allowance will stop. His Attendance Allowance will be paid again from the day he gets out of hospital.
+				p If Eliot is out of hospital for more than 28 days, the linked period will end. A new linked period will start if he goes into hospital again.
+			p The DWP might send you a new form to fill in and return if you&apos;ve been in hospital for a long time. The form will be similar to the one you filled in when you first applied for Attendance Allowance - read our guidance for .
+			h2#h-if-you-live-in-a-care-home.ref-heading
+				span.ref-heading__heading If you live in a care home
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s best to keep the DWP informed of any dates when you go in and out of &apos;residential care&apos; - for example, a care home. That way you&apos;ll always get the right amount of Attendance Allowance and won&apos;t have to pay any money back.
+			p You&apos;ll be able to get Attendance Allowance for any days you&apos;re at home - even if it&apos;s just for part of the day.
+			p You can still get Attendance Allowance if you&apos;re paying for the care home out of your own money.
+			.callout--quote
+				h3#h-example.ref-heading
+					span.ref-heading__heading Example
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p If you&apos;re in a care home from Monday to Friday and are home at the weekend, you&apos;ll get Attendance Allowance for 4 days a week. Your Attendance Allowance will be paid for Friday, Saturday, Sunday and Monday.
+				p You won&apos;t get Attendance Allowance for Tuesday, Wednesday or Thursday because you&apos;ll be in the care home.
+			h2#h-if-you-re-terminally-ill-and-live-in-a-care-home-or-hospice.ref-heading
+				span.ref-heading__heading If you&apos;re terminally ill and live in a care home or hospice
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can still get Attendance Allowance if you&apos;re terminally ill and live in a hospice.
+			p Read more about how to claim Attendance Allowance if you have a terminal illness.
+			.callout--adviser
+				p Full details of how Attendance Allowance is affected by stays in a hospital or care home can be found in the Disability Rights Handbook or CPAG.
+				p You can also find advice on how to manage linked stays.

@@ -1,0 +1,90 @@
+block settings
+	- var title = "Extra money and help you can get while on Attendance Allowance"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Before you claim Attendance Allowance"
+	+sidebar([
+		{title: "Check if you're entitled to Attendance Allowance", href: "check-if-youre-entitled-to-attendance-allowance.html"},
+		{title: "How much Attendance Allowance you can get", href: "how-much-attendance-allowance-you-can-get.html"},
+		{title: "Extra money and help you can get while on Attendance Allowance", href: "extra-money-and-help-you-can-get-on-attendance-allowance.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p If you get Attendance Allowance you could also get other types of help to look after yourself.
+			p The type of help you get will depend on your circumstances.
+			.callout
+				h3#h-get-assistance.ref-heading
+					span.ref-heading__heading Get assistance
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p You can get free advice at your nearest Citizens Advice who can help you find out what extra money and support you might be able to get and help you to apply.
+			h2#h-help-with-your-council-tax.ref-heading
+				span.ref-heading__heading Help with your Council Tax
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You might be able to get help with Council Tax for the first time or more help if you get Attendance Allowance.
+			p Read more about #[a.a-external(href='#', rel='external') help with Council Tax] on the Age UK website.
+			h2#h-check-if-you-can-get-higher-benefit-payments.ref-heading
+				span.ref-heading__heading Check if you can get higher benefit payments
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You might be able to get more money with your other benefits or tax credits if you get Attendance Allowance.
+			p You might not be able to get extra money if someone is paid Carer&apos;s Allowance for looking after you. This is a complicated area so you should seek advice from your nearest Citizens Advice.
+			p You might not be able to get extra money if someone is paid Carer&apos;s Allowance for looking after you. This is a complicated area so you should seek advice from your&nbsp;
+				a(href='#') nearest Citizens Advice .
+			p You might get more money with these benefits:
+			ul
+				li Pension Credit
+				li Housing Benefit
+				li Income-based Jobseeker&apos;s Allowance
+				li Income-related Employment and Support Allowance
+				li Income Support
+			p You might also get an increase in your Child Tax Credits or Working Tax Credits if you get Attendance Allowance.
+			p If you get Attendance Allowance you won&apos;t be affected by the &apos;Benefit Cap&apos;, which limits the amount of benefit payments a household can get.
+			p Any money being taken from your benefits because other adults share your household may also be stopped if you get Attendance Allowance.
+			p Contact all the benefit offices dealing with your other benefits and tell them you are getting Attendance Allowance. This will ensure that they assess what other help you might be able to get.
+			p You might need to send them a copy of your Attendance Allowance decision letter.
+			.callout
+				p Getting Attendance Allowance won&apos;t reduce any of your other benefits. It&apos;s always best to ask what extra help you&apos;re entitled to. Contact&nbsp;your&nbsp;#[a(href='#') nearest Citizens Advice] for help.
+			h2#h-get-travel-help.ref-heading
+				span.ref-heading__heading Get travel help
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If you get Attendance Allowance you might be able to get:
+			ul
+				li
+					a(href='#') a Disabled Person&apos;s Railcard
+				li
+					a(href='#') a Blue Badge
+			p Getting Attendance Allowance does not automatically qualify you to get a Blue Badge but it may help.
+			h2#h-other-help---carer-s-allowance.ref-heading
+				span.ref-heading__heading Other help - Carer&apos;s Allowance
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If someone looks after you they may be able to claim Carer&apos;s Allowance if you get Attendance Allowance.
+			p Your carer might get Carer&apos;s Allowance if:
+			ul
+				li you get any rate of Attendance Allowance
+				li they spend at least 35 hours a week caring for you
+				li they earn less than &pound;110 a week (this includes pensions income)
+			p Read more about
+				a.a-external(href='#', rel='external') claiming Carer&apos;s Allowance  on GOV.UK.
+			.callout
+				p
+					| Your benefit payments could be affected if someone gets Carer&apos;s Allowance for looking after you. Get help from&nbsp;your&nbsp; #[a(href='#') nearest Citizens Advice].

@@ -1,0 +1,149 @@
+block settings
+	- var title = "Help with filling in the Attendance Allowance form"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Claiming Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Claiming Attendance Allowance"
+	+sidebar([
+		{title: "How to claim Attendance Allowance", href: "how-to-claim-attendance-allowance.html"},
+		{title: "Help with filling in the Attendance Allowance form", href: "help-with-filling-in-the-attendance-allowance-form.html"},
+		{title: "Claiming Attendance Allowance if you're terminally ill", href: "claiming-attendance-allowance-if-youre-terminally-ill.html"},
+		{title: "Renew an Attendance Allowance claim", href: "renew-an-attendance-allowance-claim.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p Filling in the Attendance Allowance form can be difficult - there are some personal questions which can be emotionally draining. Don&apos;t worry though - help is available and you don&apos;t have to fill in the form alone.
+			p A specialist at your&nbsp;
+				a(href='#') nearest Citizens Advice &nbsp;can help you with the form, or even fill it in for you.
+			p
+				br
+				| The form is 31 pages and can take a long time to fill in so you might need to ask for an appointment if you want help from your nearest Citizens Advice.
+			p You can ask a friend, relative or carer if you&apos;d rather they help you with the form.
+				br
+				| If you&apos;re terminally ill you&apos;ll only need to answer some of the questions. Read more about .
+			h2#h-what-you-should-write-about-on-the-form.ref-heading
+				span.ref-heading__heading What you should write about on the form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p The Department for Work and Pensions (DWP) will use your form to decide whether to give you Attendance Allowance. They&apos;ll be looking to see:
+			ul
+				li how much help you need
+				li how often you need help
+				li what sort of help you need
+			p You don&apos;t have to be getting any help at the moment - the important thing is that you need it.
+			p Questions 27-43 ask about your care needs with personal tasks. It&apos;s really important that you use the blank boxes to explain if you need:
+			ul
+				li someone to help you with personal tasks - for example washing, getting out of bed or getting dressed - at least 3 times during the day
+				li someone to supervise you throughout the day to make sure you stay safe - for example to stop you falling or to look after you if you have seizures or blackouts
+				li someone to help you with personal tasks repeatedly (2 or more times) during the night or just once if it&apos;s for 20 minutes or more - for example if you need help getting out of bed, going to the toilet or changing the sheets if you have an accident
+				li someone to watch over you or supervise you during the night to make sure you&apos;re safe - they need to help you at least 3 times, or just once if it&apos;s for 20 minutes or more, for example in case you have a fit while you&apos;re asleep, or to stop you falling over if you have to get up
+			h2#h-keep-a-diary.ref-heading
+				span.ref-heading__heading Keep a diary
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s worth keeping a diary of your needs for at least a week before you fill in the form. #[a.a-binary(href='#') You can use our diary template].
+			p The diary can give you a good idea of your &apos;care needs&apos; - this is the help you need to complete personal tasks.
+			p Help with personal tasks
+				strong does not  mean help with things like housework or gardening or other tasks around the home.
+			p Personal tasks means things like:
+			ul
+				li getting in or out of bed
+				li having a bath or shower
+				li getting dressed
+				li being reminded or encouraged to eat or drink
+			p Remember to include any help you need during the night too.
+			p You should also write on the diary how many times you need help with tasks like getting out of chairs.
+			p If you get help to fill in the form from&nbsp;
+				a(href='#') Contact your nearest Citizens Advice , remember to take your diary with you.
+			h2#h-tips-for-filling-in-the-form.ref-heading
+				span.ref-heading__heading Tips for filling in the form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You should read all these tips before you start filling in your form.
+			h3#h-write-in-the-blank-boxes.ref-heading
+				span.ref-heading__heading Write in the blank boxes
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s really important that you explain the help or supervision you need in the blank boxes for Q27-43. Don&apos;t just tick the boxes or write how many times you need help or supervision.
+			h3#h-don-t-expect-the-person-making-the-decision-to-know-about-your-condition.ref-heading
+				span.ref-heading__heading Don&apos;t expect the person making the decision to know about your condition
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p The person making a decision on Attendance Allowance won&apos;t be a medical expert, so don&apos;t assume they&apos;ll know about your condition. It&apos;s important you give as much information as possible on the form about how much help you need. Don&apos;t think that any detail is too small to include.&nbsp;Use an extra sheet of paper if you need to.
+			h3#h-remember-to-say-how-many-times-you-need-help-with-tasks.ref-heading
+				span.ref-heading__heading Remember to say how many times you need help with tasks
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s really important that you explain how many times you need or get help each day for the &apos;care needs&apos; questions. For example if you need help getting to and from the toilet, remember to write the total amount for the day. #[a.a-binary(href='#') Filling in our diary template] will help you.
+			h3#h-it-s-fine-to-repeat-yourself-in-different-answers.ref-heading
+				span.ref-heading__heading It&apos;s fine to repeat yourself in different answers
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You might feel like you&apos;re repeating some of your answers. It&apos;s fine to write about the same thing again if it&apos;s relevant to more than one question. For example if you have mobility problems and have difficulty getting to the toilet, you should explain this in Q28. You should also explain you have difficulty getting to the toilet in Q31 - moving around indoors.
+			h3#h-mention-the-adaptations-you-use-in-the-relevant-question.ref-heading
+				span.ref-heading__heading Mention the adaptations you use in the relevant question
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;re asked to list all the adaptations and aids you use in Q25 but you should also write about them in the relevant &apos;care needs&apos; questions. For example if you use a grab rail to get in and out of the shower you should also mention it in Q29.
+			h3#h-explain-if-you-have-good-days-and-bad-days.ref-heading
+				span.ref-heading__heading Explain if you have good days and bad days
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If your illness or disability means you have good and bad days try to explain how many of each you have in an average week. Filling in our diary template can help you do this. Explain what help you need on a good day and on a bad day.
+			h3#h-explain-if-tasks-take-you-longer.ref-heading
+				span.ref-heading__heading Explain if tasks take you longer
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If you can do some personal tasks on your own but they take you a long time, explain this on the form. It might help if you can compare how long it takes you to a friend or someone else you know who doesn&apos;t have your condition.
+			h3#h-remember-to-write-about-the-help-you-need.ref-heading
+				span.ref-heading__heading Remember to write about the help you need
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Remember you don&apos;t actually have to be getting any help to get Attendance Allowance - the important thing is that you need it and that you explain why you need it on the form.
+			h2#h-example-answers-for-q27-29.ref-heading
+				span.ref-heading__heading Example answers for Q27-29
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll need to write in a lot of blank boxes on the Attendance Allowance form. Read our examples to help you get an idea of what to write.
+			section.revealable
+				h3#h-example-answer-for-q27 Example answer for Q27
+				p James has depression and his wife, Doreen, has to encourage him to get out of bed in the morning.
+				p He writes in the blank box for Q27: &apos;My depression makes me feel like it&apos;s not worth getting out of bed in the morning. On a bad day - about 3 times a week - I&apos;m awake at 4am and can&apos;t get back to sleep. I don&apos;t want to get up but I don&apos;t want to stay in bed either - I just don&apos;t want to do anything. Doreen will talk to me and encourage me to get up and tell me what we can do that day if I feel up to it. If Doreen&apos;s out visiting a friend I&apos;ll just lay there until she comes home as I can&apos;t face getting up.
+				p On a good day, Doreen will still need to encourage me to do things like have dinner or go to bed - otherwise I&apos;ll just stay up until 3am because I&apos;m worried I won&apos;t be able to sleep again and it will make my depression worse.&quot;
+			section.revealable
+				h3#h-example-answer-for-q28 Example answer for Q28
+				p Judith has dementia and is sometimes incontinent during the night. Her husband, Jeremy helps her.
+				p She writes in the blank box for Q28: &quot;Sometimes I don&apos;t realise I need to go to the toilet when I&apos;m asleep and I have an accident. Jeremy sleeps in the same room and knows when it happens as I get upset when I realise. He helps me get out of bed and into the shower. He then helps me put on some clean pyjamas and he changes the sheets. He also puts the washing machine on so that the sheets are clean in the morning and he&apos;ll then sit by my bed comforting me until I go back to sleep. All this usually takes about 45 minutes - I don&apos;t know what I&apos;d do if Jeremy didn&apos;t help me.&quot;
+			section.revealable
+				h3#h-example-answer-for-q29 Example answer for Q29
+				p Sue has arthritis in her knees. Her niece, Rose, helps her shower in the morning.
+				p She writes in the blank box for Q29: &quot;I struggle to get in and out of the shower by myself. The last time I did I slipped over and banged my head. I&apos;ve got a grab rail to hold while I&apos;m in the shower but Rose still has to help me get up the step to get in and then help me down when I get out. She helps me 5 days a week - on the days she doesn&apos;t come I don&apos;t shower - it would take me too long to get in and out by myself and I&apos;m worried I&apos;ll have another fall. I&apos;m getting a special shower seat fitted to help while I&apos;m washing but I&apos;ll still need help up and down the step.&quot;
+			h2#h-get-someone-who-knows-you-to-fill-in-q49.ref-heading
+				span.ref-heading__heading Get someone who knows you to fill in Q49
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Q49 on the form asks for a &apos;statement from someone who knows you&apos;. You don&apos;t have to get someone to fill it in but it&apos;s best if you do. It can be anyone who knows about your illness or disability and how it affects your ability to do personal tasks.
+			p It&apos;s best if you can get a healthcare professional you&apos;ve seen recently to fill in Q49 - for example a doctor, consultant or Macmillan nurse.
+			p If you can&apos;t get a healthcare professional you can ask a friend, relative or carer. Before they write on the form, talk to them about how your illness or disability affects you. Tell them that the DWP wants to know how much help you need with personal tasks. It&apos;s worth asking them to read the advice on this page before they answer Q49.
+			p The box for Q49 is quite small - if they run out of space you can get them to continue on a separate sheet of paper. You can use our template for this.
+			h2#h-before-you-send-the-form.ref-heading
+				span.ref-heading__heading Before you send the form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Read through the form again before you send it to make sure you&apos;ve answered everything properly.
+			p Make a copy of the form in case you need to refer to it later, or in case it gets lost.

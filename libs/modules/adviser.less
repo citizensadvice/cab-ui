@@ -61,17 +61,14 @@
     background-color: lighten(@inventive-teal-lightest, 9%);
     margin-top: 1rem;
     .section-nav__parent {
-        padding: @box-spacing-vertical*.75 @box-spacing-horizontal*.75;
-        font-weight: @font-weight-boldest;
-        font-size: @font-size-medium;
-        color: @inventive-teal;
-        display: block;
-        &:before {
-            .adviser-badge;
-            bottom: .325em;
-            padding: .2em .5em;
-            margin-right: .4rem;
-        }
+        text-transform: uppercase;
+        font-weight: @font-weight-bolder;
+        font-size: .75rem;
+        background-color: @inventive-teal;
+        color: @white;
+        display: inline-block;
+        padding: .2em .5em;
+        margin: @box-spacing-vertical @box-spacing-horizontal;
     }
     li:hover {
         background-color: lighten(@inventive-teal-lightest, 12%);

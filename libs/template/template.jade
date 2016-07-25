@@ -60,7 +60,10 @@ html.no-js
 							a(href="#") Cymraeg</a>
 							a.hide-offline.main-header__login(href="")
 								i.icon-key
-								| Sign-in
+								if signedin
+									| Sign out
+								else
+									| Sign-in
 
 						form.main-header__search.hide-offline(action="")
 							label.screenreader(for="main-header__search__input") Search
