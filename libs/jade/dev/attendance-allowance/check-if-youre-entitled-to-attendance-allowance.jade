@@ -1,0 +1,142 @@
+block settings
+	- var title = "Check if you're entitled to Attendance Allowance"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Before you claim Attendance Allowance"
+	+sidebar([
+		{title: "Check if you're entitled to Attendance Allowance", href: "check-if-youre-entitled-to-attendance-allowance.html"},
+		{title: "How much Attendance Allowance you can get", href: "how-much-attendance-allowance-you-can-get.html"},
+		{title: "Extra money and help you can get while on Attendance Allowance", href: "extra-money-and-help-you-can-get-on-attendance-allowance.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p Lots of people aged 65 or over are entitled to Attendance Allowance but don&rsquo;t know enough about it to claim.
+			p You could get up to &pound;82.30 a week if you have a disability or illness that makes it hard for you to look after yourself. You can spend the money however you like and it could help you stay independent in your own home for longer.
+			p Attendance Allowance isn&rsquo;t means tested so it doesn&rsquo;t matter what other money you get. It doesn&rsquo;t matter how much you have in savings either - there&rsquo;s no limit.
+			p It won&rsquo;t affect your state pension and you can claim it if you&rsquo;re still working and earning money.
+			p You&rsquo;ll need to complete a long claim form when you apply for Attendance Allowance. It might seem daunting at first but help is available from your&nbsp;
+				a(href='#') nearest Citizens Advice &nbsp;so don&rsquo;t let the form put you off applying.
+			p If you&rsquo;d prefer to do it yourself you can follow our advice on how to fill in your claim form.
+			h2#h-how-you-can-spend-your-attendance-allowance.ref-heading
+				span.ref-heading__heading How you can spend your Attendance Allowance
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can spend your Attendance Allowance however you like - it&rsquo;s up to you. Lots of people spend it on something that makes life a bit easier, for example:
+			ul
+				li paying for taxis
+				li helping towards bills
+				li paying for a cleaner or gardener
+			.callout--quote
+				h3 Examples of how people spend their money
+				p #[strong Betty is 79 and has arthritis in her knee and hip and also has a heart condition]. She says: &ldquo;I use some of my Attendance Allowance to visit my friend, Nancy, who lives a few miles away. I used to get 2 buses and it took an hour and exhausted me but my Attendance Allowance means I can get a taxi there in 10 minutes. I also get a taxi to go to appointments, like the doctor or a consultant, or even the hairdresser. I still have enough money to pay for a cleaner once a week. It&rsquo;s made a huge difference to my life.&rdquo;
+				p #[strong David is 82 and has dementia.] He says: &ldquo;I struggle to make ends meet on my pension so I use my Attendance Allowance to help with bills. It means I don&rsquo;t have to worry about having the heating on if I&rsquo;m cold. The money also means I can see more of my grandchildren. They mean the world to me and it would be difficult to see them without the extra money as I can&rsquo;t get public transport on my own.&rdquo;
+			h2#h-who-can-claim.ref-heading
+				span.ref-heading__heading Who can claim
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You should apply for Attendance Allowance if you have a disability or illness and need help or supervision throughout the day or at times during the night (even if you don&rsquo;t currently get that help):
+			ul
+				li
+					p
+						| with your personal care - for example getting dressed, eating or drinking, getting in and out of bed, bathing or showering and going to the toilet
+			ul
+				li to stay safe
+			p Attendance Allowance isn&rsquo;t just for people with a physical disability or illness. You should also claim if you need help or supervision throughout the day or night and have:
+			ul
+				li a mental health condition
+				li learning difficulties
+				li a sensory condition - for example if you&rsquo;re deaf or blind
+			p Special rules apply if you&rsquo;re terminally ill. Read more about
+				a(href='claiming-attendance-allowance-if-youre-terminally-ill.html') applying for Attendance Allowance if you&rsquo;re terminally ill .
+			h3#h-the-6-month-rule.ref-heading
+				span.ref-heading__heading The 6-month rule
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You must have had care or supervision needs because of your disability or illness for at least 6 months before you can get Attendance Allowance. You can save time with your claim by applying before the end of the 6 months but you won&rsquo;t get any money until then.
+			h3#h-if-you-re-in-hospital.ref-heading
+				span.ref-heading__heading If you&rsquo;re in hospital
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can apply for Attendance Allowance if you&rsquo;re currently in hospital but you won&rsquo;t get any money until you leave.
+			h3#h-if-you-re-living-in-a-care-home.ref-heading
+				span.ref-heading__heading If you&rsquo;re living in a care home
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can&rsquo;t usually claim Attendance Allowance if you live in a care home. There are exceptions, for example if you pay for all your care home costs yourself.
+			h3#h-if-you-re-living-in-a-hospice.ref-heading
+				span.ref-heading__heading If you&apos;re living in a hospice
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can get Attendance Allowance if you&rsquo;re terminally ill and living in a hospice.
+			p Read more about
+				a(href='claiming-attendance-allowance-if-youre-terminally-ill.html') how to claim Attendance Allowance if you have a terminal illness.
+			h3#h-if-you-re-not-from-the-uk.ref-heading
+				span.ref-heading__heading If you&rsquo;re not from the UK
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			.callout--adviser
+				p
+					| Full details of eligibility requirements for non-UK nationals can be found in the Disability Rights Handbook or CPAG.
+			p If you&rsquo;re an EEA national living in the UK , you&rsquo;ll need to meet the habitual residence test.
+			p You normally can&rsquo;t apply if you&rsquo;re subject to immigration control, for example if you need a visa to live or work in the UK, or you have a visa that says &ldquo;no recourse to public funds&rdquo;. But you might be able to apply if you&rsquo;ve spent time living in another EEA country - it&rsquo;s best to&nbsp;
+				a(href='#') contact your nearest Citizens Advice &nbsp;or call the DWP helpline to check.
+			p
+				strong Attendance Allowance helpline
+			p Telephone: 0345 605 6055
+			p Textphone: 0345 604 5312
+			p Open Monday to Friday, 8am to 6pm
+			p Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			h3#h-if-you-ve-lived-outside-the-uk.ref-heading
+				span.ref-heading__heading If you&rsquo;ve lived outside the UK
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Regardless of what your immigration status is, you must have lived in the UK for at least 104 weeks out of the last 156 to claim Attendance Allowance. These don&rsquo;t need to be consecutive weeks - as long as you&rsquo;ve lived in the UK for any 104 weeks out of the last 156 it will count. This works out as 2 years out of the last 3.
+			p You might be able to apply if you&rsquo;ve spent time living in another EEA country - it&rsquo;s best to&nbsp;
+				a(href='#') contact your nearest Citizens Advice &nbsp;or call the DWP helpline to check.
+			p This rule doesn&rsquo;t apply if you&rsquo;re terminally ill.
+			h2#h-attendance-allowance-and-payment-of-other-benefits.ref-heading
+				span.ref-heading__heading Attendance Allowance and payment of other benefits
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Attendance Allowance is a tax-free benefit. You&rsquo;ll be exempt from the Benefit Cap so it won&rsquo;t affect any other benefits. Claiming Attendance Allowance might also mean you&rsquo;re entitled to extra help - for example, you might qualify for a council tax reduction (this depends on your personal circumstances).
+			p Read more in extra help Attendance Allowance could entitle you to.
+			h2#h-already-claiming-dla-or-pip.ref-heading
+				span.ref-heading__heading Already claiming DLA or PIP
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&rsquo;ll continue to get any existing award for Disability Living Allowance (DLA) or Personal Independent Payment (PIP) after your 65th birthday.
+			p You won&rsquo;t be able to claim Attendance Allowance at the same time.
+			p You can renew your DLA or PIP when the existing award ends as long as you still meet the eligibility criteria. If your renewal is unsuccessful you can apply for Attendance Allowance instead.
+			.callout
+				h3#h-if-you-re-about-to-turn-65.ref-heading
+					span.ref-heading__heading If you&apos;re about to turn 65
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p If you&apos;re 64 and thinking about applying for Attendance Allowance when you&apos;re 65, you might be better off claiming PIP before your 65th birthday - you might get more money.
+				p
+					a(href='#') Contact your nearest Citizens Advice for help.
+			.callout--related
+				h2#h-next-steps.ref-heading
+					span.ref-heading__heading Next steps
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p
+					a(href='how-much-attendance-allowance-you-can-get.html') How much Attendance Allowance you can get
+				p
+					a(href='how-to-claim-attendance-allowance.html') How to claim Attendance Allowance

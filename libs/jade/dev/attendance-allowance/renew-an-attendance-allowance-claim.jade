@@ -1,0 +1,91 @@
+block settings
+	- var title = "Renew an Attendance Allowance claim"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Claiming Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Claiming Attendance Allowance"
+	+sidebar([
+		{title: "How to claim Attendance Allowance", href: "how-to-claim-attendance-allowance.html"},
+		{title: "Help with filling in the Attendance Allowance form", href: "help-with-filling-in-the-attendance-allowance-form.html"},
+		{title: "Claiming Attendance Allowance if you're terminally ill", href: "claiming-attendance-allowance-if-youre-terminally-ill.html"},
+		{title: "Renew an Attendance Allowance claim", href: "renew-an-attendance-allowance-claim.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p Your Attendance Allowance will be awarded for either a fixed or indefinite period.
+			p If you were told you&apos;d get Attendance Allowance for a fixed period, you&apos;ll need to renew your claim before the fixed period ends. You&apos;ll still need to meet the #[a(href='check-if-youre-entitled-to-attendance-allowance.html') eligibility criteria] when you claim again.
+			p Your Attendance Allowance will stop if you don&apos;t renew your claim.
+			h2#h-your-renewal-letter.ref-heading
+				span.ref-heading__heading Your renewal letter
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You should get a letter from the Department for Work and Pensions (DWP) about 4 months before your Attendance Allowance is due to end. The letter will remind you that you have to make a new claim.
+			p It&apos;s a good idea to reapply at least 2 months before the end of your existing Attendance Allowance award. If you reapply 2 months before your existing claim ends, there won&apos;t be a break in your payments if you get Attendance Allowance again.
+			.callout--alert
+				p Don&apos;t ignore your Attendance Allowance renewal letter - your money will stop if you don&apos;t make a new claim.
+			h3#h-if-you-don-t-get-a-renewal-letter.ref-heading
+				span.ref-heading__heading If you don&apos;t get a renewal letter
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If you don&apos;t get a renewal letter it doesn&apos;t mean your Attendance Allowance will continue - you&apos;ll still need to reapply.
+			p If your benefit is due to end within 2 months and you haven&apos;t got a letter yet, call the DWP&apos;s Attendance Allowance helpline. Tell them your Attendance Allowance is ending and you need to renew your claim - they&apos;ll send you a renewal claim form.
+			p Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312
+				br
+				| Open Monday to Friday, 8am to 6pm
+				br
+				| Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			h2#h-filling-in-the-renewal-claim-form.ref-heading
+				span.ref-heading__heading Filling in the renewal claim form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You should look at your original Attendance Allowance claim form if you kept a copy - it could help you answer the questions on your new claim form.
+			p Don&apos;t worry if you didn&apos;t keep a copy - a specialist at&nbsp; #[a(href='#') your nearest Citizens Advice]&nbsp;can help you with the form, or even fill it in for you.
+			p You can also read our advice on #[a(href='help-with-filling-in-the-attendance-allowance-form.html') help with the Attendance Allowance claim form].
+			h2#h-if-you-have-an-indefinite-award-.ref-heading
+				span.ref-heading__heading If you have an &apos;indefinite award&apos;
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You might have been given Attendance Allowance for an indefinite period. This doesn&apos;t mean you&apos;ll continue to get Attendance Allowance for the rest of your life - it just means there&apos;s no fixed date for the DWP to review your claim.
+			p The DWP might want to review your claim if you tell them about a change that could affect your Attendance Allowance. You must tell them if:
+			ul
+				li your illness or disability gets better or worse
+				li you go into hospital
+				li you go into a care home
+			p Read more about changes that could affect your Attendance Allowance.
+			h2#h-if-your-attendance-allowance-has-ended.ref-heading
+				span.ref-heading__heading If your Attendance Allowance has ended
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p If your Attendance Allowance ended less than 2 years ago, you can make a new claim for the same illness or disability. You won&apos;t have to meet the 6-month qualifying period again. You&apos;ll need to meet all the other #[a(href='check-if-youre-entitled-to-attendance-allowance.html') eligibility criteria].
+			p Contact the DWP&apos;s Attendance Allowance helpline to make a new claim. Tell them that your Attendance Allowance ended less than 2 years ago and that you&apos;re reapplying for the same condition.
+			p
+				strong Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312
+				br
+				| Open Monday to Friday, 8am to 6pm
+				br
+				| Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			p If your Attendance Allowance ended more than 2 years ago, you&apos;ll need to make a new claim. Your previous claim will be disregarded, even if you&apos;re applying for the same illness or disability.
+			p You&apos;ll need to meet the 6-month qualifying period and all the other #[a(href='check-if-youre-entitled-to-attendance-allowance.html') eligibility criteria].

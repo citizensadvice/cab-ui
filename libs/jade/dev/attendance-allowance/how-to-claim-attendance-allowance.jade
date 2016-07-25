@@ -1,0 +1,123 @@
+block settings
+	- var title = "How to claim Attendance Allowance"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Claiming Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Claiming Attendance Allowance"
+	+sidebar([
+		{title: "How to claim Attendance Allowance", href: "how-to-claim-attendance-allowance.html"},
+		{title: "Help with filling in the Attendance Allowance form", href: "help-with-filling-in-the-attendance-allowance-form.html"},
+		{title: "Claiming Attendance Allowance if you're terminally ill", href: "claiming-attendance-allowance-if-youre-terminally-ill.html"},
+		{title: "Renew an Attendance Allowance claim", href: "renew-an-attendance-allowance-claim.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p You can claim Attendance Allowance if you&apos;re 65 or over and have care or supervision needs because of an illness or disability. You need to have had your illness or disability for at least 6 months before you&apos;ll get Attendance Allowance.
+			p You could get money that will help you stay independent in your own home for longer.
+			h2#h-applying-for-someone-else.ref-heading
+				span.ref-heading__heading Applying for someone else
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			.callout
+				h3#h-if-you-re-applying-for-someone-who-s-terminally-ill.ref-heading
+					span.ref-heading__heading If you&apos;re applying for someone who&apos;s terminally ill
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p There are special rules if the person you&apos;re applying for is terminally ill. Read our advice on&nbsp; #[a(href='claiming-attendance-allowance-if-youre-terminally-ill.html') how to claim Attendance Allowance if you have a terminal illness].
+			p You might need to apply for Attendance Allowance for someone else, for example if they&apos;re too ill to fill in the form or if they don&apos;t have the &apos;mental capacity&apos;. This means they&apos;re unable to make decisions.
+			p It&apos;s okay to fill in the form for someone if they can sign it themselves.&nbsp;
+			p If they can&apos;t sign the form you&apos;ll need to have the legal right to do it for them. You can sign the form for them if you:
+			ul
+				li are an appointee
+				li have power of attorney
+				li are a deputy
+			h3#h-get-permission-to-apply-for-someone-else.ref-heading
+				span.ref-heading__heading Get permission to apply for someone else
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll need to get the legal right if you want to apply for Attendance Allowance on behalf of someone who can&apos;t sign the form themselves.
+			p It can take a while to get this permission so it&apos;s best to do this as soon as possible so you don&apos;t delay the Attendance Allowance claim.
+			section.revealable
+				h3#h-if-you-just-want-to-sort-out-someone-s-benefits-become-an-appointee If you just want to sort out someone&apos;s benefits: become an appointee
+				p An appointee has the legal right to sort out someone&apos;s benefits for them. This includes spending the money in a way that helps the claimant and being responsible for reporting any changes, for example if they go into hospital.
+				p You can #[a.a-external(href='#', rel='external') apply to become an appointee] at GOV.UK.
+			section.revealable
+				h3#h-if-you-want-to-make-decisions-about-benefits-and-other-things-get-power-of-attorney If you want to make decisions about benefits and other things: get power of attorney
+				p You&apos;ll be able to make decisions for someone or help them make their own decisions if you have a lasting power of attorney (LPA). The person who wants you to be their LPA must be able to make their own decisions when they apply.
+				p There are 2 types of LPA - you can have 1 or both:
+				ul
+					li health and welfare
+					li property and financial affairs
+				p You can #[a.a-external(href='#', rel='external') apply to get power of attorney] at GOV.UK.
+			section.revealable
+				h3#h-if-the-person-you-want-to-make-decisions-for-can-no-longer-make-them-become-a-deputy If the person you want to make decisions for can no longer make them: become a deputy
+				p You should only apply to become a deputy for someone if they can&apos;t make decisions for themselves and there&apos;s no power of attorney for them.
+				p If they can still make decisions, it&apos;s probably best to become an appointee or get power of attorney for them.
+				p If they can&apos;t make decisions, you can #[a.a-external(href='#', rel='external') apply to become a deputy] at GOV.UK.
+			h2#h-get-an-application-form.ref-heading
+				span.ref-heading__heading Get an application form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can either phone for an application form or download one.&nbsp;
+			.callout
+				p It&apos;s best to phone because your payments will be backdated to the date you phoned. If you&nbsp;download an application form,&nbsp;you&apos;ll only be paid from the date that the DWP receive the form.
+			p Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312
+				br
+				| Monday to Friday, 8am to 6pm
+				br
+				| Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			p(dir='ltr') It&rsquo;s a quick call - you just need to give your name and address.
+			h2#h-keeping-a-diary.ref-heading
+				span.ref-heading__heading Keeping a diary
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s a good idea to keep a diary of your condition for at least a week before you fill in the form - particularly if you have bad days and good days. #[a.a-binary(href='#') Fill in our diary template to help you]. Write down your difficulties, the care or supervision you need and how long it took.
+			p The diary will help you when you answer questions on the form. You can also send it with the form to support your claim.
+			h2#h-fill-in-the-application-form.ref-heading
+				span.ref-heading__heading Fill in the application form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p The form can be confusing and difficult to understand - filling it in can also be emotionally difficult and time-consuming.
+			p You don&apos;t have to go through it alone - read our advice on&nbsp;
+				a(href='help-with-filling-in-the-attendance-allowance-form.html') filling in the Attendance Allowance form .
+			h2#h-send-your-application-form.ref-heading
+				span.ref-heading__heading Send your application form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p It&apos;s a good idea to make a copy of your filled-in application form and any other documents you send. This will be useful in case you need to refer to them later, for example if you need to reapply for Attendance Allowance after a few years.
+			p Send the form to:
+			p Attendance Allowance Unit
+				br
+				| Mail Handling Site A
+				br
+				| Wolverhampton
+				br
+				| WV98 2AD
+			p If you&apos;re waiting for something like a letter from your doctor, you should still send the form before the 6 week deadline. Include a letter saying you&apos;ll send more evidence and give them an approximate date for when you&apos;ll send it. If you send the form late you&apos;ll only get paid from when the DWP receives it.
+			h2#h-after-you-ve-sent-your-form.ref-heading
+				span.ref-heading__heading After you&apos;ve sent your form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll get a letter from the DWP within 2 weeks saying they&apos;ve received your claim. Call the Attendance Allowance helpline if you haven&apos;t received a letter after 2 weeks.
+			p You&apos;ll normally get a &apos;decision letter&apos; within 8 weeks - this will tell you whether or not you&apos;ll get Attendance Allowance. It will also tell you how much you&apos;ll get and how long your Attendance Allowance will last for.
+			p If you&apos;re terminally ill you&apos;ll get your decision letter within 2 weeks. You&apos;ll be awarded the higher rate of Attendance Allowance for 3 years.
+			p Next steps -&nbsp;
+				a(href='help-with-filling-in-the-attendance-allowance-form.html') Help with your Attendance Allowance claim form
