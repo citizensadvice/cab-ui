@@ -1,0 +1,101 @@
+block settings
+	- var title = "How much DLA you can get for your child"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "#"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Disability Living Allowance", href: dir + "#"},
+		{title: "How much DLA you can get for your child"}])
+
+block sidebar
+	- var section = "Before you claim DLA", href="../../"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "Check if you can get DLA for your child", href: "#"},
+		{title: "How much DLA you can get for your child", href:"#"}],
+		1)
+
+block content
+	.articleContent 
+		p You can get between £21.80 and £104.10 a week in Disability Living Allowance (DLA) to help look after a child who has a disability or health condition. The money can be spent on anything.
+		p DLA isn't means tested, so how much you earn doesn't impact how much you can get.
+		h2#h-how-much-you-ll-get.js-ref How much you'll get
+		p The amount of DLA you get is made up of 2 parts called 'components' - the ‘care component’ and the ‘mobility component’. Each component is paid at different rates.
+		p You might get one or both components, depending on the type of care your child needs. You’ll only have to do one application.
+		.table-scroll
+			table
+				thead
+					tr
+						td
+							strong Care component
+						td
+							strong How much (weekly)
+				tbody
+					tr
+						td Higher rate
+						td £82.30
+					tr
+						td Middle rate
+						td  £55.10
+					tr
+						td Lower rate
+						td £21.80
+		.table-scroll
+			table
+				thead
+					tr
+						td
+							strong Mobility component
+						td
+							strong How much (weekly)
+				tbody
+					tr
+						td Higher rate
+						td £57.45
+					tr
+						td Lower rate
+						td £21.80
+		h2#h-the-care-component.js-ref The care component
+		p The care component is based on how much care and supervision your child because of their condition.
+		p You’ll get the higher rate of £82.30 if your child either:
+		ul
+			li needs care or supervision frequently throughout both the day and night, or
+			li has been diagnosed as terminally ill and is not expected to live more than 6 months
+		p You’ll get the middle rate of £55.10 if your child either:
+		ul
+			li needs care or supervision throughout either the day or the night, or
+			li gets renal dialysis twice or more a week
+		p You’ll get the lower rate of £21.80 if your child needs extra care throughout some of the day (for at least an hour) but not at night.
+		h2#h-the-mobility-component.js-ref The mobility component
+		p The mobility component is based on your child’s ability to walk and how hard they find it to get around places that they don’t know well.
+		p The higher rate is usually given to children with severe physical difficulties, or conditions that mean it’s dangerous for them to get around alone. You’ll get the higher rate of £57.45 if your child is 3 or over and one of the following describes them:
+		ul
+			li they can’t walk
+			li they have severe discomfort when they walk outside, for example they can’t walk to school because it would hurt them too much to walk outside that far
+			li walking would put them in danger or would mean their health would get worse
+			li they have no legs or feet
+			li they’re blind or severely sight impaired 
+			li they’re both deaf and blind
+			li they have severe learning disabilities that result in disruptive and dangerous behaviour, for example someone has to watch over them to stop them hurting themselves or others
+		p The lower rate is usually given to children who can walk but have difficulty getting around places that they don’t know very well. You’ll get the lower rate of £21.80 if your child is 5 or over and 
+			strong the following apply:
+		ul
+			li they need someone with them to guide or supervise them on unfamiliar routes (for example, getting somewhere they’ve never been before would be an unfamiliar route, but walking to school the same way every day would be a familiar route)
+			li they need more help getting around than a child of the same age who isn't disabled or doesn’t have a health condition
+		p If your child is given the middle rate care component because they need supervision to avoid danger, they can also get the lower rate mobility component for the same reason.
+		.callout--adviser
+			p If you’re working on an appeal for a DLA award, you should use the more detailed policy guidance from these sources:
+			ul
+				li the ‘Disability Rights Handbook’
+				li the Child Poverty Action Group (CPAG) ‘Welfare Benefits and Tax Credits Handbook’
+				li the DWP’s #[a.a-external(href='https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/510303/dmgch61.pdf', target='_blank', rel='external') Decision Maker’s Guide Volume 10, Chapter 61: Attendance Allowance and Disability Living Allowance].
+		.callout--related
+			h2#h-next-steps.js-ref Next steps
+			p #[a(href='/development/disability-living-allowance/help-with-your-dla-claim/how-to-claim-dla/') How to claim DLA for your child].

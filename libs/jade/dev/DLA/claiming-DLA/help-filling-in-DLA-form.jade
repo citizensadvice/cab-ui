@@ -1,0 +1,74 @@
+block settings
+	- var title = "Help with filling in the DLA form for your child"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "#"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Disability Living Allowance", href: dir + "#"},
+		{title: "Help with filling in the DLA form for your child"}])
+
+block sidebar
+	- var section = "Claiming DLA", href="../../"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "How to claim DLA for your child", href: "#"},
+		{title: "Help with filling in the DLA form for your child", href: "#"},
+		{title: "Claiming DLA for a terminally ill child", href: "#"},
+		{title: "Extra benefits and help you can get while on DLA", href: "#"},
+		{title: "Change of circumstances while you’re getting DLA", href:"#"}],
+		1)
+
+block content
+	.articleContent
+		p Filling in the DLA form can be difficult for a parent, but don't be put off. 
+		p  You don’t have to do the form alone. A specialist at your #[a(href='/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/') nearest Citizens Advice] can sit with you and help you with the form, or even fill it in for you.
+		p You can also call Contact a Family charity helpline if you have questions - they’re experts in DLA for children.
+		p
+			strong Contact a Family helpline
+			br
+			| Telephone: 0808 808 3555
+			br
+			| Monday to Friday, 9:30am to 5pm
+			br
+			| Calls are free from all phones in the UK.
+		h2#h-filling-in-the-form.js-ref Filling in the form
+		p Keeping a diary of your child’s care needs for a week before you fill in the form can help when it comes to answering the questions. This way you’ll have recent examples of how you care for them, and a good idea of how long it takes you to do certain tasks like helping them get ready for school.
+		p If you haven’t kept a diary yet, it might be worth spending a week keeping a diary before starting the form. You can use our template to do a diary for a week. Make a note of what help is needed, why, when and for how long.
+		p You should try to fill in the form over a few sessions rather than doing it all at once - you’ll probably find that your answers will be better.
+		p Don’t just use the tick boxes on the form - you’ll have a better chance of getting the benefits your child needs if you use the boxes below the questions to explain and give examples of their needs.
+		p At times you might feel like your child’s condition or behaviour doesn’t fit into the questions you’re being asked, particularly if your child has a condition that isn’t physical. It’s normal to feel like this, so don’t let it discourage you.
+		p Remember, some of the main factors that the DWP are looking for are:
+		ul
+			li that your child needs more care or supervision than a child of the same age who doesn’t have a health condition
+			li if your child has problems walking
+			li if they need guidance or supervision in unfamiliar places
+			li if they have care or supervision needs that a younger child might have but which a child of their age would not normally have
+		p But don’t let this list limit you at all - each child has very different needs so it’s important to describe your own child and the care they need. Think of examples of the type of help you give your child and how long it takes. If your child's condition varies, think of their needs on both bad and better days and how many of each they have in a typical week.
+		p You should also think about how your child's condition affects them in other ways. For example, many children experience anxiety or depression because of a health condition. Make sure you explain the full picture.
+		p The person who’ll make a decision on your child’s DLA won’t be a medical expert, so they won't know a lot about disabilities and health conditions. It’s important you give as much information as possible about your child’s condition and the care and supervision they need. Don’t feel like any detail is too small to include - use an extra sheet of paper if you need to.
+		h2#h-useful-guides-for-filling-in-the-dla-form.js-ref Useful guides for filling in the DLA form
+		p We recommend that you read Contact a Family’s #[a.a-external(href='http://www.cafamily.org.uk/know-your-rights/benefits-and-tax-credits/tips-on-completing-the-dla-form/', rel='external') guide for filling in the DLA form] on their website. Their expert guide will:
+		ul
+			li give you detailed tips on how to fill in the form
+			li explain what the questions mean
+			li tell you how to answer specific questions
+		p It might seem like a lot to read, but it’s worth taking the time to find out what the form is really asking you. You’ll have a better chance of getting the DLA you need if your form gives the most accurate account of your child’s needs possible.
+		h2#h-get-a-professional-to-fill-in-question-19.js-ref Get a professional to fill in question 19
+		p It’s a good idea to get a specialist or professional who knows your child to fill in question 19.
+		p They should be someone who knows about your child’s condition. For example, if your child has a physical condition or has difficulty walking you should ask a doctor, nurse or care worker. If your child’s condition is more related to learning difficulties or behavioural problems, you should ask someone like their teacher or specialist support worker. A ‘Special Educational Statement' could also be included as evidence - talk to your school to get one.
+		p Before they answer the question, talk to them about how you care for your child and how much time you spend caring for them. Tell them that the DWP want to know how your child needs more care than a child of the same age without any disabilities or health conditions.
+		p If you get someone from school to fill in question 19 for you, it’s important that they have actual knowledge of your child’s needs during a typical school day. A member of school staff might want to talk about the positive aspects of your child’s progress - but it will be more helpful if they talk about the additional help your child needs. It might be worth leaving the statement out if you don’t think they’ve made a strong enough case for you to get DLA.
+		p The box for question 19 is quite small - if the person filling in the form runs out of space you can get them to continue on a separate sheet of paper.
+		h2#h-before-you-send-the-form.js-ref Before you send the form
+		p Read through the form again before you send it to make sure you've answered everything properly.
+		p Make a copy of the form in case you need to refer to it later, or in case it gets lost.
+		.callout--related
+			h2#h-next-steps.js-ref Next steps
+			p #[a(href='/development/disability-living-allowance/help-with-your-dla-claim/how-to-claim-dla/') How to apply for DLA].
