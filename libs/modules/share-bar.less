@@ -237,6 +237,20 @@ html[data-useragent*='Mobi'] .a-social-whatsapp {
         }
     }
 
+    .share-bar__link--google {
+        &:hover, &:focus {
+            background: #C53929; // Facebook colour
+        }
+
+        @media (max-width: @screen-xs-max) {
+            background: #C53929;
+
+            &:hover {
+                background: darken(#C53929,10%);
+            }
+        }
+    }
+
     .share-bar__link--messenger {
         &:hover, &:focus {
             background: @messenger-brand-colour;
