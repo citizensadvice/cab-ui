@@ -1,0 +1,53 @@
+block settings
+	- var title = "How much Attendance Allowance you can get"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Before you claim Attendance Allowance"
+	+sidebar([
+		{title: "Check if you're entitled to Attendance Allowance", href: "check-if-youre-entitled-to-attendance-allowance.html"},
+		{title: "How much Attendance Allowance you can get", href: "how-much-attendance-allowance-you-can-get.html"},
+		{title: "Extra money and help you can get while on Attendance Allowance", href: "extra-money-and-help-you-can-get-on-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p There are 2 different &apos;rates&apos; of Attendance Allowance - you&apos;ll either get &pound;55.10 or &pound;82.30 a week. The amount you get will depend on how much help or supervision you need and when you need it.
+			p The 2 different amounts of Attendance Allowance are called the lower and higher rates.
+			h2#h-lower-rate---55-10.ref-heading
+				span.ref-heading__heading Lower rate - &pound;55.10
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll get this amount if you need help or supervision during either the day or the night.
+			h2#h-higher-rate---82-30.ref-heading
+				span.ref-heading__heading Higher rate - &pound;82.30
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll get this amount if you need help or supervision during both the day and night.
+			.callout
+				h2#h-attendance-allowance-won-t-affect-your-other-benefits.ref-heading
+					span.ref-heading__heading Attendance Allowance won&apos;t affect your other benefits
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p
+					| You won&apos;t pay tax on Attendance Allowance and you&apos;ll be exempt from the &apos;Benefit Cap&apos;. This means money you get from other benefits won&apos;t change if you get Attendance Allowance.
+			.callout--related
+				h2#h-next-steps.ref-heading
+					span.ref-heading__heading Next steps
+					span.ref-heading__toggle.ref-heading__toggle--off
+						a.js-toggle-ref(href='#!') Add reference
+				p
+					a(href='/development/attendance-allowance/claiming-attendance-allowance/how-to-claim-attendance-allowance/') How to claim Attendance Allowance

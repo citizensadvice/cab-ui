@@ -4,50 +4,50 @@
  */
 'use strict';
 
-// Node modules
-var URL = require('url');
-var pathUtils = require('path');
+// Load plugins
+var gulp = require('gulp'),
 
-var prettyHrtime = require('pretty-hrtime');
+    // Live reloading localhost
+    browserSync = require('browser-sync'),
+	// Creates OSX notifications
+	notify = require('gulp-notify'),
+	// Copy referenced assets to a folder
+	copyAssets = require('postcss-copy-assets'),
 
-// Gulp modules
-var del = require('del');
-var deploy = require('gulp-gh-pages');
-var gulp = require( 'gulp' );
-var gutil = require('gulp-util');
-var jade = require('gulp-jade');
-var less = require( 'gulp-less' );
-var sourcemaps = require('gulp-sourcemaps');
+	// Node modules
+	URL = require('url'),
+	pathUtils = require('path'),
+	prettyHrtime = require('pretty-hrtime'),
 
-// Creates OSX notifications
-var notify = require('gulp-notify');
+	// Gulp modules
+	del = require('del'),
+	deploy = require('gulp-gh-pages'),
+	gulp = require( 'gulp' ),
+	gutil = require('gulp-util'),
+	jade = require('gulp-jade'),
+	less = require( 'gulp-less' ),
+	sourcemaps = require('gulp-sourcemaps'),
+	// Plumbers fix pipes
+	plumber = require('gulp-plumber'),
 
-// Post CSS plugins
-var postcss = require('gulp-postcss');
-// Minify
-var cssnano = require('cssnano');
-// Add a px fallback for rem for IE8
-var pixrem = require('pixrem');
-// Add a hex fallback for rgba for IE8
-var rgbaFallback = require('postcss-color-rgba-fallback');
-// Add an opacity fallback for IE8
-var opacity = require('postcss-opacity');
-// Automatically add/remove required/unrequired prefixes
-var autoprefixer = require('autoprefixer');
-// Copy referenced assets to a folder
-var copyAssets = require('postcss-copy-assets');
+	// Styles
+	postcss = require('gulp-postcss'),
+	cssnano = require('cssnano'),
+	pixrem = require('pixrem'),
+	rgbaFallback = require('postcss-color-rgba-fallback'),
+	opacity = require('postcss-opacity'),
+	autoprefixer = require('autoprefixer');
 
-// ------- Less tasks --------
+/*
+ * Less tasks
+ */
 
-// Clean the built directory
+// Clean the build directory
 gulp.task( 'clean-less', function() {
-	return del([
-	    'public/css/**'
-	]);
-} );
+	return del('public/css/**');
+});
 
 gulp.task( 'less', function() {
-
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
 		rgbaFallback,
@@ -55,14 +55,11 @@ gulp.task( 'less', function() {
 		pixrem,
 		copyAssets
 	];
-
 	// Only include cssnano on a production build as it takes ages
 	if ( productionBuild ) {
 		postCssPlugins.push(cssnano);
 	}
-
 	var targetPath = 'public/css';
-
     return gulp.src(['libs/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe(less().on('error', function(err){
@@ -72,38 +69,41 @@ gulp.task( 'less', function() {
 		.on("error", notify.onError(function (error) {
 			return error.message;
 		}))
-		//.pipe( less() ) // Transform to less
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
+        .pipe(browserSync.reload({stream: true}))
 		.pipe( notify({ message: 'Less successfully compiled' }));
 });
 
 gulp.task( 'watch-less', function() {
 	gulp.watch( 'libs/**/*.less', ['less'] );
-} );
+});
 
-// ------- Jade tasks --------
+/*
+ * Jade tasks
+ */
 
 gulp.task( 'clean-jade', function() {
 	return del([
+		// Delete the contents of public/
 	    'public/*',
+	    // but ignore these ones
 	    '!public/js',
 	    '!public/css',
 	    '!public/images',
 	    '!public/robots.txt'
 	]);
-} );
+});
 
 gulp.task( 'jade', function() {
-
 	return gulp.src('libs/jade/**/*.jade')
     	.pipe( jade( { pretty: true, basedir: "libs" }) )
-    	.pipe( gulp.dest('public') );
-} );
+    	.pipe( gulp.dest('public') )
+        .pipe(browserSync.reload({stream: true}));
+});
 
 gulp.task( 'watch-jade', function() {
-
 	// This just rebuilds the affects file - cheap
 	gulp.watch('libs/jade/**/*.jade', function(event) {
 
@@ -113,42 +113,63 @@ gulp.task( 'watch-jade', function() {
 
 		// Find the relative path between the jade directory and the file
 		// and apply that to the public directory to get the right folder
-		var relativePath = pathUtils.parse( pathUtils.relative( 
-			pathUtils.resolve( __dirname, 'libs/jade' ), 
-			event.path 
-		) ).dir;
+		var relativePath = pathUtils.parse( pathUtils.relative(
+			pathUtils.resolve( __dirname, 'libs/jade' ),
+			event.path
+		)).dir;
 		relativePath = pathUtils.resolve( 'public', relativePath );
 
 		gulp.src(event.path)
-			.pipe( jade( { pretty: true, basedir: "libs" } ) )
-	        .pipe( gulp.dest( relativePath ) )
-	        	.on( 'finish', function() {
-	        		var end = process.hrtime(start);
-	        		gutil.log(
-	        			'Finished',
-	        			"'" + gutil.colors.cyan('jade') + '"',
-	        			'after',
-	        			gutil.colors.magenta(prettyHrtime(end))
-	        		);
-	        	} );
-
+        	.pipe(plumber())
+			.pipe(jade({ pretty: true, basedir: "libs" }).on('error', function(err){
+				gutil.log(err);
+				this.emit('end');
+			}))
+			.on("error", notify.onError(function (error) {
+				return error.message;
+			}))
+	        .pipe(gulp.dest(relativePath))
+        	.on( 'finish', function() {
+        		var end = process.hrtime(start);
+        		gutil.log(
+        			'Finished',
+        			"'" + gutil.colors.cyan('jade') + '"',
+        			'after',
+        			gutil.colors.magenta(prettyHrtime(end))
+        		);
+        	})
+        	.pipe(browserSync.reload({stream: true}))
+			.pipe( notify({ message: 'Jade successfully compiled' }));
 	});
 
 	// This will rebuild all of jade - expensive
 	gulp.watch('libs/template/*.jade', ['jade']);
+});
 
-} );
-
-// ------- gh-pages tasks --------
+/*
+ * gh-pages
+ */
 
 gulp.task( 'gh-pages', ['build'], function() {
 
 	return gulp.src('public/**')
     	.pipe( deploy() );
 
-} );
+});
 
-// ------- Global tasks --------
+/*
+ * Global tasks
+ */
+
+// Starts localhost
+gulp.task('local', function() {
+    browserSync({
+        server: { baseDir: "public/" },
+        // Makes sure it opens in Chrome, regardless of default browser
+        browser: "google chrome",
+        notify: false
+    });
+});
 
 // Flag to tell us this is a production build
 var productionBuild = false;
@@ -160,7 +181,7 @@ gulp.task( 'production', function() {
 	// however as long as it is specified
 	// first it should first.
 	productionBuild = true;
-} );
+});
 
 gulp.task( 'clean', function() {
 	// This task just sets a flag to say we are in production mode
@@ -169,7 +190,7 @@ gulp.task( 'clean', function() {
 	// however as long as it is specified
 	// first it should first.
 	productionBuild = true;
-} );
+});
 
 // ------- Task groups --------
 
@@ -177,7 +198,7 @@ gulp.task( 'clean', function() {
 gulp.task( 'clean', [ 'clean-jade', 'clean-less'] );
 
 // Watch all the things
-gulp.task( 'watch', ['default', 'watch-less', 'watch-jade'] );
+gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'local'] );
 
 // Single build
 gulp.task( 'default', ['less','jade'] );

@@ -1,0 +1,80 @@
+block settings
+	- var title = "Claiming DLA for a terminally ill child"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "#"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Disability Living Allowance", href: dir + "#"},
+		{title: "Claiming DLA for a terminally ill child"}])
+
+block sidebar
+	- var section = "Claiming DLA", href="../../"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "How to claim DLA for your child", href: "#"},
+		{title: "Help with filling in the DLA form for your child", href: "#"},
+		{title: "Claiming DLA for a terminally ill child", href: "#"},
+		{title: "Extra benefits and help you can get while on DLA", href: "#"},
+		{title: "Change of circumstances while you’re getting DLA", href:"#"}],
+		4)
+
+block content
+	.articleContent
+		p If you get DLA for your child, you might be able to get extra money from other benefits or a reduction in road tax bills.
+		p You’ll need your DLA decision letter before you can apply for this extra help - you’ll be sent this when you get a decision on your DLA claim.
+		p There are free benefits experts at your #[a(href='/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/') nearest Citizens Advice] who can help you find out what you’re eligible for and help you to apply.
+		.callout
+			p Use our #[a(href='/benefits/benefits-introduction/what-benefits-can-i-get/') benefits checker] to find out if you’re claiming all the benefits you're entitled to.
+		h2#h-higher-payments-of-benefits-you-already-get.js-ref Higher payments of benefits you already get
+		p You can get higher payments of the following benefits if you get DLA for your child:
+		ul
+			li Child Tax Credit
+			li Housing Benefit
+			li Universal Credit
+		p You’ll also be exempt from the ‘benefit cap’ which limits the amount of benefit payments a household can get.
+		p Check who pays your benefits and contact them (their contact details should be on any letters they send you). Tell them you’re getting DLA for your child and ask them what other help this entitles you to - it’s a good idea to have your decision letter handy when you call.
+		p It's best to do this as soon as possible after getting a DLA decision.
+		p Getting a DLA won’t reduce any of your other benefits so it’s always best to ask what extra you’re entitled to.
+		h2#h-check-if-you-can-get-carer-s-allowance.js-ref Check if you can get Carer’s Allowance
+		p Carer’s Allowance is a benefit for people who look after someone with a disability or health condition.
+		p You’ll have a good chance of getting Carer’s Allowance if all the following apply:
+		ul
+			li you earn less than £110 a week
+			li you get the middle or higher rate of the care component of DLA
+			li you spend at least 35 hours a week (total) caring for your child 
+		p Read more about #[a.a-external(href='https://www.gov.uk/carers-allowance/overview', rel='external') claiming Carer’s Allowance] on GOV.UK.
+		h2#h-check-if-you-can-get-income-support.js-ref Check if you can get Income Support
+		p Income Support is a benefit for people who don’t have enough to live on.
+		p You might be eligible if either:
+		ul
+			li you get the middle or higher rate of the DLA care component for your child, or
+			li you get Carer’s Allowance as a carer for the child that the DLA is for
+		p Call Jobcentre Plus to find out if you can get Income Support and start a claim. Make sure you have details about any recent earnings or employment when you call.
+		p
+			strong Jobcentre Plus - new claims
+			br
+			| Telephone: 0800 055 6688
+			br
+			| Monday to Friday, 8am to 6pm 
+			br
+			| Calls are free.
+		h2#h-get-travel-support.js-ref Get travel support
+		p If you get the higher rate mobility component, you can get:
+		ul
+			li an exemption from vehicle tax (you won’t have to pay)
+			li #[a(href='/consumer/transport/driving-and-parking/driving-and-parking-for-disabled-people/the-blue-badge-scheme/applying-for-a-blue-badge/') a blue badge]
+			li #[a(href='/consumer/transport/driving-and-parking/driving-and-parking-for-disabled-people/driving-for-disabled-people/the-motability-scheme-explained/') a motability vehicle], for example a car, powered wheelchair or scooter
+		h2#h-apply-for-a-grant-from-the-family-fund.js-ref Apply for a grant from the Family Fund
+		p The Family Fund is a charity that gives grants to ease the stress on families who have a disabled or seriously ill child.
+		p You can apply for help if you’re on a low income and you care for a disabled or seriously ill child at home.
+		p #[a.a-external(href='https://www.familyfund.org.uk/FAQs/are-we-eligible-to-apply', rel='external') Check if you’re eligible and find out how to apply] on the Family Fund website.
+		.callout--related
+			h2#h-next-steps.js-ref Next steps
+			p #[a(href='/development/disability-living-allowance/help-with-your-dla-claim/how-to-claim-dla/') How to claim DLA for your child].

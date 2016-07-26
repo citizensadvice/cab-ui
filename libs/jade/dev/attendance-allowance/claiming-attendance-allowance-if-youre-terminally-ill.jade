@@ -1,0 +1,119 @@
+block settings
+	- var title = "Claiming Attendance Allowance if you're terminally ill"
+	- var sidebar = true
+	- var mockup = true
+	- var toolbars = true
+	- var signedin = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Claiming Attendance Allowance", href: dir + "index.html"},
+		{title: title}])
+
+block sidebar
+	- var section = "Claiming Attendance Allowance"
+	+sidebar([
+		{title: "How to claim Attendance Allowance", href: "how-to-claim-attendance-allowance.html"},
+		{title: "Help with filling in the Attendance Allowance form", href: "help-with-filling-in-the-attendance-allowance-form.html"},
+		{title: "Claiming Attendance Allowance if you're terminally ill", href: "claiming-attendance-allowance-if-youre-terminally-ill.html"},
+		{title: "Renew an Attendance Allowance claim", href: "renew-an-attendance-allowance-claim.html"},
+		{title: "Change of circumstances while you're getting Attendance Allowance", href: "change-of-circumstances-while-youre-getting-attendance-allowance.html"}],
+		1)
+
+block content
+	.articleContent
+		div
+			p You should apply for Attendance Allowance straight away if you meet the #[a(href='check-if-youre-entitled-to-attendance-allowance.html') eligibility criteria] - it doesn&apos;t matter how long you&apos;ve had your illness or disability.
+			p There&apos;s a quick application process for people who have been diagnosed with a terminal illness and aren&apos;t expected to live more than 6 months.
+			p Once you apply you&apos;ll get a decision back within about 2 weeks.
+			.callout--warning
+				p If you&apos;re not a UK citizen, you should check the eligibility rules. Your immigration status could be affected if you apply for benefits when you&apos;re not eligible.
+				p You can contact your nearest Citizens Advice for help.
+			h2#h-how-much-you-can-get.ref-heading
+				span.ref-heading__heading How much you can get
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll get the highest rate of &pound;82.30 if your Attendance Allowance claim is successful.
+			h2#h-applying-for-someone-else.ref-heading
+				span.ref-heading__heading Applying for someone else
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You can apply for Attendance Allowance for someone else, for example if they:
+			ul
+				li don&apos;t know their illness is terminal
+				li are too ill to apply
+				li are struggling to come to terms with their diagnosis
+			p You can sign the form for them if they can&apos;t sign it themselves - you don&apos;t need to have the authority to act for them. It&apos;s best to tell them you&apos;re applying for Attendance Allowance for them but you don&apos;t need to say it&apos;s because they&apos;re terminally ill.
+			p The money will be paid to them rather than you, even if you&apos;ve signed the form for them.
+			p You don&apos;t need to worry about the person you&apos;re applying for finding out they&apos;re terminally ill. The DWP won&apos;t mention it when they contact them about their Attendance Allowance claim.
+			p You can talk to an adviser at your nearest Citizens Advice if you need help.
+			h2#h-get-an-application-form.ref-heading
+				span.ref-heading__heading Get an application form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Phone the Attendance Allowance helpline and ask them to send you a form. You should tell them you&apos;re terminally ill and applying under the DWP&apos;s &apos;special rules&apos; - then they&apos;ll know your application needs to be fast-tracked.
+			p You&apos;ll need to give your name, address, phone number and date of birth.
+			p
+				strong Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312
+				br
+				| Open Monday to Friday, 8am to 6pm
+				br
+				| Calls cost up to 12p a minute from landlines, or from 3p to 45p a minute from mobiles.
+			p Your payments will be backdated to when you phoned if you send the form back within 6 weeks. If you send it after 6 weeks, your payments will only be backdated to when the Department for Work and Pensions (DWP) gets the form.
+			p It&apos;s best to phone - if you &nbsp;yourself, you&apos;ll only be paid from the date that the DWP receives the form.
+			h2#h-get-a-ds1500-medical-condition-report-.ref-heading
+				span.ref-heading__heading Get a &apos;DS1500 medical condition report&apos;
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Ask your doctor, specialist or consultant for a &apos;DS1500 medical condition report&apos;. This is a form describing your conditions and treatments - you&apos;ll need to send it with your Attendance Allowance application. You won&apos;t have to pay for this report.
+			p If you&apos;re applying for Attendance Allowance for someone else who&apos;s terminally ill, you need to ask their doctor or a specialist or consultant for a DS1500 medical condition report to send with the form.
+			h2#h-fill-in-the-application-form.ref-heading
+				span.ref-heading__heading Fill in the application form
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You won&apos;t have to fill in the full application form if you have a terminal illness - you don&apos;t have to answer the questions about personal tasks . See the notes on page 8 of the form - they will tell you what you do and don&apos;t have to fill in.
+			p You&apos;ll need to tick the box in Question 12 so that the DWP knows you&apos;re applying under the &apos;special rules&apos;.
+			h2#h-send-the-application-form-and-ds1500.ref-heading
+				span.ref-heading__heading Send the application form and DS1500
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You should send the Attendance Allowance form back as soon as possible - if you can, send it back within 6 weeks.
+			p If you don&apos;t have a DS1500 report from your doctor and the 6 weeks time limit is approaching, you should send the form anyway. Include a letter explaining you&apos;ll send the DS1500 report at a later date - this way you&apos;ll still get paid from the date you phoned for the form.
+			p It&apos;s a good idea to make a copy of your filled-in application form and any other documents you send. This will be useful if you need to refer to them later.
+			p Send the form and the DS1500 to:
+			p Attendance Allowance Unit
+				br
+				| Mail Handling Site A
+				br
+				| Wolverhampton
+				br
+				| WV98 2AD
+			h2#h-see-what-other-benefits-you-could-get.ref-heading
+				span.ref-heading__heading See what other benefits you could get
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p Getting Attendance Allowance can also mean you&apos;re eligible for other help and benefits. Read about the #[a(href='extra-money-and-help-you-can-get-on-attendance-allowance.html') other help you might be able to get].
+			h2#h-what-happens-after-you-ve-applied.ref-heading
+				span.ref-heading__heading What happens after you&apos;ve applied
+				span.ref-heading__toggle.ref-heading__toggle--off
+					a.js-toggle-ref(href='#!') Add reference
+			p You&apos;ll usually get a decision letter within 2 weeks - this will tell you whether or not you&apos;ll get Attendance Allowance. Contact the helpline if you haven&apos;t received a letter within 2 weeks - they will check whether a decision has been made for you.
+			p
+				strong Attendance Allowance helpline
+				br
+				| Telephone: 0345 605 6055
+				br
+				| Textphone: 0345 604 5312 (this is for deaf people who have a telephone with a screen to display messages)
+				br
+				| Open Monday to Friday, 8am to 6pm
+				br
+				| Calls cost up to 12p a minute from a landline, or from 3p to 45p a minute from a mobile.
+			p You can appeal the decision if you&apos;re turned down. Contact your&nbsp;#[a(href='#') nearest Citizens Advice]&nbsp;for help.

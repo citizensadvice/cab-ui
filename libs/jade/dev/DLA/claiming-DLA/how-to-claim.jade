@@ -1,0 +1,82 @@
+block settings
+	- var title = "How to claim DLA for your child"
+	- var sidebar = true
+	- var toolbars = true
+	- var mockup = true
+	- var dir = "../../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "#"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Disability Living Allowance", href: dir + "#"},
+		{title: "Claiming DLA"}])
+
+block sidebar
+	- var section = "Claiming DLA", href="../../"
+	// Set the number at the end to the array position of the active page
+	+sidebar([
+		{title: "How to claim DLA for your child", href: "#"},
+		{title: "Help with filling in the DLA form for your child", href: "#"},
+		{title: "Claiming DLA for a terminally ill child", href: "#"},
+		{title: "Extra benefits and help you can get while on DLA", href: "#"},
+		{title: "Change of circumstances while you’re getting DLA", href:"#"}],
+		0)
+
+block content
+	.articleContent
+		p You can claim DLA to help with the extra costs you have because of your child's health condition or disability.
+		p You can apply through a fast-track process if your child has been diagnosed as terminally ill - #[a(href='/development/disability-living-allowance/help-with-your-dla-claim/claiming-dla-terminally-ill/') read our guide].
+		h2#h-check-if-your-child-is-eligible.js-ref Check if your child is eligible
+		p You can get DLA if your child:
+		ul
+			li needs more care, attention or supervision than a child of the same age who doesn’t have a disability or health condition, or
+			li has difficulty walking or getting around outdoors in unfamiliar places
+		p DLA isn't means tested, so it doesn't matter how much you earn or how much savings you have.
+		p If you're not sure if you're eligible you can #[a(href='/development/disability-living-allowance/before-you-claim-dla/check-if-you-can-get-dla/') read more about eligibility for DLA for children].
+		h2#h-get-an-application-form.js-ref Get an application form
+		p You can either phone for an application form or download one. 
+		.callout
+			p It's best to phone because your payments will be backdated to the date you phoned. If you download an application form, you'll only be paid from the date that the DWP receive the form.
+		p
+			strong Disability Living Allowance helpline
+			br
+			| Telephone: 0345 712 3456 
+			br
+			| Textphone: 0345 722 4433 
+			br
+			| Monday to Friday, 8am to 6pm
+			br
+			| Calls cost up to 12p a minute from a landline, and between 3p and 45p a minute from a mobile.
+		p You can #[a.a-external(href='https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/530331/dla1a-child-print.pdf', rel='external') download an application form from GOV.UK].
+		h2#h-keep-a-diary.js-ref Keep a diary
+		p It’s a good idea to keep a diary of your child’s condition for a week before you fill in the form - particularly if your child has bad days and good days. Write down your child’s difficulties, the help or care you gave and how long it took.
+		p We've made a #[a.a-binary(href='/Documents/Advice%20(public)/DLA/DLA-8-Template-diary.pdf') DLA diary that you can print out and use] - it covers 7 days and gives you tips on what to write down.
+		p The diary can really help you when you fill in the form. You can also send it with the form as evidence if you like.
+		h2#h-fill-in-the-application-form.js-ref Fill in the application form
+		p There are specific things that the DPW will be looking for when they make a decision on your claim - so it's important that you fill in the form as best you can.
+		p We recommend that you #[a(href='/development/disability-living-allowance/help-with-your-dla-claim/help-with-dla-form/') read our advice on filling in the DLA form] to have the best chance of success.
+		h2#h-send-your-application-form.js-ref Send your application form
+		p It’s a good idea to make a copy of your filled-in application form and any other documents you send. This will be useful in case you need to refer to it later, for example if you need to reapply for DLA after a few years.
+		p Send the form to:
+		p
+			| Disability Benefit Centre 4
+			br
+			| Post Handling Site B
+			br
+			| Wolverhampton
+			br
+			| WV99 1BY
+		p If you’re waiting for something like a letter from your doctor, you should still send the form before the 6 week deadline. Include a letter saying you’ll send more evidence and give them an approximate date for when you’ll send it. If you send the form late you’ll only get paid from when the DWP receives it.
+		h2#h-what-happens-next.js-ref What happens next
+		p You’ll get a letter from DWP within 2 weeks saying they’ve received your claim (or you might get a text message instead). Contact the DLA helpline if you haven’t received a letter after 2 weeks.
+		p You’ll normally get a ‘decision letter’ within 3 months.
+		p If your claim is successful, the decision letter will tell you how much you’ll get and for how long. If your claim isn’t successful, the decision letter will outline the reasons.
+		p If you’ve been successful but you’re not sure you’ve been given the correct rate, it’s a good idea to #[a(href='/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice/') contact your nearest Citizens Advice] or phone the Contact a Family helpline on 0808 808 3555 to discuss it.
+		h2#h-when-your-child-turns-16---moving-to-personal-independence-payment-pip-.js-ref When your child turns 16 - moving to Personal Independence Payment (PIP)
+		p PIP is a disability benefit similar to DLA, but for people 16 and over.
+		p You’ll get a letter from the DWP shortly before your child’s 16th birthday telling you about switching from DLA to PIP.
+		p You’ll need to fill in a new form and your child will need to go for an assessment - even if they didn’t have an assessment for DLA.
+		p Read our #[a(href='/benefits/sick-or-disabled-people-and-carers/pip/before-claiming/if-you-get-dla/') advice on moving from DLA to PIP] to help you get ready.
