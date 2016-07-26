@@ -12,8 +12,16 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: "Prioritise your debts"}])
 
-block sidebar
-	//include /template/sidebar-site-content.jade
+block script
+	script.
+		$("#debts .checkbox").click(function(){
+			var checked =$('input:checkbox:checked').length;
+			if(checked > 1) {
+				$(".warning").hide();
+			} else {
+				$(".warning").show();
+			}
+		});
 
 block content
 	.articleContent
@@ -32,43 +40,41 @@ block content
 		p You need to deal with all your priority debts before you deal with non-priority debts, unless not paying a non-priority debt would also result in a very serious consequence, like losing your home.
 
 		.callout
-			p You may be hassled more for non-priority debts (eg credit cards) than for priority debts (eg Council Tax), even though priority debts have more serious consequences if you don’t pay them. Always deal with the priority debts first. 
+			p You may be hassled more for non-priority debts (eg credit cards) than for priority debts (eg Council Tax), even though priority debts have more serious consequences if you don’t pay them. Always deal with the priority debts first.
 
 		h2 How to prioritise your debts
 		p First get together all of your debt statements and other paperwork like warning letters and bills. Next select each of the following types of debt you have.
-		
+
 		p Use this tool to work out which debts you should be prioritising.
 
-		.flex-container.flex-row
-			.col-sm-12.col-xs-12
-				fieldset
-					legend(for="checkbox-inline") Select all the debts you have
-		.flex-container.flex-row
+		legend(for="checkbox-inline") Select all the debts you have
+
+		#debts.flex-container.flex-row
 			.col-sm-6.col-xs-12
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| Mortgage/secured loan
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
-					| Rent 
+					| Rent
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| Council Tax
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
-					| Gas/Electricity 
+					| Gas/Electricity
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
-					| Maintenance 
+					| Maintenance
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
-					| Income tax 
+					| Income tax
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| VAT
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
-					| National insurance 
+					| National insurance
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| Hire purchase
@@ -78,7 +84,6 @@ block content
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| Fines
-
 
 			.col-sm-6.col-xs-12
 				label.checkbox.checkbox--inline(style="width: 100%;")
@@ -111,6 +116,8 @@ block content
 				label.checkbox.checkbox--inline(style="width: 100%;")
 					input(name="checkbox-inline", type="checkbox")
 					| Telephone, mobile phone, internet packages
+
+		.callout--alert.warning This tool works best with more than one option selected.
 
 		a.button.btn.right-button-icon(href="prioritise-debts-results.html") Continue
 
