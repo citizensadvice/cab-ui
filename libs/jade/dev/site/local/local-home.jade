@@ -5,19 +5,21 @@ block settings
 
 extends /template/template-site.jade
 
-block content
-	header#main-nav-beta
-	.branding
-		.content
-			ul
-				li
-					a.icon-local(href="locator.html") Find a local Citizens Advice
-				li(href="#")
-					a Cymraeg
-				li(href="#")
-					a Sign in
+block local
+	header#local-nav
+		.local-branding
+			.content
+				.local-name North East Doncaster (Thorne) Citizens Advice Bureau
+				ul
+					li(href="#")
+						a News
+					li(href="#")
+						a About
+					li(href="#")
+						a Contact us
 
-block breadcrumbs
+
+//block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: title}])
