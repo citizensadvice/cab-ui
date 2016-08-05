@@ -1,5 +1,5 @@
 block settings
-	- var title = "North East Doncaster (Thorne) Citizens Advice Bureau"
+	- var title = "North East Doncaster (Thorne)"
 	- var fullpage = true
 	- var dir = "../../../"
 
@@ -9,7 +9,7 @@ block local
 	header#local-nav
 		.local-branding
 			.content
-				.local-name North East Doncaster (Thorne) Citizens Advice Bureau
+				.local-name North East Doncaster (Thorne)
 				ul
 					li(href="#")
 						a News
@@ -69,9 +69,22 @@ block script
 		});
 
 block content
-	.fullwidth-yellow
+	.fullwidth-blue
 		.fullwidth-content
-			h1(style="margin-top: 0;") #{title}
+			.flex-row
+				.col-sm-8
+					h2 Welcome to #{title}
+					h3 About our advice service
+
+					p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
+					p Alternatively, drop in to Thorne bureau on a Monday between 10:00-2:00 and Wednesday between 10:00-12:30 where a face to face assessment will be conducted.
+					p Forthcoming closures:
+					p **Please note that we are closed on Bank Holidays**
+
+				.col-sm-4
+
+	.fullwidth
+		.fullwidth-content
 			.flex-row
 				.col-sm-6
 					p
@@ -93,12 +106,6 @@ block content
 	.fullwidth-content
 		.flex-row
 			.col-sm-8
-				h2 About our advice service
-
-				p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
-				p Alternatively, drop in to Thorne bureau on a Monday between 10:00-2:00 and Wednesday between 10:00-12:30 where a face to face assessment will be conducted.
-				p Forthcoming closures:
-				p **Please note that we are closed on Bank Holidays**
 			.col-sm-4
 				h2 Access details
 				p #[span.i &#x267f;] Wheelchair accessible
