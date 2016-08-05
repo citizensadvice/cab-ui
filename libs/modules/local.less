@@ -1,0 +1,60 @@
+/**
+ * LOCAL
+ *
+ * Site style for local Citizens Advice
+ */
+
+
+ #local-nav {
+    border-top: 1px solid @heritage-blue-lightest;
+    .local-name {
+        color: @heritage-blue;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bolder;
+        text-align: left;
+        display: inline-block;
+    }
+    .local-branding {
+        background-color: @heritage-blue-lighter;
+        padding: 2rem 0 1.75rem 0;
+        vertical-align: middle;
+        ul {
+            float: right;
+            display: inline-block;
+            text-align: right;
+            list-style: none;
+            margin: 0;
+            @media screen and (max-width: @breakpoint-sm) {
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                margin: 0;
+                margin-top: -.25rem;
+                margin-left: 1em;
+                vertical-align: middle;
+                @media screen and (max-width: @breakpoint-sm) {
+                    margin-left: .25em;
+                }
+                a {
+                    color: @heritage-blue;
+                    border: none;
+                    font-size: @font-size-base;
+                    font-weight: @font-weight-bolder;
+                    padding: .3em 0;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: none;
+
+                    }
+                    @media screen and (max-width: @breakpoint-sm) {
+                        margin-left: .25em;
+                        margin-right: 0;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

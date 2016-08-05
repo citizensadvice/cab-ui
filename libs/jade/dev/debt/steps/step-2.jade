@@ -12,6 +12,17 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: "Step 2 - Work out which debts are a priority"}])
 
+block script
+	script.
+		$("#debts .checkbox").click(function(){
+			var checked =$('input:checkbox:checked').length;
+			if(checked > 1) {
+				$(".warning").hide();
+			} else {
+				$(".warning").show();
+			}
+		});
+
 block sidebar
 	- var section = "Get help with your debts"
 	// Set the number at the end to the array position of the active page
@@ -87,7 +98,7 @@ block content
 						| Unsecured loans
 					label.checkbox.checkbox--inline(style="width: 100%;")
 						input(name="checkbox-inline", type="checkbox")
-						| Personal debts
+						| Friends or family you owe money
 					label.checkbox.checkbox--inline(style="width: 100%;")
 						input(name="checkbox-inline", type="checkbox")
 						| Benefit overpayments
@@ -107,6 +118,8 @@ block content
 						input(name="checkbox-inline", type="checkbox")
 						| Telephone, mobile phone, internet packages
 
+			.callout--alert.warning This tool works best with more than one option selected.
+			
 			a.button.btn.right-button-icon(href="step-2-results.html") Continue
 
 
