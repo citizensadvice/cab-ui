@@ -1,0 +1,46 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 About you
+
+        .flex-container.flex-row
+            .col-sm-12.col-xs-12
+                fieldset
+                    legend(for="checkbox-inline") Please select all that apply to you
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I'm of pension age
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I have a disability 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I'm chronically sick
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I have special communication needs 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I'm dependent on electricity for medical reasons 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I'm blind, partially sighted 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | I'm deaf, hearing impaired
+
+        a.btn.right-button-icon(href="step3a.html") Continue

@@ -1,0 +1,24 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 Your results
+        p Unfortunately there isn't any additional help from the priority services register.
+        .callout--related
+            h2 Additional help
+            p You may be able to get #[a(href="#") extra help dealing with your energy bills].
+            p You may be able to get #[a(href="#") additional financial advice with your energy bills].
+            p Contact your #[a(href="#") nearest Citizens Advice].
