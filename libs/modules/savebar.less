@@ -61,37 +61,26 @@
 
 .save-button {
 	cursor: pointer;
-	display: inline-block;
-	font-size: .6em;
 	font-weight: @font-weight-base;
 	color: @gray-5;
-	position: relative;
-	bottom: .2em;
+	font-size: 1rem;
+	display: inline-block;
 	&:before {
 		.icon;
 		content: @i-star-o;
 		cursor: pointer;
 		margin: 0 .25em 0 .75em;
-		display: inline-block;
 	}
 	@media (min-width: 600px) {
 		//display: none;
 	}
 	&.saved {
-		display: inline-block;
 		color: @yellow;
 		&:before {
 			content: @i-star;
 
 		}
 	}
-}
-
-h1:hover .save-button,
-h2:hover .save-button,
-h3:hover .save-button,
-h4:hover .save-button {
-	display: inline-block;
 }
 
 /* Email specific features for the visual */
