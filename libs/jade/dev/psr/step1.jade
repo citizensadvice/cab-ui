@@ -1,0 +1,26 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        div
+            p If you sign up to your supplier’s Priority Services Register (PSR), you can get extra help and support with your energy supply.
+            p You can sign up if you’re:
+            ul
+                li a pensioner
+                li disabled or chronically sick
+                li have a hearing or visual impairment
+
+            a.btn.right-button-icon(href="step2.html") Start

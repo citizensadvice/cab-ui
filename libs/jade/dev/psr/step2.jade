@@ -1,0 +1,57 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 About you
+        div
+            fieldset
+                label(for="standardField") Applicants full name
+                input(id="standardField" placeholder="" type="text")
+
+            fieldset
+                label(for="standardField") The bill payer's full name
+                span.form-hint If different from the applicants name
+                input(id="standardField" placeholder="" type="text")
+
+            .well--outline
+                h3 Your address
+                fieldset
+                    label.radio.radio--inline
+                        input(checked, name="radio", type="radio", value="option1")
+                        | Lookup address
+                    label.radio.radio--inline
+                        input(name="radio", type="radio", value="option2")
+                        | Enter address manually
+
+                fieldset
+                    label(for="field") Enter your postcode
+                    .search-results__field.field-group.field-group--buttons
+                        input(type="search", placeholder="Enter postcode")
+                        button.btn.btn-primary Search&nbsp;&nbsp;
+                            i.icon-search
+
+        .fieldset
+            label(for="energySupplier") Select your energy supplier
+            .dropdown
+                select#energySupplier 
+                    option Choose your supplier
+                    option EON
+                    option British Gas
+                    option EDF
+                    option NPower
+
+
+        a.btn.right-button-icon(href="step3.html") Continue
