@@ -17,78 +17,64 @@ block sidebar
 block script
 	script.
 		$(document).ready(function() {
-			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'> save<span class='d' style='display:none;'>d</span></span>");
+		// TABS
+			$("li[role='tab']").click(function(){
+				$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+				$(this).attr("aria-selected","true");  // select this tab
+				$("#"+($(this).attr("aria-controls"))).attr("aria-hidden","false");  // show this panel
+			});
+
+			$("li[role='tab']").keydown(function(ev) {
+				if (ev.which ==13) {
+					$(this).click()
+				}
+			});
+
+			//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggle the tabs.
+			$("li[role='tab']").keydown(function(ev) {
+				var selected= $(this).attr("aria-selected");
+				if (ev.which ==39) {
+					if ($(this).next().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").next().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				} else if (ev.which ==37) {
+					if ($(this).prev().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").prev().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				}
+			});
+
+		// NUMBERING
+			$( "h1, h2, h3, h4" ).wrapInner("<span class='save'></span>").append("<span class='save-button'>Save<span class='d' style='display:none;'>d</span></span>");
 
 			$( ".overlay, .revealable, .section-nav" ).find( "h1, h2, h3, h4" ).find( ".save-button" ).remove();
 
-			// Adds the number into the save-button
-			/*
-			h2 = 1;
-			$( "h2 .save-button" ).each(function() {
-				$(this).prepend("."+h2);
-				$(this).parent().nextUntil("h2").find(".save-button").prepend("."+h2);
-				h2++;
-
-				h3 = 1;
-				$(this).parent().nextUntil("h2").each(function() {
-					if ($(this).is("h3")) {
-						$(this).find(".save-button").prepend("."+h3);
-						$(this).nextUntil("h2, h3").find(".save-button").prepend("."+h3);
-						h3++;
-
-						h4 = 1;
-						$(this).nextUntil("h3").each(function() {
-							if ($(this).is("h4")) {
-								$(this).find(".save-button").prepend("."+h4);
-								$(this).nextUntil("h2, h3, h4").find(".save-button").prepend("."+h4);
-								h4++;
-							}
-						});
-					}
-				});
-			});
-
-			$( ".save-button" ).prepend("10.4.3");
-			*/
-
-			// Add the number in front of the title
-			/*
-			$( "h2, h3, h4" ).prepend("<span class='unique'></span> ");
-
-			h2 = 1;
-			$( "h2 .save-button" ).each(function() {
-				$(this).parent().find(".unique").prepend(h2+".");
-				$(this).parent().nextUntil("h2").find(".unique").append(h2+".");
-				h2++;
-
-				h3 = 1;
-				$(this).parent().nextUntil("h2").each(function() {
-					if ($(this).is("h3")) {
-						$(this).find(".unique").append(h3+".");
-						$(this).nextUntil("h2, h3").find(".unique").append(h3+".");
-						h3++;
-
-						h4 = 1;
-						$(this).nextUntil("h3").each(function() {
-							if ($(this).is("h4")) {
-								$(this).find(".unique").append(h4+".");
-								h4++;
-							}
-						});
-					}
-				});
-			});
-			*/
-
 			x = 1;
-			$(":header").each(function() {
-				$(this).prepend(x+". ");
-				x++;
+			$(".save-button").each(function() {
+				if ($(this).parent().is("h1")) {
+					$(this).parent().find(".save").prepend("<span class='header-numbers'>10.4.3</span> ");
+				} else {
+					//$(this).parent().find(".save").prepend("<span class='header-numbers'>"+x+".</span> ");
+					$(this).html("10.4.3:"+x);
+					x++;
+				}
 			});
 
-			// Add page number
-			$( "h1" ).prepend("10.4.3 ");
-
+		// REFERENCES
 			$( ".save-button" ).on( "click", function() {
 				$( this ).toggleClass( "saved" );
 				$( this ).prev().toggleClass( "saved" );
@@ -118,6 +104,7 @@ block script
 			$( ".dialog__close" ).on( "click", function() {
 				$( ".overlay" ).hide();
 			});
+
 		});
 
 block content
@@ -128,46 +115,41 @@ block content
 				button.dialog__close(type="button", data-action="close")
 					i.dialog__close-icon
 					span.dialog__close-text Close
-				.tab-group
-					.tab
-						input(type="radio" id="one" name="tab-group" checked)
-						label(for="one") References
-						.content
+				div
+					ul.tablist(role='tablist')
+						li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') References
+						li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Email
+					#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
+						div
 							button.btn-secondary.btn-small(type="button") Print all
 							button.btn-warning.btn-small(type="button" style="float:right;") Clear all
 
-							.email-links
-								.email-links-breadcrumb
-									| Sick or disabled people and carers  >  PIP
-								h2 Applying for ESA
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
 
-							.email-links
-								.email-links-breadcrumb
-									| Sick or disabled people and carers  >  PIP
-								h2 Applying for ESA
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
 
-							.email-links
-								.email-links-breadcrumb
-									| Sick or disabled people and carers  >  PIP
-								h2 Applying for ESA
+						.email-links
+							.email-links-breadcrumb
+								| Sick or disabled people and carers  >  PIP
+							h2 Applying for ESA
+					#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
+						p Send your saved references to yours, a friend or family members email address
+						fieldset
+							label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your name
+							input(id="standardField" placeholder="" type="text")
 
+						fieldset
+							label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Recipients email address
+							span.form-hint This can be your own, or you can add multiple addresses seperated with a comma
+							input(id="standardField" placeholder="" type="email")
 
-					.tab
-						input(type="radio" id="two" name="tab-group")
-						label(for="two") Email
-						.content
-							div
-								p Send your saved references to yours, a friend or family members email address
-								fieldset
-									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Your name
-									input(id="standardField" placeholder="" type="text")
-
-								fieldset
-									label(for="standardField", style="background: #fff; padding: 0px; position: relative; top: 0px; border-top: 0px solid #eeeeee;") Recipients email address
-									span.form-hint This can be your own, or you can add multiple addresses seperated with a comma
-									input(id="standardField" placeholder="" type="email")
-
-								button.btn-secondary.email-button-icon(type="button") Send email
+						button.btn-secondary.email-button-icon(type="button") Send email
 
 	#pinmockup.articleContent(style="position: relative;")
 
@@ -176,47 +158,6 @@ block content
 			.button View&nbsp;
 
 		// DUMMY TEXT FOR DAYZ!
-		h2 Heading two
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
-
-		h2 Heading two
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
-
-		h2 Heading two
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
-
-		h3 Heading three
-
-		h4 Heading four
-
-		h4 Heading four
 
 		p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).
 
