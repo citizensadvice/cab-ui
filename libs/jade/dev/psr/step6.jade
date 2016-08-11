@@ -15,108 +15,34 @@ block breadcrumbs
 
 block content
     .articleContent
-        h2 Your results
-        p You can claim the following additional help from the priority services register.
-        .well--outline
-            h2 Accessible bills
-            p Suppliers can provide customers with account and bill information in an accessible format, e.g. with larger print or braille.
-            fieldset
-                legend(for="radio1") Would you like accessible bills?
-                label.radio.radio--inline
-                    input(name="radio1", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio1", type="radio", value="option2")
-                    | No
+        h2 Your choices
+        p You've selected to receive the following prioritised services.
+        ul
+            li Accessible bills
+            li Advanced notice of planned power cuts
+            li Priority in an emergency
+            li Bill nominee scheme
+            li Annual gas appliance safety checks for homeowners
+            li Quarterly meter reading services 
 
-        .well--outline
-            h2 Advanced notice of planned power cuts
-            p Advance notice of planned power cuts for customers who depend on their energy supply for medical reasons
-            fieldset
-                legend(for="radio2") Would you like advanced notice of planned power cuts?
-                label.radio.radio--inline
-                    input(name="radio2", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio2", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Priority in an emergency 
-            p This could include providing alternative heating and cooking facilities in the event of supply disconnection
-            fieldset
-                legend(for="radio3") Would you like priority in an emergency?
-                label.radio.radio--inline
-                    input(name="radio3", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio3", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Password protection
-            p Provide reassurance that callers, for example meter readers, are genuine
-            fieldset
-                legend(for="radio4") Would you like password protection?
-                label.radio.radio--inline
-                    input(name="radio4", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio4", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Bill nominee scheme
-            p Customers can ask their supplier to send their bill to anybody (for example a family member or carer) who has agreed to receive it
-            fieldset
-                legend(for="radio5") Would you like to be part of the bill nominee scheme?
-                label.radio.radio--inline
-                    input(name="radio5", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio5", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Prepayment meters
-            p If a customer is unable reach to their prepayment meter they can asked for it to be moved
-
-             fieldset
-                legend(for="radio6") Would you like a prepayment meter?
-                label.radio.radio--inline
-                    input(name="radio6", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio6", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Quarterly meter reading services 
-            p If no person occupying the premises is able to read the meter
-            fieldset
-                legend(for="radio7") Would you like Quarterly meter reading services?
-                label.radio.radio--inline
-                    input(name="radio7", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio7", type="radio", value="option2")
-                    | No
-
-        .well--outline
-            h2 Annual gas appliance safety checks for homeowners
-            p If you do not own your own home your landlord is responsible for ensuring that any gas appliances, fittings and flues are safe
-            fieldset
-                legend(for="radio8") Would you like Annual gas appliance safety checks?
-                label.radio.radio--inline
-                    input(name="radio8", type="radio", value="option1")
-                    | Yes
-                label.radio.radio--inline
-                    input(name="radio8", type="radio", value="option2")
-                    | No
+        //.callout--related
+            h2 What happens next
+            p We will contact these companies on your behalf. The utility companies will receive the emails and contact you directly with confirmation and when the changes will happen.
 
         fieldset
             label.checkbox.checkbox--block 
                 input(name="checkbox", type="checkbox", value="option1")
                 | I consent to Citizens Advice sharing my details and preferences with my energy suppliers #[a.a-external-link(href="#") terms and conditions]
 
-        a.btn.right-button-icon(href="#") Continue
+        //.callout--example
+            p If you would like to receive a confirmation email or SMS please add your details below.
+            fieldset
+                label(for="standardField") Your email address
+                input(id="standardField" placeholder="" type="text")
+
+            fieldset
+                label(for="standardField") Your mobile phone number
+                input(id="standardField" placeholder="" type="text")
+
+
+        a.btn.right-button-icon(href="step7.html") Send
