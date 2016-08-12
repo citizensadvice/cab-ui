@@ -6,10 +6,11 @@ block settings
 extends /template/template-site.jade
 
 block local
-	header#local-nav
+	header#local-nav.js-make-sticky
 		.local-branding
 			.content
-				.local-name North East Doncaster (Thorne)
+				img(src="#{dir}images/North-East-Doncaster.svg")
+				//.local-name North East Doncaster (Thorne)
 				ul
 					li(href="#")
 						a News
