@@ -15,14 +15,9 @@
             background-color: @green-light;
             color: @text-color;
             margin-right: @box-spacing-horizontal;
-        }
-    }
-    &__changing {
-        .badge {
-            background-color: @heritage-yellow;
-        }
-        @media( max-width: @screen-xs-max ) {
-            display: none;
+            &.changing {
+                background-color: @heritage-yellow;
+            }
         }
     }
     @media( max-width: @screen-xs-max ) {
