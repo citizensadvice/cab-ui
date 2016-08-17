@@ -11,13 +11,14 @@ block local
 			.content
 				img(src="#{dir}images/North-East-Doncaster.svg")
 				//.local-name North East Doncaster (Thorne)
+				.nav-toggle Menu
 				ul
-					li(href="#")
+					li
 						a News
-					li(href="#")
+					li
 						a About
-					li(href="#")
-						a Contact us
+					li
+						a(href="local-contact.html") Contact us
 					li
 						button.btn.btn-success(type="button") Donate
 
@@ -70,6 +71,10 @@ block script
 					}
 				}
 			});
+
+			$('.nav-toggle').click(function() {
+				$(this).next().toggleClass("show");
+			});
 		});
 
 block content
@@ -81,7 +86,7 @@ block content
 						h1 Welcome to #{title}
 						p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
 						//.home__content-trends
-							h2 Most viewed 
+							h2 Most viewed
 							p #[a(href="#") Employment Support Allowance ]
 							p #[a(href="#") Personal Independence Payment ]
 							p #[a(href="#") Basic rights at work ]
@@ -94,7 +99,7 @@ block content
 		.home-second
 			.home__content
 				.flex-container.flex-row
-					div.col-sm-4.col-sm-12								
+					div.col-sm-4.col-sm-12
 						.blog-lead
 							.blog-name
 								h3(style="margin-top: 0;") Volunteering roles
