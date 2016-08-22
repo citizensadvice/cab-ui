@@ -1687,16 +1687,15 @@ div.tooltip:before {
     th {
         font-size: @font-size-small;
         vertical-align: bottom;
-        //font-weight: normal;
-        &.asc:after {
+        //position: relative;
+        &:after {
             .icon;
-            content: @i-sort-asc;
+            content: @i-sort;
             margin-left: .25em;
-        }
-        &.desc:after {
-            .icon;
-            content: @i-sort-desc;
-            margin-left: .25em;
+            color: @heritage-blue-lighter;
+            //position: absolute;
+            //right: .5rem;
+            //top: 40%;
         }
     }
     #sorttable_sortfwdind,
@@ -1707,21 +1706,22 @@ div.tooltip:before {
         .icon;
         content: @i-sort-desc;
         margin-left: .25em;
+        color: @heritage-blue;
     }
     .sorttable_sorted_reverse:after {
         .icon;
         content: @i-sort-asc;
         margin-left: .25em;
+        color: @heritage-blue;
     }
-    span.lg-only {
-        display: none;
-        @media screen and (min-width: @breakpoint-lg) {
-            display: inline;
+    .lg-only {
+        @media screen and (max-width: @screen-sm-max) {
+            display: none;
         }
     }
     // COLS
     .col-rank {
-        width: 25%;
+        width: 15%;
         @media screen and (min-width: @breakpoint-md) {
             width: 12%;
         }
@@ -1730,7 +1730,7 @@ div.tooltip:before {
         }
     }
     .col-supp {
-        width: 50%;
+        width: 60%;
         @media screen and (min-width: @breakpoint-md) {
             width: 23%;
         }
@@ -1738,7 +1738,12 @@ div.tooltip:before {
             width: 22%;
         }
     }
-    .lg-only {
+    .data,
+    .complaints,
+    .service,
+    .billing,
+    .switch,
+    .commitment {
         display: none;
         @media screen and (min-width: @breakpoint-md) {
             display: table-cell;
@@ -1760,12 +1765,12 @@ div.tooltip:before {
 }
 
 .inline-badge {
-    padding: 0 .4em;
-    border-radius: 50%;
+    padding: 0 .45em;
+    border-radius: 2em;
     background-color: @gray-7;
     font-weight: @font-weight-bold;
     display: inline-block;
-    width: 1.5em;
+    //width: 1.5em;
     text-align: center;
 }
 
@@ -1777,6 +1782,12 @@ div.tooltip:before {
     color: @white;
     font-weight: @font-weight-bold;
     text-align: center;
+    &:after {
+        content: " of 5";
+        @media screen and (max-width: @screen-sm-max) {
+            display: none;
+        }
+    }
 }
 
 .rate {
@@ -1825,10 +1836,10 @@ div.tooltip:before {
 .increase {
     font-size: @font-size-small;
     margin-left: .25em;
-    color: @green;
-    &:before {
+    &:after {
+        color: @green;
         .icon;
-        margin-right: .15em;
+        margin-left: .25em;
         content: @i-sort-asc;
     }
 }
@@ -1836,21 +1847,10 @@ div.tooltip:before {
 .decrease {
     font-size: @font-size-small;
     margin-left: .25em;
-    color: @red;
-    &:before {
+    &:after {
+        color: @red;
         .icon;
-        margin-right: .15em;
+        margin-left: .25em;
         content: @i-sort-desc;
-    }
-}
-
-.no-change {
-    font-size: @font-size-small;
-    margin-left: .25em;
-    color: @gray-5;
-    &:before {
-        .icon;
-        margin-right: .15em;
-        content: @i-minus;
     }
 }
