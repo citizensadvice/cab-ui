@@ -26,25 +26,17 @@ block script
 
 block content
 	.articleContent
-		.fieldset
-			label(for="field") Money left after bills
-			.field-group.field-group--dropdown
-				input#field(type="number")
-				.dropdown
-					select#exampleSelect1
-						option Daily
-						option(selected) Monthly
-						option Yearly
-		h2 Debt information
-		.well
-			#debt-info
-				//.well--outline
-					.fieldset
-						label(for="standardField") Creditor's name
-							a.remove-field.remove.u-pull-right Remove
-						input#standardField(placeholder="", type="text")
-					.fieldset
-						label(for="standardField") Total amount owed
-						input#standardField(placeholder="", type="text")
-			button#add-debt.btn-secondary.plus-button-icon Add a debt
-		a.btn.right-button-icon(href="debt-calculator-2.html") Finish
+		table
+			thead
+				tr
+					th(scope="col") Creditor
+					th(scope="col") Suggested repayments
+			tbody
+				tr
+					td Creditor one
+					td £XX.XX
+				tr
+					td Creditor two
+					td £XX.XX
+
+		a.btn.restart-button-icon(href="debt-calculator.html") Restart
