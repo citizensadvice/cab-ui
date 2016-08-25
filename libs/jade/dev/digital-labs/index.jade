@@ -1,0 +1,103 @@
+block settings
+	- var title = "Welcome to the digital labs"
+	- var dir = "../../"
+
+extends /template/template.min.jade
+
+block head
+	style.
+		body {
+			background-color: #c2bdde;
+		}
+
+block content
+	.digital-labs
+		.fullwidth
+			.fullwidth-content
+				.dl--head
+					img(alt="", src="#{dir}images/ca-logo-hz-200px.svg")
+					h1(style="margin: 0; margin-top: 1rem;") Welcome to the digital&nbsp;labs
+
+		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
+			.fullwidth-content
+				.flex-container
+					.flex-row
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe97b;
+								p Test the
+									br
+									strong Casebook prototype
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe92a;
+								p Try out
+									br
+									strong Webchat
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe94b;
+								p Explore the
+									br
+									strong PQF dashboard
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Help us improve out
+									br
+									strong Online advice content
+						.dl--segment.col-sm-4
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe985;
+								p Test the
+									br
+									strong Energy supplier tool
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe982;
+								p Try the
+									br
+									strong Priority service register
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic £
+								p Try the
+									br
+									strong Money advice recording tool
+						.dl--segment.col-sm-4.tablet
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe96a;
+								p Design with
+									br
+									strong Page engine
+						.dl--segment.col-sm-4
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe971;
+								p Test out
+									br
+									strong Learn
+
+		.dl--footer
+			.fullwidth-content
+				.flex-container.tablet
+					.flex-row
+						.col-sm-6
+							p
+								a Sign up to help with more testing
+						.col-sm-6
+							p
+								a Tell us what you think about the tools
+
+				p.mobile
+					a Sign up to help with more testing
+					br
+					a Tell us what you think about the tools
