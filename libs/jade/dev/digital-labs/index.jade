@@ -1,5 +1,5 @@
 block settings
-	- var title = "Welcome to the digital labs"
+	- var title = "Welcome to the digital lab"
 	- var dir = "../../"
 
 extends /template/template.min.jade
@@ -10,13 +10,48 @@ block head
 			background-color: #c2bdde;
 		}
 
+block script
+	script.
+		$(document).ready(function() {
+			$('#webchat').click(function(){
+				$('#overlay').show();
+			})
+			$('.dialog__close').click(function(){
+				$('#overlay').hide();
+			})
+		});
+
 block content
-	.digital-labs
+	.digital-lab
+		#overlay.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="#")
+									.dl--circle
+										.pic.i-brand &#xe92a;
+									div as an
+										br
+										strong Adviser
+							.dl--segment.col-xs-6
+								a(href="#")
+									.dl--circle
+										.pic.i-brand &#xe92a;
+									div as a
+										br
+										strong Client
+
 		.fullwidth
 			.fullwidth-content
 				.dl--head
 					img(alt="", src="#{dir}images/ca-logo-hz-200px.svg")
-					h1(style="margin: 0; margin-top: 1rem;") Welcome to the digital&nbsp;labs
+					h1(style="margin: 0; margin-top: 1rem;") Welcome to the digital&nbsp;lab
 
 		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
 			.fullwidth-content
@@ -30,6 +65,14 @@ block content
 									br
 									strong Casebook prototype
 						.dl--segment.col-sm-4.tablet
+							a#webchat(href="#")
+								.dl--circle
+									.pic.i-brand &#xe92a;
+								p Try out
+									br
+									strong Webchat
+						// Mobile webchat
+						.dl--segment.col-sm-4.mobile
 							a(href="#")
 								.dl--circle
 									.pic.i-brand &#xe92a;
