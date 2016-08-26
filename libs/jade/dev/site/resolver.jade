@@ -1,0 +1,188 @@
+block settings
+	- var title = "Complain to your energy supplier"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Get Advice"},
+		{title: "Consumer"},
+		{title: "Your energy supply"}])
+
+block head
+	style.
+		.resolver {
+			border: none !important;
+			margin: 0;
+			vertical-align: middle;
+		}
+
+block sidebar
+	- var section = "Make a complaint"
+	+sidebar([
+		{title: "Complain to your energy supplier", href: "resolver.html"},
+	    {title: "Complain to the energy ombudsman", href: "#"},
+	    {title: "Letter to complain to an energy supplier", href: "#"},
+	    {title: "Check the prepayment meter rules your supplier has to follow", href: "#"}
+	])
+
+	nav.section-nav
+		.well
+			label Select your energy supplier
+			.dropdown
+				select
+					option(value="") Please select
+					option(value="Affect Energy") Affect Energy
+					option(value="Avro Energy") Avro Energy
+					option(value="Bristol Energy") Bristol Energy
+					option(value="British Gas") British Gas
+					option(value="Bulb") Bulb
+					option(value="Co-operative Energy") Co-operative Energy
+					option(value="E") E
+					option(value="E.ON") E.ON
+					option(value="EBICo") EBICo
+					option(value="EDF Energy") EDF Energy
+					option(value="Economy Energy") Economy Energy
+					option(value="Ecotricity") Ecotricity
+					option(value="EnergySW") EnergySW
+					option(value="Extra Energy") Extra Energy
+					option(value="Fairerpower") Fairerpower
+					option(value="First Utility") First Utility
+					option(value="Flow Energy") Flow Energy
+					option(value="Future Energy") Future Energy
+					option(value="GB Energy Supply") GB Energy Supply
+					option(value="Glide") Glide
+					option(value="GnERGY") GnERGY
+					option(value="Go Effortless Energy") Go Effortless Energy
+					option(value="Good Energy") Good Energy
+					option(value="Green Energy (UK) plc") Green Energy (UK) plc
+					option(value="Green Star Energy") Green Star Energy
+					option(value="IRESA Limited") IRESA Limited
+					option(value="iSupplyEnergy") iSupplyEnergy
+					option(value="LoCO2 Energy") LoCO2 Energy
+					option(value="M&amp;S Energy") M&amp;S Energy
+					option(value="npower") npower
+					option(value="OVO Energy") OVO Energy
+					option(value="Octopus Energy") Octopus Energy
+					option(value="Oink Energy") Oink Energy
+					option(value="PFP Energy") PFP Energy
+					option(value="Peterborough Energy") Peterborough Energy
+					option(value="Robin Hood Energy") Robin Hood Energy
+					option(value="SSE") SSE
+					option(value="SSE Atlantic") SSE Atlantic
+					option(value="SSE Scottish Hydro") SSE Scottish Hydro
+					option(value="SSE Southern Electric") SSE Southern Electric
+					option(value="SSE Swalec") SSE Swalec
+					option(value="Sainsbury's Energy") Sainsbury's Energy
+					option(value="ScottishPower") ScottishPower
+					option(value="So Energy") So Energy
+					option(value="Southend Energy") Southend Energy
+					option(value="Spark Energy") Spark Energy
+					option(value="Telecom Plus") Telecom Plus
+					option(value="Tonik Energy") Tonik Energy
+					option(value="Utilita") Utilita
+			button Begin a complaint
+
+block content
+	.articleContent
+		p You should complain to your supplier if you&rsquo;re unhappy with the way you&rsquo;ve been treated or you want to dispute a bill.
+		h2#h-before-you-complain.js-ref Before you complain
+		p You should try to sort the issue out with your supplier - you might be able to avoid having to make a complaint.
+		p If you haven&rsquo;t already, you may also want to read our guidance if:
+		ul
+			li your energy bill seems too high or low
+			li your supplier has raised its prices
+			li your direct debit payments have increased
+			li you&rsquo;ve been switched to a new supplier without your consent
+		h2#h-how-to-complain.js-ref How to complain
+		p You should follow your supplier&rsquo;s complaints procedure - you&rsquo;ll find this on their website or on your energy bill. Normally you can complain by emailing, phoning or writing to them.
+		p If you want to complain in writing, you can use our template letter to help you:
+		p Example letter: Complain to your energy supplier
+		p After you submit your complaint, your supplier must tell you exactly how they plan to deal with it and how long it will take. Most complaints should be resolved within 8 weeks.
+		p During this time you should work with your supplier to sort out the problem. For example, they might ask you for more information or want to visit your home to check your meter.
+		.callout--alert
+			p If you were misled or intimidated into signing an energy contract, you should complain to the supplier. You can use our example letter for energy mis-selling to write to them.
+		h3#h-keeping-records.js-ref Keeping records
+		p Try to keep a record of any correspondence you have with your supplier. For example, you should keep:
+		ul
+			li copies of letters
+			li proof of postage for any letters you send (you&rsquo;ll need a &lsquo;certificate of postage&rsquo; - you can get one from any Post Office when you post a letter)
+			li notes of phone calls, eg when you rang, who you spoke to and what you spoke about
+			li copies of emails
+		p You should also keep a record of when relevant things happened, for example the date your energy was cut off.
+		h2#h-if-you-re-unhappy-with-their-response.js-ref If you&rsquo;re unhappy with their response
+		p The next step you can take is to complain to the energy ombudsman. You can do this if either:
+		ul
+			li you receive a decision letter (called a &lsquo;letter of deadlock&rsquo;) and you&rsquo;re not happy with it
+			li you don&rsquo;t receive a decision letter within 8 weeks of making your complaint
+		p The ombudsman is independent and will review your complaint further. They might be able to force your supplier to change their decision.
+		h2#h-get-help-with-your-complaint.js-ref Get help with your complaint
+		p The Citizens Advice consumer helpline can give you advice about complaining to your supplier.
+
+		h2 Make a complaint
+		p Using the tool below you will be able to create a letter to your energy supplier, and track its outcome. This tool is created in collaboration with Resolver.
+		.well--outline
+			label Select your energy supplier
+			.dropdown
+				select
+					option(value="") Please select
+					option(value="Affect Energy") Affect Energy
+					option(value="Avro Energy") Avro Energy
+					option(value="Bristol Energy") Bristol Energy
+					option(value="British Gas") British Gas
+					option(value="Bulb") Bulb
+					option(value="Co-operative Energy") Co-operative Energy
+					option(value="E") E
+					option(value="E.ON") E.ON
+					option(value="EBICo") EBICo
+					option(value="EDF Energy") EDF Energy
+					option(value="Economy Energy") Economy Energy
+					option(value="Ecotricity") Ecotricity
+					option(value="EnergySW") EnergySW
+					option(value="Extra Energy") Extra Energy
+					option(value="Fairerpower") Fairerpower
+					option(value="First Utility") First Utility
+					option(value="Flow Energy") Flow Energy
+					option(value="Future Energy") Future Energy
+					option(value="GB Energy Supply") GB Energy Supply
+					option(value="Glide") Glide
+					option(value="GnERGY") GnERGY
+					option(value="Go Effortless Energy") Go Effortless Energy
+					option(value="Good Energy") Good Energy
+					option(value="Green Energy (UK) plc") Green Energy (UK) plc
+					option(value="Green Star Energy") Green Star Energy
+					option(value="IRESA Limited") IRESA Limited
+					option(value="iSupplyEnergy") iSupplyEnergy
+					option(value="LoCO2 Energy") LoCO2 Energy
+					option(value="M&amp;S Energy") M&amp;S Energy
+					option(value="npower") npower
+					option(value="OVO Energy") OVO Energy
+					option(value="Octopus Energy") Octopus Energy
+					option(value="Oink Energy") Oink Energy
+					option(value="PFP Energy") PFP Energy
+					option(value="Peterborough Energy") Peterborough Energy
+					option(value="Robin Hood Energy") Robin Hood Energy
+					option(value="SSE") SSE
+					option(value="SSE Atlantic") SSE Atlantic
+					option(value="SSE Scottish Hydro") SSE Scottish Hydro
+					option(value="SSE Southern Electric") SSE Southern Electric
+					option(value="SSE Swalec") SSE Swalec
+					option(value="Sainsbury's Energy") Sainsbury's Energy
+					option(value="ScottishPower") ScottishPower
+					option(value="So Energy") So Energy
+					option(value="Southend Energy") Southend Energy
+					option(value="Spark Energy") Spark Energy
+					option(value="Telecom Plus") Telecom Plus
+					option(value="Tonik Energy") Tonik Energy
+					option(value="Utilita") Utilita
+			button.btn.right-button-icon Begin a complaint
+			img.resolver(alt="", src="#{dir}images/logo-resolver.png", width="150")
+
+		.title__subheading--footer
+			p Share this page. #[a(#) Find out more about sharing.]
+			a.a-social-twitter(href="https://twitter.com/share?url=", data-track="Twitter", rel="external") Twitter
+			a.a-social-facebook(href="https://www.facebook.com/sharer/sharer.php?u=", data-track="Facebook", rel="external") Facebook
+			a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
