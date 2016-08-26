@@ -1,0 +1,370 @@
+/***************************************************************************
+ * Colour swatches
+ */
+.swatch {
+    border-radius: @form-border-radius;
+    text-align: center;
+    line-height: (@line-height-base * 0.5);
+    float: left;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    p {
+        line-height: (@line-height-base * 0.8);
+        font-weight: @font-weight-bold;
+        font-size: (@font-size-base * 0.8);
+        margin: 0;
+    }
+
+    &.swatch--brand--heritage-blue {
+        background-color: @heritage-blue;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-blue}';
+        }
+    }
+    &.swatch--brand--heritage-yellow {
+        background-color: @heritage-yellow;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-yellow}';
+        }
+    }
+    &.swatch--brand--responsible-purple {
+        background-color: @responsible-purple;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{responsible-purple}';
+        }
+    }
+    &.swatch--brand--responsible-aqua {
+        background-color: @responsible-aqua;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{responsible-aqua}';
+        }
+    }
+    &.swatch--brand--inventive-teal {
+        background-color: @inventive-teal;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{inventive-teal}';
+        }
+    }
+    &.swatch--brand--inventive-pink {
+        background-color: @inventive-pink;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{inventive-pink}';
+        }
+    }
+    &.swatch--brand--generous-green {
+        background-color: @generous-green;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{generous-green}';
+        }
+    }
+    &.swatch--brand--generous-mauve {
+        background-color: @generous-mauve;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{generous-mauve}';
+        }
+    }
+
+    &.swatch--beta--heritage-blue-lighter {
+        background-color: @heritage-blue-lighter;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-blue-lighter}';
+        }
+    }
+    &.swatch--beta--heritage-blue-lightest {
+        background-color: @heritage-blue-lightest;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-blue-lightest}';
+        }
+    }
+    &.swatch--beta--heritage-yellow-lighter {
+        background-color: @heritage-yellow-lighter;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-yellow-lighter}';
+        }
+    }
+    &.swatch--beta--heritage-yellow-darker {
+        background-color: @heritage-yellow-darker;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{heritage-yellow-darker}';
+        }
+    }
+
+    &.swatch--beta--red {
+        background-color: @red;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{red}';
+        }
+    }
+    &.swatch--beta--red-light {
+        background-color: @red-light;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{red-light}';
+        }
+    }
+    &.swatch--beta--red-lighter {
+        background-color: @red-lighter;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{red-lighter}';
+        }
+    }
+    &.swatch--beta--pink {
+        background-color: @pink;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{pink}';
+        }
+    }
+    &.swatch--beta--orange {
+        background-color: @orange;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{orange}';
+        }
+    }
+    &.swatch--beta--orange-light {
+        background-color: @orange-light;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{orange-light}';
+        }
+    }
+    &.swatch--beta--orange-lighter {
+        background-color: @orange-lighter;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{orange-lighter}';
+        }
+    }
+    &.swatch--beta--green {
+        background-color: @green;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{green}';
+        }
+    }
+    &.swatch--beta--green-light {
+        background-color: @green-light;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{green-light}';
+        }
+    }
+    &.swatch--beta--green-lighter {
+        background-color: @green-lighter;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{green-lighter}';
+        }
+    }
+    &.swatch--beta--blue {
+        background-color: @blue;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{blue}';
+        }
+    }
+    &.swatch--beta--blue-light {
+        background-color: @blue-light;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{blue-light}';
+        }
+    }
+    &.swatch--beta--blue-lighter {
+        background-color: @blue-lighter;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{blue-lighter}';
+        }
+    }
+    &.swatch--beta--blue-darker {
+        background-color: @blue-darker;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{blue-darker}';
+        }
+    }
+    &.swatch--beta--aqua {
+        background-color: @aqua;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{aqua}';
+        }
+    }
+    &.swatch--beta--aqua-light {
+        background-color: @aqua-light;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{aqua-light}';
+        }
+    }
+    &.swatch--beta--yellow {
+        background-color: @yellow;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{yellow}';
+        }
+    }
+    &.swatch--beta--yellow-light {
+        background-color: @yellow-light;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{yellow-light}';
+        }
+    }
+    &.swatch--beta--purple {
+        background-color: @purple;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{purple}';
+        }
+    }
+    &.swatch--beta--purple-dark {
+        background-color: @purple-dark;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{purple-dark}';
+        }
+    }
+
+    &.swatch--mono--black {
+        background-color: @black;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{black}';
+        }
+    }
+    &.swatch--mono--gray0 {
+        background-color: @gray-0;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-0}';
+        }
+    }
+    &.swatch--mono--gray1 {
+        background-color: @gray-1;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-1}';
+        }
+    }
+    &.swatch--mono--gray2 {
+        background-color: @gray-2;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-2}';
+        }
+    }
+    &.swatch--mono--gray3 {
+        background-color: @gray-3;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-3}';
+        }
+    }
+    &.swatch--mono--gray4 {
+        background-color: @gray-4;
+        color: @white;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-4}';
+        }
+    }
+    &.swatch--mono--gray5 {
+        background-color: @gray-5;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-5}';
+        }
+    }
+    &.swatch--mono--gray6 {
+        background-color: @gray-6;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-6}';
+        }
+    }
+    &.swatch--mono--gray7 {
+        background-color: @gray-7;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-7}';
+        }
+    }
+    &.swatch--mono--gray8 {
+        background-color: @gray-8;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{gray-8}';
+        }
+    }
+    &.swatch--mono--white {
+        background-color: @white;
+        color: @black;
+        & p:after {
+            text-transform: uppercase;
+            content: '@{white}';
+        }
+    }
+
+    &.swatch--adviser--inventive-teal-light {
+        background-color: @inventive-teal-light;
+        color: @white;
+    }
+    &.swatch--adviser--inventive-teal-lighter {
+        background-color: @inventive-teal-lighter;
+        color: @text-color;
+    }
+    &.swatch--adviser-blue-gray {
+        background-color: @adviser-blue-gray;
+        color: @white;
+    }
+    &.swatch--adviser-stone {
+        background-color: @adviser-stone;
+        color: @white;
+    }
+}
