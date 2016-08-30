@@ -26,12 +26,17 @@ block script
 
 block content
 	.articleContent
-		.fieldset
-			label(for="field") Money left after bills
-			.field-group.field-group--dropdown
-				input#field(type="number")
-				.dropdown
-					select#exampleSelect1
-						option Weekly
-						option(selected) Monthly
-		a.btn.right-button-icon(href="debt-calculator-2.html") Next
+		table
+			thead
+				tr
+					th(scope="col", width="50%") Creditor
+					th(scope="col", width="50%") Suggested monthly repayments
+			tbody
+				tr
+					td Creditor one
+					td £XX.XX
+				tr
+					td Creditor two
+					td £XX.XX
+
+		a.btn.restart-button-icon(href="debt-calculator.html") Restart
