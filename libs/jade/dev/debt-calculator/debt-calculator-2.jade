@@ -23,6 +23,9 @@ block script
 			$('#debt-info').find('.well:last').slideDown('fast');
 			x++;
 		});
+		$(document).on("click", ".remove", function(){
+			$(this).parent().parent().parent().slideUp('fast');
+		});
 
 block content
 	.articleContent
