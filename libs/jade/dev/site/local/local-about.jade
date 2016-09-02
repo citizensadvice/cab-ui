@@ -19,7 +19,7 @@ block local
 					li
 						a(href="local-about.html") About
 					li
-						a Contact us
+						a(href="local-contact.html") Contact us
 					li
 						button.btn.btn-success(type="button") Donate
 
@@ -79,123 +79,53 @@ block content
 		.fullwidth-content
 			.flex-row
 				.col-sm-8
-					h2(style="margin-top:0;") Contact #{title}
-					p.strong Please note that we are closed on Bank Holidays
-					.flex-row
-						.col-sm-6
-							h3 Location
-							p Thorne Office, Marriott House 5a Browns Lane Thorne
+					h2(style="margin-top:0;") About Citizens Advice #{title}
+					p We provide free, confidential and impartial advice and campaign on big issues affecting people's lives.
+					p Our goal is to help everyone find a way forward, whatever problem they face.
+					p We're an independent charity and part of the Citizens Advice network across England and Wales.
+
+					h2 Our supporters
+					p As a charity we could not help give free, confidential advice to help people without the backing of our supporters, we thank them for all their support:
+					ul
+						li Big Lottery Fund
+						li Money Advice Service
+						li Robert Forster Charity
+						li Doncaster Metropolitan Borough Council
+						li Hatfield Town Council
+						li Stainforth Town Council
+						li Thorne-Moorends Town Council.
+
+
+					img(src="#{dir}images/local/mas.jpg")
+					img(src="#{dir}images/local/lottery.jpg")
+				.col-sm-4
+
+					//h3 Our supporters
+					//img(src="#{dir}images/local/mas.jpg")
+					//img(src="#{dir}images/local/lottery.jpg")
+					.row
+						.cards
+							.card-banner-top(style="background-color:#004b88;")
+								h3(style="color:#fff;") Our main office
+							.card-image-top
+								img(src="#{dir}images/local/kilburn-cab.jpg")
+							.card-text
+								p Thorne Office, Marriott House 5a Browns Lane Thorne
 								| DONCASTER
 								br
 								| South Yorkshire
 								br
-								| DN8 5AF
-
-							h3 Access details
-							p #[span.i &#x267f;] Wheelchair accessible
-								br
-								| #[span.i &#xe908;] Induction loop
-								br
-								| Wheelchair toilet access
-								br
-								| Internet advice access
-
-						.col-sm-6
-							h3 Telephone advice
-							p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
-							p
-								a advicecabthorne@fsmail.net
-								br
-								| #[strong Advice Line] 0844 499 4137
-								br
-								| #[strong Debt Line] 01405 741457
-								br
-								| #[strong Benefit Line] 01405 816702
-
-				.col-sm-4
-					.row
-						.cards-branding--teal
-							.card-banner-top
-								p Online advice
-							.card-text
-								label We cover many areas of advice help online, search for advice
-								fieldset
-									.search-results__field.field-group.field-group--buttons
-										input(type="search", placeholder="Search")
-										button.btn.btn-primary
-											i.icon-search
+								| DN8 5AF.
+								p
+									a(href="#") See our opening times
 
 
 	.fullwidth-content
 		.flex-row
 			.col-sm-12
-				h2 Advice session times
-
-				ul.tablist(role='tablist')
-					li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') Advice session times
-					li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Telephone session times
-				#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
-					.table-responsive
-						.inner
-							table
-								thead
-									tr
-										th
-										th(colspan="2") Advice session times
-								tbody
-									tr
-										th(width="15%") Monday
-										td(width="20%") 10.00 - 14.00
-										td(width="65%") Debt appointments only.
-									tr
-										th Tuesday
-										td
-										td *NEW* general drop-in session where a brief assessment will be conducted. General appts.
-									tr
-										th Wednesday
-										td 10.00 - 12.30
-										td General drop-in session where a brief assessment will be conducted. From 5th June 2013
-									tr
-										th Thursday
-										td
-										td Debt appointments only.
-									tr
-										th Friday
-										td
-										td Closed
-
-				#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
-					.table-responsive
-						.inner
-							table
-								thead
-									tr
-										th
-										th(colspan="2") Telephone session times
-								tbody
-									tr
-										th(width="15%") Monday
-										td(width="20%") 10.00 - 14.00
-										td(width="65%") TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
-									tr
-										th Tuesday
-										td 10.00 - 14.00
-										td TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
-									tr
-										th Wednesday
-										td 10.00 - 14.00
-										td TEL 0844 499 4137 for a brief assessment . from June 5th 2013
-									tr
-										th Thursday
-										td
-										td Telephone line closed
-									tr
-										th Friday
-										td
-										td TEL 0844 499 4137 For a brief assessment . This service will close from June 7th 2013
 
 
-	.fullwidth-yellow
+	//.fullwidth-yellow
 		.fullwidth-content
 			.flex-row
 				.col-sm-6
