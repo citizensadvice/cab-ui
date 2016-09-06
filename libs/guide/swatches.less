@@ -1,6 +1,15 @@
 /***************************************************************************
  * Colour swatches
  */
+.print-swatch(@color) {
+    & p:after {
+        text-transform: uppercase;
+        @hex: @color;
+        content: %("@{hex} \A R:%S \A G:%S \A B:%S", red(@hex), blue(@hex), green(@hex));
+        white-space: pre;
+    }
+}
+
 .swatch {
     border-radius: @form-border-radius;
     text-align: center;
@@ -26,10 +35,7 @@
     &.swatch--brand--heritage-blue {
         background-color: @heritage-blue;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-blue}';
-        }
+        .print-swatch(@heritage-blue);
     }
     &.swatch--brand--heritage-yellow {
         background-color: @heritage-yellow;
