@@ -1,0 +1,102 @@
+block settings
+    - var title = "How we score values"
+    - var sidebar = true
+    - var toolbars = true
+    - var mockup = true
+    - var dir = "../../"
+
+block sidebar
+    - var section = "Energy"
+    +sidebar([
+        {href: "comparison-5.html", title: "Energy supplier comparison"},
+        {href: "comparison-details.html", title: "How we score values"},
+        {href: "#", title: "Compare energy prices"}
+    ])
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy", href: "#"},
+        {title: title}])
+
+block content
+    .articleContent
+        p The energy supplier comparison tool presents of how domestic energy suppliers are performing, in terms of the service they provide to their customers.
+        p The overall supplier performance rating is made up of five individual metrics described in the table below. The following tables explain how supplier performance against each of the metrics is scored, and the weightings given to each of the five metrics.
+
+        h2 Weightings
+        table
+            thead
+                tr
+                    th(scope="col") &nbsp;
+                    th(scope="col") Weight out of 100%
+                    th(scope="col") Description
+            tbody
+                tr
+                    th(scope="row") Complaints
+                    td 30%
+                    td How well energy suppliers perform on complaints handling
+                tr
+                    th(scope="row") Customer service
+                    td 25%
+                    td How satisfied energy consumers are with the ease of contacting their supplier
+                tr
+                    th(scope="row") Billing satisfaction
+                    td 25%
+                    td How satisfied energy consumers are with the ease of understanding their bills
+                tr
+                    th(scope="row") Switching
+                    td 10%
+                    td The proportion of energy consumers that are switched by their supplier in 21 days, inclusive of delays for a valid reason
+                tr
+                    th(scope="row") Customer commitment
+                    td 10%
+                    td Which suppliers are signed up to the switching guarantee and billing code
+        h2 Scoring mechanism
+        table
+            thead
+                tr
+                    th(scope="col", width="20%") &nbsp;
+                    th(scope="col", width="16%") 5
+                    th(scope="col", width="16%") 4
+                    th(scope="col", width="16%") 3
+                    th(scope="col", width="16%") 2
+                    th(scope="col", width="16%") 1
+            tbody
+                tr
+                    th(scope="row") Complaints per 100,000 customers
+                    td.rate-5 #[strong 50 or less]
+                    td.rate-4 #[strong 51 to 100]
+                    td.rate-3 #[strong 101 to 350]
+                    td.rate-2 #[strong 351 to 550]
+                    td.rate-1 #[strong Over 550]
+                tr
+                    th(scope="row") Customers satisfied with service
+                    td.rate-5 #[strong Over 75%]
+                    td.rate-4 #[strong 70-75%]
+                    td.rate-3 #[strong 60-69%]
+                    td.rate-2 #[strong 51-59%]
+                    td.rate-1 #[strong 50% and below]
+                tr
+                    th(scope="row") Customers satisfied with billing
+                    td.rate-5 #[strong Over 75%]
+                    td.rate-4 #[strong 70-75%]
+                    td.rate-3 #[strong 60-69%]
+                    td.rate-2 #[strong 51-59%]
+                    td.rate-1 #[strong 50% and below]
+                tr
+                    th(scope="row") Proportion of switches in 21 days, or delayed for a valid reason
+                    td.rate-5 #[strong 100%]
+                    td.rate-4 #[strong 95% plus]
+                    td.rate-3 #[strong 75% plus]
+                    td.rate-2 #[strong 50% plus]
+                    td.rate-1 #[strong Under 50%]
+                tr
+                    th(scope="row") Customer commitment
+                    td.rate-5 Signed up to both switch guarantee and billing code
+                    td.rate-4 Signed up to either switch guarantee or billing code
+                    td.rate-3 Not applicable
+                    td.rate-2 Not applicable
+                    td.rate-1 Not applicable
