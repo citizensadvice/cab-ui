@@ -2,6 +2,8 @@
 * Cards
 * Boxes for captions, links, callouts, not related to content
 */
+
+
 .cards {
     border: .0625rem solid @gray-7;
     border-radius: .25rem;
@@ -9,6 +11,41 @@
     box-shadow: 0 2px 0 0 @gray-7,0 1px 3px 0 @gray-7;
     background-color: @white;
     overflow: hidden;
+    &--basic {
+        padding: 1rem; 
+    }
+    &--heritage {
+        padding: 1rem; 
+        background-color: @heritage-yellow;
+        h1, h2, h3, h4, h5, h6 {
+            color: @heritage-blue;
+            margin-top: 0;
+        }
+    }
+    &--responsible {
+        padding: 1rem; 
+        background-color: @responsible-aqua;
+        h1, h2, h3, h4, h5, h6 {
+            color: @responsible-purple;
+            margin-top: 0;
+        }
+    }
+    &--inventive {
+        padding: 1rem; 
+        background-color: @inventive-pink;
+        h1, h2, h3, h4, h5, h6 {
+            color: @inventive-teal;
+            margin-top: 0;
+        }
+    }
+    &--generous {
+        padding: 1rem; 
+        background-color: @generous-mauve;
+        h1, h2, h3, h4, h5, h6 {
+            color: @generous-green;
+            margin-top: 0;
+        }
+    }
     .card-banner-top {
         border-radius: @form-border-radius @form-border-radius 0 0;
         >:first-child {

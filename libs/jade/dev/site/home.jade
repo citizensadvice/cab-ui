@@ -4,7 +4,7 @@ block settings
 	- var dir = "../../"
 	- var newfooter = true
 
-extends /template/template-site.jade
+extends /template/template-site-dev.jade
 
 block content
 		.main-container
@@ -29,27 +29,40 @@ block content
 			.home__content
 				.flex-container.flex-row
 					div.col-sm-4.col-sm-12								
-						.blog-lead
-							.blog-name
-								p Issues affecting people
-						.data-display
-							p.data-display-intro Problems at work
-							p We research issues affecting people everyday and lobby Government to change policy.
-							h3 380,000
-							p employment issues in 2015
-							h3 84%
-							p increase in unauthorised deduction from wages
-							p #[a(href="#") Read more about our research ]		
+						.cards.cards--basic
+							.blog-lead
+								.blog-name
+									p Issues affecting people
+							.data-display
+								p.data-display-intro Problems at work
+								p We research issues affecting people everyday and lobby Government to change policy.
+								h3 380,000
+								p employment issues in 2015
+								h3 84%
+								p increase in unauthorised deduction from wages
+								p #[a(href="#") Read more about our research ]		
 
 					div.col-sm-4.col-sm-12
-						.blog-lead
-							.blog-name
-								p Latest Blog
-								h3 #[a(href="#") Payday loans: An improved market? ]
-							img(src="../../images/sample-blog/adviser-needs.jpg" alt="Blog image" style="width:100%;")
-							p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
+						.cards.cards--basic
+							.blog-lead
+								.blog-name
+									p Latest Blog
+									h3 #[a(href="#") Payday loans: An improved market? ]
+								img(src="../../images/sample-blog/adviser-needs.jpg" alt="Blog image" style="width:100%;")
+								p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
 
-					div.col-sm-4.col-sm-12.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
+					div.col-sm-4.col-sm-12
+						.cards.cards--responsible
+								h2 Help others
+								img(src="../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+								p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+								fieldset
+									label(for="standardField", style="color:#57486b;") Search your area
+									input#standardField(placeholder="", type="text")
+
+								button.btn.btn-secondary.right-button-icon Search roles
+
+					//div.col-sm-4.col-sm-12.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
 						.card-banner-top
 							p(style="color:#57486b;") Help others
 						.card-text
