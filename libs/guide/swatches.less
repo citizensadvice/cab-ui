@@ -4,8 +4,10 @@
 .print-swatch(@color) {
     & p:after {
         text-transform: uppercase;
-        @hex: @color;
-        content: %("@{hex} \A R:%S \A G:%S \A B:%S", red(@hex), blue(@hex), green(@hex));
+        @red: red(@color);
+        @blue: blue(@color);
+        @green: green(@color);
+        content: %("@{color} \A R:%S \A G:%S \A B:%S", round(@red,0), round(@blue,0), round(@green,0));
         white-space: pre;
     }
 }
@@ -39,322 +41,196 @@
     }
     &.swatch--brand--heritage-yellow {
         background-color: @heritage-yellow;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-yellow}';
-        }
+        .print-swatch(@heritage-yellow);
     }
     &.swatch--brand--responsible-purple {
         background-color: @responsible-purple;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{responsible-purple}';
-        }
+        .print-swatch(@responsible-purple);
     }
     &.swatch--brand--responsible-aqua {
         background-color: @responsible-aqua;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{responsible-aqua}';
-        }
+        .print-swatch(@responsible-aqua);
     }
     &.swatch--brand--inventive-teal {
         background-color: @inventive-teal;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{inventive-teal}';
-        }
+        .print-swatch(@inventive-teal);
     }
     &.swatch--brand--inventive-pink {
         background-color: @inventive-pink;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{inventive-pink}';
-        }
+        .print-swatch(@inventive-pink);
     }
     &.swatch--brand--generous-green {
         background-color: @generous-green;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{generous-green}';
-        }
+        .print-swatch(@generous-green);
     }
     &.swatch--brand--generous-mauve {
         background-color: @generous-mauve;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{generous-mauve}';
-        }
+        .print-swatch(@generous-mauve);
     }
 
     &.swatch--beta--heritage-blue-lighter {
         background-color: @heritage-blue-lighter;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-blue-lighter}';
-        }
+        .print-swatch(@heritage-blue-lighter);
     }
     &.swatch--beta--heritage-blue-lightest {
         background-color: @heritage-blue-lightest;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-blue-lightest}';
-        }
+        .print-swatch(@heritage-blue-lightest);
     }
     &.swatch--beta--heritage-yellow-lighter {
         background-color: @heritage-yellow-lighter;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-yellow-lighter}';
-        }
+        .print-swatch(@heritage-yellow-lighter);
     }
     &.swatch--beta--heritage-yellow-darker {
         background-color: @heritage-yellow-darker;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{heritage-yellow-darker}';
-        }
+        .print-swatch(@heritage-yellow-darker);
     }
 
     &.swatch--beta--red {
         background-color: @red;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{red}';
-        }
+        .print-swatch(@heritage-yellow-lighter);
     }
     &.swatch--beta--red-light {
         background-color: @red-light;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{red-light}';
-        }
+        .print-swatch(@red-light);
     }
     &.swatch--beta--red-lighter {
         background-color: @red-lighter;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{red-lighter}';
-        }
+        .print-swatch(@red-lighter);
     }
     &.swatch--beta--pink {
         background-color: @pink;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{pink}';
-        }
+        .print-swatch(@pink);
     }
     &.swatch--beta--orange {
         background-color: @orange;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{orange}';
-        }
+        .print-swatch(@orange);
     }
     &.swatch--beta--orange-light {
         background-color: @orange-light;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{orange-light}';
-        }
+        .print-swatch(@orange-light);
     }
     &.swatch--beta--orange-lighter {
         background-color: @orange-lighter;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{orange-lighter}';
-        }
+        .print-swatch(@orange-lighter);
     }
     &.swatch--beta--green {
         background-color: @green;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{green}';
-        }
+        .print-swatch(@green);
     }
     &.swatch--beta--green-light {
         background-color: @green-light;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{green-light}';
-        }
+        .print-swatch(@green-light);
     }
     &.swatch--beta--green-lighter {
         background-color: @green-lighter;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{green-lighter}';
-        }
+        .print-swatch(@green-lighter);
     }
     &.swatch--beta--blue {
         background-color: @blue;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{blue}';
-        }
+        .print-swatch(@heritage-yellow-lighter);
     }
     &.swatch--beta--blue-light {
         background-color: @blue-light;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{blue-light}';
-        }
+        .print-swatch(@blue-light);
     }
     &.swatch--beta--blue-lighter {
         background-color: @blue-lighter;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{blue-lighter}';
-        }
+        .print-swatch(@blue-lighter);
     }
     &.swatch--beta--blue-darker {
         background-color: @blue-darker;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{blue-darker}';
-        }
+        .print-swatch(@blue-darker);
     }
     &.swatch--beta--aqua {
         background-color: @aqua;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{aqua}';
-        }
+        .print-swatch(@aqua);
     }
     &.swatch--beta--aqua-light {
         background-color: @aqua-light;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{aqua-light}';
-        }
+        .print-swatch(@aqua-light);
     }
     &.swatch--beta--yellow {
         background-color: @yellow;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{yellow}';
-        }
+        .print-swatch(@yellow);
     }
     &.swatch--beta--yellow-light {
         background-color: @yellow-light;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{yellow-light}';
-        }
+        .print-swatch(@yellow-lighter);
     }
     &.swatch--beta--purple {
         background-color: @purple;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{purple}';
-        }
+        .print-swatch(@heritage-yellow-lighter);
     }
     &.swatch--beta--purple-dark {
         background-color: @purple-dark;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{purple-dark}';
-        }
+        .print-swatch(@purple-dark);
     }
 
     &.swatch--mono--black {
         background-color: @black;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{black}';
-        }
+        .print-swatch(@black);
     }
     &.swatch--mono--gray0 {
         background-color: @gray-0;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-0}';
-        }
+        .print-swatch(@gray-0);
     }
     &.swatch--mono--gray1 {
         background-color: @gray-1;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-1}';
-        }
+        .print-swatch(@gray-1);
     }
     &.swatch--mono--gray2 {
         background-color: @gray-2;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-2}';
-        }
+        .print-swatch(@gray-2);
     }
     &.swatch--mono--gray3 {
         background-color: @gray-3;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-3}';
-        }
+        .print-swatch(@gray-3);
     }
     &.swatch--mono--gray4 {
         background-color: @gray-4;
         color: @white;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-4}';
-        }
+        .print-swatch(@gray-4);
     }
     &.swatch--mono--gray5 {
         background-color: @gray-5;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-5}';
-        }
+        .print-swatch(@gray-5);
     }
     &.swatch--mono--gray6 {
         background-color: @gray-6;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-6}';
-        }
+        .print-swatch(@gray-6);
     }
     &.swatch--mono--gray7 {
         background-color: @gray-7;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-7}';
-        }
+        .print-swatch(@gray-1);
     }
     &.swatch--mono--gray8 {
         background-color: @gray-8;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{gray-8}';
-        }
+        .print-swatch(@gray-8);
     }
     &.swatch--mono--white {
         background-color: @white;
         color: @black;
-        & p:after {
-            text-transform: uppercase;
-            content: '@{white}';
-        }
+        .print-swatch(@white);
     }
 
     &.swatch--adviser--inventive-teal-light {
