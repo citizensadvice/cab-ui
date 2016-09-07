@@ -9,15 +9,12 @@
     position: -webkit-sticky;
     position: sticky;
     z-index: 3;
-    margin: .5rem 0 0 0;
-}
-
-#main-nav-beta {
-	// Branding bar along the top, dark blue
-	.branding {
-		background-color: @heritage-blue;
-		text-align: right;
-		padding: .25rem 0;
+    margin: -0.5rem 0 0 0;
+    .branding {
+        background-color: @heritage-blue;
+        height: 40px;
+        text-align: right;
+        padding: .5rem 0;
         ul {
             list-style: none;
             margin: 0;
@@ -25,33 +22,35 @@
                 padding: 0;
             }
             li {
-            	display: inline-block;
-            	margin: 0;
-            	margin-left: 1em;
+                display: inline-block;
+                margin: 0;
+                margin-left: 1em;
                 @media screen and (max-width: @breakpoint-sm) {
                     margin-left: .25em;
                 }
-            	a {
-            		color: @white;
-            		border: none;
-					font-size: @font-size-small;
-					padding: .3em 0;
-					&:hover,
-					&:focus,
-					&:active {
-						background: none;
+                a {
+                    color: @white;
+                    border: none;
+                    font-size: @font-size-small;
+                    padding: .3em 0;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: none;
 
-					}
+                    }
                     @media screen and (max-width: @breakpoint-sm) {
                         margin-left: .25em;
                         margin-right: 0;
                         font-size: 0.75rem;
                     }
-            	}
+                }
             }
         }
-	}
+    }
+}
 
+#main-nav-beta {
 	// Main bar beneath branding bar, light blue
 	.navigation {
 		background-color: @heritage-blue-lighter;
