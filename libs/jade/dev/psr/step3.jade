@@ -15,7 +15,7 @@ block breadcrumbs
 
 block content
     .articleContent
-        h2 About you
+        h2 About your needs
 
         .flex-container.flex-row
             .col-sm-12.col-xs-12
@@ -42,6 +42,10 @@ block content
                 label.checkbox.checkbox--block
                     input(name="checkbox-inline", type="checkbox")
                     | I'm deaf, hearing impaired
+
+                fieldset
+                    label(for="yourAddress") Any other, please give details
+                    textarea#yourAddress(rows="4")
 
         a.btn-light.left-button-icon(href="step2.html") Back
         a.btn.right-button-icon(href="step3a.html") Continue
