@@ -7,6 +7,31 @@ block settings
 
 extends /template/template.jade
 
+block script
+    script.
+
+        /*$(document).ready(function() {
+
+            // Check state of radio button and showOrHide additional fields
+            $('input[name="conditional-two"]').bind('change',function(){
+                var showOrHide = ($(this).val() == 1) ? true : false;
+                $('#1').toggle(showOrHide);
+                var showOrHide = ($(this).val() == 2) ? true : false;
+                $('#2').toggle(showOrHide);
+            });
+
+        });*/
+
+        $(document).ready(function() {
+            $('.conditional').click(function() {
+                if( $(this).find('input[value="2"]').is(':checked')) {
+                    $(this).next().show();
+                } else {
+                    $(this).next().hide();
+                }
+            });
+        });
+
 block breadcrumbs
     +breadcrumbs([
         {title: "Home", href: "#"},
@@ -18,7 +43,7 @@ block content
         h2 About you
         div
             fieldset
-                label(for="standardField") Applicants full name
+                label(for="standardField") Your full name
                 input(id="standardField" placeholder="" type="text")
 
             fieldset
@@ -26,7 +51,35 @@ block content
                 span.form-hint If different from the applicants name
                 input(id="standardField" placeholder="" type="text")
 
+
+            fieldset
+                label(for="standardField") Email address
+                span.form-hint You will receive notification of services here
+                input(id="standardField" placeholder="" type="text")
+
+
             .well--outline
+                fieldset.conditional
+                    label(for="conditional-two") Your address
+                    label.radio.radio--block
+                        input(checked, name="conditional-two", type="radio", value="1")
+                        | Lookup address
+                    label.radio.radio--block
+                        input(name="conditional-two", type="radio", value="2")
+                        | Enter address manually
+                .conditional--fields
+                    fieldset
+                        label(for="yourAddress") Your address
+                        textarea#yourAddress(rows="4")
+                fieldset
+                    label(for="field") Enter your postcode
+                    .search-results__field.field-group.field-group--buttons
+                        input(type="search", placeholder="Enter postcode")
+                        button.btn.btn-primary Search&nbsp;&nbsp;
+                            i.icon-search
+
+
+            //.well--outline
                 h3 Your address
                 fieldset
                     label.radio.radio--inline
@@ -43,7 +96,7 @@ block content
                         button.btn.btn-primary Search&nbsp;&nbsp;
                             i.icon-search
 
-        .fieldset
+        //.fieldset
             label(for="energySupplier") Select your energy supplier
             .dropdown
                 select#energySupplier 
@@ -54,5 +107,5 @@ block content
                     option NPower
 
 
-        a.btn-light.left-button-icon(href="step2.html") Back
-        a.btn.right-button-icon(href="step3.html") Continue
+        a.btn-light.left-button-icon(href="step1.html") Back
+        a.btn.right-button-icon(href="step2a.html") Continue

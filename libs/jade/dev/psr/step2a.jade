@@ -1,0 +1,109 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block script
+    script.
+
+        /*$(document).ready(function() {
+
+            // Check state of radio button and showOrHide additional fields
+            $('input[name="conditional-two"]').bind('change',function(){
+                var showOrHide = ($(this).val() == 1) ? true : false;
+                $('#1').toggle(showOrHide);
+                var showOrHide = ($(this).val() == 2) ? true : false;
+                $('#2').toggle(showOrHide);
+            });
+
+        });*/
+
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 About your energy
+        div
+            h3 Confirm your energy suppliers
+            .fieldset
+                label(for="energySupplier") Water company
+                .dropdown
+                    select#energySupplier 
+                        option Thames Water
+                        option Severn Trent Water
+                        option Southern Water
+                        option South West Water
+
+            .fieldset
+                label(for="energySupplier") Electricity supplier
+                .dropdown
+                    select#energySupplier 
+                        option Better Energy
+                        option Bristol Energy
+                        option British Gas
+                        option Cooperative Energy
+                        option E Electricity and Gas
+                        option Ebico
+                        option Economy Energy
+                        option Ecotricity
+                        option EDF Energy
+                        option EON
+                        option Extra Energy
+                        option First Utility
+                        option Flow Energy
+                        option GB Energy
+                        option Good Energy
+                        option Green Star Energy
+                        option Npower
+                        option Octopus Energy
+                        option Ovo Energy
+                        option Robin Hood Energy
+                        option ScottishPower
+                        option Spark Energy
+                        option SSE
+                        option Utilita
+                        option Utility Warehouse
+
+            .fieldset
+                label(for="energySupplier") Gas supplier
+                .dropdown
+                    select#energySupplier 
+                        option Not applicable
+                        option Better Energy
+                        option Bristol Energy
+                        option British Gas
+                        option Cooperative Energy
+                        option E Electricity and Gas
+                        option Ebico
+                        option Economy Energy
+                        option Ecotricity
+                        option EDF Energy
+                        option EON
+                        option Extra Energy
+                        option First Utility
+                        option Flow Energy
+                        option GB Energy
+                        option Good Energy
+                        option Green Star Energy
+                        option Npower
+                        option Octopus Energy
+                        option Ovo Energy
+                        option Robin Hood Energy
+                        option ScottishPower
+                        option Spark Energy
+                        option SSE
+                        option Utilita
+                        option Utility Warehouse
+
+
+        a.btn-light.left-button-icon(href="step2.html") Back
+        a.btn.right-button-icon(href="step3.html") Continue
