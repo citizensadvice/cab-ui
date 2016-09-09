@@ -14,20 +14,26 @@ block script
 	script.
 		$(document).ready(function() {
 			$('#webchat').click(function(){
-				$('#overlay').show();
+				$('#overlay--1').show();
 			})
-			$('.dialog__close').click(function(){
-				$('#overlay').hide();
+			$('.dialog__close.1').click(function(){
+				$('#overlay--1').hide();
+			})
+			$('#advice').click(function(){
+				$('#overlay--2').show();
+			})
+			$('.dialog__close.2').click(function(){
+				$('#overlay--2').hide();
 			})
 		});
 
 block content
 	.digital-lab
-		#overlay.overlay(style="display: none;")
+		#overlay--1.overlay(style="display: none;")
 			.overlay__modal
 				.overlay__main(style="background-color: #c2bdde;")
 					div
-						button.dialog__close(type="button" data-action="close")
+						button.dialog__close.1(type="button" data-action="close")
 							i(aria-hidden="true", class="dialog__close-icon")
 							span.dialog__close-text Close
 					.flex-container
@@ -46,6 +52,31 @@ block content
 									div as a
 										br
 										strong Client
+
+	.digital-lab
+		#overlay--2.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.2(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="http://www.surveygizmo.com/s3/2993823/Citizens-Advice")
+									.dl--circle
+										.pic.i-brand &#xe993;
+									div help with
+										br
+										strong Navigation research
+							.dl--segment.col-xs-6
+								a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/check-if-youre-entitled-to-sick-pay/")
+									.dl--circle
+										.pic.i-brand &#xe993;
+									div test
+										br
+										strong Sick pay adviser content
 
 		.fullwidth
 			.fullwidth-content
@@ -86,15 +117,23 @@ block content
 								p Explore the
 									br
 									strong PQF dashboard
+						// Mobile Advice
+						.dl--segment.col-sm-4.mobile
+							a(href="https://www.citizensadvice.org.uk/development/workplace-rights/sick-pay/check-if-youre-entitled-to-sick-pay/")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Help us improve our
+									br
+									strong Online advice content
 						.dl--segment.col-sm-4.tablet
-							a(href="http://www.surveygizmo.com/s3/2993823/Citizens-Advice")
+							a#advice(href="#")
 								.dl--circle
 									.pic.i-brand &#xe993;
 								p Help us improve our
 									br
 									strong Online advice content
 						.dl--segment.col-sm-4
-							a(href="#")
+							a(href="http://citizensadvice.github.io/cab-ui/dev/energy/comparison-4.html")
 								.dl--circle
 									.pic.i-brand &#xe985;
 								p Test the
@@ -108,12 +147,12 @@ block content
 									br
 									strong Priority service register
 						.dl--segment.col-sm-4.tablet
-							a(href="#")
+							a(href="http://52.209.108.49/client/budgets/1")
 								.dl--circle
 									.pic £
 								p Try the
 									br
-									strong Money advice recording tool
+									strong Money advice recording tool (MART)
 						.dl--segment.col-sm-4.tablet
 							a(href="#")
 								.dl--circle
