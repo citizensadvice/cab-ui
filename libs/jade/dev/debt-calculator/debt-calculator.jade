@@ -1,10 +1,11 @@
 block settings
-	- var title = "Debt calculator"
+	- var title = "Repayment calculator for non-priority debts"
 	- var sidebar = true
 	- var toolbars = true
+	- var mockup = true
 	- var dir = "../../"
 
-extends /template/template-site.jade
+extends /template/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -26,8 +27,9 @@ block script
 
 block content
 	.articleContent
+		p Use this calculator to work out how much money to offer each of your non-priority creditors.
 		.fieldset
-			label(for="field") Money left after bills
+			label(for="field") Money left after essential bills and living costs
 			.field-group.field-group--dropdown
 				input#field(type="number")
 				.dropdown
