@@ -27,11 +27,23 @@ block script
 	script(src="#{dir}js/sorttable.js")
 	script.
 		$(document).ready(function() {
-			$('.open-dialog').click(function(){
-				$('#overlay').show();
+			$('.open-dialog1').click(function(){
+				$('#overlay1').show();
 			})
-			$('.dialog__close').click(function(){
-				$('#overlay').hide();
+			$('.dialog__close.1').click(function(){
+				$('#overlay1').hide();
+			})
+			$('.open-dialog2').click(function(){
+				$('#overlay2').show();
+			})
+			$('.dialog__close.2').click(function(){
+				$('#overlay2').hide();
+			})
+			$('.open-dialog3').click(function(){
+				$('#overlay3').show();
+			})
+			$('.dialog__close.3').click(function(){
+				$('#overlay3').hide();
 			})
 
 			$(".complaints").each(function() {
@@ -166,7 +178,7 @@ block content
 					th.lg-only(scope="col") Customer commitment
 					th.col-rate(scope="col") Rating
 			tbody
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 1
 					td Supplier A
@@ -177,7 +189,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 3
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 2
 					td Supplier B
@@ -188,7 +200,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 3.25
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 3
 					td Supplier C
@@ -199,7 +211,7 @@ block content
 					td.commitment 5
 					td.rating
 						span 4
-				tr.open-dialog
+				tr.open-dialog1
 					td
 						span.inline-badge 4
 					td Supplier D
@@ -210,7 +222,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 3
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 5
 					td Supplier E
@@ -221,7 +233,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 3.5
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 6
 					td Supplier F
@@ -232,7 +244,7 @@ block content
 					td.commitment 5
 					td.rating
 						span 2.25
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 7
 					td Supplier G
@@ -243,7 +255,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 2.5
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 8
 					td Supplier H
@@ -254,7 +266,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 2.75
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 9
 					td Supplier I
@@ -265,7 +277,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 2
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 10
 					td Supplier J
@@ -276,7 +288,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 2.25
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 11
 					td Supplier K
@@ -287,7 +299,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 3.25
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 12
 					td Supplier L
@@ -298,7 +310,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 3.5
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 13
 					td Supplier M
@@ -309,7 +321,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 2.5
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 14
 					td Supplier N
@@ -320,7 +332,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 2.5
-				tr.open-dialog
+				tr.open-dialog1
 					td.decrease
 						span.inline-badge 15
 					td Supplier O
@@ -331,7 +343,7 @@ block content
 					td.commitment 4
 					td.rating
 						span 2.75
-				tr.open-dialog
+				tr.open-dialog1
 					td.increase
 						span.inline-badge 16
 					td Supplier P
@@ -342,7 +354,7 @@ block content
 					td.commitment 0
 					td.rating
 						span 3.25
-				tr.open-dialog
+				tr.open-dialog1
 					td
 						span.inline-badge 17
 					td Supplier Q
@@ -353,141 +365,131 @@ block content
 					td.commitment 0
 					td.rating
 						span 2.75
-				tr.open-dialog
-					td.decrease
-						span.inline-badge 18
+				tr.open-dialog2
+					td(sorttable_customkey="99") -
 					td Supplier R
 					td.complaints 340.5
 					td.service -
 					td.billing -
 					td.switch -
 					td.commitment -
-					td.rating
-						span -
-				tr.open-dialog
-					td.decrease
-						span.inline-badge 19
+					td -
+				tr.open-dialog2
+					td(sorttable_customkey="99") -
 					td Supplier S
 					td.complaints 375.6
 					td.service -
 					td.billing -
 					td.switch -
 					td.commitment 4
-					td.rating
-						span -
-				tr.open-dialog
-					td.decrease
-						span.inline-badge 20
+					td -
+				tr.open-dialog2
+					td(sorttable_customkey="99") -
 					td Supplier T
 					td.complaints 345.3
 					td.service -
 					td.billing -
 					td.switch -
 					td.commitment -
-					td.rating
-						span -
-				tr.open-dialog
-					td
-						span.inline-badge 21
+					td -
+				tr.open-dialog2
+					td(sorttable_customkey="99") -
 					td Supplier U
 					td.complaints 950.6
 					td.service -
 					td.billing -
 					td.switch -
 					td.commitment -
-					td.rating
-						span -
-				tr.open-dialog
-					td
-						span.inline-badge 22
+					td -
+				tr.open-dialog2
+					td(sorttable_customkey="99") -
 					td Supplier V
 					td.complaints -
 					td.service -
 					td.billing -
 					td.switch -
 					td.commitment 5
-					td.rating
-						span -
-				tr.open-dialog
+					td -
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier W
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier X
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier Y
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier Z
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AA
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AB
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AC
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AD
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AE
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AF
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AG
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AH
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AJ
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AK
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AL
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AM
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AN
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AO
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
-				tr.open-dialog
+					td Supplier AP
+					td(colspan="6") Click to see more supplier information
+				tr.open-dialog3
 					td(sorttable_customkey="100") -
-					td Supplier V
-					td(colspan="6") See more supplier information
+					td Supplier AQ
+					td(colspan="6") Click to see more supplier information
 
 		h2 Methodology
 		.flex-row
@@ -495,12 +497,12 @@ block content
 				p Morbi porta justo sem, eget consequat purus porttitor nec. Pellentesque vitae euismod nulla, a commodo diam. Phasellus eget tincidunt nibh. Ut sem arcu, aliquam non lectus eu, faucibus viverra lacus.
 				a.blocklink(href="comparison-details.html") How we score values
 
-		#overlay.overlay(style="display:none")
+		#overlay1.overlay(style="display:none")
 			.dialog(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
 
 				header.dialog__header
 					h2#dialog-1-label.dialog__title Supplier A
-					button.dialog__close(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
+					button.dialog__close.1(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
 
 				.dialog__main#dialog-1-main
 					table
@@ -512,12 +514,12 @@ block content
 									span 5
 							tr
 								th(scope="row") Customers satisfied with service
-								td 53.78%
+								td 57.89
 								td.rating
 									span 2
 							tr
 								th(scope="row") Customers satisfied with billing
-								td 40.6
+								td 53.78
 								td.rating
 									span 5
 							tr
@@ -544,4 +546,141 @@ block content
 						| #[strong Mobile hotline:] n/a
 						br
 						| #[strong Minicom / Text:] 18001 0800 072 8626
+					h3 Opening hours
+					p
+						| #[strong Monday:] 8am - 8pm
 						br
+						| #[strong Tuesday:] 8am - 8pm
+						br
+						| #[strong Wednesday:] 8am - 8pm
+						br
+						| #[strong Thursday:] 8am - 8pm
+						br
+						| #[strong Friday:] 8am - 8pm
+						br
+						| #[strong Saturday:] 8am - 8pm
+						br
+						| #[strong Sunday:] Closed
+					h3 Frequency of billing
+					p
+						| #[strong Annually:] Direct debit
+						br
+						| #[strong Bi-annually:] Direct debit
+						br
+						| #[strong Quarterly:] Direct debit
+						br
+						| #[strong Monthly:] Direct debit
+						br
+						| #[strong Weekly:] Cash or cheque
+						br
+						| #[strong Other:] Cash or cheque
+
+
+		#overlay2.overlay(style="display:none")
+			.dialog(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
+
+				header.dialog__header
+					h2#dialog-1-label.dialog__title Supplier R
+					button.dialog__close.2(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
+
+				.dialog__main#dialog-1-main
+					table
+						tbody
+							tr
+								th(scope="row", width="40%") Complaints per 100,000 customers
+								td(width="40%") 40.6
+								td.rating(width="20%")
+									span 3
+					a.blocklink(href="comparison-details.html") How we score values
+					h3 Contact
+					p
+						| #[strong Telephone:] 0800 0480202
+						br
+						| #[strong Email:] #[a contact@suppliera.co.uk]
+						br
+						| #[strong Web Chat:] n/a
+						br
+						| #[strong Ring backs:] n/a
+						br
+						| #[strong Mobile hotline:] n/a
+						br
+						| #[strong Minicom / Text:] 18001 0800 072 8626
+					h3 Opening hours
+					p
+						| #[strong Monday:] 8am - 8pm
+						br
+						| #[strong Tuesday:] 8am - 8pm
+						br
+						| #[strong Wednesday:] 8am - 8pm
+						br
+						| #[strong Thursday:] 8am - 8pm
+						br
+						| #[strong Friday:] 8am - 8pm
+						br
+						| #[strong Saturday:] 8am - 8pm
+						br
+						| #[strong Sunday:] Closed
+					h3 Frequency of billing
+					p
+						| #[strong Annually:] Direct debit
+						br
+						| #[strong Bi-annually:] Direct debit
+						br
+						| #[strong Quarterly:] Direct debit
+						br
+						| #[strong Monthly:] Direct debit
+						br
+						| #[strong Weekly:] Cash or cheque
+						br
+						| #[strong Other:] Cash or cheque
+
+
+		#overlay3.overlay(style="display:none")
+			.dialog(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
+
+				header.dialog__header
+					h2#dialog-1-label.dialog__title Supplier W
+					button.dialog__close.3(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
+
+				.dialog__main#dialog-1-main
+					h3 Contact
+					p
+						| #[strong Telephone:] 0800 0480202
+						br
+						| #[strong Email:] #[a contact@suppliera.co.uk]
+						br
+						| #[strong Web Chat:] n/a
+						br
+						| #[strong Ring backs:] n/a
+						br
+						| #[strong Mobile hotline:] n/a
+						br
+						| #[strong Minicom / Text:] 18001 0800 072 8626
+					h3 Opening hours
+					p
+						| #[strong Monday:] 8am - 8pm
+						br
+						| #[strong Tuesday:] 8am - 8pm
+						br
+						| #[strong Wednesday:] 8am - 8pm
+						br
+						| #[strong Thursday:] 8am - 8pm
+						br
+						| #[strong Friday:] 8am - 8pm
+						br
+						| #[strong Saturday:] 8am - 8pm
+						br
+						| #[strong Sunday:] Closed
+					h3 Frequency of billing
+					p
+						| #[strong Annually:] Direct debit
+						br
+						| #[strong Bi-annually:] Direct debit
+						br
+						| #[strong Quarterly:] Direct debit
+						br
+						| #[strong Monthly:] Direct debit
+						br
+						| #[strong Weekly:] Cash or cheque
+						br
+						| #[strong Other:] Cash or cheque

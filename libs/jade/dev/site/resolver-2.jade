@@ -1,0 +1,99 @@
+block settings
+	- var title = "Making a complaint"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Get Advice"},
+		{title: "Consumer"},
+		{title: "Your energy supply"}])
+
+block head
+	style.
+		.resolver {
+			border: none !important;
+			float: right;
+			margin: 0 0 1rem 1rem;
+		}
+		@media screen and (max-width: 599px) {
+			.resolver {
+				display: block;
+				float: none;
+				margin: 0 0 1rem 0;
+			}
+		}
+
+block sidebar
+	- var section = "Make a complaint"
+	+sidebar([
+		{title: "Complain to your energy supplier", href: "resolver.html"},
+	    {title: "Complain to the energy ombudsman", href: "#"},
+	    {title: "Letter to complain to an energy supplier", href: "#"},
+	    {title: "Check the prepayment meter rules your supplier has to follow", href: "#"},
+	    {title: "Making a complaint", href: "resolver-2.html"}
+	])
+
+block content
+	.articleContent
+		p
+			img.resolver(alt="", src="#{dir}images/logo-resolver.png", width="175")
+			| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida eget magna ut imperdiet. Donec vel urna et lectus congue eleifend quis pharetra nunc. Nullam at dapibus sem. Vivamus vitae nulla ex. Duis pellentesque ultricies ullamcorper. Sed a metus dolor. Mauris pellentesque quam arcu.
+		.fieldset
+			label Select your energy supplier
+			.dropdown
+				select
+					option(value="") Please select
+					option(value="Affect Energy") Affect Energy
+					option(value="Avro Energy") Avro Energy
+					option(value="Bristol Energy") Bristol Energy
+					option(value="British Gas") British Gas
+					option(value="Bulb") Bulb
+					option(value="Co-operative Energy") Co-operative Energy
+					option(value="E") E
+					option(value="E.ON") E.ON
+					option(value="EBICo") EBICo
+					option(value="EDF Energy") EDF Energy
+					option(value="Economy Energy") Economy Energy
+					option(value="Ecotricity") Ecotricity
+					option(value="EnergySW") EnergySW
+					option(value="Extra Energy") Extra Energy
+					option(value="Fairerpower") Fairerpower
+					option(value="First Utility") First Utility
+					option(value="Flow Energy") Flow Energy
+					option(value="Future Energy") Future Energy
+					option(value="GB Energy Supply") GB Energy Supply
+					option(value="Glide") Glide
+					option(value="GnERGY") GnERGY
+					option(value="Go Effortless Energy") Go Effortless Energy
+					option(value="Good Energy") Good Energy
+					option(value="Green Energy (UK) plc") Green Energy (UK) plc
+					option(value="Green Star Energy") Green Star Energy
+					option(value="IRESA Limited") IRESA Limited
+					option(value="iSupplyEnergy") iSupplyEnergy
+					option(value="LoCO2 Energy") LoCO2 Energy
+					option(value="M&amp;S Energy") M&amp;S Energy
+					option(value="npower") npower
+					option(value="OVO Energy") OVO Energy
+					option(value="Octopus Energy") Octopus Energy
+					option(value="Oink Energy") Oink Energy
+					option(value="PFP Energy") PFP Energy
+					option(value="Peterborough Energy") Peterborough Energy
+					option(value="Robin Hood Energy") Robin Hood Energy
+					option(value="SSE") SSE
+					option(value="SSE Atlantic") SSE Atlantic
+					option(value="SSE Scottish Hydro") SSE Scottish Hydro
+					option(value="SSE Southern Electric") SSE Southern Electric
+					option(value="SSE Swalec") SSE Swalec
+					option(value="Sainsbury's Energy") Sainsbury's Energy
+					option(value="ScottishPower") ScottishPower
+					option(value="So Energy") So Energy
+					option(value="Southend Energy") Southend Energy
+					option(value="Spark Energy") Spark Energy
+					option(value="Telecom Plus") Telecom Plus
+					option(value="Tonik Energy") Tonik Energy
+					option(value="Utilita") Utilita
+			button.btn.right-button-icon Begin a complaint
