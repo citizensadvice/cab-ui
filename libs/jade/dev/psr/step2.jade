@@ -10,17 +10,9 @@ extends /template/template.jade
 block script
     script.
 
-        /*$(document).ready(function() {
-
-            // Check state of radio button and showOrHide additional fields
-            $('input[name="conditional-two"]').bind('change',function(){
-                var showOrHide = ($(this).val() == 1) ? true : false;
-                $('#1').toggle(showOrHide);
-                var showOrHide = ($(this).val() == 2) ? true : false;
-                $('#2').toggle(showOrHide);
-            });
-
-        });*/
+        function myFunction() {
+            alert("This feature doesn't work just yet.");
+        }
 
         $(document).ready(function() {
             $('.conditional').click(function() {
@@ -68,14 +60,29 @@ block content
                         input(name="conditional-two", type="radio", value="2")
                         | Enter address manually
                 .conditional--fields
-                    fieldset
+                    .fieldset
+                        label(for="standardField") Address
+                        input(id="standardField" placeholder="" type="text")
+                    //.fieldset
+                        label(for="standardField") Address line 2
+                        input(id="standardField" placeholder="" type="text")
+                    .fieldset
+                        label(for="standardField") Town/City
+                        input(id="standardField" placeholder="" type="text")
+                    .fieldset
+                        label(for="standardField") County
+                        input(id="standardField" placeholder="" type="text")
+                    .fieldset
+                        label(for="standardField") Postcode
+                        input(id="standardField" placeholder="" type="text")
+                    //fieldset
                         label(for="yourAddress") Your address
                         textarea#yourAddress(rows="4")
                 fieldset
                     label(for="field") Enter your postcode
                     .search-results__field.field-group.field-group--buttons
                         input(type="search", placeholder="Enter postcode")
-                        button.btn.btn-primary Search&nbsp;&nbsp;
+                        button.btn.btn-primary(onclick="myFunction()") Search&nbsp;&nbsp;
                             i.icon-search
 
 
