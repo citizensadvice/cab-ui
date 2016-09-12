@@ -1,5 +1,5 @@
 .switch {
-    border: none;
+    border:none;
     margin-bottom: 1.5rem;
     outline: 0;
     padding: 0;
@@ -15,10 +15,20 @@
     padding: 0;
     position: absolute;
     top: 9px;
+    //border: 2px solid @gray-7;
+    &:focus {
+        border: 2px solid @heritage-yellow;
+    }
+}
+
+.switch label {
+    background: #008CBA;
+    border: 2px solid @gray-7;
 }
 
 .switch input:checked + label {
     background: #008CBA;
+    border: 2px solid @heritage-yellow;
 }
 
 .switch input + label {
@@ -34,7 +44,8 @@ input[type="checkbox"] + label, input[type="radio"] + label {
     vertical-align: baseline;
     &:focus {
         //border-width: 1px;
-        border-color: @heritage-yellow;
+        border: 2px solid @heritage-yellow;
+        //border-color: @heritage-yellow;
         border-radius: 0;
         outline: none;
     }

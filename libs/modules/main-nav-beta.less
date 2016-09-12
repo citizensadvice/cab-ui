@@ -52,7 +52,45 @@
 
 #main-nav-beta {
 	// Main bar beneath branding bar, light blue
-	.navigation {
+	    .branding {
+        background-color: @heritage-blue;
+        height: 40px;
+        text-align: right;
+        padding: .5rem 0;
+        ul {
+            list-style: none;
+            margin: 0;
+            @media screen and (max-width: @breakpoint-sm) {
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                margin: 0;
+                margin-left: 1em;
+                @media screen and (max-width: @breakpoint-sm) {
+                    margin-left: .25em;
+                }
+                a {
+                    color: @white;
+                    border: none;
+                    font-size: @font-size-small;
+                    padding: .3em 0;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: none;
+
+                    }
+                    @media screen and (max-width: @breakpoint-sm) {
+                        margin-left: .25em;
+                        margin-right: 0;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+.navigation {
 		background-color: @heritage-blue-lighter;
 		text-align: right;
 		@media screen and (min-width: @breakpoint-md) {
