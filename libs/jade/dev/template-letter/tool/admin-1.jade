@@ -22,7 +22,7 @@ block script
             })
 
             $('.sec--toggle').click(function() {
-                $(this).toggleClass('sec--hidden').next().toggle();
+                $(this).toggleClass('sec--hidden').next().next().toggle();
             })
         });
 
@@ -34,10 +34,16 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
+                .well(style="margin-top:0;")
+                    .fieldset
+                        label(for="standardField") Template letter name
+                        input(placeholder="", type="text")
+
                 .well.moveme(style="margin-top:0;")
                     .fieldset
-                        label.sec--toggle(for="standardField") Template letter name
-                        input(placeholder="", type="text")
+                        label.sec--toggle.sec--hidden(for="standardField") Section title
+                        a.tl--field--delete Remove
+                        input(placeholder="", type="text", style="display:none")
 
                 .well--outline.moveme(style="position:relative;")
                     h2.tl--id(style="margin:0;") {{<input placeholder="input" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem" value="name")>}}
