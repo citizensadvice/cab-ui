@@ -20,6 +20,10 @@ block script
             $('.tl--toggle').click(function() {
                 $(this).toggleClass('tl--hidden').next().toggle();
             })
+
+            $('.sec--toggle').click(function() {
+                $(this).toggleClass('sec--hidden').next().toggle();
+            })
         });
 
 block breadcrumbs
@@ -30,11 +34,12 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
-                .well(style="margin-top:0;")
+                .well.moveme(style="margin-top:0;")
                     .fieldset
-                        label(for="standardField") Template letter name
+                        label.sec--toggle(for="standardField") Template letter name
                         input(placeholder="", type="text")
-                .well--outline(style="position:relative;")
+
+                .well--outline.moveme(style="position:relative;")
                     h2.tl--id(style="margin:0;") {{<input placeholder="input" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem" value="name")>}}
                     a.tl--field--delete Remove
                     .tl--toggle.tl--hidden
@@ -71,7 +76,13 @@ block content
                                     option Email
                                     option Number
 
-                .well--outline(style="position:relative;")
+                .well.moveme(style="margin-top:0;")
+                    .fieldset
+                        label.sec--toggle.sec--hidden(for="standardField") Section title
+                        a.tl--field--delete Remove
+                        input(placeholder="", type="text", style="display:none")
+
+                .well--outline.moveme(style="position:relative;")
                     h2.tl--id(style="margin:0;") {{<input placeholder="address" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem">}}
                     a.tl--field--delete Remove
                     .tl--toggle.tl--hidden
@@ -108,11 +119,11 @@ block content
                                     option Email
                                     option Number
 
-                .well--outline(style="position:relative;")
+                .well--outline.moveme(style="position:relative;")
                     h2.tl--id(style="margin:0;") {{<input placeholder="radio" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem">}}
                     a.tl--field--delete Remove
-                    .tl--toggle
-                    .settings(style="margin-top:1rem;")
+                    .tl--toggle.tl--hidden
+                    .settings(style="margin-top:1rem;display:none;")
                         .fieldset
                             label(for="standardField") Question label
                             input(placeholder="", type="text")
@@ -166,6 +177,7 @@ block content
                         button.btn.plus-button-icon Add option
 
                 button.btn.plus-button-icon Add field
+                button.btn-secondary.plus-button-icon Add section
 
             .col-md-6
                 textarea#letter-input(style="height:45rem;") {{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on 25 October 2015. I paid £229.99.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. As there was a problem with the goods when I bought them, I request that you give me a full refund.&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within 14 days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;joe@joeblogs.com
