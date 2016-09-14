@@ -27,5 +27,12 @@ block script
 
 block content
 	.articleContent
-		p Use this calculator to work out how much money to offer each of your non-priority creditors.
-		a.btn.right-button-icon(href="debt-calculator-1.html") Start
+		.fieldset
+			label(for="field") Money left after essential bills and living costs
+			.field-group.field-group--dropdown
+				input#field(type="number", placeholder="£")
+				.dropdown
+					select#exampleSelect1
+						option Weekly
+						option(selected) Monthly
+		a.btn.right-button-icon(href="debt-calculator-2.html") Next
