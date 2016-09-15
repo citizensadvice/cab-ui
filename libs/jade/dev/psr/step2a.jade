@@ -36,9 +36,9 @@ block content
     .articleContent
         h2 About your energy
         div
-            h3 Confirm your suppliers
+            h3 Confirm your providers
             .fieldset
-                label(for="energySupplier") Your water supplier
+                label(for="waterSupplier") Your water supplier
                 .dropdown
                     select#energySupplier 
                         option Thames Water
@@ -47,9 +47,22 @@ block content
                         option South West Water
 
             .fieldset
-                label(for="energySupplier") Your electricity distributor
+                label(for="energyDistributor") Your electricity distributor
                 .dropdown
                     select#energySupplier 
+                        option Western Power
+                        option Scottish Power
+                        option Energy Networks
+                        option SSE Networks
+                        option Northen Powergrid
+                        option Energy North West
+                        option UK Power Networks
+
+            .fieldset
+                label(for="electricitySupplier") Choose your electricity supplier
+                .dropdown
+                    select#energySupplier 
+                        option Please select
                         option Better Energy
                         option Bristol Energy
                         option British Gas
@@ -77,46 +90,14 @@ block content
                         option Utility Warehouse
 
             fieldset.conditional
-                label(for="conditional-two") Is your energy supplier different to the distributor?
+                label(for="conditional-two") Is your gas supplier different to the energy supplier?
                 label.radio.radio--block
                     input(checked, name="conditional-two", type="radio", value="1")
-                    | Same as above
+                    | Same supplier
                 label.radio.radio--block
                     input(name="conditional-two", type="radio", value="2")
-                    | Different 
+                    | Different supplier 
             .conditional--fields
-                .fieldset
-                label(for="energySupplier") Electricity supplier
-                .dropdown
-                    select#energySupplier 
-                        option Better Energy
-                        option Bristol Energy
-                        option British Gas
-                        option Cooperative Energy
-                        option E Electricity and Gas
-                        option Ebico
-                        option Economy Energy
-                        option Ecotricity
-                        option EDF Energy
-                        option EON
-                        option Extra Energy
-                        option First Utility
-                        option Flow Energy
-                        option GB Energy
-                        option Good Energy
-                        option Green Star Energy
-                        option Npower
-                        option Octopus Energy
-                        option Ovo Energy
-                        option Robin Hood Energy
-                        option ScottishPower
-                        option Spark Energy
-                        option SSE
-                        option Utilita
-                        option Utility Warehouse
-                div
-                    p
-
                 .fieldset
                     label(for="energySupplier") Gas supplier
                     .dropdown
