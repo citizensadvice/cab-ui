@@ -1,5 +1,5 @@
 block settings
-	- var title = "Repayment calculator for non-priority debts"
+	- var title = "Non-priority debt repayment calculator"
 	- var sidebar = true
 	- var toolbars = true
 	- var mockup = true
@@ -12,18 +12,6 @@ block breadcrumbs
 		{title: "Home", href: dir + "home.html"},
 		{title: "Debt", href: dir + "#"},
 		{title: title}])
-
-block sidebar
-	//include /template/sidebar-site-content.jade
-
-block script
-	script.
-		var x = 0;
-		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well--outline"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="" type="text"></div></div>');
-			$('#debt-info').find('.well--outline:last').slideDown('fast');
-			x++;
-		});
 
 block content
 	.articleContent
