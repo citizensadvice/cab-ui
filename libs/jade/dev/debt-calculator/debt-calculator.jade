@@ -1,5 +1,5 @@
 block settings
-	- var title = "Repayment calculator for non-priority debts"
+	- var title = "Non-priority debt repayment calculator"
 	- var sidebar = true
 	- var toolbars = true
 	- var mockup = true
@@ -13,27 +13,19 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: title}])
 
-block sidebar
-	//include /template/sidebar-site-content.jade
-
-block script
-	script.
-		var x = 0;
-		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well--outline"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="" type="text"></div></div>');
-			$('#debt-info').find('.well--outline:last').slideDown('fast');
-			x++;
-		});
-
 block content
 	.articleContent
-		p Use this calculator to work out how much money to offer each of your non-priority creditors.
-		.fieldset
-			label(for="field") Money left after essential bills and living costs
-			.field-group.field-group--dropdown
-				input#field(type="number", placeholder="£")
-				.dropdown
-					select#exampleSelect1
-						option Weekly
-						option(selected) Monthly
-		a.btn.right-button-icon(href="debt-calculator-2.html") Next
+		p Use this calculator to work out exactly how much money to offer each of your non-priority creditors. It only takes a couple of minutes to complete.
+		p Once you start paying these amounts to your creditors, they should stop chasing you for money.
+		.callout--warning
+			p If you’ve received court papers, you’re facing eviction or you’re expecting bailiffs, you should #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice") contact your nearest Citizens Advice].
+		h2 Before you start
+		p Before you start the calculator, you need to know:
+		ul
+			li how much money you have left at the end of each month after essential bills, living costs and any debts you’re paying back to priority creditors - use our #[a(href="https://www.citizensadvice.org.uk/debt-and-money/budgeting/budgeting/work-out-your-budget/") budgeting tool] to work this out
+			li how much money you owe each of your non-priority creditors
+		p You’ll get the most accurate results if you use up-to-date figures for your debts. You can use rough figures if you just want a general idea of how much to repay each of your non-priority creditors.
+		.callout--alert
+			p You won’t be able to save your information so make sure you print the results if you want to keep them.
+
+		a.btn.right-button-icon(href="debt-calculator-1.html") Start
