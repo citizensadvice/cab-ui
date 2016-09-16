@@ -20,7 +20,7 @@ block script
 	script.
 		var x = 0;
 		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="" type="text"></div></div>');
+			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="£" type="text"></div></div>');
 			$('#debt-info').find('.well:last').slideDown('fast');
 			x++;
 		});
@@ -38,7 +38,7 @@ block content
 					input#standardField(placeholder="", type="text")
 				.fieldset
 					label(for="standardField") Total amount owed
-					input#standardField(placeholder="", type="text")
+					input#standardField(placeholder="£", type="text")
 		button#add-debt.btn-secondary.plus-button-icon Add another debt
 		p
 		a.btn-light.left-button-icon(href="debt-calculator-1.html") Back

@@ -13,23 +13,12 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: title}])
 
-block sidebar
-	//include /template/sidebar-site-content.jade
-
-block script
-	script.
-		var x = 0;
-		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well--outline"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="" type="text"></div></div>');
-			$('#debt-info').find('.well--outline:last').slideDown('fast');
-			x++;
-		});
-
 block content
 	.articleContent
 		p Use this calculator to work out exactly how much money to offer each of your non-priority creditors. It only takes a couple of minutes to complete.
 		p Once you start paying these amounts to your creditors, they should stop chasing you for money.
-		p If you’ve received court papers, you’re facing eviction or you’re expecting bailiffs, you should #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice") contact your nearest Citizens Advice].
+		.callout--warning
+			p If you’ve received court papers, you’re facing eviction or you’re expecting bailiffs, you should #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/search-for-your-local-citizens-advice") contact your nearest Citizens Advice].
 		h2 Before you start
 		p Before you start the calculator, you need to know:
 		ul
