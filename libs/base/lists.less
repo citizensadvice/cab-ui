@@ -231,6 +231,13 @@ p ~ ol {
                 font-weight: @font-weight-bold;
             }
         }
+        .current {
+            cursor: default;
+            background-color: @heritage-blue;
+            border: 1px solid @heritage-blue;
+            border-radius: @form-border-radius;
+            font-weight: @font-weight-bold;
+        }
         &:last-of-type a {
             background-color: @white;
         }
@@ -252,14 +259,17 @@ p ~ ol {
                 color: @white;
             }
         }
-        &.pagination--dot {
-            padding: .2 .7;
+        &.pagination--dot,
+        .page-numbers.dots {
+            padding: 0;
             margin-right: .3em;
             margin-left: -.2em;
             font-weight: 600;
             line-height: 1;
             position: relative;
             bottom: .3em;
+            background-color: @white;
+            color: @black;
         }
     }
 }
