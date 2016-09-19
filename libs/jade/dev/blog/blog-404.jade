@@ -1,0 +1,21 @@
+block settings
+	- var title = "Page not found"
+	- var sidebar = true
+	- var dir = "../../"
+	- var blogname = "Digital Blog"
+	- var blog = true
+	- var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+	include /template/sidebar-blog.jade
+
+block content
+	.articleContent
+		.flex-container
+			p Sorry, looks like we can't find this page.
+
+			p It may have been moved, updated or deleted.
+
+			p Please check the web address, go back or #[a visit the home page].
