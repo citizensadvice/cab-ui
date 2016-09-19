@@ -271,6 +271,70 @@
 	}
 }
 
+// Comments
+div.comment {
+	list-style: none;
+	& > .comment:first-child > .comment-body {
+		border: none;
+		padding-top: 0;
+	}
+	li {
+		list-style: none;
+	}
+	.comment-body {
+		border-top: 1px solid @gray-7;
+		margin: 0;
+		padding: 1.5rem 0;
+	}
+	.comment-author {
+    	margin-bottom:  0.6em;
+		img,
+		.says {
+			display: none;
+		}
+		cite {
+			&:extend(h3);
+			font-style: normal;
+		}
+		.commentmetadata {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+	.commentmetadata {
+		.small;
+    	margin-bottom:  0.6em;
+		& > a {
+			border: none;
+			&:after {
+				content: ".";
+			}
+		}
+		.reply {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	.reply {
+    	margin-top:  .6em;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+#respond {
+    h2 {
+        margin-top: 0;
+    }
+    p {
+        .fieldset;
+    }
+    .form-submit {
+    	margin-bottom: 0;
+    }
+}
+
 // Pages
 .team {
 	//padding: 1rem;
