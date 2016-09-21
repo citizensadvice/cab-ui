@@ -41,7 +41,7 @@ block script
 					console.log(val);
 					var debt = arr[i].split('+');
 					var topay = (parseInt(debt[1])*moninc)/totaldebt;
-					$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td>' + topay.toFixed(2) + ' per month</td></tr>');
+					$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td>£' + topay.toFixed(2) + ' per month</td></tr>');
 				}
 			});
 		});
