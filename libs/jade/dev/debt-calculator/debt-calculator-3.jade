@@ -13,6 +13,39 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: title}])
 
+block script
+	script.
+		$(document).ready(function() {
+			var location = window.location.search.slice(1);
+			var arr = location.split('&');
+			$.each( arr, function( i, val ) {
+				console.log(val);
+			});
+			var monthly = arr[1].split('+');
+			if (monthly[1] == '0') {
+				var moninc = parseInt(monthly[0]) * 4.3;
+			} else {
+				var moninc = parseInt(monthly);
+			}
+			console.log(moninc);
+			var totaldebt = 0;
+			$.each( arr, function( i, val ) {
+				if (!(i == '0' || i == '1')) {
+					var debt = arr[i].split('+');
+					totaldebt = totaldebt + parseInt(debt[1]);
+				}
+			});
+			console.log(totaldebt);
+			$.each( arr, function( i, val ) {
+				if (!(i == '0' || i == '1')) {
+					console.log(val);
+					var debt = arr[i].split('+');
+					var topay = (parseInt(debt[1])*moninc)/totaldebt;
+					$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td>' + topay.toFixed(2) + ' per month</td></tr>');
+				}
+			});
+		});
+
 block content
 	.articleContent
 		table
@@ -21,11 +54,5 @@ block content
 					th(scope="col", width="50%") Creditor
 					th(scope="col", width="50%") How much you should offer
 			tbody
-				tr
-					td Creditor one
-					td £XX.XX
-				tr
-					td Creditor two
-					td £XX.XX
 
 		a.btn-secondary.restart-button-icon(href="debt-calculator.html") Restart

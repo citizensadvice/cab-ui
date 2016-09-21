@@ -20,12 +20,24 @@ block script
 	script.
 		var x = 0;
 		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="standardField">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="standardField" placeholder="" type="text"></div><div class="fieldset"><label for="standardField">Total amount owed</label><input id="standardField" placeholder="£" type="text"></div></div>');
+			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="name">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="name" placeholder="" type="text"></div><div class="fieldset"><label for="amount">Total amount owed</label><input id="amount" placeholder="£" type="number"></div></div>');
 			$('#debt-info').find('.well:last').slideDown('fast');
 			x++;
 		});
 		$(document).on("click", ".remove", function(){
-			$(this).parent().parent().parent().slideUp('fast');
+			$(this).parent().parent().parent().slideUp('fast').remove();
+		});
+		var string = '?' + window.location.search.slice(1);
+		$('#finish').click(function(){
+			$( "input" ).each(function( index ) {
+				if ($(this).attr('id') == 'name') {
+					string += '&' + $(this).val();
+				}
+				else if ($(this).attr('id') == 'amount') {
+					string += '+' + $(this).val();
+				}
+			});
+			$(this).attr('href', 'debt-calculator-3.html' + string);
 		});
 
 block content
@@ -33,13 +45,13 @@ block content
 		#debt-info
 			.well
 				.fieldset
-					label(for="standardField") Creditor's name
+					label(for="name") Creditor's name
 						//a.remove-field.remove.u-pull-right Remove
-					input#standardField(placeholder="", type="text")
+					input#name(placeholder="", type="text")
 				.fieldset
-					label(for="standardField") Total amount owed
-					input#standardField(placeholder="£", type="text")
+					label(for="amount") Total amount owed
+					input#amount(placeholder="£", type="number")
 		button#add-debt.btn-secondary.plus-button-icon Add another debt
 		p
 		a.btn-light.left-button-icon(href="debt-calculator-1.html") Back
-		a.btn.right-button-icon(href="debt-calculator-3.html") Finish
+		a#finish.btn.right-button-icon(href="debt-calculator-3.html") Finish

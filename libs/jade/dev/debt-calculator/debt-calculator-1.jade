@@ -13,14 +13,22 @@ block breadcrumbs
 		{title: "Debt", href: dir + "#"},
 		{title: title}])
 
+block script
+	script.
+		var string = '?=values';
+		$('#next').click(function(){
+			string += '&' + $('#money').val() + '+' + $('#freq').val();
+			$(this).attr('href', 'debt-calculator-2.html' + string);
+		});
+
 block content
 	.articleContent
 		.fieldset
-			label(for="field") Money left after essential bills, living costs and debts to priority creditors
+			label(for="money") Money left after essential bills, living costs and debts to priority creditors
 			.field-group.field-group--dropdown
-				input#field(type="number", placeholder="£")
+				input#money(type="number", placeholder="£")
 				.dropdown
-					select#exampleSelect1
-						option Weekly
-						option(selected) Monthly
-		a.btn.right-button-icon(href="debt-calculator-2.html") Next
+					select#freq
+						option(value="0") Weekly
+						option(value="1", selected) Monthly
+		a#next.btn.right-button-icon(href="debt-calculator-2.html") Next
