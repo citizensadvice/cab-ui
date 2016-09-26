@@ -11,7 +11,7 @@ block breadcrumbs
 		{title: "Features", href: dir + "index.html#Features"},
 		{title: title}])
 
-	#sitenotice
+	.sitenotice
 		.sitenotice__content
 			.badge Notice
 			| Website notices appear on all pages of the website.
@@ -25,16 +25,16 @@ block content
 			p The website notice appears between the breadcrumbs and section notices on every page of the website, including the homepage. Only one website notice can be used at a time, and it shouldn't be used outside exceptional circumstances.
 
 			.example-box-plain
-				#sitenotice
+				.sitenotice
 					.sitenotice__content
 						.badge Notice
-						| Website notices appear on all pages of the website.
+						span Website notices appear on all pages of the website.
 
 			pre
 				code.language-html
-					| &lt;div id="sitenotice"&gt;
+					| &lt;div class="sitenotice"&gt;
 					| 	&lt;div class="sitenotice__content"&gt;
 					| 		&lt;div class="badge"&gt;Notice&lt;/div&gt;
-					| 		Website notices appear on all pages of the website.
+					| 		&lt;span&gt;Website notices appear on all pages of the website.&lt;/span&gt;
 					| 	&lt;/div&gt;
 					| &lt;/div&gt;
