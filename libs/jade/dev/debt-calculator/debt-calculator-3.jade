@@ -41,7 +41,11 @@ block script
 					console.log(val);
 					var debt = arr[i].split('+');
 					var topay = (parseInt(debt[1])*moninc)/totaldebt;
-					$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td>£' + topay.toFixed(2) + ' per month</td></tr>');
+					if (monthly[1] == '0') {
+						$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td><strong>£' + topay.toFixed(2) + ' per month</strong> (£' + (topay*12/52).toFixed(2) + ' per week)</td></tr>');
+					} else {
+						$('tbody').append('<tr><td>' + debt[0].replace(/%20/g, " ") + '</td><td><strong>£' + topay.toFixed(2) + ' per month</strong></td></tr>');
+					}
 				}
 			});
 		});
@@ -51,8 +55,8 @@ block content
 		table
 			thead
 				tr
-					th(scope="col", width="50%") Creditor
-					th(scope="col", width="50%") How much you should offer
+					th(scope="col") Creditor
+					th(scope="col") How much you should offer
 			tbody
 
 		h2 What to do next
