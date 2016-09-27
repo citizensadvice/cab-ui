@@ -20,12 +20,12 @@ block script
 	script.
 		var x = 0;
 		$('#add-debt').click(function(){
-			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="name">Creditor\'s name<a class="remove-field remove u-pull-right">Remove</a></label><input id="name" placeholder="" type="text"></div><div class="fieldset"><label for="amount">Total amount owed</label><input id="amount" placeholder="£" type="number"></div></div>');
+			$('#debt-info').append('<div style="display:none;" class="well"><div class="fieldset"><label for="name">Creditor\'s name</label><input id="name" placeholder="" type="text"></div><div class="fieldset"><label for="amount">Total amount owed</label><input id="amount" placeholder="£" type="number"></div><a class="remove-field remove">Remove</a></div>');
 			$('#debt-info').find('.well:last').slideDown('fast');
 			x++;
 		});
 		$(document).on("click", ".remove", function(){
-			$(this).parent().parent().parent().slideUp('fast').remove();
+			$(this).parent().slideUp('fast', function() {$(this).remove();});
 		});
 		var string = '?' + window.location.search.slice(1);
 		$('#finish').click(function(){
