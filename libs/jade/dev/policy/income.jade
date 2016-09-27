@@ -1,0 +1,33 @@
+block settings
+    - var title = "Citizens Advice policy"
+    //- var sidebar = true
+    - var dir = "../../"
+    //- var blogname = "Digital Blog"
+    - var blog = true
+    - var fullpage = true
+    - var nofooter = true
+
+extends /template/template-site.jade
+
+block sidebar
+    include /template/sidebar-blog.jade
+
+block content
+    .story-lead
+        .fullwidth-content
+            .flex-row
+                .col-md-12.col-sm-12(style="text-align: center;")
+                    .title
+                        h1.title__heading.js-ref
+                            span.title__title What makes people feel secure at work?
+                        p We asked 1,135 about what makes them feel secure in their lives.
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    p The recent introduction of the national living wage and tax-free personal allowance [https://www.gov.uk/income-tax-rates/current-rates-and-allowances] are aimed at increasing income for working households.
+                .col-md-1
+                .col-md-4
+                    
