@@ -1,0 +1,66 @@
+block settings
+	- var title = ""
+	- var sidebar = true
+	- var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Branding", href: dir + "index.html#Branding"}])
+
+block content
+	.articleContent
+		div
+			.row
+				.span8
+					.cards-branding--yellow_old
+							h2 Find your local Citizens Advice
+							p For more information and advice.
+							fieldset
+								.field-group.field-group--buttons
+									input#field(type="search" placeholder="Enter your town or postcode")
+									button.btn-secondary Search
+							//.well
+								p Your search location is in Scotland. To get advice in Scotland please visit #[a(www.cas.org.uk) www.cas.org.uk]
+							img(src="#{dir}images/local/magnifying-glass.svg" alt="Find a local Citizens Advice")
+			.row
+				.span8
+					.cards-branding--yellow_old
+							h2 Find your local Citizens Advice
+							p For more information and advice.
+							fieldset
+								.field-group.field-group--buttons
+									input#field(type="search" placeholder="Enter your town or postcode")
+									button.btn-secondary Search
+							.well
+								p Your search location is in Scotland. To get advice in Scotland please visit #[a(www.cas.org.uk) www.cas.org.uk]
+							img(src="#{dir}images/local/magnifying-glass.svg" alt="Find a local Citizens Advice")
+
+			//.row
+				.span8
+					.cards-branding--yellow_old
+							h2 Find your local Citizens Advice
+							p For more information and advice.
+							fieldset
+								.field-group.field-group--buttons
+									input#field(type="search" placeholder="Enter your town or postcode")
+									button.btn-secondary Search
+							.callout
+								p Your search location is in Scotland. To get advice in Scotland please visit #[a(www.cas.org.uk) www.cas.org.uk]
+							img(src="#{dir}images/local/magnifying-glass.svg" alt="Find a local Citizens Advice")
+
+
+			//.row
+				.span8
+					.cards-branding--yellow_old
+							h2 Find your local Citizens Advice
+							p For more information and advice.
+							fieldset
+								.field-group.field-group--buttons
+									input#field(type="search" placeholder="Enter your town or postcode")
+									button.btn-secondary Search
+							.callout--warning
+								p Your search location is in Scotland. To get advice in Scotland please visit #[a(www.cas.org.uk) www.cas.org.uk]
+							img(src="#{dir}images/local/magnifying-glass.svg" alt="Find a local Citizens Advice")
