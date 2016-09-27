@@ -1,4 +1,13 @@
 // Energy comparison styles
+@rate-1: @red;
+@rate-2: #C66831;
+//@rate-2: #D97032;
+@rate-3: #AE8F32;
+//@rate-3: #E5A112;
+@rate-4: #879530;
+//@rate-4: #34827c;
+@rate-5: @green;
+
 .energy-comparison {
     th {
         font-size: @font-size-small;
@@ -87,6 +96,7 @@
         td {
             border-top: 4px solid @white;
             border-bottom: 2px solid @gray-7;
+            vertical-align: middle;
         }
         tr {
             &:hover {
@@ -98,38 +108,40 @@
             }
         }
         .rating span {
-            //background: none;
+            background: none;
+            padding: 0;
+            color: @heritage-blue;
         }
         .rate {
             &-5--cell {
                 text-align: center;
-                color: @white;
+                color: @heritage-blue;
                 font-weight: @font-weight-bolder;
-                background-color: @green;
+                background: none;
             }
             &-4--cell {
                 text-align: center;
-                color: @white;
+                color: @heritage-blue;
                 font-weight: @font-weight-bolder;
-                background-color: #879530;
+                background: none;
             }
             &-3--cell {
                 text-align: center;
-                color: @white;
+                color: @heritage-blue;
                 font-weight: @font-weight-bolder;
-                background-color: #AE8F32;
+                background: none;
             }
             &-2--cell {
                 text-align: center;
-                color: @white;
+                color: @heritage-blue;
                 font-weight: @font-weight-bolder;
-                background-color: #C66831;
+                background: none;
             }
             &-1--cell {
                 text-align: center;
-                color: @white;
+                color: @heritage-blue;
                 font-weight: @font-weight-bolder;
-                background-color: @red;
+                background: none;
             }
         }
     }
@@ -154,7 +166,7 @@
     font-weight: @font-weight-bold;
     text-align: center;
     &:after {
-        content: " of 5";
+        //content: " of 5";
         @media screen and (max-width: @breakpoint-lg) {
             display: none;
         }
@@ -163,43 +175,43 @@
 
 .rate {
     &-5 {
-        color: @green;
+        color: @rate-5;
         font-weight: @font-weight-bolder;
         &--badge {
             .rating-badge;
-            background-color: @green;
+            background-color: @rate-5;
         }
     }
     &-4 {
-        color: #879530;
+        color: @rate-4;
         font-weight: @font-weight-bolder;
         &--badge {
             .rating-badge;
-            background-color: #879530;
+            background-color: @rate-4;
         }
     }
     &-3 {
-        color: #AE8F32;
+        color: @rate-3;
         font-weight: @font-weight-bolder;
         &--badge {
             .rating-badge;
-            background-color: #AE8F32;
+            background-color: @rate-3;
         }
     }
     &-2 {
-        color: #C66831;
+        color: @rate-2;
         font-weight: @font-weight-bolder;
         &--badge {
             .rating-badge;
-            background-color: #C66831;
+            background-color: @rate-2;
         }
     }
     &-1 {
-        color: @red;
+        color: @rate-1;
         font-weight: @font-weight-bolder;
         &--badge {
             .rating-badge;
-            background-color: @red;
+            background-color: @rate-1;
         }
     }
 }
