@@ -8,26 +8,203 @@ block settings
     - var nofooter = true
 
 extends /template/template-site.jade
+block script
+    script(src="#{dir}js/vendor/highcharts/highcharts.js")
+    script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
+
+    script.
+        // Create overview chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'overview-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>£' + Highcharts.numberFormat(this.y,2,'.',',') + '</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Income',
+                    data: [250, 450]
+                },
+                        {
+                    name: 'Spending',
+                    data: [250, 450]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: true
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: truw
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>£' + Highcharts.numberFormat(this.y,2,'.',',') + '</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'A steady income',
+                    data: [85]
+                },
+                {
+                    name: 'Your company being successful',
+                    data: [75]
+                },
+                {
+                    name: 'A good line manager',
+                    data: [72]
+                },
+                {
+                    name: 'regular and predictable income',
+                    data: [70]
+                },
+                {
+                    name: 'your partner having a steady income',
+                    data: [68]
+                },
+                        {
+                    name: 'Spending',
+                    data: [250, 450]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+
+
+
+
+//script.
+    $(function() {
+        $('#container').highcharts({
+            colors: ['#004b88', '#a2d5ff', '#C9D1E5', '#003c64', '#a5bddc', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+            title: {
+                text: 'Housing tenure: Citizens Advice clients vs England and Wales population'
+            },
+            chart: {
+                    type: 'column',
+                    renderTo: 'column-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                  },
+            data: {
+                googleSpreadsheetKey: '15saA7c3x2wUma8avwxvZcjL9Q67Akpw-MDGkrd2ldr4'
+            }
+        });
+    });
 
 block sidebar
     include /template/sidebar-blog.jade
 
 block content
-    .story-lead
+    .fullwidth
+        .story-masthead
+            .story-masthead--content
+                h1 What makes people feel secure at work?
+                p We asked 1,135 about what makes them feel secure in their lives.
+            img(src="https://c1.staticflickr.com/8/7577/15858580416_85d04e067c_k.jpg")
         .fullwidth-content
-            .flex-row
-                .col-md-12.col-sm-12(style="text-align: center;")
-                    .title
-                        h1.title__heading.js-ref
-                            span.title__title What makes people feel secure at work?
-                        p We asked 1,135 about what makes them feel secure in their lives.
-
+            cite Image credit: Roger Blackwell, Pickets at Norfolk and Norwich University Hospital during the second 4 hour pay strike
     .fullwidth
         .fullwidth-content
             .flex-row
                 .col-md-1
                 .col-md-6
-                    p The recent introduction of the national living wage and tax-free personal allowance [https://www.gov.uk/income-tax-rates/current-rates-and-allowances] are aimed at increasing income for working households.
+                    h3 Background
+                    p The recent introduction of the national living wage and #[a(href="https://www.gov.uk/income-tax-rates/current-rates-and-allowances") tax-free personal allowance] are aimed at increasing income for working households.
+
+                    p New evidence from Citizens Advice reveals the security of that income – and of people’s employment in general – has been an overlooked piece of the labour market puzzle.
+
                 .col-md-1
                 .col-md-4
+                    div#overview-chart
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-4
+                    .data-display
+                        h3 4.5m
+                        p people in England and Wales are in some form of insecure work.
+                    .data-display
+                        h3 800,000
+                        p people work on either zero hours or agency contracts
+                .col-md-1
+                .col-md-6
+                    h3 Employment levels
+                    p The numbers of people in insecure work have remained fairly constant since 2011 and have not fallen back to pre-recession levels. So despite record employment rates, the persistence of insecure work leaves many households at continued risk of economic shocks, and unable to plan for the future.
                     
+                    h3 What factors matter to workers?
+                    p We asked respondents about the factors that mattered most when looking for a job. Much recent policy debate has focused on levels of pay and wage floors, people said a steady income is as important as the amount of money they earn. Income security was seen as more important than the job’s location, or its opportunities for advancement.
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    .speech-lines
+                        h4 Security in work is central to the Government’s ambition of a ‘high wage, low welfare’ economy.
+                        .box-speech-line
+                .col-md-1
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    div#security-chart(style="height=600px;")
+                .col-md-1
+
