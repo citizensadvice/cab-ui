@@ -9,7 +9,7 @@
     overflow: hidden;
     .story-masthead--content {
         position: relative;
-        top: 30%;
+        top: 25%;
         h1 {
             font-size: @font-size-largest;
             text-align: center;
@@ -23,6 +23,18 @@
             z-index: 2;
             position: relative;
             color: @white;
+        }
+        @media (min-width: @screen-xs-max) and (max-width: @screen-md-min) {
+            h1 { font-size: @font-size-larger; }
+            p { font-size: @font-size-medium; }
+            top: 20%;
+            margin: 0 1rem;
+        }
+        @media screen and (max-width: @screen-xs-max) {
+            h1 { font-size: @font-size-large; }
+            p { font-size: @font-size-base; }
+            top: 10%;
+            margin: 0 1rem;
         }
     }   
     img {
