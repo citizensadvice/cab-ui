@@ -16,7 +16,7 @@ block script
         // Create overview chart
         $(function () {
             var chart = new Highcharts.Chart({
-                colors: ['#004B88', '#FCBB69'],
+                colors: ['#004B88', '#FCBB69', '#57486B', '#A6D6AE', '#006278', '#006278', '#FCCEBA'],
                 chart: {
                     type: 'column',
                     renderTo: 'overview-chart',
@@ -45,12 +45,24 @@ block script
                     enabled: false
                 },
                 series: [{
-                    name: 'Income',
-                    data: [250, 450]
+                    name: 'Steady income',
+                    data: [72]
                 },
                         {
-                    name: 'Spending',
-                    data: [250, 450]
+                    name: 'Level of pay',
+                    data: [63]
+                },
+                        {
+                    name: 'Location',
+                    data: [55]
+                },
+                        {
+                    name: 'Experience opportunities',
+                    data: [42]
+                },
+                        {
+                    name: 'Passionate about the work',
+                    data: [39]
                 }],
                 navigation: {
                     buttonOptions: {
@@ -60,27 +72,27 @@ block script
             });
         });
 
-        // Create security chart
+        // Create personal factors security chart
         $(function () {
             var chart = new Highcharts.Chart({
-                colors: ['#004B88', '#FCBB69'],
+                colors: ['#003c64', '#004b88', '#a5bddc', '#C9D1E5', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
                 chart: {
                     type: 'column',
                     renderTo: 'security-chart',
                     backgroundColor:'rgba(255,255,255,0)'
                 },
                 title: {
-                    text: null
+                    text: false
                 },
                 xAxis: {
-                    labels: {
-                        enabled: true
+                    title:{
+                        text: 'Personal factors',
                     }
                 },
                 yAxis: {
                     title:
                     {
-                        enabled: truw
+                        enabled: false
                     }
                 },
                 tooltip: {
@@ -92,28 +104,123 @@ block script
                     enabled: false
                 },
                 series: [{
-                    name: 'A steady income',
-                    data: [85]
-                },
-                {
-                    name: 'Your company being successful',
-                    data: [75]
-                },
-                {
-                    name: 'A good line manager',
-                    data: [72]
-                },
-                {
-                    name: 'regular and predictable income',
-                    data: [70]
-                },
-                {
-                    name: 'your partner having a steady income',
-                    data: [68]
+                    name: 'Steady income',
+                    data: [87]
                 },
                         {
-                    name: 'Spending',
-                    data: [250, 450]
+                    name: 'Successful company',
+                    data: [74]
+                },
+                        {
+                    name: 'Good Manager',
+                    data: [72]
+                },
+                        {
+                    name: 'Regular hours',
+                    data: [71]
+                },
+                        {
+                    name: 'Partner with a steady income',
+                    data: [70]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create local factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#fba437', '#ffbf47', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-local-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Local factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Police presence',
+                    data: [54]
+                },
+                        {
+                    name: 'Thriving local high street',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create national factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#b9db9d', '#d3e8c1', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-national-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'National factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Forecast of interest rate rises',
+                    data: [20]
+                },
+                        {
+                    name: 'NHS waiting lists',
+                    data: [49]
                 }],
                 navigation: {
                     buttonOptions: {
@@ -124,26 +231,6 @@ block script
         });
 
 
-
-
-
-//script.
-    $(function() {
-        $('#container').highcharts({
-            colors: ['#004b88', '#a2d5ff', '#C9D1E5', '#003c64', '#a5bddc', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
-            title: {
-                text: 'Housing tenure: Citizens Advice clients vs England and Wales population'
-            },
-            chart: {
-                    type: 'column',
-                    renderTo: 'column-chart',
-                    backgroundColor:'rgba(255,255,255,0)'
-                  },
-            data: {
-                googleSpreadsheetKey: '15saA7c3x2wUma8avwxvZcjL9Q67Akpw-MDGkrd2ldr4'
-            }
-        });
-    });
 
 block sidebar
     include /template/sidebar-blog.jade
@@ -166,6 +253,13 @@ block content
                     p The recent introduction of the national living wage and #[a(href="https://www.gov.uk/income-tax-rates/current-rates-and-allowances") tax-free personal allowance] are aimed at increasing income for working households.
 
                     p New evidence from Citizens Advice reveals the security of that income – and of people’s employment in general – has been an overlooked piece of the labour market puzzle.
+
+                    p Income security was seen as more important than the job’s location, or its opportunities for advancement.
+
+                    //.speech-lines
+                        h4 I worked from 12-50 hours each week. Not having set hours was really difficult as some weeks I did not have enough money to cover my bills or rent
+                        p.cite Kate, 22
+                        .box-speech-line
 
                 .col-md-1
                 .col-md-4
@@ -200,11 +294,58 @@ block content
                         .box-speech-line
                 .col-md-1
 
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-12
+                    h2(style="text-align:center;") What factors make people feel 'very secure' in life?
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    div#security-chart
+                .col-md-2
+                    div#security-local-chart
+                .col-md-2
+                    div#security-national-chart
+                .col-md-1
+
     .fullwidth
         .fullwidth-content
             .flex-row
                 .col-md-1
-                .col-md-10
-                    div#security-chart(style="height=600px;")
+                .col-md-6
+                    h3 Insecurity at work is more of a problem for some groups than others
+                    p Our research also found that some groups are more likely to experience insecurity - both in terms of their income and in employment more widely.
+
+                    p Kayley Hignell, Head of Policy at Citizens Advice says 
+                    p "How much money people are paid is important to them but our research reveals the security of that income is also vital. Knowing how many hours you’ll be asked to work and when, if you’re entitled to sick leave or holiday pay, and whether you’ll still have a job in six months’ time are all key to feeling secure."
+                    p “Without income security, budgeting can be impossible and people struggle to save or plan for their futures.”
+                .col-md-4
+                    img(src="#{dir}images/icons/clock.svg" style="max-width:20%;")
+                    .data-display
+                        h3 84%
+                        p of people say a steady income helps them cope with stress
                 .col-md-1
 
+    .fullwidth-yellow
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    h1 In conclusion
+                    p.u-lede With the endurance of insecure work at a time when record numbers of people are in employment, income insecurity is likely to remain a feature of the labour market in the coming years.
+                    p People tell us feeling insecure at work means they find it difficult to plan ahead and manage their finances, and this affects confidence about maintaining their quality of life.
+                    p Citizens Advice has recently looked at a number of employment issues such as #[a(href="#") balancing flexibility] and security in non-traditional employment contracts, the problems associated with #[a(href="#") bogus self-employment] and #[a(href="#") inadequate job adverts].
+                    h2 What's next?
+                    p We now turn our attention to a programme of work which looks closely at income security in the labour market, welfare and health policy. We will be looking at the impact this has on people’s lives and what employees, employers and government can do in response.
+                .col-md-4
+                .col-md-1
+
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    p References
+                    cite 1. In February 2016, we commissioned ComRes to ask 1,135 people about a range of issues related to income security, security in employment and security in their lives.
+                    cite 2. Analysis of ONS Labour Force Survey (2015). We define a worker as insecure if any of the following apply: zero hours contract; temporary contract; agency work; work more than 8 hours paid overtime per week; work variable shift patterns.
+                    cite 3. Includes split shifts or day/night shifts where the hours vary.
+                .col-md-1
