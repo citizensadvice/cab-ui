@@ -45,7 +45,6 @@
 
 .collapsible--adviser,
 .revealable--adviser {
-        @background: lighten(@inventive-teal-lightest, 9%);
     .revealable(
         @background: lighten(@inventive-teal-lightest, 9%);
         @heading: @inventive-teal;
@@ -54,10 +53,13 @@
     );
     border-width: 1px 1px 0px 1px;
     .revealable__content {
-        @background: lighten(@inventive-teal-lightest, 9%);
+        background-color: lighten(@inventive-teal-lightest, 9%);
         &:before {
             .adviser-badge;
         }
+    }
+    .revealable-toggle-close, .revealable__close {
+        background-color: lighten(@inventive-teal-lightest, 10%)
     }
 }
 
