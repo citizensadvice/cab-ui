@@ -219,6 +219,13 @@ html.no-js
 								span.title__title #{title}
 						block content
 
+		if feedback
+			aside.footer-feedback
+				block feedback
+					h2.screenreader Feedback
+					.footer-feedback__content
+						p Is there anything wrong with this page? #[a.a-external(href="#") Let us know].
+
 		#footer.main-footer(data-track-zone="footer")
 			if !nofooter
 				.footer-content.flex-row
