@@ -1,0 +1,357 @@
+block settings
+    - var title = "Citizens Advice policy"
+    //- var sidebar = true
+    - var dir = "../../"
+    //- var blogname = "Digital Blog"
+    - var blog = true
+    - var fullpage = true
+    - var nofooter = true
+
+extends /template/template-site.jade
+block script
+    script(src="#{dir}js/vendor/highcharts/highcharts.js")
+    script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
+
+    script.
+        // Create overview chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69', '#57486B', '#A6D6AE', '#006278', '#006278', '#FCCEBA'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'overview-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Steady income',
+                    data: [72]
+                },
+                        {
+                    name: 'Level of pay',
+                    data: [63]
+                },
+                        {
+                    name: 'Location',
+                    data: [55]
+                },
+                        {
+                    name: 'Experience opportunities',
+                    data: [42]
+                },
+                        {
+                    name: 'Passionate about the work',
+                    data: [39]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create personal factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#003c64', '#004b88', '#a5bddc', '#C9D1E5', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Personal factors',
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Steady income',
+                    data: [87]
+                },
+                        {
+                    name: 'Successful company',
+                    data: [74]
+                },
+                        {
+                    name: 'Good Manager',
+                    data: [72]
+                },
+                        {
+                    name: 'Regular hours',
+                    data: [71]
+                },
+                        {
+                    name: 'Partner with a steady income',
+                    data: [70]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create local factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#fba437', '#ffbf47', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-local-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Local factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Police presence',
+                    data: [54]
+                },
+                        {
+                    name: 'Thriving high street',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create national factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#b9db9d', '#d3e8c1', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-national-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'National factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2) + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Interest rate rises',
+                    data: [20]
+                },
+                        {
+                    name: 'NHS waiting lists',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+
+
+block sidebar
+    include /template/sidebar-blog.jade
+
+block content
+    .fullwidth
+        .story-masthead
+            .story-masthead--content
+                h1 What makes people feel secure at work?
+                p We asked 1,135 about what makes them feel secure in their lives.
+            img(src="#{dir}images/story/cover.png")
+        .fullwidth-content
+            cite Image credit: Roger Blackwell, Pickets at Norfolk and Norwich University Hospital during the second 4 hour pay strike
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    h2 Background
+                    p The recent introduction of the national living wage and #[a(href="https://www.gov.uk/income-tax-rates/current-rates-and-allowances") tax-free personal allowance] are aimed at increasing income for working households.
+
+                    h3 Our research
+                    p New evidence from Citizens Advice reveals the security of that income – and of people’s employment in general – has been an overlooked piece of the labour market puzzle.
+
+                    p Income security was seen as more important than the job’s location, or its opportunities for advancement.
+
+                    //.speech-lines
+                        h4 I worked from 12-50 hours each week. Not having set hours was really difficult as some weeks I did not have enough money to cover my bills or rent
+                        p.cite Kate, 22
+                        .box-speech-line
+
+                .col-md-1
+                .col-md-4
+                    div#overview-chart
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-4
+                    .data-display
+                        h3 4.5m
+                        p people in England and Wales are in some form of insecure work.
+                    .data-display
+                        h3 800,000
+                        p people work on either zero hours or agency contracts
+                .col-md-1
+                .col-md-6
+                    h2 Employment levels
+                    p The numbers of people in insecure work have remained fairly constant since 2011 and have not fallen back to pre-recession levels. So despite record employment rates, the persistence of insecure work leaves many households at continued risk of economic shocks, and unable to plan for the future.
+                    
+                    h3 What factors matter to workers?
+                    p We asked respondents about the factors that mattered most when looking for a job. Much recent policy debate has focused on levels of pay and wage floors, people said a steady income is as important as the amount of money they earn. Income security was seen as more important than the job’s location, or its opportunities for advancement.
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    .speech-lines-none
+                        h4 "Security in work is central to the Government’s ambition of a ‘high wage, low welfare’ economy."
+                .col-md-1
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-12
+                    h2(style="text-align:center;") What factors make people feel 'very secure' in life?
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    div#security-chart
+                .col-md-2
+                    div#security-local-chart
+                .col-md-2
+                    div#security-national-chart
+                .col-md-1
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    h2 Insecurity at work is more of a problem for some groups than others
+                    p Our research also found that some groups are more likely to experience insecurity - both in terms of their income and in employment more widely.
+
+                    p Kayley Hignell, Head of Policy at Citizens Advice says 
+                    p "How much money people are paid is important to them but our research reveals the security of that income is also vital. Knowing how many hours you’ll be asked to work and when, if you’re entitled to sick leave or holiday pay, and whether you’ll still have a job in six months’ time are all key to feeling secure."
+                    p “Without income security, budgeting can be impossible and people struggle to save or plan for their futures.”
+                .col-md-4
+                    img(src="#{dir}images/icons/dialogue_happy.svg" style="max-width:20%; margin-top:2rem;")
+                    .data-display
+                        h3 84%
+                        p of people say a steady income helps them cope with stress
+                    img(src="#{dir}images/icons/graph_rising.svg" style="max-width:20%; margin-top:2rem;")
+                    .data-display
+                        h3 83%
+                        p of people say a steady income increases productivity
+                .col-md-1
+
+    .fullwidth-yellow
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-6
+                    h1 In conclusion
+                    p.u-lede With the endurance of insecure work at a time when record numbers of people are in employment, income insecurity is likely to remain a feature of the labour market in the coming years.
+                    p People tell us feeling insecure at work means they find it difficult to plan ahead and manage their finances, and this affects confidence about maintaining their quality of life.
+                    p Citizens Advice has recently looked at a number of employment issues such as #[a(href="#") balancing flexibility] and security in non-traditional employment contracts, the problems associated with #[a(href="#") bogus self-employment] and #[a(href="#") inadequate job adverts].
+                    h2 What's next?
+                    p We now turn our attention to a programme of work which looks closely at income security in the labour market, welfare and health policy. We will be looking at the impact this has on people’s lives and what employees, employers and government can do in response.
+                .col-md-4
+                .col-md-1
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    p References
+                    cite 1. In February 2016, we commissioned ComRes to ask 1,135 people about a range of issues related to income security, security in employment and security in their lives.
+                    cite 2. Analysis of ONS Labour Force Survey (2015). We define a worker as insecure if any of the following apply: zero hours contract; temporary contract; agency work; work more than 8 hours paid overtime per week; work variable shift patterns.
+                    cite 3. Includes split shifts or day/night shifts where the hours vary.
+                .col-md-1

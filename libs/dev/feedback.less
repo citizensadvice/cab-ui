@@ -1,14 +1,18 @@
 .footer-feedback {
 	.limit-width;
-	padding: 0 1rem;
+    padding: .5rem 0 0 1rem;
+    text-align: left;
+    border: 0px @gray-7 solid;
+    border-left-width: 0.25rem;
     @media screen and ( max-width: (@breakpoint-content) ) {
-    	padding: 0;
+        padding: .5rem 0 0 1rem;
+        border-left-width: 0;
     }
 }
 #feedback-form {
 	display: none;
-	border-top: 1px solid;
-	border-color: #EEE;
+	//border-top: 1px solid;
+	//border-color: #EEE;
 	padding-top: 1rem;
 	textarea {
 		resize: none;
@@ -27,7 +31,7 @@
         padding-top: 1rem;
     }
     @media screen and ( max-width: (@breakpoint-sm - 1) ) {
-        margin: 0 1rem;
+        margin: 0;
         padding-top: 1rem;
     }
 }
