@@ -19,7 +19,11 @@ block sidebar
 block script
 	script.
 		$('#feedback-link').on('click', function(){
-			$('#feedback-form').toggle();
+			$('#feedback-form').slideToggle('fast');
+		})
+		$('#send').on('click', function(){
+			$('#feedback-content').hide();
+			$('#feedback-confirmation').show();
 		})
 
 block feedback
@@ -27,18 +31,20 @@ block feedback
 	p Is there anything wrong with this page? #[a#feedback-link Let us know].
 	#feedback-form
 		#feedback-content
-			p Don’t include personal or financial information, eg National Insurance number or credit card details
+			p Don’t include personal or financial information, eg National Insurance number or credit card details.
 			.fieldset
 				label(for="wrong") What went wrong?
 				textarea#wrong
 			.fieldset
-				label(for="doing") What were you doing?
+				label(for="doing") What were you expecting?
 				textarea#doing
 			.fieldset
 				label(for="email") Your email
 					span.optional &nbsp;(optional)
 				input#email(placeholder="", type="text")
-			button.btn.tick-button-icon(type="submit") Send
+			a#send.btn Send
+		#feedback-confirmation.main-content__right(style="text-align:left;margin-bottom:1rem;display:none")
+			p Thank you for your feedback. We will review your message in the next 48 hours.
 
 block content
 	.articleContent
