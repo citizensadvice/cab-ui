@@ -8,7 +8,7 @@ block settings
 block sidebar
     - var section = "Energy"
     +sidebar([
-        {href: "comparison-4.html", title: "Energy supplier comparison"},
+        {href: "comparison.html", title: "Energy supplier comparison"},
         {href: "comparison-details.html", title: "How we score values"},
         {href: "#", title: "Compare energy prices"}
     ])
@@ -60,39 +60,49 @@ block content
                 tr
                     th(scope="col", width="20%") &nbsp;
                     th(scope="col", width="16%") 5
+                        br
+                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-50.svg")
                     th(scope="col", width="16%") 4
+                        br
+                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-40.svg")
                     th(scope="col", width="16%") 3
+                        br
+                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-30.svg")
                     th(scope="col", width="16%") 2
+                        br
+                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-20.svg")
                     th(scope="col", width="16%") 1
+                        br
+                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-10.svg")
             tbody
                 tr
                     th(scope="row") Complaints per 100,000 customers
-                    td.rate-5 #[strong 50 or less]
-                    td.rate-4 #[strong 51 to 100]
-                    td.rate-3 #[strong 101 to 350]
-                    td.rate-2 #[strong 351 to 550]
-                    td.rate-1 #[strong Over 550]
+                    td.rate-5 50 or less
+                    td.rate-4 51 to 100
+                    td.rate-3 101 to 350
+                    td.rate-2 351 to 550
+                    td.rate-1 Over 550
                 tr
                     th(scope="row") Customers satisfied with service
-                    td.rate-5 #[strong Over 75%]
-                    td.rate-4 #[strong 70-75%]
-                    td.rate-3 #[strong 60-69%]
-                    td.rate-2 #[strong 51-59%]
-                    td.rate-1 #[strong 50% and below]
+                    td.rate-5 Over 75%
+                    td.rate-4 70-75%
+                    td.rate-3 60-69%
+                    td.rate-2 51-59%
+                    td.rate-1 50% and below
                 tr
                     th(scope="row") Customers satisfied with billing
-                    td.rate-5 #[strong Over 75%]
-                    td.rate-4 #[strong 70-75%]
-                    td.rate-3 #[strong 60-69%]
-                    td.rate-2 #[strong 51-59%]
-                    td.rate-1 #[strong 50% and below]
+                    td.rate-5 Over 75%
+                    td.rate-4 70-75%
+                    td.rate-3 60-69%
+                    td.rate-2 51-59%
+                    td.rate-1 50% and below
                 tr
                     th(scope="row") Proportion of switches in 21 days, or delayed for a valid reason
-                    td.rate-5 #[strong 100%]
-                    td.rate-4 #[strong 95% plus]
-                    td.rate-3 #[strong 75% plus]
-                    td.rate-2 #[strong 50% plus]
-                    td.rate-1 #[strong Under 50%]
+                    td.rate-5 100%
+                    td.rate-4 95% plus
+                    td.rate-3 75% plus
+                    td.rate-2 50% plus
+                    td.rate-1 Under 50%
                 tr
                     th(scope="row") Customer commitment
                     td.rate-5 Signed up to both switch guarantee and billing code

@@ -1,49 +1,42 @@
-// Energy comparison styles
-@rate-1: @red;
-@rate-2: #C66831;
-//@rate-2: #D97032;
-@rate-3: #AE8F32;
-//@rate-3: #E5A112;
-@rate-4: #879530;
-//@rate-4: #34827c;
-@rate-5: @green;
-
 .energy-comparison {
+    border-collapse: separate;
+
+    & * {
+        border-width: 0;
+    }
+
+    td {
+        border-top: 4px solid @white;
+        border-bottom: 2px solid @gray-7;
+        vertical-align: middle;
+    }
+    tr {
+        &:hover {
+            cursor: pointer;
+            background-color: @gray-7;
+            .inline-badge {
+                background-color: @white;
+            }
+        }
+    }
+
     th {
         font-size: @font-size-small;
         vertical-align: bottom;
-        //position: relative;
         &:after {
             .icon;
             content: @i-sort;
             margin-left: .25em;
             color: @heritage-blue-lighter;
-            //position: absolute;
-            //right: .5rem;
-            //top: 40%;
         }
     }
-    #sorttable_sortfwdind,
-    #sorttable_sortrevind {
-        display: none;
-    }
-   .sorttable_sorted:after {
-        .icon;
-        content: @i-sort-desc;
-        margin-left: .25em;
-        color: @heritage-blue;
-    }
-    .sorttable_sorted_reverse:after {
-        .icon;
-        content: @i-sort-asc;
-        margin-left: .25em;
-        color: @heritage-blue;
-    }
+
     .lg-only {
         @media screen and (max-width: @screen-sm-max) {
             display: none;
         }
     }
+
     // COLS
     .col-rank {
         width: 15%;
@@ -54,6 +47,7 @@
             width: 8%;
         }
     }
+
     .col-supp {
         width: 60%;
         @media screen and (min-width: @breakpoint-md) {
@@ -63,6 +57,17 @@
             width: 20%;
         }
     }
+
+    .col-rate {
+        width: 25%;
+        @media screen and (min-width: @breakpoint-md) {
+            width: 10%
+        }
+        @media screen and (min-width: @breakpoint-lg) {
+            width: 12%
+        }
+    }
+
     .data,
     .complaints,
     .service,
@@ -78,73 +83,7 @@
             width: 12%;
         }
     }
-    .col-rate {
-        width: 25%;
-        @media screen and (min-width: @breakpoint-md) {
-            width: 10%
-        }
-        @media screen and (min-width: @breakpoint-lg) {
-            width: 12%
-        }
-    }
 
-    &.modern {
-        border-collapse: separate;
-        & * {
-            border-width: 0;
-        }
-        td {
-            border-top: 4px solid @white;
-            border-bottom: 2px solid @gray-7;
-            vertical-align: middle;
-        }
-        tr {
-            &:hover {
-                cursor: pointer;
-                background-color: @gray-7;
-                .inline-badge {
-                    background-color: @white;
-                }
-            }
-        }
-        .rating span {
-            background: none;
-            padding: 0;
-            color: @heritage-blue;
-        }
-        .rate {
-            &-5--cell {
-                text-align: center;
-                color: @heritage-blue;
-                font-weight: @font-weight-bolder;
-                background: none;
-            }
-            &-4--cell {
-                text-align: center;
-                color: @heritage-blue;
-                font-weight: @font-weight-bolder;
-                background: none;
-            }
-            &-3--cell {
-                text-align: center;
-                color: @heritage-blue;
-                font-weight: @font-weight-bolder;
-                background: none;
-            }
-            &-2--cell {
-                text-align: center;
-                color: @heritage-blue;
-                font-weight: @font-weight-bolder;
-                background: none;
-            }
-            &-1--cell {
-                text-align: center;
-                color: @heritage-blue;
-                font-weight: @font-weight-bolder;
-                background: none;
-            }
-        }
-    }
 }
 
 .inline-badge {
@@ -153,65 +92,39 @@
     background-color: @gray-7;
     font-weight: @font-weight-bold;
     display: inline-block;
-    //width: 1.5em;
     text-align: center;
 }
 
-
-.rating-badge {
-    display: block;
-    padding: 0 .5em;
-    border-radius: .25em;
-    color: @white;
+.rating {
+    color: @heritage-blue;
     font-weight: @font-weight-bold;
     text-align: center;
-    &:after {
-        //content: " of 5";
-        @media screen and (max-width: @breakpoint-lg) {
-            display: none;
-        }
+    img {
+        border: none;
     }
 }
 
-.rate {
-    &-5 {
-        color: @rate-5;
-        font-weight: @font-weight-bolder;
-        &--badge {
-            .rating-badge;
-            background-color: @rate-5;
+.ca-energy_rating {
+    display: block;
+    width: 150px;
+    .logo {
+        display: inline-block;
+        img {
+            border: none;
+            max-height: 48px;
+            vertical-align: bottom;
         }
     }
-    &-4 {
-        color: @rate-4;
-        font-weight: @font-weight-bolder;
-        &--badge {
-            .rating-badge;
-            background-color: @rate-4;
+    .text {
+        display: inline-block;
+        color: @heritage-blue;
+        font-weight: @font-weight-bold;
+        img {
+            border: none;
+            max-width: 96px;
         }
-    }
-    &-3 {
-        color: @rate-3;
-        font-weight: @font-weight-bolder;
-        &--badge {
-            .rating-badge;
-            background-color: @rate-3;
-        }
-    }
-    &-2 {
-        color: @rate-2;
-        font-weight: @font-weight-bolder;
-        &--badge {
-            .rating-badge;
-            background-color: @rate-2;
-        }
-    }
-    &-1 {
-        color: @rate-1;
-        font-weight: @font-weight-bolder;
-        &--badge {
-            .rating-badge;
-            background-color: @rate-1;
+        .of {
+            color: @gray-3;
         }
     }
 }
@@ -236,4 +149,23 @@
         margin-left: .25em;
         content: @i-sort-desc;
     }
+}
+
+#sorttable_sortfwdind,
+#sorttable_sortrevind {
+    display: none;
+}
+
+.sorttable_sorted:after {
+    .icon;
+    content: @i-sort-desc;
+    margin-left: .25em;
+    color: @heritage-blue;
+}
+
+.sorttable_sorted_reverse:after {
+    .icon;
+    content: @i-sort-asc;
+    margin-left: .25em;
+    color: @heritage-blue;
 }
