@@ -22,8 +22,11 @@ block script
 			$('#feedback-form').slideToggle('fast');
 		})
 		$('#send').on('click', function(){
-			$('#feedback-content').hide();
-			$('#feedback-confirmation').show();
+			$('#feedback-content').slideUp({
+			    complete: function(){
+			        $('#feedback-confirmation').slideDown('fast');
+			    }
+			});
 		})
 
 block feedback
@@ -31,18 +34,16 @@ block feedback
 	p Is there anything wrong with this page? #[a#feedback-link Let us know].
 	#feedback-form
 		#feedback-content
-			p If you're looking for advice you can #[a contact Citizens Advice] or #[a find your local bureau]. You can also contact the #[a Citizens Advice consumer helpline] on #[strong 03454&nbsp;04&nbsp;05&nbsp;06].
-			p If you've had an issue with this page, don’t include personal or financial information such as National Insurance number or credit card details.
+			.callout--alert If you need help with a problem now, #[a contact your nearest Citizens Advice], or the #[a Citizens Advice consumer helpline] on #[strong 03454 04 05 06].
+			p Don’t include any personal or financial information such as National Insurance number or credit card details in your entry.
 			.fieldset
-				label(for="wrong") What went wrong?
+				label(for="wrong") What’s wrong with this page?
 				textarea#wrong
 			.fieldset
-				label(for="doing") What were you expecting?
-				textarea#doing
 			a#send.btn Send
-		#feedback-confirmation.main-content__right(style="text-align:left;margin-bottom:1rem;display:none")
-			p Thank you for your feedback.
-			p If you're looking for advice you can #[a contact Citizens Advice] or #[a find your local bureau]. You can also contact the #[a Citizens Advice consumer helpline] on #[strong 03454&nbsp;04&nbsp;05&nbsp;06].
+		#feedback-confirmation
+			p Thank you for your feedback - we’ll use it to improve our advice in the future.
+			p If you need advice now, #[a contact your nearest Citizens Advice], or the #[a Citizens Advice consumer helpline] on #[strong 03454 04 05 06].
 
 block content
 	.articleContent

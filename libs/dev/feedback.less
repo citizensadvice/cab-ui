@@ -17,21 +17,31 @@
 }
 #feedback-form {
 	display: none;
-    padding: 0;
-	padding-top: 1rem;
+	padding: 1rem 0;
+    margin-bottom: 1rem;
+    overflow: hidden;
 	textarea {
 		resize: none;
 		height: 5rem;
 	}
 	#feedback-content {
-        border: 0px @gray-7 solid;
-        border-left-width: 0.25rem;
 		text-align: left;
         .main-content__right;
-		margin-bottom: 1rem;
         padding-left: 1rem;
-        @media screen and ( max-width: (@breakpoint-sm - 1) ) {
+        border: 0px @gray-7 solid;
+        border-left-width: 0.25rem;
+        @media screen and ( max-width: (@breakpoint-content) ) {
             border: none;
         }
+    }
+    #feedback-confirmation {
+        .main-content__right;
+        padding-left: 1rem;
+        border: 0px @gray-7 solid;
+        border-left-width: 0.25rem;
+        @media screen and ( max-width: (@breakpoint-content) ) {
+            border: none;
+        }
+        display: none;
     }
 }
