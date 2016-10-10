@@ -20,6 +20,17 @@ block head
 			vertical-align: middle;
 		}
 
+block script
+	script.
+		$(document).ready(function(){
+			$('#resolver-button').on('click', function(e){
+				e.preventDefault();
+				if (resolver.value != '0') {
+					window.open(resolver.value, '_blank');
+				}
+			})
+		})
+
 block sidebar
 	- var section = "Make a complaint"
 	+sidebar([
@@ -77,12 +88,21 @@ block content
 			li collects your complaint and any response for the energy ombudsman
 		p To complain using Resolver, choose your energy supplier and then follow the instructions on the Resolver website.
 		p You’ll need to create a Resolver account and then add the details of your case using their multiple choice process. This shouldn’t take more than 20 minutes. Make sure you have the paperwork from your energy supplier with you when you start the process.
+		script(type="text/javascript")
+			script.
+				function prepareButton(){
+					if (resolver.value != 0) {
+						window.open(resolver.value, '_blank');
+						return false;
+					}
+				}
+
 		.well--outline
-			form
+			form(onsubmit="return prepareButton()")
 				label Choose your energy supplier
 				.dropdown
 					select#resolver(name="resolver")
-						option(value="") Please select
+						option(value="0") Please select
 						option(value="http://www.resolver.co.uk/freeadvice/services/51966/issues?utm_source=CAB&utm_medium=widget&utm_campaign=energy") Affect Energy
 						option(value="http://www.resolver.co.uk/freeadvice/services/51967/issues?utm_source=CAB&utm_medium=widget&utm_campaign=energy") Avro Energy
 						option(value="http://www.resolver.co.uk/freeadvice/services/51968/issues?utm_source=CAB&utm_medium=widget&utm_campaign=energy") Better Energy
@@ -123,4 +143,4 @@ block content
 						option(value="http://www.resolver.co.uk/freeadvice/companies/utilita-complaints/services?utm_source=CAB&utm_medium=widget&utm_campaign=energy") Utilitia
 						option(value="http://www.resolver.co.uk/freeadvice/companies/utility-warehouse-complaints/services?utm_source=CAB&utm_medium=widget&utm_campaign=energy") The Utilityoption( Warehouse
 						option(value="http://www.resolver.co.uk/freeadvice/services/51984/issues?utm_source=CAB&utm_medium=widget&utm_campaign=energy") ZOG Energy
-				button.btn.right-button-icon(type="submit", onClick="window.open(resolver.value,'_blank');return false") Complain using Resolver
+				button#resolver-button.btn.right-button-icon(type="submit") Complain using Resolver
