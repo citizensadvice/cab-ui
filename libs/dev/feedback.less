@@ -1,36 +1,37 @@
 .footer-feedback {
 	.limit-width;
-    padding: 0 0 0 1rem;
+    padding: 0 1rem;
     text-align: left;
+    @media screen and ( max-width: (@breakpoint-content) ) {
+        margin: 0 1rem 0 0;
+        padding: 0 9%;
+        border-left-width: 0;
+        padding-top: 1rem;
+    }
+    @media screen and ( max-width: (@breakpoint-sm - 1) ) {
+        margin: 0;
+        border-left-width: 0;
+        padding: 1rem;
+        padding-top: 1rem;
+    }
 }
 #feedback-form {
 	display: none;
-	//border-top: 1px solid;
-	//border-color: #EEE;
+    padding: 0;
 	padding-top: 1rem;
 	textarea {
 		resize: none;
 		height: 5rem;
 	}
 	#feedback-content {
-        padding: 0 0 0 1rem;
         border: 0px @gray-7 solid;
         border-left-width: 0.25rem;
 		text-align: left;
+        .main-content__right;
 		margin-bottom: 1rem;
-		.main-content__right;
-        @media screen and ( max-width: (@breakpoint-content) ) {
-            //display: flex;
-            //flex-direction: column;
-            margin: 0 1rem 0 0;
-            padding: 0;
-            border-left-width: 0;
-            padding-top: 1rem;
-        }
+        padding-left: 1rem;
         @media screen and ( max-width: (@breakpoint-sm - 1) ) {
-            margin: 0;
-            border-left-width: 0;
-            padding-top: 1rem;
+            border: none;
         }
     }
 }
