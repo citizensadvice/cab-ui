@@ -21,17 +21,26 @@ block content
 	.articleContent
 		div
 			.example-box-plain
-				.ca-energy_rating
+				.ca-energyrating_wide
 					.logo
 						img(src="#{dir}images/ca-logo_100px.svg")
 					.text
 						| 4.75 #[span.of out of 5]
 						br
 						img(src="#{dir}images/rating-50.svg")
-					//| Performance rating
+					| Performance rating
+				p
+				.ca-energyrating_tall
+					.logo
+						img(src="#{dir}images/ca-logo_100px.svg")
+					.text
+						| 4.75 #[span.of / 5]
+						br
+						img(src="#{dir}images/rating-50.svg")
 
 			pre
 				code.language-html
+				//
 					| &lt;div style="display:block;width:150px;"&gt;
 					| 	&lt;div style="display:inline-block;"&gt;
 					| 		&lt;img src="../../images/ca-logo_100px.svg" style="border-style:none;max-height:48px;vertical-align:bottom;"&gt;
