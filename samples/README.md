@@ -12,7 +12,7 @@ This repository is a set of comment styles and design elements that can be inclu
 
 Other projects should:
 
-* include this repository as node dependancy in their package file.  The styles and assets will then be available in `node_modules/cab-ui`. See `sample/package.json` for a ready-to-use package file
+* include this repository as node dependency in their package file.  The styles and assets will then be available in `node_modules/cab-ui`. See `sample/package.json` for a ready-to-use package file
 * setup a build process using the same processors as this repository.  See `sample/gulpfile.js` for a ready-to-use gulp file
 * regularly update this repository in their package file
 
