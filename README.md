@@ -29,18 +29,20 @@ This repository is a set of comment styles and design elements that can be inclu
 Other projects should:
 
 * include this repository as node dependancy in their package.json file.  The styles and assets will then be available in `node_modules\cab-ui`
-* import the less files they required into their own stylesheet.  You may need to setup a symlink from the folder containing the less file to the image assets folder.
-* setup a build process using the same processors as this repository.  See `gulpfile.sample.js` for a minimal version.
+* import the less files they required into their own stylesheet.  You may need to setup a symlink from the folder containing the less file to the image assets folder
+* setup a build process using the same processors as this repository
 
 Example of how to include the package in package.json
 
 ```json
 {
-    dependencies: {
+    "devDependencies": {
         "cab-ui": "https://github.com/citizensadvice/cab-ui.git#v1.0.0",
     }
 }
 ```
+
+Sample files for both `package.json` and `gulpfile.js` are maintined within the `samples` folder. Documentation on using them can be found [here](https://github.com/citizensadvice/cab-ui/tree/master/samples), in `samples/README.md`.
 
 ## Build process
 
