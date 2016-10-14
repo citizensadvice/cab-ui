@@ -1,2 +1,14 @@
-public
 robots.txt
+
+# Compiled
+public
+
+# Dev styles
+libs/guide.less
+libs/tools.less
+libs/dev
+libs/guide
+
+# Jade
+libs/jade
+libs/template
