@@ -12,6 +12,8 @@ The style guide is available on http://citizensadvice.github.io/cab-ui/
     │ ├─ assets           All images and fonts required by the Less
     │ ├─ jade             Jade templates
     │ ├─ template         Jade includes
+    │ ├─ print.less       Print stylesheet (also compiled into site.less)
+    │ ├─ site.less        All styles combined (including a print media query)
     │ └─ ...              Various folders containing less files
     │
     ├─┐  public           Target folder for building the CSS and holds the test html files
