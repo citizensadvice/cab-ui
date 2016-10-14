@@ -34,17 +34,17 @@ block feedback
 	p Is there anything wrong with this page? #[a#feedback-link Let us know].
 	#feedback-form
 		#feedback-content
-			p Don’t include any personal or financial information such as National Insurance number or credit card details in your entry.
 			.fieldset
 				label(for="wrong") What’s wrong with this page?
 				textarea#wrong
 			.fieldset
 				label(for="email") Your email
 					span.optional &nbsp;(optional)
+				span.form-hint We’ll get back to you with any questions
 				input#email(placeholder="", type="text")
 			a#send.btn Send
 		#feedback-confirmation
-			p Thank you for your feedback. We’ll review your message, and get back to you if we have any questions
+			p Thank you for your feedback. We’ll review your message, and get back to you if we have any questions.
 
 block content
 	.articleContent
