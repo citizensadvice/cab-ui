@@ -12,30 +12,30 @@ This repository is a set of comment styles and design elements that can be inclu
 
 Other projects should:
 
-* include this repository as node dependency in their package file.  The styles and assets will then be available in `node_modules/cab-ui`. See `sample/package.json` for a ready-to-use package file
-* setup a build process using the same processors as this repository.  See `sample/gulpfile.js` for a ready-to-use gulp file
+* include this repository as node dependency in their package file.  The styles and assets will then be available in `node_modules/cab-ui`. See [`samples/package.json`](https://github.com/citizensadvice/cab-ui/blob/master/samples/package.json) for a ready-to-use package file
+* setup a build process using the same processors as this repository.  See [`samples/gulpfile.js`](https://github.com/citizensadvice/cab-ui/blob/master/samples/gulpfile.js) for a ready-to-use gulp file
 * regularly update this repository in their package file
 
 ## Getting started
 
 The easiest way to get started is:
 
-1. Copy `gulpfile.js` and `package.json` into the root of your project.
+1. Copy [`gulpfile.js`](https://github.com/citizensadvice/cab-ui/blob/master/samples/gulpfile.js) and [`package.json`](https://github.com/citizensadvice/cab-ui/blob/master/samples/package.json) into the root of your project.
 2. From the root directory, run `npm-install`, which will download all the required gulp modules needed for cab-ui.
-3. Update the setting in `gulpfile.js` (see gulpfile.js in this readme).
+3. Update the setting in [`gulpfile.js`](https://github.com/citizensadvice/cab-ui/blob/master/samples/gulpfile.js) (see [gulpfile.js](#gulpfilejs) in this readme).
 4.  From the root directory, run `gulp cab-ui`, which will compile the CSS and move the assets into your project.
 
 ### Keeping cab-ui updated
 
-To keep cab-ui up to date change the version in `packages.json`, then run `npm install`, then `gulp cab-ui`.
+To keep cab-ui up to date change the version in [`package.json`](https://github.com/citizensadvice/cab-ui/blob/master/samples/package.json), then run `npm install`, then `gulp cab-ui`.
 
 ```json
-"cab-ui": "https://github.com/citizensadvice/cab-ui.git#v2.1.2",
+"cab-ui": "https://github.com/citizensadvice/cab-ui.git#v2.1.2"
 ```
 
 ## gulpfile.js
 
-The sample `gulpfile.js` only contains one task, which can be run with `gulp cab-ui`. This task will:
+The sample [`gulpfile.js`](https://github.com/citizensadvice/cab-ui/blob/master/samples/gulpfile.js) only contains one task, which can be run with `gulp cab-ui`. This task will:
 
 * compile all less files
 * add browser prefixing to all styles
@@ -55,4 +55,4 @@ var makeMaps    = false;
 
 ## package.json
 
-The sample `package.json` includes all the gulp packages needed to run `gulp cab-ui`.
+The sample [`package.json`](https://github.com/citizensadvice/cab-ui/blob/master/samples/package.json) includes all the gulp packages needed to run `gulp cab-ui`.
