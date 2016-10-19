@@ -1,5 +1,5 @@
 block settings
-    - var title = "How we score values"
+    - var title = "How the scores are worked out"
     - var sidebar = true
     - var toolbars = true
     - var mockup = true
@@ -8,9 +8,8 @@ block settings
 block sidebar
     - var section = "Energy"
     +sidebar([
-        {href: "comparison.html", title: "Energy supplier comparison"},
-        {href: "comparison-details.html", title: "How we score values"},
-        {href: "#", title: "Compare energy prices"}
+        {href: "comparison.html", title: "Compare energy suppliers’ customer service"},
+        {href: "#", title: title}
     ])
 
 extends /template/template.jade
@@ -23,11 +22,9 @@ block breadcrumbs
 
 block content
     .articleContent
-        p The energy supplier comparison tool presents of how domestic energy suppliers are performing, in terms of the service they provide to their customers.
-        p The overall supplier performance rating is made up of five individual metrics described in the table below. The following tables explain how supplier performance against each of the metrics is scored, and the weightings given to each of the five metrics.
+        p We give energy suppliers a score out of 5 for each category. 1 is poor and 5 is excellent.
 
-        h2 Weightings
-        table
+        //table
             thead
                 tr
                     th(scope="col") &nbsp;
@@ -54,59 +51,130 @@ block content
                     th(scope="row") Customer commitment
                     td 10%
                     td Which suppliers are signed up to the switching guarantee and billing code
-        h2 Scoring mechanism
+
         table
             thead
                 tr
-                    th(scope="col", width="20%") &nbsp;
+                    th(scope="col", width="20%") Category score
                     th(scope="col", width="16%") 5
-                        br
-                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-50.svg")
                     th(scope="col", width="16%") 4
-                        br
-                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-40.svg")
                     th(scope="col", width="16%") 3
-                        br
-                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-30.svg")
                     th(scope="col", width="16%") 2
-                        br
-                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-20.svg")
                     th(scope="col", width="16%") 1
-                        br
-                        img(style="max-width:6rem;border:none", src="#{dir}images/rating-10.svg")
             tbody
                 tr
-                    th(scope="row") Complaints per 100,000 customers
-                    td.rate-5 50 or less
-                    td.rate-4 51 to 100
-                    td.rate-3 101 to 350
-                    td.rate-2 351 to 550
-                    td.rate-1 Over 550
+                    th(scope="row") Number of complaints per 100,000 customers
+                    td 50 or less
+                    td 51 to 100
+                    td 101 to 350
+                    td 351 to 550
+                    td More than 550
                 tr
-                    th(scope="row") Customers satisfied with service
-                    td.rate-5 Over 75%
-                    td.rate-4 70-75%
-                    td.rate-3 60-69%
-                    td.rate-2 51-59%
-                    td.rate-1 50% and below
+                    th(scope="row") Customers who found contacting supplier easy
+                    td More than 75%
+                    td 70-75%
+                    td 60-69%
+                    td 51-59%
+                    td 50% or less
                 tr
-                    th(scope="row") Customers satisfied with billing
-                    td.rate-5 Over 75%
-                    td.rate-4 70-75%
-                    td.rate-3 60-69%
-                    td.rate-2 51-59%
-                    td.rate-1 50% and below
+                    th(scope="row") Customers who found bills easy to understand
+                    td More than 75%
+                    td 70-75%
+                    td 60-69%
+                    td 51-59%
+                    td 50% or less
                 tr
-                    th(scope="row") Proportion of switches in 21 days, or delayed for a valid reason
-                    td.rate-5 100%
-                    td.rate-4 95% plus
-                    td.rate-3 75% plus
-                    td.rate-2 50% plus
-                    td.rate-1 Under 50%
+                    th(scope="row") Switches done in 21 days
+                    td 98%
+                    td 90-97%
+                    td 75-89%
+                    td 50-74%
+                    td Less than 50%
                 tr
-                    th(scope="row") Customer commitment
-                    td.rate-5 Signed up to both switch guarantee and billing code
-                    td.rate-4 Signed up to either switch guarantee or billing code
-                    td.rate-3 Not applicable
-                    td.rate-2 Not applicable
-                    td.rate-1 Not applicable
+                    th(scope="row") Customer guarantees
+                    td(colspan="5") Suppliers score a 3 if they’re signed up to switch guarantee. If they’re not, they score a zero.
+
+        p The categories aren’t equal - they’re weighted so that some categories count more towards the final star rating than others.
+
+        table
+            thead
+                tr
+                    th(scope="col")
+                    th(scope="col") Complaints
+                    th(scope="col") Ease of contact
+                    th(scope="col") Billing clarity
+                    th(scope="col") Switching
+                    th(scope="col") Customer guarantees
+            tbody
+                tr
+                    th(scope="row") Weighting
+                    td 30%
+                    td 25%
+                    td 25%
+                    td 15%
+                    td 5%
+
+        p We give a final star rating to suppliers with scores in all 5 categories.
+
+        p We calculate this rating by adding up the weighted scores and rounding the total to the nearest 0.25. The maximum a supplier can get is 5.
+
+        p You can see how this works in the example.
+
+        h2 Example
+        h3 UK Energy Supplier plc
+
+        table
+            thead
+                tr
+                    th(scope="col")
+                    th(scope="col") Complaints
+                    th(scope="col") Ease of contact
+                    th(scope="col") Billing clarity
+                    th(scope="col") Switching
+                    th(scope="col") Customer guarantees
+                    th(scope="col") Star rating
+            tbody
+                tr
+                    th(scope="row") Number
+                    td 30.5
+                    td 72%
+                    td 74%
+                    td 99%
+                    td yes
+                    td(rowspan="3") 4.5
+                tr
+                    th(scope="row") Score out of 5
+                    td 5
+                    td 4
+                    td 4
+                    td 5
+                    td 3
+                tr
+                    th(scope="row") Weighted score
+                    td 1.5
+                    td 1
+                    td 1
+                    td 0.75
+                    td 0.15
+
+        h2 Where the information comes from
+
+        p Ratings are based on information gathered over the period D
+
+        p Complaints information comes from complaints made to:
+
+        ul
+            li Citizens Advice Consumer Service
+            li the #[a(href="http://www.cas.org.uk/about-us/consumer-advice/extra-help-unit") Extra Help Unit]
+            li the Energy Ombudsman
+
+        p Information on complaints is only available for suppliers with 50,000 customers or more.
+
+        p For the other categories, information on:
+
+        ul
+            li customer service and billing comes from the #[a(href="http://www.gfk.com/en-gb/industries/energy/") GFK market research survey]
+            li switching comes from Ofgem and suppliers themselves
+            li customer guarantees comes from #[a(href="http://www.energy-uk.org.uk/") Energy UK]
+
+        p This information is only available for suppliers with 150,000 customers or more.
