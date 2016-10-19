@@ -235,7 +235,10 @@ html.no-js
 			.footer-feedback
 				h2.screenreader Feedback
 				.footer-feedback__content
-					p Is there anything wrong with this page? #[a(href="#") Let us know].
+					if energyfeedback
+						p Is there anything wrong with this page? #[a(href="https://goo.gl/forms/sauMqCBriv0gqnHD3") Let us know].
+					else
+						p Is there anything wrong with this page? #[a(href="#") Let us know].
 			if newfoot
 				#footer.main-footer(data-track-zone="footer")
 					.footer-content.flex-row
