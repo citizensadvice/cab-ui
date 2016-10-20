@@ -34,17 +34,17 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
-                .well(style="margin-top:0; background-color:#F2F8FF;")
+                .well(style="margin-top:0;background-color:#F2F8FF;")
                     .fieldset
                         label(for="standardField") Template letter name
                         input(placeholder="", type="text")
 
-                .well(style="margin-top:0;")
+                .well.moveme
                     .fieldset
                         label(for="standardField") Section title
                         input(placeholder="", type="text")
 
-                    .well--outline(style="position:relative;")
+                    .well--outline.moveme(style="position:relative;")
                         h2.tl--id(style="margin:0;") {{<input placeholder="input" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem" value="name")>}}
                         a.tl--field--delete Remove
                         .tl--toggle.tl--hidden
@@ -83,13 +83,13 @@ block content
                     button.btn.plus-button-icon Add field
 
 
-                .well(style="margin-top:0;")
+                .well.moveme
                     .fieldset
                         label(for="standardField") Section title
-                        a.tl--field--delete Remove
+                        a.tl--field--delete(style="right: 1rem;") Remove
                         input(placeholder="", type="text")
 
-                    .well--outline(style="position:relative;")
+                    .well--outline.moveme(style="position:relative;")
                         h2.tl--id(style="margin:0;") {{<input placeholder="address" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem">}}
                         a.tl--field--delete Remove
                         .tl--toggle.tl--hidden
@@ -126,7 +126,7 @@ block content
                                         option Email
                                         option Number
 
-                    .well--outline(style="position:relative;")
+                    .well--outline.moveme(style="position:relative;")
                         h2.tl--id(style="margin:0;") {{<input placeholder="radio" pattern="[A-Za-z0-9\S]{1,25}" style="width:10rem">}}
                         a.tl--field--delete Remove
                         .tl--toggle.tl--hidden
@@ -163,7 +163,7 @@ block content
                                         option Email
                                         option Number
                             h3 Radio options
-                            .well(style="position:relative")
+                            .well.moveme(style="position:relative")
                                 a.tl--option--delete Remove
                                 .fieldset
                                     label(for="standardField") Option label
@@ -172,7 +172,7 @@ block content
                                     label(for="standardField") Option output
                                     span.form-hint Can include other question ID's
                                     textarea(placeholder="", type="text")
-                            .well(style="position:relative")
+                            .well.moveme(style="position:relative")
                                 a.tl--option--delete Remove
                                 .fieldset
                                     label(for="standardField") Option label
