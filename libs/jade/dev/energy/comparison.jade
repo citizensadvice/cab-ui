@@ -1,27 +1,18 @@
 block settings
-	- var title = "Energy supplier comparison"
+	- var title = "Compare energy suppliers’ customer service"
 	//- var sidebar = true
 	- var mockup = true
 	- var toolbars = true
 	- var dir = "../../"
+	- var energyfeedback = true
 
 extends /template/template.jade
 
-block sidebar
-	- var section = "Energy"
-	+sidebar([
-		{href: "comparison-4.html", title: "Energy supplier comparison"},
-		{href: "comparison-details.html", title: "How we score values"},
-		{href: "#", title: "Compare energy prices"}
-	])
-
-block section-notice
-	aside.section-notice
-		h2.screenreader Notice
-		.section-notice__content
-			p
-				span.badge NEW
-				| This page is part of #[a(href="#") our new approach to digital advice].
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: "#"},
+		{title: "Energy", href: "#"},
+		{title: title}])
 
 block script
 	script(src="#{dir}js/sorttable.js")
@@ -149,24 +140,35 @@ block content
 	.articleContent
 		.flex-row
 			.col-md-8
-				p Morbi porta justo sem, eget consequat purus porttitor nec. Pellentesque vitae euismod nulla, a commodo diam. Phasellus eget tincidunt nibh. Ut sem arcu, aliquam non lectus eu, faucibus viverra lacus. Vestibulum tellus turpis, sollicitudin quis efficitur id, convallis nec velit. Nulla facilisi. Cras id neque quis lacus placerat hendrerit. Etiam neque augue, eleifend sit amet fermentum at, faucibus vel odio. Morbi ac bibendum ante, ut rutrum ipsum. Ut vel finibus est.
-				p
-					button.btn.right-button-icon Compare energy prices
+				p Price isn’t the only thing to think about when choosing an energy supplier. It might be worth choosing a supplier that has good customer service - even if they’re a bit more expensive.
 
-		h2 Overview
+				p To help you compare customer service, we’ve given energy suppliers a star rating based on:
+
+				ul
+					li how many complaints were made about them to third parties
+					li how easy it is to contact them
+					li how easy their bills are to understand
+					li how good suppliers are at switching
+
+				.callout--alert
+					p If a supplier doesn’t have a star rating it means we don’t have enough information to rate them yet.
+
+				p There’s a separate tool for comparing #[a(href="https://energycompare.citizensadvice.org.uk/") energy prices].
+
+		h2 Rating
 		.flex-row
 			.col-md-8
-				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor dui semper, vulputate magna ut, suscipit eros. Nunc non nunc nec ligula consequat aliquet non eu elit.
+				p Click on a supplier’s name to see a breakdown of their score, their contact details and information about billing.
 		table.sortable.energy-comparison
 			thead
 				tr
 					th.col-rank.sorttable_numeric(scope="col") Rank
 					th.col-supp(scope="col") Supplier
 					th.lg-only(scope="col") Complaints
-					th.lg-only(scope="col") Customer service
-					th.lg-only(scope="col") Billing satisfaction
+					th.lg-only(scope="col") Ease of contact
+					th.lg-only(scope="col") Bill clarity
 					th.lg-only(scope="col") Switching
-					th.lg-only(scope="col") Customer commitment
+					th.lg-only(scope="col") Customer guarantees
 					th.col-rate(scope="col") Rating of 5
 			tbody
 				tr.open-dialog1
@@ -177,7 +179,7 @@ block content
 					td.service 57.89%
 					td.billing 53.78%
 					td.switching 80.94%
-					td.commitment 4
+					td.commitment 3
 					//td.rating 3
 					td.rating 4.5
 				tr.open-dialog1
@@ -188,7 +190,7 @@ block content
 					td.service 67.89%
 					td.billing 56.8%
 					td.switching 100%
-					td.commitment 4
+					td.commitment 3
 					//td.rating 3.25
 					td.rating 4
 				tr.open-dialog1
@@ -199,7 +201,7 @@ block content
 					td.service 92.67%
 					td.billing 82.34%
 					td.switching 74.68%
-					td.commitment 5
+					td.commitment 3
 					//td.rating 4
 					td.rating 3
 				tr.open-dialog1
@@ -221,7 +223,7 @@ block content
 					td.service 54.67%
 					td.billing 74.67%
 					td.switching 100%
-					td.commitment 4
+					td.commitment 3
 					//td.rating 3.5
 					td.rating 1
 				tr.open-dialog1
@@ -232,7 +234,7 @@ block content
 					td.service 62.2%
 					td.billing 45.67%
 					td.switching 60.54%
-					td.commitment 5
+					td.commitment 3
 					td.rating 2.25
 				tr.open-dialog1
 					td.decrease
@@ -252,7 +254,7 @@ block content
 					td.service 51.23%
 					td.billing 45.67%
 					td.switching 77.56%
-					td.commitment 4
+					td.commitment 3
 					td.rating 2.75
 				tr.open-dialog1
 					td.decrease
@@ -282,7 +284,7 @@ block content
 					td.service 53.3%
 					td.billing 61.5%
 					td.switching 96.34%
-					td.commitment 4
+					td.commitment 3
 					td.rating 3.25
 				tr.open-dialog1
 					td.increase
@@ -292,7 +294,7 @@ block content
 					td.service 76.44%
 					td.billing 25.67%
 					td.switching 54.23%
-					td.commitment 4
+					td.commitment 3
 					td.rating 3.5
 				tr.open-dialog1
 					td.decrease
@@ -322,7 +324,7 @@ block content
 					td.service 42.38%
 					td.billing 80.67%
 					td.switching 82.34%
-					td.commitment 4
+					td.commitment 3
 					td.rating 2.75
 				tr.open-dialog1
 					td.increase
@@ -360,7 +362,7 @@ block content
 					td.service -
 					td.billing -
 					td.switching -
-					td.commitment 4
+					td.commitment 3
 					td -
 				tr.open-dialog2
 					td(sorttable_customkey="99") -
@@ -387,7 +389,7 @@ block content
 					td.service -
 					td.billing -
 					td.switching -
-					td.commitment 5
+					td.commitment 3
 					td -
 				tr.open-dialog3
 					td(sorttable_customkey="100") -
@@ -470,11 +472,13 @@ block content
 					td Supplier AQ
 					td(colspan="6") Click to see more supplier information
 
-		h2 Methodology
 		.flex-row
 			.col-md-8
-				p Morbi porta justo sem, eget consequat purus porttitor nec. Pellentesque vitae euismod nulla, a commodo diam. Phasellus eget tincidunt nibh. Ut sem arcu, aliquam non lectus eu, faucibus viverra lacus.
-				a.blocklink(href="comparison-details.html") How we score values
+				p There are currently 17 suppliers with a star rating - ranked in order of how good their customer service is.
+
+				a.blocklink(href="comparison-details.html") Find out how the scores are worked out
+
+				p We don’t have enough information to rate all the suppliers listed on this page. We’ll rate them when that information becomes available.
 
 		#overlay1.overlay(style="display:none")
 			.dialog(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
@@ -492,27 +496,27 @@ block content
 								td.rating(width="20%")
 									span 5
 							tr
-								th(scope="row") Customers satisfied with service
+								th(scope="row") Customers who found contacting suppliers easy
 								td 57.89
 								td.rating
 									span 2
 							tr
-								th(scope="row") Customers satisfied with billing
+								th(scope="row") Customers who found bills easy to understand
 								td 53.78
 								td.rating
 									span 5
 							tr
-								th(scope="row") Proportion of switches in 21 days
+								th(scope="row") Switches done in 21 days
 								td 80.94%
 								td.rating
 									span 3
 							tr
-								th(scope="row") Customer commitment
+								th(scope="row") Customer guarantees
 								td Signed to switching guarantee#[br]Not signed to billing code
 								td.rating
 									span 4
-					a.blocklink(href="comparison-details.html") How we score values
-					h3 Contact
+					a.blocklink(href="comparison-details.html") How the scores are worked out
+					h3 Contact information
 					p
 						| #[strong Telephone:] 0800 0480202
 						br
@@ -540,19 +544,19 @@ block content
 						| #[strong Saturday:] 8am - 8pm
 						br
 						| #[strong Sunday:] Closed
-					h3 Frequency of billing
+					h3 Billing information
 					p
-						| #[strong Annually:] Direct debit
+						| #[strong Every year:] direct debit
 						br
-						| #[strong Bi-annually:] Direct debit
+						| #[strong Every 6 months:] direct debit
 						br
-						| #[strong Quarterly:] Direct debit
+						| #[strong Quarterly:] direct debit
 						br
-						| #[strong Monthly:] Direct debit
+						| #[strong Monthly:] direct debit
 						br
-						| #[strong Weekly:] Cash or cheque
+						| #[strong Weekly:] cash or cheque
 						br
-						| #[strong Other:] Cash or cheque
+						| #[strong Other:] cash or cheque
 
 
 		#overlay2.overlay(style="display:none")
@@ -570,8 +574,8 @@ block content
 								td(width="40%") 40.6
 								td.rating(width="20%")
 									span 3
-					a.blocklink(href="comparison-details.html") How we score values
-					h3 Contact
+					a.blocklink(href="comparison-details.html") How the scores are worked out
+					h3 Contact information
 					p
 						| #[strong Telephone:] 0800 0480202
 						br
@@ -599,19 +603,19 @@ block content
 						| #[strong Saturday:] 8am - 8pm
 						br
 						| #[strong Sunday:] Closed
-					h3 Frequency of billing
+					h3 Billing information
 					p
-						| #[strong Annually:] Direct debit
+						| #[strong Every year:] direct debit
 						br
-						| #[strong Bi-annually:] Direct debit
+						| #[strong Every 6 months:] direct debit
 						br
-						| #[strong Quarterly:] Direct debit
+						| #[strong Quarterly:] direct debit
 						br
-						| #[strong Monthly:] Direct debit
+						| #[strong Monthly:] direct debit
 						br
-						| #[strong Weekly:] Cash or cheque
+						| #[strong Weekly:] cash or cheque
 						br
-						| #[strong Other:] Cash or cheque
+						| #[strong Other:] cash or cheque
 
 
 		#overlay3.overlay(style="display:none")
@@ -622,7 +626,7 @@ block content
 					button.dialog__close.3(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
 
 				.dialog__main#dialog-1-main
-					h3 Contact
+					h3 Contact information
 					p
 						| #[strong Telephone:] 0800 0480202
 						br
@@ -650,16 +654,16 @@ block content
 						| #[strong Saturday:] 8am - 8pm
 						br
 						| #[strong Sunday:] Closed
-					h3 Frequency of billing
+					h3 Billing information
 					p
-						| #[strong Annually:] Direct debit
+						| #[strong Every year:] direct debit
 						br
-						| #[strong Bi-annually:] Direct debit
+						| #[strong Every 6 months:] direct debit
 						br
-						| #[strong Quarterly:] Direct debit
+						| #[strong Quarterly:] direct debit
 						br
-						| #[strong Monthly:] Direct debit
+						| #[strong Monthly:] direct debit
 						br
-						| #[strong Weekly:] Cash or cheque
+						| #[strong Weekly:] cash or cheque
 						br
-						| #[strong Other:] Cash or cheque
+						| #[strong Other:] cash or cheque

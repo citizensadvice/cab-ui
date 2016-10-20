@@ -79,3 +79,20 @@
         display: block;
     }
 }
+
+.tool-well {
+    .dap-panel;
+    .callout(
+        @gray-6,
+        @callout-border: @gray-6
+    );
+    .blocklink {
+        padding-top: .75rem;
+    }
+    margin-bottom: 0;
+    &+.well-foot {
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        background-color: @gray-8;
+        margin-bottom: 1rem;
+    }
+}
