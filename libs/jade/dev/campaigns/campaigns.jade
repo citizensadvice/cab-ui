@@ -1,0 +1,350 @@
+block settings
+    - var title = "Citizens Advice policy"
+    //- var sidebar = true
+    - var dir = "../../"
+    //- var blogname = "Digital Blog"
+    - var blog = true
+    - var fullpage = true
+    - var nofooter = true
+
+extends /template/template-site.jade
+block script
+    script(src="#{dir}js/vendor/highcharts/highcharts.js")
+    script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
+
+    script.
+        // Create overview chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69', '#57486B', '#A6D6AE', '#006278', '#006278', '#FCCEBA'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'overview-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Eligible for return',
+                    data: [84]
+                },
+                        {
+                    name: 'Actually returned',
+                    data: [16]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create personal factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#003c64', '#004b88', '#a5bddc', '#C9D1E5', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Personal factors',
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Steady income',
+                    data: [87]
+                },
+                        {
+                    name: 'Successful company',
+                    data: [74]
+                },
+                        {
+                    name: 'Good Manager',
+                    data: [72]
+                },
+                        {
+                    name: 'Regular hours',
+                    data: [71]
+                },
+                        {
+                    name: 'Partner with a steady income',
+                    data: [70]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create local factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#fba437', '#ffbf47', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-local-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Local factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Police presence',
+                    data: [54]
+                },
+                        {
+                    name: 'Thriving high street',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create national factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#b9db9d', '#d3e8c1', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-national-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'National factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2) + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Interest rate rises',
+                    data: [20]
+                },
+                        {
+                    name: 'NHS waiting lists',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+
+block sidebar
+    include /template/sidebar-blog.jade
+
+block content
+    .fullwidth
+        .story-masthead
+            .story-masthead--content
+                h1 Why aren't people returning faulty electronic goods?
+                p Most electronic goods that develop a fault can be returned - but most aren't
+            img(src="#{dir}images/campaigns/campaigns-header-elec-goods.png")
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row.campaign-share
+               .col-md-4
+               .col-md-4
+                    h3 Share this page
+               .col-md-4 
+            .flex-row.campaign-share
+                .col-md-6
+                    h2 #consumerweek
+                .col-md-2
+                    button.btn-secondary.facebook-button-icon facebook
+                .col-md-2
+                    button.btn-secondary.twitter-button-icon twitter
+                .col-md-2
+                    button.btn-secondary.email-button-icon email
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    div#overview-chart
+                .col-md-1
+                .col-md-5
+                    .data-display  
+                        h3 84%
+                        p of electronic products which become faulty are eligible for return to be refunded or replaced ...
+                    .data-display
+                        h3 16%
+                        p of eligible products are actually returned
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row
+                .col-md-5
+                    .medium-quote
+                        h4 "Parturient est quis adipiscing penatibus massa vestibulum ut at condimentum congue ad curabitur"
+                .col-md-2
+                    .medium-author
+                        img(src="#{dir}images/campaigns/medium-avatar-round.png")
+                        p James Plunkett
+                .col-md-5
+                    h3 Medium Post Title
+                    p Hac pharetra nam a adipiscing non id sed est faucibus ad a a purus adipiscing tortor ultricies a mi ante.
+                    button.btn-small Read more
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-12
+                    h2(style="text-align:center;") It doesn't matter whether you bought the item new or secondhand - you'll still have rights.
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-1
+                .col-md-5
+                    h3 You’ll have legal rights if the item is:
+                    p broken or damaged ('not of satisfactory quality')
+                    p unusable (‘not fit for purpose’)
+                    p not what was advertised or doesn’t match the seller’s description
+                .col-md-5    
+                    h3 You won’t have any legal rights if:
+                    p it was damaged by wear and tear, an accident or misuse
+                    p you knew about the fault before you bought the item
+                    p you’ve just changed your mind
+                .col-md-1
+            .flex-row
+                .col-md-1
+                .col-md-10
+                    h4 Visit our #[a(href="https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/") return faulty goods tool] to quickly find out if you're entitled to a refund, repair or replacement.
+                    button.btn-small Visit tool
+                .col-md-1
+
+    .fullwidth-blue
+        .flex-row
+            .col-md-2
+                aside.section-notice__adviser.js-make-sticky
+                    h2.screenreader Notice
+            .col-md-8
+                h2(style="text-align:center;") Campaign resources for advisers
+            .col-md-2
+        .flex-row
+            .col-md-1
+            .col-md-5
+                section.revealable.revealable--adviser
+                    h3 Briefing
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-5
+                section.revealable.revealable--adviser
+                    h3 Advice
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-1
+            .col-md-1
+            .col-md-5
+                section.revealable.revealable--adviser
+                    h3 Logo &amp; Graphics
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-5
+                section.revealable.revealable--adviser
+                    h3 Other Resources
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-1
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row.campaign-share
+               .col-md-4
+               .col-md-4
+                    h3 Share this page
+               .col-md-4 
+            .flex-row.campaign-share
+                .col-md-6
+                    h2 #consumerweek
+                .col-md-2
+                    button.btn-secondary.facebook-button-icon facebook
+                .col-md-2
+                    button.btn-secondary.twitter-button-icon twitter
+                .col-md-2
+                    button.btn-secondary.email-button-icon email
