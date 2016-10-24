@@ -66,7 +66,6 @@
 	border: solid @gray-4;
 	border-width: 2px 2px 0 2px;
 	z-index: 1;
-	cursor: pointer;
 	border-radius: @form-border-radius*2 @form-border-radius*2 0 0;
 	overflow: hidden;
 	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
@@ -103,5 +102,131 @@
 #chat-advice {
 	button {
 		margin-top: 0;
+	}
+}
+
+#live-chat {
+	background-color: @white;
+	border-radius: 3px 3px 0 0;
+	right: @box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	width: 20em;
+	height: 25em;
+	overflow: hidden;
+	border-bottom: 0;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+	z-index: 3;
+	#live-chat_hide {
+		text-align: right;
+		color: @green;
+		font-weight: @font-weight-bold;
+		padding: @box-spacing/2;
+		cursor: pointer;
+		background-color: @green-lighter;
+		&:after {
+			.icon;
+			content: @i-down;
+			padding-left: .5em;
+			color: @white;
+		}
+		&:hover {
+			color: @heritage-blue;
+		}
+	}
+	#live-chat_details {
+		background-color: @gray-7;
+		padding: @box-spacing/2;
+		position: relative;
+		strong {
+			color: @heritage-blue;
+		}
+		#live-chat_end {
+			float: right;
+			.vertical-align(absolute);
+			right: 0;
+			top: 35%;
+		}
+	}
+	#live-chat_body {
+		border: solid @gray-7;
+		border-width: 0 2px;
+		height: 100%;
+		background-color: @gray-7;
+		#live-chat_chat {
+			padding: @box-spacing/2;
+			height: 16.75rem;
+			vertical-align: bottom;
+			overflow-y: scroll;
+			background-color: @white;
+			& *:last-child {
+				margin-bottom: 0;
+			}
+			& .chat-message:first-of-type {
+				border: none;
+				margin-top: 0;
+				padding-top: 0;
+			}
+			.chat-message {
+				padding-top: @box-spacing/2;
+				margin-top: @box-spacing/2;
+				border-top: 1px solid @gray-7;
+			}
+			.timestamp {
+				font-size: @font-size-small*.85;
+				color: @gray-3;
+				padding-bottom: @box-spacing/4;
+			}
+			.client .timestamp .seen-status {
+				font-weight: @font-weight-bold;
+				color: @heritage-blue;
+				float: right;
+			}
+		}
+		#live-chat_form {
+			position: absolute;
+			bottom: 0;
+			right: @box-spacing/2;
+			left: @box-spacing/2;
+			.field-group--buttons input,
+			.field-group--buttons button {
+				padding: .25rem;
+			}
+			.field-group--buttons input {
+				padding-right: 4rem;
+			}
+			.field-group--buttons button {
+				width: 20%;
+				margin-left: -20%;
+			}
+		}
+	}
+}
+
+#live-chat_show {
+	display: none;
+	border-radius: 3px 3px 0 0;
+	right: @box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	background-color: @green-lighter;
+	border: solid @green-light;
+	border-width: 2px 2px 0 2px;
+	font-weight: @font-weight-bold;
+	padding: @box-spacing/2 @box-spacing;
+	padding-bottom: @box-spacing;
+	margin-bottom: -@box-spacing/2;
+	cursor: pointer;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+	transition: .1s ease-in-out;
+	color: @heritage-blue;
+	&:after {
+		.i-brand;
+		content: @brand-dialogue_think;
+		padding-left: .5em;
+	}
+	&:hover {
+		margin-bottom: 0;
+		transition: .1s ease-in-out;
 	}
 }

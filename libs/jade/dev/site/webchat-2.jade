@@ -19,20 +19,17 @@ block script
 	script.
 		// Click #chat-button
 		$(document).ready(function() {
-			$('#chat-button').on('click', function(){
-				/*if ($('#chat-button').hasClass("active")) {
-					$('#chat-advice').slideUp('fast');
-				}
-				$(this).toggleClass("active");
-				console.log('troll');*/
+			$('#live-chat_show').on('click', function(){
 				$(this).hide();
-				$('#chat-advice').show();
+				$('#live-chat').show();
 			});
-			$('#chat-button-close').on('click', function(){
-				$('#chat-advice').hide();
-				$('#chat-button').show();
+			$('#live-chat_hide').on('click', function(){
+				$(this).parent().hide();
+				$('#live-chat_show').show();
 			});
 		});
+		var $cont = $('#live-chat_chat');
+		$cont[0].scrollTop = $cont[0].scrollHeight;
 
 block content
 	.articleContent
@@ -131,21 +128,37 @@ block content
 				a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
-	#chat-button.advice-chat--offline(aria-checked="true" tabindex="0" role="button" style="cursor: pointer;")
-		p.icon-chat--offline Chat is unavailable
-
-	#chat-advice.advice-chat--offline.advice-chat--session
-		//h3 Webchat
-		p#chat-button-close(style="cursor: pointer;") Close
-		h3 Other ways to get advice
-		ul(style="margin-top: 0;")
-			li #[a(href="#") Check webchat hours]
-			li #[a(href="#") Consumer helpline]
-
-		fieldset
-			label(for="search") Search for a local Citizens Advice
-			.search-results__field.field-group.field-group--buttons
-				input(type="search", placeholder="Enter town or postcode")
-				button.btn.btn-primary(style="background-color:#fcbb69;border: 2px solid #fcbb69;")
-					i.icon-search
+	#live-chat_show Show live chat
+	#live-chat
+		#live-chat_hide Hide
+		#live-chat_details.small
+			//| Advisers name
+			//br
+			strong Adviser is typing...
+			//button#live-chat_end.btn-warning.btn-small End
+		#live-chat_body
+			#live-chat_chat
+				.chat-message.advise
+					.timestamp Adviser at 12:15pm
+					p Message
+				.chat-message.client
+					.timestamp You at 12:16pm #[span.seen-status Seen]
+					p Message
+				.chat-message.advise
+					.timestamp Adviser at 12:17pm
+					p Message
+				.chat-message.client
+					.timestamp You at 12:18pm #[span.seen-status Seen]
+					p Message
+				.chat-message.advise
+					.timestamp Adviser at 12:19pm
+					p Message
+				.chat-message.client
+					.timestamp You at 12:20pm #[span.seen-status Seen]
+					p This is a slightly longer message I posted
+			#live-chat_form
+				fieldset(style="margin:0;")
+					.field-group.field-group--buttons
+						input#field(type="search")
+						button.btn Send
 
