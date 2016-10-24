@@ -22,10 +22,12 @@ block script
 			$('#live-chat_show').on('click', function(){
 				$(this).hide();
 				$('#live-chat').show();
+				var $cont = $('#live-chat_chat');
+				$cont[0].scrollTop = $cont[0].scrollHeight;
 			});
 			$('#live-chat_hide').on('click', function(){
 				$(this).parent().hide();
-				$('#live-chat_show').show();
+				$('#live-chat_show').addClass("new_live-chat").html('2 new messages').show();
 			});
 		});
 		var $cont = $('#live-chat_chat');
@@ -128,14 +130,16 @@ block content
 				a.a-social-google-plus(href="https://plus.google.com/share?url=", data-track="Google+", rel="external") Google Plus
 				a.a-social-whatsapp.show-mobile(href="javascript:window.location='whatsapp://send?text='+encodeURIComponent(location.href);") Whatsapp
 
-	#live-chat_show Show live chat
+	#live-chat_show Chat with an adviser
 	#live-chat
 		#live-chat_hide Hide
 		#live-chat_details.small
 			//| Advisers name
 			//br
-			strong Adviser is typing...
-			//button#live-chat_end.btn-warning.btn-small End
+			strong.typing Adviser is typing
+				span .
+				span .
+				span .
 		#live-chat_body
 			#live-chat_chat
 				.chat-message.advise
@@ -156,6 +160,12 @@ block content
 				.chat-message.client
 					.timestamp You at 12:20pm #[span.seen-status Seen]
 					p This is a slightly longer message I posted
+				.chat-message.advise
+					.timestamp Adviser at 12:21pm
+					p Message
+				.chat-message.advise
+					.timestamp Adviser at 12:21pm
+					p Message
 			#live-chat_form
 				fieldset(style="margin:0;")
 					.field-group.field-group--buttons
