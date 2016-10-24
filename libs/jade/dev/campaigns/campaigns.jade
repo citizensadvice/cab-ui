@@ -45,12 +45,12 @@ block script
                     enabled: false
                 },
                 series: [{
-                    name: 'Eligible for return',
-                    data: [84]
+                    name: 'Complain of a fault',
+                    data: [53]
                 },
                         {
-                    name: 'Actually returned',
-                    data: [16]
+                    name: 'Don&#39;t complain',
+                    data: [47]
                 }],
                 navigation: {
                     buttonOptions: {
@@ -218,6 +218,78 @@ block script
             });
         });
 
+        $(function () {
+        var chart = new Highcharts.Chart({
+            // Make sure to include this string of brand colours
+            colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+            chart: {
+                type: 'pie',
+                renderTo: 'pie-chart',
+                backgroundColor:'rgba(255,255,255,0)'
+            },
+            title: {
+                text: 'Pie chart'
+            },
+            tooltip: {
+                formatter: function () {
+                    return this.point.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: false,
+                    cursor: 'pointer',
+                    showInLegend: false
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Income',
+                colorByPoint: true,
+                data: [{
+                    name: 'Source 1',
+                    y: 144
+                }, {
+                    name: 'Source 2',
+                    y: 59
+                }, {
+                    name: 'Source 3',
+                    y: 210
+                }, {
+                    name: 'Source 4',
+                    y: 64
+                }, {
+                    name: 'Source 5',
+                    y: 102
+                }, {
+                    name: 'Source 6',
+                    y: 88
+                }, {
+                    name: 'Source 7',
+                    y: 31
+                }, {
+                    name: 'Source 8',
+                    y: 75
+                }, {
+                    name: 'Source 9',
+                    y: 163
+                }],
+                dataLabels: {
+                    formatter: function () {
+                        return this.point.name + ' £' + this.y;
+                    }
+                }
+            }],
+            navigation: {
+                buttonOptions: {
+                    enabled: false
+                    }
+                }
+            });
+        });
+
 
 block sidebar
     include /template/sidebar-blog.jade
@@ -226,113 +298,103 @@ block content
     .fullwidth
         .story-masthead
             .story-masthead--content
-                h1 Why aren't people returning faulty electronic goods?
-                p Most electronic goods that develop a fault can be returned - but most aren't
+                h1 Use your consumer rights for safe and sound electrical goods
+                p Switched On, our campaign for National Consumer Week 2016, is all about electrical goods.
             img(src="#{dir}images/campaigns/campaigns-header-elec-goods.png")
-    .fullwidth-gray
-        .fullwidth-content
-            .flex-row.campaign-share
-               .col-md-4
-               .col-md-4
-                    h3 Share this page
-               .col-md-4 
-            .flex-row.campaign-share
-                .col-md-6
-                    h2 #consumerweek
-                .col-md-2
-                    button.btn-secondary.facebook-button-icon facebook
-                .col-md-2
-                    button.btn-secondary.twitter-button-icon twitter
-                .col-md-2
-                    button.btn-secondary.email-button-icon email
-
     .fullwidth
         .fullwidth-content
             .flex-row
                 .col-md-6
-                    div#overview-chart
+                    .data-display
+                        h2 Take a stand to get results
+                        h3 47%
+                        p We found nearly half of you (47%) don’t complain when something goes wrong with an electrical item.
+                        p Consumers don’t complain because they:
+                            li think the process will be too hard
+                            li think it will take too long
+                            li are convinced they won’t get anywhere
+                            li Have had a bad experience in the past
+                            li don’t expect products to be built to last anyway
                 .col-md-1
                 .col-md-5
-                    .data-display  
-                        h3 84%
-                        p of electronic products which become faulty are eligible for return to be refunded or replaced ...
-                    .data-display
-                        h3 16%
-                        p of eligible products are actually returned
+                    div#overview-chart
+
+    .fullwidth-blue
+        .fullwidth-content
+            .flex-row
+               .col-md-6
+                    .sil-image
+                        img(src="#{dir}images/campaigns/laptop-800.png" align="center")
+               .col-md-6
+                    .callout
+                        p Your consumer rights apply to whoever sold you the goods, not whoever made them. Your rights are different depending where you bought the item.
+                        p In a shop you don’t have a legal right to return or cancel, but if the store has a returns policy you can use it to get.
+                        p Online, on the phone or by post you get 14 days to return or cancel when you buy something - unless it’s bespoke or made to measure.
+                    p Different people or companies might be responsible for selling, delivering and installing your electrical item. You need to know which to contact if there’s a problem. The good news is they might have damage insurance.
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    h2 Get help
+                    p Whether you think your electrical item can be repaired or replaced, or you want a refund, you will need to return it. If your item is faulty and you're not sure what to do you can:
+                        li check your consumer rights with our #[a(href="https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/") faulty goods tool]
+                        li get advice from #[a(href="#") your nearest Citizens Advice]
+                        li call the Citizens Advice #[a(href="#") consumer helpline]
+                .col-md-6
+                    .sil-image
+                        img(src="#{dir}images/campaigns/box-800.png" align="center")
+
+    .fullwidth-gray
+        .fullwidth-content
+            .flex-row                
+                .col-md-12
+                    h2 Learn the facts before you buy again
+                    p Many electrical goods are expensive, complicated, large and heavy. Do as much research as you can before buying - it might be inconvenient to return something like a washing machine after it’s arrived at your house.
+                    p #[a(href="#") Take a look at our 2015 Know your new rights campaign] for more information about how the Consumer Rights Act affects you.              
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-5
+                    h3 Check for complaints
+                    p Search online for the make and model of anything you’re thinking of buying to see if anyone is complaining about it. Do this even if you’re planning to buy the item on the high street. Ask friends and family too.
+                .col-md-1
+                .col-md-1
+                .col-md-5
+                    h3 Look out for fakes
+                    p Counterfeit electrical goods might not be made to the required standards, and they might be unsafe. Some commonly counterfeited electrical items are hair straighteners, mobile phone chargers, games consoles and e-cigarettes (sometimes called vapers).
 
     .fullwidth-gray
         .fullwidth-content
             .flex-row
-                .col-md-5
+                .col-md-7
                     .medium-quote
-                        h4 "Parturient est quis adipiscing penatibus massa vestibulum ut at condimentum congue ad curabitur"
+                        h4 "Parturient est quis adipiscing penatibus massa vestibulum ut at condimentum congue ad curabitur. Hac pharetra nam a adipiscing non id sed est faucibus ad a a purus adipiscing tortor ultricies a mi ante."
                 .col-md-2
                     .medium-author
                         img(src="#{dir}images/campaigns/medium-avatar-round.png")
                         p James Plunkett
-                .col-md-5
-                    h3 Medium Post Title
-                    p Hac pharetra nam a adipiscing non id sed est faucibus ad a a purus adipiscing tortor ultricies a mi ante.
-                    button.btn-small Read more
+                .col-md-3
+                    h3 #[a(href="#") Medium Post Title]
+                    p  Parturient est quis adipiscing penatibus massa vestibulum ...
     .fullwidth
         .fullwidth-content
             .flex-row
                 .col-md-12
-                    h2(style="text-align:center;") It doesn't matter whether you bought the item new or secondhand - you'll still have rights.
+                    h2(style="text-align:center;") Find out how we work
 
     .fullwidth
         .fullwidth-content
             .flex-row
                 .col-md-1
                 .col-md-5
-                    h3 You’ll have legal rights if the item is:
-                    p broken or damaged ('not of satisfactory quality')
-                    p unusable (‘not fit for purpose’)
-                    p not what was advertised or doesn’t match the seller’s description
+                    h3 Watch local Citizens Advice in action
+                    p If you’d like an idea of how we work, watch this short film, made by our Consumer Empowerment Partnership of 5 local Citizens Advice, showing how they help clients with electrical goods problems.
                 .col-md-5    
-                    h3 You won’t have any legal rights if:
-                    p it was damaged by wear and tear, an accident or misuse
-                    p you knew about the fault before you bought the item
-                    p you’ve just changed your mind
-                .col-md-1
-            .flex-row
-                .col-md-1
-                .col-md-10
-                    h4 Visit our #[a(href="https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/") return faulty goods tool] to quickly find out if you're entitled to a refund, repair or replacement.
-                    button.btn-small Visit tool
+                    iframe(width='560', height='315', src='//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF', frameborder='0')
                 .col-md-1
 
-    .fullwidth-blue
-        .flex-row
-            .col-md-2
-                aside.section-notice__adviser.js-make-sticky
-                    h2.screenreader Notice
-            .col-md-8
-                h2(style="text-align:center;") Campaign resources for advisers
-            .col-md-2
-        .flex-row
-            .col-md-1
-            .col-md-5
-                section.revealable.revealable--adviser
-                    h3 Briefing
-                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
-            .col-md-5
-                section.revealable.revealable--adviser
-                    h3 Advice
-                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
-            .col-md-1
-            .col-md-1
-            .col-md-5
-                section.revealable.revealable--adviser
-                    h3 Logo &amp; Graphics
-                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
-            .col-md-5
-                section.revealable.revealable--adviser
-                    h3 Other Resources
-                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
-            .col-md-1
-
-    .fullwidth
+    .fullwidth-gray
         .fullwidth-content
             .flex-row.campaign-share
                .col-md-4
@@ -340,11 +402,13 @@ block content
                     h3 Share this page
                .col-md-4 
             .flex-row.campaign-share
-                .col-md-6
-                    h2 #consumerweek
+                .col-md-4
+                    h4 #consumerweek
                 .col-md-2
                     button.btn-secondary.facebook-button-icon facebook
                 .col-md-2
                     button.btn-secondary.twitter-button-icon twitter
                 .col-md-2
                     button.btn-secondary.email-button-icon email
+                .col-md-2
+                    button.btn-secondary.copy-button-icon copy link

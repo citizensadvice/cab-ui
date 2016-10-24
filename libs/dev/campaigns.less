@@ -3,16 +3,42 @@
 }
 .twitter-button-icon {
     .btn-icon(@i-twitter);
+    background-color: @heritage-blue-light;
+    border: @heritage-blue-light;
+	    &:hover {
+	    	background-color: @heritage-blue-lighter;
+	    	border: @heritage-blue-lighter;
+	    }
+}
+
+.copy-button-icon {
+    .btn-icon(@i-copy);
+    background-color: @green;
+    border-color: @green;
+    	&:hover {
+	    	background-color: @green-light;
+	    	border: @green-light;
+	    }
 }
 
 .campaign-share {
 	text-align: center;
 }
 
-.campaign-share h2 {
-	font-size: 3em;
-	margin-top: 0.05em;
-    margin-bottom: 0.2em;
+.campaign-share h4 {
+	font-size: 2.2em;
+	margin-top: 0.2em;
+    margin-bottom: 0.1em;
+}
+
+.campaign-share
+	.email-button-icon {
+	background-color: @gray-3;
+	border-color: @gray-3;
+		&:hover {
+	    	background-color: @gray-4;
+	    	border-color: @gray-4;
+	    }
 }
 
 .medium-author {
@@ -21,5 +47,9 @@
 }
 
 .medium-quote h4 {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+}
+
+.sil-image {
+	padding: 5em;
 }
