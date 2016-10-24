@@ -53,3 +53,46 @@
 .sil-image {
 	padding: 5em;
 }
+
+.medium {
+	.medium-quote {
+		background-color: @heritage-yellow-lighter;
+		h2 {
+			position: relative;
+			margin: 0;
+		}
+	}
+
+	.medium-author {
+		overflow: hidden;
+		background-color: @heritage-yellow-lightest;
+		.fullwidth-content {
+			padding: .5rem 1rem;
+		}
+		.wrapper {
+			position: relative;
+			text-align: right;
+			min-height: 4rem;
+		}
+		img {
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			float: right;
+			margin-left: 1rem;
+		}
+		p {
+			margin: 0;
+			width: 100%;
+			.medium-title {
+				font-size: @font-size-medium;
+				font-weight: @font-weight-bold;
+			}
+		}
+	}
+	@media screen and ( min-width: (@breakpoint-sm) ) {
+		.wrapper {
+			padding: 0 5rem;
+		}
+	}
+}
