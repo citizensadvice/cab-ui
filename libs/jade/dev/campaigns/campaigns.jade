@@ -45,12 +45,12 @@ block script
                     enabled: false
                 },
                 series: [{
-                    name: 'Complain of a fault',
-                    data: [53]
+                    name: 'Get a good result',
+                    data: [70]
                 },
                         {
-                    name: 'Don&#39;t complain',
-                    data: [47]
+                    name: 'Unsatisfactory result',
+                    data: [30]
                 }],
                 navigation: {
                     buttonOptions: {
@@ -306,53 +306,57 @@ block content
             .campaign-content
                 .flex-row
                     .col-md-6
-                        .data-display
-                            h2 Take a stand to get results
-                            p We found nearly half of you (47%) don’t complain when something goes wrong with an electrical item.
-                            p Consumers don’t complain because they:
-                                li think the process will be too hard
-                                li think it will take too long
-                                li are convinced they won’t get anywhere
-                                li Have had a bad experience in the past
-                                li don’t expect products to be built to last anyway
-                    .col-md-6
                         div#overview-chart
+                    .col-md-6
+                        .data-display
+                            h2 70% chance of a positive result
+                        p Electrical items are anything that uses electricity. For example, from tumble dryers and freezers to mobile phones and electronic toys.
+                        p 7 out of 10 people get a good result if they return a broken item - but half of people don’t. 
+                        p We’re campaigning for more people to ask for a refund, repair or replacement if something goes wrong with an electrical item. This called getting ‘consumer redress’.
 
     .fullwidth-blue
         .fullwidth-content
             .campaign-content
                 .flex-row
-                   .col-md-6
+                    .col-md-6
+                        h2 Returning an electrical item
+                        p If the electrical item you’ve bought breaks or becomes unsafe, by law the seller has to:
+                        li replace the item
+                        li repair the item
+                        li refund you the cost of your item
+                        p It’s worth keeping the broken item, in case the seller asks to see it. If it’s caused damage because of a fault, take photos of the damage the product has caused. 
+                        p You should take the item back to the person that sold it to you, not the manufacturer - even if the seller tells you it’s not their fault. 
+                        p If your item is damaged during delivery or installation, it’s still the seller’s responsibility, so you should complain to them if something goes wrong.
+                    .col-md-6
                         .sil-image
                             img(src="#{dir}images/campaigns/laptop-800.png" align="center")
-                   .col-md-6
                         .callout
-                            p Your consumer rights apply to whoever sold you the goods, not whoever made them. Your rights are different depending where you bought the item.
-                            p In a shop you don’t have a legal right to return or cancel, but if the store has a returns policy you can use it to get.
-                            p Online, on the phone or by post you get 14 days to return or cancel when you buy something - unless it’s bespoke or made to measure.
-                        p Different people or companies might be responsible for selling, delivering and installing your electrical item. You need to know which to contact if there’s a problem. The good news is they might have damage insurance.
+                            p We’re interested in your consumer rights because Citizens Advice is part of the Consumer Protection Partnership (CPP), which runs National Consumer Week every year.
+                         
     .fullwidth
         .fullwidth-content
             .campaign-content
                 .flex-row
+                    .col-md-6
+                        .sil-image
+                            img(src="#{dir}images/campaigns/box-800.png" align="center")
                     .col-md-6
                         h2 Get help
                         p Whether you think your electrical item can be repaired or replaced, or you want a refund, you will need to return it. If your item is faulty and you're not sure what to do you can:
                             li check your consumer rights with our #[a(href="https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/") faulty goods tool]
                             li get advice from #[a(href="#") your nearest Citizens Advice]
                             li call the Citizens Advice #[a(href="#") consumer helpline]
-                    .col-md-6
-                        .sil-image
-                            img(src="#{dir}images/campaigns/box-800.png" align="center")
 
-    .fullwidth-gray
+    .fullwidth-blue
         .fullwidth-content
             .campaign-content
-                h2 Learn the facts before you buy again
-                p Many electrical goods are expensive, complicated, large and heavy. Do as much research as you can before buying - it might be inconvenient to return something like a washing machine after it’s arrived at your house.
-                p #[a(href="#") Take a look at our 2015 Know your new rights campaign] for more information about how the Consumer Rights Act affects you.
+                h2 Before you buy again
+                p It’s worth doing your research before you buy another electrical item.
+                li look out for fakes - find out #[a(href="#") what to do if you buy a counterfeit electrical item], for example phone chargers, hair straighteners and e-cigarettes
+                li stay on top of your consumer rights - so you know  #[a(href="#") what to do if something else goes wrong]
+                li check for complaints - look online for reviews and ask friends and family before you buy an item
 
-    .fullwidth
+    // .fullwidth
         .fullwidth-content
             .campaign-content
                 .flex-row
