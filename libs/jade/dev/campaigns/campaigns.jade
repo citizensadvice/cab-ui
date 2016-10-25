@@ -297,8 +297,8 @@ block sidebar
 block content
     .fullwidth
         .story-masthead
-            .story-masthead--content
-                h1 Use your consumer rights for safe and sound electrical goods
+            .story-masthead--content.fullwidth-content
+                h1 Use your consumer rights for safe and sound electrical&nbsp;goods
                 p Switched On, our campaign for National Consumer Week 2016, is all about electrical goods.
             img(src="#{dir}images/campaigns/campaigns-header-elec-goods.png")
     .fullwidth
@@ -405,7 +405,8 @@ block content
                     h3 Watch local Citizens Advice in action
                     p If you’d like an idea of how we work, watch this short film, made by our Consumer Empowerment Partnership of 5 local Citizens Advice, showing how they help clients with electrical goods problems.
                 .col-md-6
-                    iframe(width='560', height='315', src='//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF', frameborder='0')
+                    p(style="position: relative;padding-bottom: 52.1%; padding-top: 25px;height: 0;")
+                        iframe(src="//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
 
     //.fullwidth-gray
         .fullwidth-content
@@ -425,6 +426,24 @@ block content
                     button.btn-secondary.email-button-icon email
                 .col-md-2
                     button.btn-secondary.copy-button-icon copy link
+
+    .twitter
+        .fullwidth-content
+            .hashtag
+                h3 Join us on Twitter with #consumerweek
+            .flex-row
+                .col-md-6
+                    .tweet
+                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                        p
+                            | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
+                        p.username #[a @TheCeylon16]
+                .col-md-6
+                    .tweet
+                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                        p
+                            | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
+                        p.username #[a @TheCeylon16]
 
     .sharing
         .fullwidth-content
