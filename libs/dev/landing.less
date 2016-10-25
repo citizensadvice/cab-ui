@@ -26,5 +26,13 @@
 .fullwidth-content {
     .limit-width(@breakpoint-lg);
     margin: 0 auto;
-    padding: @box-spacing-vertical*2 @box-spacing-horizontal;
+    padding: @box-spacing-vertical*2 @box-spacing-horizontal*2;
+    @media screen and ( max-width: (@breakpoint-content) ) {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+    @media screen and ( max-width: (@breakpoint-sm - 1) ) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
