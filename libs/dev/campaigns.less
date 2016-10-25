@@ -52,10 +52,11 @@
 }
 
 .campaign-content {
+	@media screen and ( min-width: (@breakpoint-md) ) {
+		padding: 0 5rem;
+	}
 	@media screen and ( min-width: (@breakpoint-sm) ) {
-		.wrapper, .flex-row {
-			padding: 0 5rem;
-		}
+		padding: 0 2.5rem;
 	}
 }
 
@@ -103,11 +104,6 @@
 				font-size: @font-size-medium;
 				font-weight: @font-weight-bold;
 			}
-		}
-	}
-	@media screen and ( min-width: (@breakpoint-md) ) {
-		.wrapper {
-			padding: 0 5rem;
 		}
 	}
 }

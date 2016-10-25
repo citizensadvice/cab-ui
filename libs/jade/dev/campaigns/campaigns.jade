@@ -348,11 +348,9 @@ block content
     .fullwidth-gray
         .fullwidth-content
             .campaign-content
-                .wrapper
-                    .col-md-12
-                        h2 Learn the facts before you buy again
-                        p Many electrical goods are expensive, complicated, large and heavy. Do as much research as you can before buying - it might be inconvenient to return something like a washing machine after it’s arrived at your house.
-                        p #[a(href="#") Take a look at our 2015 Know your new rights campaign] for more information about how the Consumer Rights Act affects you.
+                h2 Learn the facts before you buy again
+                p Many electrical goods are expensive, complicated, large and heavy. Do as much research as you can before buying - it might be inconvenient to return something like a washing machine after it’s arrived at your house.
+                p #[a(href="#") Take a look at our 2015 Know your new rights campaign] for more information about how the Consumer Rights Act affects you.
 
     .fullwidth
         .fullwidth-content
@@ -382,16 +380,17 @@ block content
     .medium
         .medium-quote
             .fullwidth-content
-                .wrapper
+                .campaign-content
                     h2 "Parturient est quis adipiscing penatibus massa vestibulum ut at condimentum congue ad curabitur. Hac pharetra nam a adipiscing non id sed est faucibus ad a a purus adipiscing tortor ultricies a mi ante."
         .medium-author
             .fullwidth-content
-                .wrapper
-                    img(src="#{dir}images/campaigns/medium-avatar-square.png")
-                    p
-                        a.medium-title(href="#") Read Medium Post Title
-                        br
-                        span.small by #[a(href="#") James Plunkett]
+                .campaign-content
+                    .wrapper
+                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                        p
+                            a.medium-title(href="#") Read Medium Post Title
+                            br
+                            span.small by #[a(href="#") James Plunkett]
 
     .fullwidth
         .fullwidth-content
@@ -401,13 +400,14 @@ block content
 
     .fullwidth
         .fullwidth-content
-            .flex-row
-                .col-md-6
-                    h3 Watch local Citizens Advice in action
-                    p If you’d like an idea of how we work, watch this short film, made by our Consumer Empowerment Partnership of 5 local Citizens Advice, showing how they help clients with electrical goods problems.
-                .col-md-6
-                    p(style="position: relative;padding-bottom: 52.1%; padding-top: 25px;height: 0;")
-                        iframe(src="//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
+            .campaign-content
+                .flex-row
+                    .col-md-6
+                        h3 Watch local Citizens Advice in action
+                        p If you’d like an idea of how we work, watch this short film, made by our Consumer Empowerment Partnership of 5 local Citizens Advice, showing how they help clients with electrical goods problems.
+                    .col-md-6
+                        p(style="position: relative;padding-bottom: 52.1%; padding-top: 25px;height: 0;")
+                            iframe(src="//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
 
     //.fullwidth-gray
         .fullwidth-content
@@ -430,21 +430,22 @@ block content
 
     .twitter
         .fullwidth-content
-            .hashtag
-                h3 Join us on Twitter with #consumerweek
-            .flex-row
-                .col-md-6
-                    .tweet
-                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
-                        p
-                            | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
-                        p.username #[a @TheCeylon16]
-                .col-md-6
-                    .tweet
-                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
-                        p
-                            | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
-                        p.username #[a @TheCeylon16]
+            .campaign-content
+                .hashtag
+                    h3 Join us on Twitter with #consumerweek
+                .flex-row
+                    .col-md-6
+                        .tweet
+                            img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                            p
+                                | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
+                            p.username #[a @TheCeylon16]
+                    .col-md-6
+                        .tweet
+                            img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                            p
+                                | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
+                            p.username #[a @TheCeylon16]
 
     .sharing
         .fullwidth-content
