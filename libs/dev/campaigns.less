@@ -56,16 +56,18 @@
 
 .medium {
 	.medium-quote {
-		background-color: @heritage-yellow-lighter;
+		background-color: @green-lighter;
 		h2 {
 			position: relative;
 			margin: 0;
+			//color: @black;
 		}
 	}
 
 	.medium-author {
 		overflow: hidden;
-		background-color: @heritage-yellow-lightest;
+		//border-top: 1rem solid @green-lighter;
+		background-color: @gray-8;
 		.fullwidth-content {
 			padding: .5rem 1rem;
 		}
@@ -90,9 +92,62 @@
 			}
 		}
 	}
-	@media screen and ( min-width: (@breakpoint-sm) ) {
+	@media screen and ( min-width: (@breakpoint-md) ) {
 		.wrapper {
 			padding: 0 5rem;
+		}
+	}
+}
+
+.sharing {
+	border: solid @gray-8;
+	border-width: 1rem 0;
+	//margin: 1rem 0;
+	text-align: center;
+	.sharing-button-icon {
+		&_facebook {
+			.btn-icon(@i-facebook);
+			&:after {
+				color: @facebook-brand-colour;
+			}
+		}
+		&_messenger {
+			.btn-icon(@i-messenger);
+			&:after {
+				color: @messenger-brand-colour;
+			}
+		}
+		&_twitter {
+			.btn-icon(@i-twitter);
+			&:after {
+				color: @twitter-brand-colour;
+			}
+		}
+		&_whatsapp {
+			.btn-icon(@i-whatsapp);
+			&:after {
+				color: @whatsapp-brand-colour;
+			}
+		}
+		&_linkedin {
+			.btn-icon(@i-linkedin);
+			&:after {
+				color: @linkedin-brand-colour;
+			}
+		}
+		&_email {
+			.btn-icon(@i-email);
+			&:after {
+				color: @heritage-blue-light;
+				font-weight: @font-weight-base;
+			}
+		}
+		&_copy {
+			.btn-icon(@i-copy);
+			&:after {
+				color: @heritage-blue-light;
+				font-weight: @font-weight-base;
+			}
 		}
 	}
 }
