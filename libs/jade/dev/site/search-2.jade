@@ -1,0 +1,124 @@
+block settings
+	- var title = "Search results for Benefits"
+	- var dir = "../../"
+	//- var sidebar = true
+
+extends /template/template-site.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+
+block script
+
+block content
+	.flex-row
+		.col-md-8.col-sm-12
+			ul.search-results
+				li
+					.heading
+						a Benefits
+					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.	
+
+				li
+					.heading
+						a Sick or disabled people and carers
+					.description If you're sick or disabled, you may be able to claim benefits and tax credits.
+					ul.section
+						li #[a Benefits]
+
+				li
+					.heading
+						a Employment and Support Allowance (ESA)
+					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
+					ul.section
+						li #[a Benefits]
+						li #[a Sick or disabled people and carers]
+
+				li
+					h3 #[a 89 total results for 'Benefits' - view a list of all results]
+
+				li
+					.callout--adviser
+						.heading
+							a Contractual sick pay
+						.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
+						ul.section
+							li #[a Workplace rights]
+							li #[a Sick pay]
+
+				h3 Other suggestions
+				p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit],&nbsp;&nbsp;#[a What were saying about benefits]
+				
+				fieldset
+					.field-group.field-group--buttons
+						input#field(type="search" placeholder="Search again")
+						button(class="btn") Search&nbsp;&nbsp;
+
+				.fieldset
+						label(class="checkbox checkbox--inline") Advice
+							input(name="checkbox-inline" type="checkbox" value="option1")
+						label(class="checkbox checkbox--inline") Research
+							input(name="checkbox-inline" type="checkbox" value="option2")
+						label(class="checkbox checkbox--inline") Campaigns
+							input(name="checkbox-inline" type="checkbox" value="option3")
+
+
+		.col-md-4.col-sm-12
+			//.well
+				fieldset
+					label(for="exampleSelect1") Find a specific benefit
+					.dropdown
+						select(id="exampleSelect1")
+							option Please select…
+							option Asbestos-related illness benefit
+							option Attendance allowance
+							option Benefits cap
+							option Bereavement benefits
+							option Budgeting loans
+							option Carer's allowance
+							option Child benefit
+							option Child tax credit
+							option Cold weather payments
+							option Community care grants
+							option Constant attendance allowance
+							option Crisis loans
+							option Disability living allowance
+							option Disablement benefit
+							option Education maintenance allowance
+							option Employment and support allowance
+							option Exceptionally severe disablement allowance
+							option Funeral payments
+							option Guardians allowance
+							option Housing benefit
+							option Incapacity benefit
+							option Income support
+							option Industrial injuries disablement benefit
+							option Jobseeker's allowance
+							option Maternity allowance
+							option Maternity grants
+							option Pension credit
+							option Personal Independence Payment
+							option Reduced earnings allowance
+							option Retirement allowance
+							option Severe disablement allowance
+							option Social fund
+							option State retirement pension
+							option Statutory sick pay
+							option Universal Credit
+							option War pension
+							option War widow's/widower's pension
+							option Widowed Parent’s Allowance
+							option Widows' benefits
+							option Winter fuel payment
+							option Working tax credit
+
+			h3 Popular advice
+			p #[a Basic rights at work]
+
+			p #[a Benefits and tax credits for people in work]
+
+			p #[a Report to Trading Standards]
+
+			p #[a See what else people are searching for]
