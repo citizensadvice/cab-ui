@@ -1,0 +1,66 @@
+/**
+ * Blocklink
+ */
+
+.blocklink,
+.blockLinks {
+    margin: @box-spacing-vertical 0;
+    padding: @box-spacing-vertical;
+    background-color: lighten(@link-color, 75%);
+    color: @heritage-blue;
+    border: 1px solid lighten(@link-color, 70%);
+    font-size: @font-size-base;
+    font-weight: @font-weight-bolder;
+    display: block;
+    .btn-icon(@i-right);
+    border-radius: 2px;
+    text-decoration: underline;
+
+    h1, h2, h3, h4, h5, h6, p {
+        text-decoration: none;
+        border: none;
+        font-size: @font-size-base;
+        font-weight: @font-weight-bolder;
+        margin: 0;
+    }
+
+    // Changing the blocklink icon
+    &.i-doc-image {
+        .btn-icon(@i-doc-image);
+    }
+
+    &.i-search {
+        .btn-icon(@i-search);
+    }
+
+    // Changing the blocklink icon
+    &.blocklinks--back {
+        .btn-icon(@i-left);
+        text-align: left;
+        padding-left: 2.5em;
+        &:after {
+            left: 1rem;
+            text-align: left;
+        }
+    }
+
+    &:visited {
+        border: 1px solid lighten(@link-color, 70%);
+        &:after {
+            color: @link-visited-color;
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: lighten(@link-color, 70%);
+        border: 1px solid lighten(@link-color, 70%);
+        text-decoration: underline;
+    }
+
+    &:after {
+        color: @link-color;
+    }
+
+}
