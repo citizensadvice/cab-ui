@@ -1,5 +1,5 @@
 block settings
-	- var title = "Search results for Benefits"
+	- var title = ""
 	- var dir = "../../"
 	//- var sidebar = true
 
@@ -15,16 +15,22 @@ block script
 block content
 	.flex-row
 		.col-md-8.col-sm-12
+			h1(style="margin-top:-10px;") 'Benafits'
 			ul.search-results
 				li
+					p(style="margin-bottom:2px;") Did you mean #[a 'Benefits']?
+				li
+					p Search results:
 					.heading
 						a Benefits
-					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.	
+					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					.search-date 25 Oct 2016
 
 				li
 					.heading
 						a Sick or disabled people and carers
 					.description If you're sick or disabled, you may be able to claim benefits and tax credits.
+					.search-date 14 Jun 2015
 					ul.section
 						li #[a Benefits]
 
@@ -32,38 +38,41 @@ block content
 					.heading
 						a Employment and Support Allowance (ESA)
 					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
+					.search-date 01 Jan 2014
 					ul.section
 						li #[a Benefits]
 						li #[a Sick or disabled people and carers]
 
 				li
-					h3 #[a 89 total results for 'Benefits' - view a list of all results]
+					.heading
+						a Benefits for families and children
+					.description Benefits for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					.search-date 12 May 2014
+					ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
 
 				li
-					.callout--adviser
-						.heading
-							a Contractual sick pay
-						.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
-						ul.section
-							li #[a Workplace rights]
-							li #[a Sick pay]
+					.heading
+						a Young people and benefits
+					.description Information on benefits for young people between the ages of 14 and 18.
+					.search-date 13 May 2014
+					ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
 
-				h3 Other suggestions
+				li
+					h3 Related searches
 				p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit],&nbsp;&nbsp;#[a What were saying about benefits]
+
+				li
+					h3 #[a.blocklink 89 total results for 'Benefits' - view a list of all results]
+
 				
 				fieldset
 					.field-group.field-group--buttons
 						input#field(type="search" placeholder="Search again")
-						button(class="btn") Search&nbsp;&nbsp;
-
-				.fieldset
-						label(class="checkbox checkbox--inline") Advice
-							input(name="checkbox-inline" type="checkbox" value="option1")
-						label(class="checkbox checkbox--inline") Research
-							input(name="checkbox-inline" type="checkbox" value="option2")
-						label(class="checkbox checkbox--inline") Campaigns
-							input(name="checkbox-inline" type="checkbox" value="option3")
-
+						button.btn Search&nbsp;&nbsp;
 
 		.col-md-4.col-sm-12
 			//.well
@@ -113,12 +122,3 @@ block content
 							option Widows' benefits
 							option Winter fuel payment
 							option Working tax credit
-
-			h3 Popular advice
-			p #[a Basic rights at work]
-
-			p #[a Benefits and tax credits for people in work]
-
-			p #[a Report to Trading Standards]
-
-			p #[a See what else people are searching for]
