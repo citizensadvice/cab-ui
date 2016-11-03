@@ -1,5 +1,5 @@
 block settings
-	- var title = ""
+	- var title = "benafits"
 	- var dir = "../../"
 	//- var sidebar = true
 
@@ -15,15 +15,19 @@ block script
 block content
 	.flex-row
 		.col-md-8.col-sm-12
-			.term-suggestion
-				h4 Did you mean #[a Benefits]?
-			.result-count 89 results found:
+			.term-suggestion Did you mean #[a Benefits]?
 			ul.search-results
-				
+
 				li
 					.heading
 						a Benefits
 					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					.adviser-categories
+						ul(style="margin:0")
+							li #[a Benefits fact sheets]
+							li #[a Universal Credit]
+							li #[a Help if on a low income]
+							li(style="margin:0") #[a Making welfare work locally]
 
 				li
 					.heading
@@ -40,14 +44,13 @@ block content
 						li #[a Benefits]
 						li #[a Sick or disabled people and carers]
 
-				li
-					.callout--adviser
-						.heading
-							a Contractual sick pay
-						.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
-						ul.section
-							li #[a Workplace rights]
-							li #[a Sick pay]
+				li.adviser-result
+					.heading
+						a Contractual sick pay
+					.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
+					ul.section
+						li #[a Workplace rights]
+						li #[a Sick pay]
 
 				li
 					.heading
@@ -57,71 +60,15 @@ block content
 						li #[a Benefits]
 						li #[a Children and young people]
 
-				li
-					.heading
-						a Young people and benefits
-					.description Information on benefits for young people between the ages of 14 and 18.
-					ul.section
-						li #[a Benefits]
-						li #[a Children and young people]
+				li.pagination
+					#[a.blocklink(href="/dev/site/search-2-page-2.html") 84 more results for 'Benefits']
 
-				li
-					h3 Related searches
+				li.related-results
+					strong Related searches
 					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit],&nbsp;&nbsp;#[a What were saying about benefits]
 
 				li
-					#[a.blocklink(href="/dev/site/search-2-page-2.html") 84 more results for 'Benefits']
-
-				fieldset
-					.field-group.field-group--buttons
-						input#field(type="search" placeholder="Search again")
-						button.btn Search&nbsp;&nbsp;
-
-		.col-md-4.col-sm-12
-			//.well
-				fieldset
-					label(for="exampleSelect1") Find a specific benefit
-					.dropdown
-						select(id="exampleSelect1")
-							option Please select…
-							option Asbestos-related illness benefit
-							option Attendance allowance
-							option Benefits cap
-							option Bereavement benefits
-							option Budgeting loans
-							option Carer's allowance
-							option Child benefit
-							option Child tax credit
-							option Cold weather payments
-							option Community care grants
-							option Constant attendance allowance
-							option Crisis loans
-							option Disability living allowance
-							option Disablement benefit
-							option Education maintenance allowance
-							option Employment and support allowance
-							option Exceptionally severe disablement allowance
-							option Funeral payments
-							option Guardians allowance
-							option Housing benefit
-							option Incapacity benefit
-							option Income support
-							option Industrial injuries disablement benefit
-							option Jobseeker's allowance
-							option Maternity allowance
-							option Maternity grants
-							option Pension credit
-							option Personal Independence Payment
-							option Reduced earnings allowance
-							option Retirement allowance
-							option Severe disablement allowance
-							option Social fund
-							option State retirement pension
-							option Statutory sick pay
-							option Universal Credit
-							option War pension
-							option War widow's/widower's pension
-							option Widowed Parent’s Allowance
-							option Widows' benefits
-							option Winter fuel payment
-							option Working tax credit
+					fieldset
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Search again", value="#{title}")
+							button.btn Search
