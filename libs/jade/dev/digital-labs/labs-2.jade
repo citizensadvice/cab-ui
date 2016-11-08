@@ -1,0 +1,76 @@
+block settings
+	- var title = "Welcome to the digital lab"
+	- var dir = "../../"
+
+extends /template/template.min.jade
+
+block head
+	style.
+		body {
+			background-color: #c2bdde;
+		}
+
+block content
+	.digital-lab
+		.fullwidth
+			.fullwidth-content
+				.dl--head
+					img(alt="", src="#{dir}images/ca-logo-hz-200px.svg")
+					h1(style="margin: 0; margin-top: 1rem; position: relative;") Welcome to the digital&nbsp;lab&nbsp;
+						a.egg(href="http://funhtml5games.com?embed=flappy") #[span.i &#xe624;]
+
+		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
+			.fullwidth-content
+				.flex-container
+					.flex-row
+						.dl--segment.col-sm-4
+							a(href="https://webworker.casebook.demo.devops.citizensadvice.org.uk/")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Try out the
+									br
+									strong Casebook demo site
+
+						.dl--segment.col-sm-4
+							a(href="https://epiuat-app.citizensadvice.org.uk/")
+								.dl--circle
+									.pic.i-brand &#xe936;
+								p Test a new
+									br
+									strong ‘Find your nearest Citizens Advice’
+										br
+										| search for the website
+
+						.dl--segment.col-sm-4
+							a(href="#")
+								.dl--circle
+									.pic.i-brand &#xe961;
+								p Give feedback on new
+									br
+									strong redundancy advice content
+
+						.dl--segment.col-sm-4
+							a(href="http://52.209.108.49/client/budgets/1")
+								.dl--circle
+									.pic £
+								p Try the
+									br
+									strong Money Advice Recording Tool
+
+						.dl--segment.col-sm-4
+							a(href="https://bmis.optimalworkshop.com/optimalsort/75h5l462")
+								.dl--circle
+									.pic.i-brand &#xe971;
+								p Design with
+									br
+									strong Page engine
+										br
+										| (the new Prinkk)
+
+						.dl--segment.col-sm-4
+							a(href="http://citizensadvice.us9.list-manage.com/subscribe?u=f2e5709e33ab37630d8a8d4be&id=94b6bfef0b")
+								.dl--circle
+									.pic.i-brand &#xe928;
+								p Help with more testing
+									br
+									strong Sign up to the digital team mailing list
