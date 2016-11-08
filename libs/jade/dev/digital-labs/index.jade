@@ -1,0 +1,240 @@
+block settings
+	- var title = "Welcome to the digital lab"
+	- var dir = "../../"
+
+extends /template/template.min.jade
+
+block head
+	style.
+		body {
+			background-color: #c2bdde;
+		}
+
+block script
+	script.
+		var filename = window.location.search.slice(1);
+		$(document).ready(function() {
+			if (filename == "0") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1X9lN8nJVE-TUtJE3WnstxZBejwg2knTesbRwGdwQJgk")
+			} else if (filename == "1") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1gUKnWCGg617VeQKJg14pFqP2FY71f1Zev9U5m4r3Hs0")
+			} else if (filename == "2") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1X_HDtTT6nTmgfJHu_v4MF4cM3zG5A_z-M2trGWcQeDs")
+			} else if (filename == "3") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1B_gfCfO3fwyrohLv4M9Q2WmqV-6YZ5GiN4oraZlBhZA")
+			} else if (filename == "4") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1tTLHJl_oRDZgyWpu5Jw-er6sDVG5NrqKZ3WLOSzLokw")
+			} else if (filename == "5") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1xSNYVpFISuRqtEPDog995K_6UHGY5CmEAto4UZ0zv80")
+			} else if (filename == "6") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1W9h-ktZBQXB3k5HZpF2atCkuWSbMRaCbGG27ZHWF68o")
+			} else if (filename == "7") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1zQaLlUN9dpGDXSHwsncjZWD6NLX09SsuEUbmWkT_foo")
+			} else if (filename == "8") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1bDnRjdRzxTiAesjxkTt9fkjYozGaVQFSQJrVLViukXM")
+			} else if (filename == "9") {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1ED7X6ZQDEUKwen9dAlO-r66ZPKcfQA4Wh_8Le0Mx3m0")
+			} else {
+				$('#pqf').attr("href", "https://drive.google.com/open?id=1X9lN8nJVE-TUtJE3WnstxZBejwg2knTesbRwGdwQJgk")
+			}
+
+			$('#webchat').click(function(){
+				$('#overlay--1').show();
+			})
+			$('.dialog__close.1').click(function(){
+				$('#overlay--1').hide();
+			})
+			$('#advice').click(function(){
+				$('#overlay--2').show();
+			})
+			$('.dialog__close.2').click(function(){
+				$('#overlay--2').hide();
+			})
+			$('#mart').click(function(){
+				$('#overlay--3').show();
+			})
+			$('.dialog__close.3').click(function(){
+				$('#overlay--3').hide();
+			})
+		});
+
+block content
+	.digital-lab
+		#overlay--1.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.1(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="http://citaone.logo-net.co.uk/chat18/")
+									.dl--circle
+										.pic.i-brand &#xe92a;
+									p as an
+										br
+										strong Adviser
+							.dl--segment.col-xs-6
+								a(href="https://www.citizensadvice.org.uk/development/web-chat-service/")
+									.dl--circle
+										.pic.i-brand &#xe92a;
+									p as a
+										br
+										strong Client
+
+		#overlay--2.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.2(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="http://www.surveygizmo.com/s3/2993823/Citizens-Advice")
+									.dl--circle
+										.pic.i-brand &#xe993;
+									p help with
+										br
+										strong Navigation research
+							.dl--segment.col-xs-6
+								a(href="https://www.citizensadvice.org.uk/advisernet/news/help-us-test-the-idea-of-including-adviser-only-content/")
+									.dl--circle
+										.pic.i-brand &#xe993;
+									p test
+										br
+										strong Sick pay adviser content
+
+		#overlay--3.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.3(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="http://52.209.108.49/client/budgets/1")
+									.dl--circle
+										.pic £
+									p Try the
+										br
+										strong Money advice recording tool (MART)
+							.dl--segment.col-xs-6
+								a(href="http://mart-help.citizensadvice.org.uk/")
+									.dl--circle
+										.pic £
+									p Find out more
+										br
+										strong about MART
+
+		.fullwidth
+			.fullwidth-content
+				.dl--head
+					img(alt="", src="#{dir}images/ca-logo-hz-200px.svg")
+					h1(style="margin: 0; margin-top: 1rem; position: relative;") Welcome to the digital&nbsp;lab&nbsp;
+						a.egg(href="http://funhtml5games.com?embed=flappy") #[span.i &#xe624;]
+
+		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
+			.fullwidth-content
+				.flex-container
+					.flex-row
+						.dl--segment.col-sm-4.tablet
+							a(href="http://webworker.casebook.demo.devops.citizensadvice.org.uk/")
+								.dl--circle
+									.pic.i-brand &#xe97b;
+								p Test the
+									br
+									strong Casebook prototype
+						.dl--segment.col-sm-4.tablet
+							a#webchat(href="#")
+								.dl--circle
+									.pic.i-brand &#xe92a;
+								p Try out
+									br
+									strong Webchat
+						// Mobile webchat
+						.dl--segment.col-sm-4.mobile
+							a(href="https://www.citizensadvice.org.uk/development/web-chat-service/")
+								.dl--circle
+									.pic.i-brand &#xe92a;
+								p Try out
+									br
+									strong Webchat
+						.dl--segment.col-sm-4.tablet
+							a#pqf
+								.dl--circle
+									.pic.i-brand &#xe94b;
+								p Explore the
+									br
+									strong PQF dashboard
+						// Mobile Advice
+						.dl--segment.col-sm-4.mobile
+							a(href="https://www.citizensadvice.org.uk/advisernet/news/help-us-test-the-idea-of-including-adviser-only-content/")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Help us improve our
+									br
+									strong Online advice content
+						.dl--segment.col-sm-4.tablet
+							a#advice(href="#")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Help us improve our
+									br
+									strong Online advice content
+						.dl--segment.col-sm-4
+							a(href="http://citizensadvice.github.io/cab-ui/dev/energy/comparison-4.html")
+								.dl--circle
+									.pic.i-brand &#xe985;
+								p Test the
+									br
+									strong Energy supplier comparison
+						.dl--segment.col-sm-4.tablet
+							a(href="http://citizensadvice.github.io/cab-testing/research/psr/dev/psr/step1.html")
+								.dl--circle
+									.pic.i-brand &#xe996;
+								p Try the
+									br
+									strong Priority service register
+						.dl--segment.col-sm-4.tablet
+							a#mart(href="#")
+								.dl--circle
+									.pic £
+								p Try the
+									br
+									strong Money advice recording tool (MART)
+						.dl--segment.col-sm-4.tablet
+							a(href="http://beta.pageengine.net")
+								.dl--circle
+									.pic.i-brand &#xe96a;
+								p Design with
+									br
+									strong Page engine
+						.dl--segment.col-sm-4
+							a(href="http://ca.fusion-universal.com/users/sign_in?PHPSESSID=136f9733f7216519fd10ac6c23f15a9a")
+								.dl--circle
+									.pic.i-brand &#xe971;
+								p Test out
+									br
+									strong Learn
+
+		.dl--footer
+			.fullwidth-content
+				.flex-container.tablet
+					.flex-row
+						.col-sm-6
+							p
+								a(href="https://docs.google.com/forms/d/e/1FAIpQLSesGiO2f7l9uMFbQPxuUjZ8RStKFPusfDap_ZV4-8u3Cg6tyw/viewform?usp=send_form") Sign up to help with more testing
+						.col-sm-6
+							p
+								a(href="http://fluidsurveys.com/surveys/citizensadvice/digital-lab-feedback-survey-sept-2016/") Tell us what you think about the tools
+
+				p.mobile
+					a(href="https://docs.google.com/forms/d/e/1FAIpQLSesGiO2f7l9uMFbQPxuUjZ8RStKFPusfDap_ZV4-8u3Cg6tyw/viewform?usp=send_form") Sign up to help with more testing
+					br
+					a(href="http://fluidsurveys.com/surveys/citizensadvice/digital-lab-feedback-survey-sept-2016/") Tell us what you think about the tools
