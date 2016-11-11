@@ -30,10 +30,10 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
-                a.btn-white.back-button-icon(href="admin-5.html", style="margin-top:0;") Back to "Personal details" section
+                a.btn-white.back-button-icon(href="admin-5.html", style="margin-top:0;") Back to "About your purchase" section
 
                 div
-                    h2 Date Question
+                    h2 Date field
                     .fieldset
                         label(for="standardField") Question title
                         input(value="", placeholder="Name your question", type="text")
@@ -46,11 +46,11 @@ block content
                         input(placeholder="", type="text")
                     .fieldset
                         label(for="standardField") Error text
-                        input(placeholder="", type="text")
-                    .fieldset
+                        input(placeholder="", type="text" value="Please enter a date in the format DD MM YYYY")
+                    //.fieldset
                         label(for="standardField") Default value
                         span.form-hint If no default, leave blank and current date will be set
-                    .form-group-date
+                    //.form-group-date
                         fieldset
                             label(for="dob-day") Day
                             input(id="dob-day" placeholder="DD" maxlength="2" min="1" max="31"  name="day" type="number" pattern="\d{1,2}" autoComplete="off")

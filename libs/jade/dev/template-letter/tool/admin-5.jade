@@ -35,41 +35,39 @@ block content
                 .well(style="background-color:#F2F8FF;")
                     .fieldset
                         label(for="standardField") Section title
-                        input(value="Personal details", type="text")
+                        input(value="About your purchase", type="text")
 
-                a.blocklink.moveme(href="admin-radio.html") Name
+                a.blocklink.moveme(href="admin-radio-2.html") What you are asking for
                     br
-                    | {{name}}
+                    | {{asking_for}}
                     br
-                    small(style="color:black;") Radio
+                    small(style="color:black;") Radio buttons
 
-                a.blocklink.moveme(href="admin-checkbox.html") Checkbox
+                a.blocklink.moveme(href="admin-7.html") Amount (£)
                     br
-                    | {{check}}
+                    | {{item_cost}}
                     br
-                    small(style="color:black;") Checkbox
+                    small(style="color:black;") Item cost
 
-                a.blocklink.moveme Untitled question
+                a.blocklink.moveme(href="admin-6.html") Purchase date
                     br
-                    | {{question1}}
+                    | {{purchase_date}}
                     br
-                    small(style="color:black;") Dropdown
+                    small(style="color:black;") Date field
 
 
                 .well
                     label(for="standardField") Question type
                     .dropdown
                         select#exampleSelect1
-                            option Address
-                            option Checkbox
-                            option Date
-                            option Dropdown
-                            option Email
-                            option Input
+                            option Text field
+                            option Text area
                             option Number
                             option Phone
-                            option Radio
-                            option Text area
+                            option Email
+                            option Date
+                            option Amount (£)
+                            option Radio buttons
                     button.btn-secondary.plus-button-icon Add question
 
                 hr
