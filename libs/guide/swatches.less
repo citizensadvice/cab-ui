@@ -1,0 +1,252 @@
+/***************************************************************************
+ * Colour swatches
+ */
+.print-swatch(@color) {
+    & p:after {
+        text-transform: uppercase;
+        @red: red(@color);
+        @blue: blue(@color);
+        @green: green(@color);
+        content: %("@{color} \A R:%S \A G:%S \A B:%S", round(@red,0), round(@blue,0), round(@green,0));
+        white-space: pre;
+    }
+}
+
+.swatch {
+    border-radius: @form-border-radius;
+    text-align: center;
+    line-height: (@line-height-base * 0.5);
+    float: left;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    p {
+        line-height: (@line-height-base * 0.8);
+        font-weight: @font-weight-bold;
+        font-size: (@font-size-base * 0.8);
+        margin: 0;
+    }
+
+    &.swatch--brand--heritage-blue {
+        background-color: @heritage-blue;
+        color: @white;
+        .print-swatch(@heritage-blue);
+    }
+    &.swatch--brand--heritage-yellow {
+        background-color: @heritage-yellow;
+        .print-swatch(@heritage-yellow);
+    }
+    &.swatch--brand--responsible-purple {
+        background-color: @responsible-purple;
+        color: @white;
+        .print-swatch(@responsible-purple);
+    }
+    &.swatch--brand--responsible-aqua {
+        background-color: @responsible-aqua;
+        .print-swatch(@responsible-aqua);
+    }
+    &.swatch--brand--inventive-teal {
+        background-color: @inventive-teal;
+        color: @white;
+        .print-swatch(@inventive-teal);
+    }
+    &.swatch--brand--inventive-pink {
+        background-color: @inventive-pink;
+        .print-swatch(@inventive-pink);
+    }
+    &.swatch--brand--generous-green {
+        background-color: @generous-green;
+        color: @white;
+        .print-swatch(@generous-green);
+    }
+    &.swatch--brand--generous-mauve {
+        background-color: @generous-mauve;
+        .print-swatch(@generous-mauve);
+    }
+
+    &.swatch--beta--heritage-blue-lighter {
+        background-color: @heritage-blue-lighter;
+        .print-swatch(@heritage-blue-lighter);
+    }
+    &.swatch--beta--heritage-blue-lightest {
+        background-color: @heritage-blue-lightest;
+        .print-swatch(@heritage-blue-lightest);
+    }
+    &.swatch--beta--heritage-yellow-lighter {
+        background-color: @heritage-yellow-lighter;
+        .print-swatch(@heritage-yellow-lighter);
+    }
+    &.swatch--beta--heritage-yellow-darker {
+        background-color: @heritage-yellow-darker;
+        .print-swatch(@heritage-yellow-darker);
+    }
+
+    &.swatch--beta--red {
+        background-color: @red;
+        color: @white;
+        .print-swatch(@heritage-yellow-lighter);
+    }
+    &.swatch--beta--red-light {
+        background-color: @red-light;
+        color: @white;
+        .print-swatch(@red-light);
+    }
+    &.swatch--beta--red-lighter {
+        background-color: @red-lighter;
+        color: @black;
+        .print-swatch(@red-lighter);
+    }
+    &.swatch--beta--pink {
+        background-color: @pink;
+        .print-swatch(@pink);
+    }
+    &.swatch--beta--orange {
+        background-color: @orange;
+        color: @white;
+        .print-swatch(@orange);
+    }
+    &.swatch--beta--orange-light {
+        background-color: @orange-light;
+        .print-swatch(@orange-light);
+    }
+    &.swatch--beta--orange-lighter {
+        background-color: @orange-lighter;
+        .print-swatch(@orange-lighter);
+    }
+    &.swatch--beta--green {
+        background-color: @green;
+        color: @white;
+        .print-swatch(@green);
+    }
+    &.swatch--beta--green-light {
+        background-color: @green-light;
+        .print-swatch(@green-light);
+    }
+    &.swatch--beta--green-lighter {
+        background-color: @green-lighter;
+        .print-swatch(@green-lighter);
+    }
+    &.swatch--beta--blue {
+        background-color: @blue;
+        color: @white;
+        .print-swatch(@heritage-yellow-lighter);
+    }
+    &.swatch--beta--blue-light {
+        background-color: @blue-light;
+        .print-swatch(@blue-light);
+    }
+    &.swatch--beta--blue-lighter {
+        background-color: @blue-lighter;
+        .print-swatch(@blue-lighter);
+    }
+    &.swatch--beta--blue-darker {
+        background-color: @blue-darker;
+        color: @white;
+        .print-swatch(@blue-darker);
+    }
+    &.swatch--beta--aqua {
+        background-color: @aqua;
+        .print-swatch(@aqua);
+    }
+    &.swatch--beta--aqua-light {
+        background-color: @aqua-light;
+        .print-swatch(@aqua-light);
+    }
+    &.swatch--beta--yellow {
+        background-color: @yellow;
+        .print-swatch(@yellow);
+    }
+    &.swatch--beta--yellow-light {
+        background-color: @yellow-light;
+        .print-swatch(@yellow-lighter);
+    }
+    &.swatch--beta--purple {
+        background-color: @purple;
+        .print-swatch(@heritage-yellow-lighter);
+    }
+    &.swatch--beta--purple-dark {
+        background-color: @purple-dark;
+        color: @white;
+        .print-swatch(@purple-dark);
+    }
+
+    &.swatch--mono--black {
+        background-color: @black;
+        color: @white;
+        .print-swatch(@black);
+    }
+    &.swatch--mono--gray0 {
+        background-color: @gray-0;
+        color: @white;
+        .print-swatch(@gray-0);
+    }
+    &.swatch--mono--gray1 {
+        background-color: @gray-1;
+        color: @white;
+        .print-swatch(@gray-1);
+    }
+    &.swatch--mono--gray2 {
+        background-color: @gray-2;
+        color: @white;
+        .print-swatch(@gray-2);
+    }
+    &.swatch--mono--gray3 {
+        background-color: @gray-3;
+        color: @white;
+        .print-swatch(@gray-3);
+    }
+    &.swatch--mono--gray4 {
+        background-color: @gray-4;
+        color: @white;
+        .print-swatch(@gray-4);
+    }
+    &.swatch--mono--gray5 {
+        background-color: @gray-5;
+        color: @black;
+        .print-swatch(@gray-5);
+    }
+    &.swatch--mono--gray6 {
+        background-color: @gray-6;
+        color: @black;
+        .print-swatch(@gray-6);
+    }
+    &.swatch--mono--gray7 {
+        background-color: @gray-7;
+        color: @black;
+        .print-swatch(@gray-1);
+    }
+    &.swatch--mono--gray8 {
+        background-color: @gray-8;
+        color: @black;
+        .print-swatch(@gray-8);
+    }
+    &.swatch--mono--white {
+        background-color: @white;
+        color: @black;
+        .print-swatch(@white);
+    }
+
+    &.swatch--adviser--inventive-teal-light {
+        background-color: @inventive-teal-light;
+        color: @white;
+    }
+    &.swatch--adviser--inventive-teal-lighter {
+        background-color: @inventive-teal-lighter;
+        color: @text-color;
+    }
+    &.swatch--adviser-blue-gray {
+        background-color: @adviser-blue-gray;
+        color: @white;
+    }
+    &.swatch--adviser-stone {
+        background-color: @adviser-stone;
+        color: @white;
+    }
+}

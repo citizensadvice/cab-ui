@@ -1,0 +1,143 @@
+block settings
+	- var title = "North East Doncaster (Thorne)"
+	- var fullpage = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block local
+	header#local-nav.js-make-sticky
+		.local-branding
+			.content
+				img(src="#{dir}images/local/North-East-Doncaster.svg")
+				//.local-name North East Doncaster (Thorne)
+				ul
+					li
+						a(href="local-home.html") Home
+					//li
+						a News
+					li
+						a(href="local-about.html") About
+					li
+						a(href="local-contact.html") Contact us
+					li
+						button.btn.btn-success(type="button") Donate
+
+
+
+//block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: title}])
+
+block script
+	script.
+		$(document).ready(function() {
+			$("li[role='tab']").click(function(){
+				$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+				$(this).attr("aria-selected","true");  // select this tab
+				$("#"+($(this).attr("aria-controls"))).attr("aria-hidden","false");  // show this panel
+			});
+
+			$("li[role='tab']").keydown(function(ev) {
+				if (ev.which ==13) {
+					$(this).click()
+				}
+			});
+
+			//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggle the tabs.
+			$("li[role='tab']").keydown(function(ev) {
+				var selected= $(this).attr("aria-selected");
+				if (ev.which ==39) {
+					if ($(this).next().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").next().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				} else if (ev.which ==37) {
+					if ($(this).prev().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").prev().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				}
+			});
+		});
+
+block content
+	.fullwidth
+		.fullwidth-content
+			.flex-row
+				.col-sm-8
+					h2(style="margin-top:0;") About Citizens Advice #{title}
+					p We provide free, confidential and impartial advice and campaign on big issues affecting people's lives.
+					p Our goal is to help everyone find a way forward, whatever problem they face.
+					p We're an independent charity and part of the Citizens Advice network across England and Wales.
+
+					h2 Our supporters
+					p As a charity we could not help give free, confidential advice to help people without the backing of our supporters, we thank them for all their support:
+					ul
+						li Big Lottery Fund
+						li Money Advice Service
+						li Robert Forster Charity
+						li Doncaster Metropolitan Borough Council
+						li Hatfield Town Council
+						li Stainforth Town Council
+						li Thorne-Moorends Town Council.
+
+
+					img(src="#{dir}images/local/mas.jpg")
+					img(src="#{dir}images/local/lottery.jpg")
+				.col-sm-4
+
+					//h3 Our supporters
+					//img(src="#{dir}images/local/mas.jpg")
+					//img(src="#{dir}images/local/lottery.jpg")
+					.row
+						.cards
+							.card-banner-top(style="background-color:#004b88;")
+								h3(style="color:#fff;") Our main office
+							.card-image-top
+								img(src="#{dir}images/local/kilburn-cab.jpg")
+							.card-text
+								p Thorne Office, Marriott House 5a Browns Lane Thorne
+								| DONCASTER
+								br
+								| South Yorkshire
+								br
+								| DN8 5AF.
+								p
+									a(href="#") See our opening times
+
+
+	.fullwidth-content
+		.flex-row
+			.col-sm-12
+
+
+	//.fullwidth-yellow
+		.fullwidth-content
+			.flex-row
+				.col-sm-6
+					form(action="http://maps.google.co.uk/maps" method="get")
+						label Get directions from your location
+						.field-group.field-group--buttons
+							input#saddr(type="search", name="saddr")
+							button.btn(type="submit") Directions&nbsp; #[span.i &#xe605;]
+							input(type="hidden", name="daddr", value="DN8 5AF")
+							input(type="hidden", name="hl", value="en")
+
+			.flex-row
+				.col-sm-12
+					iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
+

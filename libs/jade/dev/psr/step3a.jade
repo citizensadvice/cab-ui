@@ -1,0 +1,51 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 Benefits
+
+        .flex-container.flex-row
+            .col-sm-12.col-xs-12
+                fieldset
+                    legend(for="checkbox-inline") Does anyone in your household claim any of these benefits?
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Universal credit
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Housing benefit 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Income support
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Income-based jobseeker's allowance 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Income-related employment and support allowance 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Working tax credit 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Child tax credit
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Pension credit
+
+
+        a.btn-light.left-button-icon(href="step3.html") Back
+        a.btn.right-button-icon(href="step5.html") Continue

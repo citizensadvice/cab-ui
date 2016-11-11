@@ -1,0 +1,22 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 About you
+
+
+        a.btn-light.left-button-icon(href="step3.html") Back
+        a.btn.right-button-icon(href="step5.html") Continue

@@ -22,7 +22,7 @@
     position: -webkit-sticky;
     position: sticky;
     z-index: 1;
-    .badge {
+    .section-notice__content .badge {
         background-color: @inventive-teal;
         color: @white;
     }
@@ -52,7 +52,20 @@
         @icon: @inventive-teal-light;
     );
     border-width: 1px 1px 0px 1px;
-    .revealable__content:before {
+    .revealable__content {
+        background-color: lighten(@inventive-teal-lightest, 9%);
+        &:before {
+            .adviser-badge;
+        }
+    }
+    .revealable-toggle-close, .revealable__close {
+        background: none;
+    }
+}
+
+.no-js .revealable--adviser {
+    background-color: lighten(@inventive-teal-lightest, 9%);
+    &:before {
         .adviser-badge;
     }
 }

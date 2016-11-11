@@ -1,0 +1,207 @@
+.energy-comparison {
+    border-collapse: separate;
+
+    & * {
+        border-width: 0;
+    }
+
+    td {
+        border-top: 4px solid @white;
+        border-bottom: 2px solid @gray-7;
+        vertical-align: middle;
+    }
+    tr {
+        &:hover {
+            cursor: pointer;
+            background-color: @gray-7;
+            .inline-badge {
+                background-color: @white;
+            }
+        }
+    }
+
+    th {
+        font-size: @font-size-small;
+        vertical-align: bottom;
+        &:after {
+            .icon;
+            content: @i-sort;
+            margin-left: .25em;
+            color: @heritage-blue-lighter;
+        }
+    }
+
+    .lg-only {
+        @media screen and (max-width: @screen-sm-max) {
+            display: none;
+        }
+    }
+
+    // COLS
+    .col-rank {
+        width: 15%;
+        @media screen and (min-width: @breakpoint-md) {
+            width: 12%;
+        }
+        @media screen and (min-width: @breakpoint-lg) {
+            width: 8%;
+        }
+    }
+
+    .col-supp {
+        width: 60%;
+        @media screen and (min-width: @breakpoint-md) {
+            width: 23%;
+        }
+        @media screen and (min-width: @breakpoint-lg) {
+            width: 20%;
+        }
+    }
+
+    .col-rate {
+        width: 25%;
+        @media screen and (min-width: @breakpoint-md) {
+            width: 10%
+        }
+        @media screen and (min-width: @breakpoint-lg) {
+            width: 12%
+        }
+    }
+
+    .data,
+    .complaints,
+    .service,
+    .billing,
+    .switching,
+    .commitment {
+        display: none;
+        @media screen and (min-width: @breakpoint-md) {
+            display: table-cell;
+            width: 11%;
+        }
+        @media screen and (min-width: @breakpoint-lg) {
+            width: 12%;
+        }
+    }
+
+}
+
+.inline-badge {
+    padding: 0 .45em;
+    border-radius: 2em;
+    background-color: @gray-7;
+    font-weight: @font-weight-bold;
+    display: inline-block;
+    text-align: center;
+}
+
+.rating {
+    color: @heritage-blue;
+    font-weight: @font-weight-bold;
+    text-align: center;
+    img {
+        border: none;
+    }
+}
+
+.ca-energyrating_wide {
+    display: block;
+    width: 158px;
+    padding: 8px;
+    background-color: @white;
+    border: 2px solid @heritage-blue-lighter;
+    border-radius: .5rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: @heritage-blue;
+    .logo {
+        display: inline-block;
+        img {
+            border: none;
+            max-height: 42px;
+            vertical-align: bottom;
+        }
+    }
+    .text {
+        display: inline-block;
+        img {
+            border: none;
+            max-width: 80px;
+        }
+        .of {
+            color: @gray-3;
+        }
+    }
+}
+
+.ca-energyrating_tall {
+    display: block;
+    text-align: center;
+    width: 80px;
+    padding: 8px;
+    background-color: @white;
+    border: 2px solid @heritage-blue-lighter;
+    border-radius: .5rem;
+    font-size: 12px;
+    font-weight: bold;
+    color: @heritage-blue;
+    .logo {
+        display: block;
+        img {
+            border: none;
+            max-height: 46px;
+            vertical-align: bottom;
+        }
+    }
+    .text {
+        display: block;
+        img {
+            border: none;
+            max-width: 60px;
+        }
+        .of {
+            color: @gray-3;
+        }
+    }
+}
+
+.increase {
+    font-size: @font-size-small;
+    margin-left: .25em;
+    &:after {
+        color: @green;
+        .icon;
+        margin-left: .25em;
+        content: @i-sort-asc;
+    }
+}
+
+.decrease {
+    font-size: @font-size-small;
+    margin-left: .25em;
+    &:after {
+        color: @red;
+        .icon;
+        margin-left: .25em;
+        content: @i-sort-desc;
+    }
+}
+
+#sorttable_sortfwdind,
+#sorttable_sortrevind {
+    display: none;
+}
+
+.sorttable_sorted:after {
+    .icon;
+    content: @i-sort-desc!important;
+    margin-left: .25em;
+    color: @heritage-blue;
+}
+
+.sorttable_sorted_reverse:after {
+    .icon;
+    content: @i-sort-asc!important;
+    margin-left: .25em;
+    color: @heritage-blue;
+}

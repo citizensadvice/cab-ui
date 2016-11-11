@@ -1,3 +1,57 @@
+// Template for old website style mockups
+//
+// VARIABLES
+//
+// dir
+// The related reference for assets such as images and styles.
+//
+// title
+// The page title. If exists will show as the page title.
+//
+// cookiemonster
+// If true will show the cookiemonster banner at the bottom of the screen.
+//
+// mockup
+// If true will show the full megamenu.
+//
+// mockup > signedin
+// If true will show show "Sign out" in top right.
+//
+// blog
+// If true show the blog headers.
+//
+// sidebar
+// If true show the sidebar block.
+//
+// toolbar
+// If true show the toolbar above content.
+//
+// toolbar > sharebar
+// If true show the sharebar below content.
+//
+// newfoot
+// If true show the new footer. If false (or blank) show the old footer.
+//
+// BLOCKS
+//
+// head
+// A block for anything that should be just before the </head> tag.
+//
+// breadcrumbs
+// A block for including the breadcrumbs mixin.
+//
+// section-notice
+// A block for section notice content.
+//
+// content
+// The main content block.
+//
+// sidebar
+// A block for sidebar mixin/content.
+//
+// script
+// A block for placing html before the </body> tag.
+
 include mixins.jade
 block settings
 doctype html
@@ -144,9 +198,10 @@ html.no-js
 		else
 			header.styleguide--header
 				.styleguide--header--content
+					a#issuereport.btn-white.btn-small(href="https://github.com/citizensadvice/cab-ui/issues/new") Give feedback
 					a(href="#{dir}index.html", style="border: none;")
 						img(src="#{dir}images/ca-logo-hz-white-280px.svg")
-					a#repo(href="https://github.com/citizensadvice/cab-ui", style="border: none;") v2.1.2
+					a#repo(href="https://github.com/citizensadvice/cab-ui", style="border: none;") v2.1.3
 
 		.main-container
 			nav.main-breadcrumb
@@ -180,7 +235,10 @@ html.no-js
 			.footer-feedback
 				h2.screenreader Feedback
 				.footer-feedback__content
-					p Is there anything wrong with this page? #[a(href="#") Let us know].
+					if energyfeedback
+						p Is there anything wrong with this page? #[a(href="https://goo.gl/forms/sauMqCBriv0gqnHD3") Let us know].
+					else
+						p Is there anything wrong with this page? #[a(href="#") Let us know].
 			if newfoot
 				#footer.main-footer(data-track-zone="footer")
 					.footer-content.flex-row

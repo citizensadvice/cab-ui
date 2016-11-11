@@ -1,0 +1,27 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        div
+            p If you register for priority services, you can get extra help and support with your energy and water supply.
+            p You can sign up for services if you:
+            ul
+                li are a pensioner
+                li have a disability or serious illness
+                li have a hearing or visual impairment
+                li have young children
+
+            a.btn.right-button-icon(href="step2.html") Start

@@ -1,0 +1,48 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 Your choices
+        p You've selected to receive the following prioritised services.
+        ul
+            li Accessible bills
+            li Advance notice of planned power cuts
+            li Priority in an emergency
+            li Bill nominee scheme
+            li Annual gas appliance safety checks for homeowners
+            li Quarterly meter reading services 
+
+        //.callout--related
+            h2 What happens next
+            p We will contact these companies on your behalf. The utility companies will receive the emails and contact you directly with confirmation and when the changes will happen.
+
+        fieldset
+            label.checkbox.checkbox--block 
+                input(name="checkbox", type="checkbox", value="option1")
+                | I consent to Citizens Advice sharing my details and preferences with my energy suppliers #[a.a-external-link(href="#") terms and conditions]
+
+        //.callout--example
+            p If you would like to receive a confirmation email or SMS please add your details below.
+            fieldset
+                label(for="standardField") Your email address
+                input(id="standardField" placeholder="" type="text")
+
+            fieldset
+                label(for="standardField") Your mobile phone number
+                input(id="standardField" placeholder="" type="text")
+
+
+        a.btn.right-button-icon(href="step7.html") Send

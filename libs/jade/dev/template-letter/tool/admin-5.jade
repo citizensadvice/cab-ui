@@ -1,0 +1,77 @@
+block settings
+    - var title = "Create template letter"
+    - var fullwidth = true
+    - var mockup = true
+    - var dir = "../../../"
+
+extends /template/template.jade
+
+block script
+    script.
+        $(document).ready(function() {
+            $('.conditional').click(function() {
+                if( $(this).find('input[value="2"]').is(':checked')) {
+                    $(this).next().show();
+                } else {
+                    $(this).next().hide();
+                }
+            });
+
+            $('.tl--toggle').click(function() {
+                $(this).toggleClass('tl--hidden').next().toggle();
+            })
+        });
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"}])
+
+block content
+    .articleContent
+        .flex-container.flex-row
+            .col-md-6
+                a.btn-white.back-button-icon(href="admin-3.html", style="margin-top:0;") Back to overview
+
+                .well(style="background-color:#F2F8FF;")
+                    .fieldset
+                        label(for="standardField") Section title
+                        input(value="About your purchase", type="text")
+
+                a.blocklink.moveme(href="admin-radio-2.html") What you are asking for
+                    br
+                    | {{asking_for}}
+                    br
+                    small(style="color:black;") Radio buttons
+
+                a.blocklink.moveme(href="admin-7.html") Amount (£)
+                    br
+                    | {{item_cost}}
+                    br
+                    small(style="color:black;") Item cost
+
+                a.blocklink.moveme(href="admin-6.html") Purchase date
+                    br
+                    | {{purchase_date}}
+                    br
+                    small(style="color:black;") Date field
+
+
+                .well
+                    label(for="standardField") Question type
+                    .dropdown
+                        select#exampleSelect1
+                            option Text field
+                            option Text area
+                            option Number
+                            option Phone
+                            option Email
+                            option Date
+                            option Amount (£)
+                            option Radio buttons
+                    button.btn-secondary.plus-button-icon Add question
+
+                hr
+                button.btn-warning(type="button") Delete this section
+
+            .col-md-6
+                textarea#letter-input(style="height:45rem;") {{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on 25 October 2015. I paid £229.99.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. As there was a problem with the goods when I bought them, I request that you give me a full refund.&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within 14 days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;joe@joeblogs.com

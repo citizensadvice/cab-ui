@@ -143,7 +143,7 @@ gulp.task( 'watch-jade', function() {
 	});
 
 	// This will rebuild all of jade - expensive
-	gulp.watch('libs/template/*.jade', ['jade']);
+	//gulp.watch('libs/template/*.jade', ['jade']);
 });
 
 /*

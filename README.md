@@ -12,6 +12,8 @@ The style guide is available on http://citizensadvice.github.io/cab-ui/
     │ ├─ assets           All images and fonts required by the Less
     │ ├─ jade             Jade templates
     │ ├─ template         Jade includes
+    │ ├─ print.less       Print stylesheet (also compiled into site.less)
+    │ ├─ site.less        All styles combined (including a print media query)
     │ └─ ...              Various folders containing less files
     │
     ├─┐  public           Target folder for building the CSS and holds the test html files
@@ -28,19 +30,21 @@ This repository is a set of comment styles and design elements that can be inclu
 
 Other projects should:
 
-* include this repository as node dependancy in their package.json file.  The styles and assets will then be available in `node_modules\cab-ui`
-* import the less files they required into their own stylesheet.  You may need to setup a symlink from the folder containing the less file to the image assets folder.
-* setup a build process using the same processors as this repository.  See `gulpfile.sample.js` for a minimal version.
+* include this repository as node dependancy in their package.json file.  The styles and assets will then be available in `node_modules/cab-ui`
+* import the less files they required into their own stylesheet.  You may need to setup a symlink from the folder containing the less file to the image assets folder
+* setup a build process using the same processors as this repository
 
 Example of how to include the package in package.json
 
 ```json
 {
-    dependencies: {
+    "devDependencies": {
         "cab-ui": "https://github.com/citizensadvice/cab-ui.git#v1.0.0",
     }
 }
 ```
+
+Sample files for both [`package.json`](https://github.com/citizensadvice/cab-ui/blob/master/samples/package.json) and [`gulpfile.js`](https://github.com/citizensadvice/cab-ui/blob/master/samples/gulpfile.js) are maintined within the [`samples`](https://github.com/citizensadvice/cab-ui/tree/master/samples) folder. Documentation on using them can be found [`samples/README.md`](https://github.com/citizensadvice/cab-ui/tree/master/samples/README.md).
 
 ## Build process
 

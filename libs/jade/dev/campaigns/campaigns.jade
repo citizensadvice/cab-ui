@@ -1,0 +1,433 @@
+block settings
+    - var title = "Citizens Advice policy"
+    //- var sidebar = true
+    - var dir = "../../"
+    //- var blogname = "Digital Blog"
+    - var blog = true
+    - var fullpage = true
+    - var nofooter = true
+
+extends /template/template-site.jade
+block script
+    script(src="#{dir}js/vendor/highcharts/highcharts.js")
+    script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
+
+    script.
+        // Create overview chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69', '#57486B', '#A6D6AE', '#006278', '#006278', '#FCCEBA'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'overview-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Get a good result',
+                    data: [70]
+                },
+                        {
+                    name: 'Unsatisfactory result',
+                    data: [30]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create personal factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#003c64', '#004b88', '#a5bddc', '#C9D1E5', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Personal factors',
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Steady income',
+                    data: [87]
+                },
+                        {
+                    name: 'Successful company',
+                    data: [74]
+                },
+                        {
+                    name: 'Good Manager',
+                    data: [72]
+                },
+                        {
+                    name: 'Regular hours',
+                    data: [71]
+                },
+                        {
+                    name: 'Partner with a steady income',
+                    data: [70]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create local factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#fba437', '#ffbf47', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-local-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Local factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Police presence',
+                    data: [54]
+                },
+                        {
+                    name: 'Thriving high street',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create national factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#b9db9d', '#d3e8c1', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-national-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'National factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2) + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Interest rate rises',
+                    data: [20]
+                },
+                        {
+                    name: 'NHS waiting lists',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        $(function () {
+        var chart = new Highcharts.Chart({
+            // Make sure to include this string of brand colours
+            colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+            chart: {
+                type: 'pie',
+                renderTo: 'pie-chart',
+                backgroundColor:'rgba(255,255,255,0)'
+            },
+            title: {
+                text: 'Pie chart'
+            },
+            tooltip: {
+                formatter: function () {
+                    return this.point.name + ': &lt;b&gt;£' + this.y + '&lt;/b&gt;';
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: false,
+                    cursor: 'pointer',
+                    showInLegend: false
+                }
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Income',
+                colorByPoint: true,
+                data: [{
+                    name: 'Source 1',
+                    y: 144
+                }, {
+                    name: 'Source 2',
+                    y: 59
+                }, {
+                    name: 'Source 3',
+                    y: 210
+                }, {
+                    name: 'Source 4',
+                    y: 64
+                }, {
+                    name: 'Source 5',
+                    y: 102
+                }, {
+                    name: 'Source 6',
+                    y: 88
+                }, {
+                    name: 'Source 7',
+                    y: 31
+                }, {
+                    name: 'Source 8',
+                    y: 75
+                }, {
+                    name: 'Source 9',
+                    y: 163
+                }],
+                dataLabels: {
+                    formatter: function () {
+                        return this.point.name + ' £' + this.y;
+                    }
+                }
+            }],
+            navigation: {
+                buttonOptions: {
+                    enabled: false
+                    }
+                }
+            });
+        });
+
+
+block sidebar
+    include /template/sidebar-blog.jade
+
+block content
+    .fullwidth
+        .story-masthead
+            .story-masthead--content.fullwidth-content
+                h1 Use your consumer rights for safe and sound electrical&nbsp;goods
+                p Switched On, our campaign for National Consumer Week 2016, is all about electrical goods.
+            img(src="#{dir}images/campaigns/campaigns-header-elec-goods.png")
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    div#overview-chart
+                .col-md-6
+                    .data-display
+                        h2 70% chance of a positive result
+                    p Electrical items are anything that uses electricity. For example, from tumble dryers and freezers to mobile phones and electronic toys.
+                    p 7 out of 10 people get a good result if they return a broken item - but half of people don’t.
+                    p We’re campaigning for more people to ask for a refund, repair or replacement if something goes wrong with an electrical item. This called getting ‘consumer redress’.
+
+    .fullwidth-blue
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    h2 Returning an electrical item
+                    p If the electrical item you’ve bought breaks or becomes unsafe, by law the seller has to:
+                    li replace the item
+                    li repair the item
+                    li refund you the cost of your item
+                    p It’s worth keeping the broken item, in case the seller asks to see it. If it’s caused damage because of a fault, take photos of the damage the product has caused.
+                    p You should take the item back to the person that sold it to you, not the manufacturer - even if the seller tells you it’s not their fault.
+                    p If your item is damaged during delivery or installation, it’s still the seller’s responsibility, so you should complain to them if something goes wrong.
+                .col-md-6
+                    .sil-image
+                        img(src="#{dir}images/campaigns/laptop-800.png" align="center")
+                    .callout
+                        p We’re interested in your consumer rights because Citizens Advice is part of the Consumer Protection Partnership (CPP), which runs National Consumer Week every year.
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    .sil-image
+                        img(src="#{dir}images/campaigns/box-800.png" align="center")
+                .col-md-6
+                    h2 Get help
+                    p Whether you think your electrical item can be repaired or replaced, or you want a refund, you will need to return it. If your item is faulty and you're not sure what to do you can:
+                        li check your consumer rights with our #[a(href="https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/return-faulty-goods/") faulty goods tool]
+                        li get advice from #[a(href="#") your nearest Citizens Advice]
+                        li call the Citizens Advice #[a(href="#") consumer helpline]
+
+
+    .fullwidth-gray
+        .fullwidth-content
+            .campaign-content
+                .flex-row
+                    .col-md-5
+                        .stats(style="margin: 2rem 0;")
+                            .i-brand &#xe96d;
+                            h3  30 days
+                            p If your goods are faulty, you can get an immediate refund
+                    .col-md-2
+                    .col-md-5
+                        .stats(style="margin: 2rem 0;")
+                            .i-brand &#xe993;
+                            h3 6 months
+                            p If it can't be repaired or replaced, then you're entitled to a full refund in most cases
+    .fullwidth-blue
+        .fullwidth-content
+            .col-md-8
+                h2 Before you buy again
+                p It’s worth doing your research before you buy another electrical item.
+                li look out for fakes - find out #[a(href="#") what to do if you buy a counterfeit electrical item], for example phone chargers, hair straighteners and e-cigarettes
+                li stay on top of your consumer rights - so you know  #[a(href="#") what to do if something else goes wrong]
+                li check for complaints - look online for reviews and ask friends and family before you buy an item
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-12
+                    h2(style="text-align:center;") Find out how we work
+
+    .fullwidth
+        .fullwidth-content
+            .flex-row
+                .col-md-6
+                    h3 Watch local Citizens Advice in action
+                    p If you’d like an idea of how we work, watch this short film, made by our Consumer Empowerment Partnership of 5 local Citizens Advice, showing how they help clients with electrical goods problems.
+                .col-md-6
+                    p(style="position: relative;padding-bottom: 52.1%; padding-top: 25px;height: 0;")
+                        iframe(src="//www.youtube.com/embed/kJOVSfLnqwA?list=PLA56D3E70BE34B6BF", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
+
+    .medium
+        .medium-quote
+            .fullwidth-content
+                .campaign-content
+                    h2 "Parturient est quis adipiscing penatibus massa vestibulum ut at condimentum congue ad curabitur. Hac pharetra nam a adipiscing non id sed est faucibus ad a a purus adipiscing tortor ultricies a mi ante."
+        .medium-author
+            .fullwidth-content
+                .campaign-content
+                    .wrapper
+                        img(src="#{dir}images/campaigns/medium-avatar-square.png")
+                        p
+                            a.medium-title(href="#") Read Medium Post Title
+                            br
+                            span.small by #[a(href="#") James Plunkett]
+
+    .twitter
+        .fullwidth-content
+            .campaign-content
+                .hashtag
+                    h3 Join us on Twitter with #[a #consumerweek]
+                .flex-row
+                    .col-md-6
+                        .tweet
+                            img(src="#{dir}images/campaigns/twitter-1.png")
+                            p
+                                | Bakers to cut bread prices for Consumer Week #[a(href="http://buff.ly/1QzIbF6") buff.ly/1QzIbF6] #[a #bread] #[a #prices] #[a #cut] #[a #ConsumerWeek]
+                            p.username #[a @TheCeylon16]
+                    .col-md-6
+                        .tweet
+                            img(src="#{dir}images/campaigns/twitter-2.png")
+                            p Check it, don’t regret it…CAB advice if your new car turns out to be stolen #[a #consumerweek] #[a #2ndhandcars] #[a adviceguide.org.uk/england/consum...]
+                            p.username #[a @kingstoncab]
+
+    .sharing
+        .fullwidth-content
+            a.btn-white.sharing-button-icon_facebook Facebook
+            a.btn-white.sharing-button-icon_twitter Twitter
+            a.btn-white.sharing-button-icon_linkedin Linkedin
+            a.btn-white.sharing-button-icon_messenger Messenger
+            a.btn-white.sharing-button-icon_whatsapp Whatsapp
+            a.btn-white.sharing-button-icon_email Email
+            a.btn-white.sharing-button-icon_copy Copy
+
+    .footer-campaigns
+       .campaign-content
+            p This is a campaign by Citizens Advice; we use our clients' experience and stories to campaign for positive change. #[a(href="https://www.citizensadvice.org.uk/about-us/campaigns/") Find out more about our campaigns]. 

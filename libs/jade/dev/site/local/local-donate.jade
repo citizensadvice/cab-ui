@@ -1,0 +1,136 @@
+block settings
+	- var title = "North East Doncaster (Thorne)"
+	- var fullpage = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block local
+	header#local-nav.js-make-sticky
+		.local-branding
+			.content
+				img(src="#{dir}images/local/North-East-Doncaster.svg")
+				//.local-name North East Doncaster (Thorne)
+				.nav-toggle Menu
+				ul
+					li
+						a(href="local-home.html") Home
+					//li
+						a News
+					li
+						a(href="local-about.html") About
+					li
+						a(href="local-contact.html") Contact us
+					li
+						button.btn.btn-success(type="button") Donate
+
+
+
+//block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: title}])
+
+block script
+	script.
+		$(document).ready(function() {
+			$("li[role='tab']").click(function(){
+				$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+				$(this).attr("aria-selected","true");  // select this tab
+				$("#"+($(this).attr("aria-controls"))).attr("aria-hidden","false");  // show this panel
+			});
+
+			$("li[role='tab']").keydown(function(ev) {
+				if (ev.which ==13) {
+					$(this).click()
+				}
+			});
+
+			//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggle the tabs.
+			$("li[role='tab']").keydown(function(ev) {
+				var selected= $(this).attr("aria-selected");
+				if (ev.which ==39) {
+					if ($(this).next().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").next().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				} else if (ev.which ==37) {
+					if ($(this).prev().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").prev().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				}
+			});
+
+			$('.nav-toggle').click(function() {
+				$(this).next().toggleClass("show");
+			});
+		});
+
+block content
+		.main-container
+		.home-first
+			.home__content
+				.flex-container.flex-row
+					.col-md-6.col-sm-12
+						h1 Welcome to #{title}
+						p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
+						//.home__content-trends
+							h2 Most viewed
+							p #[a(href="#") Employment Support Allowance ]
+							p #[a(href="#") Personal Independence Payment ]
+							p #[a(href="#") Basic rights at work ]
+							p #[a(href="#") Report to Trading Standards ]
+							p #[a(href="#") Consumer ]
+					.col-md-1.col-sm-12.hide-mobile
+					.col-md-5.col-sm-12.hide-mobile
+						img(src="../../../images/local/kilburn-cab.jpg" class="local--feature")
+
+
+		.home-second
+			.home__content
+				.flex-container.flex-row
+					.col-sm-4.col-sm-12(style="padding-right: 0.5rem;")
+						.blog-lead
+							.blog-name
+								h3(style="margin-top: 0;") Volunteering roles
+						p Our volunteers come from all sorts of backgrounds and help with everything we do: fundraising, IT, administration, campaigning, trusteeship - and, of course, giving advice.
+						a.blocklink(href="#") Looking for Adviceline Telephone Assessor
+						a.blocklink(href="#") Gateway assessor
+						a.blocklink(href="#") Office admin
+						a.blocklink(href="#") Adviser
+
+					.col-sm-4.col-sm-12(style="padding-right: 0.5rem;")
+						.blog-lead
+							.blog-name
+								p Latest Blog
+								h3 #[a(href="#") Payday loans: An improved market? ]
+							img(src="../../../images/sample-blog/adviser-needs.jpg" alt="Blog image" style="width:100%;")
+							p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
+
+					.col-sm-4.col-sm-12(style="height:400px; overflow: scroll;")
+						<a class="twitter-timeline" href="https://twitter.com/CitizensAdvice">Tweets by CitizensAdvice</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+					//div.col-sm-4.col-sm-12.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
+						.card-banner-top
+							p(style="color:#57486b;") Help others
+						.card-text
+							img(src="../../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+							p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+							fieldset
+								label(for="standardField", style="color:#57486b;") Search your area
+								input#standardField(placeholder="", type="text")
+
+							button.btn.btn-secondary.right-button-icon Search roles

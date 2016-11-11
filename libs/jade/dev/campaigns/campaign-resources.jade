@@ -1,0 +1,260 @@
+block settings
+    - var title = "Citizens Advice policy"
+    //- var sidebar = true
+    - var dir = "../../"
+    //- var blogname = "Digital Blog"
+    - var blog = true
+    - var fullpage = true
+    - var nofooter = true
+
+extends /template/template-site.jade
+block script
+    script(src="#{dir}js/vendor/highcharts/highcharts.js")
+    script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
+
+    script.
+        // Create overview chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#004B88', '#FCBB69', '#57486B', '#A6D6AE', '#006278', '#006278', '#FCCEBA'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'overview-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Eligible for return',
+                    data: [84]
+                },
+                        {
+                    name: 'Actually returned',
+                    data: [16]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create personal factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#003c64', '#004b88', '#a5bddc', '#C9D1E5', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Personal factors',
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Steady income',
+                    data: [87]
+                },
+                        {
+                    name: 'Successful company',
+                    data: [74]
+                },
+                        {
+                    name: 'Good Manager',
+                    data: [72]
+                },
+                        {
+                    name: 'Regular hours',
+                    data: [71]
+                },
+                        {
+                    name: 'Partner with a steady income',
+                    data: [70]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create local factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#fba437', '#ffbf47', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-local-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'Local factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title:
+                    {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2,'.',',') + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Police presence',
+                    data: [54]
+                },
+                        {
+                    name: 'Thriving high street',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+        // Create national factors security chart
+        $(function () {
+            var chart = new Highcharts.Chart({
+                colors: ['#b9db9d', '#d3e8c1', '#fcbb67', '#fee4c3', '#caeaff', '#002d4a', '#e76568', '#87c3d0'],
+                chart: {
+                    type: 'column',
+                    renderTo: 'security-national-chart',
+                    backgroundColor:'rgba(255,255,255,0)'
+                },
+                title: {
+                    text: false
+                },
+                xAxis: {
+                    title:{
+                        text: 'National factors',
+                    }
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    max: 100,
+                    title: {
+                        enabled: false
+                    }
+                },
+                tooltip: {
+                    formatter: function () {
+                        return this.series.name + ': <b>' + Highcharts.numberFormat(this.y,2) + '%</b>';
+                    }
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Interest rate rises',
+                    data: [20]
+                },
+                        {
+                    name: 'NHS waiting lists',
+                    data: [49]
+                }],
+                navigation: {
+                    buttonOptions: {
+                        enabled: false
+                    }
+                }
+            });
+        });
+
+
+block sidebar
+    include /template/sidebar-blog.jade
+
+block content
+    .fullwidth-blue
+        .flex-row
+            .col-md-2
+                aside.section-notice__adviser.js-make-sticky
+                    h2.screenreader Notice
+            .col-md-8
+                h2(style="text-align:center;") Campaign resources for advisers
+            .col-md-2
+        .flex-row
+            .col-md-2
+            .col-md-8
+                section.revealable.revealable
+                    h3 Briefing
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-2
+        .flex-row
+            .col-md-2
+            .col-md-8
+                section.revealable.revealable
+                    h3 Advice
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-2
+        .flex-row
+            .col-md-2
+            .col-md-8
+                section.revealable.revealable
+                    h3 Logo &amp; Graphics
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-2
+            .col-md-2
+            .col-md-8
+                section.revealable.revealable
+                    h3 Other Resources
+                    p This revealable style is for content that only advisers should see. You should use it when you think advisers need more information to advise clients.
+            .col-md-2

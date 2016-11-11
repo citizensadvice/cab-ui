@@ -1,0 +1,57 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        h2 About your needs
+
+        .flex-container.flex-row
+            .col-sm-12.col-xs-12
+                fieldset
+                    legend(for="checkbox-inline") Please select all that apply to you
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Pensionable age
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Disabled 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Serious illness
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Special communication needs 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Dependent on electricity for medical reasons 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Blind or partially sighted 
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Deaf or hearing impaired
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Children under 5 years old
+                label.checkbox.checkbox--block
+                    input(name="checkbox-inline", type="checkbox")
+                    | Mental health issues
+
+                fieldset
+                    label(for="yourAddress") Please give details of any of the above issues or any additional needs
+                    textarea#yourAddress(rows="4")
+
+        a.btn-light.left-button-icon(href="step2.html") Back
+        a.btn.right-button-icon(href="step5.html") Continue

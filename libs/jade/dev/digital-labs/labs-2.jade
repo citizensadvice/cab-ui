@@ -1,0 +1,112 @@
+block settings
+	- var title = "Welcome to the digital lab"
+	- var dir = "../../"
+
+extends /template/template.min.jade
+
+block head
+	style.
+		body {
+			background-color: #c2bdde;
+		}
+
+block script
+	script.
+		var filename = window.location.search.slice(1);
+		$(document).ready(function() {
+			$('#mart').click(function(){
+				$('#overlay--3').show();
+			})
+			$('.dialog__close.3').click(function(){
+				$('#overlay--3').hide();
+			})
+		});
+
+block content
+	.digital-lab
+		#overlay--3.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.3(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-6
+								a(href="http://52.213.57.67/client/budgets/1")
+									.dl--circle
+										.pic £
+									p Try the
+										br
+										strong Money advice recording tool
+							.dl--segment.col-xs-6
+								a(href="http://mart-help.citizensadvice.org.uk/")
+									.dl--circle
+										.pic £
+									p Find out more
+										br
+										strong about MART
+
+		.fullwidth
+			.fullwidth-content
+				.dl--head
+					img(alt="", src="#{dir}images/ca-logo-hz-200px.svg")
+					h1(style="margin: 0; margin-top: 1rem; position: relative;") Welcome to the digital&nbsp;lab&nbsp;
+						a.egg(href="http://funhtml5games.com?embed=flappy") #[span.i &#xe624;]
+
+		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
+			.fullwidth-content
+				.flex-container
+					.flex-row
+						.dl--segment.col-sm-4
+							a(href="https://webworker.casebook.demo.devops.citizensadvice.org.uk/")
+								.dl--circle
+									.pic.i-brand &#xe993;
+								p Try out the
+									br
+									strong Casebook demo site
+
+						.dl--segment.col-sm-4
+							a(href="https://epiuat-app.citizensadvice.org.uk/")
+								.dl--circle
+									.pic.i-brand &#xe936;
+								p Test a new
+									br
+									strong ‘Find your nearest Citizens Advice’
+										br
+										| search for the website
+
+						.dl--segment.col-sm-4
+							a(href="https://www.citizensadvice.org.uk/advisernet/news/test-our-new-redundancy-pages-for-advisers-and-the-public/")
+								.dl--circle
+									.pic.i-brand &#xe961;
+								p Give feedback on new
+									br
+									strong redundancy advice content
+
+						.dl--segment.col-sm-4
+							a#mart(href="#")
+								.dl--circle
+									.pic £
+								p Try the
+									br
+									strong Money advice recording tool
+
+						.dl--segment.col-sm-4
+							a(href="https://bmis.optimalworkshop.com/optimalsort/75h5l462")
+								.dl--circle
+									.pic.i-brand &#xe971;
+								p Help us develop
+									br
+									strong PageEngine
+										br
+										| (the new Prinkk)
+
+						.dl--segment.col-sm-4
+							a(href="http://citizensadvice.us9.list-manage.com/subscribe?u=f2e5709e33ab37630d8a8d4be&id=94b6bfef0b")
+								.dl--circle
+									.pic.i-brand &#xe928;
+								p Help with more testing
+									br
+									strong Sign up to the digital team mailing list

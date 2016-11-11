@@ -1,22 +1,29 @@
 block settings
-	- var title = "North East Doncaster (Thorne) Citizens Advice Bureau"
+	- var title = "North East Doncaster (Thorne)"
 	- var fullpage = true
 	- var dir = "../../../"
 
 extends /template/template-site.jade
 
 block local
-	header#local-nav
+	header#local-nav.js-make-sticky
 		.local-branding
 			.content
-				.local-name North East Doncaster (Thorne) Citizens Advice Bureau
+				img(src="#{dir}images/local/North-East-Doncaster.svg")
+				//.local-name North East Doncaster (Thorne)
+				.nav-toggle Menu
 				ul
-					li(href="#")
+					li
+						a(href="local-home.html") Home
+					//li
 						a News
-					li(href="#")
-						a About
-					li(href="#")
-						a Contact us
+					li
+						a(href="local-about.html") About
+					li
+						a(href="local-contact.html") Contact us
+					li
+						button.btn.btn-success(type="button") Donate
+
 
 
 //block breadcrumbs
@@ -66,148 +73,66 @@ block script
 					}
 				}
 			});
+
+			$('.nav-toggle').click(function() {
+				$(this).next().toggleClass("show");
+			});
 		});
 
 block content
-	.fullwidth-yellow
-		.fullwidth-content
-			h1(style="margin-top: 0;") #{title}
-			.flex-row
-				.col-sm-6
-					p
-						a advicecabthorne@fsmail.net
-						br
-						| #[strong Advice Line] 0844 499 4137
-						br
-						| #[strong Debt Line] 01405 741457
-						br
-						| #[strong Benefit Line] 01405 816702
-				.col-sm-6
-					p Thorne Office, Marriott House 5a Browns Lane Thorne
-						| DONCASTER
-						br
-						| South Yorkshire
-						br
-						| DN8 5AF
-
-	.fullwidth-content
-		.flex-row
-			.col-sm-8
-				h2 About our advice service
-
-				p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
-				p Alternatively, drop in to Thorne bureau on a Monday between 10:00-2:00 and Wednesday between 10:00-12:30 where a face to face assessment will be conducted.
-				p Forthcoming closures:
-				p **Please note that we are closed on Bank Holidays**
-			.col-sm-4
-				h2 Access details
-				p #[span.i &#x267f;] Wheelchair accessible
-					br
-					| #[span.i &#xe908;] Induction loop
-					br
-					| Wheelchair toilet access
-					br
-					| Internet advice access
-
-	.fullwidth-content
-		.flex-row
-			.col-sm-12
-				h2 Advice session times
-
-				ul.tablist(role='tablist')
-					li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') Advice session times
-					li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Telephone session times
-				#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
-					.table-responsive
-						.inner
-							table
-								thead
-									tr
-										th
-										th(colspan="2") Advice session times
-								tbody
-									tr
-										th(width="15%") Monday
-										td(width="20%") 10.00 - 14.00
-										td(width="65%") Debt appointments only.
-									tr
-										th Tuesday
-										td
-										td *NEW* general drop-in session where a brief assessment will be conducted. General appts.
-									tr
-										th Wednesday
-										td 10.00 - 12.30
-										td General drop-in session where a brief assessment will be conducted. From 5th June 2013
-									tr
-										th Thursday
-										td
-										td Debt appointments only.
-									tr
-										th Friday
-										td
-										td Closed
-
-				#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
-					.table-responsive
-						.inner
-							table
-								thead
-									tr
-										th
-										th(colspan="2") Telephone session times
-								tbody
-									tr
-										th(width="15%") Monday
-										td(width="20%") 10.00 - 14.00
-										td(width="65%") TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
-									tr
-										th Tuesday
-										td 10.00 - 14.00
-										td TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
-									tr
-										th Wednesday
-										td 10.00 - 14.00
-										td TEL 0844 499 4137 for a brief assessment . from June 5th 2013
-									tr
-										th Thursday
-										td
-										td Telephone line closed
-									tr
-										th Friday
-										td
-										td TEL 0844 499 4137 For a brief assessment . This service will close from June 7th 2013
+		.main-container
+		.home-first
+			.home__content
+				.flex-container.flex-row
+					.col-md-6.col-sm-12
+						h1 Welcome to #{title}
+						p We provide free, independent, confidential and impartial advice to everyone on their rights and responsibilities. We value diversity, promote equality and challenge discrimination.
+						//.home__content-trends
+							h2 Most viewed
+							p #[a(href="#") Employment Support Allowance ]
+							p #[a(href="#") Personal Independence Payment ]
+							p #[a(href="#") Basic rights at work ]
+							p #[a(href="#") Report to Trading Standards ]
+							p #[a(href="#") Consumer ]
+					.col-md-1.col-sm-12.hide-mobile
+					.col-md-5.col-sm-12.hide-mobile
+						img(src="../../../images/local/kilburn-cab.jpg" class="local--feature")
 
 
-	.fullwidth-gray
-		.fullwidth-content
-			.flex-row
-				.col-sm-6
-					form(action="http://maps.google.co.uk/maps" method="get")
-						label Get directions from your location
-						.field-group.field-group--buttons
-							input#saddr(type="search", name="saddr")
-							button.btn(type="submit") Directions&nbsp; #[span.i &#xe605;]
-							input(type="hidden", name="daddr", value="DN8 5AF")
-							input(type="hidden", name="hl", value="en")
+		.home-second
+			.home__content
+				.flex-container.flex-row
+					.col-sm-4.col-sm-12(style="padding-right: 0.5rem;")
+						.cards.cards--basic
+							.blog-lead
+								.blog-name
+									h3(style="margin-top: 0;") Volunteering roles
+							p Our volunteers come from all sorts of backgrounds and help with everything we do: fundraising, IT, administration, campaigning, trusteeship - and, of course, giving advice.
+							a.blocklink(href="#") Looking for Adviceline Telephone Assessor
+							a.blocklink(href="#") Gateway assessor
+							a.blocklink(href="#") Office admin
+							a.blocklink(href="#") Adviser
 
-			.flex-row
-				.col-sm-12
-					iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
+					.col-sm-4.col-sm-12(style="padding-right: 0.5rem;")
+						.cards.cards--basic
+							.blog-lead
+								.blog-name
+									p Latest Blog
+									h3 #[a(href="#") Payday loans: An improved market? ]
+								img(src="../../../images/sample-blog/adviser-needs.jpg" alt="Blog image" style="width:100%;")
+								p Since the Financial Conduct Authority (FCA) took over the regulation of the consumer credit sector the payday loan market has undergone a wave of changes.
 
-	.fullwidth
-		.fullwidth-content
-			h2(style="margin-top: 0;") Volunteering roles
-			.flex-row
-				.col-sm-7
-					p Our volunteers come from all sorts of backgrounds and help with everything we do: fundraising, IT, administration, campaigning, trusteeship - and, of course, giving advice.
-					a.blocklink(href="#") Looking for Adviceline Telephone Assessor
-					a.blocklink(href="#") Gateway assessor
-					a.blocklink(href="#") Office admin
-					a.blocklink(href="#") Receptionist
-					a.blocklink(href="#") Adviser
-					a.blocklink(href="#") Financial Capability
-					a.blocklink(href="#") Financial education worker
-					a.blocklink(href="#") Fundraising
-					a.blocklink(href="#") IT
-					a.blocklink(href="#") Social policy/campaigner
-					a.blocklink(href="#") Telephone Adviser and Trustee
+					.col-sm-4.col-sm-12(style="height:400px; overflow: scroll;")
+						<a class="twitter-timeline" href="https://twitter.com/CitizensAdvice">Tweets by CitizensAdvice</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+					//div.col-sm-4.col-sm-12.blog-sidebar--updates(style="background-color:#a6d6ae; height:100%;")
+						.card-banner-top
+							p(style="color:#57486b;") Help others
+						.card-text
+							img(src="../../../images/sample-blog/mugs-purple.svg" alt="volunteer" style="width:80%;")
+							p(style="color:#333;") Join one of over 300 local Citizens Advice, get training and help people.
+							fieldset
+								label(for="standardField", style="color:#57486b;") Search your area
+								input#standardField(placeholder="", type="text")
+
+							button.btn.btn-secondary.right-button-icon Search roles

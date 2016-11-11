@@ -1,95 +1,41 @@
-/* Vendor files */
+/**
+ * Tool Stylesheet
+ *
+ * A basic cutdown version of site.less, created for tools that are embedded into pages.
+ */
+
 @import "vendors/normalize";
-//@import "vendors/font-awesome/less/font-awesome";
-
-/* Override files */
-//@import "styleguide/guide";
-
-/* Base files */
 @import "base/colors";
 .cabtools {
-	@import "base/variables";
-	@import "base/global";
-	@import "base/tables";
 	@import "base/buttons";
 	@import "base/forms";
 	@import "base/framework";
+	@import "base/global";
+	@import "base/helpers";
 	@import "base/icons";
+	@import "base/ie";
 	@import "base/lists";
+	@import "base/tables";
 	@import "base/type";
 	@import "base/utility";
-	@import "base/helpers";
-	//@import "base/simplegrid"; // Only needed in guide
+	@import "base/variables";
 
 	/* Mixin files */
-	@import "mixins/buttons";
-	@import "mixins/revealable";
-	@import "mixins/callout";
-	//@import "mixins/fit-content";
-	//@import "mixins/flex-box";
-	@import "mixins/limit-width";
-	//@import "mixins/popup";
-	@import "mixins/vertical-align";
 	@import "mixins/btn-icon";
-	//@import "mixins/spacing";
+	@import "mixins/buttons";
+	@import "mixins/callout";
 	@import "mixins/ie";
+	@import "mixins/limit-width";
+	@import "mixins/revealable";
 	@import "mixins/spin";
+	@import "mixins/vertical-align";
 
 	/* Module files */
-	//@import "modules/extent-switcher-modal";
-	//@import "modules/header";
-	//@import "modules/title";
-	@import "modules/main-content";
-	//@import "modules/feed";
-	//@import "modules/containers";
-	//@import "modules/content-index";
-	//@import "modules/main-nav";
-	//@import "modules/page-info";
-	//@import "modules/breadcrumb";
-	@import "modules/revealable";
 	@import "modules/callout";
-	//@import "modules/tablesort";
-	//@import "modules/navigation";
-	//@import "modules/section-notice";
-	//@import "modules/decision-tree";
-	//@import "modules/extent-switcher";
+	@import "modules/main-content";
 	@import "modules/revealable";
-	//@import "modules/staff";
-	//@import "modules/status";
-	//@import "modules/boxes";
+	@import "modules/revealable";
 	@import "modules/sidebar-navigation";
-	//@import "modules/sidebar-navigation-accordion";
-	//@import "modules/footer-feedback";
-	//@import "modules/footer";
-	//@import "modules/dialog";
-	//@import "modules/references";
-	//@import "modules/episerver";
-	//@import "modules/members";
-	//@import "modules/bureau-search";
-	//@import "modules/twitter";
-	//@import "modules/environment-marker";
-	//@import "modules/skip-nav";
-	//@import "modules/side-links";
-	//@import "modules/side-chat";
-	//@import "modules/calls-for-evidence";
-	//@import "modules/search-results";
-	//@import "modules/cookie-monster";
-	//@import "modules/paragraph-numbers.less";
-	//@import "modules/atoz";
-	//@import "modules/cookie-monster";
-	//@import "modules/toc";
-	//@import "modules/letter";
-	//@import "modules/section-notice";
-	//@import "modules/login";
-	//@import "modules/page-list";
-	//@import "modules/page-tree";
-	//@import "modules/share-bar";
-	//@import "modules/overlay";
-	//@import "modules/adviser";
-	//@import "modules/notice";
-
-	/* IE styles */
-	@import "base/ie";
 
 	/* Tools specific overrides */
 	a {

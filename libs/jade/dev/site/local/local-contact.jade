@@ -1,0 +1,213 @@
+block settings
+	- var title = "North East Doncaster (Thorne)"
+	- var fullpage = true
+	- var dir = "../../../"
+
+extends /template/template-site.jade
+
+block local
+	header#local-nav.js-make-sticky
+		.local-branding
+			.content
+				img(src="#{dir}images/local/North-East-Doncaster.svg")
+				//.local-name North East Doncaster (Thorne)
+				ul
+					li
+						a(href="local-home.html") Home
+					//li
+						a News
+					li
+						a(href="local-about.html") About
+					li
+						a Contact us
+					li
+						button.btn.btn-success(type="button") Donate
+
+
+
+//block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: title}])
+
+block script
+	script.
+		$(document).ready(function() {
+			$("li[role='tab']").click(function(){
+				$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+				$(this).attr("aria-selected","true");  // select this tab
+				$("#"+($(this).attr("aria-controls"))).attr("aria-hidden","false");  // show this panel
+			});
+
+			$("li[role='tab']").keydown(function(ev) {
+				if (ev.which ==13) {
+					$(this).click()
+				}
+			});
+
+			//This adds keyboard function that pressing an arrow left or arrow right from the tabs toggle the tabs.
+			$("li[role='tab']").keydown(function(ev) {
+				var selected= $(this).attr("aria-selected");
+				if (ev.which ==39) {
+					if ($(this).next().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").next().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				} else if (ev.which ==37) {
+					if ($(this).prev().length) {
+						$("li[role='tab']").attr("aria-selected","false"); //deselect all tabs
+						$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all panels
+
+						$(this).attr("aria-selected","false").prev().attr("aria-selected","true").focus();
+						var tabpanid= $("li[aria-selected='true']").attr("aria-controls");
+						$("div[role='tabpanel']").attr("aria-hidden","true");
+						$("#"+tabpanid).attr("aria-hidden","false");
+					}
+				}
+			});
+		});
+
+block content
+	.fullwidth
+		.fullwidth-content
+			.flex-row
+				.col-sm-8
+					h2(style="margin-top:0;") Contact #{title}
+					p.strong Please note that we are closed on Bank Holidays
+					.flex-row
+						.col-sm-6
+							h3 Location
+							p Thorne Office, Marriott House 5a Browns Lane Thorne
+								| DONCASTER
+								br
+								| South Yorkshire
+								br
+								| DN8 5AF
+
+							h3 Access details
+							p #[span.i &#x267f;] Wheelchair accessible
+								br
+								| #[span.i &#xe908;] Induction loop
+								br
+								| Wheelchair toilet access
+								br
+								| Internet advice access
+
+						.col-sm-6
+							h3 Telephone advice
+							p Please telephone 0844 499 4137 between 10:00-2:00 Monday & Tuesday or 10:00-11:30 Wednesday for a brief assessment of your enquiry.
+							p
+								a advicecabthorne@fsmail.net
+								br
+								| #[strong Advice Line] 0844 499 4137
+								br
+								| #[strong Debt Line] 01405 741457
+								br
+								| #[strong Benefit Line] 01405 816702
+
+				.col-sm-4
+					.row
+						.cards-branding--teal
+							.card-banner-top
+								p Online advice
+							.card-text
+								label We cover many areas of advice help online, search for advice
+								fieldset
+									.search-results__field.field-group.field-group--buttons
+										input(type="search", placeholder="Search")
+										button.btn.btn-primary
+											i.icon-search
+
+
+	.fullwidth-content
+		.flex-row
+			.col-sm-12
+				h2 Advice session times
+
+				ul.tablist(role='tablist')
+					li#tab1.tab(aria-controls='panel1', aria-selected='true', role='tab', tabindex='0') Advice session times
+					li#tab2.tab(aria-controls='panel2', role='tab', aria-selected='false', tabindex='0') Telephone session times
+				#panel1.tab-panel(aria-labelledby='tab1', role='tabpanel', aria-hidden='false')
+					.table-responsive
+						.inner
+							table
+								thead
+									tr
+										th
+										th(colspan="2") Advice session times
+								tbody
+									tr
+										th(width="15%") Monday
+										td(width="20%") 10.00 - 14.00
+										td(width="65%") Debt appointments only.
+									tr
+										th Tuesday
+										td
+										td *NEW* general drop-in session where a brief assessment will be conducted. General appts.
+									tr
+										th Wednesday
+										td 10.00 - 12.30
+										td General drop-in session where a brief assessment will be conducted. From 5th June 2013
+									tr
+										th Thursday
+										td
+										td Debt appointments only.
+									tr
+										th Friday
+										td
+										td Closed
+
+				#panel2.tab-panel(aria-labelledby='tab2', role='tabpanel', aria-hidden='true')
+					.table-responsive
+						.inner
+							table
+								thead
+									tr
+										th
+										th(colspan="2") Telephone session times
+								tbody
+									tr
+										th(width="15%") Monday
+										td(width="20%") 10.00 - 14.00
+										td(width="65%") TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+									tr
+										th Tuesday
+										td 10.00 - 14.00
+										td TEL 0844 499 4137 A brief assessment will be conducted to establish the best way to assist you.
+									tr
+										th Wednesday
+										td 10.00 - 14.00
+										td TEL 0844 499 4137 for a brief assessment . from June 5th 2013
+									tr
+										th Thursday
+										td
+										td Telephone line closed
+									tr
+										th Friday
+										td
+										td TEL 0844 499 4137 For a brief assessment . This service will close from June 7th 2013
+
+
+	.fullwidth-yellow
+		.fullwidth-content
+			.flex-row
+				.col-sm-6
+					form(action="http://maps.google.co.uk/maps" method="get")
+						label Get directions from your location
+						.field-group.field-group--buttons
+							input#saddr(type="search", name="saddr")
+							button.btn(type="submit") Directions&nbsp; #[span.i &#xe605;]
+							input(type="hidden", name="daddr", value="DN8 5AF")
+							input(type="hidden", name="hl", value="en")
+
+			.flex-row
+				.col-sm-12
+					iframe(src="https://fusiontables.googleusercontent.com/fusiontables/embedviz?q=select+col2+from+16BWr4oiZboc2VpRHEJt37SmzHVoN-EzKM9aLkkMQ+where+col1+in+(%27Super+tester%27,+%27Tester%27,+%27Not+signed+up%27)&viz=MAP&h=false&lat=52.36404897789263&lng=-1.6940654999999651&t=1&z=7&l=col2&y=2&tmplt=2&hml=ONE_COL_LAT_LNG", width="100%", height="300px", scrolling="no")
+

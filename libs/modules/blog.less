@@ -33,13 +33,10 @@
 	border-top: 8px @heritage-yellow solid;
 	background-color: @heritage-yellow-lightest;
 	padding: 0.75rem 1rem;
-	margin-top: 3rem;
+	margin-top: 0;
 	margin-bottom: 1.5rem;
 	fieldset {
 		margin-bottom: 0;
-	}
-	@media screen and (min-width: 751px) {
-		margin-top: 0;
 	}
 	button {
 		background-color: @heritage-yellow;
@@ -145,6 +142,7 @@
 	.well;
 	color: #fff;
 	background-color: @inventive-teal;
+	margin-bottom: 1.5rem;
 }
 
 // Homepage
@@ -161,7 +159,7 @@
 		a {
 			color: @heritage-blue;
 			text-decoration: none;
-			border-color: @heritage-blue;
+			border: none;
 		}
 	}
 	.small {
@@ -233,8 +231,8 @@
 }
 
 .articleContent .avatar-left {
-	border-radius: 50%;
-	margin: 0 1rem .75rem 0;
+	border-radius: 3px;
+	margin: 0 0 .75rem 1rem;
 	width: 100%;
 	max-width: 200px;
 	float: right;
@@ -271,6 +269,70 @@
 	}
 }
 
+// Comments
+div.comment {
+	list-style: none;
+	& > .comment:first-child > .comment-body {
+		border: none;
+		padding-top: 0;
+	}
+	li {
+		list-style: none;
+	}
+	.comment-body {
+		border-top: 1px solid @gray-7;
+		margin: 0;
+		padding: 1.5rem 0;
+	}
+	.comment-author {
+    	margin-bottom:  0.6em;
+		img,
+		.says {
+			display: none;
+		}
+		cite {
+			&:extend(h3);
+			font-style: normal;
+		}
+		.commentmetadata {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+	.commentmetadata {
+		.small;
+    	margin-bottom:  0.6em;
+		& > a {
+			border: none;
+			&:after {
+				content: ".";
+			}
+		}
+		.reply {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	.reply {
+    	margin-top:  .6em;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+#respond {
+    h2 {
+        margin-top: 0;
+    }
+    p {
+        .fieldset;
+    }
+    .form-submit {
+    	margin-bottom: 0;
+    }
+}
+
 // Pages
 .team {
 	//padding: 1rem;
@@ -297,9 +359,9 @@
 			vertical-align: top;
 			max-width: 220px;
 			max-height: 65px;
-			padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
+			padding: .5rem @box-spacing-horizontal;
 			@media screen and (min-width: 751px) {
-				display: block;
+				padding: @box-spacing-vertical*1.5 @box-spacing-horizontal;
 			}
 		}
 		a:hover,

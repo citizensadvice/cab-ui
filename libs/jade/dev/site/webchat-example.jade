@@ -23,15 +23,17 @@ html.no-js
 
 		aside(class="" style="max-width:400px; padding: 10px !important; margin-top: 10px !important;" id="agilisys-engage-webchat")
 			
-			p Need help now?
+			h3(style="margin-top: 0;") Need help now?
 			p Chat on-line to one of our advisers.
-			p Confirm you're happy with our terms and conditions stating that we'll collect and store personal information you provide, but won't share it.
-			p Please click here for more information.
+			p Confirm you're happy with our #[a.a-external-link(href="#") terms and conditions].
 
 			fieldset
 				legend(for="radio") I consent
-				label.radio.radio--block
+				label.radio.radio--inline
 					input(checked, name="radio", type="radio", value="option1")
 					| Yes
+				label.radio.radio--inline
+					input(name="radio", type="radio", value="option1")
+					| No
 
-			button.btn.tick-button-icon(type="submit") Submit
+			button.btn.right-button-icon(type="submit") Start chat

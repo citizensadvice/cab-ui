@@ -1,0 +1,53 @@
+// Documentation page: Energy rating
+// url: ../branding/energy-rating.html
+
+block settings
+	- var title = "Energy rating for external websites"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Branding", href: dir + "index.html#Branding"},
+		{title: title}])
+
+block sidebar
+	include /template/sidebar-brand.jade
+
+block content
+	.articleContent
+		div
+			.example-box-plain
+				.ca-energyrating_wide
+					.logo
+						img(src="#{dir}images/ca-logo_100px.svg")
+					.text
+						| 4.75 #[span.of out of 5]
+						br
+						img(src="#{dir}images/rating-50.svg")
+					//| Performance rating
+				p
+				.ca-energyrating_tall
+					.logo
+						img(src="#{dir}images/ca-logo_100px.svg")
+					.text
+						| 4.75 #[span.of / 5]
+						br
+						img(src="#{dir}images/rating-50.svg")
+
+			pre
+				code.language-html
+				//
+					| &lt;div style="display:block;width:150px;"&gt;
+					| 	&lt;div style="display:inline-block;"&gt;
+					| 		&lt;img src="../../images/ca-logo_100px.svg" style="border-style:none;max-height:48px;vertical-align:bottom;"&gt;
+					| 	&lt;/div&gt;
+					| 	&lt;div style="display:inline-block;color:#004B88;font-weight:bold;"&gt;
+					| 		5 &lt;span style="color:#808080;" &gt;out of 5&lt;/span&gt;
+					| 		&lt;br&gt;
+					| 		&lt;img src="../../images/rating-50.svg" style="border-style:none;max-width:96px;" &gt;
+					| 	&lt;/div&gt;
+					| &lt;/div&gt;

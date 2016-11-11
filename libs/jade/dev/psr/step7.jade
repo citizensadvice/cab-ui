@@ -1,0 +1,29 @@
+block settings
+    - var title = "Priority Services Register"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /template/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Energy Supply", href: "#"},
+        {title: "Priority Services Register"}])
+
+block content
+    .articleContent
+        .callout--confirmation
+            h2 Completed
+            p A confirmation email has been sent to you and your form has been submitted to the following companies.
+            h4 #[a(href="#") Thames Water] – your water supplier
+            h4 #[a(href="#") Western Power] – your electricity distributor
+            h4 #[a(href="#") Cooperative Energy] – your electricity and gas supplier            
+
+        .callout--related
+            h3 What happens next
+            p We will contact these companies on your behalf. The utility companies will receive the emails and contact you directly with confirmation and when the changes will happen.
+
+        p Please #[a(href="#") give us feedback] to help improve this service.

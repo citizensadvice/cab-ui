@@ -1,0 +1,25 @@
+block settings
+	- var title = "Switches"
+	- var sidebar = true
+	- var dir = "../"
+
+extends /template/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Forms", href: dir + "index.html#Forms"},
+		{title: "Switches"}])
+
+block sidebar
+	include /template/sidebar-forms.jade
+
+block content
+	.articleContent
+		div
+			p 
+
+			.example-box-plain
+				.switch
+					input#exampleCheckboxSwitch(type="checkbox")
+					label(for="exampleCheckboxSwitch")

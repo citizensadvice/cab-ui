@@ -1,6 +1,10 @@
+// Mixins for automating template parts
+
+// Create hyperlink mixin (used in breadcrumbs and sibar)
 mixin link(title, href, text, css)
 	a(class=css, href=href ? href : '#', title!= title ? title : text)&attributes(attributes)!= text ? text : title
 
+// Create a breadcrumb list
 mixin breadcrumbs(obj)
 	.main-breadcrumb__content
 		- var n = obj.length
@@ -13,6 +17,7 @@ mixin breadcrumbs(obj)
 			span.breadcrumb__item!= item.text ? item.text : item.title
 			- }
 
+// Creat a sidebar list
 mixin sidebar(obj, key)
 	nav.section-nav
 		h2.section-nav__heading
