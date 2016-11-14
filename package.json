@@ -33,7 +33,10 @@
   },
   "dependencies": {
     "concat-files": "^0.1.0",
+    "gulp-concat": "^2.6.1",
     "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "merge-stream": "^1.0.0",
     "postcss-copy": "^5.3.0"
   }
 }

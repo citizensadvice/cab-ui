@@ -36,7 +36,47 @@ var gulp = require('gulp'),
 	pixrem = require('pixrem'),
 	rgbaFallback = require('postcss-color-rgba-fallback'),
 	opacity = require('postcss-opacity'),
-	autoprefixer = require('autoprefixer');
+	autoprefixer = require('autoprefixer'),
+
+	// cleaing files
+	rimraf = require( 'rimraf' ),
+
+	// Javascript
+	concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    merge = require('merge-stream'),
+    jsFiles = 'public/js/*.js',
+    jsDest = 'public/js/scripts';
+
+
+/*
+* JS tasks
+*/
+
+// Clean the build directory
+gulp.task( 'clean-js', function() {
+	return del(jsDest);
+});
+
+gulp.task('jsCombined', function() {
+	return gulp.src([jsFiles])
+		.pipe(concat('concat.js'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('js-min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDest))
+        .pipe( notify({ message: 'JS successfully compiled' }));
+});
+
+gulp.task('default', ['jsCombined'], function(){});
+
+
+gulp.task( 'watch-js', function() {
+	gulp.watch( jsFiles, ['jsCombine'] );
+});
+
+
 
 /*
  * Less tasks
@@ -195,13 +235,13 @@ gulp.task( 'clean', function() {
 // ------- Task groups --------
 
 // Clean all the things
-gulp.task( 'clean', [ 'clean-jade', 'clean-less'] );
+gulp.task( 'clean', [ 'clean-jade', 'clean-less', 'clean-js'] );
 
 // Watch all the things
-gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'local'] );
+gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'watch-js', 'local'] );
 
 // Single build
-gulp.task( 'default', ['less','jade'] );
+gulp.task( 'default', ['less','jade', 'jsCombine'] );
 
 // Production build - also minifies the JS
 gulp.task( 'build', ['production', 'clean', 'default'] );
