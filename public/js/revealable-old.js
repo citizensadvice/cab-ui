@@ -1,8 +1,10 @@
-﻿/* jshint browser: true, undef: true */
-/* global $: true */
-
-$(function ($) {
-    "use strict";
+/**
+ *  Setup and run revealables
+ *  @requires jQuery
+ *  @requires jQuery.fn.cssSlide
+ */
+$( function ($) {
+    'use strict';
 
     // Used to generate ids
     var count = 0;
@@ -27,7 +29,7 @@ $(function ($) {
     var closeLabel = translate('Close');
 
     function refocusHash() {
-        $w.scrollTop($(location.hash).offset().top);
+        $w.scrollTop( $( location.hash ).offset().top );
     }
 
     function scrollTo($el) {
@@ -50,7 +52,7 @@ $(function ($) {
         var expanded = null;
 
         // Check this hasn't already been setup
-        if ($this.hasClass(classSetup)) {
+        if ( $this.hasClass( classSetup ) ) {
             return;
         }
 
@@ -62,8 +64,7 @@ $(function ($) {
             return;
         }
 
-        // Mark as setup
-        $this.addClass(classSetup);
+        $this.addClass( classSetup );
 
         // Wrap the bit that will be hidden
         var containerId = getId();
@@ -140,7 +141,7 @@ $(function ($) {
 
         // Check if the hash is in this section
         function openHash() {
-            if (location.hash && $this.find(location.hash).length) {
+            if ( location.hash && $this.find( location.hash ).length ) {
                 toggle(true,true);
                 return true;
             }
@@ -148,25 +149,23 @@ $(function ($) {
 
         // If someone links to something in this section expand to show it
         $w.on('hashchange', function () {
-            if (openHash()) {
+            if ( openHash() ) {
                 refocusHash();
             }
         });
 
         // If we are in the expanded area than expand
-        if (openHash($this)) {
+        if ( openHash($this) ) {
             // Need to refocus as the opening and closing can confuse the browser
             refocus = true;
             return;
         }
 
         // Otherwise collapse this section
-        toggle(false, true);
+        toggle( false, true );
 
     }
 
-    // Fix old revealables
-    $('section.js-' + namespace).addClass(namespace);
     // Setup
     $('section.' + namespace).each(setup);
 

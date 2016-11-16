@@ -1,13 +1,13 @@
-﻿/**
+/**
  *  @fileoverview
  *
- *  Scripts to go directly into the head element
+ *  Scripts to go directly into the <head> element
  *  These should be very small and therefore they should not be included as a file, but as inline JS
- *
- *  @author Daniel Lewis
+ *  
+ *  This script needs minfiying before being added to the <head>
  */
 
-(function (document, window ) {
+( function (document, window ) {
 
     /**
      *	Update the no-js class to js
@@ -44,20 +44,4 @@
         html.className = html.className += ' no-cookies';
     }
 
-    /**
-     *  Do we need to load any polyfills
-     *  See http://kangax.github.io/compat-table/es5/
-     *  If the browser doesn't support bind we will load them all
-     *  We are not supporting IE7
-     */
-    if (!$.bind) {
-        // We were using an escaped character for the closing script
-        // but Ugligy JS was minifying it
-        // Use the replace instead
-        document.write('<script src="/static/build/js/polyfills.js"><~script>'.replace('~','/'));
-    }
-
-}(document, window ));
-
-
-
+}( document, window ));

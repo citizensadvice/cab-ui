@@ -63,7 +63,7 @@ gulp.task('jsCombined', function() {
 	return gulp.src([jsFiles])
 		.pipe(concat('concat.js'))
         .pipe(gulp.dest(jsDest))
-        .pipe(rename('js-min.js'))
+        .pipe(rename('core.js'))
         .pipe(uglify())
         .pipe(gulp.dest(jsDest))
         .pipe( notify({ message: 'JS successfully compiled' }));
@@ -73,7 +73,7 @@ gulp.task('default', ['jsCombined'], function(){});
 
 
 gulp.task( 'watch-js', function() {
-	gulp.watch( jsFiles, ['jsCombine'] );
+	gulp.watch( jsFiles, ['jsCombined'] );
 });
 
 
@@ -241,7 +241,7 @@ gulp.task( 'clean', [ 'clean-jade', 'clean-less', 'clean-js'] );
 gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'watch-js', 'local'] );
 
 // Single build
-gulp.task( 'default', ['less','jade', 'jsCombine'] );
+gulp.task( 'default', ['less','jade', 'jsCombined'] );
 
 // Production build - also minifies the JS
 gulp.task( 'build', ['production', 'clean', 'default'] );

@@ -1,0 +1,1 @@
+﻿window.cab = window.cab || {};
