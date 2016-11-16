@@ -97,24 +97,33 @@ block script
 				}
 			})
 
+			$(".commitment").each(function() {
+				var score = parseInt($(this).text().trim());
+				if (score == 0) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-00.svg">');
+				} else if (score == 3) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
+				}
+			})
+
 			$(".rating").each(function() {
 				var score = parseFloat($(this).text());
 				if (score > 0 && score <= 1) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-10.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-10.svg">');
 				} else if (score > 1 && score <= 2) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-20.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-20.svg">');
 				} else if (score > 2 && score <= 2.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-25.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-25.svg">');
 				} else if (score > 2.5 && score <= 3) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-30.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-30.svg">');
 				} else if (score > 3 && score <= 3.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-35.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-35.svg">');
 				} else if (score > 3.5 && score <= 4) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-40.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-40.svg">');
 				} else if (score > 4 && score <= 4.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-45.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-45.svg">');
 				} else if (score > 4.5 && score <= 5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/energy-comparison/rating-50.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-50.svg">');
 				}
 			})
 
@@ -142,21 +151,21 @@ block script
 			$(".complaints, .service, .billing, .switching").each(function() {
 				var score = parseFloat($(this).text());
 				if (score > 0 && score <= 1) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-10.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-10.svg">');
 				} else if (score > 1 && score <= 2) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-20.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-20.svg">');
 				} else if (score > 2 && score <= 2.5) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-25.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-25.svg">');
 				} else if (score > 2.5 && score <= 3) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-30.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
 				} else if (score > 3 && score <= 3.5) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-35.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-35.svg">');
 				} else if (score > 3.5 && score <= 4) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-40.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-40.svg">');
 				} else if (score > 4 && score <= 4.5) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-45.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-45.svg">');
 				} else if (score > 4.5 && score <= 5) {
-					$(this).append('<br><img style="max-height:.6rem;" src="#{dir}/images/energy-comparison/rating-50.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-50.svg">');
 				}
 			})
 
@@ -517,35 +526,35 @@ block content
 					table
 						tbody
 							tr
-								th(scope="row", width="40%") Complaints per 100,000 customers
-								td(width="40%") 40.6
-								td.rating(width="20%")
+								th(scope="row") Overall rating
+								td(colspan="2").rating
+									span 5
+							tr
+								th(scope="row", width="40%") Complaints to third parties
+								td(width="40%") 40.6 customers of every 100,000
+								td.complaints(width="20%")
 									span 5
 							tr
 								th(scope="row") Customers who found contacting suppliers easy
 								td 57.89%
-								td.rating
+								td.service
 									span 2
 							tr
 								th(scope="row") Customers who found bills easy to understand
 								td 53.78%
-								td.rating
+								td.billing
 									span 5
 							tr
 								th(scope="row") Switches done in 21 days
 								td 80.94%
-								td.rating
+								td.switching
 									span 3
 							tr
 								th(scope="row") Customer guarantees
 								td Signed to #[a(href="https://www.energyswitchguarantee.com/") Energy Switch Guarantee]
 									img.switch-logo(src="#{dir}/images/energy-comparison/energy-switch-guarantee-logo.jpg", alt="Energy Switch Guarantee")
-								td.rating
-									span 4
-							tr
-								th(scope="row") Overall rating
-								td(colspan="2").rating
-									span 5
+								td.commitment
+									span 3
 					a.blocklink(href="comparison-details.html") How the scores are worked out
 					h3 Contact information
 					p
@@ -579,17 +588,9 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly
 
 
 		#overlay2.overlay(style="display:none")
@@ -603,9 +604,9 @@ block content
 					table
 						tbody
 							tr
-								th(scope="row", width="40%") Complaints per 100,000 customers
-								td(width="40%") 40.6
-								td.rating(width="20%")
+								th(scope="row", width="40%") Complaints to third parties
+								td(width="40%") 40.6 customers of every 100,000
+								td.complaints(width="20%")
 									span 3
 					a.blocklink(href="comparison-details.html") How the scores are worked out
 					h3 Contact information
@@ -640,17 +641,9 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly
 
 
 		#overlay3.overlay(style="display:none")
@@ -693,14 +686,6 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly
