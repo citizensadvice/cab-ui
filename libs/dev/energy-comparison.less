@@ -75,6 +75,8 @@
     .switching,
     .commitment {
         display: none;
+        color: @heritage-blue;
+        font-weight: @font-weight-bold;
         @media screen and (min-width: @breakpoint-md) {
             display: table-cell;
             width: 11%;
@@ -82,6 +84,9 @@
         @media screen and (min-width: @breakpoint-lg) {
             width: 12%;
         }
+    }
+    img {
+        border: none;
     }
 
 }
@@ -102,6 +107,14 @@
     img {
         border: none;
     }
+}
+
+.switch-logo {
+    border: none !important;
+    max-height: 2.25rem;
+    vertical-align: bottom;
+    display: block;
+    margin-top: .5rem;
 }
 
 .ca-energyrating_wide {
@@ -194,14 +207,14 @@
 
 .sorttable_sorted:after {
     .icon;
-    content: @i-sort-desc!important;
+    content: @i-sort-desc !important;
     margin-left: .25em;
-    color: @heritage-blue;
+    color: @heritage-blue !important;
 }
 
 .sorttable_sorted_reverse:after {
     .icon;
-    content: @i-sort-asc!important;
+    content: @i-sort-asc !important;
     margin-left: .25em;
-    color: @heritage-blue;
+    color: @heritage-blue !important;
 }
