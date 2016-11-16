@@ -30,20 +30,20 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
-                a.btn-white.back-button-icon(href="admin-5.html", style="margin-top:0;") Back to "About your purchase" section
+                a.btn-white.back-button-icon(href="admin-section-details.html", style="margin-top:0;") Back to "About your purchase" section
 
                 div
-                    h2 Amount (£)
+                    h2 Telephone
                     .fieldset
                         label(for="standardField") Question name
-                        input(value="Item cost", placeholder="Name your question", type="text")
+                        input(value="Your telephone number", placeholder="Name your question", type="text")
                     .fieldset
                         label(for="standardField") Question label
                         span.form-hint This will appear in the body of the letter within #[strong {{ }}]. Keep brief and in lower case, words seperated by - or _
-                        input(placeholder="question_label", type="text" value="item_cost")
+                        input(placeholder="question_label", type="text" value="phone")
                     .fieldset
                         label(for="standardField") Hint text
-                        input(placeholder="", type="text")
+                        input(placeholder="", type="text" value="Please enter the number of days you would like the company to reply within")
                     .fieldset
                         label(for="standardField") Error text
                         input(placeholder="", type="text")
@@ -54,4 +54,4 @@ block content
                 button.btn-warning(type="button") Delete this question
 
             .col-md-6
-                textarea#letter-input(style="height:45rem;") {{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on 25 October 2015. I paid {{item_cost}}.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. As there was a problem with the goods when I bought them, I request that you give me a full refund.&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within 14 days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;joe@joeblogs.com
+                textarea#letter-input(style="height:45rem;") {{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on {{purchase_date}}. I paid {{item_cost}}.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. {{asking_for}}&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within {{days}} days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;{{email}}&#013;&#010;{{phone}}

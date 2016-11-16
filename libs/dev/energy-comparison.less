@@ -23,11 +23,18 @@
     th {
         font-size: @font-size-small;
         vertical-align: bottom;
+        position: relative;
+        padding-left: 1.3rem;
+        vertical-align: middle;
+        line-height: 1.15rem;
         &:after {
             .icon;
             content: @i-sort;
             margin-left: .25em;
             color: @heritage-blue-lighter;
+            position: absolute;
+            left: .1rem;
+            top: 38%;
         }
     }
 
@@ -75,6 +82,8 @@
     .switching,
     .commitment {
         display: none;
+        color: @heritage-blue;
+        //font-weight: @font-weight-bold;
         @media screen and (min-width: @breakpoint-md) {
             display: table-cell;
             width: 11%;
@@ -82,6 +91,9 @@
         @media screen and (min-width: @breakpoint-lg) {
             width: 12%;
         }
+    }
+    img {
+        border: none;
     }
 
 }
@@ -101,7 +113,16 @@
     text-align: center;
     img {
         border: none;
+         max-width: 6rem;
     }
+}
+
+.switch-logo {
+    border: none !important;
+    max-height: 2.25rem;
+    vertical-align: bottom;
+    display: block;
+    margin-top: .5rem;
 }
 
 .ca-energyrating_wide {
@@ -187,6 +208,11 @@
     }
 }
 
+.small-stars {
+    border: none !important;
+    max-height: .6rem;
+}
+
 #sorttable_sortfwdind,
 #sorttable_sortrevind {
     display: none;
@@ -194,14 +220,14 @@
 
 .sorttable_sorted:after {
     .icon;
-    content: @i-sort-desc!important;
+    content: @i-sort-desc !important;
     margin-left: .25em;
-    color: @heritage-blue;
+    color: @heritage-blue !important;
 }
 
 .sorttable_sorted_reverse:after {
     .icon;
-    content: @i-sort-asc!important;
+    content: @i-sort-asc !important;
     margin-left: .25em;
-    color: @heritage-blue;
+    color: @heritage-blue !important;
 }
