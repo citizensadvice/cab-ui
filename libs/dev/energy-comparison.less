@@ -23,11 +23,18 @@
     th {
         font-size: @font-size-small;
         vertical-align: bottom;
+        position: relative;
+        padding-left: 1.3rem;
+        vertical-align: middle;
+        line-height: 1.15rem;
         &:after {
             .icon;
             content: @i-sort;
             margin-left: .25em;
             color: @heritage-blue-lighter;
+            position: absolute;
+            left: .1rem;
+            top: 38%;
         }
     }
 
@@ -106,6 +113,7 @@
     text-align: center;
     img {
         border: none;
+         max-width: 6rem;
     }
 }
 
@@ -198,6 +206,11 @@
         margin-left: .25em;
         content: @i-sort-desc;
     }
+}
+
+.small-stars {
+    border: none !important;
+    max-height: .6rem;
 }
 
 #sorttable_sortfwdind,
