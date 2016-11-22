@@ -104,7 +104,7 @@ block content
 
             p This is how the overall scores are worked out.
 
-            table
+            //table
                 thead
                     tr
                         th(scope="col") Category
@@ -114,7 +114,7 @@ block content
                         th(scope="col") Ease of switching
                         th(scope="col") Switch Guarantee
                 tbody
-                    //tr
+                    tr
                         th(scope="row") Weighting
                         td 30%
                         td 25%
@@ -134,6 +134,34 @@ block content
                         td 1.25 stars
                         td 1.25 stars
                         td 0.75 stars
+                        td 0.25 stars
+
+            table
+                thead
+                    tr
+                        th(scope="row") Category
+                        th(scope="row") Maximum category score
+                        th(scope="row") Counts towards overall score
+                tbody
+                    tr
+                        th(scope="row") Complaints
+                        td 5 stars
+                        td 1.25 stars
+                    tr
+                        th(scope="row") Ease of contact
+                        td 5 stars
+                        td 1.25 stars
+                    tr
+                        th(scope="row") Billing clarity
+                        td 5 stars
+                        td 1.25 stars
+                    tr
+                        th(scope="row") Ease of switching
+                        td 5 stars
+                        td 0.75 stars
+                    tr
+                        th(scope="row") Switch Guarantee
+                        td 3 stars
                         td 0.25 stars
 
             p Scores are rounded to the nearest 0.25.
