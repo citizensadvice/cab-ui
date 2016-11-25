@@ -18,22 +18,40 @@ block script
 	script(src="#{dir}js/sorttable.js")
 	script.
 		$(document).ready(function() {
-			$('.open-dialog1').click(function(){
+			$('.open-dialog.1').on('click', function(){
 				$('#overlay1').show();
 			})
-			$('.dialog__close.1').click(function(){
+			$('.open-dialog.1').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay1').show();
+				}
+			})
+			$('.dialog__close.1').on('click', function(){
 				$('#overlay1').hide();
 			})
-			$('.open-dialog2').click(function(){
+			$('.open-dialog.2').on('click', function(){
 				$('#overlay2').show();
 			})
-			$('.dialog__close.2').click(function(){
+			$('.open-dialog.2').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay2').show();
+				}
+			})
+			$('.dialog__close.2').on('click', function(){
 				$('#overlay2').hide();
 			})
-			$('.open-dialog3').click(function(){
+			$('.open-dialog.3').on('click', function(){
 				$('#overlay3').show();
 			})
-			$('.dialog__close.3').click(function(){
+			$('.open-dialog.3').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay3').show();
+				}
+			})
+			$('.dialog__close.3').on('click', function(){
 				$('#overlay3').hide();
 			})
 
@@ -193,16 +211,16 @@ block content
 		table.sortable.energy-comparison
 			thead
 				tr
-					th.col-rank.sorttable_numeric.sorttable_sorted_reverse(scope="col") Rank
-					th.col-supp(scope="col") Supplier
-					th.lg-only(scope="col") Complaints
-					th.lg-only(scope="col") Ease of contact
-					th.lg-only(scope="col") Bill clarity
-					th.lg-only(scope="col") Ease of switching
-					th.lg-only(scope="col") Switch Guarantee
-					th.col-rate(scope="col") Overall rating
+					th.col-rank.sorttable_numeric.sorttable_sorted_reverse(scope="col", tabindex="0") Rank
+					th.col-supp(scope="col", tabindex="0") Supplier
+					th.lg-only(scope="col", tabindex="0") Complaints
+					th.lg-only(scope="col", tabindex="0") Ease of contact
+					th.lg-only(scope="col", tabindex="0") Bill clarity
+					th.lg-only(scope="col", tabindex="0") Ease of switching
+					th.lg-only(scope="col", tabindex="0") Switch Guarantee
+					th.col-rate(scope="col", tabindex="0") Overall rating
 			tbody
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 1
 					td Supplier A
@@ -213,7 +231,7 @@ block content
 					td.commitment Yes
 					//td.rating 3
 					td.rating 5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 2
 					td Supplier B
@@ -224,7 +242,7 @@ block content
 					td.commitment Yes
 					//td.rating 3.25
 					td.rating 4
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 3
 					td Supplier C
@@ -235,7 +253,7 @@ block content
 					td.commitment Yes
 					//td.rating 4
 					td.rating 3.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td
 						span.inline-badge 4
 					td Supplier D
@@ -246,7 +264,7 @@ block content
 					td.commitment No
 					//td.rating 3
 					td.rating 3.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 5
 					td Supplier E
@@ -257,7 +275,7 @@ block content
 					td.commitment Yes
 					//td.rating 3.5
 					td.rating 3.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 6
 					td Supplier F
@@ -267,7 +285,7 @@ block content
 					td.switching 60.54%
 					td.commitment Yes
 					td.rating 3
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 7
 					td Supplier G
@@ -277,7 +295,7 @@ block content
 					td.switching 96.8%
 					td.commitment No
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 8
 					td Supplier H
@@ -287,7 +305,7 @@ block content
 					td.switching 77.56%
 					td.commitment Yes
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 9
 					td Supplier I
@@ -297,7 +315,7 @@ block content
 					td.switching 98.7%
 					td.commitment No
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 10
 					td Supplier J
@@ -307,7 +325,7 @@ block content
 					td.switching 58.97%
 					td.commitment No
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 11
 					td Supplier K
@@ -317,7 +335,7 @@ block content
 					td.switching 96.34%
 					td.commitment Yes
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 12
 					td Supplier L
@@ -327,7 +345,7 @@ block content
 					td.switching 54.23%
 					td.commitment Yes
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 13
 					td Supplier M
@@ -337,7 +355,7 @@ block content
 					td.switching 97.89%
 					td.commitment No
 					td.rating 2.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 14
 					td Supplier N
@@ -347,7 +365,7 @@ block content
 					td.switching 97.4%
 					td.commitment No
 					td.rating 2.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 15
 					td Supplier O
@@ -357,7 +375,7 @@ block content
 					td.switching 82.34%
 					td.commitment Yes
 					td.rating 2
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 16
 					td Supplier P
@@ -367,7 +385,7 @@ block content
 					td.switching 40.21%
 					td.commitment No
 					td.rating 2
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td
 						span.inline-badge 17
 					td Supplier Q
@@ -377,7 +395,7 @@ block content
 					td.switching 30.45%
 					td.commitment No
 					td.rating 1
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier R
 					td.complaints 340.5
@@ -386,7 +404,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier S
 					td.complaints 375.6
@@ -395,7 +413,7 @@ block content
 					td.switching -
 					td.commitment Yes
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier T
 					td.complaints 345.3
@@ -404,7 +422,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier U
 					td.complaints 950.6
@@ -413,7 +431,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier V
 					td.complaints -
@@ -422,83 +440,83 @@ block content
 					td.switching -
 					td.commitment Yes
 					td -
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier W
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier X
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier Y
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier Z
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AA
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AB
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AC
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AD
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AE
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AF
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AG
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AH
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AJ
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AK
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AL
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AM
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AN
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AO
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AP
 					td(colspan="6") We don’t have enough information to rank this supplier
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AQ
 					td(colspan="6") We don’t have enough information to rank this supplier

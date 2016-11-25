@@ -18,6 +18,9 @@
                 background-color: @white;
             }
         }
+        &:focus {
+            outline: solid @heritage-yellow 2px;
+        }
     }
 
     th {
@@ -27,6 +30,10 @@
         padding-left: 1.3rem;
         vertical-align: middle;
         line-height: 1.15rem;
+        &:focus {
+            outline: solid @heritage-yellow 2px;
+            z-index: 1;
+        }
         &:after {
             .icon;
             content: @i-sort;
