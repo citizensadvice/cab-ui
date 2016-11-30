@@ -1,0 +1,118 @@
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js", type="text/javascript")
+style.
+	#star-rating {
+		height: 25px;
+		display: table;
+	}
+	#star-rating #star-question {
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: .75rem;
+		line-height: 1em;
+	}
+	#star-rating #star-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: .25rem;
+		line-height: 1em;
+	}
+	#star-rating #star-list.deactivated {
+		cursor: default;
+	}
+	#star-rating #star-list li[id^='star'] {
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		margin: 0;
+		margin-left: -4px;
+		overflow: hidden;
+		background-size: 18px 18px;
+		background-image: url("../images/grey-star.png");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#star-rating #star-list li[id^='star'].hover,
+	#star-rating #star-list li[id^='star'].active {
+		background-image: url("../images/yellow-star.png");
+	}
+	#star-rating #star-list li[id^='star']:focus {
+		outline: 2px solid #FCBB69;
+		background-color: #F2F8FF;
+	}
+	#star-rating #star-list.deactivated li[id^='star']:focus {
+		outline: 2px solid #DFDFDF;
+	}
+	#star-rating #star-list li[id^='star'] img {
+		display: inline-block;
+		veritcal-align: bottom;
+		padding: 0;
+		margin: 0;
+	}
+	#star-rating #star-number {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+script.
+	$(document).ready(function() {
+		// Function to add hover styling to hovered stars, and all previous
+		var starHover = function(thisObj) {
+			// Get current data number
+			var starData = thisObj.attr("data");
+			for (var i = 1; i <= starData; i++) {
+				// Apply .hover to this star, and previous stars
+				$("#star-list li[data="+i+"]").addClass("hover");
+			}
+		}
+
+		// Bind to both hover and focus
+		$("li[id^='star']").bind("mouseenter focus", function() {
+			// Only run function is .deactivated doesn't exist
+			if (!$(this).parent().hasClass("deactivated")) {
+				starHover($(this));
+			}
+		// Bind to both unhover and unfocus
+		}).bind("mouseleave focusout", function() {
+			$("#star-list li").removeClass("hover");
+		});
+
+		// Function for clicking a star
+		var starClick = function(thisObj) {
+			var starData = thisObj.attr("data");
+			$("#star-list li").removeClass("active");
+			for (var i = 1; i <= starData; i++) {
+				// Apply .active to this star, and previous stars
+				$("#star-list li[data="+i+"]").addClass("active");
+			}
+			// Deactivate stars with .deactivated
+			thisObj.parent().addClass("deactivated");
+
+			// Replace console.log with GA hook and cookie
+			console.log("User rated " + starData);
+		}
+
+		// Bind to both click and return key
+		$("li[id^='star']").on("click keyup", function (e) {
+			if (e.type == "click" || e.keyCode == 13) {
+				// Only run function is .deactivated doesn't exist
+				// Replace this with if cookie doesn't exist
+				if (!$(this).parent().hasClass("deactivated")) {
+					starClick($(this));
+				}
+			}
+		});
+	});
+
+.title__subheading--footer
+	#star-rating
+		span#star-question How helpful was this page?
+		ul#star-list
+			li#star-1(tabindex="0", data="1", aria-label="1 of 5 stars") &nbsp;
+			li#star-2(tabindex="0", data="2", aria-label="2 of 5 stars") &nbsp;
+			li#star-3(tabindex="0", data="3", aria-label="3 of 5 stars") &nbsp;
+			li#star-4(tabindex="0", data="4", aria-label="4 of 5 stars") &nbsp;
+			li#star-5(tabindex="0", data="5", aria-label="5 of 5 stars") &nbsp;
