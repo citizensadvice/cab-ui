@@ -21,11 +21,15 @@ block script
 		$('#feedback-link').on('click', function(){
 			$('#feedback-form').slideToggle('fast');
 		})
+		$('.feedback-next').on('click', function(){
+			$(this).parent().slideUp('fast');
+			$(this).parent().next().slideDown('fast');
+		})
 		$('#send').on('click', function(){
 			$('#feedback-content').slideUp({
-				complete: function(){
-					$('#feedback-confirmation').slideDown('fast');
-				}
+			    complete: function(){
+			        $('#feedback-confirmation').slideDown('fast');
+			    }
 			});
 		})
 
@@ -34,15 +38,30 @@ block feedback
 	p Is there anything wrong with this page? #[a#feedback-link Let us know].
 	#feedback-form
 		#feedback-content
-			.fieldset
-				label(for="wrong") What’s wrong with this page?
-				textarea#wrong
-			.fieldset
-				label(for="email") Your email
-					span.optional &nbsp;(optional)
-				span.form-hint We’ll get back to you with any questions
-				input#email(placeholder="", type="text")
-			a#send.btn Send
+			.feedback-page
+				.fieldset
+					fieldset
+						legend(for="radio") What went wrong with this page?
+						label.radio.radio--block
+							input(checked, name="radio", type="radio", value="option1")
+							| Broken link
+						label.radio.radio--block
+							input(name="radio", type="radio", value="option2")
+							| Incorrect content
+						label.radio.radio--block
+							input(name="radio", type="radio", value="option3")
+							| Couldn't complete a tool
+				a.feedback-next.btn.right-button-icon Next
+			.feedback-page(style="display:none;")
+				.fieldset
+					label(for="wrong") Please give some information
+					textarea#wrong
+				.fieldset
+					label(for="email") Your email
+						span.optional &nbsp;(optional)
+					span.form-hint We’ll get back to you with any questions
+					input#email(placeholder="", type="text")
+				a#send.btn.tick-button-icon Send
 		#feedback-confirmation
 			p Thank you for your feedback. We’ll review your message, and get back to you if we have any questions.
 
