@@ -11,7 +11,7 @@
     > li {
         list-style: none;
         margin: 0;
-        padding: @box-spacing-vertical 0;
+        padding: @box-spacing-vertical*1.5 0;
         border-top: @gray-7 1px solid;
         .heading {
             font-size: @font-size-medium;
@@ -19,7 +19,7 @@
             margin-bottom: 1/1.2*.25em;
         }
         .description {
-            margin: .5rem 0;
+            margin: .5rem 0 0 0;
         }
         .accessibility {
             font-size: 1.5em;
@@ -28,6 +28,7 @@
         .section {
             padding: 0;
             margin: 0;
+            margin-top: .5rem;
             white-space: nowrap;
             overflow: ellipsis;
             li {
@@ -91,6 +92,16 @@
 .term-suggestion {
     margin-top: -1.2rem;
     margin-bottom: 1.6rem;
+}
+
+.term-correction {
+    margin-top: -.6rem;
+    margin-bottom: .25rem;
+    font-size: @font-size-small;
+    color: @gray-3;
+    a {
+        color: @gray-3;
+    }
 }
 
 .result-count {
