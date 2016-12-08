@@ -17,11 +17,9 @@ style.
 		border-radius: 2px;
 	}
 	#star-rating {
-		height: 25px;
 		display: table;
 	}
 	#star-wrapper h4 {
-		margin-bottom: 0;
 		font-size: 16px;
 		font-size: 1rem;
 		font-weight: 600;
@@ -29,7 +27,7 @@ style.
 		color: #004b88;
 		font-weight: 700;
 		margin-top: 1em;
-		margin-bottom: .6em;
+		margin-bottom: 0;
 	}
 	#star-rating #star-question {
 		display: table-cell;
@@ -86,6 +84,14 @@ style.
 	#star-rating #star-number {
 		display: table-cell;
 		vertical-align: middle;
+	}
+
+	@media screen and (max-width: 600px) {
+		#star-rating,
+		#star-rating #star-question,
+		#star-rating #star-list {
+			display: block;
+		}
 	}
 
 script.
