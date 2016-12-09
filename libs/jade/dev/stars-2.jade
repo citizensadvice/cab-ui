@@ -137,16 +137,16 @@ html.no-js
 						var starData = $(this).attr("data");
 						if (starData == 1) {
 							$("#starValue").remove();
-							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Not at all</span>');
+							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">No</span>');
 						} else if (starData == 2) {
 							$("#starValue").remove();
-							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Not helpful</span>');
+							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Not really</span>');
 						} else if (starData == 3) {
 							$("#starValue").remove();
-							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Fine</span>');
+							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Helped a bit</span>');
 						} else if (starData == 4) {
 							$("#starValue").remove();
-							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Helpful</span>');
+							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Helped a lot</span>');
 						} else if (starData == 5) {
 							$("#starValue").remove();
 							$("#star-wrapper .star-rating").append('<span class="vert-align" id="starValue">Very helpful</span>');
@@ -190,7 +190,7 @@ html.no-js
 	body
 		#star-wrapper
 			.star-rating
-				span.star-question How helpful was this page?
+				span.star-question Was this page helpful?
 				ul.star-list
 					li#star-1(tabindex="0", data="1", aria-label="1 of 5 stars") &nbsp;
 					li#star-2(tabindex="0", data="2", aria-label="2 of 5 stars") &nbsp;
