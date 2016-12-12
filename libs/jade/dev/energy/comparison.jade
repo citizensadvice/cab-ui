@@ -18,22 +18,40 @@ block script
 	script(src="#{dir}js/sorttable.js")
 	script.
 		$(document).ready(function() {
-			$('.open-dialog1').click(function(){
+			$('.open-dialog.1').on('click', function(){
 				$('#overlay1').show();
 			})
-			$('.dialog__close.1').click(function(){
+			$('.open-dialog.1').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay1').show();
+				}
+			})
+			$('.dialog__close.1').on('click', function(){
 				$('#overlay1').hide();
 			})
-			$('.open-dialog2').click(function(){
+			$('.open-dialog.2').on('click', function(){
 				$('#overlay2').show();
 			})
-			$('.dialog__close.2').click(function(){
+			$('.open-dialog.2').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay2').show();
+				}
+			})
+			$('.dialog__close.2').on('click', function(){
 				$('#overlay2').hide();
 			})
-			$('.open-dialog3').click(function(){
+			$('.open-dialog.3').on('click', function(){
 				$('#overlay3').show();
 			})
-			$('.dialog__close.3').click(function(){
+			$('.open-dialog.3').keypress(function (e) {
+				var key = e.which;
+				if(key == 13) {
+					$('#overlay3').show();
+				}
+			})
+			$('.dialog__close.3').on('click', function(){
 				$('#overlay3').hide();
 			})
 
@@ -100,78 +118,109 @@ block script
 			$(".commitment").each(function() {
 				var score = parseInt($(this).text().trim());
 				if (score == 0) {
-					$(this);
-				} else if (score > 0 && score <= 1) {
-					$(this).html(1);
-				} else if (score > 1 && score <= 2) {
-					$(this).html(2);
-				} else if (score > 2 && score <= 3) {
-					$(this).html(3);
-				} else if (score > 3 && score <= 4) {
-					$(this).html(4);
-				} else if (score > 4) {
-					$(this).html(5);
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-00.svg">');
+				} else if (score == 3) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
 				}
 			})
 
 			$(".rating").each(function() {
 				var score = parseFloat($(this).text());
 				if (score > 0 && score <= 1) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-10.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-10.svg">');
 				} else if (score > 1 && score <= 2) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-20.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-20.svg">');
 				} else if (score > 2 && score <= 2.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-25.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-25.svg">');
 				} else if (score > 2.5 && score <= 3) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-30.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-30.svg">');
 				} else if (score > 3 && score <= 3.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-35.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-35.svg">');
 				} else if (score > 3.5 && score <= 4) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-40.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-40.svg">');
 				} else if (score > 4 && score <= 4.5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-45.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-45.svg">');
 				} else if (score > 4.5 && score <= 5) {
-					$(this).append('<br><img style="max-width:6rem;" src="#{dir}/images/rating-50.svg">');
+					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-50.svg">');
 				}
 			})
+
+			/*$(".complaints, .service, .billing, .switching").each(function() {
+				var score = parseFloat($(this).text());
+				if (score > 0 && score <= 1) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 1 && score <= 2) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 2 && score <= 2.5) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 2.5 && score <= 3) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 3 && score <= 3.5) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 3.5 && score <= 4) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 4 && score <= 4.5) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				} else if (score > 4.5 && score <= 5) {
+					$(this).append('<span style="color:#808080;font-weight:normal"> stars</span>');
+				}
+			})*/
+
+			$(".complaints, .service, .billing, .switching").each(function() {
+				var score = parseFloat($(this).text());
+				if (score > 0 && score <= 1) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-10.svg">');
+				} else if (score > 1 && score <= 2) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-20.svg">');
+				} else if (score > 2 && score <= 2.5) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-25.svg">');
+				} else if (score > 2.5 && score <= 3) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
+				} else if (score > 3 && score <= 3.5) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-35.svg">');
+				} else if (score > 3.5 && score <= 4) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-40.svg">');
+				} else if (score > 4 && score <= 4.5) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-45.svg">');
+				} else if (score > 4.5 && score <= 5) {
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-50.svg">');
+				}
+			})
+
 		});
 
 block content
 	.articleContent
 		.flex-row
 			.col-md-8
-				p Price isn’t the only thing to think about when choosing an energy supplier. It might be worth choosing a supplier that has good customer service - even if they’re a bit more expensive.
+				p Price isn’t the only thing to think about when choosing an energy supplier. It might be worth choosing a supplier that gets the fewest complaints, or one that’s easy to contact - even if they’re a bit more expensive.
 
-				p To help you compare customer service, we’ve given energy suppliers a star rating based on:
+				p To help you make that choice, we’ve compared suppliers across 5 different categories and ranked them according to how good their customer service is.
 
-				ul
-					li how many complaints were made about them to third parties
-					li how easy it is to contact them
-					li how easy their bills are to understand
-					li how good suppliers are at switching
+				p We’ve given them an overall rating out of 5 - 1 being poor and 5 being excellent. If you want to see how they rank by category, click on the title of that category and the table will be re-ordered.
+
+				p You can see more about each supplier and their score by clicking on their name.
 
 				.callout--alert
 					p If a supplier doesn’t have a star rating it means we don’t have enough information to rate them yet.
 
-				p There’s a separate tool for comparing #[a(href="https://energycompare.citizensadvice.org.uk/") energy prices].
+				p #[a.blocklink(href="https://energycompare.citizensadvice.org.uk/") There’s a separate tool for comparing energy prices.]
 
 		h2 Rating for March - June 2016
-		.flex-row
-			.col-md-8
-				p Click on a supplier’s name to see a breakdown of their score, their contact details and information about billing.
+
 		table.sortable.energy-comparison
 			thead
 				tr
-					th.col-rank.sorttable_numeric(scope="col") Rank
-					th.col-supp(scope="col") Supplier
-					th.lg-only(scope="col") Complaints
-					th.lg-only(scope="col") Ease of contact
-					th.lg-only(scope="col") Bill clarity
-					th.lg-only(scope="col") Ease of switching
-					th.lg-only(scope="col") Switch Guarantee
-					th.col-rate(scope="col") Rating of 5
+					th.col-rank.sorttable_numeric.sorttable_sorted_reverse(scope="col", tabindex="0") Rank
+					th.col-supp(scope="col", tabindex="0") Supplier
+					th.lg-only(scope="col", tabindex="0") Complaints
+					th.lg-only(scope="col", tabindex="0") Ease of contact
+					th.lg-only(scope="col", tabindex="0") Bill clarity
+					th.lg-only(scope="col", tabindex="0") Ease of switching
+					th.lg-only(scope="col", tabindex="0") Switch Guarantee
+					th.col-rate(scope="col", tabindex="0") Overall rating
 			tbody
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 1
 					td Supplier A
@@ -182,7 +231,7 @@ block content
 					td.commitment Yes
 					//td.rating 3
 					td.rating 5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 2
 					td Supplier B
@@ -193,7 +242,7 @@ block content
 					td.commitment Yes
 					//td.rating 3.25
 					td.rating 4
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 3
 					td Supplier C
@@ -204,7 +253,7 @@ block content
 					td.commitment Yes
 					//td.rating 4
 					td.rating 3.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td
 						span.inline-badge 4
 					td Supplier D
@@ -215,7 +264,7 @@ block content
 					td.commitment No
 					//td.rating 3
 					td.rating 3.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 5
 					td Supplier E
@@ -226,7 +275,7 @@ block content
 					td.commitment Yes
 					//td.rating 3.5
 					td.rating 3.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 6
 					td Supplier F
@@ -236,7 +285,7 @@ block content
 					td.switching 60.54%
 					td.commitment Yes
 					td.rating 3
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 7
 					td Supplier G
@@ -246,7 +295,7 @@ block content
 					td.switching 96.8%
 					td.commitment No
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 8
 					td Supplier H
@@ -256,7 +305,7 @@ block content
 					td.switching 77.56%
 					td.commitment Yes
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 9
 					td Supplier I
@@ -266,7 +315,7 @@ block content
 					td.switching 98.7%
 					td.commitment No
 					td.rating 2.75
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 10
 					td Supplier J
@@ -276,7 +325,7 @@ block content
 					td.switching 58.97%
 					td.commitment No
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 11
 					td Supplier K
@@ -286,7 +335,7 @@ block content
 					td.switching 96.34%
 					td.commitment Yes
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 12
 					td Supplier L
@@ -296,7 +345,7 @@ block content
 					td.switching 54.23%
 					td.commitment Yes
 					td.rating 2.5
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 13
 					td Supplier M
@@ -306,7 +355,7 @@ block content
 					td.switching 97.89%
 					td.commitment No
 					td.rating 2.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 14
 					td Supplier N
@@ -316,7 +365,7 @@ block content
 					td.switching 97.4%
 					td.commitment No
 					td.rating 2.25
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.decrease
 						span.inline-badge 15
 					td Supplier O
@@ -326,7 +375,7 @@ block content
 					td.switching 82.34%
 					td.commitment Yes
 					td.rating 2
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td.increase
 						span.inline-badge 16
 					td Supplier P
@@ -336,7 +385,7 @@ block content
 					td.switching 40.21%
 					td.commitment No
 					td.rating 2
-				tr.open-dialog1
+				tr.open-dialog.1(tabindex="0")
 					td
 						span.inline-badge 17
 					td Supplier Q
@@ -346,7 +395,7 @@ block content
 					td.switching 30.45%
 					td.commitment No
 					td.rating 1
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier R
 					td.complaints 340.5
@@ -355,7 +404,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier S
 					td.complaints 375.6
@@ -364,7 +413,7 @@ block content
 					td.switching -
 					td.commitment Yes
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier T
 					td.complaints 345.3
@@ -373,7 +422,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier U
 					td.complaints 950.6
@@ -382,7 +431,7 @@ block content
 					td.switching -
 					td.commitment -
 					td -
-				tr.open-dialog2
+				tr.open-dialog.2(tabindex="0")
 					td(sorttable_customkey="99") -
 					td Supplier V
 					td.complaints -
@@ -391,91 +440,89 @@ block content
 					td.switching -
 					td.commitment Yes
 					td -
-				tr.open-dialog3
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier W
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier X
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier Y
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier Z
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AA
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AB
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AC
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AD
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AE
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AF
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AG
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AH
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AJ
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AK
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AL
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AM
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AN
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AO
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AP
-					td(colspan="6") Click to see more supplier information
-				tr.open-dialog3
+					td(colspan="6") We don’t have enough information to rank this supplier
+				tr.open-dialog.3(tabindex="0")
 					td(sorttable_customkey="100") -
 					td Supplier AQ
-					td(colspan="6") Click to see more supplier information
+					td(colspan="6") We don’t have enough information to rank this supplier
 
 		.flex-row
 			.col-md-8
-				p There are currently 17 suppliers with a star rating - ranked in order of how good their customer service is.
-
 				a.blocklink(href="comparison-details.html") Find out how the scores are worked out
 
 				p We don’t have enough information to rate all the suppliers listed on this page. We’ll rate them when that information becomes available.
@@ -484,37 +531,44 @@ block content
 			.dialog(role="alertdialog" aria-labelledby="dialog-1-label" aria-describedby="dialog-1-main" tabindex="-1" style="z-index: 3;")
 
 				header.dialog__header
-					h2#dialog-1-label.dialog__title Supplier A
+					h2#dialog-1-label.dialog__title Supplier A, March - June 2016
 					button.dialog__close.1(type="button" data-action="close")<i aria-hidden="true" class="dialog__close-icon"></i><span class="dialog__close-text">Close</span>
 
 				.dialog__main#dialog-1-main
 					table
 						tbody
 							tr
-								th(scope="row", width="40%") Complaints per 100,000 customers
-								td(width="40%") 40.6
-								td.rating(width="20%")
+								th(scope="row") Overall rating
+								td(colspan="2").rating
+									span 5
+							tr
+								th(scope="row", width="40%") Complaints to third parties
+								td(width="40%") 40.6 customers of every 100,000
+								td.complaints(width="20%")
 									span 5
 							tr
 								th(scope="row") Customers who found contacting suppliers easy
 								td 57.89%
-								td.rating
+								td.service
 									span 2
 							tr
 								th(scope="row") Customers who found bills easy to understand
 								td 53.78%
-								td.rating
+								td.billing
 									span 5
 							tr
 								th(scope="row") Switches done in 21 days
 								td 80.94%
-								td.rating
+								td.switching
 									span 3
 							tr
 								th(scope="row") Customer guarantees
-								td Signed to switching guarantee#[br]Not signed to billing code
-								td.rating
-									span 4
+								td Signed to #[a(href="https://www.energyswitchguarantee.com/") Energy Switch Guarantee]
+									img.switch-logo(src="#{dir}/images/energy-comparison/energy-switch-guarantee-logo.jpg", alt="Energy Switch Guarantee")
+								td.commitment
+									span 3
+					p
+						a Supplier A's energy is supplied by Supplier G
 					a.blocklink(href="comparison-details.html") How the scores are worked out
 					h3 Contact information
 					p
@@ -548,17 +602,9 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly
 
 
 		#overlay2.overlay(style="display:none")
@@ -572,9 +618,9 @@ block content
 					table
 						tbody
 							tr
-								th(scope="row", width="40%") Complaints per 100,000 customers
-								td(width="40%") 40.6
-								td.rating(width="20%")
+								th(scope="row", width="40%") Complaints to third parties
+								td(width="40%") 40.6 customers of every 100,000
+								td.complaints(width="20%")
 									span 3
 					a.blocklink(href="comparison-details.html") How the scores are worked out
 					h3 Contact information
@@ -609,17 +655,9 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly
 
 
 		#overlay3.overlay(style="display:none")
@@ -662,14 +700,6 @@ block content
 						| #[strong Sunday:] Closed
 					h3 Billing information
 					p
-						| #[strong Every year:] direct debit
+						| #[strong Direct debit:] yearly, every 6 months, quarterly, monthly, weekly
 						br
-						| #[strong Every 6 months:] direct debit
-						br
-						| #[strong Quarterly:] direct debit
-						br
-						| #[strong Monthly:] direct debit
-						br
-						| #[strong Weekly:] cash or cheque
-						br
-						| #[strong Other:] cash or cheque
+						| #[strong Cah or cheque:] monthly, weekly

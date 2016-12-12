@@ -11,7 +11,7 @@
     > li {
         list-style: none;
         margin: 0;
-        padding: @box-spacing-vertical 0;
+        padding: 1.5rem 0;
         border-top: @gray-7 1px solid;
         .heading {
             font-size: @font-size-medium;
@@ -19,7 +19,7 @@
             margin-bottom: 1/1.2*.25em;
         }
         .description {
-            margin: .5rem 0;
+            margin: .5rem 0 0 0;
         }
         .accessibility {
             font-size: 1.5em;
@@ -28,6 +28,7 @@
         .section {
             padding: 0;
             margin: 0;
+            margin-top: .5rem;
             white-space: nowrap;
             overflow: ellipsis;
             li {
@@ -57,7 +58,6 @@
     }
     .adviser-result {
         background-color: lighten(@inventive-teal-lightest, 9%);
-        //border: none;
         padding: @box-spacing-vertical @box-spacing-horizontal;
         &:before {
             .adviser-badge;
@@ -65,24 +65,46 @@
     }
     .adviser-categories {
         background-color: @gray-8;
-        //margin-bottom: -.75rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        padding: @box-spacing-vertical @box-spacing-horizontal;
+        margin-top: .75rem;
+        //margin-bottom: -1.5rem;
+        padding: @box-spacing-vertical/2 @box-spacing-horizontal;
+        ul {
+            margin: 0;
+            column-count: 2;
+            column-gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            font-size: @font-size-small;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid-column;
+            margin: 0;
+            padding: .25rem 0;
+        }
     }
     .related-results {
-        background-color: @gray-8;
-        padding: @box-spacing-vertical @box-spacing-horizontal;
+        //background-color: @gray-8;
+        padding: @box-spacing-vertical 0 0 0;
+        border: none;
         h3, p {
             margin: 0;
         }
     }
+    .search-results__input {
+        padding: @box-spacing-vertical 0 0 0;
+        border: none;
+    }
     .pagination {
-        padding: @box-spacing-vertical*2 0;
-        ul, .blocklink {
+        padding: @box-spacing-vertical*2 0 0 0;
+        //border: none;
+        ul,
+        .blocklink {
             margin: 0;
         }
-        a, span {
+        a,
+        span {
             margin-bottom: 0;
         }
     }
@@ -90,7 +112,17 @@
 
 .term-suggestion {
     margin-top: -1.2rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.term-correction {
+    margin-top: -.6rem;
+    margin-bottom: .25rem;
+    font-size: @font-size-small;
+    color: @gray-3;
+    a {
+        color: @gray-3;
+    }
 }
 
 .result-count {

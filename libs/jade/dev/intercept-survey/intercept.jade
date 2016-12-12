@@ -3,13 +3,12 @@ block settings
 	- var sidebar = true
 	- var toolbars = true
 	- var dir = "../../"
-	- var feedback = true
 
 extends /template/template-site.jade
 
 block breadcrumbs
 	+breadcrumbs([
-		{title: "Get advice", href: dir + "navigation.html"},
+		{title: "Home", href: dir + "home.html"},
 		{title: "Benefits", href: dir + "#"},
 		{title: "PIP"}])
 
@@ -18,54 +17,15 @@ block sidebar
 
 block script
 	script.
-		$('#feedback-link').on('click', function(){
-			$('#feedback-form').slideToggle('fast');
-		})
-		$('.feedback-next').on('click', function(){
-			$(this).parent().slideUp('fast');
-			$(this).parent().next().slideDown('fast');
-		})
-		$('#send').on('click', function(){
-			$('#feedback-content').slideUp({
-			    complete: function(){
-			        $('#feedback-confirmation').slideDown('fast');
-			    }
-			});
-		})
-
-block feedback
-	h2.screenreader Feedback
-	p Is there anything wrong with this page? #[a#feedback-link Let us know].
-	#feedback-form
-		#feedback-content
-			.feedback-page
-				.fieldset
-					fieldset
-						legend(for="radio") What went wrong with this page?
-						label.radio.radio--block
-							input(checked, name="radio", type="radio", value="option1")
-							| Broken link
-						label.radio.radio--block
-							input(name="radio", type="radio", value="option2")
-							| Incorrect content
-						label.radio.radio--block
-							input(name="radio", type="radio", value="option3")
-							| Couldn't complete a tool
-				a.feedback-next.btn.right-button-icon Next
-			.feedback-page(style="display:none;")
-				.fieldset
-					label(for="wrong") Please give some information
-					textarea#wrong
-				.fieldset
-					label(for="email") Your email
-						span.optional &nbsp;(optional)
-					span.form-hint We’ll get back to you with any questions
-					input#email(placeholder="", type="text")
-				a#send.btn.tick-button-icon Send
-		#feedback-confirmation
-			p Thank you for your feedback. We’ll review your message, and get back to you if we have any questions.
+		(function(d,e,j,h,f,c,b){d.SurveyGizmoBeacon=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)};c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,'script','//d2bnxibecyz4h5.cloudfront.net/runtimejs/intercept/intercept.js','sg_beacon');
+		sg_beacon('init','NTEzMDY0LWRkNzBiYThkOTU3MDY3ZjgxNWFmMjUzOTFjNzMyMmFiMDcxMmU0OWFmYzliOWU5NjMz');
+		var newtemplate = document.getElementById('newtemplate').value;
+		sg_beacon('data', 'newpage', newtemplate);
+		var isloggedin = document.getElementById('isloggedin').value;
+		sg_beacon('data', 'loggedin', isloggedin);
 
 block content
+
 	.articleContent
 		div
 			p Making a claim for the benefit Personal Independence Payment (PIP) can take a long time time. It can often take up to 4 months from starting the application to getting your money (if you’re #[a(href="#") terminally ill] your claim will be processed more quickly).

@@ -30,13 +30,13 @@ block content
     .articleContent
         .flex-container.flex-row
             .col-md-6
-                a.btn-white.back-button-icon(href="admin-5.html", style="margin-top:0;") Back to "About your purchase" section
+                a.btn-white.back-button-icon(href="admin-section-purchase.html", style="margin-top:0;") Back to "About your purchase" section
 
                 div
                     h2 Radio buttons
                     .fieldset
                         label(for="standardField") Question name
-                        input(value="", placeholder="Name your question",  type="text")
+                        input(value="What you are asking for", placeholder="Name your question",  type="text")
                     .fieldset
                         label(for="standardField") Question label
                         span.form-hint This will appear in the body of the letter within #[strong {{ }}]. Keep brief and in lower case, words seperated by - or _
@@ -64,15 +64,15 @@ block content
                         a.tl--option--delete Remove
                         .fieldset
                             label(for="standardField") Option name
-                            input(placeholder="", type="text")
+                            input(placeholder="", type="text" value="Ask for a replacement")
                         .fieldset
                             label(for="standardField") Option output
                             span.form-hint Can include other question labels (include labels within {{}} )
-                            textarea(placeholder="", type="text") uiyvbliyuvbliyv
+                            textarea(placeholder="", type="text") As there was a problem with the goods when I bought them, I request that you send a replacement.
                     button.btn.plus-button-icon Add option
 
                 hr
                 button.btn-warning(type="button") Delete this question
 
             .col-md-6
-                textarea#letter-input(style="height:45rem;") {{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on 25 October 2015. I paid £229.99.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. {{asking-for}}&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within 14 days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;joe@joeblogs.com
+                textarea#letter-input(style="height:45rem;") {{name}}&#013;&#010;{{address}}&#013;&#010;&#013;&#010;Dear Sir or Madam,&#013;&#010;&#013;&#010;I bought a sewing machine from you on {{purchase_date}}. I paid {{item_cost}}.&#013;&#010;&#013;&#010;I now find the goods have the following fault:&#013;&#010;The machine stops working after half an hour and won't work again for at least an hour.&#013;&#010;&#013;&#010;Under the Consumer Rights Act 2015 goods you supply must be fit for purpose. {{asking_for}}&#013;&#010;&#013;&#010;I have enclosed a copy of the receipt in support of my claim.&#013;&#010;Please respond within {{days}} days of receiving this letter.&#013;&#010;&#013;&#010;Yours faithfully&#013;&#010;{{name}}&#013;&#010;{{email}}&#013;&#010;{{phone}}

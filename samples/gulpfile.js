@@ -5,7 +5,7 @@
 
 // Define paths, relative to gulpfile.js
 var cssPath     = 'css/';
-var assetPath   = 'assets/';
+var assetPath   = 'assets/**/*';
 
 // Include sourcemaps? (significantly increases CSS filesize)
 var makeMaps    = false;
