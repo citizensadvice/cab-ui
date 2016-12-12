@@ -5,7 +5,7 @@
     "url": ""
   },
   "devDependencies": {
-    "cab-ui": "https://github.com/citizensadvice/cab-ui.git#v2.1.3",
+    "cab-ui": "https://github.com/citizensadvice/cab-ui.git#v2.1.4",
     "cssnano": "^3.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
