@@ -1,6 +1,7 @@
 # The built files
 public/**/*.html
 public/css
+public/images
 
 # The gh-pages cache directory
 .publish

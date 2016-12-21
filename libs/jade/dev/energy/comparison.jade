@@ -118,30 +118,30 @@ block script
 			$(".commitment").each(function() {
 				var score = parseInt($(this).text().trim());
 				if (score == 0) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-00.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-00.svg">');
 				} else if (score == 3) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-30.svg">');
 				}
 			})
 
 			$(".rating").each(function() {
 				var score = parseFloat($(this).text());
 				if (score > 0 && score <= 1) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-10.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-10.svg">');
 				} else if (score > 1 && score <= 2) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-20.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-20.svg">');
 				} else if (score > 2 && score <= 2.5) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-25.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-25.svg">');
 				} else if (score > 2.5 && score <= 3) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-30.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-30.svg">');
 				} else if (score > 3 && score <= 3.5) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-35.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-35.svg">');
 				} else if (score > 3.5 && score <= 4) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-40.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-40.svg">');
 				} else if (score > 4 && score <= 4.5) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-45.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-45.svg">');
 				} else if (score > 4.5 && score <= 5) {
-					$(this).append('<br><img src="#{dir}/images/energy-comparison/rating-50.svg">');
+					$(this).append('<br><img src="#{dir}/images/dev/energy-comparison/rating-50.svg">');
 				}
 			})
 
@@ -169,21 +169,21 @@ block script
 			$(".complaints, .service, .billing, .switching").each(function() {
 				var score = parseFloat($(this).text());
 				if (score > 0 && score <= 1) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-10.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-10.svg">');
 				} else if (score > 1 && score <= 2) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-20.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-20.svg">');
 				} else if (score > 2 && score <= 2.5) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-25.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-25.svg">');
 				} else if (score > 2.5 && score <= 3) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-30.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-30.svg">');
 				} else if (score > 3 && score <= 3.5) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-35.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-35.svg">');
 				} else if (score > 3.5 && score <= 4) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-40.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-40.svg">');
 				} else if (score > 4 && score <= 4.5) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-45.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-45.svg">');
 				} else if (score > 4.5 && score <= 5) {
-					$(this).append('<br><img class="small-stars" src="#{dir}/images/energy-comparison/rating-50.svg">');
+					$(this).append('<br><img class="small-stars" src="#{dir}/images/dev/energy-comparison/rating-50.svg">');
 				}
 			})
 
@@ -564,7 +564,7 @@ block content
 							tr
 								th(scope="row") Customer guarantees
 								td Signed to #[a(href="https://www.energyswitchguarantee.com/") Energy Switch Guarantee]
-									img.switch-logo(src="#{dir}/images/energy-comparison/energy-switch-guarantee-logo.jpg", alt="Energy Switch Guarantee")
+									img.switch-logo(src="#{dir}/images/dev/energy-comparison/energy-switch-guarantee-logo.jpg", alt="Energy Switch Guarantee")
 								td.commitment
 									span 3
 					p

@@ -7,8 +7,8 @@
 // Load plugins
 var gulp = require('gulp'),
 
-    // Live reloading localhost
-    browserSync = require('browser-sync'),
+	// Live reloading localhost
+	browserSync = require('browser-sync'),
 	// Creates OSX notifications
 	notify = require('gulp-notify'),
 	// Copy referenced assets to a folder
@@ -36,7 +36,10 @@ var gulp = require('gulp'),
 	pixrem = require('pixrem'),
 	rgbaFallback = require('postcss-color-rgba-fallback'),
 	opacity = require('postcss-opacity'),
-	autoprefixer = require('autoprefixer');
+	autoprefixer = require('autoprefixer'),
+
+	// Compress images
+	imagemin = require('gulp-imagemin');
 
 /*
  * Less tasks
@@ -60,7 +63,7 @@ gulp.task( 'less', function() {
 		postCssPlugins.push(cssnano);
 	}
 	var targetPath = 'public/css';
-    return gulp.src(['libs/*.less'])
+	return gulp.src(['libs/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe(less().on('error', function(err){
 			gutil.log(err);
@@ -72,7 +75,7 @@ gulp.task( 'less', function() {
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
-        .pipe(browserSync.reload({stream: true}))
+		.pipe(browserSync.reload({stream: true}))
 		.pipe( notify({ message: 'Less successfully compiled' }));
 });
 
@@ -87,20 +90,20 @@ gulp.task( 'watch-less', function() {
 gulp.task( 'clean-jade', function() {
 	return del([
 		// Delete the contents of public/
-	    'public/*',
-	    // but ignore these ones
-	    '!public/js',
-	    '!public/css',
-	    '!public/images',
-	    '!public/robots.txt'
+		'public/*',
+		// but ignore these ones
+		'!public/js',
+		'!public/css',
+		'!public/images',
+		'!public/robots.txt'
 	]);
 });
 
 gulp.task( 'jade', function() {
 	return gulp.src('libs/jade/**/*.jade')
-    	.pipe( jade( { pretty: true, basedir: "libs" }) )
-    	.pipe( gulp.dest('public') )
-        .pipe(browserSync.reload({stream: true}));
+		.pipe( jade( { pretty: true, basedir: "libs" }) )
+		.pipe( gulp.dest('public') )
+		.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task( 'watch-jade', function() {
@@ -120,7 +123,7 @@ gulp.task( 'watch-jade', function() {
 		relativePath = pathUtils.resolve( 'public', relativePath );
 
 		gulp.src(event.path)
-        	.pipe(plumber())
+			.pipe(plumber())
 			.pipe(jade({ pretty: true, basedir: "libs" }).on('error', function(err){
 				gutil.log(err);
 				this.emit('end');
@@ -128,17 +131,17 @@ gulp.task( 'watch-jade', function() {
 			.on("error", notify.onError(function (error) {
 				return error.message;
 			}))
-	        .pipe(gulp.dest(relativePath))
-        	.on( 'finish', function() {
-        		var end = process.hrtime(start);
-        		gutil.log(
-        			'Finished',
-        			"'" + gutil.colors.cyan('jade') + '"',
-        			'after',
-        			gutil.colors.magenta(prettyHrtime(end))
-        		);
-        	})
-        	.pipe(browserSync.reload({stream: true}))
+			.pipe(gulp.dest(relativePath))
+			.on( 'finish', function() {
+				var end = process.hrtime(start);
+				gutil.log(
+					'Finished',
+					"'" + gutil.colors.cyan('jade') + '"',
+					'after',
+					gutil.colors.magenta(prettyHrtime(end))
+				);
+			})
+			.pipe(browserSync.reload({stream: true}))
 			.pipe( notify({ message: 'Jade successfully compiled' }));
 	});
 
@@ -147,13 +150,32 @@ gulp.task( 'watch-jade', function() {
 });
 
 /*
+ * Images tasks
+ */
+ gulp.task( 'clean-images', function() {
+ 	return del('public/images/**');
+ });
+
+ gulp.task('images', function() {
+	 gulp.src(['libs/assets/images/**/*'])
+		 .pipe(plumber())
+		 .pipe(imagemin())
+		 .pipe(gulp.dest('public/images'))
+		//  .pipe(notify({ message: 'Images complete' }));
+ });
+
+ gulp.task( 'watch-images', function() {
+ 	gulp.watch( 'libs/assets/images/**/*', ['images'] );
+ });
+
+/*
  * gh-pages
  */
 
 gulp.task( 'gh-pages', ['build'], function() {
 
 	return gulp.src('public/**')
-    	.pipe( deploy() );
+		.pipe( deploy() );
 
 });
 
@@ -163,12 +185,12 @@ gulp.task( 'gh-pages', ['build'], function() {
 
 // Starts localhost
 gulp.task('local', function() {
-    browserSync({
-        server: { baseDir: "public/" },
-        // Makes sure it opens in Chrome, regardless of default browser
-        browser: "google chrome",
-        notify: false
-    });
+	browserSync({
+		server: { baseDir: "public/" },
+		// Makes sure it opens in Chrome, regardless of default browser
+		browser: "google chrome",
+		notify: false
+	});
 });
 
 // Flag to tell us this is a production build
@@ -195,15 +217,13 @@ gulp.task( 'clean', function() {
 // ------- Task groups --------
 
 // Clean all the things
-gulp.task( 'clean', [ 'clean-jade', 'clean-less'] );
+gulp.task( 'clean', [ 'clean-jade', 'clean-less', 'clean-images'] );
 
 // Watch all the things
-gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'local'] );
+gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'watch-images', 'local'] );
 
 // Single build
-gulp.task( 'default', ['less','jade'] );
+gulp.task( 'default', ['less','jade', 'images'] );
 
 // Production build - also minifies the JS
 gulp.task( 'build', ['production', 'clean', 'default'] );
-
-
