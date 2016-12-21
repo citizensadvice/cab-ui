@@ -63,7 +63,7 @@ gulp.task( 'less', function() {
 		postCssPlugins.push(cssnano);
 	}
 	var targetPath = 'public/css';
-	return gulp.src(['libs/*.less'])
+	return gulp.src(['libs/styles/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
 		.pipe(less().on('error', function(err){
 			gutil.log(err);
@@ -72,7 +72,7 @@ gulp.task( 'less', function() {
 		.on("error", notify.onError(function (error) {
 			return error.message;
 		}))
-		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
+		// .pipe( postcss( postCssPlugins, { to: targetPath + '/xyz' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
 		.pipe(browserSync.reload({stream: true}))
@@ -80,7 +80,7 @@ gulp.task( 'less', function() {
 });
 
 gulp.task( 'watch-less', function() {
-	gulp.watch( 'libs/**/*.less', ['less'] );
+	gulp.watch( 'libs/styles/**/*.less', ['less'] );
 });
 
 /*
@@ -153,11 +153,11 @@ gulp.task( 'watch-jade', function() {
  * Images tasks
  */
  gulp.task( 'clean-images', function() {
- 	return del('public/images/**');
+ 	return del('public/images');
  });
 
  gulp.task('images', function() {
-	 gulp.src(['libs/assets/images/**/*'])
+	 gulp.src('libs/assets/images/**/*')
 		 .pipe(plumber())
 		 .pipe(imagemin())
 		 .pipe(gulp.dest('public/images'))
