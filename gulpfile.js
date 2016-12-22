@@ -23,6 +23,7 @@ var gulp = require('gulp'),
 	del = require('del'),
 	deploy = require('gulp-gh-pages'),
 	gulp = require( 'gulp' ),
+	gulpif = require( 'gulp-if' ),
 	gutil = require('gulp-util'),
 	jade = require('gulp-jade'),
 	less = require( 'gulp-less' ),
@@ -65,7 +66,7 @@ gulp.task( 'less', function() {
 	}
 	var targetPath = 'public/css';
 	return gulp.src(['libs/styles/*.less'])
-		.pipe( sourcemaps.init() ) // Generate sourcemaps
+		.pipe( gulpif(!productionBuild, sourcemaps.init({largeFile: true})) ) // Generate sourcemaps
 		.pipe(less({ plugins: [lessGlob] }).on('error', function(err){
 			gutil.log(err);
 			this.emit('end');
@@ -73,8 +74,11 @@ gulp.task( 'less', function() {
 		.on("error", notify.onError(function (error) {
 			return error.message;
 		}))
+		.pipe( gulpif(!productionBuild,sourcemaps.write()) )
+		.pipe( gulpif(!productionBuild,sourcemaps.init({loadMaps: true})) ) // Generate sourcemaps
+		// .pipe( sourcemaps.init({loadMaps: true} )
 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
-		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
+		.pipe( gulpif(!productionBuild,sourcemaps.write('.')) ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
 		.pipe(browserSync.reload({stream: true}))
 		.pipe( notify({ message: 'Less successfully compiled' }));
