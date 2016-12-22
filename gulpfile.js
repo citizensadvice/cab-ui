@@ -73,7 +73,7 @@ gulp.task( 'less', function() {
 		.on("error", notify.onError(function (error) {
 			return error.message;
 		}))
-		// .pipe( postcss( postCssPlugins, { to: targetPath + '/xyz' } ) ) // Postcss (the "to" is for copyAssets)
+		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
 		.pipe( sourcemaps.write('.') ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
 		.pipe(browserSync.reload({stream: true}))
