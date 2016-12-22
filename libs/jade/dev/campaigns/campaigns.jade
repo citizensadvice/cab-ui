@@ -7,7 +7,7 @@ block settings
     - var fullpage = true
     - var nofooter = true
 
-extends /template/template-site.jade
+extends /jade/templates/template-site.jade
 block script
     script(src="#{dir}js/vendor/highcharts/highcharts.js")
     script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
@@ -292,7 +292,7 @@ block script
 
 
 block sidebar
-    include /template/sidebar-blog.jade
+    include /jade/templates/partials/sidebar-blog.jade
 
 block content
     .fullwidth

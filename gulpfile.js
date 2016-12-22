@@ -105,7 +105,7 @@ gulp.task( 'clean-jade', function() {
 });
 
 gulp.task( 'jade', function() {
-	return gulp.src('libs/jade/**/*.jade')
+	return gulp.src(['libs/jade/**/*.jade', '!libs/jade/templates/**/*.jade'])
 		.pipe( jade( { pretty: true, basedir: "libs" }) )
 		.pipe( gulp.dest('public') )
 		.pipe(browserSync.reload({stream: true}));

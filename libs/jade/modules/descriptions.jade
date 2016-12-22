@@ -3,7 +3,7 @@ block settings
 	- var sidebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -12,7 +12,7 @@ block breadcrumbs
 		{title: "Descriptions"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /jade/templates/partials/sidebar-modules.jade
 
 block content
 	.articleContent
