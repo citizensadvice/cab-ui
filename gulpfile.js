@@ -37,6 +37,7 @@ var gulp = require('gulp'),
 	rgbaFallback = require('postcss-color-rgba-fallback'),
 	opacity = require('postcss-opacity'),
 	autoprefixer = require('autoprefixer'),
+	lessGlob = require('less-plugin-glob'),
 
 	// Compress images
 	imagemin = require('gulp-imagemin');
@@ -65,7 +66,7 @@ gulp.task( 'less', function() {
 	var targetPath = 'public/css';
 	return gulp.src(['libs/styles/*.less'])
 		.pipe( sourcemaps.init() ) // Generate sourcemaps
-		.pipe(less().on('error', function(err){
+		.pipe(less({ plugins: [lessGlob] }).on('error', function(err){
 			gutil.log(err);
 			this.emit('end');
 		}))
