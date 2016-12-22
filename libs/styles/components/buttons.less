@@ -357,3 +357,73 @@ button:disabled {
     &:focus  {
     }
 }
+
+// Button icons
+.tick-button-icon {
+    .btn-icon(@i-tick);
+}
+.right-button-icon {
+    .btn-icon(@i-right);
+}
+.left-button-icon {
+    .btn-icon(@i-left, left);
+}
+.back-button-icon {
+    .btn-icon(@i-left, left, @heritage-blue-light);
+}
+.left-cancel-button-icon {
+    .btn-icon(@i-cross, left, @heritage-blue-light);
+}
+.down-button-icon {
+    .btn-icon(@i-down);
+}
+.up-button-icon {
+    .btn-icon(@i-up);
+}
+.back-to-top-icon {
+    .btn-icon(@i-up, left, @blue-light);
+    margin-left: -@box-spacing;
+}
+.exclamation-button-icon {
+    .btn-icon(@i-exclamation-circle);
+}
+.search-button-icon {
+    .btn-icon(@i-search);
+}
+.plus-button-icon {
+    .btn-icon(@i-plus);
+}
+.minus-button-icon {
+    .btn-icon(@i-minus);
+}
+.email-button-icon {
+    .btn-icon(@i-email);
+}
+.print-button-icon {
+    .btn-icon(@i-print);
+}
+.restart-button-icon {
+    .btn-icon(@i-redo);
+}
+.save-button-icon {
+    .btn-icon(@i-save);
+}
+.retrieve-button-icon {
+    .btn-icon(@i-load);
+}
+.copy-button-icon {
+    .btn-icon(@i-copy);
+}
+.clear-button-icon {
+    .btn-icon(@i-undo);
+}
+.help-button-icon {
+    .btn-icon(@i-help);
+}
+.close-button-icon {
+    .btn-icon(@i-cross);
+}
+.spinner-button-icon {
+    .btn-icon(@i-spinner);
+    .btn-spinner;
+}
