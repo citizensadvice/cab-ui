@@ -49,38 +49,7 @@
 // local
 // A block for local burear branding mockups
 
-include mixins.jade
-block settings
-doctype html
-html.no-js
-	head
-		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
-		meta(charset="utf-8")
-		meta(content="IE=edge", http-equiv="X-UA-Compatible")
-		meta(name="keywords")
-		meta(name="description")
-		//base(href="#{dir}")
-
-		title Citizens Advice style guide
-			- if (typeof title !== "undefined")
-				| - #{title}
-
-		// Mobile Specific Metas
-		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
-		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
-		meta(content="EWS", name="cab-extent")
-		meta(content="#{dir}static/images/dev/apple-touch-icon.png")
-		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
-
-		// Stylesheets
-		link(href="#{dir}css/dev.css", rel="stylesheet")
-		link(href="#{dir}images/dev/favicon/32.png", rel="shortcut icon")
-		link(href="#{dir}images/dev/favicon/228.png", rel="apple-touch-icon")
-
-		script
-			include ../../js/head.js
-
-		block head
+include partials/header
 
 	body
 		<!--[if IE 8]><div class="ie8"><![endif]-->
@@ -98,8 +67,8 @@ html.no-js
 			header.blog-header
 				.blog-header--content
 					a(href="blog-home.html", style="border: none;")
-						img.wide(src="#{dir}images/dev/ca-logo-hz-white-280px.svg")
-						img.slim(src="#{dir}images/dev/ca-logo-st-white-220px.svg")
+						img.wide(src="#{dir}../images/dev/ca-logo-hz-white-280px.svg")
+						img.slim(src="#{dir}../images/dev/ca-logo-st-white-220px.svg")
 
 					//#toggle
 					//ul.blog-navigation
@@ -133,8 +102,8 @@ html.no-js
 				.navigation
 					.content
 						a.logo(href="#{dir}index.html")
-							img.wide(src="#{dir}images/dev/ca-logo-hz-280px.svg")
-							img.slim(src="#{dir}images/dev/ca-logo-st-220px.svg")
+							img.wide(src="#{dir}../images/dev/ca-logo-hz-280px.svg")
+							img.slim(src="#{dir}../images/dev/ca-logo-st-220px.svg")
 
 						ul
 							li#get-advice
@@ -256,7 +225,7 @@ html.no-js
 									h1.title__heading.js-ref
 										span.title__title #{title}
 							if toolbars
-								include toolbar.jade
+								include partials/toolbar.jade
 								block content
 								if sharebar
 									include partials/sharebar.jade
@@ -314,7 +283,7 @@ html.no-js
 
 			.footer--legal
 				.footer--legal--content
-					img(alt="", src="#{dir}images/dev/ca_wo-logo-100px.svg")
+					img(alt="", src="#{dir}../images/dev/ca_wo-logo-100px.svg")
 					p
 						| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
 						br

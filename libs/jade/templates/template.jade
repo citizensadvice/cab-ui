@@ -52,38 +52,7 @@
 // script
 // A block for placing html before the </body> tag.
 
-include mixins.jade
-block settings
-doctype html
-html.no-js
-	head
-		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
-		meta(charset="utf-8")
-		meta(content="IE=edge", http-equiv="X-UA-Compatible")
-		meta(name="keywords")
-		meta(name="description")
-		//base(href="#{dir}")
-
-		title Citizens Advice style guide
-			- if (typeof title !== "undefined")
-				| - #{title}
-
-		// Mobile Specific Metas
-		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
-		meta(content="48a2415d-980f-4763-a5b9-e10e000636b3", name="cab-guid")
-		meta(content="EWS", name="cab-extent")
-		meta(content="#{dir}static/images/dev/apple-touch-icon.png")
-		meta(content="B53C5C20449FC2233D3862B4DBEDFA3E", name="msvalidate.01")
-
-		// Stylesheets
-		link(href="#{dir}css/dev.css", rel="stylesheet")
-		link(href="#{dir}images/dev/favicon/32.png", rel="shortcut icon")
-		link(href="#{dir}images/dev/favicon/228.png", rel="apple-touch-icon")
-
-		script
-			include ../../js/head.js
-
-		block head
+include partials/header
 
 	body
 		<!--[if IE 8]><div class="ie8"><![endif]-->
@@ -101,9 +70,9 @@ html.no-js
 			header.main-header
 				.main-header__content
 					a.main-header__logo(href="index.html", title="Citizens Advice home")
-						img(onerror="this.onerror=null;this.src='#{dir}images/dev/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="#{dir}images/dev/ca-logo_100px.svg" height="80")
+						img(onerror="this.onerror=null;this.src='#{dir}../images/dev/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="#{dir}../images/dev/ca-logo_100px.svg" height="80")
 
-						img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='#{dir}images/dev/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="#{dir}images/dev/ca-logo-hz-white-280px.svg")
+						img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='#{dir}../images/dev/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="#{dir}../images/dev/ca-logo-hz-white-280px.svg")
 
 					.main-header__links(data-track-zone="top-bar")
 						a.main-header__menu-link.js-toggle-menu(href="")
@@ -164,8 +133,8 @@ html.no-js
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;#{dir}images/dev/ca-logo_100px.svg.png&#39;;", src="#{dir}images/dev/ca-logo_100px.svg")
-					img.print-only.logo(src="#{dir}images/dev/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;#{dir}../images/dev/ca-logo_100px.svg.png&#39;;", src="#{dir}../images/dev/ca-logo_100px.svg")
+					img.print-only.logo(src="#{dir}../images/dev/ca-logo-hz-280px.svg")
 
 		else if logoutheader
 			aside.section-notice__login
@@ -175,14 +144,14 @@ html.no-js
 			header.main-header
 				.main-header__content.main-content
 					a.main-header__logo.no-print(href="index.html", title="Citizens Advice home")
-						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/#{dir}images/dev/logos/ca-logo_100px.svg.png&#39;;", src="#{dir}images/dev/ca-logo_100px.svg")
-					img.print-only.logo(src="#{dir}images/dev/ca-logo-hz-280px.svg")
+						img(alt="Citizens Advice", onerror="this.onerror=null;this.src=&#39;/Static/#{dir}../images/dev/logos/ca-logo_100px.svg.png&#39;;", src="#{dir}../images/dev/ca-logo_100px.svg")
+					img.print-only.logo(src="#{dir}../images/dev/ca-logo-hz-280px.svg")
 
 		else if blog
 			header.blog-header
 				.blog-header--content
 					a(href="blog-home.html", style="border: none;")
-						img(src="#{dir}images/dev/ca-logo-hz-white-280px.svg")
+						img(src="#{dir}../images/dev/ca-logo-hz-white-280px.svg")
 
 					#toggle
 					ul.blog-navigation
@@ -200,7 +169,7 @@ html.no-js
 				.styleguide--header--content
 					a#issuereport.btn-white.btn-small(href="https://github.com/citizensadvice/cab-ui/issues/new") Give feedback
 					a(href="#{dir}index.html", style="border: none;")
-						img(src="#{dir}images/dev/ca-logo-hz-white-280px.svg")
+						img(src="#{dir}../images/dev/ca-logo-hz-white-280px.svg")
 					a#repo(href="https://github.com/citizensadvice/cab-ui", style="border: none;") v2.1.4
 
 		.main-container
@@ -217,7 +186,7 @@ html.no-js
 								h1.title__heading.js-ref
 									span.title__title #{title}
 						if toolbars
-							include toolbar.jade
+							include partials/toolbar.jade
 							block content
 							if sharebar
 								include partials/sharebar.jade
@@ -276,7 +245,7 @@ html.no-js
 
 					.footer--legal
 						.footer--legal--content
-							img(alt="", src="#{dir}images/dev/ca_wo-logo-100px.svg")
+							img(alt="", src="#{dir}../images/dev/ca_wo-logo-100px.svg")
 							p
 								| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
 								br
@@ -311,7 +280,7 @@ html.no-js
 
 					.footer--legal
 						.footer--legal--content
-							img(alt="", src="#{dir}images/dev/ca_wo-logo-100px.svg")
+							img(alt="", src="#{dir}../images/dev/ca_wo-logo-100px.svg")
 							p
 								| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
 								br
@@ -405,7 +374,7 @@ html.no-js
 						.main-footer__box.main-footer__box--copyright
 							div
 								p
-									img(alt="", height="100", src="#{dir}images/dev/ca-logo_100px.svg", width="100")
+									img(alt="", height="100", src="#{dir}../images/dev/ca-logo_100px.svg", width="100")
 									| Copyright © 2016 Citizens Advice. All rights reserved.
 									br
 									| Citizens Advice is an operating name of the National Association of Citizens Advice Bureaux. Registered charity number 279057
@@ -418,7 +387,7 @@ html.no-js
 			#footer.main-footer(data-track-zone="footer")
 				.footer--legal
 					.footer--legal--content
-						img(alt="", src="#{dir}images/dev/ca_wo-logo-100px.svg")
+						img(alt="", src="#{dir}../images/dev/ca_wo-logo-100px.svg")
 						p
 							| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
 							br

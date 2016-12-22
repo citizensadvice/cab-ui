@@ -1,0 +1,23 @@
+include mixins.jade
+block settings
+doctype html
+html.no-js
+	head
+		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+
+		title Citizens Advice style guide
+			- if (typeof title !== "undefined")
+				| - #{title}
+
+		// Mobile Specific Metas
+		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
+
+		// Stylesheets
+		link(href="#{dir}css/dev.css", rel="stylesheet")
+
+		script
+			include ../../../js/head.js
+
+		block head

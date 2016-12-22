@@ -1,29 +1,4 @@
-
-include mixins.jade
-block settings
-doctype html
-html.no-js
-	head
-		meta(content="text/html; charset=utf-8", http-equiv="Content-Type")
-		meta(charset="utf-8")
-		meta(content="IE=edge", http-equiv="X-UA-Compatible")
-		meta(name="keywords")
-		meta(name="description")
-
-		title
-			- if (typeof title !== "undefined")
-				| #{title}
-
-		// Mobile Specific Metas
-		meta(content="width=device-width, initial-scale=1, maximum-scale=2.0", name="viewport")
-		meta(content="#{dir}static/images/dev/apple-touch-icon.png")
-
-		// Stylesheets
-		link(href="#{dir}css/dev.css", rel="stylesheet")
-		link(href="#{dir}images/dev/favicon/32.png", rel="shortcut icon")
-		link(href="#{dir}images/dev/favicon/228.png", rel="apple-touch-icon")
-
-		block head
+include partials/header
 
 	body
 		<!--[if IE 8]><div class="ie8"><![endif]-->
