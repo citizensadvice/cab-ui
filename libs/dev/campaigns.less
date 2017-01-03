@@ -1,3 +1,37 @@
+.info-text-l {
+	padding: 1em;
+	margin-bottom: 3em;
+}
+
+.info-text-r {
+	padding: 1em;
+	text-align: right;
+		@media (max-width: 600px) {
+      background-color: @heritage-blue-lightest;
+    }
+    margin-bottom: 3em;
+}
+
+.info-text-lg {
+	font-size: 4.8rem;
+	color: @heritage-blue;
+	margin-top: 0.4rem;
+	margin-bottom: 0.8rem;
+	line-height: 0.8;
+	font-weight: 800;
+}
+
+.info-text-md {
+	font-size: 1.6rem;
+	color: @heritage-blue;
+	font-weight: 500;
+}
+
+.info-text-sm {
+	font-size: 1rem;
+	color: @gray-0;
+}
+
 .facebook-button-icon {
     .btn-icon(@i-facebook);
 }
@@ -148,6 +182,26 @@
 			}
 		}
 	}
+}
+
+.feature-quote (
+        @speech-line-color: @heritage-blue;
+        @speech-line-size: @box-spacing*.5;
+    )  {
+    border-bottom: @speech-line-size solid @speech-line-color;
+    padding-bottom: .75rem;
+    margin-bottom: 2rem;
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: 700;
+        font-size: @font-size-larger;
+        color: @speech-line-color;
+    }
+    p {
+        font-weight: @font-weight-bold;
+    }
 }
 
 .sharing {

@@ -1,11 +1,84 @@
 block settings
-	- var title = "Join the digital team"
+	- var title = "Regulating high cost credit"
 	- var sidebar = true
 	- var dir = "../../"
-	- var blogname = "Digital Blog"
+	- var blogname = "Regulating high cost credit"
 	//- var blog = true
 	- var nofooter = true
 
+block script
+	script.
+		$(function () {
+			var chart = new Highcharts.Chart({
+				// Make sure to include this string of brand colours
+				colors: ['#f8a980', '#ffbf47', '#b9db9b', '#a5bddc', '#b5afd7', '#81cec6', '#f499be', '#e76568', '#87c3d0'],
+				chart: {
+					type: 'pie',
+					renderTo: 'pie-chart',
+					backgroundColor:'rgba(255,255,255,0)'
+				},
+				title: {
+					text: 'Pie chart'
+				},
+				tooltip: {
+					formatter: function () {
+						return this.point.name + ': <b>£' + this.y + '</b>';
+					}
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: false,
+						cursor: 'pointer',
+						showInLegend: false
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				series: [{
+					name: 'Income',
+					colorByPoint: true,
+					data: [{
+						name: 'Source 1',
+						y: 144
+					}, {
+						name: 'Source 2',
+						y: 59
+					}, {
+						name: 'Source 3',
+						y: 210
+					}, {
+						name: 'Source 4',
+						y: 64
+					}, {
+						name: 'Source 5',
+						y: 102
+					}, {
+						name: 'Source 6',
+						y: 88
+					}, {
+						name: 'Source 7',
+						y: 31
+					}, {
+						name: 'Source 8',
+						y: 75
+					}, {
+						name: 'Source 9',
+						y: 163
+					}],
+					dataLabels: {
+						formatter: function () {
+							return this.point.name + ' £' + this.y;
+						}
+					}
+				}],
+				navigation: {
+					buttonOptions: {
+						enabled: false
+					}
+				}
+			});
+		});
 extends /template/template-site.jade
 
 block sidebar
@@ -15,37 +88,85 @@ block content
 	.articleContent
 		.flex-row
 			.col-12
+				div#pie-chart
 
 			.col-12
-				p #[strong “We design content and tools to help the most vulnerable in society - who face increasing problems in today&#39;s world.”]
+				p #[strong New city Agenda report highlights the successes but points to the risk that in the new environment the regulator is at risk of becoming ‘timid and cowed.’]
 
-				p That’s what one person said when we asked our digital team what it’s like to work at Citizens Advice recently, and it sums up why we think the team is so special. Our work can make a real difference to people at difficult times in their lives. We help people solve problems - and, as another person put it, we are “doing something with a positive social purpose, not just aimed at achieving more traffic or selling things.”
+				p One of those successes has been the regulation of payday lending - the introduction of a price cap meaning that people using payday loans can’t pay back more than twice what they borrowed. Since its introduction, the number of people pushed into problem debt by payday loans has more than halved and XX of payday lenders have left the market completely.
 
-				p Citizens Advice is doing important digital work: we are designing content and tools for challenges that haven’t been solved before, like helping people fill out claim forms for Personal Independence Payment or Employment and Support Allowance.
+				p The regulator can build on that success by protecting consumers in similar markets where problems remain. At its peak in XXXX, XXXX people used payday loans, many more use other types of high-cost credit where the price is not uncapped:
 
-				p Our team is collaborative. Join us and you’ll get the chance to:
+		.flex-row
+			.col-sm-6
+				.sil-image
+					img(src="#{dir}images/campaigns/laptop-800.png" align="center" style="border:none;")
+			.col-sm-6
+				p People do not opt for expensive products because they do not know any better, or are somehow reckless or irresponsible. They do so because they have no choice. And that is a national embarrassment.
+		.flex-row
+			.col-sm-6
+				.info-text-l
+					.info-text-md Doorstep lenders,
+					.info-text-sm such as The Provident, charging
+					.info-text-md interest rates of up to
+					.info-text-lg 535%
+					.info-text-sm still provide loans to around 2.4m people.
+			.col-sm-6
+				.info-text-r
+					.info-text-md The rent to own sector,
+					.info-text-sm which through inflated prices, expensive add-on features and interest rates of
+					.info-text-lg 99.9%
+					.info-text-sm provides credit to around
+					.info-text-md 400,000 people.
+		.flex-row
+			.col-sm-6
+				.info-text-l
+					.info-text-md Guarantor lenders,
+					.info-text-sm which lock not only hard-up borrowers into
+					.info-text-md expensive credit deals,
+					.info-text-sm but their friends and family members, often with little understanding of their liability, provides credit to
+					.info-text-lg 53,000 people.
+			.col-sm-6
+				.info-text-r
+					.info-text-md Logbook lenders
+					.info-text-sm provide loans where a loan is secured against property, normally a car.
+					.info-text-md Logbook loans charge as much as
+					.info-text-lg 450%
+					.info-text-md in interest
+					.info-text-sm and provided loans to 52,000 people in 2014.
+		.flex-row
+			.col-sm-6
+				.info-text-l
+					.info-text-md Catalogue and mail order
+					.info-text-sm companies offer
+					.info-text-md'buy now pay later'
+					.info-text-sm deals that charge interest rates of up to
+					.info-text-lg 70%
+					.info-text-sm and often backdate interest where a customer can’t pay the full balance in time.
+			.col-sm-6
+				.info-text-r
+					.info-text-sm Around 4 million people use
+					.info-text-md high-cost credit cards
+					.info-text-sm - with an interest rate of above
+					.info-text-lg 30%,
+					.info-text-sm a quarter of them are in potential problem debt (PWC also estimate 4 million).
+		.flex-row
+			.col-sm-6
+				.sil-image
+					img(src="#{dir}images/campaigns/credit_cards_470.gif" align="center" style="border:none;")
+			.col-sm-6
+				p People need to be protected from the impact of high-cost credit on their finances. High -cost credit, particularly where people use it in a way which means they are paying interest over long-periods of time reduces household incomes often pushing them into poverty.
+		.flex-row
+			.col-sm-6
+				p High debt payments remove control to respond to income and expenditure shocks - have to be paid and unlike present consumption cannot be reduced (see notes on volatility) which might explain relationship with distress (FCA) -- good paper on this 
+			.col-sm-6
+				.sil-image
+					img(src="#{dir}images/campaigns/letter_box_470.gif" align="center" style="border:none;")
 
-				p work in a multi-disciplinary team, learning from your colleagues and other parts of the organisation take part in user research and testing, seeing the difference your work can make to real people. We work in an experimental, agile way - it’s okay to fail fast and learn early from any mistakes.
-
-				div(style="background-color: #F2F2F2; padding: 1rem;")
-					h3(style="margin-top: 0;") Available roles
-
-					section.revealable
-						h3 Content Design
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-					section.revealable
-						h3 UX Design
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-					section.revealable
-						h3 Research
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada mattis euismod. In varius nisl vel ex eleifend, eget pellentesque sem feugiat. Ut tristique, augue eget pellentesque rutrum, justo nunc convallis leo, tempor rhoncus lacus metus efficitur odio. Phasellus metus erat, condimentum sit amet leo ac, viverra consectetur lorem.
-
-					h3 Job alerts by email
-					fieldset(style="margin-bottom: 0;")
-						.field-group.field-group--buttons
-							input(type="text", placeholder="Email")
-							button.btn.btn-primary Go
-
+		.flex-row
+			.col-sm-12
+				.callout--alert
+					p People do not opt for expensive products because they do not know any better, or are somehow reckless or irresponsible. They do so because they have no choice. And that is a national embarrassment.
 		.flex-row
 			.col-sm-6
 				.stats(style="margin: 2rem 0;")
@@ -57,32 +178,10 @@ block content
 					.i-brand &#xe993;
 					h3 20.7m
 					p people assisted via our website
-				.fullwidth-blue
-					p xxxxxx
-					p xxxx
-
 
 		.flex-row
 			.col-sm-12
-				p(style="position: relative;padding-bottom: 52.1%; padding-top: 25px;height: 0;")
-					iframe(src="https://www.youtube.com/embed/jtLJKyNLV_E", frameborder="0", allowfullscreen, style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;")
-
-		.flex-row
-			.col-sm-1
-			.col-sm-10
-				div(style="margin: 1rem 0 2rem 0; overflow: hidden;")
-					.speech-lines
+				div(style="background-color: #F2F2F2; padding: 1rem;")
+					.feature-quote
 						h3(style="margin-top: 0;") Excellent information. Clear, practical advice. Thank you.
 						p.cite Website user
-						.box-speech-line
-			.col-sm-1
-
-		.flex-row
-			.col-sm-8
-				h3(style="margin-top: 0;") Flexible working
-				.blog-lead
-					.blog-name
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimdod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-			.col-sm-4
-				img(src="#{dir}/images/charity-times-winner.jpg", style="max-height: 200px; border: none;")
