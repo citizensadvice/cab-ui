@@ -9,52 +9,40 @@ The style guide is available on http://citizensadvice.github.io/cab-ui/
 ### Folder structure
 
 ```
-.
-+-- lib
-|	+-- styles
-|	|	+-- base                Files that do not compile on their own (except /vendor) :eg: variables.less
-|	|	|	+-- mixins          Mixins that do not compile on their own :eg: mixin-buttons.less
-|	|	|	+-- vendor          Vendor styles :eg: prism.css
-|	|	|	+-- print           Print styles
-|	|	|
-|	|	+-- components          Micro layout styles :eg: lists, type
-|	|	|
-|	|	+-- modules             Visual styles :eg: callouts.less
-|	|	|
-|	|	+-- theme               Project specific modules :eg: mega-menu
-|	|	|
-|	|	+-- docs                Documentation specific modules :eg: swatches.less
-|	|	|
-|	|	+-- dev                 Modules in development :eg: energy-comparison.less
-|	|	|	+-- theme           Theme modules in development :eg: feedback.less
-|	|	|
-|	|	+-- styles.less         Import base/, components/, layouts/ and modules/
-|	|	+-- site.less           Import styles.less and theme/
-|	|	+-- dev.less            Import site.less and dev/ and docs/
-|	|
-|	+-- assets
-|	|	+-- fonts
-|	|	+-- images
-|	|		+-- theme			Theme specific assets, such as images
-|	|		+-- dev				Assets for features in development, such as images
-|	|
-|	+-- jade					Jade files for documentation
-|	|	+-- dev					Jade files for development features
-|	|	+-- partials			Partial files for Jade templates
-|	|
-|	+-- js						Un-concatonated JavaScript files
-|		+-- vendor				Vendor JavaScript files
-|		+-- dev					JavaScript in development
-|
-+-- samples						A sample gulp setup for new projects using cab-ui
-|	+-- package.json
-|	+-- gulpfile.js
-|
-+-- public						Public folder that all files compile into
-|	+-- js						Currently where JavaScript is kept (yet to move into libs)
-|
-+-- package.json				Node.js dependancies for the build process
-+-- gulpfile.js					Defines the build process
+cab-ui
+├── lib
+|	├── styles
+|	|	├── base                Files that do not compile on their own (except /vendor) :eg: variables.less
+|	|	|	├── mixins          Mixins that do not compile on their own :eg: mixin─buttons.less
+|	|	|	├── vendor          Vendor styles :eg: prism.css
+|	|	|	└── print           Print styles
+|	|	├── components          Micro layout styles :eg: lists, type
+|	|	├── modules             Visual styles :eg: callouts.less
+|	|	├── theme               Project specific modules :eg: mega─menu
+|	|	├── docs                Documentation specific modules :eg: swatches.less
+|	|	├── dev                 Modules in development :eg: energy─comparison.less
+|	|	|	└── theme           Theme modules in development :eg: feedback.less
+|	|	├── styles.less         Import base/, components/, layouts/ and modules/
+|	|	├── site.less           Import styles.less and theme/
+|	|	└── dev.less            Import site.less and dev/ and docs/
+|	├── assets
+|	|	├── fonts
+|	|	└── images
+|	|		├── theme			Theme specific assets, such as images
+|	|		└── dev				Assets for features in development, such as images
+|	├── jade					Jade files for documentation
+|	|	├── dev					Jade files for development features
+|	|	└── partials			Partial files for Jade templates
+|	└── js						Un─concatonated JavaScript files
+|		├── vendor				Vendor JavaScript files
+|		└── dev					JavaScript in development
+├── samples						A sample gulp setup for new projects using cab─ui
+|	├── package.json
+|	└── gulpfile.js
+├── public						Public folder that all files compile into
+|	└── js						Currently where JavaScript is kept (yet to move into libs)
+├── package.json				Node.js dependancies for the build process
+└── gulpfile.js					Defines the build process
 ```
 
 ## Including in a project
