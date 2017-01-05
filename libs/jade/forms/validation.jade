@@ -6,7 +6,7 @@ block settings
     //- var mockup = true
     - var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
     +breadcrumbs([
@@ -15,7 +15,7 @@ block breadcrumbs
         {title: "Validation"}])
 
 block sidebar
-    include /template/sidebar-forms.jade
+    include /jade/templates/partials/sidebar-forms.jade
 
 //block section-notice
     aside.section-notice

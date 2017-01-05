@@ -1,0 +1,54 @@
+include partials/header
+
+	body
+		header.main-header.email-header
+			.main-header__content.email-width
+				a.main-header__logo(href="index.html", title="Citizens Advice home")
+					img(onerror="this.onerror=null;this.src='#{dir}../images/dev/logos/ca-logo_100px.svg.png';", alt="Citizens Advice", src="#{dir}../images/dev/ca-logo_100px.svg" height="80")
+
+					img.main-header__img--mobile.no-print.wide(onerror="this.onerror=null;this.src='#{dir}../images/dev/logos/ca-logo-hz-white-280px.svg.png';", alt="Citizens Advice", src="#{dir}../images/dev/ca-logo-hz-white-280px.svg")
+
+
+		.main-container
+			nav.main-breadcrumb
+				block breadcrumbs
+
+			.main-content.email-width
+				.main-content__right(id="main", role="main")
+				block content
+
+
+		#footer.main-footer(data-track-zone="footer")
+			.footer-content.flex-row
+			.footer--legal
+				.footer--legal--content
+					img(alt="", src="#{dir}../images/dev/ca_wo-logo-100px.svg")
+					p
+						| Copyright © 2016 Citizens Advice, an operating name of the National Association of Citizens Advice Bureaux.
+						br
+						| Registered charity number 279057; Registered in England 1436945; VAT number GB726020276. 3rd Floor North, 200 Aldersgate, London, EC1A 4HD
+						br
+						| Click here to #[a(href="#" style="color:#fff; text-decoration:underline;") unsubscribe] from receiving any emails.
+
+		// Code changed, not using here as implimented through cms
+		//.notice
+			.notice__content
+				p We no longer support Internet Explorer 8. To avoid problems viewing this website, please consider #[a.a-external-link(href="http://browsehappy.com/") upgrading your browser].
+
+		<!--[if IE 8]></div><![endif]-->
+		script(src="#{dir}js/vendor/jquery-1.11.3.min.js")
+		script(src="#{dir}js/translate.js")
+		script(src="#{dir}js/jquery.fn.cssSlide.js")
+		script(src="#{dir}js/revealable.js")
+		script(src="#{dir}js/prism.js")
+		script(src="#{dir}js/smooth.js")
+		script(src="#{dir}js/jquery.fn.top-sticky.js")
+		//script(src="#{dir}js/advisor.js")
+		script(src="#{dir}js/sidebar.js")
+		//script(src="#{dir}js/core.js")
+		script.
+			var filename = document.location.pathname.match(/[^\/]+$/)[0];
+			$(document).ready(function() {
+				$('.section-nav a[href*="' + filename + '"]').addClass('active');
+			});
+		block script

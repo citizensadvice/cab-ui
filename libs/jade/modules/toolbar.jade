@@ -6,7 +6,7 @@ block settings
 	//- var sharebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -15,7 +15,7 @@ block breadcrumbs
 		{title: "Content toolbar"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /jade/templates/partials/sidebar-modules.jade
 
 block content
 	.articleContent

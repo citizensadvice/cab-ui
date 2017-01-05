@@ -6,6 +6,7 @@ block settings
 	//- var blog = true
 	- var nofooter = true
 
+extends /jade/templates/template-site.jade
 block script
 	script.
 		$(function () {
@@ -79,10 +80,9 @@ block script
 				}
 			});
 		});
-extends /template/template-site.jade
 
 block sidebar
-	include /template/sidebar-site-content.jade
+	include /jade/templates/partials/sidebar-site-content.jade
 
 block content
 	.articleContent

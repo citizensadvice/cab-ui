@@ -4,7 +4,7 @@ block settings
 	- var sidebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -13,7 +13,7 @@ block breadcrumbs
 		{title: "Cookie Monster"}])
 
 block sidebar
-	include /template/sidebar-features.jade
+	include /jade/templates/partials/sidebar-features.jade
 
 block content
 	.articleContent

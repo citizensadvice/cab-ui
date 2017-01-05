@@ -3,7 +3,7 @@ block settings
 	- var sidebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -12,7 +12,7 @@ block breadcrumbs
 		{title: "Tables"}])
 
 block sidebar
-	include /template/sidebar-styles.jade
+	include /jade/templates/partials/sidebar-styles.jade
 
 block script
 	script(src="#{dir}js/table-collapse.js")
