@@ -28,21 +28,21 @@ cab-ui
 |	├── assets
 |	|	├── fonts
 |	|	└── images
-|	|		├── theme			Theme specific assets, such as images
-|	|		└── dev				Assets for features in development, such as images
-|	├── jade					Jade files for documentation
-|	|	├── dev					Jade files for development features
-|	|	└── partials			Partial files for Jade templates
-|	└── js						Un─concatonated JavaScript files
-|		├── vendor				Vendor JavaScript files
-|		└── dev					JavaScript in development
-├── samples						A sample gulp setup for new projects using cab─ui
+|	|		├── theme           Theme specific assets, such as images
+|	|		└── dev             Assets for features in development, such as images
+|	├── jade                    Jade files for documentation
+|	|	├── dev                 Jade files for development features
+|	|	└── partials            Partial files for Jade templates
+|	└── js                      Un─concatonated JavaScript files
+|		├── vendor              Vendor JavaScript files
+|		└── dev                 JavaScript in development
+├── samples                     A sample gulp setup for new projects using cab─ui
 |	├── package.json
 |	└── gulpfile.js
-├── public						Public folder that all files compile into
-|	└── js						Currently where JavaScript is kept (yet to move into libs)
-├── package.json				Node.js dependancies for the build process
-└── gulpfile.js					Defines the build process
+├── public                      Public folder that all files compile into
+|	└── js                      Currently where JavaScript is kept (yet to move into libs)
+├── package.json                Node.js dependancies for the build process
+└── gulpfile.js                 Defines the build process
 ```
 
 ## Including in a project
