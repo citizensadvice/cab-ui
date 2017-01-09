@@ -88,12 +88,13 @@
     .billing,
     .switching,
     .commitment {
-        display: none;
+        display: table-cell;
         color: @heritage-blue;
+		width: 11%;
         //font-weight: @font-weight-bold;
-        @media screen and (min-width: @breakpoint-md) {
-            display: table-cell;
-            width: 11%;
+        @media screen and (max-width: (@breakpoint-md - 1)) {
+            display: none;
+			width: auto;
         }
         @media screen and (min-width: @breakpoint-lg) {
             width: 12%;
