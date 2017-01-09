@@ -32,12 +32,17 @@
 
 	/* Max width prevents the dialog being wider than the screen */
 	max-width: 80%;
-	width: 40em;
+	width: 40rem;
 
+	height: 80%;
 	/* Max height prevents the dialog being taller than the screen */
 	max-height: 80%;
 	/* Don't use height if you want to resize according to the content */
 	//height: 20em;
+	// Filthy IE9+ hack
+	@media screen and (~"min-width:0\0") and (min-resolution: +72dpi) {
+		height: 25rem;
+	}
 
     @media( max-width: @screen-xs-max ) {
         max-width: 95%;
@@ -54,7 +59,8 @@
 	justify-content: space-between;
 }
 
-.dialog--absolute {
+.dialog--absolute,
+.ie8 .dialog {
 	/* Added if the browser doesn't support fixed */
 	position: absolute;
 	top: 5%;
@@ -63,6 +69,13 @@
 	left: 5%;
 	width: auto;
 	height: auto;
+
+	/* Additional fixes */
+	overflow: auto;
+	max-width: 100%;
+	.dialog__close {
+		top: 0%;
+	}
 }
 
 .dialog__header {
@@ -135,6 +148,11 @@
 	-webkit-flex-grow: 2;
 	-ms-flex-positive: 2;
 	flex-grow: 2;
+
+	// Filthy IE9+ hack
+	@media screen and (~"min-width:0\0") and (min-resolution: +72dpi) {
+		height: 21rem;
+	}
 }
 
 .dialog__footer {
