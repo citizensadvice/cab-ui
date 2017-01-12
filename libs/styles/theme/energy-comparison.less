@@ -127,7 +127,7 @@
 
 .switch-logo {
     border: none !important;
-    max-height: 2.25rem;
+    height: 2.25rem !important; // This needs to be important because in rare IE cases it ignores the height without it and stretches the image very badly
     vertical-align: bottom;
     display: block;
     margin-top: .5rem;
@@ -218,7 +218,7 @@
 
 .small-stars {
     border: none !important;
-    max-height: .6rem;
+    height: .6rem !important; // This needs to be important because in rare IE cases it ignores the height without it and stretches the image very badly
 }
 
 #sorttable_sortfwdind,
