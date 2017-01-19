@@ -7,7 +7,7 @@ block settings
     - var fullpage = true
     - var nofooter = true
 
-extends /template/template-site.jade
+extends /jade/templates/template-site.jade
 block script
     script(src="#{dir}js/vendor/highcharts/highcharts.js")
     script(src="#{dir}js/vendor/highcharts/modules/exporting.js")
@@ -233,7 +233,7 @@ block script
 
 
 block sidebar
-    include /template/sidebar-blog.jade
+    include /jade/templates/partials/sidebar-blog.jade
 
 block content
     .fullwidth
@@ -322,11 +322,11 @@ block content
                     p "How much money people are paid is important to them but our research reveals the security of that income is also vital. Knowing how many hours you’ll be asked to work and when, if you’re entitled to sick leave or holiday pay, and whether you’ll still have a job in six months’ time are all key to feeling secure."
                     p “Without income security, budgeting can be impossible and people struggle to save or plan for their futures.”
                 .col-md-4
-                    img(src="#{dir}images/icons/dialogue_happy.svg" style="max-width:20%; margin-top:2rem;")
+                    img(src="#{dir}images/dev/icons/dialogue_happy.svg" style="max-width:20%; margin-top:2rem;")
                     .data-display
                         h3 84%
                         p of people say a steady income helps them cope with stress
-                    img(src="#{dir}images/icons/graph_rising.svg" style="max-width:20%; margin-top:2rem;")
+                    img(src="#{dir}images/dev/icons/graph_rising.svg" style="max-width:20%; margin-top:2rem;")
                     .data-display
                         h3 83%
                         p of people say a steady income increases productivity

@@ -1,0 +1,158 @@
+/***************************************************************************
+* Cards
+* Boxes for captions, links, callouts, not related to content
+*/
+
+
+.cards {
+    border: .0625rem solid @gray-7;
+    border-radius: .25rem;
+    margin-bottom: .75rem;
+    box-shadow: 0 2px 0 0 @gray-7,0 1px 3px 0 @gray-7;
+    background-color: @white;
+    overflow: hidden;
+    &--basic {
+        padding: 1rem; 
+    }
+    &--heritage {
+        padding: 1rem; 
+        background-color: @heritage-yellow;
+        h1, h2, h3, h4, h5, h6 {
+            color: @heritage-blue;
+            margin-top: 0;
+        }
+    }
+    &--responsible {
+        padding: 1rem; 
+        background-color: @responsible-aqua;
+        h1, h2, h3, h4, h5, h6 {
+            color: @responsible-purple;
+            margin-top: 0;
+        }
+    }
+    &--inventive {
+        padding: 1rem; 
+        background-color: @inventive-pink;
+        h1, h2, h3, h4, h5, h6 {
+            color: @inventive-teal;
+            margin-top: 0;
+        }
+    }
+    &--generous {
+        padding: 1rem; 
+        background-color: @generous-mauve;
+        h1, h2, h3, h4, h5, h6 {
+            color: @generous-green;
+            margin-top: 0;
+        }
+    }
+    .card-banner-top {
+        border-radius: @form-border-radius @form-border-radius 0 0;
+        >:first-child {
+            padding: 1rem 0 1rem 1rem;
+            margin: 0;
+            border-radius: @form-border-radius;
+            font-size: @font-size-medium;
+        }
+        & + .card-text {
+            padding-top: 0;
+        }
+    }
+    .card-image-top {
+        img {
+            border-radius: 0;
+            border: solid @gray-7;
+            border-width: 0;
+        }
+    }
+    .card-image-left {
+        img {
+            border-radius: @form-border-radius 0 0 0;
+            border: solid @gray-7;
+            border-width: 0;
+        }
+    }
+    .card-text-left {
+        padding: 1rem 1rem 1rem 0;
+        >:first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+    .card-text {
+        padding: 1rem;
+        >:first-child {
+            padding-top: 0rem;
+            margin-top: 0rem;
+        }
+    }
+}
+
+.cards-branding--teal {
+    .cards;
+    color: @white;
+    background-color: @inventive-teal;
+}
+
+.cards-branding--aqua {
+    .cards;
+    color: @responsible-purple;
+    background-color: @responsible-aqua;
+    h3 {
+        color: @responsible-purple;
+    }
+    button {
+        background-color: @responsible-purple;
+        border-color: @responsible-purple;
+        color: @white;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken(@responsible-purple, 10%);
+            border-color: darken(@responsible-purple, 10%);
+            color: @white;
+        }
+    }
+}
+
+.cards-branding--purple {
+    .cards;
+    color: @white;
+    background-color: @purple-dark;
+    h3 {
+        color: @white;
+    }
+    button {
+        background-color: @heritage-yellow;
+        border-color: @heritage-yellow;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: darken(@heritage-yellow, 10%);
+            border-color: darken(@heritage-yellow, 10%);
+        }
+    }
+}
+
+// For mockup of old home search
+.cards-branding--yellow_old {
+    .cards;
+    padding: 1rem;
+    margin-top: 0;
+    color: @heritage-blue;
+    background-color: @heritage-yellow;
+    padding-bottom: 0px;
+    //background: @heritage-yellow url('./images/dev/local/magnifying-glass.svg') no-repeat bottom;
+    //background-position: center -50px;
+    //border: none;
+    h2 {
+        margin-top: 0;
+        font-size: @font-size-largest;
+        font-weight: @font-weight-boldest;
+        color: @heritage-blue;
+    }
+    img {
+        border: 0;
+        margin-bottom: -10px;
+    }
+}

@@ -3,7 +3,7 @@ block settings
 	- var sidebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -12,7 +12,7 @@ block breadcrumbs
 		{title: title}])
 
 block sidebar
-	include /template/sidebar-navigation.jade
+	include /jade/templates/partials/sidebar-navigation.jade
 
 block content
 	.articleContent
@@ -22,7 +22,7 @@ block content
 
 			p This is vertical navigation on the right hand side or top of the page on desktops. It’s used alongside content and contains sibling pages. When a sidebar navigation isn’t used on a content page, the content should not extend further than the main-content width.
 
-			img(src="#{dir}images/sidebar-example.svg")
+			img(src="#{dir}images/dev/sidebar-example.svg")
 
 			h2 Mobile sidebar
 
@@ -30,6 +30,6 @@ block content
 
 			p The title of the section nav, that groups the list of sibling pages needs to link back to the previous page.
 
-			img(src="#{dir}images/sidebar-mobile-example.svg")
+			img(src="#{dir}images/dev/sidebar-mobile-example.svg")
 
 

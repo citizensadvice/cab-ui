@@ -1,0 +1,20 @@
+// Sidebar for combined content mockups
+
+- var section = "Sick pay"
+nav.section-nav
+	h2.section-nav__heading
+		a In this section
+	ul
+		li
+			a.section-nav__parent(href="../##{section}") #{section}
+			+sidebar-inline([
+				{href: "entitled-to-sick-pay.html", title: "Check if you're entitled to sick pay"},
+				{href: "how-to-get-sick-pay.html", title: "How to get sick pay"},
+				{href: "getting-money-when-youre-off-sick.html", title: "Getting money when you're off work sick"},
+				{href: "sick-pay-when-youre-pregnant.html", title: "Getting sick pay when you're pregnant"},
+			])
+		li.adviser-nav
+			span.section-nav__parent #{section}
+			+sidebar-inline-adviser([
+				{href: "contractual-sick-pay.html", title: "Contractual sick pay"}
+			])

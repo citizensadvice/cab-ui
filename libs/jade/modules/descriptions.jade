@@ -3,7 +3,7 @@ block settings
 	- var sidebar = true
 	- var dir = "../"
 
-extends /template/template.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -12,7 +12,7 @@ block breadcrumbs
 		{title: "Descriptions"}])
 
 block sidebar
-	include /template/sidebar-modules.jade
+	include /jade/templates/partials/sidebar-modules.jade
 
 block content
 	.articleContent
@@ -29,12 +29,12 @@ block content
 			.example-box-plain
 				label Caption
 				figure
-					img(src="images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
+					img(src="images/dev/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice")
 					figcaption Advisers being trained in a local Citizens Advice.
 			pre
 				code.language-html
 					| &lt;figure&gt;
-					| &lt;img src="assets/images/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"&gt;
+					| &lt;img src="assets/images/dev/CAB-training-session.jpg" alt="Advisers being trained in a local Citizens Advice"&gt;
 					| &lt;figcaption&gt;Advisers being trained in a local Citizens Advice.&lt;/figcaption&gt;
 					| &lt;/figure&gt;
 
@@ -46,9 +46,9 @@ block content
 			.example-box-plain
 				label Alt
 				figure
-					img(src="images/PIP2-form-Q3b.jpg" alt="PIP Form question 3b. Do you need help from another person to prepare or cook a simple meal?")
+					img(src="images/dev/PIP2-form-Q3b.jpg" alt="PIP Form question 3b. Do you need help from another person to prepare or cook a simple meal?")
 			pre
 				code.language-html
 					| &lt;figure&gt;
-					| &lt;img src="assets/images/PIP2-form-Q3b.jpg" alt="PIP Form question 3b. Do you need help from another person to prepare or cook a simple meal?"&gt;
+					| &lt;img src="assets/images/dev/PIP2-form-Q3b.jpg" alt="PIP Form question 3b. Do you need help from another person to prepare or cook a simple meal?"&gt;
 					| &lt;/figure&gt;

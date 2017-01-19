@@ -4,11 +4,9 @@ robots.txt
 public
 
 # Dev styles
-libs/guide.less
-libs/tools.less
-libs/dev
-libs/guide
+libs/styles/dev.less
+libs/styles/dev
+libs/styles/docs
 
 # Jade
 libs/jade
-libs/template

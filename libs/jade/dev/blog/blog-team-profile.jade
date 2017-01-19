@@ -6,14 +6,14 @@ block settings
 	- var blog = true
 	- var nofooter = true
 
-extends /template/template-site.jade
+extends /jade/templates/template-site.jade
 
 block sidebar
-	include /template/sidebar-blog.jade
+	include /jade/templates/partials/sidebar-blog.jade
 
 block content
 	.articleContent
-		img.avatar-left(src="#{dir}images/sample-blog/avatar.png" alt="That Person")
+		img.avatar-left(src="#{dir}images/dev/sample-blog/avatar.png" alt="That Person")
 
 		h2 Digital Mechanic
 

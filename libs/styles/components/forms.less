@@ -1,0 +1,706 @@
+/**
+ * FORMS
+ */
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+//
+// 'Borrowed' from Bootstrap v4
+//
+// Basic form styling
+
+// Buttons
+
+.optional {
+    color: @gray-2;
+    font-weight: @font-weight-base;
+}
+
+form small {
+    color: @gray-3;
+}
+
+div.invalid,
+span.invalid {
+    padding-top: @box-spacing/4;
+    clear: both;
+    color: @red;
+}
+.well--outline.invalid {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    color: @black;
+    border-color: @red;
+    ul,
+    li,
+    h3,
+    a {
+        color: @red;
+    }
+}
+
+fieldset, .fieldset,
+.form__group {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    margin-bottom: @box-spacing;
+    clear: both;
+}
+
+label,
+legend,
+.form__label {
+    display: block;
+    max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+    //margin-bottom: 5px;
+    margin-bottom: @box-spacing*.5;
+    font-weight: @font-weight-bolder;
+}
+.form__label--inline {
+    display: inline-block;
+}
+
+.form__label--hidden {
+    .screenreader;
+}
+
+.form-hint {
+    display: block;
+    color: @gray-2;
+    margin-bottom: @box-spacing*.5;
+    margin-top: -@box-spacing*.5;
+    font-weight: @font-weight-base;
+}
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=search] {
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 0;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+    &.search--full-width {
+       width: 100%;
+    }
+}
+
+input[type=checkbox] + label {
+    font-weight: normal;
+    padding-left: .5em;
+}
+
+input[type=text][size="1"] {
+    width: 3em;
+}
+input[readonly] {
+    background-color: @gray-7;
+}
+
+select {
+    max-width: 100%;
+    width: 100%;
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+    .ie(margin-top,1px);
+    line-height: normal;
+    margin-right: .4rem;
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+textarea,
+input,
+select {
+    border: 2px solid @gray-6;
+}
+
+textarea {
+    height: @box-spacing*8;
+    resize: vertical;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="search"],
+input[id*="dob-"],
+input[class*="dob-"],
+textarea,
+select {
+    width: 100%;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    border-radius: @form-border-radius;
+    /*&:required:invalid {
+        //outline: 2px solid @red;
+        border-color: @red;
+        border-radius: 0;
+        background-image: url("../assets/images/red-cross.svg");
+        //padding-right: 2.25em;
+        background-repeat: no-repeat;
+        background-position: center right .6em;
+        -webkit-background-size: 1.5em 1.5em;
+        background-size: 1.5em 1.5em;
+    }*/
+    &.invalid {
+        border-color: @red;
+        border-radius: 0;
+        background-image: url("../assets/images/red-cross.svg");
+        background-repeat: no-repeat;
+        background-position: center right .6em;
+        -webkit-background-size: 1.5em 1.5em;
+        background-size: 1.5em 1.5em;
+    }
+    /*&:required:valid {
+        border: 2px solid @green;
+        border-radius: 0;
+        background-image: url("../assets/images/green-tick.svg");
+        padding-right: 2.25em;
+        background-repeat: no-repeat;
+        background-position: center right .6em;
+        -webkit-background-size: 1.5em 1.5em;
+        background-size: 1.5em 1.5em;
+        & ~ .valid {
+            display: block !important;
+        }
+    }*/
+    &:focus {
+        //border-width: 1px;
+        border-color: @heritage-yellow;
+        border-radius: 0;
+        outline: none;
+    }
+}
+
+input[type="file"] {
+    border: none;
+    width: 100%;
+    display: block;
+    &:focus {
+        outline: 2px solid @heritage-yellow;
+    }
+}
+
+select:focus {
+    outline: 2px solid @heritage-yellow;
+}
+
+/* Hide input steppers on webkit */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+// Reset height for textareas
+textarea.form__field {
+    height: auto;
+}
+
+/* Radio and checkboxed */
+.radio,
+.checkbox {
+    font-weight: @font-weight-bold;
+    padding: @box-spacing-vertical @box-spacing-horizontal;
+    cursor: pointer;
+    border-radius: @form-border-radius;
+    position: relative;
+    display: inline-block;
+    margin-right: @box-spacing-horizontal/2;
+    z-index: 1;
+    background-color: @gray-8;
+    border: none;
+    /*&.invalid {
+        background-color: @red-lightest;
+        color: @red;
+        input:before {
+            background-color: @red-lightest;
+            border-color: @red;
+        }
+        input:hover:before {
+            border-color: @red;
+        }
+    }*/
+    input {
+        display: inline-block;
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            -webkit-user-select: none;
+            cursor: pointer;
+            border-radius: @form-border-radius;
+            border: 2px solid @gray-6;
+            z-index: -1;
+            background-color: @gray-8;
+            box-sizing: border-box;
+            margin-right: @box-spacing/2;
+        }
+        &.invalid:before {
+            border-color: @red;
+            //background-color: @red-lightest;
+        }
+        &.invalid:hover:before {
+            border-color: @red;
+        }
+        &:hover:before {
+            border-color: @gray-5;
+        }
+        &:disabled {
+            cursor: not-allowed !important;
+            &:before {
+                cursor: not-allowed !important;
+                background-color: @form-disabled-bg;
+                border-color: @form-disabled-bg;
+            }
+        }
+        &:checked {
+            &:before {
+                border-color: @blue-light;
+                background-color: @blue-lighter;
+            }
+        }
+        &:focus {
+            outline: 2px solid @heritage-yellow;
+        }
+        &:focus:before {
+            border: 2px solid @heritage-yellow;
+            border-radius: 0;
+        }
+    }
+    &--inline {
+        clear: none;
+        //float: left;
+        label& {
+           // margin-bottom: 0;
+        }
+    }
+
+    &--block {
+        clear: left;
+        float: left;
+        display: table;
+        p {
+            display: block;
+            //float: right;
+            display: table-cell;
+            margin: 0;
+            span {
+                font-weight: @font-weight-bold;
+            }
+        }
+        //label&:last-of-type {
+            //margin-bottom: 0;
+        //}
+    }
+}
+
+.dropdown {
+    border-radius: @form-border-radius;
+    .btn-icon(@i-sort,@color:@black);
+    padding-right: 0;
+    background-color: @white;
+    display: inline-block;
+    width: 100%;
+    //border: 2px solid @gray-6;
+    &:after {
+        pointer-events:none;
+        @media screen and (~'min-width:0\0') and (min-resolution: +72dpi) { // IE9+
+            display: none;
+        }
+    }
+    select {
+        background: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        //-moz-appearance: window;
+        -moz-appearance: none;
+        padding-right: 2em;
+        .ie(width,100%);
+        border: 2px solid @gray-6;
+        //border: none;
+        &.invalid {
+            border-color: @red;
+        }
+        &:focus {
+            outline: none;
+            border-color: @heritage-yellow;
+        }
+    }
+    .dropdown,
+    select {
+        .ie(padding-right,1em);
+    }
+}
+
+input[id*="dob-"],
+input[class*="dob-"] {
+    border-radius: @form-border-radius;
+    display: inline-block;
+    padding-right: 0;
+}
+
+/*.date {
+    display: table;
+}
+.form-group-date {
+    width: 31%;
+    display: table-cell;
+    float: left;
+    margin-right: 3.5%;
+    &:last-child {
+        margin: 0;
+    }
+}*/
+.form-group-date {
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.form-group-date fieldset {
+    &:extend(fieldset);
+    width: 6rem;
+    display: inline-block;
+    float: left;
+    margin-right: @box-spacing-horizontal/2;
+    margin-bottom: 0;
+    clear: none;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+*:disabled,
+.disabled {
+    cursor: not-allowed !important;
+    color: @form-disabled-text;
+    background-color: @form-disabled-bg;
+    //border: 1px solid @form-disabled-bg;
+    resize: none;
+}
+
+.field-group {
+    display: table;
+    white-space: nowrap;
+    width: 100%;
+    label,
+    input,
+    button {
+        display: table-cell;
+        width: auto;
+        margin-right: 0;
+        border-radius: 0;
+    }
+    input {
+        border-radius: 0;
+        //border-right: 0;
+        width: 100%;
+        display: inline-block;
+    }
+    button {
+        .ie(border-width,1px);
+        .ie(padding-bottom,.6em);
+        display: inline-block;
+    }
+    *:first-child {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    *:last-child {
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+    }
+    .field {
+        display: table-cell;
+        width: 100%;
+        padding-right: 1;
+        input,
+        .dropdown {
+            border-radius: @form-border-radius;
+        }
+    }
+    .function {
+        display: table-cell;
+        button {
+            margin-right: 0;
+            border-radius: @form-border-radius;
+        }
+    }
+}
+
+.field-group--toggle {
+    label {
+        padding: @box-spacing-vertical @box-spacing-horizontal;
+        .ie(padding,0);
+        text-align: center;
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: .25em;
+        }
+        input[type="radio"]:before,
+        input[type="checkbox"]:before {
+            border-radius: 0;
+            border-width: 1px 0;
+            border-color: @gray-6;
+        }
+        input[type="radio"]:checked:before,
+        input[type="checkbox"]:checked:before {
+            border-color: @gray-6;
+        }
+        &:last-child input:before {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+            border-right-width: 1px;
+        }
+        &:first-child {
+            border-radius: @form-border-radius 0 0 @form-border-radius;
+        }
+        &:last-child {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
+    }
+    button {
+        padding: @box-spacing-vertical 0;
+    }
+}
+
+.field-group--dropdown {
+    .dropdown {
+        display: table-cell;
+        border-radius: 0 @form-border-radius @form-border-radius 0;
+        background-color: @gray-8;
+        padding: 0;
+        border: none;
+        width: auto;
+        .ie8 & {
+            display: block;
+        }
+        select {
+            .ie(width,100%);
+            border: 2px solid @gray-6;
+            border-left: 0;
+        }
+    }
+    input:first-of-type {
+        border-radius: @form-border-radius 0 0 @form-border-radius;
+    }
+    .ie8 & select {
+        width: auto;
+    }
+    select {
+        .ie(width,auto);
+    }
+    select,
+    input {
+        height: 3.3rem; // This makes it ~2px taller than everything else, but for some reason fixes the issues in both Windows Chrome and old IE
+    }
+}
+
+.field-group--buttons {
+    input:first-of-type {
+        border-radius: @form-border-radius;
+        width: 100%;
+        display: inline-block;
+        padding-right: 30%;
+    }
+    input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+        margin-top:-2px;
+        margin-bottom: -2px;
+    }
+    button {
+        width: 30%;
+        display: inline-block;
+        margin-left: -30%;
+        border-width: 2px;
+        border-radius: 0;
+        &:last-of-type {
+            border-radius: 0 @form-border-radius @form-border-radius 0;
+        }
+        &:focus {
+            outline: 0;
+            border: 2px solid @heritage-yellow;
+            border-radius: 0;
+        }
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+            margin-top:0px;
+            margin-bottom:0px;
+        }
+        &:hover {
+            border-width: 2px;
+            //-webkit-box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
+            //-moz-box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
+            //box-shadow:inset 0px 0px 0px 2px @heritage-yellow;
+        }
+    }
+}
+
+/* Search fields used in blocks */
+.search-inline {
+    display: table;
+    margin: 1em 0;
+
+    & > label {
+        display: block;
+        width: 5em;
+        font-weight: bold;
+    }
+
+    &__field {
+        display: table-cell;
+        width: 100%;
+        padding-right: .5em;
+
+        & > input {
+             width: 100%;
+        }
+    }
+
+    &__button {
+        display: table-cell;
+
+        & > input, & > button {
+            padding: .75em .6em;
+        }
+    }
+
+    &--hide-label {
+
+        & > label {
+            .screenreader;
+        }
+    }
+}
+
+// Conditional radio buttons + checkboxes
+.radio--conditional {
+    clear: both;
+    float: left;
+    width: 100%;
+    display: table;
+    p {
+        display: block;
+        display: table-cell;
+        margin: 0;
+        span {
+            font-weight: @font-weight-bolder;
+        }
+    }
+    input {
+        display: inline-block;
+        &:checked:before {
+            background-color: @heritage-blue-lightest;
+        }
+        &:checked:focus:before,
+        &:checked:focus:hover:before,
+        &:focus:hover:before  {
+            border-color: @heritage-yellow;
+        }
+        &:not(checked) ~ .conditional--content {
+            display: none;
+        }
+        &:checked ~ .conditional--content {
+            display: block;
+        }
+    }
+
+    .conditional--content {
+        label {
+            font-weight: @font-weight-bold;
+            padding: @box-spacing-vertical*.75 @box-spacing-vertical;
+            margin-bottom: 0;
+        }
+        input:before {
+            background-color: @white;
+        }
+        input:checked:before {
+            background-color: @blue-lighter;
+        }
+    }
+}
+
+// Conditional radio buttons with field beneath
+.conditional ~ .conditional--fields {
+    border-left: .5rem solid @blue-lighter;
+    padding: @box-spacing-vertical 0;
+    padding-left: @box-spacing-horizontal;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    display: none;
+    position: relative;
+}
+
+.response {
+    margin: @box-spacing-vertical 0;
+    background-color: @white;
+    border-bottom: 1px solid @gray-6;
+    padding-bottom: @box-spacing-vertical;
+    margin-bottom: @box-spacing-vertical;
+    display: block;
+    overflow: hidden;
+    &:first-of-type {
+        border-top: 1px solid @gray-6;
+        padding-top: @box-spacing-vertical;
+    }
+    .response--q, .response--a {
+        display: inline-block;
+    }
+    .response--q {
+        font-weight: @font-weight-bold;
+    }
+    .response--a a {
+        margin: 0;
+        cursor: pointer;
+        /*&:after {
+            .icon;
+            content: @i-undo;
+            padding-left: 1em/2;
+        }*/
+    }
+    @media (min-width: @breakpoint-sm) {
+        .response--q {
+            width: 69%;
+        }
+        .response--a {
+            text-align: right;
+            width: 30%;
+        }
+    }
+}
