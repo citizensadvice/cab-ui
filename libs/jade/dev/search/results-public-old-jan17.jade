@@ -1,10 +1,9 @@
 block settings
-	- var mockup = true
-	- var sidebar = true
+	- var title = "Benefits"
 	- var dir = "../../"
 	//- var sidebar = true
 
-extends /jade/templates/template.jade
+extends /jade/templates/template-site.jade
 
 block breadcrumbs
 	+breadcrumbs([
@@ -15,15 +14,15 @@ block script
 
 block content
 	.flex-row
-		.col-12
-			.search-title Showing results for #[strong Do I qualify for benefits in the UK]
-			.term-suggestion Search instead for #[a Do I qualify for bnefits in the UK]
+		.col-md-8.col-sm-12
+			.term-suggestion Search instead for #[a bnefits]?
+			.term-correction Showing 89 results for #[strong benefits]
 			ul.search-results
 
 				li
 					.heading
 						a Benefits
-					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
 					//-.adviser-categories
 						ul(style="margin:0")
 							li #[a Benefits fact sheets]
@@ -34,7 +33,7 @@ block content
 				li
 					.heading
 						a Sick or disabled people and carers
-					.description If you're sick or disabled, you may be able to claim #[strong benefits] and tax credits.
+					.description If you're sick or disabled, you may be able to claim benefits and tax credits.
 					//-ul.section
 						li #[a Benefits]
 
@@ -57,13 +56,13 @@ block content
 				li
 					.heading
 						a Benefits for families and children
-					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					.description Benefits for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
 					//-ul.section
 						li #[a Benefits]
 						li #[a Children and young people]
 
 				li.pagination
-					#[a.blocklink(href="/dev/search/results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+					#[a.blocklink(href="/dev/site/search-2-page-2.html") 84 more results for 'Benefits']
 
 				li.related-results
 					strong Related searches
@@ -72,5 +71,5 @@ block content
 				li.search-results__input
 					fieldset
 						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
+							input#field(type="search", placeholder="Search again", value="#{title}")
 							button.btn Search
