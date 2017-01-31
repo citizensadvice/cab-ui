@@ -11,7 +11,8 @@ block breadcrumbs
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 
-block script
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
 
 block content
 	.flex-row
@@ -24,7 +25,9 @@ block content
 					.heading
 						a Benefits
 					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
-					.adviser-categories
+					ul.section
+						li #[a Benefits]
+					//- .adviser-categories
 						ul(style="margin:0")
 							li #[a Benefits fact sheets]
 							li #[a Universal Credit]
@@ -63,9 +66,9 @@ block content
 						li #[a Children and young people]
 
 				li.pagination
-					#[a.blocklink(href="/dev/search/results-adviser-page-2.html") 56 more results for 'overpayment of benefits']
+					#[a.blocklink(href="results-adviser-page-2.html") 56 more results for 'overpayment of benefits']
 
-				li.related-results
+				//- li.related-results
 					strong Related searches
 					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
 

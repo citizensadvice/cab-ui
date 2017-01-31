@@ -11,7 +11,8 @@ block breadcrumbs
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 
-block script
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
 
 block content
 	.flex-row
@@ -83,9 +84,9 @@ block content
 					.description Payment of #[strong benefits] and tax credits by direct credit transfer into bank and building society accounts or Post Office card accounts. 
 
 				li.pagination
-					#[a.blocklink(href="") Next 10 results for 'Do I qualify for benefits in the UK']
+					#[a.blocklink(href="#") Next 10 results for 'Do I qualify for benefits in the UK']
 				li.pagination
-					#[a.blocklink.blocklinks--back(href="/dev/search/results-public.html") Previous results]
+					#[a.blocklink.blocklinks--back(href="results-public.html") Previous results]
 
 				li.related-results
 					strong Related searches

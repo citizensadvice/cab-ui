@@ -1,25 +1,30 @@
 block settings
-	- var title = "No results for 'Bnefits'"
+	- var mockup = true
+	- var sidebar = true
 	- var dir = "../../"
-	//- var sidebar = true
 
-extends /jade/templates/template-site.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 
-block script
-
 block content
 	.flex-row
-		.col-md-8.col-sm-12
-			p Please carefully check your spelling, or try searching with a different term.
-
+		.col-12
+			.search-title No results for #[strong greivancess]
+			p Search suggestions:
+			ul
+				li please carefully check your spelling
+				li try using different words or phrases
+				li try using more general words
 			fieldset
 				.field-group.field-group--buttons
-					input#field(type="search")
+					input#field(type="search" value="greivancess")
 					button.btn Search
-
+			p Alternatively, select a category from the navigation bar at the top of the page or #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") find out how you can get further advice online, by phone or in person].
+	
+	.flex-row
+		.col-12
 			#[a.blocklink Leave feedback on your search experience]
