@@ -1,0 +1,32 @@
+block settings
+	- var title = "Full service"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Universal Credit"}])
+
+block sidebar
+	include /jade/templates/partials/sidebar-site-content.jade
+
+block content
+	.articleContent
+		div
+			p Anyone who meets certain conditions can make a new claim for Universal Credit in your area.
+
+			p To get Universal Credit you must:
+
+			ul
+				li be aged 18 or over
+				li be below State Pension age
+				li not have savings over £16,000
+				li not be in full time education or training
+			p If you live with your partner you’ll need to make a joint claim. Your partner’s income and savings will be taken into account, even if they aren’t eligible for Universal Credit.
+
+			p You can’t make a new claim for benefits Universal Credit is replacing in your area. If you’re already getting any of these benefits, you’ll be moved onto Universal Credit some time in 2019.

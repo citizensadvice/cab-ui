@@ -1,0 +1,40 @@
+block settings
+	- var title = "Live service"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Universal Credit"}])
+
+block sidebar
+	include /jade/templates/partials/sidebar-site-content.jade
+
+block content
+	.articleContent
+		div
+			p You can apply for Universal Credit in your area if you’re single and meet certain other conditions.
+
+			h2 Age
+
+			p You must:
+
+			ul
+				li be aged 18 or over
+				li be below State Pension age
+
+			h2 Work
+
+			p You must not:
+
+			ul
+				li not have savings over £6,000
+				li not be in full time education or training
+				li not have responsibility for a child
+
+			p If you’re in a couple or have a family and satisfy these conditions, you should #[a(href="https://www.gov.uk/guidance/jobcentres-where-you-can-claim-universal-credit") check if you live in an area where you can claim].

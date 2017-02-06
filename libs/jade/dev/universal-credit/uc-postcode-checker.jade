@@ -1,0 +1,68 @@
+block settings
+	- var title = "Check if you can claim Universal Credit"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Universal Credit"}])
+
+block sidebar
+	include /jade/templates/partials/sidebar-site-content.jade
+
+block script
+
+	script.
+		$(document).ready(function() {
+		toggleService();
+		$("#uc-service").change(function() { toggleService(); });
+		});
+		
+		function toggleService() {
+		if ($("#uc-service").val() == 0)
+			$("#unavailable-error").show();
+		else
+			$("#unavailable-error").hide();
+		}
+
+	script.
+		$(document).ready(function() {
+		toggleValid();
+		$("#pc-valid").change(function() { toggleValid(); });
+		});
+		
+		function toggleValid() {
+		if ($("#pc-valid").val() == 0){
+			$("#pc-error-box").show();
+			$("#pc-error-text").show();}
+		else {
+			$("#pc-error-box").hide();
+			$("#pc-error-text").hide();}
+
+		}
+
+block content
+	.articleContent
+
+		div(id="unavailable-error")
+			.callout--warning
+				h3 Service unavailable
+				p Unfortunately the system is experiencing some issues. Please try again later.
+		div(id="pc-error-box")
+			.well--outline.invalid
+				h3 Postcode not recognised
+				p #[a(class="invalid" href="#uc-postcode") Please enter a valid postcode]. If you can't find your postcode on a letter or other document, try entering your address into a search engine website.
+				p If you live in #[a(href="#") Northern Ireland], unfortunately you do not qualify for Universal Credit at this time.
+		.fieldset
+			label(for="uc-postcode") Enter your postcode:
+			.field-group.field-group--buttons
+				input(id="uc-postcode" type="text" value="EC1A 4HD")
+				button(class="btn") Check now
+
+			div(id="pc-error-text" class="invalid")
+				p Please enter a valid postcode
