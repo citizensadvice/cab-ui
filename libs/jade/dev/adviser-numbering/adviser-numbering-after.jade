@@ -1,0 +1,33 @@
+block settings
+	- var mockup = true
+	- var title = "Help filling in your PIP claim form 9.12.16.83"
+	- var sidebar = true
+	- var toolbars = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "home.html"},
+		{title: "Benefits", href: dir + "#"},
+		{title: "Sick or disabled people and carers", href: dir + "#"},
+		{title: "Personal Independence Payment"}])
+
+block sidebar
+	include /jade/templates/partials/sidebar-site-content.jade
+
+block content
+	.articleContent
+		div
+			p Use our Personal Independence Payment (PIP) guidance to help you fill in your PIP claim form. There is advice for each question, including: 
+
+			ul
+				li what the questions mean
+				li what to write about in your answers
+				li examples of answers people might give
+				li help explaining how your illness or disability affects you
+
+			p PIP is based on how your condition affects you. It's not based on your particular illness or disability, or your medication.
+
+			p It’s very important to think about each question. Our help pages will help you to decide if you need to answer each question.
