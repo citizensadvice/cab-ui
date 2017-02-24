@@ -9,7 +9,25 @@ block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
-	
+
+block script
+	script.
+		$('#feedback-link').on('click', function(){
+			$('#feedback-form').slideToggle('fast');
+		})
+		$('#send').on('click', function(){
+			$('#feedback-content').hide();
+			$('#feedback-confirmation').show();
+		})
+	script.
+		hide(document.querySelectorAll('.footer-feedback'));
+		function hide (elements) {
+		  elements = elements.length ? elements : [elements];
+		  for (var index = 0; index < elements.length; index++) {
+		    elements[index].style.display = 'none';
+		  }
+		}
+
 block sidebar
 	include /jade/dev/search/sidebar-search.jade
 	
@@ -62,15 +80,46 @@ block content
 						li #[a Benefits]
 						li #[a Children and young people]
 
-				li.pagination
+				//-li.pagination
 					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
 
-					//- li.related-results
-						strong Related searches
-						p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+				//- li.related-results
+					strong Related searches
+					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
 
-				li.search-results__input
-					fieldset
-						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
-							button.btn Search
+			.pagination
+				ul
+					li.active #[span 1]
+					li #[a 2]
+					li #[a 3]
+					li.pagination--dot ...
+					li #[a 9]
+					li #[a Next]
+
+			.search-results__input
+				fieldset
+					.field-group.field-group--buttons
+						input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
+						button.btn Search
+
+	.flex-row
+		.col-12
+			.callout--alert
+				h2.screenreader Feedback
+				p Are these search results not what you expected? #[a#feedback-link Give us feedback].
+				#feedback-form
+					#feedback-content(style="width:100%;")
+						.fieldset
+							legend(for="radio-inline") Did you find what you were searching for?
+							label.radio.radio--inline
+								input(name="radio-inline" type="radio" value="option1")
+								| Yes
+							label.radio.radio--inline
+								input(name="radio-inline" type="radio" value="option2")
+								| No
+						.fieldset
+							label(for="wrong") What did you expect?
+							textarea#wrong
+						a#send.btn Send
+					#feedback-confirmation.main-content__right(style="text-align:left;margin-bottom:1rem;display:none")
+					p Thank you for your feedback. We will review your message in the next 48 hours.
