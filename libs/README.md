@@ -61,7 +61,7 @@ Whereas with `()`;
 }
 ```
 
-### Be careful nesting common mixin classes
+### Be careful nesting common mixin classes.
 
 Keep in mind that everytime a mixin is used, its entire contents are compiled into the class. This means that any style that doesn't use a variable defined in the mixin should probably be defined outside the mixin. For example:
 
