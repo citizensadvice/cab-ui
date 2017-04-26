@@ -1,8 +1,8 @@
 block settings
 	- var mockup = true
 	- var sidebar = true
+	- var title = "Search results for"
 	- var dir = "../../"
-	- var cookiemonster = true
 
 extends /jade/templates/template.jade
 
@@ -17,7 +17,12 @@ block sidebar
 block content
 	.flex-row
 		.col-12
-			.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			.search-results__input
+					fieldset
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
+							button.btn Search
+			//.search-title Showing results for #[strong Do I qualify for benefits in the UK]
 			.term-suggestion Search instead for #[a Do I qualify for bnefits in the UK]
 			ul.search-results
 
@@ -25,6 +30,8 @@ block content
 					.heading
 						a Benefits
 					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					ul.section
+						li #[a Benefits]
 					//-.adviser-categories
 						ul(style="margin:0")
 							li #[a Benefits fact sheets]
@@ -36,14 +43,14 @@ block content
 					.heading
 						a Sick or disabled people and carers
 					.description If you're sick or disabled, you may be able to claim #[strong benefits] and tax credits.
-					//-ul.section
+					ul.section
 						li #[a Benefits]
 
 				li
 					.heading
 						a Employment and Support Allowance (ESA)
 					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
-					//-ul.section
+					ul.section
 						li #[a Benefits]
 						li #[a Sick or disabled people and carers]
 
@@ -51,7 +58,7 @@ block content
 					.heading
 						a Contractual sick pay
 					.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
-					//-ul.section
+					ul.section
 						li #[a Workplace rights]
 						li #[a Sick pay]
 
@@ -59,7 +66,7 @@ block content
 					.heading
 						a Benefits for families and children
 					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
-					//-ul.section
+					ul.section
 						li #[a Benefits]
 						li #[a Children and young people]
 
@@ -69,9 +76,3 @@ block content
 					//- li.related-results
 						strong Related searches
 						p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
-
-				li.search-results__input
-					fieldset
-						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
-							button.btn Search
