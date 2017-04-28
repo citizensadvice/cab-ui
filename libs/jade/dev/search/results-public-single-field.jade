@@ -1,7 +1,7 @@
 block settings
 	- var mockup = true
 	- var sidebar = true
-	- var title = "Search results for"
+	- var title = "Search results"
 	- var dir = "../../"
 
 extends /jade/templates/template.jade
@@ -17,12 +17,12 @@ block sidebar
 block content
 	.flex-row
 		.col-9
-			.search-results__input
+			//-.search-results__input
 					fieldset
 						.field-group.field-group--buttons
 							input#field(type="search", placeholder="Search again", value="benefits")
 							button.btn.search-button-icon Search
-			//.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			//-.search-title Showing results for #[strong Do I qualify for benefits in the UK]
 			.term-suggestion Search instead for #[a bnefits]
 			ul.search-results
 
