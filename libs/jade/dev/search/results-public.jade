@@ -21,7 +21,7 @@ block content
 					fieldset
 						.field-group.field-group--buttons
 							input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
-							button.btn Search
+							button.btn.search-button-icon Search
 			//.search-title Showing results for #[strong Do I qualify for benefits in the UK]
 			.term-suggestion Search instead for #[a Do I qualify for bnefits in the UK]
 			ul.search-results
@@ -29,8 +29,8 @@ block content
 				li
 					.heading
 						a Benefits
-					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
-					ul.section
+					.description Overview and content list for #[strong benefits].
+					//- ul.section
 						li #[a Benefits]
 					//-.adviser-categories
 						ul(style="margin:0")
@@ -70,7 +70,16 @@ block content
 						li #[a Benefits]
 						li #[a Children and young people]
 
-				li.pagination
+		.col-xs-12.pagination
+				ul
+					li.active
+						span 1
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") 2]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") 3]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=2") Next]
+					li #[a(href="https://www.citizensadvice.org.uk/resources-and-tools/navigation-tools/Search/?q=esa&page=3") Last]
+
+				// li.pagination
 					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
 
 					//- li.related-results

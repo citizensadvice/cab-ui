@@ -5,18 +5,85 @@
  *
  */
 
+ .main-content .search-sidebar {
+    order: 0;
+    border-width: 0px;
+}
+
+.search-sidebar--navigation {
+    //background-color: @gray-7;
+    border-top: 8px @gray-7 solid;
+    background-color: @white;
+    margin-bottom: 1.5rem;
+    padding: .75rem 1rem;
+
+    li ul a:not([href]),
+    li ol a:not([href]) {
+        background-color: #f2f8ff;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ol li {
+        color: @gray-3;
+        display: block;
+
+        a {
+            display: list-item !important;
+        }
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+        //border-left: @box-spacing/2 solid @gray-6;
+        a {
+            margin-bottom: 1px;
+            padding: @box-spacing-vertical*.75 -@box-spacing-horizontal*.75;
+            display: block;
+            border-bottom: none;
+            &:hover,
+            &:active,
+            &:visited {
+                background-color: @heritage-blue-lighter;
+                //border-bottom: 2px solid @heritage-yellow;
+            }
+        }
+    }
+}
+
+.search-sidebar--filter {
+    .well;
+    border-top: 8px @gray-7 solid;
+    background-color: @white;
+    margin-bottom: 1.5rem;
+}
+
 
 .search-results {
     padding: 0;
     > li {
         list-style: none;
         margin: 0;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         border-top: @gray-7 1px solid;
         .heading {
+            color: @blue;
             font-size: @font-size-medium;
             font-weight: @font-weight-bold;
-            margin-bottom: 1/1.2*.25em;
+            line-height: 1.4;
+            //margin-bottom: 1/1.2*.25em;
+                a {
+                    border-bottom: none;
+                }
         }
         .description {
             margin: .5rem 0 0 0;
@@ -28,7 +95,7 @@
         .section {
             padding: 0;
             margin: 0;
-            margin-top: .5rem;
+            margin-top: .2rem;
             white-space: nowrap;
             overflow: ellipsis;
             li {
@@ -47,7 +114,7 @@
                     content: "";
                 }
                 a {
-                    color: @green;
+                    color: @blue;
                     border: none;
                 }
             }
@@ -118,7 +185,7 @@
 }
 
 .term-suggestion {
-    margin-top: -1rem;
+    margin-top: 0.1rem;
     margin-bottom: 1.5rem;
 }
 
