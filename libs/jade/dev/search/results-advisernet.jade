@@ -1,7 +1,7 @@
 block settings
 	- var mockup = true
 	- var sidebar = true
-	//- var title = "Search results"
+	- var title = "Search results for"
 	- var dir = "../../"
 
 extends /jade/templates/template.jade
@@ -13,18 +13,17 @@ block breadcrumbs
 		{title: "Search"}])
 	
 block sidebar
-	include /jade/dev/search/sidebar-search.jade
+	include /jade/dev/search/sidebar-search-advisernet.jade
 	
 block content
 	.flex-row
 		.col-12
-			//-.search-results__input
+			.search-results__input
 					fieldset
 						.field-group.field-group--buttons
 							input#field(type="search", placeholder="Search again", value="benefits")
 							button.btn.search-button-icon Search
-			//-.search-title Showing results for #[strong Do I qualify for benefits in the UK]
-			p Results for #[strong benefits]
+			//.search-title Showing results for #[strong Do I qualify for benefits in the UK]
 			.term-suggestion Search instead for #[a bnefits]
 			ul.search-results
 
@@ -115,18 +114,18 @@ block content
 						li #[a Benefits]
 						li #[a  In work or looking for work]
 
-		.pagination
-				ul
-					li.active
-						span 1
-					li #[a(href="#") 2]
-					li #[a(href="#") 3]
-					li #[a(href="#") Next]
-					li #[a(href="#") Last]
+			.pagination
+					ul
+						li.active
+							span 1
+						li #[a(href="#") 2]
+						li #[a(href="#") 3]
+						li #[a(href="#") Next]
+						li #[a(href="#") Last]
 
-				//-li.pagination
-					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+					//-li.pagination
+						#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
 
-					//- li.related-results
-						strong Related searches
-						p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+						//- li.related-results
+							strong Related searches
+							p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]

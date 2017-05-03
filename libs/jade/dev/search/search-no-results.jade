@@ -1,4 +1,5 @@
 block settings
+	- var title = "No results for"
 	- var mockup = true
 	- var sidebar = true
 	- var dir = "../../"
@@ -7,6 +8,7 @@ extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
+		{title: "England"},
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 
@@ -16,14 +18,10 @@ block sidebar
 block content
 	.flex-row
 		.col-12
-			.search-title No results for #[strong greivancess]
-			p It’s worth checking your spelling or trying more general words.
+			//.search-title  #[strong greivancess]
 			fieldset
 				.field-group.field-group--buttons
 					input#field(type="search" value="greivancess")
 					button.btn Search
-			p If you still can’t find what you need, #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") find out how else you can get advice - whether online, by phone or in person].
-	
-	.flex-row
-		.col-12
-			#[a.blocklink Let us know if you had problems with your search]
+			p It’s worth checking your spelling or trying more general words.
+			p If you still can’t find what you need, #[a(href="https://www.citizensadvice.org.uk/about-us/how-we-provide-advice/advice/") find out how else you can get advice] - whether online, by phone or in person.

@@ -8,6 +8,7 @@ extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
+		{title: "England"},
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 	
@@ -16,7 +17,7 @@ block sidebar
 	
 block content
 	.flex-row
-		.col-9
+		.col-12
 			.search-results__input
 					fieldset
 						.field-group.field-group--buttons
@@ -113,18 +114,18 @@ block content
 						li #[a Benefits]
 						li #[a  In work or looking for work]
 
-		.col-xs-12.pagination
-				ul
-					li.active
-						span 1
-					li #[a(href="#") 2]
-					li #[a(href="#") 3]
-					li #[a(href="#") Next]
-					li #[a(href="#") Last]
+			.pagination
+					ul
+						li.active
+							span 1
+						li #[a(href="#") 2]
+						li #[a(href="#") 3]
+						li #[a(href="#") Next]
+						li #[a(href="#") Last]
 
-				//-li.pagination
-					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+					//-li.pagination
+						#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
 
-					//- li.related-results
-						strong Related searches
-						p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+						//- li.related-results
+							strong Related searches
+							p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
