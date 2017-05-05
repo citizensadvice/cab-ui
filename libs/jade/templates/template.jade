@@ -112,14 +112,66 @@ include partials/header
 					li.top-item.js-mega-menu(style="display: list-item;")
 						a(href="#") Law and courts
 					li.top-item.js-mega-menu(style="display: list-item;")
-						a(href="#") Health
-					li.top-item.js-mega-menu(style="display: list-item;")
 						a(href="#") Immigration
+					li.top-item.js-mega-menu(style="display: list-item;")
+						a(href="#") Health
 					li.top-item.js-mega-menu(style="display: list-item;")
 						a(href="#") More from us
 					li.nav-list-primary-more.js-more-menu(style="display: none;")
 						a(href="#") More
 							i.icon-down
+
+		else if advisernet
+			header.advisernet
+				.main-header
+					.main-header__content.main-content
+						.main-header__logo.no-print(href="index.html", title="AdviserNet home")
+							img(alt="AdviserNet", onerror="this.onerror=null;this.src=&#39;/Static/#{dir}images/dev/logos/ca-logo_100px.svg.png&#39;;", src="#{dir}images/dev/ca-advisernet-logo_100px.svg")
+
+						nav.main-header__top-nav
+							a(href="#") Public site
+							a(href="#") AdviserNet
+							a(href="#") CABlink
+							a.hide-offline.main-header__login(href="")
+								.icon-key
+									| Sign out
+
+						form.main-header__search.hide-offline(action="")
+							label.screenreader(for="main-header__search__input") Search
+							input#main-header__search__input.main-header__search__input.advisernet(name="q", placeholder="Search term or document number", type="search")
+							button.main-header__search__submit(title="Search", type="submit")
+								i.icon-search.icon--no-text
+								span.screenreader Search
+
+						.main-header__links(data-track-zone="top-bar")
+							a.main-header__menu-link.js-toggle-menu(href="")
+								i.icon-menu
+								| Menu
+
+
+				nav.main-nav(data-track-zone="main-nav", style="overflow: visible;")
+					ul.nav-list-primary
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Benefits
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Work
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Debt and money
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Consumer
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Family
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Housing
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Law and courts
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Immigration
+						li.top-item.js-mega-menu(style="display: list-item;")
+							a(href="#") Health
+						li.nav-list-primary-more.js-more-menu(style="display: none;")
+							a(href="#") More
+								i.icon-down
 
 		else if loginheader
 			aside.section-notice__login
@@ -168,33 +220,64 @@ include partials/header
 						img(src="#{dir}images/dev/ca-logo-hz-white-280px.svg")
 					a#repo(href="https://github.com/citizensadvice/cab-ui", style="border: none;") v3.0.0
 
-		.main-container
-			nav.main-breadcrumb
-				block breadcrumbs
+		if advisernet
+			.main-container
+				.advisernet
+					nav.main-breadcrumb
+						block breadcrumbs
 
-			block section-notice
+					block section-notice
 
-			.main-content
-				if sidebar
-					.main-content__right(id="main", role="main")
-						if title
+					.main-content
+						if sidebar
+							.main-content__right(id="main", role="main")
+								if title
+									.title
+										h1.title__heading.js-ref
+											span.title__title #{title}
+								if toolbars
+									include partials/toolbar.jade
+									block content
+									if sharebar
+										include partials/sharebar.jade
+								else
+									block content
+
+							block sidebar
+						else
 							.title
 								h1.title__heading.js-ref
 									span.title__title #{title}
-						if toolbars
-							include partials/toolbar.jade
-							block content
-							if sharebar
-								include partials/sharebar.jade
-						else
 							block content
 
-					block sidebar
-				else
-					.title
-						h1.title__heading.js-ref
-							span.title__title #{title}
-					block content
+		else 
+			.main-container
+				nav.main-breadcrumb
+					block breadcrumbs
+
+				block section-notice
+
+				.main-content
+					if sidebar
+						.main-content__right(id="main", role="main")
+							if title
+								.title
+									h1.title__heading.js-ref
+										span.title__title #{title}
+							if toolbars
+								include partials/toolbar.jade
+								block content
+								if sharebar
+									include partials/sharebar.jade
+							else
+								block content
+
+						block sidebar
+					else
+						.title
+							h1.title__heading.js-ref
+								span.title__title #{title}
+						block content
 
 		if mockup
 			.footer-feedback
