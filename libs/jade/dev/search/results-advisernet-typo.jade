@@ -18,22 +18,24 @@ block sidebar
 block content
 	.flex-row
 		.col-12
-			h1.search-title Search
+			h1.page-title.search Search
 			//-.search-title Showing results for #[strong benefits]
 			//- .term-suggestion Search instead for #[a bnefits]
 			.search-results__input
+				form
 					fieldset
 						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="bnefits")
-							button.btn.search-button-icon Search
-			p Showing results for #[strong benefits]
-			p Search instead for #[a bnefits]
+							input#field(type="search", placeholder="Search term or document number", value="bnefits")
+							button.btn.search-button-icon(type="submit") Search
+						.invalid An error was encountered. Please try searching again later.
+			h2.search-title Showing results for #[strong benefits]
+			p.search-spellcheck Search instead for #[a bnefits]
 			ul.search-results
 
 				li
-					.heading
+					h3
 						a Backdating benefits
-					.description Information on backdating means-tested and non-means-tested benefits including late claims, specified circumstances and good cause, exceptions to time limits, and maximising benefit arrears when challenging a decision.
+					p.description Information on backdating means-tested and non-means-tested benefits including late claims, specified circumstances and good cause, exceptions to time limits, and maximising benefit arrears when challenging a decision.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -48,9 +50,9 @@ block content
 							li(style="margin:0") #[a Making welfare work locally]
 
 				li
-					.heading
+					h3
 						a Benefits and fraud
-					.description Explains benefit fraud, how benefit authorities investigate fraud and the process of prosecuting a claimant for benefit fraud. It also describes what may happen to a claimant's benefit during and after a benefit fraud investigation.
+					p.description Explains benefit fraud, how benefit authorities investigate fraud and the process of prosecuting a claimant for benefit fraud. It also describes what may happen to a claimant's benefit during and after a benefit fraud investigation.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -59,9 +61,9 @@ block content
 						li #[a Benefits administration, fraud and appeals]
 
 				li
-					.heading
+					h3
 						a Complaints about benefits
-					.description Information on making a complaint about benefits covering when to complain, what can be achieved, who to complain to, complaints about the Department for Work and Pensions, and using the ombudsman.
+					p.description Information on making a complaint about benefits covering when to complain, what can be achieved, who to complain to, complaints about the Department for Work and Pensions, and using the ombudsman.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -70,7 +72,7 @@ block content
 						li #[a Benefits administration, fraud and appeals]
 
 				li
-					.heading
+					h3
 						a Benefits
 					//-.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
 					ul.section
@@ -78,9 +80,9 @@ block content
 						li #[a AdviserNet]
 
 				li
-					.heading
+					h3
 						a Benefits and prisoners
-					.description Information explaining how benefits are affected by being on remand, in prison or on temporary release. It covers benefits for looking after the children of prisoners and benefits on release from prison.
+					p.description Information explaining how benefits are affected by being on remand, in prison or on temporary release. It covers benefits for looking after the children of prisoners and benefits on release from prison.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -89,9 +91,9 @@ block content
 						li #[a Benefits and prisoners]
 
 				li
-					.heading
+					h3
 						a Disability discrimination and welfare benefits
-					.description Explains how service providers must not discriminate against you, when you are claiming or receiving benefits.
+					p.description Explains how service providers must not discriminate against you, when you are claiming or receiving benefits.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -101,9 +103,9 @@ block content
 						li #[a Common situations]
 
 				li
-					.heading
+					h3
 						a Taxation of benefits in kind
-					.description Information on benefits in kind, also known as fringe benefits or perks, covering tax free benefits, how taxable benefits in kind are valued, common benefits in kind, how the tax is declared and national insurance and benefits in kind.
+					p.description Information on benefits in kind, also known as fringe benefits or perks, covering tax free benefits, how taxable benefits in kind are valued, common benefits in kind, how the tax is declared and national insurance and benefits in kind.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -113,9 +115,9 @@ block content
 						li #[a Allowances and reliefs]
 
 				li
-					.heading
+					h3
 						a Benefits and tax credits overpayments
-					.description Explains the circumstances in which benefits and tax credits overpayments count as qualifying debts for a debt relief order.
+					p.description Explains the circumstances in which benefits and tax credits overpayments count as qualifying debts for a debt relief order.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -125,9 +127,9 @@ block content
 						li #[a Which debts are covered by a debt relief order]
 
 				li
-					.heading
+					h3
 						a CPAG Welfare Benefits and Tax Credits Handbook
-					.description The CPAG welfare benefits and tax credits handbook is a definitive guide to all welfare benefits and tax credits. It explains claims, decisions, calculations, overpayments, appeals and how to challenge them, how to claim from the social fund, and national insurance contributions.
+					p.description The CPAG welfare benefits and tax credits handbook is a definitive guide to all welfare benefits and tax credits. It explains claims, decisions, calculations, overpayments, appeals and how to challenge them, how to claim from the social fund, and national insurance contributions.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -135,9 +137,9 @@ block content
 						li #[a Reference books]
 				
 				li
-					.heading
+					h3
 						a Benefits for industrial injury and disease
-					.description Deals with social security benefits payable to a client who has had an accident at work or who has contracted an industrial disease. Explains what a client should do following an accident, describes the industrial injuries scheme, disablement benefit and constant attendance allowance.
+					p.description Deals with social security benefits payable to a client who has had an accident at work or who has contracted an industrial disease. Explains what a client should do following an accident, describes the industrial injuries scheme, disablement benefit and constant attendance allowance.
 					ul.section
 						li In:
 						li #[a Advisernet]
@@ -164,6 +166,6 @@ block content
 							strong Related searches
 							p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
 
-			.flex-row
+			//-.flex-row
 				.col-12
 					#[a.blocklink(href="https://www.research.net/r/SS2P73R?p={{p}}&u={{u}}" target="_blank") Let us know if you had problems with your search]

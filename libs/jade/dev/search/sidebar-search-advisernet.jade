@@ -1,11 +1,20 @@
 // Sidebar for search pages
 
 .side-nav-beta.search-sidebar
-	.search-sidebar--advisernet
-			label Navigation tools
-			fieldset
-				ul
-					li
-						a(href="#") A to Z of advice
-					li
-						a(href="#") Browse our news stories
+	.search-sidebar--filter
+		label(for="exampleSelect1") Show results for:
+		fieldset
+			.dropdown
+				select(id="searchFilter")
+					option(value="0") Advice 
+					option(value="1") Research and campaigns
+					option(value="2") Everything
+
+	.search-sidebar--navigation
+		label Navigation tools
+		fieldset
+			ul
+				li
+					a(href="#") A to Z of advice
+				li
+					a(href="#") Browse our news stories

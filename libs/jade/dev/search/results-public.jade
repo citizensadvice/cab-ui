@@ -1,7 +1,7 @@
 block settings
 	- var mockup = true
 	- var sidebar = true
-	- var title = "Search results for"
+	//- var title = "Search results for"
 	- var dir = "../../"
 
 extends /jade/templates/template.jade
@@ -18,19 +18,24 @@ block sidebar
 block content
 	.flex-row
 		.col-12
+			h1.page-title.search Search
 			.search-results__input
+				form
 					fieldset
 						.field-group.field-group--buttons
 							input#field(type="search", placeholder="Search again", value="benefits")
 							button.btn.search-button-icon Search
-			//.search-title Showing results for #[strong Do I qualify for benefits in the UK]
-			.term-suggestion Search instead for #[a bnefits]
+						.invalid An error was encountered. Please try searching again later.
+			//-.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			//-.term-suggestion Search instead for #[a bnefits]
+			h2.search-title Showing results for #[strong benefits]
+			p.search-spellcheck Search instead for #[a bnefits]
 			ul.search-results
 
 				li
-					.heading
+					h3
 						a Benefits
-					.description Overview and content list for #[strong benefits].
+					p.description Overview and content list for #[strong benefits].
 					//- ul.section
 						li #[a Benefits]
 					//-.adviser-categories
@@ -41,40 +46,40 @@ block content
 							li(style="margin:0") #[a Making welfare work locally]
 
 				li
-					.heading
+					h3
 						a Benefits advice in BSL
-					.description Find out about #[strong benefits] you may be able to get, how to claim them and the help you can get from a Citizens Advice Bureau. Information in British Sign Language (BSL).
+					p.description Find out about #[strong benefits] you may be able to get, how to claim them and the help you can get from a Citizens Advice Bureau. Information in British Sign Language (BSL).
 					ul.section
 						li #[a Benefits]
 
 				li
-					.heading
+					h3
 						a Benefits changes timeline
-					.description Timeline showing which #[strong benefits] are changing and when.
+					p.description Timeline showing which #[strong benefits] are changing and when.
 					ul.section
 						li #[a Benefits]
 						li #[a Changes to Welfare benefits]
 
 				li
-					.heading
+					h3
 						a Young people and benefits
-					.description Information on #[strong benefits] for young people between the ages of 14 and 18.
+					p.description Information on #[strong benefits] for young people between the ages of 14 and 18.
 					ul.section
 						li #[a Benefits]
 						li #[a Children and young people]
 
 				li
-					.heading
+					h3
 						a Benefits for older people
-					.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
+					p.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
 					ul.section
 						li #[a Benefits]
 						li #[a Older people]
 
 				li
-					.heading
+					h3
 						a Disability discrimination and welfare benefits
-					.description Explains how service providers must not discriminate against you, when you are claiming or receiving #[strong benefits].
+					p.description Explains how service providers must not discriminate against you, when you are claiming or receiving #[strong benefits].
 					ul.section
 						li #[a Consumer]
 						li #[a Discrimination in goods and services]
@@ -82,34 +87,34 @@ block content
 						li #[a Common situations]
 
 				li
-					.heading
+					h3
 						a Croatian nationals - claiming benefits
-					.description Rights of Croatian nationals and the habitual residence test.
+					p.description Rights of Croatian nationals and the habitual residence test.
 					ul.section
 						li #[a Benefits]
 						li #[a Coming from abroad and claiming benefits]
 						li #[a EEA nationals]
 
 				li
-					.heading
+					h3
 						a National insurance – contributions and benefits
-					.description Information on national insurance contributions including classes of contributions, contribution conditions for #[strong benefits] and how to get a national insurance number.
+					p.description Information on national insurance contributions including classes of contributions, contribution conditions for #[strong benefits] and how to get a national insurance number.
 					ul.section
 						li #[a Benefits]
 						li #[a Benefits - introduction]
 
 				li
-					.heading
+					h3
 						a Benefits for families and children
-					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					p.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
 					ul.section
 						li #[a Benefits]
 						li #[a Children and young people]
 				
 				li
-					.heading
+					h3
 						a Benefits for people in work
-					.description Information on #[strong benefits] and other help you may be entitled to.
+					p.description Information on #[strong benefits] and other help you may be entitled to.
 					ul.section
 						li #[a Benefits]
 						li #[a  In work or looking for work]

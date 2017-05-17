@@ -12,10 +12,10 @@
 
 .search-sidebar--navigation {
     //background-color: @gray-7;
-    border-top: 8px @gray-7 solid;
+    border-top: 6px @gray-6 solid;
     background-color: @white;
     margin-bottom: 1.5rem;
-    padding: .75rem 1rem;
+    padding: 1.4rem 1rem;
 
     li ul a:not([href]),
     li ol a:not([href]) {
@@ -63,16 +63,11 @@
 
 .search-sidebar--filter {
     .well;
-    border-top: 8px @gray-7 solid;
+    border-top: 6px @gray-6 solid;
     background-color: @white;
-    margin-bottom: 1.5rem;
-}
-
-.search-sidebar--advisernet {
-    .well;
-    border-top: 8px #99b7c4 solid;
-    background-color: @white;
-    margin-bottom: 1.5rem;
+    //margin-bottom: 1.5rem;
+    padding: 1.4rem 1rem 3rem;
+    margin: 0 0 1.4rem;
 }
 
 .search-results {
@@ -82,12 +77,13 @@
         margin: 0;
         padding: 1rem 0;
         border-top: @gray-7 1px solid;
-        .heading {
+        h3 {
             color: @heritage-blue;
             font-size: @font-size-medium;
             font-weight: @font-weight-bold;
-            line-height: 1.4;
-            //margin-bottom: 1/1.2*.25em;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 0.1em;
                 a {
                     color: @heritage-blue;
                     border-bottom: none;
@@ -170,6 +166,14 @@
     .search-results__input {
         //padding: @box-spacing-vertical/2 0 @box-spacing-vertical;
         border: none;
+        h2 {
+            color: @gray-1;
+            font-size: @font-size-h3;
+            font-weight: @font-weight-base;
+            line-height: 1.4;
+            //margin-bottom: 1/1.2*.25em;
+
+        }
     }
     .pagination {
         padding: @box-spacing-vertical*2 0 0 0;
@@ -185,7 +189,7 @@
     }
 }
 
-.search-title {
+.page-title.search {
     font-size: @font-size-large;
     font-weight: @font-weight-base;
     margin-top: -0.8rem;
@@ -193,50 +197,72 @@
     color: @heritage-blue;
 }
 
-.term-suggestion {
-    margin-top: 0.1rem;
-    margin-bottom: 1.5rem;
-}
-
-.term-correction {
-    margin-top: -.6rem;
-    margin-bottom: .25rem;
-    font-size: @font-size-small;
-    color: @gray-3;
-    a {
-        color: @gray-3;
-    }
-}
-
-.result-count {
-    color: @gray-1;
-    font-size: 1rem;
-    margin-bottom: 1.4rem;
-}
-
-// the old stuff
-.search-results__item {
-    margin: @box-spacing-horizontal 0;
-}
-
-.search-results__heading {
+.search-title {
     font-size: @font-size-medium;
-    margin-bottom: 1/1.2*.25em;
-}
-
-.search-results__description {
-    margin: @box-spacing-horizontal*.25 0;
-}
-
-.search-results__section {
-    color:#999;
-    margin: @box-spacing-horizontal*.25 0;
-}
-
-.search__spellcheck {
-    .highlight--warning;
-    a {
+    font-weight: @font-weight-base;
+    margin-top: -0.4rem;
+    margin-bottom: 0.6rem;
+    color: @gray-0;
+    strong {
         font-weight: @font-weight-bold;
     }
 }
 
+.search-spellcheck {
+    margin-bottom: 1.6em;
+}
+
+//the old stuff
+    .search-results__item {
+        margin: @box-spacing-horizontal 0;
+    }
+
+    .search-results__heading {
+        font-size: @font-size-medium;
+        margin-bottom: 1/1.2*.25em;
+    }
+
+    .search-results__description {
+        margin: @box-spacing-horizontal*.25 0;
+    }
+
+    .search-results__section {
+        color:#999;
+        margin: @box-spacing-horizontal*.25 0;
+    }
+
+    .search__spellcheck {
+        .highlight--warning;
+        a {
+            font-weight: @font-weight-bold;
+        }
+    }
+
+    .term-suggestion {
+        margin-top: 0.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .term-correction {
+        margin-top: -.6rem;
+        margin-bottom: .25rem;
+        font-size: @font-size-small;
+        color: @gray-3;
+        a {
+            color: @gray-3;
+        }
+    }
+
+    .result-count {
+        color: @gray-1;
+        font-size: 1rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .search-sidebar--advisernet {
+        .well;
+        border-top: 8px #99b7c4 solid;
+        background-color: @white;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
