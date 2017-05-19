@@ -2,13 +2,14 @@
 
 .side-nav-beta.search-sidebar
 	.search-sidebar--filter
-		label(for="exampleSelect1") Show results for:
-		fieldset
-			.dropdown
-				select(id="searchFilter")
-					option(value="0") Advice 
-					option(value="1") Research and campaigns
-					option(value="2") Everything
+		form
+			label(for="searchFilter") Show results for:
+			fieldset
+				.dropdown
+					select(id="searchFilter" onchange="this.form.submit()")
+						option(value="0" ) Advice 
+						option(value="1") Research and campaigns
+						option(value="2") Everything
 
 	.search-sidebar--navigation
 		label Useful links
