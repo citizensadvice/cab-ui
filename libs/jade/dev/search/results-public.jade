@@ -1,7 +1,8 @@
 block settings
 	- var mockup = true
 	- var sidebar = true
-	//- var title = "Search results for"
+	//- var toolbars = true
+	- var title = "Search"
 	- var dir = "../../"
 
 extends /jade/templates/template.jade
@@ -16,20 +17,33 @@ block sidebar
 	include /jade/dev/search/sidebar-search.jade
 	
 block content
-	.flex-row
-		.col-12
-			h1.page-title.search Search
-			.search-results__input
+	.articleContent
+		style.
+			@media (max-width: 600px) {
+				.field-group.field-group--buttons .btn {
+				        width: 40%;
+				        display: inline-block;
+				        margin-left: -40%;
+				        border-width: 2px;
+				        border-radius: 0;
+				        }
+			}
+
+		div
+			//-h1.page-title.search Search
+			.search-results__input(role="search")
+				label.screenreader Search
 				form
 					fieldset
 						.field-group.field-group--buttons
 							input#field(type="search", placeholder="Search again", value="benefits")
-							button.btn.search-button-icon Search
+							button.btn.search-button-icon(type="submit") Search
+						p Search for advice
 						.invalid An error was encountered. Please try searching again later.
-			//-.search-title Showing results for #[strong Do I qualify for benefits in the UK]
-			//-.term-suggestion Search instead for #[a bnefits]
-			h2.search-title Showing results for #[strong benefits]
-			p.search-spellcheck Search instead for #[a bnefits]
+			.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			.term-suggestion Search instead for #[a bnefits]
+			//h2.search-title Showing results for #[strong benefits]
+			//p.search-spellcheck Search instead for #[a bnefits]
 			ul.search-results
 
 				li
