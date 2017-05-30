@@ -1,22 +1,24 @@
 // Sidebar for search pages
 
-.search-sidebar--filter(role="search filter")
-	form
-		label(for="searchFilter") Show results for:
-		fieldset
-			.dropdown
-				select(id="searchFilter" onchange="this.form.submit()")
-					option(value="0") Advice 
-					option(value="1") Research and campaigns
-					option(value="2") Everything
-		noscript
-			button(type="submit") Go
+//-.side-nav-beta.search-sidebar
+nav.section-nav.js-section-nav.expanded
+	.search-sidebar--filter(role="search filter")
+		form
+			label(for="searchFilter") Show results for:
+			fieldset
+				.dropdown
+					select(id="searchFilter" onchange="this.form.submit()")
+						option(value="0") Advice 
+						option(value="1") Research and campaigns
+						option(value="2") Everything
+			noscript
+				button(type="submit") Go
 
-.search-sidebar--navigation
-	label Navigation tools
-	fieldset
-		ul
-			li
-				a(href="#") A to Z of advice
-			li
-				a(href="#") Browse our news stories
+	.search-sidebar--navigation
+		label Navigation tools
+		fieldset
+			ul
+				li
+					a(href="#") A to Z of advice
+				li
+					a(href="#") Browse our news stories
