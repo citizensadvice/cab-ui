@@ -1,19 +1,20 @@
 // Sidebar for search pages
 
 //-.side-nav-beta.search-sidebar
-nav.section-nav.js-section-nav.expanded
-	.search-sidebar--filter(role="search filter")
-		form
-			label(for="searchFilter") Show results for:
-			fieldset
-				.dropdown
-					select(id="searchFilter" onchange="this.form.submit()")
-						option(value="0") Advice 
-						option(value="1") Research and campaigns
-						option(value="2") Everything
-			noscript
-				button(type="submit") Go
 
+.search-sidebar--filter(role="search filter")
+	form
+		label(for="searchFilter") Show results for:
+		fieldset
+			.dropdown
+				select(id="searchFilter" onchange="this.form.submit()")
+					option(value="0") Advice 
+					option(value="1") Research and campaigns
+					option(value="2") Everything
+		noscript
+			button(type="submit") Go
+
+nav.section-nav.js-section-nav.expanded
 	.search-sidebar--navigation
 		label Navigation tools
 		fieldset
