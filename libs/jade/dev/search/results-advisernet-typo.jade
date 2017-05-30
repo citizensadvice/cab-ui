@@ -31,11 +31,11 @@ block content
 			//-h1.page-title.search Search
 			//-.search-title Showing results for #[strong benefits]
 			//- .term-suggestion Search instead for #[a bnefits]
-			.search-results__input(role="search")
-				label.screenreader Search
-				form
+			form
+				.search-results__input(role="search")
 					fieldset
 						.field-group.field-group--buttons
+							label.screenreader Search
 							input#field(type="search", placeholder="Search term or document number", value="bnefits")
 							button.btn.search-button-icon(type="submit") Search
 						p Search for advice

@@ -31,11 +31,11 @@ block content
 
 		div
 			//-h1.page-title.search Search
-			.search-results__input(role="search")
-				label.screenreader Search
-				form
+			form
+				.search-results__input(role="search")
 					fieldset
 						.field-group.field-group--buttons
+							label.screenreader Search
 							input#field(type="search", placeholder="Search again", value="benefits")
 							button.btn.search-button-icon(type="submit") Search
 						p Search for advice
