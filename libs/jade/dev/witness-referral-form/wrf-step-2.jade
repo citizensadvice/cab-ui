@@ -1,0 +1,22 @@
+block settings
+    //- var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            p Please confirm that you’re happy with the #[a(href="#") terms and conditions], including that the Witness Service can store the information you give. They’ll only share it with your permission.
+
+            a.btn.left-button-icon(href="wrf-step-1.html") No
+            a.btn.right-button-icon(href="wrf-step-3.html") Yes

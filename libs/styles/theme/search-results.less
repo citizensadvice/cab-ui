@@ -12,7 +12,7 @@
 
 .search-sidebar--navigation {
     //background-color: @gray-7;
-    border-top: 6px @gray-6 solid;
+    //border-top: 6px @gray-6 solid;
     background-color: @white;
     margin-bottom: 1.5rem;
     padding: 1.4rem 1rem;
@@ -65,7 +65,7 @@
 
 .search-sidebar--filter {
     .well;
-    border-top: 6px @gray-6 solid;
+    //border-top: 6px @gray-6 solid;
     background-color: @white;
     //margin-bottom: 1.5rem;
     padding: 1.4rem 1rem 3rem;
@@ -218,6 +218,26 @@
 .search-spellcheck {
     margin-bottom: 1.6em;
 }
+
+.search-page-input {
+    width: 70%;
+    @media screen and (max-width: @breakpoint-content) {
+        width: 90%;
+    }
+}
+
+.search-page-button {
+    width: 30%;
+    @media screen and (max-width: @breakpoint-content) {
+        width: 40%;
+        display: inline-block;
+        margin-left: -40%;
+        border-width: 2px;
+        border-radius: 0;
+    }
+}
+
+
 
 //the old stuff
     .search-results__item {
