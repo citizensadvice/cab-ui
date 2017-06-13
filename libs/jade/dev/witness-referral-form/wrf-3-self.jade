@@ -1,0 +1,29 @@
+block settings
+    //- var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            h2 About the witness
+            fieldset
+                label(for="first-name") First name
+                input(id="first-name" type="text")
+            fieldset
+                label(for="last-name") Last name
+                input(id="last-name" type="text")
+            
+
+            a.btn.left-button-icon(href="wrf-2-self.html") No
+            a.btn.right-button-icon(href="wrf-4-self.html") Yes

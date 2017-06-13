@@ -1,28 +1,70 @@
 block settings
-	- var title = "benafits"
+	- var mockup = true
+	- var sidebar = true
+	//- var toolbars = true
+	- var title = "Search"
 	- var dir = "../../"
-	//- var sidebar = true
 
-extends /jade/templates/template-site.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
+		{title: "England"},
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
-
-block script
-
+	
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
+	
 block content
-	.flex-row
-		.col-md-8.col-sm-12
-			.term-suggestion Did you mean #[a benefits]?
-			.term-correction Showing results for #[strong benefits]
+	.articleContent
+		style.
+			.field-group--buttons input:first-of-type {
+				width: 70%;
+			}
+			.field-group input {
+				width: 30%;
+			}
+			@media (max-width: 750px) {
+				.field-group.field-group--buttons .btn {
+			        width: 40%;
+			        display: inline-block;
+			        margin-left: -40%;
+			        border-width: 2px;
+			        border-radius: 0;
+				}
+				.field-group--buttons input:first-of-type {
+					width: 90%;
+				}
+				.section-nav {
+					order: 1;
+				}
+			}
+
+		div
+			//-h1.page-title.search Search
+			form
+				.search-results__input(role="search")
+					fieldset
+						.field-group.field-group--buttons
+							label.screenreader Search
+							input#field(type="search", placeholder="Search again", value="benefits")
+							button.btn.search-button-icon(type="submit" value="Search") Search
+						p Search for advice
+						.invalid An error was encountered. Please try searching again later.
+			.search-title Showing results for #[strong benefits]
+			.term-suggestion Search instead for #[a bnefits]
+			//h2.search-title Showing results for #[strong benefits]
+			//p.search-spellcheck Search instead for #[a bnefits]
 			ul.search-results
 
 				li
-					.heading
+					h3
 						a Benefits
-					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					p.description Overview and content list for #[strong benefits].
+					//- ul.section
+						li In:
+						li #[a Benefits]
 					//-.adviser-categories
 						ul(style="margin:0")
 							li #[a Benefits fact sheets]
@@ -31,45 +73,100 @@ block content
 							li(style="margin:0") #[a Making welfare work locally]
 
 				li
-					.heading
-						a Sick or disabled people and carers
-					.description If you're sick or disabled, you may be able to claim benefits and tax credits.
-					//-ul.section
+					h3
+						a Benefits advice in BSL
+					p.description Find out about #[strong benefits] you may be able to get, how to claim them and the help you can get from a Citizens Advice Bureau. Information in British Sign Language (BSL).
+					ul.section
+						li In:
 						li #[a Benefits]
 
 				li
-					.heading
-						a Employment and Support Allowance (ESA)
-					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
-					//-ul.section
+					h3
+						a Benefits changes timeline
+					p.description Timeline showing which #[strong benefits] are changing and when.
+					ul.section
+						li In:
 						li #[a Benefits]
-						li #[a Sick or disabled people and carers]
+						li #[a Changes to Welfare benefits]
 
 				li
-					.heading
-						a Contractual sick pay
-					.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
-					//-ul.section
-						li #[a Workplace rights]
-						li #[a Sick pay]
-
-				li
-					.heading
-						a Benefits for families and children
-					.description Benefits for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
-					//-ul.section
+					h3
+						a Young people and benefits
+					p.description Information on #[strong benefits] for young people between the ages of 14 and 18.
+					ul.section
+						li In:
 						li #[a Benefits]
 						li #[a Children and young people]
 
-				li.pagination
-					#[a.blocklink(href="/dev/site/search-2-page-2.html") 84 more results for 'Benefits']
+				li
+					h3
+						a Benefits for older people
+					p.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
+					ul.section
+						li In:
+						li #[a Benefits]
+						li #[a Older people]
 
-				li.related-results
-					strong Related searches
-					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+				li
+					h3
+						a Disability discrimination and welfare benefits
+					p.description Explains how service providers must not discriminate against you, when you are claiming or receiving #[strong benefits].
+					ul.section
+						li In:
+						li #[a Consumer]
+						li #[a Discrimination in goods and services]
+						li #[a Services provided by a public authority]
+						li #[a Common situations]
 
-				li.search-results__input
-					fieldset
-						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="#{title}")
-							button.btn Search
+				li
+					h3
+						a Croatian nationals - claiming benefits
+					p.description Rights of Croatian nationals and the habitual residence test.
+					ul.section
+						li In:
+						li #[a Benefits]
+						li #[a Coming from abroad and claiming benefits]
+						li #[a EEA nationals]
+
+				li
+					h3
+						a National insurance – contributions and benefits
+					p.description Information on national insurance contributions including classes of contributions, contribution conditions for #[strong benefits] and how to get a national insurance number.
+					ul.section
+						li In:
+						li #[a Benefits]
+						li #[a Benefits - introduction]
+
+				li
+					h3
+						a Benefits for families and children
+					p.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					ul.section
+						li In:
+						li #[a Benefits]
+						li #[a Children and young people]
+				
+				li
+					h3
+						a Benefits for people in work
+					p.description Information on #[strong benefits] and other help you may be entitled to.
+					ul.section
+						li In:
+						li #[a Benefits]
+						li #[a  In work or looking for work]
+
+			.pagination
+					ul
+						li.active
+							span 1
+						li #[a(href="#") 2]
+						li #[a(href="#") 3]
+						li #[a(href="#") Next]
+						li #[a(href="#") Last]
+
+					//-li.pagination
+						#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+
+						//- li.related-results
+							strong Related searches
+							p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]

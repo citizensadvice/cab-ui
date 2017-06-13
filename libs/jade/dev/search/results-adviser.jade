@@ -1,28 +1,32 @@
 block settings
-	- var title = "benafits"
+	- var mockup = true
+	- var sidebar = true
 	- var dir = "../../"
 	//- var sidebar = true
 
-extends /jade/templates/template-site.jade
+extends /jade/templates/template.jade
 
 block breadcrumbs
 	+breadcrumbs([
 		{title: "Home", href: dir + "index.html"},
 		{title: "Search"}])
 
-block script
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
 
 block content
 	.flex-row
-		.col-md-8.col-sm-12
-			.term-suggestion Did you mean #[a benefits]?
-			.term-correction Showing #[strong 89] results for #[strong benefits]
+		.col-12
+			.search-title Showing results for #[strong overpayment of benefits]
+			.term-suggestion Search instead for #[a oevrpayment of benefits]
 			ul.search-results
 
 				li
-					.heading
+					h3
 						a Benefits
-					.description These pages give you information on benefits and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					ul.section
+						li #[a Benefits]
 					.adviser-categories
 						ul(style="margin:0")
 							li #[a Benefits fact sheets]
@@ -31,22 +35,23 @@ block content
 							li #[a Making welfare work locally]
 
 				li
-					.heading
+					h3
 						a Sick or disabled people and carers
-					.description If you're sick or disabled, you may be able to claim benefits and tax credits.
+					.description If you're sick or disabled, you may be able to claim #[strong benefits] and tax credits.
 					ul.section
 						li #[a Benefits]
 
 				li
-					.heading
-						a Employment and Support Allowance (ESA)
-					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
-					ul.section
-						li #[a Benefits]
-						li #[a Sick or disabled people and carers]
+					.adviser-result
+						h3
+							a Employment and Support Allowance (ESA)
+						.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
+						ul.section
+							li #[a Benefits]
+							li #[a Sick or disabled people and carers]
 
 				li
-					.heading
+					h3
 						a Contractual sick pay
 					.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
 					ul.section
@@ -54,22 +59,22 @@ block content
 						li #[a Sick pay]
 
 				li
-					.heading
+					h3
 						a Benefits for families and children
-					.description Benefits for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
 					ul.section
 						li #[a Benefits]
 						li #[a Children and young people]
 
 				li.pagination
-					#[a.blocklink(href="/dev/site/search-2-page-2.html") 84 more results for 'Benefits']
+					#[a.blocklink(href="results-adviser-page-2.html") 56 more results for 'overpayment of benefits']
 
-				li.related-results
+				//- li.related-results
 					strong Related searches
 					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
 
 				li.search-results__input
 					fieldset
 						.field-group.field-group--buttons
-							input#field(type="search", placeholder="Search again", value="#{title}")
+							input#field(type="search", placeholder="Search again", value="oevrpayment of benefits")
 							button.btn Search

@@ -1,0 +1,46 @@
+block settings
+	- var mockup = true
+	- var sidebar = true
+	- var dir = "../../"
+	//- var sidebar = true
+
+extends /jade/templates/template.jade
+
+block section-notice
+	aside.section-notice__advisernet.js-make-sticky
+		h2.screenreader Notice
+		.section-notice__content
+			p
+				span.badge ADVISERNET
+				| You're currently viewing AdviserNet. #[a(href="https://www.citizensadvice.org.uk") Visit the public website].
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+
+block content
+	.flex-row
+		.col-12
+			h1 2.60.25.21 Contact the consumer helpline
+			p Contact the Citizens Advice consumer helpline (formerly known as Consumer Direct) if you need more help with a consumer problem.
+			p Contact Consumerline if you’re in Northern Ireland.
+
+			h2 Call the helpline
+			p Citizens Advice consumer helpline: 03454 04 05 06
+			p Textphone: 18001 03454 04 05 06
+			p Monday to Friday, 9am to 5pm
+			p To contact a Welsh-speaking adviser: 03454 04 05 05
+			p Textphone to contact a Welsh-speaking adviser: 18001 03454 04 05 05
+			p Closed on bank holidays
+			p Calls to the helpline cost up to 9p per minute from a landline. If you're calling from a mobile, it'll cost between 3p and 40p per minute - if you have inclusive minutes, it's the same as calling a landline.
+			p An adviser will answer your call as soon as possible, usually within a few minutes. Once you're speaking to an adviser your call should take an average of 8 to 10 minutes.
+
+
+			h2 Use the online form
+			p You can also contact the consumer service online. There’s a different way of getting in touch depending on whether it’s about:
+			ul
+				li energy - the supply of gas or electricity
+				li post - an item of mail you have sent or received
+				li any other consumer issue
+			p An adviser will get back to you within 5 working days.

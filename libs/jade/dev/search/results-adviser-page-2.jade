@@ -1,0 +1,116 @@
+block settings
+	- var mockup = true
+	- var sidebar = true
+	- var dir = "../../"
+	//- var sidebar = true
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
+
+block content
+	.flex-row
+		.col-12
+			.search-title Showing results 6 to 15 for #[strong overpayment of benefits]
+			.term-suggestion Search instead for #[a oevrpayment of benefits]
+			ul.search-results
+
+				li
+					.heading
+						a Young people and benefits
+					.description Information on #[strong benefits] for young people between the ages of 14 and 18.
+					ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
+
+				li
+					.heading
+						a Benefits for people in work
+					.description Information on #[strong benefits] and other help you may be entitled to.
+					ul.section
+						li #[a Benefits]
+						li #[a In work or looking for work]
+
+				li
+					.heading
+						a Disability discrimination and welfare benefits
+					.description Explains how service providers must not discriminate against you, when you are claiming or receiving #[strong benefits.]
+					ul.section
+						li #[a Discrimination]
+						li #[a Discrimination in goods and services]
+						li #[a Services provided by a public authority]
+						li #[a Common situations]
+
+				li
+					.heading
+						a Benefit calculators: what benefits can you get
+					.description Get a quick idea of the #[strong benefits] you could get including disability benefits and links to free and detailed benefit eligibility tools and calculators
+					ul.section
+						li #[a Benefits]
+						li #[a Benefits - introduction]
+
+				li
+					.heading
+						a Tax on benefits in kind
+					.description Information on fringe #[strong benefits], including which ones are tax-free and how common fringe benefits such as company cars, meals and relocation expenses are taxed.
+					ul.section
+						li #[a Tax]
+						li #[a What is taxable income]
+				li
+					.heading
+						a Benefits for people looking for work
+					.description Information on jobseeker's allowance including benefit rates, who can claim and how to claim.
+					ul.section
+						li #[a Benefits]
+						li #[a In work or looking for work]
+				li
+					.heading
+						a British and Irish citizens - claiming benefits
+					.description Whether or not a British or Irish citizen needs to satisfy the conditions of the Habitual Residence Test when returning to the UK from abroad.
+					ul.section
+						li #[a Benefits]
+						li #[a Coming from abroad and claiming benefits]
+				li
+					.heading
+						a Bulgarian and Romanian nationals - claiming benefits
+					.description Rights of A2 nationals and the habitual residence test.
+					ul.section
+						li #[a Benefits]
+						li #[a Coming from abroad and claiming benefits]
+						li #[a EEA nationals]
+				li
+					.heading
+						a Croatian nationals - claiming benefits
+					.description Rights of Croatian nationals and the habitual residence test.
+					ul.section
+						li #[a Benefits]
+						li #[a Coming from abroad and claiming benefits]
+						li #[a EEA nationals]
+				li
+					.heading
+						a Payment of benefits and tax credits
+					.description Payment of #[strong benefits] and tax credits by direct credit transfer into bank and building society accounts or Post Office card accounts.
+					ul.section
+						li #[a Benefits]
+						li #[a Benefits - introduction]
+
+				li.pagination
+					#[a.blocklink(href="") Next 10 results for 'overpayment of benefits']
+				li.pagination
+					#[a.blocklink.blocklinks--back(href="results-adviser.html") Previous results]
+
+				// li.related-results
+					strong Related searches
+					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+
+				li.search-results__input
+					fieldset
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Search again", value="oevrpayment of benefits")
+							button.btn Search

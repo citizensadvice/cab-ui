@@ -1,0 +1,125 @@
+block settings
+	- var mockup = true
+	- var sidebar = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+
+block script
+	script.
+		$('#feedback-link').on('click', function(){
+			$('#feedback-form').slideToggle('fast');
+		})
+		$('#send').on('click', function(){
+			$('#feedback-content').hide();
+			$('#feedback-confirmation').show();
+		})
+	script.
+		hide(document.querySelectorAll('.footer-feedback'));
+		function hide (elements) {
+		  elements = elements.length ? elements : [elements];
+		  for (var index = 0; index < elements.length; index++) {
+		    elements[index].style.display = 'none';
+		  }
+		}
+
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
+	
+block content
+	.flex-row
+		.col-12
+			.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			.term-suggestion Search instead for #[a Do I qualify for bnefits in the UK]
+			ul.search-results
+
+				li
+					.heading
+						a Benefits
+					.description These pages give you information on #[strong benefits] and tax credits if you are working or unemployed, sick or disabled, a parent, a young person, an older person or a veteran.
+					//-.adviser-categories
+						ul(style="margin:0")
+							li #[a Benefits fact sheets]
+							li #[a Universal Credit]
+							li #[a Help if on a low income]
+							li(style="margin:0") #[a Making welfare work locally]
+
+				li
+					.heading
+						a Sick or disabled people and carers
+					.description If you're sick or disabled, you may be able to claim #[strong benefits] and tax credits.
+					//-ul.section
+						li #[a Benefits]
+
+				li
+					.heading
+						a Employment and Support Allowance (ESA)
+					.description Information on how to claim Employment and Support Allowance including eligibility, filling in the ESA1 and ESA50 forms and challenging an ESA decision.
+					//-ul.section
+						li #[a Benefits]
+						li #[a Sick or disabled people and carers]
+
+				li
+					.heading
+						a Contractual sick pay
+					.description If an employer has their own sick pay scheme it should be included in your client’s employment contract.
+					//-ul.section
+						li #[a Workplace rights]
+						li #[a Sick pay]
+
+				li
+					.heading
+						a Benefits for families and children
+					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					//-ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
+
+				//-li.pagination
+					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+
+				//- li.related-results
+					strong Related searches
+					p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+
+			.pagination
+				ul
+					li.active #[span 1]
+					li #[a 2]
+					li #[a 3]
+					li.pagination--dot ...
+					li #[a 9]
+					li #[a Next]
+
+			.search-results__input
+				fieldset
+					.field-group.field-group--buttons
+						input#field(type="search", placeholder="Search again", value="Do I qualify for bnefits in the UK")
+						button.btn Search
+
+	.flex-row
+		.col-12
+			.callout--alert
+				h2.screenreader Feedback
+				p Are these search results not what you expected? #[a#feedback-link Give us feedback].
+				#feedback-form
+					#feedback-content(style="width:100%;")
+						.fieldset
+							legend(for="radio-inline") Did you find what you were searching for?
+							label.radio.radio--inline
+								input(name="radio-inline" type="radio" value="option1")
+								| Yes
+							label.radio.radio--inline
+								input(name="radio-inline" type="radio" value="option2")
+								| No
+						.fieldset
+							label(for="wrong") What did you expect?
+							textarea#wrong
+						a#send.btn Send
+					#feedback-confirmation.main-content__right(style="text-align:left;margin-bottom:1rem;display:none")
+					p Thank you for your feedback. We will review your message in the next 48 hours.

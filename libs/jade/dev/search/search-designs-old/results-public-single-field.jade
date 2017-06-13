@@ -1,0 +1,132 @@
+block settings
+	- var mockup = true
+	- var sidebar = true
+	//- var title = "Search results"
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "England"},
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+	
+block sidebar
+	include /jade/dev/search/sidebar-search.jade
+	
+block content
+	.flex-row
+		.col-12
+			//-.search-results__input
+					fieldset
+						.field-group.field-group--buttons
+							input#field(type="search", placeholder="Search again", value="benefits")
+							button.btn.search-button-icon Search
+			//-.search-title Showing results for #[strong Do I qualify for benefits in the UK]
+			p Results for #[strong benefits]
+			.term-suggestion Search instead for #[a bnefits]
+			ul.search-results
+
+				li
+					.heading
+						a Benefits
+					.description Overview and content list for #[strong benefits].
+					//- ul.section
+						li #[a Benefits]
+					//-.adviser-categories
+						ul(style="margin:0")
+							li #[a Benefits fact sheets]
+							li #[a Universal Credit]
+							li #[a Help if on a low income]
+							li(style="margin:0") #[a Making welfare work locally]
+
+				li
+					.heading
+						a Benefits advice in BSL
+					.description Find out about #[strong benefits] you may be able to get, how to claim them and the help you can get from a Citizens Advice Bureau. Information in British Sign Language (BSL).
+					ul.section
+						li #[a Benefits]
+
+				li
+					.heading
+						a Benefits changes timeline
+					.description Timeline showing which #[strong benefits] are changing and when.
+					ul.section
+						li #[a Benefits]
+						li #[a Changes to Welfare benefits]
+
+				li
+					.heading
+						a Young people and benefits
+					.description Information on #[strong benefits] for young people between the ages of 14 and 18.
+					ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
+
+				li
+					.heading
+						a Benefits for older people
+					.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
+					ul.section
+						li #[a Benefits]
+						li #[a Older people]
+
+				li
+					.heading
+						a Disability discrimination and welfare benefits
+					.description Explains how service providers must not discriminate against you, when you are claiming or receiving #[strong benefits].
+					ul.section
+						li #[a Consumer]
+						li #[a Discrimination in goods and services]
+						li #[a Services provided by a public authority]
+						li #[a Common situations]
+
+				li
+					.heading
+						a Croatian nationals - claiming benefits
+					.description Rights of Croatian nationals and the habitual residence test.
+					ul.section
+						li #[a Benefits]
+						li #[a Coming from abroad and claiming benefits]
+						li #[a EEA nationals]
+
+				li
+					.heading
+						a National insurance – contributions and benefits
+					.description Information on national insurance contributions including classes of contributions, contribution conditions for #[strong benefits] and how to get a national insurance number.
+					ul.section
+						li #[a Benefits]
+						li #[a Benefits - introduction]
+
+				li
+					.heading
+						a Benefits for families and children
+					.description #[strong Benefits] for pregnant women and parents, including maternity allowance, maternity grants, child benefit and child trust fund.
+					ul.section
+						li #[a Benefits]
+						li #[a Children and young people]
+				
+				li
+					.heading
+						a Benefits for people in work
+					.description Information on #[strong benefits] and other help you may be entitled to.
+					ul.section
+						li #[a Benefits]
+						li #[a  In work or looking for work]
+
+		.pagination
+				ul
+					li.active
+						span 1
+					li #[a(href="#") 2]
+					li #[a(href="#") 3]
+					li #[a(href="#") Next]
+					li #[a(href="#") Last]
+
+				//-li.pagination
+					#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+
+					//- li.related-results
+						strong Related searches
+						p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]

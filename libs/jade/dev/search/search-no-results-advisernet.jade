@@ -1,0 +1,30 @@
+block settings
+	- var advisernet = true
+	- var sidebar = true
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "Home", href: dir + "index.html"},
+		{title: "Search"}])
+
+block sidebar
+	include /jade/dev/search/sidebar-search-advisernet.jade
+
+block content
+	.flex-row
+		.col-12
+			h1.page-title.search Search
+			form
+				fieldset
+					.field-group.field-group--buttons
+						input#field(type="search" value="greivancess")
+						button.btn(type="submit") Search
+			.search-title No results for #[strong greivancess]
+			p It’s worth checking your spelling or trying more general words.
+			p For more precise search results, try adding quotation marks around an exact phrase, e.g. “maternity pay”.
+	//-.flex-row
+		.col-12
+			#[a.blocklink(href="https://www.research.net/r/SS2P73R?p={{p}}&u={{u}}" target="_blank") Let us know if you had problems with your search]

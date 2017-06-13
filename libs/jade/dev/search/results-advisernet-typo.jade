@@ -1,0 +1,196 @@
+block settings
+	- var advisernet = true
+	- var sidebar = true
+	- var title = "Search"
+	- var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+	+breadcrumbs([
+		{title: "England"},
+		{title: "Navigation tools"},
+		{title: "Search"}])
+	
+block sidebar
+	include /jade/dev/search/sidebar-search-advisernet.jade
+	
+block content
+	.articleContent
+		style.
+			.field-group--buttons input:first-of-type {
+				width: 70%;
+			}
+			.field-group input {
+				width: 30%;
+			}
+			@media (max-width: 750px) {
+				.field-group.field-group--buttons .btn {
+			        width: 40%;
+			        display: inline-block;
+			        margin-left: -40%;
+			        border-width: 2px;
+			        border-radius: 0;
+				}
+				.field-group--buttons input:first-of-type {
+					width: 90%;
+				}
+				.section-nav {
+					order: 1;
+				}
+			}
+
+		div
+			//-h1.page-title.search Search
+			//-.search-title Showing results for #[strong benefits]
+			//- .term-suggestion Search instead for #[a bnefits]
+			form
+				.search-results__input(role="search")
+					fieldset
+						.field-group.field-group--buttons
+							label.screenreader Search
+							input#field(type="search", placeholder="Search term or document number", value="bnefits")
+							button.btn.search-button-icon(type="submit" value="Search") Search
+						p Search for advice
+						.invalid An error was encountered. Please try searching again later.
+			h2.search-title Showing results for #[strong benefits]
+			p.search-spellcheck Search instead for #[a bnefits]
+			ul.search-results
+
+				li
+					h3
+						a Backdating benefits
+					p.description Information on backdating means-tested and non-means-tested benefits including late claims, specified circumstances and good cause, exceptions to time limits, and maximising benefit arrears when challenging a decision.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Benefits]
+						li #[a Benefits administration]
+						li #[a Rates, calculations and payments]
+					//-.adviser-categories
+						ul(style="margin:0")
+							li #[a Benefits fact sheets]
+							li #[a Universal Credit]
+							li #[a Help if on a low income]
+							li(style="margin:0") #[a Making welfare work locally]
+
+				li
+					h3
+						a Benefits and fraud
+					p.description Explains benefit fraud, how benefit authorities investigate fraud and the process of prosecuting a claimant for benefit fraud. It also describes what may happen to a claimant's benefit during and after a benefit fraud investigation.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Benefits]
+						li #[a Benefits administration]
+						li #[a Benefits administration, fraud and appeals]
+
+				li
+					h3
+						a Complaints about benefits
+					p.description Information on making a complaint about benefits covering when to complain, what can be achieved, who to complain to, complaints about the Department for Work and Pensions, and using the ombudsman.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Benefits]
+						li #[a Benefits administration]
+						li #[a Benefits administration, fraud and appeals]
+
+				li
+					h3
+						a Benefits
+					//-.description Information on #[strong Benefits] for people over 60 including retirement pension, pension credit, winter fuel payments and Christmas bonus.
+					ul.section
+						li In:
+						li #[a AdviserNet]
+
+				li
+					h3
+						a Benefits and prisoners
+					p.description Information explaining how benefits are affected by being on remand, in prison or on temporary release. It covers benefits for looking after the children of prisoners and benefits on release from prison.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Law and courts]
+						li #[a Prisons and prisoners]
+						li #[a Benefits and prisoners]
+
+				li
+					h3
+						a Disability discrimination and welfare benefits
+					p.description Explains how service providers must not discriminate against you, when you are claiming or receiving benefits.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Consumer]
+						li #[a Discrimination in goods and services]
+						li #[a Services provided by a public authority]
+						li #[a Common situations]
+
+				li
+					h3
+						a Taxation of benefits in kind
+					p.description Information on benefits in kind, also known as fringe benefits or perks, covering tax free benefits, how taxable benefits in kind are valued, common benefits in kind, how the tax is declared and national insurance and benefits in kind.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Debt and money]
+						li #[a Tax]
+						li #[a Income tax]
+						li #[a Allowances and reliefs]
+
+				li
+					h3
+						a Benefits and tax credits overpayments
+					p.description Explains the circumstances in which benefits and tax credits overpayments count as qualifying debts for a debt relief order.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Resources]
+						li #[a Caseworker tools]
+						li #[a Debt relief order toolkit]
+						li #[a Which debts are covered by a debt relief order]
+
+				li
+					h3
+						a CPAG Welfare Benefits and Tax Credits Handbook
+					p.description The CPAG welfare benefits and tax credits handbook is a definitive guide to all welfare benefits and tax credits. It explains claims, decisions, calculations, overpayments, appeals and how to challenge them, how to claim from the social fund, and national insurance contributions.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Resources]
+						li #[a Reference books]
+				
+				li
+					h3
+						a Benefits for industrial injury and disease
+					p.description Deals with social security benefits payable to a client who has had an accident at work or who has contracted an industrial disease. Explains what a client should do following an accident, describes the industrial injuries scheme, disablement benefit and constant attendance allowance.
+					ul.section
+						li In:
+						li #[a Advisernet]
+						li #[a Benefits]
+						li #[a Other benefits]
+						li #[a Industrial injuries benefits]
+
+			.pagination
+					ul
+						li.active
+							span 1
+						li #[a(href="#") 2]
+						li #[a(href="#") 3]
+						li #[a(href="#") 4]
+						li #[a(href="#") 4]
+						li #[a(href="#") 5]
+						li #[a(href="#") Next]
+						li #[a(href="#") Last]
+
+					//-li.pagination
+						#[a.blocklink(href="results-public-page-2.html") 84 more results for 'Do I qualify for benefits in the UK']
+
+						//- li.related-results
+							strong Related searches
+							p #[a Universal Credit],&nbsp;&nbsp;#[a Housing Benefit]
+
+			//-.flex-row
+				.col-12
+					#[a.blocklink(href="https://www.research.net/r/SS2P73R?p={{p}}&u={{u}}" target="_blank") Let us know if you had problems with your search]
