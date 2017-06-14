@@ -20,9 +20,13 @@ block content
 		style.
 			.field-group--buttons input:first-of-type {
 				width: 70%;
+				padding-right: 0;
 			}
 			.field-group input {
 				width: 30%;
+			}
+			.section-nav .adviser-nav .section-nav__parent {
+				display: none;
 			}
 			@media (max-width: 750px) {
 				.field-group.field-group--buttons .btn {
@@ -32,11 +36,15 @@ block content
 			        border-width: 2px;
 			        border-radius: 0;
 				}
-				.field-group--buttons input:first-of-type {
-					width: 90%;
-				}
 				.section-nav {
 					order: 1;
+					border: 0;
+				}
+				.section-nav__heading {
+				    display: none;
+				}
+				.js .section-nav__heading+ul {
+				    display: block;
 				}
 			}
 
@@ -53,8 +61,8 @@ block content
 							button.btn.search-button-icon(type="submit" value="Search") Search
 						p Search for advice
 						.invalid An error was encountered. Please try searching again later.
-			h2.search-title Showing results for #[strong benefits]
-			p.search-spellcheck Search instead for #[a bnefits]
+			h2.search-title-beta Showing results for #[strong benefits]
+			p.search-spellcheck-beta Search instead for #[a bnefits]
 			ul.search-results
 
 				li
