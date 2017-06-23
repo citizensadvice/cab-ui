@@ -121,6 +121,13 @@ aside,
 	display: none;
 }
 
+.callout {
+	&--warning      { &:before { background: none; color: @red;    } }
+	&--confirmation { &:before { background: none; color: @green;  } }
+	&--alert        { &:before { background: none; color: @yellow; } }
+	&--quote        { &:before { background: none; color: @gray-2; } }
+}
+
 .accordionContent,
 .collapse-content,
 .revealable__content {
