@@ -1,0 +1,28 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            h2 Form submitted
+            .callout--confirmation
+                p The Witness Service will contact you in 2 working days.
+                p If you need to contact them, please use reference number:
+                H2 CAB00000332
+            .callout--related
+                p If you’ve provided a phone number, please save the Witness Service’s number in your contacts so you know they’re calling.
+                h3 The Witness Service
+                p Telephone: 020 7553 7440
+                p You can #[a(href="#") learn more about the Witness Service] or #[a(href="#") get more information about being a witness].

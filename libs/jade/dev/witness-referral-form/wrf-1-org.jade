@@ -1,0 +1,40 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            p The Witness Service can give you free help before and during a trial. They can help you understand the court process and support you on the day you appear as a witness.
+            p To ask for their help, please fill in this short form. You’ll get a reply within 2 working days.
+            p You’ll be asked for some details about the court case as well as your contact details. This will help the Witness Service give you the support you need.
+            p The information will be saved securely and will only be shared with your permission.
+
+            fieldset
+                legend(for="witness-type") First, please select if you’re a witness needing help
+                label.radio.radio--block
+                    input(name="witness-type" type="radio" value="1")
+                    | I’m a witness
+                label.radio.radio--block
+                    input(name="witness-type" type="radio" value="2") 
+                    | I’m a friend or family member of a witness
+                label.radio.radio--block
+                    input(name="witness-type" type="radio" value="3")
+                    | I work for an organisation that’s referring a witness (prosecuting agency)
+                label.radio.radio--block
+                    input(name="witness-type" type="radio" value="4")
+                    | I work for an organisation that’s referring a witness (other agency)
+            
+
+            a.btn.right-button-icon(href="wrf-2-org.html") Start

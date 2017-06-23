@@ -1,0 +1,63 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block script
+    script.
+        $(document).ready(function() {
+
+            $('.conditional').click(function() {
+                if( $(this).find('input[value="7"]').is(':checked')) {
+                    $("#other").show();
+                }
+                else {
+                    $("#other").hide();
+                }
+            });
+        });
+
+block content
+    .articleContent
+        div
+            h2 Special measures
+            fieldset.conditional
+                legend(for="special-measures") Have special measures been considered as applicable for this witness?
+                    span.optional  Select all that apply
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="1")
+                    | Screens
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="2")
+                    | Live link at a court site
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="3")
+                    | Live link away from court (remote)
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="4")
+                    | S28 pre-recorded evidence
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="5")
+                    | Removal of wigs and gowns
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="6")
+                    | Intermediary
+                label.checkbox.checkbox--block
+                    input(name="special-measures" type="checkbox" value="7")
+                    | Other
+                    fieldset#other.conditional--fields
+                        label(for="special-other") Please provide information below
+                        textarea(id="special-other" rows="2")
+
+            a.btn.left-button-icon(href="wrf-7-org.html") Back
+            a.btn.right-button-icon(href="wrf-9-org.html") Next

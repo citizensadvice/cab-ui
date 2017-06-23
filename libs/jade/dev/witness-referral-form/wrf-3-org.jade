@@ -1,0 +1,55 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            h2 About your organisation
+            fieldset
+                label(for="organisation-name") Organisation name
+                input(id="organisation-name" type="text")
+            fieldset
+                label(for="organisation-type") Organisation type
+                .dropdown
+                    select
+                        option Police Witness care unit
+                        option Police officer (not witness care unit) 
+                        option RSPCA
+                        option Environment agency
+                        option Serious fraud office
+                        option DWP
+                        option Local authority
+                        option Natural Resources Wales
+                        option Defence organisation
+                        option Victim Services Organisation
+                        option Local Citizens Advice
+                        option Homicide Service
+                        option Other organisation
+            fieldset
+                label(for="name") Other organisation type
+                    span.optional  (Please specify)
+                input(id="name" type="text")
+            fieldset
+                label(for="name") Your name
+                input(id="name" type="text")
+            fieldset
+                label(for="phone") Your phone number
+                input(id="phone" type="number")
+            fieldset
+                label(for="email") Your email address
+                input(id="email" type="email")
+
+            a.btn.left-button-icon(href="wrf-2-self.html") No
+            a.btn.right-button-icon(href="wrf-4-org.html") Yes

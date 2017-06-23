@@ -1,0 +1,59 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            h2 About the trial
+            fieldset
+                label(for="court-name") Court where the trial will be heard
+                input(id="court-name" type="text")
+            .form-group-date
+                legend Date of trial
+                fieldset
+                    label(for="day") Day
+                    input(id="  day" placeholder="DD" maxlength="2" min="1" max="31"  name="day" type="number" pattern="\d{1,2}" autoComplete="off")
+                fieldset
+                    label(for="month") Month
+                    input(id="month" placeholder="MM" maxlength="2" min="1" max="12" name="month" type="number" pattern="\d{1,2}" autoComplete="off")
+                fieldset
+                    label(for="year") Year
+                    input(id="year" placeholder="YYYY" maxlength="4"  min="1900" max="2100" name="year" type="number" pattern="\d{4}" autoComplete="off")
+            .form-group-date
+                legend First warned date
+                fieldset
+                    label(for="day") Day
+                    input(id="  day" placeholder="DD" maxlength="2" min="1" max="31"  name="day" type="number" pattern="\d{1,2}" autoComplete="off")
+                fieldset
+                    label(for="month") Month
+                    input(id="month" placeholder="MM" maxlength="2" min="1" max="12" name="month" type="number" pattern="\d{1,2}" autoComplete="off")
+                fieldset
+                    label(for="year") Year
+                    input(id="year" placeholder="YYYY" maxlength="4"  min="1900" max="2100" name="year" type="number" pattern="\d{4}" autoComplete="off")
+            fieldset
+                legend(for="offence-type") When is the witness appearing?
+                    span.optional  Select all that apply
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="1")
+                    | Initial case management or plea hearing
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="2")
+                    | Trial
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="3")
+                    | Sentencing hearing
+
+            a.btn.left-button-icon(href="wrf-4-org.html") Back
+            a.btn.right-button-icon(href="wrf-5-org.html") Next
