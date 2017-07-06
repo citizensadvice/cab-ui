@@ -24,14 +24,17 @@ block content
             fieldset
                 legend(for="witness-type") First, please select if you’re a witness needing help
                 label.radio.radio--block
-                    input(name="witness-type" type="radio" value="witness")
+                    input(name="witness-type" type="radio" value="1")
                     | I’m a witness
                 label.radio.radio--block
-                    input(name="witness-type" type="radio" value="friend-family") 
+                    input(name="witness-type" type="radio" value="2") 
                     | I’m a friend or family member of a witness
                 label.radio.radio--block
-                    input(name="witness-type" type="radio" value="org")
-                    | I work for an organisation that’s referring a witness
+                    input(name="witness-type" type="radio" value="3")
+                    | I work for an organisation that’s referring a witness (prosecuting agency)
+                label.radio.radio--block
+                    input(name="witness-type" type="radio" value="4")
+                    | I work for an organisation that’s referring a witness (other agency)
             
 
-            a.btn.right-button-icon(href="wrf-step-2.html") Start
+            a.btn.right-button-icon(href="wrf-2-self.html") Start

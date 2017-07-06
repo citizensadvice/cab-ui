@@ -1,0 +1,59 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block script
+    script.
+        $(document).ready(function() {
+
+            $('.conditional').click(function() {
+                if( $(this).find('input[value="1"]').is(':checked')) {
+                    $("#reasons-viw").show();
+                }
+                else {
+                    $("#reasons-viw").hide();
+                }
+            });
+        });
+
+block content
+    .articleContent
+        div
+            h2 Vulnerable and intimidated witnesses (VIW)
+            fieldset.conditional
+                legend(for="assessed-viw") Has the witness been assessed as VIW?
+                label.radio.radio--inline
+                    input(name="assessed-viw" type="radio" value="1")
+                    | Yes
+                label.checkbox.checkbox--inline
+                    input(name="assessed-viw" type="radio" value="2")
+                    | No
+            fieldset#reasons-viw.conditional--fields
+                legend(for="viw-reasons") Reasons for special measures for VIW
+                    span.optional  Select all that apply
+                label.checkbox.checkbox--inline
+                    input(name="viw-reasons" type="checkbox" value="3")
+                    | Physical or sensory disability
+                label.checkbox.checkbox--inline
+                    input(name="viw-reasons" type="checkbox" value="4")
+                    | Learning difficulty
+                label.checkbox.checkbox--inline
+                    input(name="viw-reasons" type="checkbox" value="4")
+                    | Mental health issues
+                label.checkbox.checkbox--inline
+                    input(name="viw-reasons" type="checkbox" value="6")
+                    | Intimidated
+
+            a.btn.left-button-icon(href="wrf-6-org.html") Back
+            a.btn.right-button-icon(href="wrf-8-org.html") Next

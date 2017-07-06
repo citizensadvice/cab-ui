@@ -16,7 +16,11 @@ block breadcrumbs
 block content
     .articleContent
         div
-            p Please confirm that you’re happy with the #[a(href="#") terms and conditions], including that the Witness Service can store the information you give. They’ll only share it with your permission.
+            h2 Support for the witness
+            filedset
+                legend(for="support-needs") Is there anything else which the witness would like us to know to help us to meet their needs?
+                    span.optional  (optional)
+                textarea(id="support-needs" rows="4")
 
-            a.btn.left-button-icon(href="wrf-1-self.html") No
-            a.btn.right-button-icon(href="wrf-3-self.html") Yes
+            a.btn.left-button-icon(href="wrf-9-org.html") Back
+            a.btn.right-button-icon(href="wrf-10-org.html") Next

@@ -1,0 +1,43 @@
+block settings
+    - var title = "Get help from the Witness Service"
+    - var sidebar = true
+    - var toolbars = false
+    - var mockup = true
+    - var dir = "../../"
+
+extends /jade/templates/template.jade
+
+block breadcrumbs
+    +breadcrumbs([
+        {title: "Home", href: "#"},
+        {title: "Witness Service", href: "#"},
+        {title: "Get help from the Witness Service"}])
+
+block content
+    .articleContent
+        div
+            h2 About the trial
+            fieldset
+                label(for="defendant-name") Name of the Defendant(s) / operation
+                    span.optional  (optional)
+                input(id="defendant-name" type="text")
+            fieldset
+                label(for="case-reference") Case reference Number
+                input(id="case-reference" type="text")
+            fieldset
+                label(for="offence-details") Details of the offence
+                textarea(id="offence-details" rows="3")
+            fieldset
+                legend(for="offence-type") Offence type
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="1")
+                    | DV
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="2")
+                    | SV
+                label.checkbox.checkbox--inline
+                    input(name="offence-type" type="checkbox" value="3")
+                    | Hate crime
+
+            a.btn.left-button-icon(href="wrf-3-org.html") Back
+            a.btn.right-button-icon(href="wrf-4b-org.html") Next
