@@ -1,0 +1,50 @@
+.index-page__box,
+.home-page__box {
+	@include callout( $white, $heritage-blue, $callout-border: $gray-6 );
+
+	@include callout--border;
+    //.callout--border--top;
+    padding: $box-spacing-vertical $box-spacing-horizontal;
+    border-radius: 2px;
+
+    & >:first-child { margin-top: 0; }
+    & >:last-child { margin-bottom: 0; }
+
+    h2 a {
+    	border: none;
+    	color: $heritage-blue;
+    }
+
+    .li--arrow {
+    	list-style: none;
+    	padding: 0;
+
+        li {
+    		border: 0 solid $gray-6;
+    		//border-top-width: 1px;
+    		//padding-top: .5rem;
+    		padding-bottom: .25rem;
+
+            // a { border: none; }
+    		&:last-child { margin-bottom: 0; }
+    	}
+    }
+}
+
+.page-list {
+    article {
+        //.well;
+        border-top: 2px solid $gray-7;
+        padding-top: .75rem;
+        margin-top: 1rem;
+
+        & .page-list-content > :first-child { margin-top: 0; }
+        & .page-list-content > :last-child { margin-bottom: 0; }
+
+        h2 a {
+            font-size: $font-size-medium;
+            border: none;
+            color: $heritage-blue;
+        }
+    }
+}

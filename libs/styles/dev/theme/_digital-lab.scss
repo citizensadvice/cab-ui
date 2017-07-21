@@ -1,0 +1,89 @@
+// Digital lab landing page styles
+.digital-lab {
+    .tablet { display: none;}
+
+    @media screen and (min-width: 1025px) {
+        .mobile { display: none; }
+        .tablet { display: block; }
+    }
+
+    .dialog__close {
+        position: static;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        float: right;
+        padding: 0;
+    }
+}
+
+.dl--footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+
+    .fullwidth-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    p {
+        margin: 0;
+        text-align: center;
+        padding: .5rem;
+
+        a,
+        a:visited {
+            font-weight: $font-weight-bold;
+            color: $generous-green;
+        }
+    }
+}
+
+.dl--segment {
+    text-align: center;
+
+    a,
+    a:visited,
+    a:active,
+    a:hover,
+    a:focus {
+        background-color: $generous-mauve;
+        color: $generous-green;
+        border: none;
+    }
+}
+
+.dl--circle {
+    background-color: white;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    display: inline-block;
+    border-radius: 2.5rem;
+    
+    .pic {
+        font-size: 2rem;
+        @include vertical-align;
+        color: $generous-green;
+    }
+}
+
+.egg,
+.egg:focus,
+.egg:hover {
+    background: none;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0) !important;
+    cursor: wait;
+}
+
+.egg:active {
+    background: none;
+    border: none;
+    outline: none;
+    color: $gray-7 !important;
+    cursor: wait;
+}

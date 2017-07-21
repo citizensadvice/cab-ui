@@ -1,0 +1,24 @@
+// ========================================================
+// @mixin: clearfix
+// ========================================================
+//
+
+
+// mixin definition
+//
+@mixin clearfix() {
+    .clearfix {
+        &:after {
+            content: " "; // A space apparently works better with some older browsers
+            clear: both;
+            display: block;
+        }
+    }
+}
+
+
+// mixin usage
+//
+// .className {
+//     @include clearfix();
+// }

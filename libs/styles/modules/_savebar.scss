@@ -1,0 +1,138 @@
+.savebar {
+	margin: 0;
+	left: 0;
+	position: fixed;
+	bottom: -(1rem + ($box-spacing-vertical * 2) + 4);
+	background: $yellow-lighter;
+	border: solid $yellow-light;
+	border-width: 2px 2px 0 0;
+	z-index: 1;
+	cursor: pointer;
+	transition: .5s;
+	border-radius: 0 $form-border-radius 0 0;
+	overflow: hidden;
+
+	@media (min-width: 600px) and (max-width: 750px), (min-width: 1100px)  {
+		margin-left: -1rem;
+		left: auto;
+		border-radius: $form-border-radius $form-border-radius 0 0;
+		border-width: 2px 2px 0 2px;
+	}
+
+	.alert,
+	.button {
+		display: inline-block;
+	}
+
+	.alert {
+		padding: 0 1rem;
+
+		&:before {
+			@include icon;
+			content: $i-star;
+			padding-right: .5rem;
+			color: $yellow;
+		}
+	}
+
+	.button { @include btn-icon($i-external-link); }
+	&.show { bottom: 0; }
+
+	/* Show this if bar is wrapped in a
+	a,
+	a:hover,
+	a:visited {
+		background: none;
+		border: none;
+	}*/
+}
+
+.save {
+	&.saved {
+		background-color: $yellow-lighter;
+		outline: 1rem / 3 solid $yellow-lighter;
+
+		.save-button {
+			display: inline-block;
+			color: $yellow;
+
+			&:before { content: $i-star; }
+		}
+	}
+}
+
+.save-button {
+	cursor: pointer;
+	font-weight: $font-weight-base;
+	color: $gray-5;
+	font-size: 1rem;
+	display: inline-block;
+
+	&:before {
+		@include icon;
+		content: $i-star-o;
+		cursor: pointer;
+		margin: 0 .25em 0 .75em;
+	}
+
+	// @media (min-width: 600px) { display: none; }
+
+	&.saved {
+		color: $yellow;
+
+		&:before { content: $i-star; }
+	}
+}
+
+/* Email specific features for the visual */
+.email-width {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.email-header { background-color: $heritage-blue-lightest; }
+
+.email-links {
+    margin: $box-spacing-vertical 0;
+    padding: $box-spacing-vertical;
+    background-color: $white;
+    color: $heritage-blue;
+    border: 1px solid $heritage-yellow;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bolder;
+    display: block;
+    @include btn-icon($i-right,$color:$heritage-blue);
+
+	&-breadcrumb  {
+    	font-weight: $font-weight-base;
+    	font-size: $font-size-small;
+    }
+
+    h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+        text-decoration: none;
+        border: none;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bolder;
+        margin: .25rem 0 0 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($heritage-yellow-lighter, 10%);
+        border: 1px solid $heritage-yellow;
+    }
+
+    &:visited { border: 1px solid $heritage-yellow; }
+
+    // Changing the blocklink icon
+    &.i-doc-image { @include btn-icon($i-doc-image,$color:$heritage-blue); }
+    &.i-search { @include btn-icon($i-search,$color:$heritage-blue); }
+}

@@ -1,0 +1,113 @@
+﻿/**
+ * FOOTER
+ *
+ * General styling for site wide footer.
+ */
+
+.main-footer {
+    background-color: $heritage-blue-lightest;
+    @extend .black-text;
+    overflow: hidden; // Prevent collapsing margins
+
+    .li--arrow {
+        list-style-image: url("/static/images/dev/arrow-bullet-fff.png");
+        list-style-image: url("/static/images/dev/arrow-bullet-fff.svg");
+    }
+    a {
+        border: none;
+    }
+}
+
+.main-footer__content {
+    @include limit-width($max-page-width);
+    //max-width: @breakpoint-lg;
+}
+
+.main-footer__box {
+
+    padding: $box-spacing-horizontal;
+
+    & > h2 {
+        color:$heritage-blue;
+        font-size: $font-size-large;
+        margin: 0;
+    }
+
+    & > ul {
+        list-style: none;
+        padding: 0;
+        margin: $box-spacing-horizontal 0 0 0;
+
+        // Messy, but makes box reuse a bit easier
+        &.li--arrow {
+            list-style-image: none;
+        }
+
+    }
+
+}
+
+.main-footer__box--survey {
+    border-bottom: 2px solid $white;
+}
+
+.main-footer__box--copyright {
+    p {
+        font-size: $font-size-small;
+    }
+
+    & img {
+        float: left;
+        margin-right: $box-spacing-horizontal*2;
+    }
+}
+
+// NEW FOOTER
+#footer {
+    clear: both;
+    .footer-content {
+        @include limit-width($breakpoint-lg);
+        padding: 0 1rem;
+        ul, li {
+            list-style: none;
+            padding: 0;
+        }
+        h3 {
+            border-bottom: 1px solid #fff;
+            padding: 0 0 1rem 0;
+        }
+    }
+    .footer--legal {
+        padding: 2rem 0rem;
+        display: block;
+        width: 100%;
+        background-color: $heritage-blue;
+        .footer--legal--content {
+            @include limit-width($breakpoint-lg);
+            padding: 0 1rem;
+            position: relative;
+            img {
+                width: 4.5rem;
+                @media ( max-width: $screen-xs-max ) {
+                    float: left;
+                    padding-right: 1rem;
+                }
+                @media ( min-width: $screen-sm-min ) {
+                    display: block;
+                }
+            }
+            p {
+                @media ( max-width: $screen-xs-max ) {
+                    margin-left: 4.5rem;
+                    margin-bottom: 0;
+                }
+                @media ( min-width: $screen-sm-min ) {
+                    @include vertical-align(absolute);
+                    margin-left: 5.5rem;
+                }
+                font-size: 0.875rem;
+                color: #fff;
+            }
+        }
+    }
+}

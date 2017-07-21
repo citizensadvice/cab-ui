@@ -26,7 +26,8 @@ var gulp = require('gulp'),
 	gulpif = require( 'gulp-if' ),
 	gutil = require('gulp-util'),
 	jade = require('gulp-jade'),
-	less = require( 'gulp-less' ),
+	//less = require( 'gulp-less' ),
+	sass = require('node-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	// Plumbers fix pipes
 	plumber = require('gulp-plumber'),
@@ -48,11 +49,11 @@ var gulp = require('gulp'),
  */
 
 // Clean the build directory
-gulp.task( 'clean-less', function() {
+gulp.task( 'clean-sass', function() {
 	return del('public/css/**');
 });
 
-gulp.task( 'less', function() {
+gulp.task( 'sass', function() {
 	var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
 		rgbaFallback,
@@ -65,12 +66,12 @@ gulp.task( 'less', function() {
 		postCssPlugins.push(cssnano);
 	}
 	var targetPath = 'public/css';
-	return gulp.src(['libs/styles/*.less'])
+	return gulp.src(['libs/styles/*.scss'])
 		.pipe( gulpif(!productionBuild, sourcemaps.init({largeFile: true})) ) // Generate sourcemaps
-		.pipe(less({ plugins: [lessGlob] }).on('error', function(err){
-			gutil.log(err);
-			this.emit('end');
-		}))
+		// .pipe(less({ plugins: [lessGlob] }).on('error', function(err){
+		// 	gutil.log(err);
+		// 	this.emit('end');
+		// }))
 		.on("error", notify.onError(function (error) {
 			return error.message;
 		}))
@@ -81,11 +82,11 @@ gulp.task( 'less', function() {
 		.pipe( gulpif(!productionBuild,sourcemaps.write('.')) ) // Write the sourcemaps
 		.pipe( gulp.dest(targetPath) ) // Write the less
 		.pipe(browserSync.reload({stream: true}))
-		.pipe( notify({ message: 'Less successfully compiled' }));
+		.pipe( notify({ message: 'Sass successfully compiled' }));
 });
 
-gulp.task( 'watch-less', function() {
-	gulp.watch( 'libs/styles/**/*.less', ['less'] );
+gulp.task( 'watch-sass', function() {
+	gulp.watch( 'libs/styles/**/*.scss', ['sass'] );
 });
 
 /*
@@ -222,13 +223,13 @@ gulp.task( 'clean', function() {
 // ------- Task groups --------
 
 // Clean all the things
-gulp.task( 'clean', [ 'clean-jade', 'clean-less', 'clean-images'] );
+gulp.task( 'clean', [ 'clean-jade', 'clean-sass', 'clean-images'] );
 
 // Watch all the things
-gulp.task( 'watch', ['default', 'watch-less', 'watch-jade', 'watch-images', 'local'] );
+gulp.task( 'watch', ['default', 'watch-sass', 'watch-jade', 'watch-images', 'local'] );
 
 // Single build
-gulp.task( 'default', ['less','jade', 'images'] );
+gulp.task( 'default', ['sass','jade', 'images'] );
 
 // Production build - also minifies the JS
 gulp.task( 'build', ['production', 'clean', 'default'] );

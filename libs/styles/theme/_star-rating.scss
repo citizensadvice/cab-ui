@@ -1,0 +1,96 @@
+#star-wrapper {
+	@extend .well--outline;
+	// Preload yellow star
+	//background-image: url("../images/dev/yellow-star.png");
+	background-size: 0px;
+	background-repeat: no-repeat;
+	background-position: -100% -100%;
+}
+
+#star-wrapper h4 {
+	line-height: 1.3;
+	color: $heritage-blue;
+	margin-top: 1em;
+	margin-bottom: 0;
+	font-weight: $font-weight-bolder;
+}
+
+#star-wrapper .star-rating { display: table; }
+
+#star-wrapper .star-question,
+#star-wrapper .vert-align {
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: .5rem;
+	line-height: 1em;
+}
+
+#star-wrapper .star-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: .25rem;
+	line-height: 1em;
+	white-space: nowrap;
+}
+
+#star-wrapper .star-list.deactivated { cursor: default; }
+
+#star-wrapper .star-list li[id^='star'] {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	margin: 0;
+	margin-left: -4px;
+	overflow: hidden;
+	background-size: 18px 18px;
+	//background-image: url("../images/dev/grey-star.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#star-wrapper .star-list li[id^='star'].hover,
+#star-wrapper .star-list li[id^='star'].active {
+	//background-image: url("../images/dev/yellow-star.png");
+}
+
+#star-wrapper .star-list li[id^='star']:focus {
+	outline: 2px solid $heritage-yellow;
+	background-color: lighten($link-color, 75%);
+}
+
+#star-wrapper .star-list.deactivated li[id^='star']:focus { outline: 2px solid $gray-6; }
+
+#star-wrapper .star-list li[id^='star'] img {
+	display: inline-block;
+	veritcal-align: bottom;
+	padding: 0;
+	margin: 0;
+}
+
+#star-wrapper .star-rating #star-number {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+	#star-wrapper .star-rating,
+	#star-wrapper .star-question {
+		display: block;
+	}
+
+	#star-wrapper .star-list {
+		margin-top: .25rem;
+		padding-left: 2px;
+	}
+
+	#star-wrapper .star-question { margin-bottom: .25rem; }
+
+    #star-wrapper .star-list li[id^='star'] {
+		width: 35px;
+		height: 35px;
+		background-size: 30px 30px;
+	}
+}

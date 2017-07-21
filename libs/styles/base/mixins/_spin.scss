@@ -1,0 +1,20 @@
+/**
+ * SPIN
+ *
+ * Mixins for creating icons and elements that spin
+ */
+
+@mixin spinner($time: 2) {
+    animation: spin #{$time}s infinite linear;
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+}
+
+@mixin btn-spinner() {
+    &:after {
+        top: 25%;
+        @include spinner(2);
+    }
+}

@@ -1,0 +1,53 @@
+/**
+ * Speech lines
+ * Used as a brand callout for content
+ * see speech-lines.html
+ */
+
+@mixin speech-lines ($speech-line-color: $heritage-blue,$speech-line-size: $box-spacing*.5)  {
+    border-bottom: $speech-line-size solid $speech-line-color;
+    padding-bottom: .75rem;
+    margin-bottom: 2rem;
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: $font-weight-boldest;
+        font-size: $font-size-larger;
+        color: $speech-line-color;
+    }
+    p {
+        font-weight: $font-weight-bold;
+    }
+    .cite {
+        font-size: $font-size-small;
+        color: $speech-line-color;
+    }
+    .box-speech-line {
+        width: 65px;
+        height: 40px;
+        margin: 4px 0 0 20%;
+        position: absolute;
+        border: solid $speech-line-size $speech-line-color;
+        border-color: transparent transparent $speech-line-color transparent;
+        border-radius: 0px 10px 60px 0px;
+        background-color: white;
+        padding-bottom: 2em;
+    }
+}
+
+.speech-lines {
+    @include speech-lines($heritage-blue);
+}
+
+.speech-lines-none {
+    @include speech-lines($heritage-blue,$box-spacing*0);
+}
+
+.speech-lines-purple {
+    @include speech-lines($responsible-purple);
+}
+
+.speech-lines-teal {
+    @include speech-lines($inventive-teal);
+}

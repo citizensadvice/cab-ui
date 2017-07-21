@@ -1,0 +1,358 @@
+/**
+ * ICONS
+ *
+ */
+
+@font-face {
+    font-family: 'cab-icons';
+    src:url('../assets/fonts/cab-icons.eot?fzb66m');
+    src:url('../assets/fonts/cab-icons.eot?fzb66m#iefix') format('embedded-opentype'),
+        url('../assets/fonts/cab-icons.ttf?fzb66m') format('truetype'),
+        url('../assets/fonts/cab-icons.woff?fzb66m') format('woff'),
+        url('../assets/fonts/cab-icons.svg?fzb66m#cab-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin icon ($font: "cab-icons") {
+    font-family: $font !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Created a global style that can be used to wrap inline icons to give them the correct font
+.i { @include icon; }
+.i-brand { @include icon('brand'); }
+
+// Inline icons for use in paragraph and headings
+.inline-icon {
+    @include icon;
+    padding-left: 0.5em;
+    padding-right: 0.25em;
+    color: $link-color;
+    font-size: 75%;
+}
+
+.a-external-link:after,
+.a-external:after {
+    content: #{$i-external-link};
+    @extend .inline-icon;
+}
+
+.a-action:after {
+    content: "\f016";
+    @extend .inline-icon;
+}
+
+.a-word-doc:after {
+    content: #{$i-doc-word};
+    @extend .inline-icon;
+}
+
+.a-excel-doc:after {
+    content: #{$i-doc-excel};
+    @extend .inline-icon;
+}
+
+.a-pdf-doc:after {
+    content: #{$i-doc-pdf};
+    @extend .inline-icon;
+}
+
+.a-file-doc:after {
+    content: #{$i-doc};
+    @extend .inline-icon;
+}
+
+.a-code-doc:after {
+    content: #{$i-doc-code};
+    @extend .inline-icon;
+}
+
+// Social icons
+.a-social {
+    @include icon;
+    display: inline-block;
+    padding: 0 0.5em 0 0;
+    font-size: 150%;
+    bottom: -3px !important;
+    position: relative;
+}
+
+.a-social-facebook:before {
+    content: #{$i-facebook};
+    color: $facebook-brand-colour;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-twitter:before {
+    content: #{$i-twitter};
+    color: $twitter-brand-colour;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-whatsapp,
+.a-social-messenger-plus,
+.a-social-linkedin {
+    white-space: nowrap;
+}
+
+.a-social-whatsapp:before {
+    content: #{$i-whatsapp};
+    color: $whatsapp-brand-colour;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-messenger:before {
+    content: #{$i-messenger};
+    color: $messenger-brand-colour;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-linkedin:before {
+    content: #{$i-linkedin};
+    color: $linkedin-brand-colour;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-copy:before {
+    content: #{$i-copy};
+    color: $blue-light;
+    @extend .a-social;
+    border: 0;
+}
+
+.a-social-top {
+    @include icon;
+    //line-height: 2.5rem;
+    display: inline-block;
+    padding: 0 0.45em 0 0;
+    border-bottom-color: $white;
+    font-size: 125%;
+    position: relative;
+    bottom: -0.125em; //shift baseline of icons slightly down
+}
+
+.info-reviewed {
+    border-bottom-color: $white;
+    margin-right: .9em;
+    display: inline-block;
+
+    &:before {
+        content: #{$i-clock};
+        color: $blue-light;
+        @extend .a-social-top;
+    }
+}
+
+.info-owner {
+    border-bottom-color: $white;
+    margin-right: .9em;
+    display: inline-block;
+
+    &:before {
+        content: #{$i-happy};
+        color: $blue-light;
+        @extend .a-social-top;
+    }
+}
+
+.info-extent {
+    border-bottom-color: $white;
+    margin-right: .9em;
+    display: inline-block;
+
+    &:before {
+        content: #{$i-target};
+        color: $blue-light;
+        @extend .a-social-top;
+    }
+}
+
+.a-social-print {
+    border-bottom-color: $white;
+    margin-right: .9em;
+
+    &:before {
+        content: #{$i-print};
+        color: $blue-light;
+        @extend .a-social-top;
+        bottom: -0.05em;
+    }
+}
+
+.a-social-references {
+    border-bottom-color: $white;
+    margin-right: .9em;
+
+    &:before {
+        content: #{$i-star};
+        color: $blue-light;
+        @extend .a-social-top;
+        bottom: -0.05em;
+    }
+}
+
+.a-social-word {
+    border-bottom-color: $white;
+    margin-right: .9em;
+
+    &:before {
+        content: #{$i-doc-word};
+        color: $blue-light;
+        @extend .a-social-top;
+        bottom: -0.05em;
+    }
+}
+
+.a-social-email {
+    border-bottom-color: $white;
+    margin-right: .9em;
+
+    &:before {
+        content: #{$i-email};
+        color: $blue-light;
+        @extend .a-social-top;
+        bottom: -0.05em;
+    }
+}
+
+// Depreciated styles, need to be fixed
+
+// For search box in header
+.icon-local {
+    &:before {
+        @include icon('brand');
+        content: '\e936';
+        color: $heritage-blue-lighter;
+        font-size: $font-size-small;
+        margin: 0 .25rem;
+    }
+
+    li a { color: $heritage-blue-lighter; }
+}
+
+.icon-chat {
+    &:after {
+        @include icon('brand');
+        content: '\e92b';
+        color: $heritage-blue;
+        font-size: $font-size-small;
+        margin: .35rem .35rem 0 .8rem;
+    }
+
+    li a { color: $heritage-blue-lighter; }
+}
+
+.icon-chat--offline {
+    &:after {
+        @include icon('brand');
+        content: '\e929';
+        color: $heritage-blue;
+        font-size: $font-size-small;
+        margin: .35rem .35rem 0 .8rem;
+    }
+
+    li a { color: $heritage-blue-lighter; }
+}
+
+.icon-search:before {
+    content: #{$i-search};
+    @include icon;
+}
+
+// For sharebar
+.icon-star:before {
+    content: #{$i-star};
+    @include icon;
+}
+
+.icon-word:before {
+    content: #{$i-doc-word};
+    @include icon;
+}
+
+.icon-print:before {
+    content: #{$i-print};
+    @include icon;
+}
+
+.icon-email:before {
+    content: #{$i-email};
+    @include icon;
+}
+
+.icon-messenger:before {
+    content: #{$i-messenger};
+    @include icon;
+}
+
+.icon-linkedin:before {
+    content: #{$i-linkedin};
+    @include icon;
+}
+
+.icon-facebook:before {
+    content: #{$i-facebook};
+    @include icon;
+}
+
+.icon-twitter:before {
+    content: #{$i-twitter};
+    @include icon;
+}
+
+.icon-google:before {
+    content: #{$i-google};
+    @include icon;
+}
+
+// For breadcrumbs
+.icon-guillemet-right:before {
+    content: #{$i-angle-right};
+    @include icon;
+}
+
+// For references
+.icon-bin:before {
+    content: #{$i-bin};
+    @include icon;
+}
+.icon-copy:before {
+    content: #{$i-copy};
+    @include icon;
+}
+.icon-save:before {
+    content: #{$i-save};
+    @include icon;
+}
+.icon-load:before {
+    content: #{$i-load};
+    @include icon;
+}
+.icon-help:before {
+    content: #{$i-help};
+    @include icon;
+}
+.icon-undo:before {
+    content: #{$i-undo};
+    @include icon;
+}
+
+// Burger icon
+.icon-menu:before {
+    content: #{$i-menu};
+    @include icon;
+    padding-right: .5rem;
+}

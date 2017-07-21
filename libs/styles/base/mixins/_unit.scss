@@ -1,0 +1,19 @@
+// ========================================================
+// @mixin: unit
+// ========================================================
+//
+
+
+// mixin definition
+//
+@function unit($val, $unit) {
+    $strippedVal: $val / ($val * 0 + 1);
+    @return #{$strippedVal}#{$unit};
+}
+
+
+// mixin usage
+//
+// .className {
+//     font-size: @include unit($font-size-main, em);
+// }

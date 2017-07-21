@@ -1,0 +1,222 @@
+/**
+ * CALLOUTS
+ *
+ * Creates various callout styles using mixin
+ * .callout( @callout-background, @callout-headings, @callout-text, @callout-border )
+ * Whole callouts can be automatically calculated by entering only one colour.
+ */
+
+.callout,
+.dap-panel,
+.dap-panel--base,
+.highlight {
+	// Unstyled
+	@include callout($blue-lighter,$blue);
+	@include callout--border;
+	@include callout--border--left;
+}
+
+.box--sticky {
+    @include callout($inventive-teal-lightest,$text-color,$callout-border: $inventive-teal-light);
+    @include callout--border;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+}
+
+// Green
+.callout--confirmation {
+    @include callout($green-lighter,$green);
+    @include callout--border--left;
+}
+
+.callout--confirmation--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
+    @include callout($green-lighter,$green);
+    @include callout--border--left;
+    @include callout--icon("\2713\00a0 Correct");
+}
+
+// Red
+.callout--warning,
+.dap-panel--crucial,
+.highlight--error {
+    @include callout($red-lightest,$text-color, $callout-border:$red);
+	@include callout--border--left;
+    @include callout--icon("\f071\00a0 Important");
+
+	&:before { color: $white; }
+}
+
+// Yellow
+.callout--alert,
+.dap-panel--important,
+.highlight--warning,
+.callout--info {
+    @include callout($yellow-light);
+    @include callout--border--left;
+
+	&:before { color: $text-color; }
+}
+
+.callout--alert--icon,
+.dap-panel--important--icon,
+.highlight--warning--icon {
+    // would be better to use extend, but currently compiles into additional styles because of old callout support
+    @include callout($yellow-light);
+    @include callout--border--left;
+    @include callout--icon("\f06a\00a0 Worth\00a0knowing");
+
+	&:before { color: $text-color; }
+}
+
+// Gray
+.callout--quote,
+.callout--example,
+blockquote,
+.dap-panel--example {
+	@include callout($white,$gray-2);
+	@include callout--border;
+	@include callout--border--left;
+}
+
+// White
+.callout--white { @include callout($white); }
+
+// Brand - Heritage
+.callout--heritage	{ @include callout($heritage-yellow,$heritage-blue,$heritage-blue); }
+
+// Brand - Responsible
+.callout--responsible { @include callout($responsible-aqua,$responsible-purple,$responsible-purple); }
+
+// Brand - Inventive
+.callout--inventive { @include callout($inventive-pink,$inventive-teal); }
+
+// Brand - Generous
+.callout--generous	{ @include callout($generous-mauve,$generous-green); }
+
+
+// Related items callout style
+.callout--related,
+.dap-panel--progress {
+    @include callout( $gray-8, $inventive-teal, $callout-border: $inventive-teal );
+    //.callout--border;
+    @include callout--border--top;
+}
+
+.box--warning {
+     @include callout($yellow-light);
+     @include callout--border--left;
+}
+
+.well {
+    @extend .dap-panel;
+    @include callout($gray-8,$callout-border: $gray-6);
+    > .well:first-child,
+    > .well--outline:first-child {
+        padding-top: $box-spacing-vertical;
+    }
+}
+
+.well--outline {
+    @extend .dap-panel;
+    @include callout($white,$callout-border: $heritage-blue);
+
+	> .well:first-child,
+    > .well--outline:first-child {
+        padding-top: $box-spacing-vertical;
+    }
+
+    @include callout--border;
+    border-radius: $form-border-radius;
+
+	h2 { color: $heritage-blue }
+
+    #letter {
+        @media (min-width:$screen-md-min) {
+            padding-left: 0;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.well--outline--warning {
+    @extend .dap-panel;
+    @include callout ($white,$callout-border: $red);
+    @include callout--border;
+    border-radius: $form-border-radius;
+
+	h2,
+	h3 {
+        color: $red
+    }
+}
+
+/************************************************************************
+ * Side panels - extending to style the panels that will run down the left-hand menu.
+ */
+
+// Primary sidebar panel
+.dap-panel--side__blue {
+    background-color: $gray-3;
+    border-top: 4px solid $heritage-blue;
+
+    .h2 {
+        font-size: $font-size-medium;
+        color: $heritage-blue;
+    }
+
+    .h3 {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+
+    .p {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+}
+
+// Advisory sidebar panel
+.dap-panel--side__yellow {
+    background-color: $gray-3;
+    border-top: 4px solid $yellow;
+
+    .h2 {
+        font-size: $font-size-medium;
+        color: $heritage-blue;
+    }
+
+    .h3 {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+
+    .p {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+}
+
+// Additional sidebar help panel
+.dap-panel--side__aqua {
+    background-color: $gray-3;
+    border-top: 4px solid $aqua;
+
+    .h2 {
+        font-size: $font-size-medium;
+        color: $heritage-blue;
+    }
+
+    .h3 {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+
+    .p {
+        font-size: $font-size-base;
+        color: $text-color;
+    }
+}

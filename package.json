@@ -27,6 +27,7 @@
     "gulp-util": "^3.0.7",
     "http-server": "^0.8.5",
     "less-plugin-glob": "^1.1.1",
+    "node-sass": "^4.5.3",
     "pixrem": "^3.0.0",
     "postcss-color-rgba-fallback": "^2.0.0",
     "postcss-copy-assets": "^0.3.0",

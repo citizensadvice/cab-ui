@@ -1,0 +1,257 @@
+/**
+ * HEADER
+ *
+ * Defines the header area for all site (public site, BMIS, CABlink, Advisernet).
+ *
+ */
+
+// The wrapping at iPad sizes probably isn't quite right, but as we are changing this I'm not spending too long on it
+
+.main-header {
+    background-color: $white;
+    overflow: hidden; // Collapsing margin issues
+    a:hover,
+    a:focus,
+    a:visited {
+        background-color: $white;
+    }
+}
+@media ( max-width: $screen-xs-max ) {
+    .main-header {
+        background-color: $heritage-blue;
+        overflow: hidden; // Collapsing margin issues
+        a:hover,
+        a:focus,
+        a:visited {
+            background-color: $heritage-blue;
+        }
+    }
+}
+
+.advisernet {
+    .main-header {
+        background-color: $advisernet-header;
+    }
+}
+
+.bmis {
+    .main-header {
+        background-color: $bmis-header;
+    }
+}
+
+.cablink {
+    .main-header {
+        background-color: $cablink-header;
+    }
+}
+
+.main-header__content {
+    @include limit-width($breakpoint-lg);
+    @extend .clearfix;
+    padding: 0 1em .5em 1em;
+}
+
+.main-header__logo {
+    border: none;
+    float: left;
+    margin-top: .7em; // Slightly better centering
+    //display: inline-block;
+    &:hover {
+        border: none;
+    }
+
+    img {
+        max-width: 24%; // For old IE
+        max-width: calc(250px); // For modern browsers
+    }
+
+    img.main-header__img--mobile {
+        display: none;
+    }
+
+    @media ( max-width: $screen-xs-max ) {
+        display: block;
+        background-color: $heritage-blue;
+        &:hover,
+        &:active,
+        &:visited {
+            background-color: $heritage-blue;
+        }
+        margin: 0;
+        width: 100%;
+        padding: 1rem;
+        img {
+            display: none;
+        }
+        img.main-header__img--mobile {
+            display: block;
+        }
+    }
+
+    &.wide {
+        display: none;
+        border: none;
+        float: none;
+        max-width: 100%;
+        background-color: $heritage-blue;
+        padding: .5rem 0;
+        img {
+            max-width: 60%;
+            padding: .65rem;
+        }
+        @media ( max-width: $screen-xs-max ) {
+            display: block;
+            //text-align: center;
+            margin: 0;
+        }
+    }
+}
+
+.main-header__menu-link {
+    display: none;
+}
+
+.main-header__top-nav, .main-header__search {
+    float: right;
+    clear: right;
+}
+
+.main-header__top-nav {
+    margin: .5em -.4em .2em 0;
+    text-align: right;
+    max-width: 70%; // For old IE
+    max-width: calc(100% - 300px); // For modern browsers (~ to stop less auto calculating)
+}
+
+.main-header__top-nav > a {
+    padding: 0 .4em;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+}
+
+.main-header__top-nav__link--current {
+    font-weight: bold;
+}
+
+.main-header__search {
+    white-space: nowrap;
+    margin: .4em 0;
+}
+
+input.main-header__search__input {
+    width: 16em;
+    float: left;
+    padding: .27em .2em;
+
+    .ie8 & {
+        padding: .3em .2em;
+    }
+
+    .advisernet & {
+        width: 23em;
+    }
+}
+
+.main-header__search__submit {
+    border: none;
+    background: $gray-1;
+    overflow: hidden;
+    padding: .2em;
+    border-radius: 0;
+    float: left;
+    margin: 0 0 0 -1px;
+    width: 2em;
+    height: 2em;
+    color: $white;
+}
+
+.main-header__search__submit:hover, .main-header__search__submit:focus {
+    background: $gray-0;
+    color: $white;
+    border: none;
+}
+
+@media ( max-width: $screen-xs-max ) {
+
+      .main-header__content {
+         padding: 0;
+      }
+
+     .main-header__links {
+        display: table;
+        width: 100%;
+        background: $heritage-blue;
+        a {
+            border: none;
+            color: $white;
+        }
+     }
+
+     html[lang="en-SCT"] .main-header__links {
+         background: $heritage-blue;
+     }
+
+     .main-header__top-nav, .main-header__bottom-nav {
+         display: none;
+     }
+
+    .main-header__menu-link {
+        color: white;
+        padding: 0 1em;
+        width: 0; // As this is a table cell this will reduce the width of the cell to fit the content
+
+        &:link {
+            text-decoration: none;
+        }
+    }
+
+     .main-header__search, .main-header__menu-link {
+        display: table-cell;
+        vertical-align: middle;
+     }
+
+     .main-header__search {
+        width: 100%;
+        padding-right: 1em;
+        position: relative;
+     }
+
+     input.main-header__search__input {
+        float: none;
+        width: 100%;
+        border: 1px solid $heritage-blue;
+
+     }
+     .main-header__search__submit {
+        position: absolute;
+        right: .5em;
+        top: 0;
+     }
+}
+
+.main-header__logout__button,
+.main-header__logout__button:hover,
+.main-header__logout__button:focus {
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: normal;
+    color: $heritage-blue;
+    padding: .5rem;
+    font-weight: $font-weight-bold;
+    @media ( max-width: $screen-xs-max ) {
+        color: $white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $white;
+        color: $heritage-blue;
+    }
+}
+
+.main-header__logout {
+    display: inline-block;
+}

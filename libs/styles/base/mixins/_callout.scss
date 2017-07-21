@@ -1,0 +1,80 @@
+/**
+ * CALLOUT
+ *
+ * Styles for content callouts and coloured sections.
+ */
+
+// Creates a mixin for making callout styles, including their links
+@mixin callout (
+    $callout-background: $gray-6,
+    $callout-headings: $text-color,
+    $callout-text: $text-color,
+    $callout-border: darken($callout-background, 25%)
+){
+    background-color: $callout-background;
+    color: $callout-text;
+    border: 0px $callout-border solid;
+
+    &:before { background-color: $callout-border; }
+
+	> h1,
+    > h2,
+    > h3 {
+		color: $callout-headings;
+	}
+}
+
+*[class^="callout"],
+.dap-panel,
+.box--sticky,
+blockquote {
+    padding: .75em 1em;
+    padding: $box-spacing-vertical $box-spacing-horizontal;
+    margin: $box-spacing-vertical 0;
+    display: block;
+
+    > h1,
+    > h2,
+    > h3 {
+		font-size: $font-size-h3;
+	}
+
+    > *:first-child {
+    	margin-top: 0;
+    	padding-top: 0;
+    }
+
+    > *:last-child { margin-bottom: 0; }
+    > p:last-child { padding-bottom: 0; }
+}
+
+// Callout icons
+@mixin callout--icon($icon) {
+	@include callout--border;
+	@include callout--border--left;
+
+    &:before {
+        font-family: 'open_sans', 'cab-icons';
+        font-size: .85rem;
+        font-weight: 300;
+        content: $icon;
+        line-height: 1em;
+        display: block;
+        margin: -$box-spacing-vertical -$box-spacing-horizontal $box-spacing-vertical -$box-spacing-horizontal;
+        padding: $box-spacing-vertical $box-spacing-horizontal;
+	}
+}
+
+// Callout borders
+@mixin callout--border ( $callout--border--width: 1px ) {
+	border-width: $callout--border--width;
+	.callout__link:last-child {
+		border: none;
+	}
+}
+@mixin callout--border--left ( $callout--border--left--width: $box-spacing/2 ) {
+	border-left-width: $callout--border--left--width;
+}
+@mixin callout--border--top ( $callout--border--top--width: $box-spacing/2 ) {
+	border-top-width: $callout--border--top--width;
+}

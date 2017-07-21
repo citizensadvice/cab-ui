@@ -1,0 +1,101 @@
+.switch {
+    border:none;
+    margin-bottom: 1.5rem;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.switch input {
+    left: 10px;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 9px;
+    //border: 2px solid @gray-7;
+
+    &:focus { border: 2px solid $heritage-yellow; }
+}
+
+.switch label {
+    background: #008CBA;
+    border: 2px solid $gray-7;
+}
+
+.switch input:checked + label {
+    background: #008CBA;
+    border: 2px solid $heritage-yellow;
+}
+
+.switch input + label {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-left: 0.44444rem;
+    margin-right: 0.88889rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+
+    &:focus {
+        //border-width: 1px;
+        border: 2px solid $heritage-yellow;
+        //border-color: @heritage-yellow;
+        border-radius: 0;
+        outline: none;
+    }
+}
+
+.switch label {
+    color: transparent;
+    background: #DDDDDD;
+}
+
+.switch label {
+    height: 2rem;
+    width: 4rem;
+}
+
+.switch label {
+    background: #DDDDDD;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+    text-indent: 100%;
+    width: 4rem;
+    height: 2rem;
+    transition: left 0.15s ease-out;
+}
+
+.switch input:checked + label:after { left: 2.25rem; }
+.switch input:checked + label:after { left: 2.25rem; }
+
+.switch label:after {
+    background: #FFFFFF;
+    width: 1.5rem;
+    content: "";
+    display: block;
+    height: 1.5rem;
+    left: .25rem;
+    position: absolute;
+    top: .25rem;
+    width: 1.5rem;
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

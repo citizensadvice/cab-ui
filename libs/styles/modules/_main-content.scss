@@ -1,0 +1,151 @@
+﻿/**
+ * MAIN CONTENT WRAPPER
+ */
+
+ .title__subheading {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: .35rem 0;
+    padding: 1rem 0 1rem 0;
+    border-top: $gray-7 1px solid;
+    border-bottom: $gray-7 1px solid;
+    font-size: $font-size-small;
+    line-height: 1.7rem;
+    color: $gray-2;
+ }
+
+ .title__subheading--footer {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: $gray-7 1px solid;
+    border-bottom: $gray-7 1px solid;
+    font-size: $font-size-small;
+    line-height: 2rem;
+    color: $gray-2;
+    a {
+        border-bottom: transparent;
+        margin-right: 1rem;
+        padding: 0.25rem;
+        display: inline-block;
+        &:hover,
+        &:focus {
+            color: $link-hover-color;
+            text-decoration: none;
+            border-bottom: 0px solid $link-color;
+            background-color:  lighten($link-color, 75%);
+        }
+    }
+    p {
+        font-size: $font-size-small;
+        line-height: 1.5rem;
+        a {
+            border-bottom: transparent;
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+ }
+
+.main-content{
+    @include limit-width;
+    @include clearfix;
+    padding: 0 $box-spacing;
+    margin-top: $box-spacing*2;
+    margin-bottom: $box-spacing*1.5;
+
+    @media screen and ( max-width: ($breakpoint-content) ) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 9%;
+    }
+
+    @media screen and ( max-width: ($breakpoint-sm - 1) ) { padding: 0 1rem; }
+}
+
+.main-content--full-width {
+    max-width: 60em;
+
+    @media ( max-width: $screen-sm-max ) {
+        max-width: none;
+        width: auto;
+    }
+}
+
+.main-content__right {
+    float: left;
+    width: $width-span-8;
+
+    @media ( min-width: $screen-sm-min ) { padding-right: $box-spacing*2; }
+    @media ( min-width: $screen-md-min ) { padding-right: $box-spacing*3; }
+    @media ( min-width: $screen-lg-min ) { padding-right: $box-spacing*6; }
+
+    @media ( max-width: $breakpoint-content ) {
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+}
+
+.main-content__sidebar {
+    float: right;
+    width: $width-span-2;
+    overflow: hidden; // Stop margin collapsing issues
+    margin-bottom: $box-spacing*1.5;
+
+    @media ( max-width: $breakpoint-content ) {
+        float: none;
+        width: auto;
+        margin-top: $box-spacing*1.5;
+    }
+}
+
+.articleContent img {
+    height: auto;
+    border: 1px solid $blue-light;
+    border-radius: 2px;
+}
+
+// Used for the summary box at the top of long content pages
+.steps {
+    background-color: $heritage-blue-lightest;
+    padding: $box-spacing-horizontal;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0;
+    }
+}
+
+// @todo This needs renamed
+.articleContent {
+     @media( max-width: $screen-sm-max ) { width: auto; }
+}
+
+// table of contents at the top of a page
+/*.articleContent nav {
+    .callout(
+        @gray-8,
+        @heritage-blue
+    );
+    //.callout--border;
+    .dap-panel;
+    ul, ol {
+        margin: 0;
+        padding: 0.25rem 0;
+        padding-left: @box-spacing-horizontal*1.25;
+        //list-style: none;
+        li {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            break-inside: avoid-column;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}*/

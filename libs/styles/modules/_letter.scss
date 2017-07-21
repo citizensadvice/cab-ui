@@ -1,0 +1,34 @@
+﻿/**
+ * LETTER
+ *
+ * Styling used to make template letter resemble a letter.
+ *
+ * Example: https://www.citizensadvice.org.uk/consumer/different-ways-of-buying/buying-goods-and-services-on-credit-or-by-debit-card/ways-you-can-buy-on-credit/hire-purchase-agreements-buying-on-credit/Letter-about-problem-with-goods-bought-with-a-Hire-Purchase-Agreement/.
+ */
+
+
+/*=Letters
+======================================================================= */
+
+/* A sample letter - it is supposed to mimic a sheet of paper */
+.letter-sample {
+    border: 1px solid $gray-4;
+    padding: $box-spacing*2;
+    //margin: $box-spacing*2 0;
+    box-shadow: 2px 2px 2px $gray-6;
+    background: $white;
+}
+
+#letter {
+	.letter-content {
+		@extend .letter-sample;
+	}
+	@media (min-width:$screen-md-min) {
+		padding-left: 4rem;
+	}
+}
+.letter-steps p {
+    font-weight: $font-weight-bolder;
+    font-size: $font-size-base;
+    color: $gray-2;
+}

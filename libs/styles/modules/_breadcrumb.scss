@@ -1,0 +1,145 @@
+/**
+ * BREADCRUMB
+ *
+ * Beta breadcrumb amends.
+ * Functional changes to be made in
+ */
+
+.main-breadcrumb {
+    padding: 0;
+    clear: left;
+    // Hack as we have Bootstrap in the mix
+    //background-color: @heritage-blue-lightest;
+    padding: 0;
+    max-width: none;
+    width: $full-page-width;
+
+    @media( max-width: $screen-xs-max ) {
+        display: none;
+    }
+}
+
+.main-breadcrumb__content {
+    @include limit-width($max-page-width);
+    margin: 0 auto;
+    background-color: transparent;
+    padding: $box-spacing-vertical/2 $box-spacing-horizontal;
+    max-width: $breakpoint-lg;
+    border-bottom: #eeeeee 1px solid;
+}
+
+.breadcrumb__extent-link {
+    //display: none;
+}
+
+.breadcrumb__item {
+    font-size: $font-size-small;
+    line-height: ($line-height-small * 1.5);
+
+    & > i {
+        margin: 0 $box-spacing-horizontal*.5 0 0;
+        color: $blue-light;
+    }
+    // Once we've moved away from using i tags in the breadcrumb, replace the above section with the below section
+    /*
+    &:after {
+        .icon;
+        content: $i-angle-right;
+        margin: 0 $box-spacing-horizontal*.5 0 0;
+        color: $blue-light;
+    }
+    */
+}
+
+.breadcrumb__item a {
+    margin: 0 $box-spacing-horizontal*.5 0 0;
+    color: $text-color;
+}
+
+/*@media (max-width: @max-page-width-before-the-share-bar-ruins-it-all) and (min-width: @screen-sm-min) {
+    .js .main-breadcrumb {
+        padding-right: @box-spacing-horizontal*3.5;
+    }
+}*/
+
+// .breadcrumb is a generic class for displaying breadcrumbs
+.breadcrumb__item {
+    white-space: nowrap;
+
+    @media (max-width: $screen-xs-max ) {
+        white-space: normal;
+    }
+
+    .ie8 & {
+    // IE8 is having difficulty with the wrapping.  This fixes it
+        display: inline-block;
+    }
+
+    > i {
+        margin-right: $box-spacing-horizontal*.5;
+    }
+
+    &:last-child a {
+        border: none;
+        margin-right: $box-spacing-horizontal*.5;
+    }
+}
+
+.breadcrumb__extent-link {
+    background-color: $heritage-blue-lightest !important;
+    display: inline-block;
+    color: $black;
+    padding: .35em .5em;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: $font-size-small;
+    margin-right: .25em;
+
+    a {
+        border: none;
+    }
+
+    &:link {
+        color: $black;
+        text-decoration: none;
+        border: none;
+    }
+
+    i {
+        background: $heritage-blue;
+        color: $white;
+        margin: -.1em -.5em -.1em 1em;
+        padding: .2em .3em;
+        display: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $heritage-blue-lightest;
+    }
+
+    .js & {
+        // Don't show the cursor if the JS is enabled as this won't be a clickable link
+        cursor: default;
+    }
+}
+
+.breadcrumb__extent-popup {
+    @include popup;
+    z-index: 2;
+    max-width: 400px;
+    margin-top: $box-spacing;
+    // Bring things a little closer together in this popup
+    p, ul {
+        margin: $box-spacing/2 0;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    &__arrow {
+        @include popup-arrow;
+    }
+}

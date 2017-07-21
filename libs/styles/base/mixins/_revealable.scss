@@ -1,0 +1,158 @@
+/**
+ * REVEALABLE MIXIN
+ *
+ * Mixin created for styling revealables and colapsibles
+ */
+
+@mixin revealable ($background: $heritage-blue-lighter,$heading: $heritage-blue,$border: $heritage-blue,$icon: $blue) {
+    margin: $box-spacing-vertical 0;
+    background-color: $white;
+    color: $text-color;
+    border: solid $border;
+    border-width: 1px 1px 0px 1px;
+
+    .revealable-toggle,
+    .revealable__heading {
+        background-color: $background;
+        background-color: $background;
+        color: $heading;
+        border-bottom: 1px solid $border;
+        h1, h2, h3, h4, h5, h6 {
+            color: $heading;
+        }
+        &:after {
+            color: $icon;
+        }
+    }
+
+    .revealable-toggle-close
+    .revealable__close {
+        color: $heading;
+        &:hover {
+            color: $heading;
+        }
+    }
+
+    .open:after, // This needs to be removed eventually
+    .revealable__heading[aria-expanded=true]:after {
+        content: "\f068";
+    }
+
+    .revealable-content, // This needs to be removed eventually
+    .revealable__content {
+        border-bottom: 1px solid $border;
+        /*h1, h2, h3, h4, h5, h6 {
+            color: $heading;
+        }*/
+    }
+}
+
+// Common styles, no need to define these every time we use the mixin
+i.revealable__icon,
+i.icon-chevron-up {
+    display: none;
+}
+
+.revealable-toggle,
+.revealable__heading {
+    padding: $box-spacing-vertical $box-spacing-horizontal*3.5 $box-spacing-vertical $box-spacing-horizontal;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-small;
+    &:after {
+        box-sizing: border-box;
+        font-family: 'cab-icons';
+        content: "\f067";
+        padding: 0 $box-spacing-horizontal*1.25;
+        @include vertical-align(absolute);
+        right: 0;
+        .ie8 & {
+            top: 12px;
+        }
+    }
+    > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &:focus {
+        outline: 2px solid $heritage-yellow;
+    }
+}
+
+.revealable-toggle-close, // This needs to be removed eventually
+.revealable__close {
+    cursor: pointer;
+    display: block;
+    background-color: $white;
+    color: $heritage-blue;
+    padding: $box-spacing-vertical $box-spacing-horizontal*3 $box-spacing-vertical $box-spacing-horizontal;
+    margin: $box-spacing-vertical $box-spacing-vertical*2 -$box-spacing-vertical -$box-spacing-horizontal;
+    text-decoration: none;
+    border-radius: 0;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    text-align: right;
+    &:before {
+        box-sizing: border-box;
+        font-family: 'cab-icons';
+        padding: 0 $box-spacing-horizontal*1.25;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 3em;
+        content: "\f068";
+    }
+    &:hover,
+    &:focus {
+        border: none;
+        background: $heritage-blue-lightest;
+    }
+}
+
+.open:after, // This needs to be removed eventually
+.revealable__heading[aria-expanded=true]:after {
+    content: "\f068";
+}
+
+.revealable-content, // This needs to be removed eventually
+.revealable__content {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    padding: $box-spacing-vertical $box-spacing-horizontal;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+.revealable__content {
+    &[aria-hidden=true] {
+        display: none;
+    }
+}
+
+// Functional CSS for JS
+.revealable-toggle {
+    cursor: pointer;
+}
+.revealable-content {
+    display: none;
+}
+.revealable-content.default {
+    display: block;
+}
+.start-open {
+    display: block;
+}

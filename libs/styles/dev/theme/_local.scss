@@ -1,0 +1,120 @@
+/**
+ * LOCAL
+ *
+ * Site style for local Citizens Advice
+ */
+ #local-nav {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 3;
+    margin: .5rem 0 0 0;
+
+    .local-name {
+        color: $heritage-blue;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bolder;
+        text-align: left;
+        display: inline-block;
+        line-height: 4rem;
+    }
+
+    .local-branding {
+        background-color: $white;
+        box-shadow: 0px 5px 5px rgba(90,90,90,0.2);
+        padding: .75rem 0;
+        vertical-align: middle;
+
+        .nav-toggle {
+            position: absolute;
+            top: 1.75rem;
+            right: 1.5rem;
+            color: $heritage-blue;
+            cursor: pointer;
+
+            @media screen and (min-width: $breakpoint-sm) { display: none; }
+
+            &:after {
+                content: $i-menu;
+                @include icon;
+                margin-left: .5rem;
+            }
+        }
+
+        .content { position: relative; }
+        img {
+            height: 5rem;
+            display: block;
+        }
+
+        ul {
+            display: none;
+            right: .75rem;
+            text-align: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @media screen and (min-width: $breakpoint-sm) {
+                @include vertical-align(absolute);
+                display: block !important;
+            }
+
+            @media screen and (max-width: $screen-xs-max) {
+                margin-top: .5rem;
+
+                .btn { @include btn-small; }
+            }
+
+            &.show { display: block; }
+
+            li {
+                display: inline-block;
+                margin: 0;
+                margin-top: -.25rem;
+                margin-left: 1em;
+                vertical-align: middle;
+
+                @media screen and (max-width: $screen-xs-max) {
+                    display: block;
+                    padding: .25rem 0;
+                    text-align: left;
+                    margin: 0;
+
+                    &:last-of-type { padding-bottom: 0; }
+                }
+
+                a {
+                    color: $heritage-blue;
+                    border: none;
+                    font-size: $font-size-base;
+                    font-weight: $font-weight-bolder;
+                    padding: .3em 0;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: none;
+                    }
+
+                    @media screen and (max-width: $breakpoint-md) {
+                        margin-left: .25em;
+                        margin-right: 0;
+                        font-size: $font-size-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.local--feature {
+    margin-top: 4rem;
+    border: 7px solid #004b88;
+}
+
+// Twitter publish feature
+.timeline-Viewport {
+    height: 440px !important;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+}

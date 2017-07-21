@@ -1,0 +1,310 @@
+/* Visuals for second iteration of webchat */
+.advice-chat {
+	margin: 0;
+	right: $box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	padding: $box-spacing-vertical / 2 $box-spacing-horizontal 0 $box-spacing-horizontal;
+	background: $green-lighter;
+	border: solid $green-light;
+	border-width: 2px 2px 0 2px;
+	z-index: 1;
+	cursor: pointer;
+	border-radius: $form-border-radius * 2 $form-border-radius * 2 0 0;
+	overflow: hidden;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+
+		a {
+			background-color: $heritage-blue-lightest;
+			border-bottom: 1px solid $heritage-blue;
+			border-width: 2px 2px 0 2px;
+		}
+
+	&:focus, &:hover, &:active {
+		background-color: $green-light;
+		border: solid $green;
+		border-width: 2px 2px 0 2px;
+	}
+
+	@media (min-width: 600px) and (max-width: 750px)  { display: none; }
+
+	p {
+		font-weight: $font-weight-bold;
+		color: $heritage-blue;
+		margin: 0 0 .5em 0;
+	}
+}
+
+.advice-chat--offline {
+	margin: 0;
+	right: $box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	padding: $box-spacing-vertical / 2 $box-spacing-horizontal 0 $box-spacing-horizontal;
+	background: $gray-7;
+	border: solid $gray-4;
+	border-width: 2px 2px 0 2px;
+	z-index: 1;
+	border-radius: $form-border-radius * 2 $form-border-radius * 2 0 0;
+	overflow: hidden;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+
+	&:focus {
+		background-color: $gray-7;
+		border: solid $heritage-yellow;
+		border-width: 2px 2px 0 2px;
+	}
+
+	@media (min-width: 600px) and (max-width: 750px)  { display: none; }
+
+	p {
+		font-weight: $font-weight-bold;
+		//color: @heritage-blue;
+		margin: 0 0 .5em 0;
+	}
+}
+
+.advice-chat--session {
+	width: 20em;
+	height: 25em;
+	transition: .2s ease-in-out;
+	display: none;
+}
+
+#chat-button-close {
+	text-align: right;
+
+	&:after {
+		@include icon;
+		content: $i-cross;
+		padding-left: .5em;
+		color: $white;
+	}
+}
+#chat-advice {
+	button {
+		margin-top: 0;
+	}
+}
+
+#live-chat {
+	display: none;
+	background-color: $white;
+	border-radius: 3px 3px 0 0;
+	right: $box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	width: 20em;
+	height: 25em;
+	overflow: hidden;
+	border-bottom: 0;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+	z-index: 3;
+
+	#live-chat_hide {
+		text-align: right;
+		color: $green;
+		font-weight: $font-weight-bold;
+		padding: $box-spacing/2;
+		cursor: pointer;
+		background-color: $green-lighter;
+		border: solid $green-light;
+		border-width: 2px 2px 0 2px;
+
+		&:after {
+			@include icon;
+			content: $i-down;
+			padding-left: .5em;
+			color: $white;
+		}
+
+		&:hover {
+			color: $heritage-blue;
+		}
+	}
+	#live-chat_details {
+		background-color: $gray-7;
+		padding: $box-spacing/2;
+		position: relative;
+		border: solid $gray-6;
+		border-width: 0 2px;
+
+		strong {
+			color: $heritage-blue;
+
+			@-webkit-keyframes opacity {
+			    0% { opacity: 1; }
+			    100% { opacity: 0; }
+			}
+
+			@-moz-keyframes opacity {
+			    0% { opacity: 1; }
+			    100% { opacity: 0; }
+			}
+
+			span {
+			    -webkit-animation-name: opacity;
+			    -webkit-animation-duration: 1s;
+			    -webkit-animation-iteration-count: infinite;
+			    -moz-animation-name: opacity;
+			    -moz-animation-duration: 1s;
+			    -moz-animation-iteration-count: infinite;
+			}
+
+			span:nth-child(1) {
+			    -webkit-animation-delay: 100ms;
+			    -moz-animation-delay: 100ms;
+			}
+
+			span:nth-child(2) {
+			    -webkit-animation-delay: 300ms;
+			    -moz-animation-delay: 300ms;
+			}
+
+			span:nth-child(3) {
+			    -webkit-animation-delay: 500ms;
+			    -moz-animation-delay: 500ms;
+			}
+		}
+	}
+	#live-chat_body {
+		border: solid $gray-6;
+		border-width: 0 2px;
+		height: 100%;
+		background-color: $gray-7;
+
+		#live-chat_chat {
+			padding: $box-spacing/2;
+			height: 16.75rem;
+			vertical-align: bottom;
+			overflow-y: scroll;
+			background-color: $white;
+
+			& *:last-child {
+				margin-bottom: 0;
+			}
+
+			& .chat-message:first-of-type {
+				border: none;
+				margin-top: 0;
+				padding-top: 0;
+			}
+
+			.chat-message {
+				padding-top: $box-spacing/2;
+				margin-top: $box-spacing/2;
+				border-top: 1px solid $gray-7;
+			}
+
+			.advise {
+				color: $heritage-blue;
+			}
+
+			.timestamp {
+				font-size: $font-size-small*.85;
+				color: $gray-3;
+				padding-bottom: $box-spacing/4;
+			}
+
+			.client .timestamp .seen-status {
+				font-weight: $font-weight-bold;
+				color: $heritage-blue;
+				float: right;
+			}
+		}
+
+		#live-chat_form {
+			position: absolute;
+			bottom: 0;
+			right: $box-spacing/2;
+			left: $box-spacing/2;
+
+			.field-group--buttons input,
+			.field-group--buttons button {
+				padding: .25rem;
+			}
+
+			.field-group--buttons input {
+				padding-right: 4rem;
+			}
+			
+			.field-group--buttons button {
+				width: 20%;
+				margin-left: -20%;
+			}
+		}
+	}
+	&.offline {
+		#live-chat_hide {
+			background-color: $gray-7;
+			border-color: $gray-6;
+			color: $gray-3;
+
+			&:after {
+				color: $gray-3;
+				content: $i-cross;
+			}
+
+			&:hover,
+			&:hover:after {
+				color: $black;
+			}
+		}
+
+		#live-chat_body {
+			padding: $box-spacing/2;
+			height: 100%;
+			background-color: $white;
+		}
+	}
+}
+
+#live-chat_show {
+	border-radius: 3px 3px 0 0;
+	right: $box-spacing-horizontal;
+	bottom: 0;
+	position: fixed;
+	background-color: $green-lighter;
+	border: solid $green-light;
+	border-width: 2px 2px 0 2px;
+	font-weight: $font-weight-bold;
+	padding: $box-spacing/2 $box-spacing;
+	padding-bottom: $box-spacing;
+	margin-bottom: -$box-spacing/2;
+	cursor: pointer;
+	box-shadow: 0px 2px 6px rgba(0,66,65,0.4);
+	transition: .1s ease-in-out;
+	color: $heritage-blue;
+
+	&:after {
+		@extend .i-brand;
+		content: $brand-dialogue_think;
+		padding-left: .5em;
+	}
+
+	&:hover {
+		margin-bottom: 0;
+		transition: .1s ease-in-out;
+	}
+
+	&.new_live-chat {
+		background-color: $heritage-yellow-lighter;
+		border-color: $heritage-yellow;
+		
+		&:after {
+			@include icon;
+			content: $i-up;
+		}
+	}
+
+	&.offline {
+		background-color: $gray-7;
+		border-color: $gray-6;
+		color: $black;
+
+		&:after {
+			@extend .i-brand;
+			content: $brand-dialogue_sad;
+		}
+	}
+}
