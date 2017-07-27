@@ -71,7 +71,7 @@
         color: $gray-3;
         cursor: grab;
         background: none;
-        .icon;
+        @include icon;
         content: $i-vertical-dots;
         position: absolute;
         left: -1rem;
@@ -82,8 +82,8 @@
 }
 
 .tool-well {
-    @extend dap-panel;
-    .callout( $gray-6, $callout-border: $gray-6 );
+    @extend .dap-panel;
+    @include callout( $gray-6, $callout-border: $gray-6 );
 
     .blocklink { padding-top: .75rem; }
     margin-bottom: 0;

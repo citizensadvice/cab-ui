@@ -62,10 +62,8 @@
 
             @media screen and (max-width: $screen-xs-max) {
                 margin-top: .5rem;
-
-                .btn { @include btn-small; }
             }
-
+            .btn { @extend .btn-small }
             &.show { display: block; }
 
             li {

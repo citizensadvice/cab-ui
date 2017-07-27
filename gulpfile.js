@@ -27,7 +27,7 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	jade = require('gulp-jade'),
 	//less = require( 'gulp-less' ),
-	sass = require('node-sass'),
+	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	// Plumbers fix pipes
 	plumber = require('gulp-plumber'),
@@ -53,37 +53,55 @@ gulp.task( 'clean-sass', function() {
 	return del('public/css/**');
 });
 
-gulp.task( 'sass', function() {
-	var postCssPlugins = [
+gulp.task('sass', function() {
+		var postCssPlugins = [
 		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
 		rgbaFallback,
 		opacity,
 		pixrem,
 		copyAssets
 	];
-	// Only include cssnano on a production build as it takes ages
-	if ( productionBuild ) {
-		postCssPlugins.push(cssnano);
-	}
-	var targetPath = 'public/css';
 	return gulp.src(['libs/styles/*.scss'])
-		.pipe( gulpif(!productionBuild, sourcemaps.init({largeFile: true})) ) // Generate sourcemaps
-		// .pipe(less({ plugins: [lessGlob] }).on('error', function(err){
-		// 	gutil.log(err);
-		// 	this.emit('end');
-		// }))
-		.on("error", notify.onError(function (error) {
-			return error.message;
-		}))
-		.pipe( gulpif(!productionBuild,sourcemaps.write()) )
-		.pipe( gulpif(!productionBuild,sourcemaps.init({loadMaps: true})) ) // Generate sourcemaps
-		// .pipe( sourcemaps.init({loadMaps: true} )
-		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
-		.pipe( gulpif(!productionBuild,sourcemaps.write('.')) ) // Write the sourcemaps
-		.pipe( gulp.dest(targetPath) ) // Write the less
-		.pipe(browserSync.reload({stream: true}))
-		.pipe( notify({ message: 'Sass successfully compiled' }));
+		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.init({largeFile: true}) ) // Generate sourcemaps
+		.pipe(sass().on('error', sass.logError))
+		.pipe( postcss( postCssPlugins, { to: 'public/css/assets' } ) ) // Postcss (the "to" is for copyAssets)
+		.pipe(gulp.dest('public/css'))
+		.pipe( notify({ message: 'Sass new compiled' }));
+
 });
+
+// gulp.task( 'sass', function() {
+// 	var postCssPlugins = [
+// 		autoprefixer({ browsers: ['> 1%','last 2 version','ie >= 8'], flexbox: 'no-2009' }),
+// 		rgbaFallback,
+// 		opacity,
+// 		pixrem,
+// 		copyAssets
+// 	];
+// 	// Only include cssnano on a production build as it takes ages
+// 	if ( productionBuild ) {
+// 		postCssPlugins.push(cssnano);
+// 	}
+// 	var targetPath = 'public/css';
+// 	return gulp.src(['libs/styles/*.scss'])
+// 		.pipe( gulpif(!productionBuild, sourcemaps.init({largeFile: true})) ) // Generate sourcemaps
+// 		// .pipe(less({ plugins: [lessGlob] }).on('error', function(err){
+// 		// 	gutil.log(err);
+// 		// 	this.emit('end');
+// 		// }))
+// 		.on("error", notify.onError(function (error) {
+// 			return error.message;
+// 		}))
+// 		.pipe( gulpif(!productionBuild,sourcemaps.write()) )
+// 		.pipe( gulpif(!productionBuild,sourcemaps.init({loadMaps: true})) ) // Generate sourcemaps
+// 		// .pipe( sourcemaps.init({loadMaps: true} )
+// 		.pipe( postcss( postCssPlugins, { to: targetPath + '/assets' } ) ) // Postcss (the "to" is for copyAssets)
+// 		.pipe( gulpif(!productionBuild,sourcemaps.write('.')) ) // Write the sourcemaps
+// 		.pipe( gulp.dest(targetPath) ) // Write the less
+// 		.pipe(browserSync.reload({stream: true}))
+// 		.pipe( notify({ message: 'Sass successfully compiled' }));
+// });
 
 gulp.task( 'watch-sass', function() {
 	gulp.watch( 'libs/styles/**/*.scss', ['sass'] );

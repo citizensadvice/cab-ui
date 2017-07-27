@@ -259,8 +259,5 @@
 
 .btn-yellow {
     border: 2px solid $white !important;
-    @include .btn(
-        $btn-background: $heritage-yellow,
-        $btn-background-hover: $heritage-yellow-darker
-    );
+    @include btn($btn-background: $heritage-yellow,$btn-background-hover: $heritage-yellow-darker);
 }
