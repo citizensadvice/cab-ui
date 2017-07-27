@@ -1,0 +1,58 @@
+// Story styles for the policy mockup page
+
+.story-masthead {
+    height: 50vw;
+    max-height: 80vw;
+    position: relative;
+    background: $heritage-blue;
+    margin-top: -1.8rem;
+    overflow: hidden;
+    .story-masthead--content {
+        position: relative;
+        top: 25%;
+        h1 {
+            font-size: $font-size-largest;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            color: $white;
+            }
+        p {
+            font-size: $font-size-medium;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            color: $white;
+        }
+        @media (min-width: $screen-xs-max) and (max-width: $screen-md-min) {
+            h1 { font-size: $font-size-larger; }
+            p { font-size: $font-size-medium; }
+            top: 20%;
+            margin: 0 1rem;
+        }
+        @media screen and (max-width: $screen-xs-max) {
+            h1 { font-size: $font-size-large; }
+            p { font-size: $font-size-base; }
+            top: 10%;
+            margin: 0 1rem;
+        }
+    }   
+    img {
+        background-color: $heritage-blue;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0.4;
+        z-index: 1;
+    }
+}
+
+cite {
+    display: block;
+    margin: .5rem 0;
+    color: $text-color;
+    font-size: $font-size-small;
+    z-index: 2;
+}

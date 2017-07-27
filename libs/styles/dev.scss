@@ -1,0 +1,655 @@
+/**
+ * Style Guide
+ *
+ * Basic utility classes.
+ * And one or two odds and ends that coule be moved elsewhere at some point.
+ */
+
+// Import all website styles
+
+// base/*
+//
+@import "base/colors";
+@import "base/variables";
+@import "base/global";
+@import "base/icons";
+@import "base/ie";
+@import "base/utility";
+
+// base/vendors/*
+//
+@import "base/vendors/brand-icon";
+@import "base/vendors/normalize";
+@import "base/vendors/prism/prism";
+
+// base/mixins/*
+//
+@import "base/mixins/btn-icon";
+@import "base/mixins/buttons";
+@import "base/mixins/callout";
+@import "base/mixins/fit-content";
+@import "base/mixins/flex-box";
+@import "base/mixins/ie";
+@import "base/mixins/limit-width";
+@import "base/mixins/popup";
+@import "base/mixins/vertical-align";
+@import "base/mixins/revealable";
+@import "base/mixins/spin";
+@import "base/mixins/unit";
+@import "base/mixins/clearfix";
+
+// components/*
+//
+@import "components/buttons";
+@import "components/forms";
+@import "components/framework";
+@import "components/helpers";
+@import "components/lists";
+@import "components/tables";
+@import "components/type";
+
+// modules/*
+//
+@import "modules/blocklink";
+@import "modules/blog";
+@import "modules/breadcrumb";
+@import "modules/callout";
+@import "modules/calls-for-evidence";
+@import "modules/cards";
+@import "modules/containers";
+@import "modules/contents-page";
+@import "modules/cookie-monster";
+@import "modules/decision-tree";
+@import "modules/dialog";
+@import "modules/extent-switcher-modal";
+@import "modules/extent-switcher";
+@import "modules/feed";
+@import "modules/footer-feedback";
+@import "modules/footer";
+@import "modules/header";
+@import "modules/letter";
+@import "modules/main-content";
+@import "modules/navigation";
+@import "modules/notice";
+@import "modules/overlay";
+@import "modules/page-info";
+@import "modules/page-list";
+@import "modules/page-tree";
+@import "modules/references";
+@import "modules/revealable";
+@import "modules/savebar";
+@import "modules/section-notice";
+@import "modules/share-bar";
+@import "modules/side-links";
+@import "modules/side-tags";
+@import "modules/sidebar-navigation-accordion";
+@import "modules/sidebar-navigation";
+@import "modules/slide";
+@import "modules/speech-lines";
+@import "modules/status";
+@import "modules/tablesort";
+@import "modules/tabs";
+@import "modules/title";
+
+// theme/*
+//
+@import "theme/advisor";
+@import "theme/energy-comparison";
+@import "theme/epi-templates";
+@import "theme/main-nav";
+@import "theme/paragraph-numbers";
+@import "theme/search-results";
+@import "theme/side-chat";
+@import "theme/skip-nav";
+@import "theme/star-rating";
+
+// print styles
+//
+@media print {
+    @import "base/print/print";
+}
+
+// Import styleguide specific styles
+
+@import "docs/icons";
+@import "docs/media";
+@import "docs/simplegrid";
+@import "docs/story";
+@import "docs/swatches";
+
+body {
+    padding-top:        0px;
+    margin:             0;
+    background-color:   $white;
+}
+
+.starter-template {
+    padding:            0px;
+    text-align:         left;
+}
+
+#logo {
+    padding:            15px 0px 15px 0px;
+}
+.navbar-inverse {
+    background-color:   #004B88;
+    border-color:       #080808;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color:   #003a6a;
+    font-weight:        600;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color:              #A5BDDC;
+    padding-top:        25px;
+    padding-bottom:     25px;
+}
+.navbar-nav {
+    float: right;
+}
+.row {
+    margin-bottom:      18px; //$box-spacing-vertical * 1.5 * $base-size;
+    margin-bottom:      1.125rem//$box-spacing-vertical*1.5;
+}
+
+.row--white {
+    background-color:   $white;
+    margin-top:         24px; //unit($box-spacing-vertical*2*$base-size,px);
+    margin-top:         $box-spacing-vertical * 2;
+    margin-bottom:      18px;//unit($box-spacing-vertical*1.5*$base-size,px);
+    margin-bottom:      $box-spacing-vertical*1.5;
+    padding: $paragraph-margin-bottom * 2 $paragraph-margin-bottom * 2 0 $paragraph-margin-bottom * 2;
+}
+
+/***************************************************************************
+* Box links
+* Hopefully a fairly logical name
+* Holders for content, where the entire area links to further content
+* Being tested with ./public/pip-content.html
+*/
+
+.box--links {
+    @include callout( $callout-border: $blue-light, $callout-background: $white );
+    @include callout--border;
+    //.callout--border--top;
+    margin-top: 1rem;
+    .flex-row {
+        padding: 0;
+    }
+    h2, h3 {
+        color: $heritage-blue;
+        font-weight: $font-weight-bolder;
+        font-size: 1.1rem;
+        margin-bottom: 15px; //unit($box-spacing-vertical*1.25*$base-size,px);
+        margin-bottom: $box-spacing-vertical*1.25;
+    }
+    .columns {
+            @media (min-width:$screen-md-min) {
+                column-count: 2;
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+            -ms-column-count: 2;
+             -o-column-count: 2;
+                column-gap: 1rem;
+        -webkit-column-gap: 1rem;
+           -moz-column-gap: 1rem;
+            -ms-column-gap: 1rem;
+             -o-column-gap: 1rem;
+                columns: 2;
+            }
+        ul, ol {
+            margin: 0;
+            padding: 0.25rem 1rem;
+            //list-style: none;
+            li {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+        }
+    }
+    a {
+        border-width: 0;
+        &:hover {
+            border-bottom: 0px $heritage-blue solid;
+            border-bottom-width: 1px;
+        }
+    }
+}
+
+/***************************************************************************
+ * Page status
+ * Badge
+ */
+.status {
+    padding: 10px 0 8px 0;
+    border-bottom: 1px solid $gray-4;
+}
+
+.beta-dap-cover {
+    margin: -15px 0 2em 0;
+    padding: 10px 0 20px 0;
+    background-color: $heritage-blue;
+    min-height: 15em;
+    h1 {
+        color: $heritage-yellow;
+    }
+    h2, p, a {
+        color: $white;
+    }
+}
+.alpha-badge {
+    font-weight:        $font-weight-bolder;
+    color:              $gray-6;
+    background-color:   $red-lighter;
+    display:            inline-block;
+    float:              left;
+    padding:            ($paragraph-margin-bottom * 0.5);
+    margin-right:       ($paragraph-margin-bottom * 0.5);
+    margin-top:         -10px;
+    margin-bottom:      20px;
+}
+@media (max-width: 767px) {
+    .status p {
+        font-size: ($font-size-base * 0.8);
+    }
+    .alpha-badge {
+        margin-top:         0px;
+    }
+    .breadcrumb p {
+        font-size: ($font-size-base * 0.8);
+    }
+}
+/***************************************************************************
+* Figure
+* Semantically marked up approach to handing images/dev/charts and captions
+*/
+
+figure {
+    display: block;
+    background-color: $heritage-blue-lightest;
+    border: 1px solid $blue-light;
+    border-radius: $form-border-radius;
+    padding: 1rem;
+    margin: 0 !important; // Added important as it's being overwritten in the normalize
+    img {
+        border: 0px solid $white;
+        border-radius: $form-border-radius;
+    }
+}
+figcaption {
+    display: block;
+    padding: .5rem 0 0 0;
+}
+
+// For code
+.example-box {
+    color: #333;
+    padding: $box-spacing;
+    background-color: #f8f8f8;
+    border: 1px solid #dfe1e3;
+    border-radius: $form-border-radius;
+    overflow: hidden;
+    code {
+        color: $gray-4;
+        padding: 0 $box-spacing/2;
+    }
+}
+.example-box-full {
+    color: #333;
+    padding: $box-spacing;
+    font-family: monaco,monospace;
+    line-height: 1.7em;
+    background-color: #f8f8f8;
+    border: 1px solid #dfe1e3;
+    border-radius: 2px;
+    overflow: hidden;
+    code {
+        color: $gray-4;
+        padding: 0 $box-spacing/2;
+    }
+}
+.example-box-plain {
+    color: #333;
+    padding: 20px;
+    margin: 1em 0 0 0;
+    //line-height: 1.7em;
+    border: 1px solid #dfe1e3;
+    border-radius: $form-border-radius $form-border-radius 0 0;
+    border-bottom: 0;
+    overflow: hidden;
+    code {
+        color: $gray-4;
+        //padding: 0 2em;
+    }
+    fieldset:last-child {
+        margin-bottom: 0;
+    }
+}
+.code {
+    color: #333;
+    padding: 5px;
+    font-size: $font-size-small;
+    //margin: 1em 1em 3em 1em;
+    font-family: monaco,monospace;
+    line-height: 1.7em;
+    background-color: #f8f8f8;
+    border: 1px solid #dfe1e3;
+    border-radius: $form-border-radius;
+}
+
+.customcol {
+    // &13 {
+    //     @include col(1,3);
+    // }
+    // &49 {
+    //     @include col(4,9);
+    // }
+    // &29 {
+    //     @include col(2,9);
+    // }
+}
+
+div[class*="callout"] code {
+    color: inherit;
+    padding: 0;
+}
+
+pre[class*="language-"] {
+    @include callout($gray-8,$callout-border:$gray-6);
+    //padding: $box-spacing-vertical $box-spacing-horizontal;
+    @include callout--border;
+    margin-top: 0;
+    border-radius: $form-border-radius;
+    font-size: .85rem;
+    max-height: 15rem;
+    .example-box-plain + & {
+        border-radius: 0 0 $form-border-radius $form-border-radius;
+    }
+}
+
+/***************************************************************************
+* Brand slider
+* Approach to inclusion of brand heading / colours
+* see slider.html
+*/
+@mixin intro-panel ($intro-panel-bg: $heritage-yellow, $intro-panel-text: $heritage-blue) {
+    background-color: $intro-panel-bg;
+    color: $intro-panel-text;
+    padding: 1rem 0;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      content: "\e600";
+      font-family: 'cab-icons';
+      font-size: 20rem;
+      color: lighten($heritage-yellow, 10%);
+      @include vertical-align(absolute);
+      right:10%;
+    }
+}
+.intro-panel-content {
+    @include limit-width;
+    padding: 0 $box-spacing;
+    margin-top: $box-spacing*2;
+    margin-bottom: $box-spacing*1.5;
+    position:relative;
+    z-index:2;
+    p {
+        margin-right: $box-spacing;
+    }
+}
+
+.intro-panel-1 {
+    @include intro-panel($heritage-yellow-lighter,$heritage-blue);
+}
+.intro-panel-2 {
+    @include intro-panel($heritage-yellow,$heritage-blue);
+}
+
+/* Enhancements for style guide */
+.show-grid [class^=col-] {
+  padding:              10px;
+  background-color:     #eee;
+  background-color:     $heritage-blue-light;
+  border: 1px solid     $heritage-blue;
+}
+
+/* Form */
+.checkbox label, .radio label {
+    font-size:      $font-size-base;
+    line-height:    $line-height-base;
+    font-weight:    $font-weight-base;
+    color:          $text-color;
+    padding:        ($line-height-computed * 0.6) ($line-height-computed * 1.5);
+    background-color:   $white;
+    display: block;
+    margin:         ($line-height-computed * 0.6) 0;
+}
+
+/* Examples */
+
+$advisor-color: #b9b9a4;
+
+span[id*="overlay_button"] {
+    cursor: help;
+    padding: 0 .25em;
+    //display: inline-block;
+    border-bottom: 1px solid $heritage-yellow;
+    background-color: $heritage-yellow-lighter;
+    //box-shadow: 0.25em 0 0 tint($advisor-color, 75%),
+    //            -.25em 0 0 tint($advisor-color, 75%);
+}
+
+.adviser {
+    color: $heritage-blue;
+    font-weight: $font-weight-bold;
+    &:before {
+        content: "\00a0\f059\00a0";
+        font-family: 'cab-icons';
+    }
+}
+
+.advisor--box {
+    position: relative;
+    @extend .main-content__sidebar;
+    @include callout($gray-8,$callout-border:$advisor-color);
+    @include callout($gray-8,$callout-border:#b9b9a4);
+    border-right: 8px solid; //unit($box-spacing/2*$base-size,px) solid;
+    border-right: $box-spacing / 2 solid;
+    display: none;
+    border-color: $advisor-color;
+    border-color: #b9b9a4;
+    margin: 0;
+}
+
+.inline--button {
+    float: right;
+    @include btn-icon("\f06e");
+    margin-right: -1em;
+    &:after {
+        background-color: #b9b9a4;
+        width: 2em;
+        cursor: pointer;
+    }
+}
+
+
+// Tooltip, for future development
+
+div.tooltip {
+    background-color: $gray-8;
+    color: $text-color;
+    position: absolute;
+    left: -150px;
+    z-index: 1000000;
+    width: 300px;
+    //border-radius: 2px;
+    border-bottom: 8px solid #b9b9a4;
+    padding: 10px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+    & >:last-child {
+        margin-bottom: 0;
+    }
+}
+div.tooltip:before {
+    border: 8px solid;
+    border-color: $gray-8 transparent transparent transparent;
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+}
+
+
+// Logging in
+
+.section-notice__login {
+    background: $white;
+    margin: 0 0 -4em 0;
+    padding: 0;
+    button {
+        float: right;
+        a {
+            border-bottom: none;
+        }
+    }
+    &__content {
+        @include limit-width;
+        padding: $box-spacing-horizontal 0 0 $box-spacing-horizontal;
+        overflow: hidden;
+        p a {
+            border-bottom: none;
+            &:hover {
+                border-bottom: 0.0625rem solid $heritage-yellow-darker;
+            }
+        }
+    }
+}
+
+.styleguide {
+    &--header {
+        background-color: $heritage-blue;
+        /*position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;*/
+        &--content {
+            max-width: $breakpoint-lg;
+            margin: 0 auto;
+            img {
+                display: inline-block;
+                width: 220px;
+                padding: $box-spacing-vertical*1.5 $box-spacing-horizontal;
+            }
+            a:hover,
+            a:focus {
+                background: none;
+            }
+        }
+        .mockup &--content img {
+            //width: 200px;
+            //padding: $box-spacing-vertical $box-spacing-horizontal;
+        }
+        /*.main-breadcrumb__content {
+            //.vertical-align(absolute);
+            display: inline-block;
+            clear: none;
+            margin: 0;
+            padding: 0;
+            color: $white;
+            overflow: scroll;
+            .breadcrumb__extent-link {
+                display: none;
+            }
+            .breadcrumb__item {
+                font-size: $font-size-small;
+                line-height: ($line-height-small * 2);
+                &>i {
+                    margin: 0 $box-spacing-horizontal*.5 0 0;
+                    color: $blue-light;
+                }
+                a {
+                    margin: 0 $box-spacing-horizontal*.5 0 0;
+                    color: $white;
+                }
+            }
+        }*/
+    }
+    &--footer {
+        @extend .main-footer__box;
+        @extend .main-footer__box--copyright;
+        max-width: $breakpoint-lg;
+        margin: 0 auto;
+    }
+}
+
+
+#repo {
+    display: inline-block;
+    float: right;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    color: $white;
+    &:after {
+        @include icon;
+        color: $white;
+        content: $i-github;
+        padding-left: .5rem;
+    }
+}
+
+#issuereport {
+    display: inline-block;
+    float: right;
+    margin: 1.25rem .5rem 0 .5rem;
+    cursor: pointer;
+    background-color: $white;
+    &:hover, :focus {
+        background-color: $heritage-blue-lightest;
+    }
+}
+
+// .index-row-1 {
+//   @include col(3,5,780px);
+//     .index-col {
+//         @include col(1,3,480px);
+//     }
+// }
+
+// .index-row-2 {
+//     @include col(2,5,780px);
+//     .index-col {
+//         @include col(1,3,480px);
+//         @include col(1,2,780px);
+//     }
+// }
+
+/***************************************************************************
+* Modules that are currently in development
+*/
+
+@import "dev/theme/advisernet-notice";
+@import "dev/theme/campaigns";
+@import "dev/theme/digital-lab";
+@import "dev/theme/feedback";
+@import "dev/theme/financial-statement";
+@import "dev/theme/home";
+@import "dev/theme/landing";
+@import "dev/theme/live-chat";
+@import "dev/theme/local";
+@import "dev/theme/main-nav-beta";
+@import "dev/theme/main-nav-v1";
+@import "dev/theme/main-nav-v2";
+@import "dev/theme/main-nav-v3";
+@import "dev/theme/star-rating";
+@import "dev/theme/switch";
+@import "dev/theme/template-letter";
