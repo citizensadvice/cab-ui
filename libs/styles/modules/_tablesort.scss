@@ -22,7 +22,7 @@
 
 .tablesort-button:before {
     @include icon;
-    content: $i-sort;
+    content: unicode($i-sort);
 }
 
 .tablesort-button span {
@@ -59,7 +59,7 @@ input.tablesort-filter {
     background-position: right center;
 }
 
-.tablesort-asc .tablesort-button:before { content: $i-sort-asc; }
-.tablesort-desc .tablesort-button:before { content: $i-sort-desc; }
+.tablesort-asc .tablesort-button:before { content: unicode($i-sort-asc) }
+.tablesort-desc .tablesort-button:before { content: unicode($i-sort-desc) }
 
 @media print { .tablesort-button, .tablesort-span-filter { display: none !important; } }

@@ -29,7 +29,7 @@
 
 		&:before {
 			@include icon;
-			content: $i-star;
+			content: unicode($i-star);
 			padding-right: .5rem;
 			color: $yellow;
 		}
@@ -56,7 +56,7 @@
 			display: inline-block;
 			color: $yellow;
 
-			&:before { content: $i-star; }
+			&:before { content: unicode($i-star) ; }
 		}
 	}
 }
@@ -70,7 +70,7 @@
 
 	&:before {
 		@include icon;
-		content: $i-star-o;
+		content: unicode($i-star-o) ;
 		cursor: pointer;
 		margin: 0 .25em 0 .75em;
 	}
@@ -80,7 +80,7 @@
 	&.saved {
 		color: $yellow;
 
-		&:before { content: $i-star; }
+		&:before { content: unicode($i-star); }
 	}
 }
 

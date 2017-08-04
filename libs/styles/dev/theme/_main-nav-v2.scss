@@ -38,7 +38,7 @@
 				/*a.sign-in {
 					//background-color: red;
 					&:after {
-						content: $i-key;
+						content: unicode($i-key);
 						.icon;
 						margin-left: .4em;
 					}

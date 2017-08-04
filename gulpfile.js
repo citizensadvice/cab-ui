@@ -61,13 +61,19 @@ gulp.task('sass', function() {
 		pixrem,
 		copyAssets
 	];
+	if ( productionBuild ) {
+		postCssPlugins.push(cssnano);
+	}
 	return gulp.src(['libs/styles/*.scss'])
-		.pipe(sourcemaps.write())
-		.pipe(sourcemaps.init({largeFile: true}) ) // Generate sourcemaps
+		.pipe( gulpif(!productionBuild, sourcemaps.init({largeFile: true})) ) // Generate sourcemaps
 		.pipe(sass().on('error', sass.logError))
+		.pipe( gulpif(!productionBuild,sourcemaps.write()) )
+		.pipe( gulpif(!productionBuild,sourcemaps.init({loadMaps: true})) ) // Generate sourcemaps
 		.pipe( postcss( postCssPlugins, { to: 'public/css/assets' } ) ) // Postcss (the "to" is for copyAssets)
+		.pipe( gulpif(!productionBuild,sourcemaps.write('.')) ) // Write the sourcemaps
 		.pipe(gulp.dest('public/css'))
-		.pipe( notify({ message: 'Sass new compiled' }));
+		.pipe(browserSync.reload({stream: true}))
+		.pipe( notify({ message: 'Sass compiled' }));
 
 });
 

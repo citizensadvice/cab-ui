@@ -48,7 +48,7 @@
 
 .main-header__content {
     @include limit-width($breakpoint-lg);
-    @extend .clearfix;
+    @include clearfix;
     padding: 0 1em .5em 1em;
 }
 

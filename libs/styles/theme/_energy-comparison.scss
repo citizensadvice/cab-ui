@@ -35,7 +35,7 @@
 
         &:after {
             @include icon;
-            content: $i-sort;
+            content: unicode($i-sort);
             margin-left: .25em;
             color: $heritage-blue-lighter;
             position: absolute;
@@ -194,7 +194,7 @@
         color: $green;
         @include icon();
         margin-left: .25em;
-        content: $i-sort-asc;
+        content: unicode($i-sort-asc);
     }
 }
 
@@ -206,7 +206,7 @@
         color: $red;
         @include icon();
         margin-left: .25em;
-        content: $i-sort-desc;
+        content: unicode($i-sort-desc);
     }
 }
 
@@ -222,14 +222,14 @@
 
 .sorttable_sorted:after {
     @include icon();
-    content: $i-sort-desc !important;
+    content: unicode($i-sort-desc) !important;
     margin-left: .25em;
     color: $heritage-blue !important;
 }
 
 .sorttable_sorted_reverse:after {
     @include icon();
-    content: $i-sort-asc !important;
+    content: unicode($i-sort-asc) !important;
     margin-left: .25em;
     color: $heritage-blue !important;
 }

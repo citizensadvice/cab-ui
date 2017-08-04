@@ -191,7 +191,7 @@
 				&:before {
 					@include icon;
 					color: $twitter-brand-colour;
-					content: $i-twitter;
+					content: unicode($i-twitter);
 					margin-right: .25em;
 				}
 			}

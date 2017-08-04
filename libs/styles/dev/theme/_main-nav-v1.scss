@@ -97,7 +97,7 @@
 
                     &:after {
                         font-weight: 300;
-                        content: $i-down;
+                        content: unicode($i-down);
                         padding: 0 0 0 $box-spacing-horizontal / 2;
                         @include icon;
                         font-size: $font-size-small;
@@ -183,7 +183,7 @@
 
                 &:after {
                     @include icon;
-                    content: $i-menu;
+                    content: unicode($i-menu);
                     padding-left: .5rem;
                 }
             }

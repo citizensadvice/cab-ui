@@ -57,7 +57,7 @@ blockquote {
         font-family: 'open_sans', 'cab-icons';
         font-size: .85rem;
         font-weight: 300;
-        content: $icon;
+        content: unicode($icon);
         line-height: 1em;
         display: block;
         margin: -$box-spacing-vertical -$box-spacing-horizontal $box-spacing-vertical -$box-spacing-horizontal;

@@ -284,7 +284,7 @@ p ~ ol {
     & > li:before {
         margin: 0 .25 0 -.5;
         font-family: 'cab-icons';
-        content: $i-tick;
+        content: unicode($i-tick);
         color: $green;
         padding-right: .5rem;
     }
@@ -297,7 +297,7 @@ p ~ ol {
     & > li:before {
         margin: 0 .25 0 -.5;
         font-family: 'cab-icons';
-        content: $i-cross;
+        content: unicode($i-cross);
         color: $red;
         padding-right: .5rem;
     }
@@ -313,7 +313,7 @@ p ~ ol {
     & > li:before {
         margin: 0 -.25 0 -.5;
         font-family: 'cab-icons';
-        content: $i-exclamation-triangle;
+        content: unicode($i-exclamation-triangle);
         color: $red;
         font-size: 0.75em;
         padding-right: .5rem;

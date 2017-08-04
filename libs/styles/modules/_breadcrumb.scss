@@ -44,7 +44,7 @@
     /*
     &:after {
         .icon;
-        content: $i-angle-right;
+        content: unicode($i-angle-right);
         margin: 0 $box-spacing-horizontal*.5 0 0;
         color: $blue-light;
     }

@@ -7,7 +7,7 @@
         $red: red($color);
         $blue: blue($color);
         $green: green($color);
-        // content: ("${color} \A R:%S \A G:%S \A B:%S", round($red,0), round($green,0), round($blue,0));
+        content: "#{$color} \A R:#{round($red)} \A G:#{round($green)} \A B:#{round($blue)}";
         white-space: pre;
     }
 }
@@ -26,6 +26,7 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    margin: 0 2vh 2vh 0;
 
     p {
         line-height: ($line-height-base * 0.8);

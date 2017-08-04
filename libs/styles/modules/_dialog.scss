@@ -129,7 +129,7 @@
 }
 
 .dialog__close-icon:before {
-    content: $i-cross;
+    content: unicode($i-cross);
     @include icon;
     padding: 0;
 }

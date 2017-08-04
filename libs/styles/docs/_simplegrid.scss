@@ -1,9 +1,9 @@
-// $gutters:           2vh;
+$gutters:           2vh;
 // $create-classes:    true;
 
 // // Variables for creating classes
 // $columns:           12;
-// $rowclass:          newrow; // Sets the class used for rows
+$rowclass:          newrow; // Sets the class used for rows
 // $colclass:          span; // Sets the class used for columns
 // $small:             568px;
 // $medium:            768px;
@@ -15,16 +15,16 @@
 //     box-sizing: border-box;
 // }
 
-// .${rowclass} {
-//     margin: 0;
-//     clear: both;
-//     padding: 0;
-//     overflow: hidden;
-//     // Create IE7&8 gutters. Only needed if gutter
-//     // value is in modern units.
-//     margin-bottom: 2%\9 !important;
-//     margin-right: -$gutters;
-// }
+.#{$rowclass} {
+    margin: 0;
+    clear: both;
+    padding: 0;
+    overflow: hidden;
+    // Create IE7&8 gutters. Only needed if gutter
+    // value is in modern units.
+    margin-bottom: 2%\9 !important;
+    margin-right: -$gutters;
+}
 
 // // Create mixin.
 // // Mixin allows you to make any element a fraction width,

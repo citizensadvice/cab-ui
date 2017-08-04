@@ -8,7 +8,9 @@
 [tabindex="-1"] { outline: none; }
 
 body, input, button, select, textarea {
-    font: ($base-size / 1.5), 'open_sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'open_sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: $base-size;
+    line-height: 1.5;
 }
 
 button, input, optgroup, select, textarea {

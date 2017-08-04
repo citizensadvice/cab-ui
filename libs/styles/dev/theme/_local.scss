@@ -35,7 +35,7 @@
             @media screen and (min-width: $breakpoint-sm) { display: none; }
 
             &:after {
-                content: $i-menu;
+                content: unicode($i-menu);
                 @include icon;
                 margin-left: .5rem;
             }

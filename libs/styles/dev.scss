@@ -4,13 +4,13 @@
  * Basic utility classes.
  * And one or two odds and ends that coule be moved elsewhere at some point.
  */
-
 // Import all website styles
 
 // base/*
 //
 @import "base/colors";
 @import "base/variables";
+@import "base/functions";
 @import "base/global";
 @import "base/icons";
 @import "base/ie";
@@ -602,7 +602,7 @@ div.tooltip:before {
     &:after {
         @include icon;
         color: $white;
-        content: $i-github;
+        content: unicode($i-github);
         padding-left: .5rem;
     }
 }

@@ -41,7 +41,7 @@
 
 .a-external-link:after,
 .a-external:after {
-    content: #{$i-external-link};
+    content: unicode($i-external-link);
     @extend .inline-icon;
 }
 
@@ -51,27 +51,27 @@
 }
 
 .a-word-doc:after {
-    content: #{$i-doc-word};
+    content: unicode($i-doc-word);
     @extend .inline-icon;
 }
 
 .a-excel-doc:after {
-    content: #{$i-doc-excel};
+    content: unicode($i-doc-excel);
     @extend .inline-icon;
 }
 
 .a-pdf-doc:after {
-    content: #{$i-doc-pdf};
+    content: unicode($i-doc-pdf);
     @extend .inline-icon;
 }
 
 .a-file-doc:after {
-    content: #{$i-doc};
+    content: unicode($i-doc) ;
     @extend .inline-icon;
 }
 
 .a-code-doc:after {
-    content: #{$i-doc-code};
+    content: unicode($i-doc-code) ;
     @extend .inline-icon;
 }
 
@@ -86,14 +86,14 @@
 }
 
 .a-social-facebook:before {
-    content: #{$i-facebook};
+    content: unicode($i-facebook) ;
     color: $facebook-brand-colour;
     @extend .a-social;
     border: 0;
 }
 
 .a-social-twitter:before {
-    content: #{$i-twitter};
+    content: unicode($i-twitter) ;
     color: $twitter-brand-colour;
     @extend .a-social;
     border: 0;
@@ -106,28 +106,28 @@
 }
 
 .a-social-whatsapp:before {
-    content: #{$i-whatsapp};
+    content: unicode($i-whatsapp) ;
     color: $whatsapp-brand-colour;
     @extend .a-social;
     border: 0;
 }
 
 .a-social-messenger:before {
-    content: #{$i-messenger};
+    content: unicode($i-messenger) ;
     color: $messenger-brand-colour;
     @extend .a-social;
     border: 0;
 }
 
 .a-social-linkedin:before {
-    content: #{$i-linkedin};
+    content: unicode($i-linkedin) ;
     color: $linkedin-brand-colour;
     @extend .a-social;
     border: 0;
 }
 
 .a-social-copy:before {
-    content: #{$i-copy};
+    content: unicode($i-copy) ;
     color: $blue-light;
     @extend .a-social;
     border: 0;
@@ -150,7 +150,7 @@
     display: inline-block;
 
     &:before {
-        content: #{$i-clock};
+        content: unicode($i-clock) ;
         color: $blue-light;
         @extend .a-social-top;
     }
@@ -162,7 +162,7 @@
     display: inline-block;
 
     &:before {
-        content: #{$i-happy};
+        content: unicode($i-happy) ;
         color: $blue-light;
         @extend .a-social-top;
     }
@@ -174,7 +174,7 @@
     display: inline-block;
 
     &:before {
-        content: #{$i-target};
+        content: unicode($i-target) ;
         color: $blue-light;
         @extend .a-social-top;
     }
@@ -185,7 +185,7 @@
     margin-right: .9em;
 
     &:before {
-        content: #{$i-print};
+        content: unicode($i-print) ;
         color: $blue-light;
         @extend .a-social-top;
         bottom: -0.05em;
@@ -197,7 +197,7 @@
     margin-right: .9em;
 
     &:before {
-        content: #{$i-star};
+        content: unicode($i-star) ;
         color: $blue-light;
         @extend .a-social-top;
         bottom: -0.05em;
@@ -209,7 +209,7 @@
     margin-right: .9em;
 
     &:before {
-        content: #{$i-doc-word};
+        content: unicode($i-doc-word) ;
         color: $blue-light;
         @extend .a-social-top;
         bottom: -0.05em;
@@ -221,7 +221,7 @@
     margin-right: .9em;
 
     &:before {
-        content: #{$i-email};
+        content: unicode($i-email) ;
         color: $blue-light;
         @extend .a-social-top;
         bottom: -0.05em;
@@ -268,91 +268,91 @@
 }
 
 .icon-search:before {
-    content: #{$i-search};
+    content: unicode($i-search) ;
     @include icon;
 }
 
 // For sharebar
 .icon-star:before {
-    content: #{$i-star};
+    content: unicode($i-star) ;
     @include icon;
 }
 
 .icon-word:before {
-    content: #{$i-doc-word};
+    content: unicode($i-doc-word) ;
     @include icon;
 }
 
 .icon-print:before {
-    content: #{$i-print};
+    content: unicode($i-print) ;
     @include icon;
 }
 
 .icon-email:before {
-    content: #{$i-email};
+    content: unicode($i-email);
     @include icon;
 }
 
 .icon-messenger:before {
-    content: #{$i-messenger};
+    content: unicode($i-messenger);
     @include icon;
 }
 
 .icon-linkedin:before {
-    content: #{$i-linkedin};
+    content: unicode($i-linkedin);
     @include icon;
 }
 
 .icon-facebook:before {
-    content: #{$i-facebook};
+    content: unicode($i-facebook);
     @include icon;
 }
 
 .icon-twitter:before {
-    content: #{$i-twitter};
+    content: unicode($i-twitter);
     @include icon;
 }
 
 .icon-google:before {
-    content: #{$i-google};
+    content: unicode($i-google);
     @include icon;
 }
 
 // For breadcrumbs
 .icon-guillemet-right:before {
-    content: #{$i-angle-right};
+    content: unicode($i-angle-right);
     @include icon;
 }
 
 // For references
 .icon-bin:before {
-    content: #{$i-bin};
+    content: unicode($i-bin);
     @include icon;
 }
 .icon-copy:before {
-    content: #{$i-copy};
+    content: unicode($i-copy);
     @include icon;
 }
 .icon-save:before {
-    content: #{$i-save};
+    content: unicode($i-save);
     @include icon;
 }
 .icon-load:before {
-    content: #{$i-load};
+    content: unicode($i-load);
     @include icon;
 }
 .icon-help:before {
-    content: #{$i-help};
+    content: unicode($i-help);
     @include icon;
 }
 .icon-undo:before {
-    content: #{$i-undo};
+    content: unicode($i-undo);
     @include icon;
 }
 
 // Burger icon
 .icon-menu:before {
-    content: #{$i-menu};
+    content: unicode($i-menu);
     @include icon;
     padding-right: .5rem;
 }

@@ -7,8 +7,8 @@
     cursor: pointer;
     color: $heritage-blue;
 
-    &:after { content: $i-up; }
-    &.tl--hidden:after { content: $i-down; }
+    &:after { content: unicode($i-up) }
+    &.tl--hidden:after { content: unicode($i-down); }
 }
 
 .sec--toggle {
@@ -21,7 +21,7 @@
         right: 0rem;
         top: .2rem;
         @include icon;
-        content: $i-up;
+        content: unicode($i-up);
     }
 
     &.sec--hidden {
@@ -29,7 +29,7 @@
 
         &:after {
             @include icon;
-            content: $i-down;
+            content: unicode($i-down);
         }
     }
 }
@@ -72,7 +72,7 @@
         cursor: grab;
         background: none;
         @include icon;
-        content: $i-vertical-dots;
+        content: unicode($i-vertical-dots);
         position: absolute;
         left: -1rem;
         top: 50%;

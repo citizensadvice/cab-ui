@@ -76,7 +76,7 @@
 
 	&:after {
 		@include icon;
-		content: $i-cross;
+		content: unicode($i-cross);
 		padding-left: .5em;
 		color: $white;
 	}
@@ -113,7 +113,7 @@
 
 		&:after {
 			@include icon;
-			content: $i-down;
+			content: unicode($i-down);
 			padding-left: .5em;
 			color: $white;
 		}
@@ -242,7 +242,7 @@
 
 			&:after {
 				color: $gray-3;
-				content: $i-cross;
+				content: unicode($i-cross);
 			}
 
 			&:hover,
@@ -278,7 +278,7 @@
 
 	&:after {
 		@extend .i-brand;
-		content: $brand-dialogue_think;
+		content: unicode($brand-dialogue_think);
 		padding-left: .5em;
 	}
 
@@ -293,7 +293,7 @@
 		
 		&:after {
 			@include icon;
-			content: $i-up;
+			content: unicode($i-up);
 		}
 	}
 
@@ -304,7 +304,7 @@
 
 		&:after {
 			@extend .i-brand;
-			content: $brand-dialogue_sad;
+			content: unicode($brand-dialogue_sad);
 		}
 	}
 }

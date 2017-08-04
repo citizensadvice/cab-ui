@@ -267,7 +267,7 @@ table.simple-table td {
         cursor: pointer;
 
         & td:first-of-type:before {
-            content: $i-right-small;
+            content: unicode($i-right-small);
             font-weight: $font-weight-bolder;
             margin-right: .5rem;
             font-family: 'cab-icons';

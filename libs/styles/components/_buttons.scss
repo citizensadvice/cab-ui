@@ -30,6 +30,7 @@ input[type=button] {
 .btn-primary,
 .button,
 .button--blue {
+    @include btn;
     @extend .btn;
 
     &.btn-small {
@@ -46,17 +47,17 @@ input[type=button] {
 .btn-primary,
 .button,
 .button--blue {
-    .btn();
+    @extend .btn;
     &.btn-small {
-        border-color: @heritage-blue-light;
+        border-color: $heritage-blue-light;
         &:focus {
-            background-color: @white;
+            background-color: $white;
         }
         &:hover,
         &:active {
-            background-color: @blue-lighter;
-            border-color: @heritage-blue-light;
-            color: @heritage-blue;
+            background-color: $blue-lighter;
+            border-color: $heritage-blue-light;
+            color: $heritage-blue;
         }
     }
 }
@@ -64,10 +65,7 @@ input[type=button] {
 
 .btn-light,
 .btn-primary-light {
-    @include btn(
-        $btn-background: $aqua-light,
-        $btn-background-hover: $aqua
-    );
+    @include btn($btn-background: $aqua-light,$btn-background-hover: $aqua);
 
     &.btn-small {
         &:focus { background-color: $white; }
