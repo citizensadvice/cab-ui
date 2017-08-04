@@ -7,7 +7,11 @@
  */
 
 .revealable {
-    @include revealable($white,$gray-5,$gray-5$heritage-blue-light);
+    @include revealable(
+    $white,
+    $heritage-blue,
+    $heritage-blue,
+    $heritage-blue);
 
     /*&--aqua {
         .revealable(

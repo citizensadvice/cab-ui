@@ -60,7 +60,7 @@ blockquote {
         content: unicode($icon);
         line-height: 1em;
         display: block;
-        margin: -$box-spacing-vertical -$box-spacing-horizontal $box-spacing-vertical -$box-spacing-horizontal;
+        margin: (-$box-spacing-vertical)  (-$box-spacing-horizontal)  ($box-spacing-vertical) (-$box-spacing-horizontal);
         padding: $box-spacing-vertical $box-spacing-horizontal;
 	}
 }

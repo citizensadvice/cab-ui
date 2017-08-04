@@ -4,7 +4,13 @@
  * Mixin created for styling revealables and colapsibles
  */
 
-@mixin revealable ($background: $heritage-blue-lighter,$heading: $heritage-blue,$border: $heritage-blue,$icon: $blue) {
+@mixin revealable (
+    $background: $heritage-blue-lighter,
+    $heading: $heritage-blue,
+    $border: $heritage-blue,
+    $icon: $blue
+    ) {
+        
     margin: $box-spacing-vertical 0;
     background-color: $white;
     color: $text-color;
@@ -95,8 +101,8 @@ i.icon-chevron-up {
     display: block;
     background-color: $white;
     color: $heritage-blue;
-    padding: $box-spacing-vertical $box-spacing-horizontal*3 $box-spacing-vertical $box-spacing-horizontal;
-    margin: $box-spacing-vertical $box-spacing-vertical*2 -$box-spacing-vertical -$box-spacing-horizontal;
+    padding: ($box-spacing-vertical) ($box-spacing-horizontal*3) ($box-spacing-vertical) ($box-spacing-horizontal);
+    margin: ($box-spacing-vertical) ($box-spacing-vertical*2) (-$box-spacing-vertical) (-$box-spacing-horizontal);
     text-decoration: none;
     border-radius: 0;
     position: relative;
@@ -107,7 +113,7 @@ i.icon-chevron-up {
     &:before {
         box-sizing: border-box;
         font-family: 'cab-icons';
-        padding: 0 $box-spacing-horizontal*1.25;
+        padding: 0 ($box-spacing-horizontal*1.25);
         height: 100%;
         position: absolute;
         right: 0;
