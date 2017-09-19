@@ -10,32 +10,46 @@ h2 a{
 	border: none;
 }
 
-ul.side-nav__ul-level-1{
+.side-nav__ul-level-1{
 	border-bottom: none;
 	padding-left: 0;
-
-	&:hover{
-		color: #003C64;
-    text-decoration: none;
-    border-bottom: 0.075em solid #003C64;
-		background-color: #e3f4ff;
-		padding: 2px 5px;
-	}
-
-	li{
-		list-style-type: none;
-		padding-left: 1.5em;
-
-		&:hover{
-			color: #003C64;
-			text-decoration: none;
-			background-color: #e3f4ff;
-			padding: 0;
-			border-radius: 2px;
-		}
-
-		a{
-			border-bottom: none;
-		}
-	}
 }
+
+.side-nav__ul-level-1:hover{
+	color: #003C64;
+	text-decoration: none;
+	border-bottom: 0.075em solid #003C64;
+	background-color: #e3f4ff;
+	padding: 2px 5px;
+}
+
+.side-nav__ul-level-1 li {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+.side-nav__ul-level-1 li:hover{
+	color: #003C64;
+	text-decoration: none;
+	background-color: #e3f4ff;
+	padding: 0;
+	border-radius: 2px;
+}
+.side-nav__ul-level-1 li:hover a{
+	border-bottom: none;
+}
+
+.main-content__sidebar.side-links{
+	background: #dfdfdf;
+}
+
+.main-content__sidebar.side-links h2{
+	font-size: 20.8px;
+	color: #191926;
+	font-weight: 500;
+	margin-top: 0.5em;
+}
+
+
+//index page
+
+
