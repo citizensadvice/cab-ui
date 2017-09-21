@@ -1,42 +1,75 @@
-
+/**
+ * New Styles for Furniture elements - Sept 2017
+ *
 //main-content__sidebar side-nav side-nav--levels-4 side-nav--no-child ** origignal class
-.side-nav{
-	font-size: 21px;
-	border: none;
+ */
+
+.main-content__sidebar.side-nav .side-nav__heading ,.main-content__sidebar.side-nav h2 {
+	margin: 0;
+}
+.main-content__sidebar.side-nav a:focus, .side-nav__ul--level2:focus, .side-nav__ul--level2 li:focus,.side-nav__ul--level3:focus, .side-nav__ul--level3 li:focus{
+	outline: none;
 }
 
-h2 a{
-	font-size: 21px;
-	border: none;
-}
-
-.side-nav__ul-level-1{
+.main-content__sidebar.side-nav .side-nav__heading a{
+	display: block;
+	padding: 12px;
+	padding: 0.75rem;
+	font-size: 16px;
+	font-size: 1rem;
+	margin: 0;
 	border-bottom: none;
+	color: #606060;
+	font-weight: 600;
+	border-bottom: 0;
+	cursor: default;
+	background: none;
+	outline: none;
+}
+
+.main-content__sidebar.side-nav .side-nav__heading a:hover{
+  background:none;
+}
+
+.main-content__sidebar.side-nav h2 a{
+	color: #004b88;
+	font-weight: 800;
+	font-size: 20.8px;
+	font-size: 1.3rem;
+	padding: .5625rem .75rem;
+	display: block;
+	border-bottom: none;
+}
+
+
+.main-content__sidebar.side-nav h2 a:hover{
+	background-color: #f2f2f2;
+}
+
+.side-nav__ul--level1{
 	padding-left: 0;
 }
 
-.side-nav__ul-level-1:hover{
-	color: #003C64;
-	text-decoration: none;
-	border-bottom: 0.075em solid #003C64;
-	background-color: #e3f4ff;
-	padding: 2px 5px;
+.side-nav__ul--level1 li{
+	list-style-type: none;
 }
 
-.side-nav__ul-level-1 li {
-	list-style-type: none;
-	padding-left: 1.5em;
-}
-.side-nav__ul-level-1 li:hover{
-	color: #003C64;
-	text-decoration: none;
-	background-color: #e3f4ff;
-	padding: 0;
-	border-radius: 2px;
-}
-.side-nav__ul-level-1 li:hover a{
+.side-nav__ul--level1 li a{
+	border: none;
+	color: #004b88;
+	padding: .5625rem .75rem;
+	display: block;
 	border-bottom: none;
 }
+
+.side-nav__ul--level2 li a{
+	border: none;
+	color: #004b88;
+	padding: .5625rem .75rem;
+	display: inline;
+	border-bottom: none;
+}
+
 
 .main-content__sidebar.side-links{
 	background: #dfdfdf;
@@ -45,11 +78,18 @@ h2 a{
 .main-content__sidebar.side-links h2{
 	font-size: 20.8px;
 	color: #191926;
-	font-weight: 500;
+	font-weight: normal;
 	margin-top: 0.5em;
 }
 
+.section-nav__parent{
+	border: none;
+	color: #004b88;
+	font-weight: 800;
+	font-size: 1.3rem;
+	padding: 0.75rem;
+}
 
-//index page
-
-
+.main-content__sidebar a:hover,.main-content__sidebar a:focus{
+	background: none;
+}
