@@ -1,0 +1,29 @@
+/**
+ * TYPE: Object
+ * NAME: Flag
+ * DESC: An object pattern to allow content to sit side by side
+ *       nicely and be vertically aligned.
+ */
+
+@flag-spacing--default: .35rem;
+
+// blocks...
+.o-flag {
+    direction: ltr;
+    display: table;
+    width: 100%;
+
+    // elements...
+    &__media,
+    &__body {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__media { padding-right: @flag-spacing--default; }
+
+    // modifiers...
+    &--top {
+        .o-flag__media { vertical-align: top; }
+    }
+}

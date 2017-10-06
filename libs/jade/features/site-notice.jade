@@ -23,18 +23,26 @@ block content
 	.articleContent
 		div
 			p The website notice appears between the breadcrumbs and section notices on every page of the website, including the homepage. Only one website notice can be used at a time, and it shouldn't be used outside exceptional circumstances.
-
+			
 			.example-box-plain
-				.sitenotice
+				.sitenotice.o-flag.o-flag--top
 					.sitenotice__content
-						.badge Notice
-						span Website notices appear on all pages of the website.
+						.o-flag__media
+							.badge Notice
+						.o-flag__body
+							span Website notices appear on all pages of the website.
 
 			pre
 				code.language-html
-					| &lt;div class="sitenotice"&gt;
-					| 	&lt;div class="sitenotice__content"&gt;
-					| 		&lt;div class="badge"&gt;Notice&lt;/div&gt;
-					| 		&lt;span&gt;Website notices appear on all pages of the website.&lt;/span&gt;
-					| 	&lt;/div&gt;
+					| &lt;div class="section-notice o-flag o-flag--top"&gt;
+					|	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
+					|	&lt;div class="section-notice__content"&gt;
+					|		&lt;div class="o-flag__media"&gt;
+					|			&lt;div class="badge"&gt;Notice&lt;/div&gt;
+					| 		&lt;div&gt;
+					|		&lt;div class="o-flag__body"&gt;
+					| 			&lt;span&gt;Website notices appear on all pages of the website.&lt;/span&gt;
+					| 		&lt;div&gt;
+					| 	&lt;div&gt;
 					| &lt;/div&gt;
+					

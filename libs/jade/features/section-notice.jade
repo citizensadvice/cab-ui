@@ -15,26 +15,29 @@ block sidebar
 	include /jade/templates/partials/sidebar-features.jade
 
 block section-notice
-	aside.section-notice
+	aside.section-notice.o-flag.o-flag--top
 		h2.screenreader Notice
 		.section-notice__content
-			p
-				span.badge NEW
-				| This page is part of #[a(href="#") our new approach to digital advice].
+			.o-flag__media
+				p.badge NEW
+			.o-flag__body
+				p This page is part of #[a(href="#") our new approach to digital advice].
+	
+	aside.section-notice.o-flag.o-flag--top
+		h2.screenreader Notice
+		.section-notice__content
+			.o-flag__media
+				p.badge.changing SURVEY
+			.o-flag__body
+				p Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
 
-	aside.section-notice
+	aside.section-notice__adviser.o-flag.o-flag--top.js-make-sticky
 		h2.screenreader Notice
 		.section-notice__content
-			p
-				span.badge.changing SURVEY
-				| Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
-
-	aside.section-notice__adviser.js-make-sticky
-		h2.screenreader Notice
-		.section-notice__content
-			p
-				span.badge ADVISER
-				| This page is part of #[a(href="#") adviser only] content.
+			.o-flag__media
+				p.badge.changing ADVISOR
+			.o-flag__body
+				p This page is part of #[a(href="#") adviser only] content.
 
 block content
 	.articleContent
@@ -44,58 +47,70 @@ block content
 			p This section is under review, #[a(href="./section-notice-dev.html") this is the updated pattern being researched].
 
 			.example-box-plain
-				aside.section-notice
+				aside.section-notice.o-flag.o-flag--top
 					h2.screenreader Notice
 					.section-notice__content
-						p
-							span.badge NEW
-							| This page is part of #[a(href="#") our new approach to digital advice].
+						.o-flag__media
+							p.badge NEW
+						.o-flag__body
+							p This page is part of #[a(href="#") our new approach to digital advice].
+				
 			pre
 				code.language-html
-					| &lt;aside class="section-notice"&gt;
-					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
-					| 	&lt;div class="section-notice__content"&gt;
-					| 		&lt;p&gt;
-					| 			&lt;span class="badge"&gt;NEW&lt;/span&gt;
-					| 			This page is part of &lt;a href="#"&gt;our new approach to digital advice&lt;/a&gt;.
-					| 		&lt;/p&gt;
-					| 	&lt;/div&gt;
+					| &lt;aside class="section-notice o-flag o-flag--top"&gt;
+					|	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
+					|	&lt;div class="section-notice__content"&gt;
+					|		&lt;div class="o-flag__media"&gt;
+					|			&lt;p class="badge"&gt;NEW&lt;/p&gt;
+					| 		&lt;div&gt;
+					|		&lt;div class="o-flag__body"&gt;
+					| 			&lt;p&gt;This page is part of &lt;a href="#"&gt;our new approach to digital advice&lt;/a&gt;.&lt;/p&gt;
+					| 		&lt;div&gt;
+					| 	&lt;div&gt;
 					| &lt;/aside&gt;
 
 			.example-box-plain
-				aside.section-notice
+				aside.section-notice.o-flag.o-flag--top
 					h2.screenreader Notice
 					.section-notice__content
-						p
-							span.badge.changing SURVEY
-							| Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
+						.o-flag__media
+							p.badge.changing SURVEY
+						.o-flag__body
+							p Help us to improve our [section] advice. Please #[a(href="#") complete our short survey]. It'll take about 5-10 minutes.
+			
 			pre
 				code.language-html
-					| &lt;aside class="section-notice"&gt;
-					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
-					| 	&lt;div class="section-notice__content"&gt;
-					| 		&lt;p&gt;
-					| 			&lt;span class="badge changing"&gt;SURVEY&lt;/span&gt;
-					| 			Help us to improve our [section] advice. Please &lt;a href="#"&gt;complete our short survey&lt;/a&gt;. It'll take about 5-10 minutes.
-					| 		&lt;/p&gt;
-					| 	&lt;/div&gt;
+					| &lt;aside class="section-notice o-flag o-flag--top"&gt;
+					|	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
+					|	&lt;div class="section-notice__content"&gt;
+					|		&lt;div class="o-flag__media"&gt;
+					|			&lt;p class="badge changing"&gt;SURVEY&lt;/p&gt;
+					| 		&lt;div&gt;
+					|		&lt;div class="o-flag__body"&gt;
+					| 			&lt;p&gt;Help us to improve our [section] advice. Please &lt;a href="#"&gt;complete our short survey&lt;/a&gt;. It'll take about 5-10 minutes.&lt;/p&gt;
+					| 		&lt;div&gt;
+					| 	&lt;div&gt;
 					| &lt;/aside&gt;
 
 			.example-box-plain
-				aside.section-notice__adviser
+				aside.section-notice__adviser.o-flag.o-flag--top.js-make-sticky
 					h2.screenreader Notice
 					.section-notice__content
-						p
-							span.badge ADVISER
-							| This page is part of #[a(href="#") adviser only] content.
+						.o-flag__media
+							p.badge.changing ADVISER
+						.o-flag__body
+							p This page is part of #[a(href="#") adviser only] content.
+				
 			pre
 				code.language-html
-					| &lt;aside class="section-notice__adviser js-make-sticky"&gt;
-					| 	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
-					| 	&lt;div class="section-notice__content"&gt;
-					| 		&lt;p&gt;
-					| 			&lt;span class="badge"&gt;ADVISER&lt;/span&gt;
-					| 			This page is part of &lt;a href="#"&gt;adviser only&lt;/a&gt; content.
-					| 		&lt;/p&gt;
-					| 	&lt;/div&gt;
+					| &lt;aside class="section-notice o-flag o-flag--top"&gt;
+					|	&lt;h2 class="screenreader"&gt;Notice&lt;/h2&gt;
+					|	&lt;div class="section-notice__content"&gt;
+					|		&lt;div class="o-flag__media"&gt;
+					|			&lt;p class="badge changing"&gt;ADVISER&lt;/p&gt;
+					| 		&lt;div&gt;
+					|		&lt;div class="o-flag__body"&gt;
+					| 			&lt;p&gt;This page is part of &lt;a href="#"&gt;adviser only&lt;/a&gt; content.&lt;/p&gt;
+					| 		&lt;div&gt;
+					| 	&lt;div&gt;
 					| &lt;/aside&gt;
