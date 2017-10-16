@@ -359,7 +359,7 @@ textarea.form__field {
             border-color: @red;
         }
         &:focus {
-            outline: none;
+            // outline: none;
             border-color: @heritage-yellow;
         }
     }
@@ -513,6 +513,11 @@ input[class*="dob-"] {
             .ie(width,100%);
             border: 2px solid @gray-6;
             border-left: 0;
+
+            &:focus {
+                border-color: #FCBB69;
+                border-left: 2px;
+            }
         }
     }
     input:first-of-type {
