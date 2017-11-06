@@ -6,8 +6,85 @@ extends /jade/templates/template.min.jade
 
 block head
 	style.
-		body {
-			background-color: #c2bdde;
+		.dl--circle{
+			height: 6rem;
+			width: 6rem;
+			border-radius: 3rem;
+		}
+
+		.dl--circle .pic{
+			font-size:4rem;
+		}
+
+		.webchat{
+			margin-left:13%;
+		}
+
+		.flex-row > *{
+			text-align:center;
+		}
+
+		.fullwidth-content{
+			padding:4rem 4rem 2rem;
+		}
+		.links{
+			margin-top:4rem;
+		}
+		.sponser{
+			text-align: right;padding: 0 2em;padding-top: 2em;
+		}
+		.freshworks{
+			    height: 50px;margin-left: 15px;position: relative;top: 20px;
+		}
+		.casebook-container span, .advice span{
+			margin:0;
+			font-size:22px;
+			text-align:left;
+			font-weight:bold;
+			color:#00553F;
+			clear: both;
+			float: left;
+			margin-bottom:1em;
+		}
+
+		.casebook-container p{
+			clear: both;
+			float: left;
+			width: 50%;
+			text-align: left;
+			color:#00553F;
+			word-break: break-word;
+			margin:0;
+		}
+		
+		.advice p{
+			clear: both;
+			text-align: center;
+			color:#00553F;
+			word-break: break-word;
+			margin:0;
+		}
+
+		.casebook-container a.case-btn{
+			    clear: both;
+				float: left;
+				min-width: 180px;
+				font-size: 17px;
+				background: white;
+				margin-top: 2em;
+				line-height: 3em;
+				font-weight: 600;
+				padding:0 10px;
+		}
+
+
+		.casebook-container{
+			padding: 0em 1em 2em;
+			margin: 0;
+		}
+
+		.dialog__close-icon{
+			font-size:23px;
 		}
 
 block script
@@ -44,17 +121,46 @@ block script
 			$('.dialog__close.1').click(function(){
 				$('#overlay--1').hide();
 			})
-			$('#advice').click(function(){
+			$('#casebook').click(function(){
 				$('#overlay--2').show();
 			})
 			$('.dialog__close.2').click(function(){
 				$('#overlay--2').hide();
 			})
-			$('#mart').click(function(){
+
+			$('#facebook').click(function(){
 				$('#overlay--3').show();
 			})
 			$('.dialog__close.3').click(function(){
 				$('#overlay--3').hide();
+			})
+
+			$('#prinkk').click(function(){
+				$('#overlay--4').show();
+			})
+			$('.dialog__close.4').click(function(){
+				$('#overlay--4').hide();
+			})
+
+			$('#psr').click(function(){
+				$('#overlay--5').show();
+			})
+			$('.dialog__close.5').click(function(){
+				$('#overlay--5').hide();
+			})
+
+			$('#game').click(function(){
+				$('#overlay--6').show();
+			})
+			$('.dialog__close.6').click(function(){
+				$('#overlay--6').hide();
+			})
+			
+			$('#uc').click(function(){
+				$('#overlay--7').show();
+			})
+			$('.dialog__close.7').click(function(){
+				$('#overlay--7').hide();
 			})
 		});
 
@@ -69,6 +175,9 @@ block content
 							span.dialog__close-text Close
 					.flex-container
 						.flex-row
+							.dl--segment.col-xs-12.advice
+								span Webchat
+								p See what it’s like to provide and receive advice online
 							.dl--segment.col-xs-6
 								a(href="http://citaone.logo-net.co.uk/chat18/")
 									.dl--circle
@@ -93,20 +202,10 @@ block content
 							span.dialog__close-text Close
 					.flex-container
 						.flex-row
-							.dl--segment.col-xs-6
-								a(href="http://www.surveygizmo.com/s3/2993823/Citizens-Advice")
-									.dl--circle
-										.pic.i-brand &#xe993;
-									p help with
-										br
-										strong Navigation research
-							.dl--segment.col-xs-6
-								a(href="https://www.citizensadvice.org.uk/advisernet/news/help-us-test-the-idea-of-including-adviser-only-content/")
-									.dl--circle
-										.pic.i-brand &#xe993;
-									p test
-										br
-										strong Sick pay adviser content
+							.dl--segment.col-xs-12.casebook-container
+								span Casebook
+								p Try our Casebook, our new case management system for local Citizens Advice or visit the Casebook support desk
+								a.case-btn(href="https://webworker.casebook.demo.devops.citizensadvice.org.uk/") Try out Casebook
 
 		#overlay--3.overlay(style="display: none;")
 			.overlay__modal
@@ -117,20 +216,68 @@ block content
 							span.dialog__close-text Close
 					.flex-container
 						.flex-row
-							.dl--segment.col-xs-6
-								a(href="http://52.209.108.49/client/budgets/1")
-									.dl--circle
-										.pic £
-									p Try the
-										br
-										strong Money advice recording tool (MART)
-							.dl--segment.col-xs-6
-								a(href="http://mart-help.citizensadvice.org.uk/")
-									.dl--circle
-										.pic £
-									p Find out more
-										br
-										strong about MART
+							.dl--segment.col-xs-12.casebook-container
+								span Facebook Workplace
+								p Connect with people from across the organisation and share knowledge on Citizens Advice’s private Workplace
+								a.case-btn(href="https://citizensadvice.facebook.com") Try out Facebook Workplace
+
+		#overlay--4.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.4(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-12.casebook-container
+								span Local impact report template
+								p Create your own local impact report from our branded templates
+								a.case-btn(href="http://citizensadvice.prinkk.com") Create your impact report
+		
+		#overlay--5.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.5(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-12.casebook-container
+								span Priority services register tool
+								p Try out our tool that helps clients register for priority services with their energy supplier
+								a.case-btn(href="https://www.citizensadvice.org.uk/consumer/energy/energy-supply/get-help-paying-your-bills/getting-extra-support-from-your-energy-supplier/") Try the priority services register tool
+
+		#overlay--6.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.6(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-12.casebook-container
+								span Improving our website
+								p Help us test if different categories in our website menu could make it easier to find the right advice
+								a.case-btn(href="https://3c6o6lhi.optimalworkshop.com/treejack/ca-treejack") Improve our website
+
+		#overlay--7.overlay(style="display: none;")
+			.overlay__modal
+				.overlay__main(style="background-color: #c2bdde;")
+					div
+						button.dialog__close.7(type="button" data-action="close")
+							i(aria-hidden="true", class="dialog__close-icon")
+							span.dialog__close-text Close
+					.flex-container
+						.flex-row
+							.dl--segment.col-xs-12.casebook-container
+								span Universal Credit digital resources
+								p Test our new space that brings together all of the resources you need to give advice on Universal Credit
+								a.case-btn(href="#") First look at new Universal Credit resources
+									
+							
 
 		.fullwidth
 			.fullwidth-content
@@ -139,102 +286,82 @@ block content
 					h1(style="margin: 0; margin-top: 1rem; position: relative;") Welcome to the digital&nbsp;lab&nbsp;
 						a.egg(href="http://funhtml5games.com?embed=flappy") #[span.i &#xe624;]
 
-		.fullwidth(style="background-color: #c2bdde; padding-bottom: 3.5rem;")
+		.fullwidth(style="background-color: #c2bdde;")
 			.fullwidth-content
 				.flex-container
 					.flex-row
-						.dl--segment.col-sm-4.tablet
-							a(href="http://webworker.casebook.demo.devops.citizensadvice.org.uk/")
+						.dl--segment.col-sm-3
+							a#casebook(href="#")
 								.dl--circle
-									.pic.i-brand &#xe97b;
-								p Test the
+									.pic.i-brand &#xe94b;
+								p Test
 									br
-									strong Casebook prototype
-						.dl--segment.col-sm-4.tablet
+									strong Casebook
+						
+
+						.dl--segment.col-sm-3
+							a#facebook(href="#")
+								.dl--circle
+									.pic.i-brand &#xe96d;
+								p Connect with
+									br
+									strong Facebook Workplace
+
+						.dl--segment.col-sm-3
+							a#prinkk(href="#")
+								.dl--circle
+									.pic.i-brand &#xe936;
+								p Create your own
+									br
+									strong local impact report
+						
+						.dl--segment.col-sm-3
+							a#psr(href="#")
+								.dl--circle
+									.pic.i-brand &#xe984;
+								p Try the
+									br
+									strong priority services
+									br
+									strong register tool
+
+						.dl--segment.col-sm-3.webchat
 							a#webchat(href="#")
 								.dl--circle
 									.pic.i-brand &#xe92a;
 								p Try out
 									br
-									strong Webchat
-						// Mobile webchat
-						.dl--segment.col-sm-4.mobile
-							a(href="https://www.citizensadvice.org.uk/development/web-chat-service/")
-								.dl--circle
-									.pic.i-brand &#xe92a;
-								p Try out
-									br
-									strong Webchat
-						.dl--segment.col-sm-4.tablet
-							a#pqf
-								.dl--circle
-									.pic.i-brand &#xe94b;
-								p Explore the
-									br
-									strong PQF dashboard
-						// Mobile Advice
-						.dl--segment.col-sm-4.mobile
-							a(href="https://www.citizensadvice.org.uk/advisernet/news/help-us-test-the-idea-of-including-adviser-only-content/")
+									strong webchat
+
+						.dl--segment.col-sm-3
+							a#game(href="#")
 								.dl--circle
 									.pic.i-brand &#xe993;
-								p Help us improve our
+								p Help us
 									br
-									strong Online advice content
-						.dl--segment.col-sm-4.tablet
-							a#advice(href="#")
-								.dl--circle
-									.pic.i-brand &#xe993;
-								p Help us improve our
+									strong improve our 
 									br
-									strong Online advice content
-						.dl--segment.col-sm-4
-							a(href="http://citizensadvice.github.io/cab-ui/dev/energy/comparison-4.html")
-								.dl--circle
-									.pic.i-brand &#xe985;
-								p Test the
-									br
-									strong Energy supplier comparison
-						.dl--segment.col-sm-4.tablet
-							a(href="http://citizensadvice.github.io/cab-testing/research/psr/dev/psr/step1.html")
-								.dl--circle
-									.pic.i-brand &#xe996;
-								p Try the
-									br
-									strong Priority service register
-						.dl--segment.col-sm-4.tablet
-							a#mart(href="#")
+									strong website
+						.dl--segment.col-sm-3
+							a#uc(href="#")
 								.dl--circle
 									.pic £
-								p Try the
+								p Have a firstlook at the 
 									br
-									strong Money advice recording tool (MART)
-						.dl--segment.col-sm-4.tablet
-							a(href="http://beta.pageengine.net")
-								.dl--circle
-									.pic.i-brand &#xe96a;
-								p Design with
+									strong Universal Credit
 									br
-									strong Page engine
-						.dl--segment.col-sm-4
-							a(href="http://ca.fusion-universal.com/users/sign_in?PHPSESSID=136f9733f7216519fd10ac6c23f15a9a")
-								.dl--circle
-									.pic.i-brand &#xe971;
-								p Test out
-									br
-									strong Learn
-
-		.dl--footer
-			.fullwidth-content
-				.flex-container.tablet
-					.flex-row
+									strong digital resource
+					.flex-row.links
+						.col-sm-6
+								p
+									a(href="https://docs.google.com/a/citizensadvice.org.uk/forms/d/e/1FAIpQLSfFlPwZH8BpN2eEJlWHp0HLTdaYZYQU4UAp-ctVArogeJkRrg/viewform") Tell us what you think about the tools
 						.col-sm-6
 							p
-								a(href="https://docs.google.com/forms/d/e/1FAIpQLSesGiO2f7l9uMFbQPxuUjZ8RStKFPusfDap_ZV4-8u3Cg6tyw/viewform?usp=send_form") Sign up to help with more testing
-						.col-sm-6
-							p
-								a(href="http://fluidsurveys.com/surveys/citizensadvice/digital-lab-feedback-survey-sept-2016/") Tell us what you think about the tools
+								a(href="https://docs.google.com/forms/d/e/1FAIpQLSenLdtyKhtcSalg7Pnue5nOCeVNs-8jDIuZYmFlBoiKFZwg7Q/viewform") Sign up to help with more testing
 
-				p.mobile
-					a(href="https://docs.google.com/forms/d/e/1FAIpQLSesGiO2f7l9uMFbQPxuUjZ8RStKFPusfDap_ZV4-8u3Cg6tyw/viewform?usp=send_form") Sign up to help with more testing
-					br
-					a(href="http://fluidsurveys.com/surveys/citizensadvice/digital-lab-feedback-survey-sept-2016/") Tell us what you think about the tools
+		.fullwidth
+			.fullwidth-content.sponser
+				h2(style="margin: 0; margin-top: 1rem; display:inline;") Sponsered by
+				img.freshworks(alt="freshworks",src="#{dir}images/freshworks.png")
+
+						
