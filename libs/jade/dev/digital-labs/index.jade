@@ -59,13 +59,13 @@ block head
 		
 		.advice p{
 			clear: both;
-			text-align: center;
+			text-align: left;
 			color:#00553F;
 			word-break: break-word;
 			margin:0;
 		}
 
-		.casebook-container a.case-btn{
+		.casebook-container a.case-btn, .advice a.case-btn{
 			    clear: both;
 				float: left;
 				min-width: 180px;
@@ -77,6 +77,13 @@ block head
 				padding:0 10px;
 		}
 
+		.advice.web-container{
+			padding:0em 1em 2em;
+		}
+
+		.advice.web-container > div{
+			float:left;
+		}
 
 		.casebook-container{
 			padding: 0em 1em 2em;
@@ -175,23 +182,15 @@ block content
 							span.dialog__close-text Close
 					.flex-container
 						.flex-row
-							.dl--segment.col-xs-12.advice
+							.dl--segment.col-xs-12.advice.web-container
 								span Webchat
 								p See what it’s like to provide and receive advice online
-							.dl--segment.col-xs-6
-								a(href="http://citaone.logo-net.co.uk/chat18/")
-									.dl--circle
-										.pic.i-brand &#xe92a;
-									p as an
-										br
-										strong Adviser
-							.dl--segment.col-xs-6
-								a(href="https://www.citizensadvice.org.uk/development/web-chat-service/")
-									.dl--circle
-										.pic.i-brand &#xe92a;
-									p as a
-										br
-										strong Client
+								.col-xs-3
+									a.case-btn(href="http://citaone.logo-net.co.uk/chat18/") As an adviser
+
+								.col-xs-3
+									a.case-btn(href="https://www.citizensadvice.org.uk/development/web-chat-service/") As an client
+								
 
 		#overlay--2.overlay(style="display: none;")
 			.overlay__modal
@@ -204,7 +203,7 @@ block content
 						.flex-row
 							.dl--segment.col-xs-12.casebook-container
 								span Casebook
-								p Try our Casebook, our new case management system for local Citizens Advice or visit the Casebook support desk
+								p Try out Casebook, our new system for recording the support we give to clients
 								a.case-btn(href="https://webworker.casebook.demo.devops.citizensadvice.org.uk/") Try out Casebook
 
 		#overlay--3.overlay(style="display: none;")
@@ -346,11 +345,11 @@ block content
 							a#uc(href="#")
 								.dl--circle
 									.pic £
-								p Have a firstlook at the 
+								p Have a first look at the 
 									br
 									strong Universal Credit
 									br
-									strong digital resource
+									strong resource
 					.flex-row.links
 						.col-sm-6
 								p
@@ -361,7 +360,7 @@ block content
 
 		.fullwidth
 			.fullwidth-content.sponser
-				h2(style="margin: 0; margin-top: 1rem; display:inline;") Sponsered by
+				h2(style="margin: 0; margin-top: 1rem; display:inline;") Sponsored by
 				img.freshworks(alt="freshworks",src="#{dir}images/freshworks.png")
 
 						
