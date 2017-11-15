@@ -1,0 +1,52 @@
+/**
+ * TITLE:
+ * @component: Notification
+ *
+ * AUTHOR:
+ * Citizens Advice: Front-end
+ *
+ * DESCRIPTION:
+ * Generic notifications design pattern that can be dismissed by
+ * clicking a button. Pairs with `notification.js`.
+ *
+ */
+.c-notification {
+    position: relative;
+
+    &__btn {
+        background: none;
+        border: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        display: inline-block;
+        font-family: cab-icons;
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        right: .4em;
+        top: .25em;
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    &__btn:after {
+        content: "\e603";
+    }
+
+    &__body {
+        padding: .45em;
+    }
+
+    &.is-hidden {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+}
