@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////
+// @component: FeedbackForm
+// @author: Citizens Advice
+// @date-created: 2017-11-23
+// @date-modified: 2017-11-23
+//
+// @description:
+// These styles are in a new module to remove any  potential conflict
+// that may arise with other feedback forms that currently exist.
+// This particular form is a module located at the foot of the content
+// of most, if not all pages on the CA site.
+#feedbackForm__container {
+    border-top-color: #dfdfdf;
+    border-top-style: solid;
+    border-top-width: 2px;
+    padding-top: 1em;
+
+    .is-hidden {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+}
+
+.feedbackForm {
+
+    &__questions {
+        clear: both;
+        display: block;
+    }
+
+    &__responses {
+        clear: both;
+        display: block;
+    }
+
+    &__message {
+        clear: both;
+        display: block;
+
+        h4 { margin-top: 0; }
+    }
+
+    &__formGroup {
+        clear: both;
+        display: block;
+    }
+}
