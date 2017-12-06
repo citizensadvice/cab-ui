@@ -288,8 +288,15 @@ blockquote,
 .well.tertiary{
     background:#e7f3f5;
 }
+
+.ul--1-column{
+    -webkit-column-count: 1;
+    column-count: 1;
+    list-style: none;
+    padding: 0;
+}
 @media screen and (max-width: 600px) {
-	.well.tertiary .ul--2-column{
+	.well.tertiary .ul--1-column{
 	    -webkit-column-count: 1;
     	column-count: 1;
 	}
