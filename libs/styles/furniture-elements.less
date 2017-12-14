@@ -25,6 +25,10 @@
 	cursor: default;
 	background: none;
 	outline: none;
+
+    @media(min-width: @breakpoint-content) {
+        color: #004b88;
+    }
 }
 
 .main-content__sidebar.side-nav .side-nav__heading a:hover{
@@ -74,7 +78,7 @@ ul.side-nav__ul--level2{
 }
 
 .main-content__sidebar.side-nav * li  ul{
-	margin: 0;  
+	margin: 0;
 }
 
 .side-nav__ul-level-1 li {
@@ -82,11 +86,11 @@ ul.side-nav__ul--level2{
 	padding-left: 1.5em;
 }
 .side-nav__ul--level1 li a:hover, .side-nav__ul--level2 li a:hover{
-	color: #004b88; 
-	text-decoration: none; 
+	color: #004b88;
+	text-decoration: none;
 	background-color: #e3f4ff;
 	border-radius: 2px;
-} 
+}
 
 
 .main-content__sidebar.side-links{
@@ -106,6 +110,8 @@ ul.side-nav__ul--level2{
 	font-weight: 800;
 	font-size: 1.3rem;
 	padding: 0.75rem;
+
+    & + ul li:hover { background-color: transparent; }
 }
 
 .main-content__sidebar a:hover,.main-content__sidebar a:focus{
@@ -216,5 +222,5 @@ input[type="search"]{
  .callout--related, .dap-panel--progress{
 	border-bottom: none;
     border-left: none;
-    border-right: none;	
+    border-right: none;
  }
