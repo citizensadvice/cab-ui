@@ -128,6 +128,10 @@ i.icon-chevron-up {
     }
 }
 
+.revealable__heading[aria-expanded=false]:after {
+    content: "\f067";
+}
+
 .open:after, // This needs to be removed eventually
 .revealable__heading[aria-expanded=true]:after {
     content: "\f068";
