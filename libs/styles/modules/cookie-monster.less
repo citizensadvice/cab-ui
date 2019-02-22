@@ -15,14 +15,19 @@
     right: 0;
     background: fade(@blue-lighter, 95%);
     z-index: 10000;
+
     &__content {
         .limit-width();
-        overflow: hidden;
-        position: relative;
-        padding: @box-spacing 0;
-        @media (min-width:@breakpoint-sm){
+        padding: 0.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+
+        @media (min-width: @breakpoint-sm) {
             padding: 0;
         }
+
         p {
             margin: 0;
             padding: 0 @box-spacing*7 0 @box-spacing/2;
@@ -30,14 +35,20 @@
             .vertical-align(absolute);
         }
     }
+
     &__close {
         .btn-icon("\2716");
         float: right;
     }
+
     @media screen and (max-width: @screen-xs-max) {
         font-size: 14px;
+
         &__close {
             font-size: 14px;
+        }
+        &__content {
+            flex-direction: column;
         }
     }
 }
